@@ -23,6 +23,10 @@ Downloads, Desktop and Documents.
 > under a clean name next to a build receipt that describes a *different* 509,440-byte image.
 > Details: [`00_START_HERE/CONTRADICTIONS.md`](00_START_HERE/CONTRADICTIONS.md) §14.
 
+**New to this project?** Read [`00_START_HERE/ORIENTATION.md`](00_START_HERE/ORIENTATION.md) first.
+It assumes no prior context: what the product is, where it actually stands, how to open every file
+type here, what the vocabulary means, and what to do in your first week.
+
 Then read [`00_START_HERE/HARDWARE_STATE.md`](00_START_HERE/HARDWARE_STATE.md) — one page on what
 is actually true today — followed by
 [`00_START_HERE/CONTRADICTIONS.md`](00_START_HERE/CONTRADICTIONS.md), which lists **seventeen** places
@@ -36,7 +40,7 @@ size and the state of the board.
 
 | Folder | What it is | Fab status |
 |---|---|---|
-| [`00_START_HERE/`](00_START_HERE/) | State, contradictions, glossary, provenance | — |
+| [`00_START_HERE/`](00_START_HERE/) | Orientation for newcomers, state, contradictions, glossary, provenance | — |
 | [`01_CURRENT_TARGET_R1/`](01_CURRENT_TARGET_R1/) | The live requirement set (2026-09-04). What the incoming engineer is asked to build. | Not designed yet |
 | [`02_PROTOTYPE_XIAO/`](02_PROTOTYPE_XIAO/) | XIAO nRF52840 Sense proof unit — wiring, enclosure CAD, assembly evidence | Proof only, on physical-test hold |
 | [`03_PCB/`](03_PCB/) | Every custom board design. Three exist. None are releasable. | **NOT FOR FAB** |
