@@ -25,7 +25,7 @@ Downloads, Desktop and Documents.
 
 Then read [`00_START_HERE/HARDWARE_STATE.md`](00_START_HERE/HARDWARE_STATE.md) — one page on what
 is actually true today — followed by
-[`00_START_HERE/CONTRADICTIONS.md`](00_START_HERE/CONTRADICTIONS.md), which lists **fourteen** places
+[`00_START_HERE/CONTRADICTIONS.md`](00_START_HERE/CONTRADICTIONS.md), which lists **seventeen** places
 where two documents in this repository disagree with each other. Read that **before** acting on any
 single document, because several of them contradict each other on the processor, the enclosure
 size and the state of the board.

@@ -69,8 +69,8 @@ mapping are confirmed. Full detail: [`../07_PROCUREMENT/JLCPCB_STATUS_2026-09-05
 
 | Revision | Exists as | Unrouted | Verdict |
 |---|---|---|---|
-| R0 (`ANT-PROD-R0 EVT`) | KiCad + 31 commits of routing history | 23 non-GND, 36 GND | Furthest routed. Not released. |
-| R0B | KiCad checkpoint | 176 connections | The master package's headline board. Behind R0 on routing. |
+| R0 (`ANT-PROD-R0 EVT`) | KiCad + 31 commits of routing history | 23 non-GND, 36 GND | Furthest routed by far — 45 of 46 signal nets carry copper. Not released. |
+| R0B | KiCad checkpoint, 45.8 × 18.0 mm, soldered NAND | **Zero copper** — `grep -c '(segment'` returns 0 | Named the "controlling checkpoint", but nothing on it is routed at all. |
 | EVT-A (`anticipy_evt_a`) | KiCad, deliberate fab hold | n/a — no copper laid | Different processor. Superseded. |
 | R1 | A brief only | — | **Does not exist.** This is the target. |
 
@@ -78,18 +78,24 @@ mapping are confirmed. Full detail: [`../07_PROCUREMENT/JLCPCB_STATUS_2026-09-05
 
 ## The current target (R1)
 
-From `01_CURRENT_TARGET_R1/Anticipy_PROD_R1_Flux_Build_Brief.md` (2026-09-04):
+From `01_CURRENT_TARGET_R1/Anticipy_Hardware_Development_Brief_2026-09-04.md` — "Rev 1,
+September 4, 2026". This is the assignment:
 
-- **MCU/BLE:** Raytac `MDBT50Q-1MV2` (nRF52840) — pre-certified module, chosen to stay in the same
-  software family as the Founder units
-- **Microphones:** 2 × Infineon `IM69D128SV01XTMA1`, 3 V PDM, 69 dB SNR
-- **Battery:** 1-cell protected LiPo, target **250–300 mAh**, 10 kΩ NTC lead
-- **Capacity goal:** ≥ 20 hours offline audio
-- **Runtime goal:** 16 hours — requires measured average < 12.5 mA on a 200 mAh cell before
-  conversion and aging margin
-- **PCB envelope:** 49.0 × 20.0 × 0.8 mm preliminary; finished enclosure 56.0 × 23.0 × 12.0 mm
-- **Scope:** 25-unit pilot, later 100-unit batch. The 10 Founder units stay on XIAO nRF52840 Sense
-  so this work does not block the seven-day Founder build.
+- **Size:** **51 × 21 × 11 mm** target, +10 % per axis maximum without written approval
+- **Weight:** ≤ **20 g**; flag anything above 25 g before fabrication
+- **Runtime:** 16 hours
+- **Local storage:** **QSPI NOR flash**, sized from the actual codec — plan **512 MB**
+- **Offline capacity:** 16–20 hours
+- **Connectivity:** BLE live audio, commands, status, reconnect, ordered backfill
+- **Haptics:** app-commanded short discreet vibration
+- **MCU:** **not locked** — "nRF52840-compatible starting point"; module vs bare SoC is an
+  explicitly open question
+- **Delivery:** Checkpoints A/B/C/D with per-unit acceptance gates and defined stop conditions
+
+> ⚠️ Do **not** take specs from `Anticipy_PROD_R1_Flux_Build_Brief.md`, even though it sits in the
+> same folder and is more detailed. The package's own supersession notice excludes it — along with
+> its 49 × 20 mm layout and microSD concept — from the active handoff. Its 56 × 23 × 12 mm
+> enclosure and Raytac `MDBT50Q-1MV2` are **not** the current target.
 
 ---
 
@@ -98,9 +104,11 @@ From `01_CURRENT_TARGET_R1/Anticipy_PROD_R1_Flux_Build_Brief.md` (2026-09-04):
 The **documentation and process discipline are strong** — release gates, factory acceptance rules,
 EOL test specs and checksum manifests all exist and are unusually rigorous for this stage.
 
-The **engineering is not converged.** Three custom boards were started, none finished, and the
-newest brief restarts a fourth on a different processor than the most complete package assumed.
-No board has been fabricated and nothing has been physically tested. A live factory order is
-sitting on an unverified part substitution.
+The **engineering is not converged.** Three custom boards were started and none finished. The
+board named the "controlling checkpoint" (R0B) has zero copper on it, while the one treated as
+older (R0) is nearly routed. The current brief does not lock an MCU, asks for NOR flash while the
+controlling board fits NAND, and sits in a folder alongside a superseded brief that contradicts it
+on size, storage and module — with no banner saying so. No board has been fabricated, nothing has
+been physically tested, and a live factory order is waiting on an unverified part substitution.
 
 Read [`CONTRADICTIONS.md`](CONTRADICTIONS.md) next.

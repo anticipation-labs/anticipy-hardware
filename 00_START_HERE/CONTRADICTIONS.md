@@ -1,6 +1,6 @@
 # Contradictions
 
-Fourteen places where two documents in this repository disagree. Each is stated with both sources so you
+Seventeen places where two documents in this repository disagree. Each is stated with both sources so you
 can judge for yourself. **Read this before acting on any single document.**
 
 Every path below is relative to the repository root.
@@ -30,26 +30,37 @@ pin map and the certification path.
 > Keep the **nRF52840** software family for the first custom board
 > — `01_CURRENT_TARGET_R1/Anticipy_Hardware_Development_Brief_2026-09-04.md:145`
 
-**Assessment:** the newer document gives an explicit reason — staying in the Founder units'
-software family — so this reads as a **deliberate reversion**, not an error. But **no document
-anywhere records the decision**. Nothing says "we evaluated nRF54L15 in Execution v1.0 and
-reverted to nRF52840 for R1, because X." An engineer handed both packages has no way to tell a
-reversion from a mistake.
+**But the MDBT50Q line comes from a superseded document.** The R1 Flux brief is explicitly
+excluded from the active handoff (see §15). The *actual* current brief — Rev 1, 2026-09-04 — does
+**not** lock a module at all:
 
-**Action:** write the decision down. Until then, `01_CURRENT_TARGET_R1` wins on recency.
+> **MCU + BLE:** nRF52840-compatible starting point
+> **MCU implementation:** nRF52840 module vs. bare SoC vs. another — listed as an *open question*
+> — `01_CURRENT_TARGET_R1/Anticipy_Hardware_Development_Brief_2026-09-04.md:158, :487`
+
+**Assessment:** the current position is "nRF52840-compatible family, part not yet chosen". The
+nRF54L15 of Execution v1.0 is out; the specific Raytac MDBT50Q-1MV2 was never actually locked —
+it was one superseded brief's proposal. **No document records the decision to leave nRF54L15.**
+
+**Action:** write the decision down, and treat the module choice as genuinely open.
 
 ---
 
 ## 2. Which enclosure envelope?
 
-| Source | Envelope | Date |
-|---|---|---|
-| `08_HISTORICAL_PACKAGES/2026-08-28_execution_v1.0/RELEASE_STATUS.md` | **50.500 × 20.680 × 10.800 mm** (production envelope, digitally verified, 23/23 mechanical checks) | 2026-08-28 |
-| `01_CURRENT_TARGET_R1/Anticipy_PROD_R1_Flux_Build_Brief.md:137` | **56.0 × 23.0 × 12.0 mm** finished enclosure; PCB 49.0 × 20.0 × 0.8 mm | 2026-09-04 |
+**Four** envelopes are on record:
 
-That is **5.5 mm longer, 2.3 mm wider and 1.2 mm thicker**. This is not a rounding difference —
-it is a different product size. All of the Execution package's "23/23 pass" mechanical
-verification was performed against the **smaller** envelope and does not transfer.
+| Source | Envelope | Date | Standing |
+|---|---|---|---|
+| `01_CURRENT_TARGET_R1/Anticipy_Hardware_Development_Brief_2026-09-04.md:112` | **51 × 21 × 11 mm**, ≤ 20 g, +10 %/axis cap | 2026-09-04 | **Current** |
+| `08_HISTORICAL_PACKAGES/2026-08-28_execution_v1.0/RELEASE_STATUS.md` | **50.500 × 20.680 × 10.800 mm** — 23/23 mechanical checks passed against this | 2026-08-28 | Superseded design line |
+| `01_CURRENT_TARGET_R1/Anticipy_PROD_R1_Flux_Build_Brief.md:137` | **56.0 × 23.0 × 12.0 mm** enclosure; PCB 49.0 × 20.0 × 0.8 mm | 2026-08-29 | **Explicitly superseded** (§15) |
+| `04_MECHANICAL/OPENSCAD_SHELL_PROGRAM_v5.1/` | **26.5 × 61.2 × 12.6 mm** flat pill tag | 2026-08-19 | Different form factor entirely |
+
+The good news: the current 51 × 21 × 11 mm and Execution v1.0's 50.5 × 20.68 × 10.8 mm are close
+enough that the production CAD is **plausibly reusable** — it sits inside the +10 %/axis tolerance.
+The 56 × 23 × 12 mm figure that looks like the newest target is from the superseded Flux brief and
+should be ignored.
 
 **Consequence:** every STL and STEP in `04_MECHANICAL/REFERENCE_STEP/` was validated against
 50.5 × 20.68 × 10.8. If R1's 56 × 23 × 12 is the real target, that CAD is **not** the production
@@ -256,6 +267,48 @@ one**. The receipt does not describe the file it ships with.
 **Anyone who flashes `anticipy.uf2` from a fleet lane, trusting its build receipt, flashes an image
 formally marked do-not-flash.** Rename or remove those copies.
 
+## 15. A superseded brief is filed as a current requirement
+
+`01_CURRENT_TARGET_R1/Anticipy_PROD_R1_Flux_Build_Brief.md` sits in the folder the package tells
+the engineer to read first, with no supersession banner. But the same package says elsewhere:
+
+> The earlier Flux build brief, R0A source tree, **49 x 20 mm layout**, removable **microSD**
+> concept, and all experimental autorouter outputs are deliberately excluded from the active
+> handoff.
+> — `.../04_CUSTOM_PCB_R0B_ENGINEERING_NOT_FOR_FAB/99_Superseded_Notice/SUPERSEDED_FILES_NOTICE.md`
+
+The Flux brief *is* that brief, with that layout and that microSD concept. Anyone reading
+`01_CURRENT_REQUIREMENTS` top-to-bottom builds the wrong device.
+
+The same notice names the controlling checkpoint: **`ANT-PROD-R0B`, 45.8 × 18.0 mm, soldered NAND
+storage**, with explicit fabrication blockers.
+
+## 16. Storage technology is stated three different ways
+
+| Source | Storage |
+|---|---|
+| Current brief (2026-09-04) | **QSPI NOR flash**, plan 512 MB |
+| R0B BOM (the controlling checkpoint) | **Macronix MX35LF4GE4AD-Z4I** — 4-Gbit SLC serial **NAND**, needing ECC, bad-block and power-loss handling |
+| `HARDWARE_SYSTEM_MAP.md` | "Local QSPI flash" |
+| Flux brief (superseded) | Removable **microSD** socket + 8/16 GB card |
+| Execution v1.0 | MK Founder **MKDV4GCL-ABF** managed SD NAND, ~481 MB usable |
+
+NOR and NAND are not interchangeable. NAND needs an ECC layer, bad-block management and
+power-loss-safe writes that NOR does not — that is firmware work, not a part swap. The current
+brief asks for NOR; the controlling board fits NAND. And `03_XIAO_ALL_CAD/ARCHITECTURE_OPTIONS.md`
+contains a section titled **"Why no microSD"**, directly contradicting the Flux brief beside it.
+
+## 17. R0B is not partially routed — it has no copper at all
+
+The master package describes R0B as having "176 unconnected pads", which reads like a board that
+is mostly routed with 176 connections left.
+
+It is not. `grep -c '(segment'` on `R0B.kicad_pcb` returns **0**. There are zero track segments on
+the board. Nothing has been routed.
+
+This makes the R0-versus-R0B ordering (§5) starker: R0 has 45 of 46 signal nets carrying copper
+after 31 commits of routing work; R0B, the "controlling checkpoint", has none.
+
 ---
 
 ## Summary of what to fix
@@ -276,3 +329,7 @@ formally marked do-not-flash.** Rename or remove those copies.
 13. Reconcile the investor render (nRF5340, "sealed, no ports") with engineering reality, and get
     the supplier quotation the $60 unit cost depends on.
 14. **Immediately** rename or remove the `UNVERIFIED_DO_NOT_FLASH` image from the ten fleet lanes.
+15. Move the Flux brief out of `01_CURRENT_TARGET_R1/` or banner it, so nobody builds to a
+    superseded 49 × 20 mm microSD design.
+16. Decide NOR vs NAND vs managed NAND. It determines real firmware work, not just a BOM line.
+17. Stop describing R0B as "176 unrouted" — it has zero copper. Either route it or start from R0.

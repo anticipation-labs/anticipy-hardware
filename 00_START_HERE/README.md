@@ -5,7 +5,7 @@ Read in this order.
 | # | File | Why |
 |---|---|---|
 | 1 | [`HARDWARE_STATE.md`](HARDWARE_STATE.md) | One page: what is actually true today. Where the project really stands, and the one deadline that is live. |
-| 2 | [`CONTRADICTIONS.md`](CONTRADICTIONS.md) | **The most important file here.** Fourteen places where two documents in this repository disagree — on the processor, the enclosure size, the battery, which board file is real, and whether the firmware can drive the haptics. Read it before acting on any single document. |
+| 2 | [`CONTRADICTIONS.md`](CONTRADICTIONS.md) | **The most important file here.** Seventeen places where two documents in this repository disagree — on the processor, the enclosure size, the battery, which board file is real, and whether the firmware can drive the haptics. Read it before acting on any single document. |
 | 3 | [`GLOSSARY.md`](GLOSSARY.md) | Decodes R0 / R0B / EVT-A / R1 / XIAO / P2S / EOL / DFM and the part numbers, none of which are defined anywhere else. |
 | 4 | [`PROVENANCE.md`](PROVENANCE.md) | Where every file came from, how the audit was done, and what was deliberately excluded. |
 
