@@ -1,0 +1,53 @@
+{
+  "schema": 1,
+  "repository": "https://github.com/BasedHardware/omi.git",
+  "tag": "v2.0.1-Omi",
+  "commit": "ee9892562648f074e3c6b59d508127d81fa21010",
+  "source_path": "Friend/firmware/firmware_v1.0",
+  "source_tree_git_oid": "7f896978ef937ae39f2e1cad00f5d95a4ff8152b",
+  "license_path": "LICENSE",
+  "license_blob_git_oid": "beb9b3553922522ad2466040709a4a76c05d81ca",
+  "audited_blobs": {
+    "Friend/firmware/firmware_v1.0/src/transport.c": "1a5c655023a9d423c038c6227568ca87812eff08",
+    "Friend/firmware/firmware_v1.0/src/config.h": "f28d8afbb544b77a5b27b4b7c873963568fce7c0",
+    "Friend/firmware/firmware_v1.0/prj_xiao_ble_sense_devkitv2-adafruit.conf": "4c40cd2d41d236da48e80d39d105242cd357b5c4",
+    "Friend/firmware/firmware_v1.0/CMakeLists.txt": "a592faa002110d26d8bd3b53b36b65597a19a6d3",
+    "Friend/firmware/firmware_v1.0/CMakePresets.json": "1bc3c2acb73a67a5983bcfaff1840fe7cd5a1eb5",
+    "Friend/firmware/firmware_v1.0/overlay/xiao_ble_sense_devkitv2-adafruit_module.overlay": "354328d12f3e68fcffbd06854fb18ed98dbd7218"
+  },
+  "candidate_build": {
+    "board": "seeed_xiao_nrf52840_sense",
+    "configuration_files": [
+      "prj_xiao_ble_sense_devkitv2-adafruit.conf"
+    ],
+    "overlay": "overlay/xiao_ble_sense_devkitv2-adafruit_module.overlay",
+    "nrf_connect_sdk_evidence": "v2.5.0 appears in the official release UF2 boot banner; the source tag itself does not pin the SDK manifest",
+    "status": "candidate only; not proven bit-for-bit",
+    "known_source_issue": "CMakePresets.json references xiao_ble_sense_devkitv2-adafruit.overlay, which is absent at the tag; the checked-in file is named xiao_ble_sense_devkitv2-adafruit_module.overlay"
+  },
+  "tag_prebuilt_reference": {
+    "path": "Friend/firmware/v2_build/omi_2.0.0.uf2",
+    "git_blob_oid": "50355fd8f0c71765347cb0a1055e7e3f5fdff9c3",
+    "bytes": 550400,
+    "sha256": "00eb463de12f2018b8e575b9efa5d6424d933f33ad17967707dc1eaf820731e6",
+    "note": "Older 2.0.0 reference committed in the exact tag; it is not the 2.0.1 release asset and is not vendored here."
+  },
+  "official_release_asset": {
+    "name": "omi_2.0.1.uf2",
+    "url": "https://github.com/BasedHardware/omi/releases/download/v2.0.1-Omi/omi_2.0.1.uf2",
+    "uploaded_at": "2024-10-22T04:43:17Z",
+    "bytes": 622592,
+    "sha256": "b1b32690e3e976c6e718ec2a5ce10370f80d4e47a723587712d8c35524894fd4",
+    "note": "Reference only. Upload occurred after the 2024-10-05 tagged commit and after firmware-path commits on 2024-10-07 and 2024-10-16, so tag-to-binary identity is not established."
+  },
+  "post_tag_firmware_commits_before_asset": [
+    {
+      "commit": "59b34b57063ae5f0452abe1ebf9d522c612299d5",
+      "date": "2024-10-07T19:13:46Z"
+    },
+    {
+      "commit": "08b37875e53fbc9c8e244c945826f074cd984983",
+      "date": "2024-10-16T21:50:24Z"
+    }
+  ]
+}

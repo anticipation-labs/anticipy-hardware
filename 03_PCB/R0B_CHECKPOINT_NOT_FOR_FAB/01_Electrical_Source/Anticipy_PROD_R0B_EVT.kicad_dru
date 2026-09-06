@@ -1,0 +1,31 @@
+(version 1)
+
+# General PCB copper stays at least 0.50 mm from routed board edges.  The
+# board-level absolute floor is zero only so the connector-specific rule below
+# can exist; all non-J1 pads, tracks, vias, and zones match this rule.
+(rule "R0B normal copper-to-edge clearance"
+  (constraint edge_clearance (min 0.50mm))
+  (condition "!((A.Type == 'Pad' || A.Type == 'Track') && A.Position_X < 27.40mm) && !((B.Type == 'Pad' || B.Type == 'Track') && B.Position_X < 27.40mm)"))
+
+# The GCT USB4500 is a true mid-mount connector.  Its contact lands terminate
+# at the 9.24 x 6.20 mm routed board cutout and two shell stakes straddle the
+# outer edge by design.  This narrowly scoped exception does not relax edge
+# clearance for any other footprint.
+(rule "GCT USB4500 intentional mid-mount edge intersection"
+  (constraint edge_clearance (min -0.60mm))
+  (condition "((A.Type == 'Pad' || A.Type == 'Track') && A.Position_X < 27.40mm) || ((B.Type == 'Pad' || B.Type == 'Track') && B.Position_X < 27.40mm)"))
+
+# The small ESD array is intentionally immediately inboard of the connector
+# contacts.  Their physical bodies remain 0.30 mm apart even though the two
+# conservative courtyards overlap by about 0.10 mm.
+(rule "USB connector to ESD-array courtyard allowance"
+  (constraint courtyard_clearance (min -0.20mm))
+  (condition "(A.Reference == 'J1' && B.Reference == 'U4') || (A.Reference == 'U4' && B.Reference == 'J1')"))
+
+# Nordic nPM1300 QEAA reference-layout config 4 revision 1.2 deliberately
+# packs these exact pairs more tightly than generic KiCad stock courtyards.
+# Copper, solder-mask, and assembly-body checks remain active.  The 0.75 mm
+# allowance applies only to the listed manufacturer-reference pairs.
+(rule "Nordic nPM1300 reference-cell courtyard allowance"
+  (constraint courtyard_clearance (min -0.75mm))
+  (condition "(A.Reference == 'C1' && B.Reference == 'C4') || (A.Reference == 'C4' && B.Reference == 'C1') || (A.Reference == 'C1' && B.Reference == 'C5') || (A.Reference == 'C5' && B.Reference == 'C1') || (A.Reference == 'C2' && B.Reference == 'C3') || (A.Reference == 'C3' && B.Reference == 'C2') || (A.Reference == 'C2' && B.Reference == 'C14') || (A.Reference == 'C14' && B.Reference == 'C2') || (A.Reference == 'C3' && B.Reference == 'C8') || (A.Reference == 'C8' && B.Reference == 'C3') || (A.Reference == 'C3' && B.Reference == 'C15') || (A.Reference == 'C15' && B.Reference == 'C3') || (A.Reference == 'C4' && B.Reference == 'C6') || (A.Reference == 'C6' && B.Reference == 'C4') || (A.Reference == 'C7' && B.Reference == 'C14') || (A.Reference == 'C14' && B.Reference == 'C7') || (A.Reference == 'C8' && B.Reference == 'C15') || (A.Reference == 'C15' && B.Reference == 'C8') || (A.Reference == 'C9' && B.Reference == 'C10') || (A.Reference == 'C10' && B.Reference == 'C9') || (A.Reference == 'R1' && B.Reference == 'R2') || (A.Reference == 'R2' && B.Reference == 'R1') || (A.Reference == 'R3' && B.Reference == 'R4') || (A.Reference == 'R4' && B.Reference == 'R3')"))

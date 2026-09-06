@@ -1,0 +1,92 @@
+{
+  "command": [
+    "toolchain-manager",
+    "launch",
+    "/bin/bash",
+    "--",
+    "/trusted/development_build_offline.sh"
+  ],
+  "entrypoint": [
+    "nrfutil"
+  ],
+  "host_configuration": {
+    "cap_drop": [
+      "ALL"
+    ],
+    "devices": [],
+    "memory_bytes": 6442450944,
+    "memory_swap_bytes": 6442450944,
+    "nano_cpus": 3000000000,
+    "network_mode": "none",
+    "pids_limit": 2048,
+    "privileged": false,
+    "read_only_root": true,
+    "security_opt": [
+      "no-new-privileges"
+    ],
+    "tmpfs": {
+      "/home/ci": "rw,nosuid,nodev,size=128m,mode=0700",
+      "/tmp": "rw,nosuid,nodev,noexec,size=1g",
+      "/usr/local/share/nrfutil/logs": "rw,nosuid,nodev,noexec,size=16m,mode=0755"
+    }
+  },
+  "image": "docker.io/nordicplayground/nrfconnect-sdk@sha256:f50c51b711bbb3f502496c4b83e88dda778420fb83327d4791f9bc0e34916d01",
+  "image_id": "sha256:f50c51b711bbb3f502496c4b83e88dda778420fb83327d4791f9bc0e34916d01",
+  "is_independent_attestation": false,
+  "is_production_replica": false,
+  "mounts": [
+    {
+      "destination": "/Users/omarebrahim/Anticipy/.git",
+      "read_write": false,
+      "source": "/Users/omarebrahim/Anticipy/.git",
+      "type": "bind"
+    },
+    {
+      "destination": "/candidate",
+      "read_write": false,
+      "source": "/Users/omarebrahim/Anticipy-0707/firmware/.build/local-quarantine-20260723-run3/candidate-checkout",
+      "type": "bind"
+    },
+    {
+      "destination": "/development",
+      "read_write": true,
+      "source": "/Users/omarebrahim/Anticipy-0707/firmware/.build/local-quarantine-20260723-run3/development",
+      "type": "bind"
+    },
+    {
+      "destination": "/ncs",
+      "read_write": false,
+      "source": "/Users/omarebrahim/Anticipy-0707/firmware/.build/local-quarantine-20260723-run3/ncs/workspace",
+      "type": "bind"
+    },
+    {
+      "destination": "/ncs/.west/config",
+      "read_write": true,
+      "source": "/Users/omarebrahim/Anticipy-0707/firmware/.build/local-quarantine-20260723-run3/development-west-config/config",
+      "type": "bind"
+    },
+    {
+      "destination": "/root/ncs/toolchains/toolchains.json",
+      "read_write": true,
+      "source": "/tmp/anticipy-nrfutil-probe.OPrj78/toolchains.json",
+      "type": "bind"
+    },
+    {
+      "destination": "/trusted/development_build_offline.sh",
+      "read_write": false,
+      "source": "/Users/omarebrahim/Anticipy-0707/firmware/.build/local-quarantine-20260723/development_build_offline.sh",
+      "type": "bind"
+    }
+  ],
+  "name": "anticipy-fw-development-build-20260723-run2",
+  "schema": 1,
+  "state": {
+    "ExitCode": 0,
+    "FinishedAt": "2026-07-23T08:54:12.434187423Z",
+    "OOMKilled": false,
+    "StartedAt": "2026-07-23T08:49:07.21669217Z",
+    "Status": "exited"
+  },
+  "status": "LOCAL_DEVELOPMENT_CONTAINER_INSPECTION_NOT_ATTESTED",
+  "working_directory": "/home/ci"
+}

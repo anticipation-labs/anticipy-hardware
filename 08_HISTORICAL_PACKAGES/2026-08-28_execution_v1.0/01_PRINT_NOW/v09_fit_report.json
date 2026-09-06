@@ -1,0 +1,340 @@
+{
+  "classification": "four-day compact no-custom-PCB engineering prototype; not a customer-production release",
+  "official_reference_mm": [
+    51.0,
+    21.0,
+    11.0
+  ],
+  "hard_30_percent_ceiling_mm": [
+    66.3,
+    27.3,
+    14.3
+  ],
+  "finished_device_body_mm": [
+    66.2,
+    27.2,
+    14.2
+  ],
+  "lanyard_clip_is_external_accessory": true,
+  "wearable_with_0p17mm_tape_and_backplate_max_thickness_mm": 15.97,
+  "wearable_with_backplate_tab_max_length_mm_before_ring": 80.2,
+  "components": [
+    {
+      "name": "Jauch LP502030JH protected 250 mAh pack",
+      "manufacturer_part_number": "LP502030JH+PCM+2 WIRES 50MM",
+      "size": [
+        32.0,
+        21.0,
+        5.4
+      ],
+      "center": [
+        -10.9,
+        0.0,
+        3.95
+      ],
+      "mass_g": 7.5
+    },
+    {
+      "name": "XIAO nRF52840 Sense + Adafruit 5683 microSD BFF",
+      "size": [
+        17.8,
+        21.0,
+        7.0
+      ],
+      "center": [
+        19.0,
+        0.0,
+        4.75
+      ],
+      "mass_g": 4.2
+    },
+    {
+      "name": "Vybronics VCLP1020B002L ERM",
+      "size": [
+        10.0,
+        10.0,
+        2.1
+      ],
+      "center": [
+        -18.0,
+        0.0,
+        11.35
+      ],
+      "mass_g": 0.9
+    },
+    {
+      "name": "hand-wired AO3416 haptic driver cluster",
+      "size": [
+        12.0,
+        8.0,
+        3.0
+      ],
+      "center": [
+        -2.7,
+        -6.3,
+        10.9
+      ],
+      "mass_g": 0.7
+    },
+    {
+      "name": "Omron/Aratas B3U-1000P external user button",
+      "size": [
+        3.0,
+        2.5,
+        1.6
+      ],
+      "center": [
+        6.0,
+        6.0,
+        11.6
+      ],
+      "mass_g": 0.1
+    }
+  ],
+  "battery_cradle": {
+    "hard_opening_mm": [
+      37.2,
+      24.55
+    ],
+    "actual_pack_total_clearance_mm": [
+      5.2,
+      3.55
+    ],
+    "actual_pack_clearance_per_side_mm": [
+      2.6,
+      1.775
+    ],
+    "reserved_15_percent_pack_total_clearance_mm": [
+      0.4,
+      0.4
+    ],
+    "reserved_15_percent_pack_clearance_per_side_mm": [
+      0.2,
+      0.2
+    ],
+    "retention": "centre delivered pack with compressible side shims; do not replace reserve with rigid plastic",
+    "orientation": "PCM/wire tail faces +X toward XIAO; route both leads through centred 5.0 mm end-rail notch",
+    "minimum_lead_bend_radius_mm": 3.0
+  },
+  "board_bay": {
+    "controlled_stack_envelope_mm": [
+      17.8,
+      21.0,
+      7.0
+    ],
+    "nominal_side_clearance_mm": 0.25,
+    "outer_cavity_has_15_percent_xy_reserve": true,
+    "hard_fences_have_15_percent_reserve": false,
+    "release_gate": "measure stack with calipers, dry-fit, and sand only printed high spots; never force board"
+  },
+  "xy_margin_15_percent": {
+    "Jauch LP502030JH protected 250 mAh pack": true,
+    "XIAO nRF52840 Sense + Adafruit 5683 microSD BFF": true
+  },
+  "expanded_component_gap_mm": 1.265,
+  "expanded_to_post_clearance_mm": {
+    "Jauch LP502030JH protected 250 mAh pack": 0.5,
+    "XIAO nRF52840 Sense + Adafruit 5683 microSD BFF": 0.565
+  },
+  "z_margin_gaps_mm": {
+    "board_to_lid": 2.75,
+    "expanded_board_to_microphone_chimney": 0.5,
+    "expanded_battery_to_lid_motor": 2.525,
+    "expanded_battery_to_lid_driver": 1.49,
+    "expanded_battery_to_lid_button": 3.1,
+    "expanded_board_to_button_guard": 0.45
+  },
+  "lid_guard_clearance_mm": {
+    "driver_to_motor": 0.433,
+    "driver_to_button": 4.2
+  },
+  "haptic_driver_guard": {
+    "controlled_cluster_envelope_mm": [
+      12.0,
+      8.0,
+      3.0
+    ],
+    "hard_inner_opening_mm": [
+      14.2,
+      9.6
+    ],
+    "hard_outer_envelope_mm": [
+      15.8,
+      11.2
+    ],
+    "wire_exits": "two 1.50 mm wide x 1.40 mm high notches through +X wall"
+  },
+  "motor_guard_wire_exit": "one 1.60 mm wide x 1.40 mm high notch through +Y wall",
+  "motor_guard": {
+    "hard_inner_diameter_mm": 11.9,
+    "hard_outer_diameter_mm": 14.0
+  },
+  "button_guard": {
+    "hard_inner_opening_mm": [
+      4.0,
+      3.4
+    ],
+    "hard_outer_envelope_mm": [
+      5.6,
+      5.0
+    ]
+  },
+  "storage": {
+    "20h_raw_pcm_bytes": 2304000000,
+    "20h_raw_pcm_with_15_percent_bytes": 2649600000,
+    "selected_card_minimum_bytes": 8000000000
+  },
+  "battery_runtime_gate": {
+    "nominal_capacity_mAh": 250,
+    "16h_average_current_ceiling_mA": 15.625,
+    "note": "Physical sealed runtime must be measured; capacity arithmetic is not proof."
+  },
+  "mass_estimate_g": {
+    "printed_pla": 8.95,
+    "electronics_and_retention": 14.45,
+    "nominal": 23.4,
+    "with_15_percent_uncertainty": 26.91,
+    "external_printed_backplate": 1.17,
+    "body_plus_printed_backplate_nominal": 24.57,
+    "note": "CAD/material estimate, not a scale measurement; Jauch current datasheet mass is approx. 7.5 g"
+  },
+  "meshes": {
+    "v09_compact_base": {
+      "watertight": true,
+      "positive_bodies": 1,
+      "bounds_mm": [
+        66.2,
+        27.2,
+        12.6
+      ]
+    },
+    "v09_compact_lid": {
+      "watertight": true,
+      "positive_bodies": 1,
+      "bounds_mm": [
+        66.2,
+        27.2,
+        5.15
+      ]
+    },
+    "v09_lanyard_clip": {
+      "watertight": true,
+      "positive_bodies": 1,
+      "bounds_mm": [
+        42.0,
+        18.0,
+        1.6
+      ]
+    }
+  },
+  "checks": [
+    {
+      "name": "body within 30%-over NotePin S ceiling",
+      "pass": true
+    },
+    {
+      "name": "battery model matches official Jauch maximum dimensions",
+      "pass": true
+    },
+    {
+      "name": "battery 15% XY reserve inside cavity",
+      "pass": true
+    },
+    {
+      "name": "hard cradle accepts 15%-expanded battery plus 0.20 mm per side",
+      "pass": true
+    },
+    {
+      "name": "actual Jauch pack has at least 1.5 mm cradle clearance per side",
+      "pass": true
+    },
+    {
+      "name": "battery +X end rail has 5 mm centred lead exit",
+      "pass": true
+    },
+    {
+      "name": "board stack 15% XY reserve inside outer cavity",
+      "pass": true
+    },
+    {
+      "name": "board stack model reserves conservative 7.0 mm physical height",
+      "pass": true
+    },
+    {
+      "name": "15%-expanded battery and board do not overlap",
+      "pass": true
+    },
+    {
+      "name": "15%-expanded parts clear screw posts",
+      "pass": true
+    },
+    {
+      "name": "15%-height board clears lid",
+      "pass": true
+    },
+    {
+      "name": "15%-height board clears hard microphone chimney",
+      "pass": true
+    },
+    {
+      "name": "15%-height lid motor clears expanded battery",
+      "pass": true
+    },
+    {
+      "name": "15%-height lid driver clears expanded battery",
+      "pass": true
+    },
+    {
+      "name": "15%-height lid button clears expanded battery",
+      "pass": true
+    },
+    {
+      "name": "motor guard accepts 15%-expanded motor plus 0.20 mm per side",
+      "pass": true
+    },
+    {
+      "name": "driver model reserves 12 x 8 x 3 mm hand-build envelope",
+      "pass": true
+    },
+    {
+      "name": "driver guard accepts 15%-expanded cluster plus 0.20 mm per side",
+      "pass": true
+    },
+    {
+      "name": "driver guard stays inside hard inner cavity",
+      "pass": true
+    },
+    {
+      "name": "lid driver guard clears motor and button guards",
+      "pass": true
+    },
+    {
+      "name": "driver and motor guards have non-pinching wire exits",
+      "pass": true
+    },
+    {
+      "name": "button guard accepts 15%-expanded switch plus 0.20 mm per side",
+      "pass": true
+    },
+    {
+      "name": "button guard stays inside hard inner cavity",
+      "pass": true
+    },
+    {
+      "name": "hard button guard clears 15%-height board",
+      "pass": true
+    },
+    {
+      "name": "20h raw PCM plus 15% fits an 8GB card",
+      "pass": true
+    },
+    {
+      "name": "primary meshes watertight",
+      "pass": true
+    },
+    {
+      "name": "one body per primary mesh",
+      "pass": true
+    }
+  ]
+}

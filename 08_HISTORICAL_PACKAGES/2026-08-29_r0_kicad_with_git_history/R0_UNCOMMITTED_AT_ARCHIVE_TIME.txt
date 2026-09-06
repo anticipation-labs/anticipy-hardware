@@ -1,0 +1,6 @@
+ M Anticipy_PROD_R0_EVT.kicad_pcb
+ M Anticipy_PROD_R0_EVT.kicad_pro
+?? R0_ROUTING_HISTORY.bundle
+?? R0_ROUTING_HISTORY_COMMITS.txt
+?? R0_UNCOMMITTED_AT_ARCHIVE_TIME.txt
+?? tools/final_build.py

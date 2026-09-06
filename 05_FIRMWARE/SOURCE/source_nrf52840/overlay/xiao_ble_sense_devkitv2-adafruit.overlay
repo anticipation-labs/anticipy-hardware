@@ -1,0 +1,96 @@
+#include <zephyr/dt-bindings/gpio/gpio.h>
+#include <zephyr/dt-bindings/gpio/nordic-nrf-gpio.h>
+
+/*
+ * Anticipy four-day prototype pin map
+ *
+ * Adafruit 5683 microSD BFF       XIAO nRF52840 Sense
+ *   SCK                           D8 / P1.13
+ *   MISO                          D9 / P1.14
+ *   MOSI                          D10 / P1.15
+ *   default CS (TX pad)           D6 / P1.11
+ *
+ * The haptic MOSFET gate therefore moves to D0 / P0.02. The BFF has no
+ * switchable SD power-enable pin; power is supplied directly from 3V3.
+ */
+
+/ {
+    aliases {
+        anticipy-button = &anticipy_button;
+        anticipy-haptic = &anticipy_haptic;
+    };
+
+    buttons {
+        compatible = "gpio-keys";
+
+        anticipy_button: button_d7 {
+            gpios = <&gpio1 12 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+            label = "Anticipy Button";
+        };
+    };
+
+    anticipy_outputs {
+        compatible = "gpio-leds";
+
+        anticipy_haptic: haptic_d0 {
+            gpios = <&gpio0 2 GPIO_ACTIVE_HIGH>;
+            label = "Anticipy Haptic MOSFET";
+        };
+    };
+};
+
+&spi2 {
+    status = "okay";
+    pinctrl-0 = <&anticipy_spi2_default>;
+    pinctrl-1 = <&anticipy_spi2_sleep>;
+    pinctrl-names = "default", "sleep";
+    cs-gpios = <&gpio1 11 GPIO_ACTIVE_LOW>;
+
+    sdhc0: sdhc@0 {
+        compatible = "zephyr,sdhc-spi-slot";
+        reg = <0>;
+        status = "okay";
+        spi-max-frequency = <12000000>;
+
+        mmc {
+            compatible = "zephyr,sdmmc-disk";
+            status = "okay";
+        };
+    };
+};
+
+&pinctrl {
+    anticipy_spi2_default: anticipy_spi2_default {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 1, 13)>,
+                    <NRF_PSEL(SPIM_MOSI, 1, 15)>,
+                    <NRF_PSEL(SPIM_MISO, 1, 14)>;
+        };
+    };
+
+    anticipy_spi2_sleep: anticipy_spi2_sleep {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 1, 13)>,
+                    <NRF_PSEL(SPIM_MOSI, 1, 15)>,
+                    <NRF_PSEL(SPIM_MISO, 1, 14)>;
+            low-power-enable;
+        };
+    };
+};
+
+&uart0 {
+    status = "disabled";
+};
+
+/* The prototype does not use the IMU; keep I2C off to save power. */
+&i2c0 {
+    status = "disabled";
+};
+
+&i2c1 {
+    status = "disabled";
+};
+
+&temp {
+    status = "disabled";
+};

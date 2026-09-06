@@ -1,0 +1,18 @@
+<!-- @dsCard group="Hardware" -->
+<link rel="stylesheet" href="../styles.css">
+<p class="eyebrow">Power</p>
+<h1>Battery map</h1>
+<table class="spec-table">
+<tr><th>Mode</th><th>Draw</th><th>On 500 mAh</th></tr>
+<tr><td>BLE streaming</td><td class="dim-label">15–20 mA</td><td class="dim-label">25–30 h</td></tr>
+<tr><td>Offline → SD, radio off</td><td class="dim-label">~10 mA</td><td class="dim-label">~40 h+</td></tr>
+<tr><td>Standby (worn, quiet)</td><td class="dim-label">0.1–1 mA</td><td class="dim-label">1–3 weeks</td></tr>
+<tr><td>Charge, stock</td><td class="dim-label">50 mA</td><td class="dim-label">~11 h</td></tr>
+<tr><td>Charge, P0.13 patched</td><td class="dim-label">100 mA (0.2C)</td><td class="dim-label">~6 h</td></tr>
+</table>
+<h2>Storage vs the 4–8 h offline requirement</h2>
+<table class="spec-table">
+<tr><th>Medium</th><th>Holds (Opus 32 kbps = 14.4 MB/h)</th><th>Verdict</th></tr>
+<tr><td>Onboard 2 MB QSPI</td><td class="dim-label">≈ 8 min</td><td><span class="status-badge risk">NEVER ENOUGH</span></td></tr>
+<tr><td>32 GB microSD</td><td class="dim-label">≈ 278 h</td><td><span class="status-badge ok">35× WORST CASE</span></td></tr>
+</table>

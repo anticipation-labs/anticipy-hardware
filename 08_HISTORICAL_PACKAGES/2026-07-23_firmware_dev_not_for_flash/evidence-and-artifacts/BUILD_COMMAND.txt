@@ -1,0 +1,1 @@
+west build --pristine -b xiao_ble_sense -d /development/output /candidate/firmware/.build/source/anticipy-v2.0.1 -- -DZEPHYR_BASE:PATH=/ncs/zephyr -DCONF_FILE:STRING=prj_xiao_ble_sense_devkitv2-adafruit.conf -DDTC_OVERLAY_FILE:STRING=overlay/xiao_ble_sense_devkitv2-adafruit_module.overlay

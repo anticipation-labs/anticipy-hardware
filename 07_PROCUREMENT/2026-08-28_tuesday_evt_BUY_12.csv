@@ -1,0 +1,17 @@
+state,quantity,part,manufacturer_part,source_url,checked_price_cad_each,plain_english_note
+BUY_IF_CHECKOUT_SAYS_TUESDAY,12,XIAO nRF52840 Sense,Seeed 102010469,https://www.digikey.ca/en/products/detail/seeed-technology-co-ltd/102010469/16652896,25.22,Processor Bluetooth microphone charger
+BUY_IF_CHECKOUT_SAYS_TUESDAY,12,microSD BFF,Adafruit 5683,https://www.digikey.ca/en/products/detail/adafruit-industries-llc/5683/18073185,4.09,Offline memory board; keep default TX chip-select jumper
+BUY_IF_CHECKOUT_SAYS_TUESDAY,15,6 mm haptic motor,Vybronics VC0625B001L,https://www.digikey.ca/en/products/detail/vybronics-inc/VC0625B001L/12323586,4.177,Vibration feedback
+BUY_IF_CHECKOUT_SAYS_TUESDAY,15,tactile button,C&K PTS810SJM250SMTR-LFS,https://www.digikey.ca/en/products/detail/c-k/PTS810SJM250SMTR-LFS/4176610,0.795,Physical front button
+BUY_IF_CHECKOUT_SAYS_TUESDAY,20,N-channel MOSFET,Diodes Inc DMG2302U-7,https://www.digikey.ca/en/products/detail/diodes-incorporated/DMG2302U-7/2192636,0.88,Drives motor; never drive motor from GPIO
+BUY_IF_CHECKOUT_SAYS_TUESDAY,20,flyback diode,Diodes Inc 1N4148W-7-F,https://www.digikey.ca/en/products/detail/diodes-incorporated/1N4148W-7-F/814371,0.161,Protects electronics from motor
+BUY_IF_CHECKOUT_SAYS_TUESDAY,20,100 ohm 0603 resistor,Yageo RC0603FR-07100RL,https://www.digikey.ca/en/products/detail/yageo/RC0603FR-07100RL/726888,,MOSFET gate resistor
+BUY_IF_CHECKOUT_SAYS_TUESDAY,20,100 kilohm 0603 resistor,Yageo RC0603FR-07100KL,https://www.digikey.ca/en/products/detail/yageo/RC0603FR-07100KL/726889,,MOSFET gate pulldown
+BUY_IF_CHECKOUT_SAYS_TUESDAY,20,0.1 uF ceramic capacitor,Murata GRM188R72A104KA35D,https://www.digikey.ca/en/products/detail/murata-electronics/GRM188R72A104KA35D/702549,0.16,Across motor
+BUY_IF_CHECKOUT_SAYS_TUESDAY,20,47 uF low-profile capacitor,Taiyo Yuden JMK212BJ476MG-T,https://www.digikey.ca/en/products/detail/taiyo-yuden/JMK212BJ476MG-T/1212779,,Across 3.3V and ground near motor
+CALL_AND_HOLD,12,32GB microSD card,UHS-I U1 or better,https://www.canadacomputers.com/en/microsd-cards/249848/teamgroup-32gb-microsdhc-uhs-i-u1-tusdh32gcl10u03.html,13.99,Format FAT32; verify Vancouver pickup quantity before travelling
+HOLD_UNTIL_PHYSICALLY_VERIFIED,12,protected 502025 200mAh LiPo,maximum finished pack 25x20x5 mm,,,Must include protection board and wires; reject swollen oversize undocumented or 302025-200mAh claims
+CALL_FOR_SAME_DAY,24,0.60-0.65 mm aluminum face cap,5052 or equivalent,https://www.makerlabs.com/fabrication,,Cut one mirrored pair first from the included PDF or STEP
+BUY_LOCAL,1,thin PET electrical insulation,0.10-0.20 mm sheet,,,Between every board battery and metal surface
+BUY_LOCAL,1,thin nonconductive spacer,0.20-0.40 mm Poron or EVA,,,Prevents movement without pressing on the pouch
+BUY_LOCAL,1,thin high-bond adhesive,3M 300LSE-equivalent,,,Bond faces only after every test passes

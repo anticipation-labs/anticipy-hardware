@@ -1,0 +1,25 @@
+# Exported by three-d-stage
+newmtl brushed-titanium
+Kd 0.6939 0.7011 0.7231
+Ks 0.2000 0.2000 0.2000
+Ns 100
+d 1.0000
+
+newmtl recess-dark
+Kd 0.0242 0.0242 0.0273
+Ks 0.2000 0.2000 0.2000
+Ns 60
+d 1.0000
+
+newmtl led-amber
+Kd 1.0000 0.4564 0.1022
+Ks 0.2000 0.2000 0.2000
+Ns 120
+d 1.0000
+
+newmtl polished-steel
+Kd 0.8070 0.8148 0.8388
+Ks 0.2000 0.2000 0.2000
+Ns 144
+d 1.0000
+

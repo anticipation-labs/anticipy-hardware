@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "format": "SPDX-2.3 JSON",
+  "generator": {
+    "name": "anticipy-firmware-spdx",
+    "version": "1.0.0"
+  },
+  "validator_runtime": {
+    "python_implementation": "CPython",
+    "python_version": "3.10.14",
+    "jsonschema_version": "4.26.0",
+    "pyyaml_version": "6.0.3"
+  },
+  "repository": "https://github.com/spdx/spdx-spec.git",
+  "revision": "aadf3b0b8dbbabdb4d880b0fc714255fea436ff7",
+  "path": "schemas/spdx-schema.json",
+  "vendored_path": "replacement/spdx-2.3.schema.json.b64",
+  "vendored_encoding": "base64",
+  "source_url": "https://raw.githubusercontent.com/spdx/spdx-spec/aadf3b0b8dbbabdb4d880b0fc714255fea436ff7/schemas/spdx-schema.json",
+  "sha256": "239208b7ac287b3cf5d9a9af23f9d69863971102a5e1587a27a398b43490b89b",
+  "license": "CC-BY-3.0",
+  "license_path": "LICENSES/SPDX-spdx-spec-CC-BY-3.0.txt",
+  "upstream_license_sha256": "017e38491cccbd2bdb6da0a32a33db9ec245b5dab30fdcd09f2c742c975e5b35",
+  "vendored_license_sha256": "a69d068ec0e987513259d3d355f10c1b39cae1bfb275e8a6ed250b8c1d17531f",
+  "json_schema_draft": "http://json-schema.org/draft-07/schema#"
+}

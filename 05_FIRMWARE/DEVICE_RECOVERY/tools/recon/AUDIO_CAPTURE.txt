@@ -1,0 +1,8 @@
+EVENT app_ready awaiting_explicit_start=true
+EVENT explicit_start
+EVENT manager_create authorization=allowed_always
+EVENT central authorization=allowed_always state=powered_on
+EVENT scan service=UNFILTERED_MATCH_IN_CODE
+EVENT matched name="Anticipy" rssi=-44
+EVENT discovered idHash=8c2c467407973135 rssi=-44 advertisedServices=["19B10000-E8F2-537E-4F6C-D104768A1214"]
+RESULT {"authorization":"allowed_always","batteryRead":false,"captureSecondsActual":null,"captureSecondsRequested":20,"centralState":"powered_on","codec":null,"gatt":[],"notificationBytes":0,"notificationCount":0,"packetMetrics":{"droppedFrames":0,"duplicatePackets":0,"firstSequence":null,"fragmentCounts":{},"frameLengths":{},"lastSequence":null,"malformedPackets":0,"notificationStreamSHA256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","packetLengths":{},"sequenceGaps":0,"validFrameBytes":0,"validFrames":0,"validOpusFramesSHA256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},"rawAudioPersisted":false,"reason":"overall_timeout","schema":1,"serviceMatched":true}

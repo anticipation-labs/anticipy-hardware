@@ -1,0 +1,7 @@
+EVENT app_ready awaiting_explicit_start=true
+EVENT explicit_start
+EVENT manager_create authorization=not_determined
+EVENT central authorization=allowed_always state=powered_on
+EVENT scan service=ALL_UNFILTERED
+SURVEY name="807" rssi=-96 services=["8EC1E808-67C9-11E6-8B77-86F30CA893D3"] id=B1B584FE-3B9B-D33F-2262-5EA780D10ECD
+RESULT {"authorization":"allowed_always","batteryRead":false,"captureSecondsActual":null,"captureSecondsRequested":18,"centralState":"powered_on","codec":null,"gatt":[],"notificationBytes":0,"notificationCount":0,"packetMetrics":{"droppedFrames":0,"duplicatePackets":0,"firstSequence":null,"fragmentCounts":{},"frameLengths":{},"lastSequence":null,"malformedPackets":0,"notificationStreamSHA256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","packetLengths":{},"sequenceGaps":0,"validFrameBytes":0,"validFrames":0,"validOpusFramesSHA256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},"rawAudioPersisted":false,"reason":"overall_timeout","schema":1,"serviceMatched":false}

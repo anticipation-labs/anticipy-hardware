@@ -1,0 +1,11 @@
+status=QUARANTINED_DEVELOPMENT_BUILD_NOT_FOR_FLASH
+production_candidate_gate_passed=false
+two_replica_attested=false
+spdx_release_sbom_emitted=false
+flash_approved=false
+flash_performed=false
+physical_hardware_verified=false
+physical_ble_verified=false
+physical_battery_verified=false
+haptic_verified=false
+secure_update_added=false

@@ -1,0 +1,387 @@
+{
+  "printer": "Bambu Lab P2S, 0.4 mm nozzle",
+  "official_build_volume_mm": [
+    256,
+    256,
+    256
+  ],
+  "objects_expected": 30,
+  "objects_reloaded": 30,
+  "plate_xy_bounds_mm": [
+    [
+      8.9,
+      14.4
+    ],
+    [
+      243.0,
+      216.799
+    ]
+  ],
+  "plate_inside_256_mm": true,
+  "geometry_only_no_gcode": true,
+  "model_geometry_volume_mm3": 40675.404,
+  "model_geometry_mass_at_1p25_g_per_cm3_g": 50.84,
+  "load_at_least_filament_g_including_brims_and_retry_allowance": 80,
+  "placements": [
+    {
+      "name": "unit_1_base",
+      "centre_xy_mm": [
+        42,
+        28
+      ],
+      "bounds_mm": [
+        66.2,
+        27.2,
+        12.6
+      ]
+    },
+    {
+      "name": "unit_2_base",
+      "centre_xy_mm": [
+        116,
+        28
+      ],
+      "bounds_mm": [
+        66.2,
+        27.2,
+        12.6
+      ]
+    },
+    {
+      "name": "unit_3_base",
+      "centre_xy_mm": [
+        190,
+        28
+      ],
+      "bounds_mm": [
+        66.2,
+        27.2,
+        12.6
+      ]
+    },
+    {
+      "name": "unit_4_base",
+      "centre_xy_mm": [
+        79,
+        66
+      ],
+      "bounds_mm": [
+        66.2,
+        27.2,
+        12.6
+      ]
+    },
+    {
+      "name": "unit_5_base",
+      "centre_xy_mm": [
+        153,
+        66
+      ],
+      "bounds_mm": [
+        66.2,
+        27.2,
+        12.6
+      ]
+    },
+    {
+      "name": "unit_1_lid_exterior_face_down",
+      "centre_xy_mm": [
+        42,
+        104
+      ],
+      "bounds_mm": [
+        66.2,
+        27.2,
+        5.15
+      ]
+    },
+    {
+      "name": "unit_2_lid_exterior_face_down",
+      "centre_xy_mm": [
+        116,
+        104
+      ],
+      "bounds_mm": [
+        66.2,
+        27.2,
+        5.15
+      ]
+    },
+    {
+      "name": "unit_3_lid_exterior_face_down",
+      "centre_xy_mm": [
+        190,
+        104
+      ],
+      "bounds_mm": [
+        66.2,
+        27.2,
+        5.15
+      ]
+    },
+    {
+      "name": "unit_4_lid_exterior_face_down",
+      "centre_xy_mm": [
+        79,
+        142
+      ],
+      "bounds_mm": [
+        66.2,
+        27.2,
+        5.15
+      ]
+    },
+    {
+      "name": "unit_5_lid_exterior_face_down",
+      "centre_xy_mm": [
+        153,
+        142
+      ],
+      "bounds_mm": [
+        66.2,
+        27.2,
+        5.15
+      ]
+    },
+    {
+      "name": "unit_1_lanyard_backplate",
+      "centre_xy_mm": [
+        30,
+        184
+      ],
+      "bounds_mm": [
+        42.0,
+        18.0,
+        1.6
+      ]
+    },
+    {
+      "name": "unit_2_lanyard_backplate",
+      "centre_xy_mm": [
+        78,
+        184
+      ],
+      "bounds_mm": [
+        42.0,
+        18.0,
+        1.6
+      ]
+    },
+    {
+      "name": "unit_3_lanyard_backplate",
+      "centre_xy_mm": [
+        126,
+        184
+      ],
+      "bounds_mm": [
+        42.0,
+        18.0,
+        1.6
+      ]
+    },
+    {
+      "name": "unit_4_lanyard_backplate",
+      "centre_xy_mm": [
+        174,
+        184
+      ],
+      "bounds_mm": [
+        42.0,
+        18.0,
+        1.6
+      ]
+    },
+    {
+      "name": "unit_5_lanyard_backplate",
+      "centre_xy_mm": [
+        222,
+        184
+      ],
+      "bounds_mm": [
+        42.0,
+        18.0,
+        1.6
+      ]
+    },
+    {
+      "name": "unit_1_plunger_1.7mm",
+      "centre_xy_mm": [
+        25,
+        215
+      ],
+      "bounds_mm": [
+        3.6,
+        3.599,
+        2.15
+      ]
+    },
+    {
+      "name": "unit_1_plunger_1.9mm",
+      "centre_xy_mm": [
+        35,
+        215
+      ],
+      "bounds_mm": [
+        3.6,
+        3.599,
+        2.35
+      ]
+    },
+    {
+      "name": "unit_1_plunger_2.1mm",
+      "centre_xy_mm": [
+        45,
+        215
+      ],
+      "bounds_mm": [
+        3.6,
+        3.599,
+        2.55
+      ]
+    },
+    {
+      "name": "unit_2_plunger_1.7mm",
+      "centre_xy_mm": [
+        69,
+        215
+      ],
+      "bounds_mm": [
+        3.6,
+        3.599,
+        2.15
+      ]
+    },
+    {
+      "name": "unit_2_plunger_1.9mm",
+      "centre_xy_mm": [
+        79,
+        215
+      ],
+      "bounds_mm": [
+        3.6,
+        3.599,
+        2.35
+      ]
+    },
+    {
+      "name": "unit_2_plunger_2.1mm",
+      "centre_xy_mm": [
+        89,
+        215
+      ],
+      "bounds_mm": [
+        3.6,
+        3.599,
+        2.55
+      ]
+    },
+    {
+      "name": "unit_3_plunger_1.7mm",
+      "centre_xy_mm": [
+        113,
+        215
+      ],
+      "bounds_mm": [
+        3.6,
+        3.599,
+        2.15
+      ]
+    },
+    {
+      "name": "unit_3_plunger_1.9mm",
+      "centre_xy_mm": [
+        123,
+        215
+      ],
+      "bounds_mm": [
+        3.6,
+        3.599,
+        2.35
+      ]
+    },
+    {
+      "name": "unit_3_plunger_2.1mm",
+      "centre_xy_mm": [
+        133,
+        215
+      ],
+      "bounds_mm": [
+        3.6,
+        3.599,
+        2.55
+      ]
+    },
+    {
+      "name": "unit_4_plunger_1.7mm",
+      "centre_xy_mm": [
+        157,
+        215
+      ],
+      "bounds_mm": [
+        3.6,
+        3.599,
+        2.15
+      ]
+    },
+    {
+      "name": "unit_4_plunger_1.9mm",
+      "centre_xy_mm": [
+        167,
+        215
+      ],
+      "bounds_mm": [
+        3.6,
+        3.599,
+        2.35
+      ]
+    },
+    {
+      "name": "unit_4_plunger_2.1mm",
+      "centre_xy_mm": [
+        177,
+        215
+      ],
+      "bounds_mm": [
+        3.6,
+        3.599,
+        2.55
+      ]
+    },
+    {
+      "name": "unit_5_plunger_1.7mm",
+      "centre_xy_mm": [
+        201,
+        215
+      ],
+      "bounds_mm": [
+        3.6,
+        3.599,
+        2.15
+      ]
+    },
+    {
+      "name": "unit_5_plunger_1.9mm",
+      "centre_xy_mm": [
+        211,
+        215
+      ],
+      "bounds_mm": [
+        3.6,
+        3.599,
+        2.35
+      ]
+    },
+    {
+      "name": "unit_5_plunger_2.1mm",
+      "centre_xy_mm": [
+        221,
+        215
+      ],
+      "bounds_mm": [
+        3.6,
+        3.599,
+        2.55
+      ]
+    }
+  ]
+}

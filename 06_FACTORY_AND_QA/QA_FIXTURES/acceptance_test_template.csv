@@ -1,0 +1,60 @@
+fixture_id,dut_serial,test_group,test_id,metric,unit,lower_limit,upper_limit,expected_text,actual,critical,notes,evidence
+RATTLE-01,FIXTURE,rattle_qualification,RQ-01,mesh verification result,text,,,PASS,,YES,Run verify_meshes.py,reports/mesh_verification.json
+RATTLE-01,FIXTURE,rattle_qualification,RQ-02,guard opening stops motion,text,,,PASS,,YES,Test at slow speed before installing a DUT,video/file
+RATTLE-01,FIXTURE,rattle_qualification,RQ-03,stop loop opening stops motion,text,,,PASS,,YES,Test at slow speed before installing a DUT,video/file
+RATTLE-01,FIXTURE,rattle_qualification,RQ-04,rotor edge runout,mm,0,0.5,,,YES,Measure one full turn,photo/file
+RATTLE-01,FIXTURE,rattle_qualification,RQ-05,guard moving-part clearance,mm,10,,,,YES,Minimum at every position,photo/file
+RATTLE-01,FIXTURE,rattle_qualification,RQ-06,dummy repeat variation index A,dB,0,3,,,YES,Ten identical runs after motion windows are removed,report/file
+RATTLE-01,FIXTURE,rattle_qualification,RQ-07,dummy repeat variation index B,dB,0,3,,,YES,Ten identical runs after motion windows are removed,report/file
+RATTLE-01,FIXTURE,rattle_qualification,RQ-08,dummy repeat variation index C,dB,0,3,,,YES,Ten identical runs after motion windows are removed,report/file
+RATTLE-01,FIXTURE,rattle_qualification,RQ-09,three golden units captured,text,,,PASS,,YES,Ten runs per golden and index,folder/file
+RATTLE-01,FIXTURE,rattle_qualification,RQ-10,seeded bead challenge index A,text,,,PASS,,YES,Must be rejected when bead can move in this axis,report/file
+RATTLE-01,FIXTURE,rattle_qualification,RQ-11,seeded bead challenge index B,text,,,PASS,,YES,Must be rejected when bead can move in this axis,report/file
+RATTLE-01,FIXTURE,rattle_qualification,RQ-12,seeded bead challenge index C,text,,,PASS,,YES,Must be rejected when bead can move in this axis,report/file
+DROP-01,FIXTURE,drop_qualification,DQ-01,mast tether and metal braces inspected,text,,,PASS,,YES,No printed structural anchor,photo/file
+DROP-01,FIXTURE,drop_qualification,DQ-02,fall and rebound guard inspected,text,,,PASS,,YES,Operator remains outside guard,photo/file
+DROP-01,FIXTURE,drop_qualification,DQ-03,common latch lift mismatch,mm,0,0.5,,,YES,Measure at all three guide rods,photo/file
+DROP-01,FIXTURE,drop_qualification,DQ-04,minimum finger retraction,mm,35,,,,YES,Smallest of three fingers,video/file
+DROP-01,FIXTURE,drop_qualification,DQ-05,minimum finger clearance before 15 mm fall,mm,10,,,,YES,Measure from 240 fps qualification video,video/file
+DROP-01,FIXTURE,drop_qualification,DQ-06,spring force spread,percent,0,10,,,YES,Maximum deviation across matched springs,report/file
+DROP-01,FIXTURE,drop_qualification,DQ-07,release height,mm,1198,1202,,,YES,Impact point on DUT to target,photo/file
+DROP-01,FIXTURE,drop_qualification,DQ-08,dummy releases passing,count,30,30,,,YES,No averaging; every release passes,video/file
+DROP-01,FIXTURE,drop_qualification,DQ-09,maximum initial angular change,degree,0,5,,,YES,Worst of 30 releases over first 0.5 m,video/file
+DROP-01,FIXTURE,drop_qualification,DQ-10,post-release fixture contact,text,,,PASS,,YES,None in all 30 releases,video/file
+RATTLE-01,ENTER_SERIAL,rattle_dut,RD-01,pre-test damage inspection,text,,,PASS,,YES,No swelling heat leaks or open seam,photo/file
+RATTLE-01,ENTER_SERIAL,rattle_dut,RD-02,mass before test,g,0,100,,,YES,Record only; compare to product specification,photo/file
+RATTLE-01,ENTER_SERIAL,rattle_dut,RD-03,index A acoustic score,text,,,PASS,,YES,Run ten full cycles,report/file
+RATTLE-01,ENTER_SERIAL,rattle_dut,RD-04,index B acoustic score,text,,,PASS,,YES,Run ten full cycles,report/file
+RATTLE-01,ENTER_SERIAL,rattle_dut,RD-05,index C acoustic score,text,,,PASS,,YES,Run ten full cycles,report/file
+RATTLE-01,ENTER_SERIAL,rattle_dut,RD-06,human click and scrape review,text,,,PASS,,YES,Qualified operator listens without changing gain,report/file
+DROP-01,ENTER_SERIAL,drop_dut,DD-00,pre-drop functional check,text,,,PASS,,YES,Audio BLE storage button and haptic product test,report/file
+DROP-01,ENTER_SERIAL,drop_dut,DD-01,pose 01 F_XP,text,,,PASS,,YES,Inspect and short functional test after drop,video/file
+DROP-01,ENTER_SERIAL,drop_dut,DD-02,pose 02 F_XM,text,,,PASS,,YES,Inspect and short functional test after drop,video/file
+DROP-01,ENTER_SERIAL,drop_dut,DD-03,pose 03 F_YP,text,,,PASS,,YES,Inspect and short functional test after drop,video/file
+DROP-01,ENTER_SERIAL,drop_dut,DD-04,pose 04 F_YM,text,,,PASS,,YES,Inspect and short functional test after drop,video/file
+DROP-01,ENTER_SERIAL,drop_dut,DD-05,pose 05 F_ZP,text,,,PASS,,YES,Inspect and short functional test after drop,video/file
+DROP-01,ENTER_SERIAL,drop_dut,DD-06,pose 06 F_ZM,text,,,PASS,,YES,Inspect and short functional test after drop,video/file
+DROP-01,ENTER_SERIAL,drop_dut,DD-07,pose 07 E_XP_YP,text,,,PASS,,YES,Inspect and short functional test after drop,video/file
+DROP-01,ENTER_SERIAL,drop_dut,DD-08,pose 08 E_XP_YM,text,,,PASS,,YES,Inspect and short functional test after drop,video/file
+DROP-01,ENTER_SERIAL,drop_dut,DD-09,pose 09 E_XM_YP,text,,,PASS,,YES,Inspect and short functional test after drop,video/file
+DROP-01,ENTER_SERIAL,drop_dut,DD-10,pose 10 E_XM_YM,text,,,PASS,,YES,Inspect and short functional test after drop,video/file
+DROP-01,ENTER_SERIAL,drop_dut,DD-11,pose 11 E_XP_ZP,text,,,PASS,,YES,Inspect and short functional test after drop,video/file
+DROP-01,ENTER_SERIAL,drop_dut,DD-12,pose 12 E_XP_ZM,text,,,PASS,,YES,Inspect and short functional test after drop,video/file
+DROP-01,ENTER_SERIAL,drop_dut,DD-13,pose 13 E_XM_ZP,text,,,PASS,,YES,Inspect and short functional test after drop,video/file
+DROP-01,ENTER_SERIAL,drop_dut,DD-14,pose 14 E_XM_ZM,text,,,PASS,,YES,Inspect and short functional test after drop,video/file
+DROP-01,ENTER_SERIAL,drop_dut,DD-15,pose 15 E_YP_ZP,text,,,PASS,,YES,Inspect and short functional test after drop,video/file
+DROP-01,ENTER_SERIAL,drop_dut,DD-16,pose 16 E_YP_ZM,text,,,PASS,,YES,Inspect and short functional test after drop,video/file
+DROP-01,ENTER_SERIAL,drop_dut,DD-17,pose 17 E_YM_ZP,text,,,PASS,,YES,Inspect and short functional test after drop,video/file
+DROP-01,ENTER_SERIAL,drop_dut,DD-18,pose 18 E_YM_ZM,text,,,PASS,,YES,Inspect and short functional test after drop,video/file
+DROP-01,ENTER_SERIAL,drop_dut,DD-19,pose 19 C_XP_YP_ZP,text,,,PASS,,YES,Inspect and short functional test after drop,video/file
+DROP-01,ENTER_SERIAL,drop_dut,DD-20,pose 20 C_XP_YP_ZM,text,,,PASS,,YES,Inspect and short functional test after drop,video/file
+DROP-01,ENTER_SERIAL,drop_dut,DD-21,pose 21 C_XP_YM_ZP,text,,,PASS,,YES,Inspect and short functional test after drop,video/file
+DROP-01,ENTER_SERIAL,drop_dut,DD-22,pose 22 C_XP_YM_ZM,text,,,PASS,,YES,Inspect and short functional test after drop,video/file
+DROP-01,ENTER_SERIAL,drop_dut,DD-23,pose 23 C_XM_YP_ZP,text,,,PASS,,YES,Inspect and short functional test after drop,video/file
+DROP-01,ENTER_SERIAL,drop_dut,DD-24,pose 24 C_XM_YP_ZM,text,,,PASS,,YES,Inspect and short functional test after drop,video/file
+DROP-01,ENTER_SERIAL,drop_dut,DD-25,pose 25 C_XM_YM_ZP,text,,,PASS,,YES,Inspect and short functional test after drop,video/file
+DROP-01,ENTER_SERIAL,drop_dut,DD-26,pose 26 C_XM_YM_ZM,text,,,PASS,,YES,Inspect and short functional test after drop,video/file
+DROP-01,ENTER_SERIAL,drop_dut,DD-27,maximum seam-gap increase,mm,0,0.1,,,YES,Compare same marked points before and after,photo/file
+DROP-01,ENTER_SERIAL,drop_dut,DD-28,sharp edge or exposed internal part,text,,,PASS,,YES,No sharp edge and enclosure remains closed,photo/file
+DROP-01,ENTER_SERIAL,drop_dut,DD-29,final full functional test,text,,,PASS,,YES,Audio BLE storage button haptic charging and current draw,report/file
+DROP-01,ENTER_SERIAL,drop_dut,DD-30,post-test battery inspection,text,,,PASS,,YES,Do not recharge before this written inspection,report/file

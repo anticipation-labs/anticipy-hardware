@@ -1,0 +1,80 @@
+DISK RECLAIM MANIFEST — 2026-07-24 (Task B2)
+=============================================
+Volume: /System/Volumes/Data
+  BEFORE:  8.35 GiB free (98% full)
+  AFTER : 14.25 GiB free (97% full)
+  RECLAIMED: 5.90 GiB
+
+METHOD / SAFETY GATE
+--------------------
+1. Hashed all 267 .uf2/.hex/.bin files under ~/anticipation-lanes, ~/anticipation-builds,
+   ~/anticipy-pendant-restore and ~/Downloads/Anticipy-Firmware-Development-NOT-FOR-FLASH-*
+   -> 99 distinct images. (scratchpad: img-hashes.txt)
+2. Only 20 .uf2 files exist, collapsing to 5 distinct app images:
+     f1c9011a... dual-hatch (GOOD image)            1 copy  -> KEPT
+     437dc9e3... running-image provenance           2 copies -> KEPT (both)
+     36424986... recoverable-candidate              1 copy  -> KEPT
+     e518daa4... authorized-flash candidate         2 copies -> 1 KEPT (in -07)
+     2e78015e... quarantine "anticipy-unverified"  14 copies -> 2 KEPT
+3. Verified: of the 41 distinct image hashes inside the delete set, ZERO lacked a
+   byte-identical survivor. Nothing unique was destroyed.
+4. Verified all 16 git HEADs of deleted lanes/candidates are REACHABLE FROM refs/heads/*
+   inside the surviving lane firmware-final-integration. `git fsck --connectivity-only`
+   exits 0 (only dangling blobs, normal). No git history was lost.
+5. All 12 lanes had 0 untracked files; the only "dirty" lane (ios-backend-e2e, 2374 entries)
+   was 100% deletions of committed Next.js build output, recoverable from git.
+
+REMOVED
+-------
+Redundant lanes (~/anticipation-lanes/) — history preserved in firmware-final-integration:
+  firmware-ci-signed              HEAD e69366ca3 -> refs/heads/firmware-control-signed-20260722
+  firmware-ci-trusted             HEAD d684fa25a -> refs/heads/main
+  firmware-control-repair         HEAD 73665e60f -> refs/heads/lane/firmware-control-repair
+  firmware-receipt-wording        HEAD 059715ab9 -> refs/heads/lane/firmware-receipt-wording
+  firmware-safety-repair          HEAD df79aa18d -> refs/heads/lane/firmware-safety-repair
+  firmware-snapshot-repair        HEAD f8ef77458 -> refs/heads/lane/firmware-snapshot-repair
+  firmware-source-replacement     HEAD a8f345434 -> refs/heads/lane/firmware-source-replacement
+  ios-backend-e2e                 HEAD 754395839 -> refs/heads/lane/ios-backend-e2e
+  ios-battery-truth               HEAD cd7dfb186 -> refs/heads/lane/ios-battery-truth
+  ios-legacy-stream-safety-fix    HEAD bffe9b1f1 -> refs/heads/lane/ios-legacy-stream-safety-fix
+  preference-runtime-enforcement  HEAD 336d455ab -> refs/heads/lane/preference-runtime-enforcement
+
+Detached-HEAD candidate checkouts (~/anticipation-builds/) — all reachable in final-integration:
+  firmware-candidate-052f5e63 / -463e6c68 / -67165344 / -ce5490d3  -> refs/heads/mvp/one-head-20min
+  firmware-candidate-f717                                          -> refs/heads/lane/firmware-final-integration
+
+Superseded flash attempts (~/anticipation-builds/):
+  firmware-authorized-flash-20260723-01   (12K, logs+metadata only, no images)
+  firmware-authorized-flash-20260723-02   (CPython 3.10.14 + zlib build tree, no unique images)
+  firmware-authorized-flash-20260723-03   (same)
+  firmware-authorized-flash-20260723-04
+  firmware-authorized-flash-20260723-05
+  firmware-authorized-flash-20260723-06   (its zephyr.uf2 e518daa4 is byte-identical to the
+                                           copy retained in -07/candidate-build)
+  firmware-local-build13-runtime2         (CPython 3.10.14 + zlib build tree)
+  runtime-install-probe-20260723-01       (throwaway python venv probe)
+
+KEPT — verified present and hash-checked after deletion
+-------------------------------------------------------
+  ~/anticipy-pendant-restore/                                              7.4M
+  ~/anticipation-builds/firmware-authorized-flash-20260723-07/  (entire)   292M
+      recoverable-candidate/   (only tree with recovery_usb.c)              40M
+      macos-nordic-dfu-flasher/ (built, validated flasher)                 190M
+      DO-NOT-SEND/             (quarantined dangerous OTA zips)            492K
+  ~/anticipation-builds/dual-hatch-20260724/                                41M
+      build/anticipy-dual-hatch/zephyr/zephyr.uf2
+      sha256 f1c9011a921b67c0ba31cf839ecd5981c167fae6ed9d4ef4a5137d7b369c6937  CONFIRMED
+  ~/Downloads/Anticipy-Firmware-Development-NOT-FOR-FLASH-20260723-437dc9e3  8.4M
+  ~/anticipation-lanes/firmware-final-integration/                          2.7G
+      (git superset for ALL 16 deleted checkouts; also holds the quarantine image)
+  ~/anticipation-builds/firmware-local-final/ncs + toolchain-root           5.9G  NCS workspace + Zephyr SDK
+  ~/anticipation-builds/firmware-local-build13-final/ncs                    2.4G  NCS workspace
+  ~/anticipation-builds/firmware-local-build13/ncs                          156M  NCS workspace
+  Docker images — NOT TOUCHED. `docker prune` was never run. Pinned image
+      nordicplayground/nrfconnect-sdk@sha256:f50c51b7... (8.51GB) verified still present.
+
+NOT TOUCHED
+-----------
+  ~/Anticipy-0707                          (firmware worktree, no-write rule)
+  ~/Anticipy-App-lamenting-hawthorn        (canonical repo)
+  the pendant device                       (no writes, no flashing)

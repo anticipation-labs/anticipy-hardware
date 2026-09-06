@@ -1,0 +1,4 @@
+b6395fabfa2803e5ebc473fedcf47b0d74e3c602fef19775bc9e362e973b41cc  A-TRY-FIRST-dual-hatch-rc-internal-RC.uf2
+77ee2d67df005fa224fc0f840bda76715957a4f2e4ebdef09cdfdbac8ced4d91  A-TRY-FIRST-dual-hatch-rc-nrf52-legacy-ota.zip
+f1c9011a921b67c0ba31cf839ecd5981c167fae6ed9d4ef4a5137d7b369c6937  B-dual-hatch-xtal-crystal.uf2
+e861aa9c2979ce3611bb677a29ed625ec9aced23c67b9764c19d43c6200db7c9  B-dual-hatch-xtal-nrf52-legacy-ota.zip

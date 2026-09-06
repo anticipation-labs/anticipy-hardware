@@ -1,0 +1,31 @@
+refs,qty,description,manufacturer,manufacturer_part_number,package,assembly_status,source
+U1,1,nRF52840 BLE module with integrated antenna,Raytac,MDBT50Q-1MV2,10.5x15.5mm module,Exact,"https://www.raytac.com/product/ins.php?index_id=24"
+U2,1,Battery charger and power management IC,Nordic Semiconductor,NPM1300-QEAA-R7,QFN32 5x5mm,Exact,"https://www.nordicsemi.com/Products/nPM1300"
+U3,1,Low-power 3-axis accelerometer,STMicroelectronics,LIS2DW12TR,LGA12 2x2mm,Exact,"https://www.st.com/en/mems-and-sensors/lis2dw12.html"
+U4,1,Two-channel low-capacitance USB ESD protection,Texas Instruments,TPD2EUSB30DRTR,DRT SOT-3 1x0.8mm,Exact,"https://www.ti.com/product/TPD2EUSB30"
+MIC1 MIC2,2,High-SNR PDM MEMS microphone,Infineon,IM69D128SV01XTMA1,PG-TLGA-5-2,Exact,"https://www.infineon.com/part/IM69D128S"
+J1,1,USB-C 16-pin top-mount receptacle,GCT,USB4105-GF-A,USB-C SMD,Exact,"https://gct.co/connector/usb4105"
+J2,1,Push-pull microSD connector,Molex,104031-0811,microSD 1.42mm,Exact,"https://www.molex.com/en-us/products/part-detail/1040310811"
+SW1,1,Ultra-small side-actuated tactile switch,Omron,B3U-1000P,3.0x2.5mm SMD,Exact,"https://components.omron.com/us-en/products/switches/B3U"
+LED1,1,Low-current red-blue bi-color indicator,Kingbright,APHB1608LVBDSEKJ3C,0603 four-pad,Exact,"https://www.kingbrightusa.com/product.asp?catalog_name=LED&product_id=APHB1608LVBDSEKJ3C"
+Q1,1,N-channel haptic MOSFET,Alpha and Omega Semiconductor,AO3400A,SOT-23,Exact,"https://aosmd.com/res/data_sheets/AO3400A.pdf"
+D1,1,Haptic flyback diode,Comchip,1N4148W-HF,SOD-323,Exact,"https://www.comchiptech.com/admin/files/product/1N4148W-HF%20RevA.pdf"
+M1,1,10mm coin vibration motor,Vybronics,VCLP1020B002L,wire lead,Exact,"https://www.vybronics.com/coin-vibration-motors/with-brushes/v-clp1020b002l"
+L1 L2,2,2.2uH buck inductor,Samsung Electro-Mechanics,CIGT201610EH2R2MNE,2016 metric,Exact per Nordic reference,
+L3,1,10uH nRF52840 DCDC inductor,TDK,MLZ2012N100LT000,2016 metric,Exact per Nordic/Raytac reference,https://product.tdk.com/en/search/inductor/inductor/smd/info?part_no=MLZ2012N100LT000
+C6,1,2.2uF 16V X7R capacitor,Taiyo Yuden,EMK107BB7225KA-T,0603,Exact per Nordic reference,
+C14 C15 C16,3,100nF X7R capacitor,KEMET,C0402C104M4RAC7867,0402,Exact per Nordic reference,
+C1 C5,2,1uF X7R capacitor,AVL required,AVL required,0603,Value/package frozen,
+C2 C3 C4 C7 C8 C9 C10 C11 C12 C19,10,10uF X5R 10V capacitor,AVL required,AVL required,0603,Value/package frozen,
+C17 C18,2,1uF microphone bypass capacitor,AVL required,AVL required,0603,Value/package frozen,
+C13 C20 C22 C23,4,100nF X7R capacitor,AVL required,AVL required,0402,Value/package frozen,
+C21 C24,2,47uF X5R 6.3V capacitor,AVL required,AVL required,0805,Value/package frozen,
+R1 R2,2,10kohm 1% resistor,AVL required,AVL required,0402,Value/package frozen,
+R3,1,330kohm 1% nPM VSET1 resistor,AVL required,AVL required,0402,Critical value,
+R4,1,150kohm 1% nPM VSET2 resistor,AVL required,AVL required,0402,Critical value,
+R5 R6,2,5.1kohm 1% USB CC resistor,AVL required,AVL required,0402,Critical value,
+R7 R11 R13,3,100kohm 1% resistor,AVL required,AVL required,0402,Value/package frozen,
+R8 R9 R10,3,22ohm 1% series resistor,AVL required,AVL required,0402,Value/package frozen,
+R12 R14 R15,3,100ohm 1% series resistor,AVL required,AVL required,0402,Value/package frozen,
+BT1,1,Protected 1S LiPo with NTC,To be selected,To be selected,three solder pads,Blocked by battery selection,
+TP1 TP2 TP3 TP4 TP5 TP6 TP7,7,Factory pogo test pad,PCB feature,PCB feature,1.0mm round SMD,Exact,

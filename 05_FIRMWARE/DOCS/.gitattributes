@@ -1,0 +1,3 @@
+# These are byte-exact provenance inputs; disable text conversion and preserve whitespace.
+replacement/patches/*.patch -text -whitespace
+tests/fixtures/replacement_upstream/** -text -whitespace

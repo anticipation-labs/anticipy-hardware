@@ -1,0 +1,50 @@
+{
+  "artifact_built": false,
+  "behavior_contract": {
+    "advertised_complete_name": "Anticipy",
+    "audio_codec_uuid": "19B10002-E8F2-537E-4F6C-D104768A1214",
+    "audio_data_uuid": "19B10001-E8F2-537E-4F6C-D104768A1214",
+    "audio_service_uuid": "19B10000-E8F2-537E-4F6C-D104768A1214",
+    "battery_first_notification_delay_ms": 0,
+    "battery_level_uuid": "00002A19-0000-1000-8000-00805F9B34FB",
+    "battery_notification_interval_ms": 15000,
+    "battery_service_uuid": "0000180F-0000-1000-8000-00805F9B34FB",
+    "battery_smoothing": {
+      "algorithm": "fixed-point exponential moving average",
+      "first_published_value": "first successful measured percentage",
+      "previous_weight": 3,
+      "reset": "each BLE connection",
+      "sample_weight": 1,
+      "scale": 256
+    },
+    "codec_id": 20,
+    "device_information_model": "Anticipy Pendant"
+  },
+  "flash_performed": false,
+  "materialized_source": {
+    "content_tree_sha256": "cb066c79980475b14569dcb9555962e179edd8f941046f14f5e88b96a222d074",
+    "critical_file_sha256": {
+      "CMakeLists.txt": "903103222d33d2f771cee17c8582b31d8ade58e8ddcea7bc90a0dffacecd0320",
+      "prj_xiao_ble_sense_devkitv2-adafruit.conf": "f7bf1dbc02cd6ed2569b4eebfef53b2840ede2af8529c9d172733b00bbd99da9",
+      "src/battery_smoother.c": "2da61a90c2df5e9c1223268f844374ecf7ad6d5f2a5af2701f76afa2cd7fd2fc",
+      "src/battery_smoother.h": "2bbdb095355f0f86ce757b167a43c68008eb85b733183e09d158341d359f4174",
+      "src/config.h": "fdbb91a4ced4892933baf3617567ad5b2fdb603a76fb95ed33c4ff87fae66d00",
+      "src/lib/battery/battery.c": "f1820df6565836ec7022ff26a1a5be04238efbe3d8b28118c5109ff45577fdfa",
+      "src/transport.c": "3d1a4b9c284500433c6607be2e9c0c8161197c43a8af673989ecfd6a0dde5f37"
+    }
+  },
+  "patch": {
+    "path": "replacement/patches/0001-anticipy-name-and-battery.patch",
+    "sha256": "78ce347d4df1a0a043a1d5ad607c9cff7be75b449c3105c6b202d8ab56dc3b66"
+  },
+  "physical_hardware_verified": false,
+  "schema": 1,
+  "status": "SOURCE_CANDIDATE_ONLY_NOT_FLASH_APPROVED",
+  "toolchain_lock_sha256": "fe6ae4edc959d945c64c9842bd11c2ffa3bb7743f5e025c9baaa2fb08ae9a99c",
+  "upstream": {
+    "commit": "ee9892562648f074e3c6b59d508127d81fa21010",
+    "repository": "https://github.com/BasedHardware/omi.git",
+    "source_path": "Friend/firmware/firmware_v1.0",
+    "source_tree_git_oid": "7f896978ef937ae39f2e1cad00f5d95a4ff8152b"
+  }
+}

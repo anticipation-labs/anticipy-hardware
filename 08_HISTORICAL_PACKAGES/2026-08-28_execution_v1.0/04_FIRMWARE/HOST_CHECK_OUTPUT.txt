@@ -1,0 +1,16 @@
+Command: python3 source_nrf52840/host_checks.py
+Run: 2026-08-28 UTC
+
+PASS: storage packing round-trips 10,000 randomized frames
+PASS: 20 h fixed-16-kb/s backlog + 15% = 182,160,000 bytes
+PASS: SD D6/D8/D9/D10, button D7, and haptic D0 do not conflict
+PASS: backlog chunks respect ATT MTU and resume at 440-byte boundaries
+PASS: BLE application characteristics require encryption and bonds persist
+PASS: battery read-enable is LOW; charge-status/current pins are not driven
+PASS: SD batches 16 blocks (~3.2 s active fixed-rate estimate; DTX span needs measurement)
+PASS: current-file offset overrun is rejected and one-file NUKE clears backlog
+PASS: reconnect finalizes the partial SD record; failed live queueing falls back to SD
+BLOCKER: SD audio is plaintext at rest; AES-GCM is not implemented
+HARDWARE GATE: 250 mAh 16 h average must be <= 13.28 mA
+
+These are deterministic host and source checks. They are not physical-hardware or iPhone test evidence.

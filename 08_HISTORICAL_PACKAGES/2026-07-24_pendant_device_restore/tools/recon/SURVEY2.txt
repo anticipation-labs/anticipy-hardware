@@ -1,0 +1,129 @@
+STATE state=5 authorization=3
+SCANNING unfiltered for 20.0s
+DEV rssi=-82 name="samsung." services=[] id=9A179D5A-131A-DF02-327A-4A83BE5B5B07
+DEV rssi=-92 name="(no name)" services=[] id=637B5CA8-DC4D-E884-0734-D36974A053BF
+DEV rssi=-94 name="(no name)" services=[] id=D77D1709-005D-30F9-6AB4-A25F6BF4B13B
+DEV rssi=-55 name="Omar’s Apple Watch" services=[] id=8B0E430C-9953-8F41-9CC9-C5C37B0E9E3A
+DEV rssi=-92 name="(no name)" services=[] id=528672F2-B0DE-7EDA-7CA1-CCA22D412365
+DEV rssi=-68 name="(no name)" services=[] id=FB567569-52DA-6AFE-8D2B-6525CFF0A25D
+DEV rssi=-85 name="(no name)" services=[] id=88531F05-1A7B-570B-A417-AF66313B42C3
+DEV rssi=-76 name="(no name)" services=[] id=5D724BDA-6D15-B7AE-0F91-02BF4525B41A
+DEV rssi=-63 name="(no name)" services=[] id=16DCA4A8-764F-B09F-82BD-EBD40C70B05D
+DEV rssi=-86 name="(no name)" services=[] id=3789C1B2-63FE-0F2D-7B3F-4CF758BF3833
+DEV rssi=-69 name="ET-2850 Series" services=["802A0000-4EF4-4E59-B573-2BED4A4AC159"] id=DAA727E4-AEA7-73ED-B145-38D7165B57E8
+DEV rssi=-83 name="(no name)" services=[] id=3196A5CE-97A6-A8C0-2D11-2FDEA19BA810
+DEV rssi=-76 name="(no name)" services=[] id=7484F917-B1BA-9928-F07F-2A85B1397955
+DEV rssi=-62 name="(no name)" services=[] id=21E652CC-A2BC-2B97-B3B2-02ACF85C8E83
+DEV rssi=-69 name="(no name)" services=[] id=D7F94B7B-E1BC-D320-3A1E-5890B19E9B58
+DEV rssi=-84 name="samsung." services=[] id=8EA31B23-7A65-77F2-E11C-D8BDB20A7D61
+DEV rssi=-92 name="(no name)" services=[] id=51844305-D266-528D-B8ED-1EE9972C041D
+DEV rssi=-92 name="[TV] Samsung 7 Series (58)" services=[] id=225D0579-D042-D09C-F58C-1DC1D4E86F75
+DEV rssi=-86 name="805" services=["8EC1E808-67C9-11E6-8B77-86F30CA893D3"] id=31223BEC-120B-7B00-417F-A881E9E3AE1D
+DEV rssi=-97 name="samsung." services=[] id=7B560B9D-004D-7C08-9347-DF251EA5BC3A
+DEV rssi=-91 name="510" services=["8EC1E808-67C9-11E6-8B77-86F30CA893D3"] id=66B3F85B-B7C7-9DE4-1D5B-7F0DFCAFCD4A
+DEV rssi=-87 name="(no name)" services=[] id=FD287FEC-B4E1-7693-FCB0-E26AE4B7F809
+DEV rssi=-95 name="708" services=["8EC1E808-67C9-11E6-8B77-86F30CA893D3"] id=DAAC047A-9FA0-ED9A-97CB-2359EFF54163
+DEV rssi=-89 name="(no name)" services=[] id=8D0E6E0D-238A-5725-652F-A12FC46B8B02
+DEV rssi=-88 name="samsung." services=[] id=50C8DBEA-7936-22CD-7F5F-6CDA1CDB1CD6
+DEV rssi=-70 name="(no name)" services=[] id=087B2B4A-3148-1580-152C-A00BF6FE7BDB
+DEV rssi=-60 name="Mesh Device" services=["1827"] id=8ED17624-C64B-E18C-4E2E-3EC9C514AC76
+DEV rssi=-90 name="(no name)" services=[] id=27656BB0-D436-6E49-4BDB-396DD74B82B7
+DEV rssi=-45 name="The printer123" services=[] id=2B80DC42-844D-7152-5BFE-37207D18F6E2
+DEV rssi=-89 name="(no name)" services=[] id=7B69B4AE-1BB1-F212-B3C3-9AE6897A8689
+DEV rssi=-96 name="samsung." services=[] id=9474F2B3-4726-483F-9192-C2183A980345
+DEV rssi=-86 name="(no name)" services=[] id=D0830909-6A18-8B68-DBAA-D50CB505546C
+DEV rssi=-82 name="(no name)" services=[] id=4D2BB722-7CBC-819A-0D17-EEDE5DAA4164
+DEV rssi=-84 name="(no name)" services=[] id=E1103320-4751-A5EC-5470-F8B69AB3FFF0
+DEV rssi=-54 name="(no name)" services=[] id=588EC847-2EF1-B84F-55BE-1F322DE9DDFA
+DEV rssi=-85 name="505" services=["8EC1E808-67C9-11E6-8B77-86F30CA893D3"] id=2956F1AD-2C7B-49B7-B53D-7321853763B2
+DEV rssi=-69 name="(no name)" services=[] id=D19AE6A9-DFFD-7E6A-B87F-935DBB92A976
+DEV rssi=-96 name="(no name)" services=[] id=B808A54F-E65B-D5E3-E89A-808E7BB6598C
+DEV rssi=-98 name="(no name)" services=[] id=3251DED8-A4E3-8B07-0268-99B98816DE97
+DEV rssi=-91 name="samsung." services=[] id=D582B12A-4CDC-12BE-D072-0C566B59658A
+DEV rssi=-69 name="(no name)" services=[] id=0B359DDD-9640-7DD1-4AB5-DB2C336E09B1
+DEV rssi=-41 name="(no name)" services=[] id=0E90A969-F5BE-E638-9254-02C27FE95726
+DEV rssi=-82 name="(no name)" services=[] id=86570F55-F9AA-B1E3-0941-C4552D04A098
+DEV rssi=-76 name="(no name)" services=[] id=8EAA7D4C-2EB3-067D-B6CD-D8A91E5F7D2B
+DEV rssi=-96 name="Cycplus S3 28630" services=[] id=CF3FC58D-557F-43EA-A2DF-914DA87DA3E4
+DEV rssi=-97 name="(no name)" services=[] id=CFB70895-34BD-513D-F8FC-8EEAC808B1EE
+DEV rssi=-93 name="606" services=["8EC1E808-67C9-11E6-8B77-86F30CA893D3"] id=5E4505E6-A789-D29E-8952-48DB656577DE
+DEV rssi=-92 name="samsung." services=[] id=641335DA-2E29-C1DA-7081-8F91D160E0A2
+DEV rssi=-94 name="(no name)" services=[] id=13C16BB7-B2B8-19BA-D04A-9137EEDED0EE
+DEV rssi=-96 name="405" services=["8EC1E808-67C9-11E6-8B77-86F30CA893D3"] id=1B1E9428-3C34-F7B1-FAC1-16157D6C44FE
+DEV rssi=-87 name="(no name)" services=[] id=565173A5-C23E-8CEE-17F1-C5B854ACA592
+DEV rssi=-96 name="(no name)" services=[] id=104C7558-F991-3E35-4B93-7D9AAAE627BE
+DEV rssi=-66 name="Omar’s AirPods Pro" services=[] id=8EF71ED2-FFA2-B61A-2340-7F2EAC87E7EC
+DEV rssi=-85 name="1004" services=["8EC1E808-67C9-11E6-8B77-86F30CA893D3"] id=7E3B92CF-CE6A-F3AF-4F9E-771C29E21612
+DEV rssi=-86 name="(no name)" services=[] id=A4E53098-9DA1-A4F2-CE86-4DB3D1E0F8AE
+DEV rssi=-89 name="samsung." services=[] id=AB4FD711-E2EE-7FDC-7979-CFA5323CA5F1
+DEV rssi=-84 name="samsung." services=[] id=C1147240-5CE6-C97D-C0DD-A69094B80C63
+DEV rssi=-95 name="(no name)" services=[] id=F31D77A9-1A28-A497-D6E4-4E51001FB026
+DEV rssi=-95 name="(no name)" services=[] id=EBDA045F-4C92-7595-E266-8AF7B9290394
+DEV rssi=-97 name="(no name)" services=[] id=1D28B62E-FB13-48F7-3238-0DFF0DA165A5
+DEV rssi=-93 name="samsung." services=[] id=D25A2131-E64C-B9E6-2AB3-4A86616A7FDD
+DEV rssi=-88 name="(no name)" services=[] id=58E13615-2CAD-4F38-FAF0-BA9CA3EB2AB8
+DEV rssi=-85 name="(no name)" services=[] id=9F5A35A2-2ED0-E928-CCA7-378C92978119
+DEV rssi=-69 name="(no name)" services=[] id=16815FB0-67F3-A74F-3A58-6E26742F48FD
+DEV rssi=-44 name="(no name)" services=[] id=3F2FC2C0-60F3-E7C4-5A1F-21DC5815FA4D
+DEV rssi=-93 name="(no name)" services=[] id=F5185FE8-253B-4311-2031-7BA0F3DDE4E5
+DEV rssi=-93 name="605" services=["8EC1E808-67C9-11E6-8B77-86F30CA893D3"] id=F8909B0A-BA0A-A2F4-DEA7-31576D13424C
+DEV rssi=-87 name="samsung." services=[] id=C59D8D6A-E242-C8C1-8644-4CEA65573C2F
+DEV rssi=-91 name="(no name)" services=[] id=D53E3D34-D5F7-34D1-A443-07FD699369B9
+DEV rssi=-95 name="(no name)" services=[] id=AFFFE8EA-0663-B03B-C5FB-CBC6186E8DA7
+DEV rssi=-90 name="(no name)" services=[] id=2C268E28-A984-ED99-F21B-439F6F126673
+DEV rssi=-78 name="(no name)" services=[] id=23F95E59-83A2-ED8B-712A-B7917AF906E8
+DEV rssi=-86 name="(no name)" services=[] id=072ABFDC-15A3-A694-FD00-5AC0F278A978
+DEV rssi=-73 name="(no name)" services=[] id=517137A7-7A12-6CD2-9495-B474381DD8C6
+DEV rssi=-85 name="704" services=["8EC1E808-67C9-11E6-8B77-86F30CA893D3"] id=E4FE3154-A44B-42F0-CEC0-66C0143537ED
+DEV rssi=-92 name="(no name)" services=[] id=0F77AEAD-27A1-F546-0448-8D2F597163E0
+DEV rssi=-92 name="(no name)" services=[] id=BDFFEE96-4BF5-36D5-A944-3C4E7834D7CD
+DEV rssi=-80 name="(no name)" services=[] id=E39ED385-FDFB-D608-F740-C9A010E8E89D
+DEV rssi=-64 name="Unknown" services=[] id=B103242F-FF0D-1BD9-1E4B-805A07E59525
+DEV rssi=-62 name="(no name)" services=[] id=F3F89D59-B972-7278-1380-45D18DB3B483
+DEV rssi=-94 name="(no name)" services=[] id=037BD562-4EDB-5A0A-50F4-B6B68FC8A5CB
+DEV rssi=-88 name="(no name)" services=[] id=CCD473C1-B652-6720-B411-3283AF49AC9E
+DEV rssi=-85 name="(no name)" services=["FD5A"] id=9FC13410-557C-CA73-A0EF-0E59DC316EA4
+DEV rssi=-75 name="(no name)" services=[] id=A39CB660-DE6D-AA67-6219-1E2BF83E80CF
+DEV rssi=-89 name="710" services=["8EC1E808-67C9-11E6-8B77-86F30CA893D3"] id=B7534CDC-847A-0384-FB32-B24F76ACBBCB
+DEV rssi=-91 name="905" services=["8EC1E808-67C9-11E6-8B77-86F30CA893D3"] id=ED1D5ABD-0161-0A21-5930-44B4B653C4DD
+DEV rssi=-93 name="(no name)" services=[] id=873687D8-C577-B3A9-9345-FD6378F937DD
+DEV rssi=-87 name="(no name)" services=[] id=E55DB796-95B2-616F-ABE2-63D74727D7D0
+DEV rssi=-93 name="(no name)" services=[] id=932E65E4-2A49-0139-8380-93504037448D
+DEV rssi=-91 name="(no name)" services=[] id=4043F010-C5BC-6127-7F26-59BBD92CD09B
+DEV rssi=-90 name="(no name)" services=[] id=5435D540-D4BB-F193-33DE-7EA88FDEC7A7
+DEV rssi=-93 name="(no name)" services=[] id=9AA571E2-6EA9-9CB1-D604-B26398147176
+DEV rssi=-95 name="(no name)" services=[] id=A372811E-D113-7731-50D4-97C602A0FA73
+DEV rssi=-97 name="samsung." services=[] id=479E0CA5-C009-3F38-8AB8-E3808B3C8F05
+DEV rssi=-94 name="(no name)" services=[] id=FDECF9AD-BD46-50FE-F617-240ADA13041C
+DEV rssi=-90 name="(no name)" services=[] id=E2A978F7-C088-09B0-4AA5-FE8E399DECB7
+DEV rssi=-87 name="(no name)" services=[] id=C72EB93F-5EE5-3D62-9765-5A7266ECFE40
+DEV rssi=-92 name="(no name)" services=[] id=710E4605-5D7F-7D1F-A34A-888A83583CF3
+DEV rssi=-95 name="707" services=["8EC1E808-67C9-11E6-8B77-86F30CA893D3"] id=67AF15B2-48DB-DD11-A0C0-346C8CEF5955
+DEV rssi=-88 name="705" services=["8EC1E808-67C9-11E6-8B77-86F30CA893D3"] id=99A0E393-8BFF-5454-96E0-90449A4B569A
+DEV rssi=-90 name="1404" services=["8EC1E808-67C9-11E6-8B77-86F30CA893D3"] id=6146153C-6E36-5C10-DBB5-58B564FB5064
+DEV rssi=-84 name="(no name)" services=[] id=3F4633D6-7C31-77AF-7E56-863535527F25
+DEV rssi=-78 name="(no name)" services=[] id=E572B603-5A42-04E2-216F-221EB2CFD8AA
+DEV rssi=-58 name="(no name)" services=[] id=E01AB278-76F2-03F7-3AEB-3B1807B79C8E
+DEV rssi=-89 name="(no name)" services=[] id=ABD66379-D639-C073-7D3D-D039662F1151
+DEV rssi=-93 name="(no name)" services=[] id=8CB749EE-6A8C-24CE-FEDB-FB606D594C34
+DEV rssi=-97 name="samsung." services=[] id=A526C0E4-CF01-FEE7-8B8A-6530C08F05D2
+DEV rssi=-92 name="samsung." services=[] id=46EF85AD-68C9-1B31-CA7E-97BC1B47E39B
+DEV rssi=-93 name="(no name)" services=[] id=98655DE4-03A0-BB63-722D-2EDC33B42F36
+DEV rssi=-91 name="(no name)" services=[] id=C54ED4EE-A831-EB6C-E51E-66B53828404D
+DEV rssi=-93 name="506" services=["8EC1E808-67C9-11E6-8B77-86F30CA893D3"] id=B10F2A0D-DE71-7F33-1CAA-7B07BE975229
+DEV rssi=-94 name="(no name)" services=[] id=846054CF-9D02-04A5-FD12-220D931BFBE9
+DEV rssi=-97 name="(no name)" services=[] id=FA745D66-19BB-A9DB-2889-ECDADFCB3C9E
+DEV rssi=-88 name="(no name)" services=["FEED"] id=A830FC27-13E2-7CEF-7E76-CDE18E5A334E
+DEV rssi=-87 name="(no name)" services=[] id=579E6A97-C8B0-5CB1-5B8A-56BC325D8DC5
+DEV rssi=-64 name="(no name)" services=[] id=C766E547-4F9E-DAFA-8B84-C63E44C2EAC7
+DEV rssi=-92 name="609" services=["8EC1E808-67C9-11E6-8B77-86F30CA893D3"] id=8616E39D-7E82-8DED-EAF2-81927AFDEB8A
+DEV rssi=-86 name="(no name)" services=[] id=9AE1C47C-2BDE-C6B8-E474-5F7CEE58FC88
+DEV rssi=-92 name="(no name)" services=[] id=C30098E9-75DD-6722-D5E5-59B8F4A9E2EE
+DEV rssi=-94 name="(no name)" services=[] id=03B0829D-F057-F3B5-F345-6E6FF244AEF4
+DEV rssi=-89 name="(no name)" services=[] id=57A88EAF-F5DD-0720-70B1-5D9A9BFDBF04
+DEV rssi=-95 name="810" services=["8EC1E808-67C9-11E6-8B77-86F30CA893D3"] id=0E0A5D1E-EE1A-5ABE-F980-BE18664978FF
+DEV rssi=-93 name="1205" services=["8EC1E808-67C9-11E6-8B77-86F30CA893D3"] id=D71FCBEA-5BDD-A950-39F3-6C3471A6982B
+DEV rssi=-92 name="910" services=["8EC1E808-67C9-11E6-8B77-86F30CA893D3"] id=C10AE0F5-5478-EEF1-3CB1-0975A116AF12
+=== TOTAL 124 devices ===
+=== PENDANT CANDIDATES 0 ===
+DONE

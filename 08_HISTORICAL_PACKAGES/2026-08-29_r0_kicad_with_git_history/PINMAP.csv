@@ -1,0 +1,22 @@
+function,raytac_module_pad,nrf52840_gpio,net,notes
+I2C SDA,16,P0.27,I2C_SDA,nPM1300 and LIS2DW12
+I2C SCL,19,P0.26,I2C_SCL,nPM1300 and LIS2DW12
+PDM clock,38,P0.16,PDM_CLK,both microphones
+PDM data,39,P0.15,PDM_DATA,two microphones through individual 100 ohm series resistors
+microSD SCK,37,P0.13,SD_SCK_MCU,22 ohm series resistor
+microSD MOSI,36,P0.14,SD_MOSI_MCU,22 ohm series resistor
+microSD MISO,29,P0.12,SD_MISO_MCU,22 ohm series resistor
+microSD CS,27,P0.11,SD_CS,100 kohm pull-up to 3V_SD
+microSD detect,45,P0.23,SD_DETECT,socket switch
+Haptic PWM,24,P0.08,HAPTIC_PWM,drives AO3400A through 100 ohm
+User button,22,P0.06,USER_BTN,active low
+PMIC interrupt,41,P0.17,PMIC_INT,nPM1300 GPIO0
+Accelerometer INT1,44,P0.20,ACC_INT1,LIS2DW12 pin 12
+Accelerometer INT2,43,P0.21,ACC_INT2,LIS2DW12 pin 11
+USB D-,34,USB_DM,USB_D-,through TPD2EUSB30
+USB D+,35,USB_DP,USB_D+,through TPD2EUSB30
+Reset,40,nRESET,RESET,pogo test pad
+SWDIO,51,SWDIO,SWDIO,pogo test pad
+SWDCLK,53,SWDCLK,SWDCLK,pogo test pad
+UART TX,21,P0.05,UART_TX,diagnostic pogo pad
+UART RX,20,P0.04,UART_RX,diagnostic pogo pad

@@ -1,0 +1,20 @@
+stage,label,net,from,to,layer,width_mm,segments,vias,length_mm,unconnected_before,unconnected_after,rationale
+local_power,FLASH_LOCAL_BULK,3V_FLASH,U5.8,C18.1,F.Cu,0.127,2,0,1.673,171,170,Flash VCC to its adjacent 1 uF local bulk capacitor
+local_power,FLASH_LOCAL_HF_BYPASS,3V_FLASH,U5.8,C17.1,F.Cu,0.127,7,0,3.485,170,169,Flash VCC branch to its adjacent 100 nF bypass capacitor
+local_power,FLASH_CS_PULLUP_FEED,3V_FLASH,C17.1,R7.1,F.Cu,0.127,7,0,2.604,169,168,Local flash rail to the chip-select pull-up
+local_power,MIC2_SELECT_HIGH,3V_MIC,MIC2.1,MIC2.2,F.Cu,0.150,1,0,1.350,168,167,Short local tie setting MIC2 channel SELECT high
+signal,PDM_DATA_MIC1,PDM_DATA_MIC1,MIC1.4,R8.1,F.Cu,0.127,8,0,3.415,167,166,Dedicated QSPI/PDM clock or data connection
+signal,PDM_DATA_MIC2,PDM_DATA_MIC2,MIC2.4,R9.1,F.Cu,0.127,9,0,3.460,166,165,Dedicated QSPI/PDM clock or data connection
+signal,PDM_CLK,PDM_CLK,MIC1.3,MIC2.3,F.Cu,0.127,7,0,5.752,165,164,Dedicated QSPI/PDM clock or data connection
+signal,PDM_DATA,PDM_DATA,R8.2,R9.2,F.Cu,0.127,3,0,5.256,164,163,Dedicated QSPI/PDM clock or data connection
+signal,PDM_CLK,PDM_CLK,MIC2.3,U1.38,F.Cu/In2.Cu,0.127,8,2,17.043,163,162,Dedicated QSPI/PDM clock or data connection
+signal,PDM_DATA,PDM_DATA,R9.2,U1.39,F.Cu/In2.Cu,0.127,7,2,14.497,162,161,Dedicated QSPI/PDM clock or data connection
+signal,FLASH_IO1,FLASH_IO1,U5.2,U1.46,F.Cu/In2.Cu,0.127,14,4,20.553,161,160,Dedicated QSPI/PDM clock or data connection
+signal,FLASH_IO3,FLASH_IO3,U5.7,U1.47,F.Cu/In2.Cu,0.127,9,2,11.855,160,159,Dedicated QSPI/PDM clock or data connection
+signal,FLASH_IO2,FLASH_IO2,U5.3,U1.45,F.Cu/In2.Cu,0.127,13,4,20.618,159,158,Dedicated QSPI/PDM clock or data connection
+signal,FLASH_IO0,FLASH_IO0,U5.5,U1.43,F.Cu,0.127,7,0,14.374,158,157,Dedicated QSPI/PDM clock or data connection
+signal,FLASH_CS,FLASH_CS,U5.1,R7.2,F.Cu/In2.Cu,0.127,11,2,11.960,157,156,Dedicated QSPI/PDM clock or data connection
+signal,FLASH_CS,FLASH_CS,R7.2,U1.44,F.Cu/In2.Cu,0.127,12,2,14.858,156,155,Dedicated QSPI/PDM clock or data connection
+signal,FLASH_SCK,FLASH_SCK,U5.6,U1.42,F.Cu/In2.Cu,0.127,15,4,14.094,155,154,Dedicated QSPI/PDM clock or data connection
+local_power,MIC1_LOCAL_BYPASS,3V_MIC,C19.1,MIC1.1,F.Cu/In2.Cu,0.127,5,2,3.014,154,153,MIC1 supply pad to its adjacent 100 nF bypass capacitor
+local_power,MIC2_LOCAL_BYPASS,3V_MIC,C20.1,MIC2.1,F.Cu/In2.Cu,0.127,5,2,3.102,153,152,MIC2 supply pad to its adjacent 100 nF bypass capacitor

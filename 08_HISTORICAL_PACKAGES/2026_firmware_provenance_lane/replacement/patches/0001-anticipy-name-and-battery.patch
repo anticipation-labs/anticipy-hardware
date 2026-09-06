@@ -1,0 +1,185 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -1,5 +1,4 @@
+ # SPDX-License-Identifier: Apache-2.0
+-set(BOARD seeed_xiao_nrf52840_sense)
+ cmake_minimum_required(VERSION 3.20.0)
+ find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
+ project(nrf52840_nordic)
+@@ -12,6 +11,7 @@ target_sources(app PRIVATE
+     src/led.c
+     src/codec.c
+     src/lib/battery/battery.c
++    src/battery_smoother.c
+     src/button.c
+     src/speaker.c
+     src/sdcard.c
+diff --git a/prj_xiao_ble_sense_devkitv2-adafruit.conf b/prj_xiao_ble_sense_devkitv2-adafruit.conf
+--- a/prj_xiao_ble_sense_devkitv2-adafruit.conf
++++ b/prj_xiao_ble_sense_devkitv2-adafruit.conf
+@@ -16,7 +16,7 @@ CONFIG_ADC=y
+ 
+ CONFIG_BT=y
+ CONFIG_BT_PERIPHERAL=y
+-CONFIG_BT_DEVICE_NAME="Friend DevKit 2"
++CONFIG_BT_DEVICE_NAME="Anticipy"
+ CONFIG_BT_MAX_CONN=1
+ CONFIG_BT_MAX_PAIRED=1
+ CONFIG_BT_DEVICE_APPEARANCE=22
+@@ -36,7 +36,7 @@ CONFIG_BT_PHY_UPDATE=y
+ CONFIG_BT_BAS=y
+ CONFIG_BT_DIS=y
+ CONFIG_BT_DIS_PNP=n
+-CONFIG_BT_DIS_MODEL="Friend DevKit 2"
++CONFIG_BT_DIS_MODEL="Anticipy Pendant"
+ CONFIG_BT_DIS_MANUF="Based Hardware"
+ CONFIG_BT_DIS_FW_REV=y
+ CONFIG_BT_DIS_HW_REV=y
+diff --git a/src/battery_smoother.c b/src/battery_smoother.c
+new file mode 100644
+--- /dev/null
++++ b/src/battery_smoother.c
+@@ -0,0 +1,44 @@
++// SPDX-License-Identifier: MIT
++
++#include "battery_smoother.h"
++
++#define BATTERY_PERCENT_MAX 100u
++#define BATTERY_PERCENT_Q8_SCALE 256u
++#define BATTERY_EMA_PREVIOUS_WEIGHT 3u
++#define BATTERY_EMA_SAMPLE_WEIGHT 1u
++#define BATTERY_EMA_WEIGHT_TOTAL 4u
++
++void battery_smoother_reset(struct battery_smoother *smoother)
++{
++    smoother->percentage_q8 = 0u;
++    smoother->initialized = false;
++}
++
++uint8_t battery_smoother_update(struct battery_smoother *smoother,
++                                uint8_t sample_percentage)
++{
++    if (sample_percentage > BATTERY_PERCENT_MAX) {
++        sample_percentage = BATTERY_PERCENT_MAX;
++    }
++
++    uint16_t sample_q8 = (uint16_t)sample_percentage * BATTERY_PERCENT_Q8_SCALE;
++
++    if (!smoother->initialized) {
++        smoother->percentage_q8 = sample_q8;
++        smoother->initialized = true;
++    } else {
++        uint32_t weighted_q8 =
++            BATTERY_EMA_PREVIOUS_WEIGHT * (uint32_t)smoother->percentage_q8 +
++            BATTERY_EMA_SAMPLE_WEIGHT * (uint32_t)sample_q8;
++        smoother->percentage_q8 = (uint16_t)(
++            (weighted_q8 + BATTERY_EMA_WEIGHT_TOTAL / 2u) /
++            BATTERY_EMA_WEIGHT_TOTAL);
++    }
++
++    uint16_t rounded_percentage = (uint16_t)(
++        (smoother->percentage_q8 + BATTERY_PERCENT_Q8_SCALE / 2u) /
++        BATTERY_PERCENT_Q8_SCALE);
++    return (uint8_t)(rounded_percentage > BATTERY_PERCENT_MAX
++                         ? BATTERY_PERCENT_MAX
++                         : rounded_percentage);
++}
+diff --git a/src/battery_smoother.h b/src/battery_smoother.h
+new file mode 100644
+--- /dev/null
++++ b/src/battery_smoother.h
+@@ -0,0 +1,18 @@
++// SPDX-License-Identifier: MIT
++
++#ifndef ANTICIPY_BATTERY_SMOOTHER_H
++#define ANTICIPY_BATTERY_SMOOTHER_H
++
++#include <stdbool.h>
++#include <stdint.h>
++
++struct battery_smoother {
++    uint16_t percentage_q8;
++    bool initialized;
++};
++
++void battery_smoother_reset(struct battery_smoother *smoother);
++uint8_t battery_smoother_update(struct battery_smoother *smoother,
++                                uint8_t sample_percentage);
++
++#endif
+diff --git a/src/transport.c b/src/transport.c
+--- a/src/transport.c
++++ b/src/transport.c
+@@ -19,6 +19,7 @@
+ #include "storage.h"
+ #include "button.h"
+ #include "lib/battery/battery.h"
++#include "battery_smoother.h"
+ 
+ LOG_MODULE_REGISTER(transport, CONFIG_LOG_DEFAULT_LEVEL);
+ 
+@@ -199,7 +200,7 @@ int accel_start()
+ static const struct bt_data bt_ad[] = {
+     BT_DATA_BYTES(BT_DATA_FLAGS, (BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR)),
+     BT_DATA(BT_DATA_UUID128_ALL, audio_service_uuid.val, sizeof(audio_service_uuid.val)),
+-    BT_DATA(BT_DATA_NAME_COMPLETE, "Friend", sizeof("Friend") - 1),
++    BT_DATA(BT_DATA_NAME_COMPLETE, CONFIG_BT_DEVICE_NAME, sizeof(CONFIG_BT_DEVICE_NAME) - 1),
+ };
+ 
+ // Scan response data
+@@ -299,16 +300,18 @@ static ssize_t dfu_control_point_write_handler(struct bt_conn *conn, const struc
+ void broadcast_battery_level(struct k_work *work_item);
+ 
+ K_WORK_DELAYABLE_DEFINE(battery_work, broadcast_battery_level);
++static struct battery_smoother battery_percentage_smoother;
+ 
+ void broadcast_battery_level(struct k_work *work_item) {
+     uint16_t battery_millivolt;
+-    uint8_t battery_percentage;
++    uint8_t raw_battery_percentage;
+     if (battery_get_millivolt(&battery_millivolt) == 0 &&
+-        battery_get_percentage(&battery_percentage, battery_millivolt) == 0) {
+-
+-
+-        LOG_INF("Battery at %d mV (capacity %d%%)", battery_millivolt, battery_percentage);
++        battery_get_percentage(&raw_battery_percentage, battery_millivolt) == 0) {
++        uint8_t battery_percentage = battery_smoother_update(
++            &battery_percentage_smoother, raw_battery_percentage);
+ 
++        LOG_INF("Battery at %d mV (raw %d%%, smoothed %d%%)",
++                battery_millivolt, raw_battery_percentage, battery_percentage);
+ 
+         // Use the Zephyr BAS function to set (and notify) the battery level
+         int err = bt_bas_set_battery_level(battery_percentage);
+@@ -319,7 +322,9 @@ void broadcast_battery_level(struct k_work *work_item) {
+         LOG_ERR("Failed to read battery level");
+     }
+ 
+-    k_work_reschedule(&battery_work, K_MSEC(BATTERY_REFRESH_INTERVAL));
++    if (current_connection != NULL) {
++        k_work_reschedule(&battery_work, K_MSEC(BATTERY_REFRESH_INTERVAL));
++    }
+ }
+ 
+ //
+@@ -347,6 +352,7 @@ static void _transport_connected(struct bt_conn *conn, uint8_t err)
+     LOG_DBG("TX PHY %s, RX PHY %s", phy2str(info.le.phy->tx_phy), phy2str(info.le.phy->rx_phy));
+     LOG_DBG("LE data len updated: TX (len: %d time: %d) RX (len: %d time: %d)", info.le.data_len->tx_max_len, info.le.data_len->tx_max_time, info.le.data_len->rx_max_len, info.le.data_len->rx_max_time);
+ 
++    battery_smoother_reset(&battery_percentage_smoother);
+-    k_work_schedule(&battery_work, K_MSEC(BATTERY_REFRESH_INTERVAL));
++    k_work_schedule(&battery_work, K_NO_WAIT);
+ 
+ 	is_connected = true;
+@@ -365,8 +371,9 @@ static void _transport_disconnected(struct bt_conn *conn, uint8_t err)
+     storage_is_on = false;
+ 
+     LOG_INF("Transport disconnected");
+-    bt_conn_unref(conn);
+     current_connection = NULL;
++    k_work_cancel_delayable(&battery_work);
++    bt_conn_unref(conn);
+     current_mtu = 0;
+ 
+ 	// // restart NFC

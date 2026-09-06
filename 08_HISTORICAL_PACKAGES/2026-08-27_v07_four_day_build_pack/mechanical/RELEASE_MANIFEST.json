@@ -1,0 +1,52 @@
+{
+  "classification": "four-day no-custom-PCB founder prototype; not customer production",
+  "envelope_mm": [
+    76.0,
+    33.0,
+    19.0
+  ],
+  "mass_estimate_g": {
+    "nominal": 36.91,
+    "plus_15_percent": 42.44
+  },
+  "first_print": "P2S_v07_fit_gauges.3mf",
+  "enclosure_print": "P2S_v07_nopcb_retained.3mf",
+  "files": [
+    "P2S_v07_fit_gauges.3mf",
+    "P2S_v07_nopcb_retained.3mf",
+    "SHA256SUMS.txt",
+    "V07_FIT_REPORT.md",
+    "V07_PRINT_AND_ASSEMBLY_GUIDE.md",
+    "generate_v07_nopcb.py",
+    "v07_base_shell.step",
+    "v07_base_shell.stl",
+    "v07_button_plunger_4p0.step",
+    "v07_button_plunger_4p0.stl",
+    "v07_button_plunger_4p3.step",
+    "v07_button_plunger_4p3.stl",
+    "v07_button_plunger_4p6.step",
+    "v07_button_plunger_4p6.stl",
+    "v07_carrier.step",
+    "v07_carrier.stl",
+    "v07_dummy_audio_bff_21x17p7x5.step",
+    "v07_dummy_audio_bff_21x17p7x5.stl",
+    "v07_dummy_battery_35x25x6.step",
+    "v07_dummy_battery_35x25x6.stl",
+    "v07_dummy_button_6p2x6p2x3p5.step",
+    "v07_dummy_button_6p2x6p2x3p5.stl",
+    "v07_dummy_haptic_cap_cluster_11x7x6.step",
+    "v07_dummy_haptic_cap_cluster_11x7x6.stl",
+    "v07_dummy_motor_10x2p1.step",
+    "v07_dummy_motor_10x2p1.stl",
+    "v07_dummy_switch_8p6x4p3x4p7.step",
+    "v07_dummy_switch_8p6x4p3x4p7.stl",
+    "v07_dummy_xiao_rotated_17p8x21x3p2.step",
+    "v07_dummy_xiao_rotated_17p8x21x3p2.stl",
+    "v07_fit_check.glb",
+    "v07_fit_report.json",
+    "v07_full_assembly.step",
+    "v07_internal_layout.png",
+    "v07_lid.step",
+    "v07_lid.stl"
+  ]
+}

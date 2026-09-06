@@ -1,0 +1,2 @@
+de31edba36d077338b6fb1649782a68cce61e89c01a68cdfd9749c2ffc011f44  Anticipy_Founder_EVT_v0.9.0.uf2
+9095e7b4a8476ea0857cea3214038cc3b3d11ac5f9011e59cf067bc4d282b09a  debug/Anticipy_Founder_EVT_v0.9.0.elf

@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "status": "PINNED_BUILD_INPUTS_NOT_EXECUTED",
+  "nrf_connect_sdk": {
+    "repository": "https://github.com/nrfconnect/sdk-nrf.git",
+    "tag": "v2.5.0",
+    "annotated_tag_object": "f892d66553a122da1c568ee952ec93985552a2bf",
+    "commit": "1fae141fc6713dd331b797fc96c90dc84552242d",
+    "west_manifest_path": "west.yml",
+    "west_manifest_git_blob_oid": "759913054d000063958dedea1c1c1da93a2c1eb0",
+    "west_manifest_sha256": "aa1f2d23a024719b6bde72dc434cb844ed8a21fa415dd7b8ee6de51eecda7e93"
+  },
+  "zephyr": {
+    "repository": "https://github.com/nrfconnect/sdk-zephyr.git",
+    "tag": "v3.4.99-ncs1",
+    "annotated_tag_object": "39e7340f4f21d24396c48adc4cbd5a1763f6afb3",
+    "commit": "2e2523efe52a7ac89f0567b8798fd857b1e71ae3"
+  },
+  "toolchain_container": {
+    "image": "docker.io/nordicplayground/nrfconnect-sdk",
+    "observed_tag": "v2.5-branch",
+    "digest": "sha256:f50c51b711bbb3f502496c4b83e88dda778420fb83327d4791f9bc0e34916d01",
+    "platform": "linux/amd64",
+    "runtime_toolchain": {
+      "bundle_id": "7795df4459",
+      "metadata_filename": "toolchains.json",
+      "metadata_sha256": "0f439f881430912d9d57ab84c7f76501222a93805affc2e914be479055045a81",
+      "ncs_version": "v2.5.0",
+      "selected_prefix": "/root/ncs/toolchains/7795df4459"
+    },
+    "role": "toolchain bytes only; the build must separately verify the exact NCS and Zephyr source commits above",
+    "warning": "the human-readable image tag tracks a branch; only the digest is an input",
+    "runtime_identity_proof": "not independently available inside the build process; requires external OCI/CI provenance"
+  },
+  "candidate_build": {
+    "board": "xiao_ble_sense",
+    "board_definition": {
+      "zephyr_path": "boards/arm/xiao_ble",
+      "git_tree_oid": "8703fc4ab1f5bb7dca23c679ba2c681b34067c22",
+      "critical_file_sha256": {
+        "xiao_ble_sense.yaml": "7a174e0ded1dd9d9fa42efb53607445754ac8a4c5e011310be6159d5fae00d95",
+        "xiao_ble_sense_defconfig": "5390cde2ec41a432813b9ae56bf84dc0d464a3752385cb898e882cec295d807b",
+        "xiao_ble_sense.dts": "b7e7f2ddf2b7ae4ec7faf9a6a2a6ed6df53b86d766fc3ceaa177af8cf34ac62c",
+        "Kconfig.board": "d6e46102a18afe88eacba820c9d7fd5c1f8d15b822122ac84fce4b0845ea8b3d",
+        "board.cmake": "a14ac87a661dde647dab3db59f913900b0320e71451c2a33c895a9bd0dc27441"
+      }
+    },
+    "configuration_file": "prj_xiao_ble_sense_devkitv2-adafruit.conf",
+    "devicetree_overlay": "overlay/xiao_ble_sense_devkitv2-adafruit_module.overlay"
+  },
+  "receipt_requirements": [
+    "materialized source receipt and sha256",
+    "canonical active west project snapshot, sha256, and project count",
+    "active west project paths, credential-free HTTPS repositories, commits, and clean status before and after build",
+    "trusted-controller declared, active, and inactive west project inventory and counts",
+    "NCS and Zephyr repository commits",
+    "pre-build and post-build sha256 of exact nrf/west.yml and .west/config",
+    "exact selected board, board definition, configuration, overlay, application source, Zephyr base, and Nordic toolchain prefix",
+    "tool versions",
+    "exact west build command",
+    "complete build log sha256",
+    "ELF, HEX, BIN, and UF2 sha256 when emitted"
+  ],
+  "container_digest_declaration_is_attestation": false,
+  "flash_approved": false
+}

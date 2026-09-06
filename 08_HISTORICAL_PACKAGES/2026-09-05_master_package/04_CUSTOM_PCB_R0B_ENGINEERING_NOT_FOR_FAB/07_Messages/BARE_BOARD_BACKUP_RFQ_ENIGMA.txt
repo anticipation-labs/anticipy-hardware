@@ -1,0 +1,11 @@
+To: boards@enigmacorp.com
+Subject: RUSH bare-board capability request - compact 0.80 mm four-layer Anticipy EVT
+
+Hi,
+
+We are preparing a rush EVT build of 12 compact four-layer PCBs for a Bluetooth wearable. The current outline is 45.8 x 18.0 mm with a 0.80 mm finished-thickness target, controlled-impedance USB, ENIG, 5/5 mil rules, 0.20 mm finished standard drills, two 0.16 mm USB fanout drills, and a mid-mount USB-C connector with plated slots.
+
+The design is not yet released. Please confirm material availability, rush capability, exact 90-ohm USB stack-up/geometry, panel coupon/TDR, electrical test, DFM/CAM review, panel method, earliest pickup date in Burnaby, and estimated cost. No CAM changes are authorized without written approval.
+
+Thank you.
+

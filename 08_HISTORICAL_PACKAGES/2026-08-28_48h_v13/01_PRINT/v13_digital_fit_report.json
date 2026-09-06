@@ -1,0 +1,212 @@
+{
+  "classification": "48-hour hand-assembled engineering prototype; not production/customer release",
+  "body_mm": [
+    68.0,
+    33.0,
+    16.5
+  ],
+  "body_plus_loop_mm": [
+    72.0,
+    33.0,
+    16.5
+  ],
+  "minimum_wall_mm": 1.6,
+  "parts": [
+    {
+      "name": "BBM 602535 protected 500 mAh battery",
+      "size": [
+        35.0,
+        25.0,
+        6.0
+      ],
+      "center": [
+        -10.3,
+        0.0,
+        5.1
+      ],
+      "mass_g": 9.0
+    },
+    {
+      "name": "XIAO nRF52840 Sense plus microSD BFF stack",
+      "size": [
+        18.6,
+        21.8,
+        9.6
+      ],
+      "center": [
+        21.0,
+        0.0,
+        6.9
+      ],
+      "mass_g": 4.5
+    },
+    {
+      "name": "Vybronics VCLP1020B002L haptic motor",
+      "size": [
+        10.0,
+        10.0,
+        2.1
+      ],
+      "center": [
+        -19.5,
+        0.0,
+        13.1
+      ],
+      "mass_g": 0.9
+    },
+    {
+      "name": "laid-flat insulated haptic driver cluster",
+      "size": [
+        12.0,
+        8.0,
+        4.0
+      ],
+      "center": [
+        -3.0,
+        5.5,
+        12.15
+      ],
+      "mass_g": 0.6
+    },
+    {
+      "name": "B3U-1000P user button",
+      "size": [
+        3.0,
+        2.5,
+        1.6
+      ],
+      "center": [
+        3.0,
+        -6.0,
+        13.4
+      ],
+      "mass_g": 0.1
+    }
+  ],
+  "tolerance": {
+    "battery_edge_clearance_each_side_mm": 0.55,
+    "board_edge_clearance_each_side_mm": 0.35,
+    "expanded_battery_to_board_gap_mm": 0.48,
+    "note": "15% dimensional envelopes fit in the main cavity; printed rails and foam control actual placement."
+  },
+  "storage": {
+    "20h_raw_pcm_bytes": 2304000000,
+    "20h_raw_pcm_plus_15_percent_bytes": 2649600000,
+    "recommended_card": "32 GB high-endurance microSD"
+  },
+  "battery": {
+    "capacity_mAh": 500,
+    "average_current_limit_for_16h_mA": 31.25,
+    "warning": "Runtime is a test gate, not a promise. Measure the sealed unit for 16 hours."
+  },
+  "mass_estimate_g": {
+    "printed_PLA": 16.48,
+    "electronics_and_retention": 16.9,
+    "nominal_total": 33.38,
+    "plus_15_percent": 38.39
+  },
+  "meshes": {
+    "v13_rugged_base": {
+      "watertight": true,
+      "bodies": 1,
+      "extents_mm": [
+        71.998,
+        33.0,
+        14.4
+      ]
+    },
+    "v13_rugged_lid": {
+      "watertight": true,
+      "bodies": 1,
+      "extents_mm": [
+        68.0,
+        33.0,
+        6.8
+      ]
+    },
+    "v13_button_plunger_2p0mm": {
+      "watertight": true,
+      "bodies": 1,
+      "extents_mm": [
+        3.6,
+        3.599,
+        2.5
+      ]
+    }
+  },
+  "solid_collision_mm3": {
+    "base_to_lid": 0.0,
+    "components": {
+      "battery": {
+        "base_mm3": 0.0,
+        "lid_mm3": 0.0
+      },
+      "board": {
+        "base_mm3": 0.0,
+        "lid_mm3": 0.0
+      },
+      "motor": {
+        "base_mm3": 0.0,
+        "lid_mm3": 0.0
+      },
+      "driver": {
+        "base_mm3": 0.0,
+        "lid_mm3": 0.0
+      },
+      "button": {
+        "base_mm3": 0.0,
+        "lid_mm3": 0.0
+      }
+    }
+  },
+  "checks": [
+    {
+      "check": "base mesh is watertight",
+      "pass": true
+    },
+    {
+      "check": "lid mesh is watertight",
+      "pass": true
+    },
+    {
+      "check": "one printable body per base/lid",
+      "pass": true
+    },
+    {
+      "check": "minimum shell wall is 1.6 mm",
+      "pass": true
+    },
+    {
+      "check": "15%-expanded battery width fits inner body",
+      "pass": true
+    },
+    {
+      "check": "15%-expanded board width fits inner body",
+      "pass": true
+    },
+    {
+      "check": "15%-expanded battery and board remain separated",
+      "pass": true
+    },
+    {
+      "check": "actual battery height clears lid-mounted motor",
+      "pass": true
+    },
+    {
+      "check": "board stack fits vertical cavity",
+      "pass": true
+    },
+    {
+      "check": "20h raw audio plus 15% fits 8 GB",
+      "pass": true
+    },
+    {
+      "check": "closed base and lid have zero solid collision",
+      "pass": true
+    },
+    {
+      "check": "controlled components have zero enclosure collision",
+      "pass": true
+    }
+  ]
+}

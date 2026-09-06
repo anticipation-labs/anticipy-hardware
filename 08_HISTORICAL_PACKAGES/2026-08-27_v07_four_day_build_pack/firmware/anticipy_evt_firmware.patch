@@ -1,0 +1,501 @@
+--- a/src/main.c
++++ b/src/main.c
+@@ -227,17 +227,23 @@
+ 
+     err = mount_sd_card();
+     if (err) {
+-        LOG_ERR("Failed to mount SD card (err %d)", err);
+-        return err;
+-    }
+-    k_msleep(500);
++        /*
++         * Storage is a safety net, not a reason to brick the recorder.
++         * Continue to BLE streaming when the card is missing, unformatted,
++         * or seated badly.  The storage status characteristic remains at
++         * zero bytes, so the phone has nothing to drain.
++         */
++        LOG_ERR("Failed to mount SD card (err %d); continuing without offline storage", err);
++    } else {
++        k_msleep(500);
+ 
+-    LOG_PRINTK("\n");
+-    LOG_INF("Initializing storage...\n");
++        LOG_PRINTK("\n");
++        LOG_INF("Initializing storage...\n");
+ 
+-    err = storage_init();
+-    if (err) {
+-        LOG_ERR("Failed to initialize storage (err %d)", err);
++        err = storage_init();
++        if (err) {
++            LOG_ERR("Failed to initialize storage (err %d)", err);
++        }
+     }
+ #endif
+
+--- a/src/sdcard.c
++++ b/src/sdcard.c
+@@ -1,5 +1,6 @@
+ #include "sdcard.h"
+ 
++#include <errno.h>
+ #include <ff.h>
+ #include <zephyr/device.h>
+ #include <zephyr/drivers/gpio.h>
+@@ -36,9 +37,11 @@
+ static const char *disk_mount_pt = "/SD:/";
+ 
+ bool sd_enabled = false;
++static bool sd_mounted = false;
+ 
+ int mount_sd_card(void)
+ {
++    sd_mounted = false;
+     // initialize the sd card enable pin (v2)
+     if (gpio_is_ready_dt(&sd_en_gpio_pin)) {
+         LOG_INF("SD Enable Pin ready");
+@@ -79,32 +82,20 @@
+ 
+     if (res == FR_OK) {
+         LOG_INF("audio directory created successfully");
+-        initialize_audio_file(1);
+     } else if (res == FR_EXIST) {
+         LOG_INF("audio directory already exists");
+     } else {
+-        LOG_INF("audio directory creation failed: %d", res);
++        LOG_ERR("audio directory creation failed: %d", res);
++        return -1;
+     }
+ 
+-    struct fs_dir_t audio_dir_entry;
+-    fs_dir_t_init(&audio_dir_entry);
+-    err = fs_opendir(&audio_dir_entry, "/SD:/audio");
++    /* The legacy phone protocol consumes one append-only file. */
++    err = initialize_audio_file(1);
+     if (err) {
+-        LOG_ERR("error while opening directory ", err);
++        LOG_ERR("failed to create or open audio file: %d", err);
+         return -1;
+     }
+-    LOG_INF("result of opendir: %d", err);
+-    initialize_audio_file(1);
+-    struct fs_dirent file_count_entry;
+-    file_count = get_file_contents(&audio_dir_entry, &file_count_entry);
+     file_count = 1;
+-    if (file_count < 0) {
+-        LOG_ERR(" error getting file count");
+-        return -1;
+-    }
+-
+-    fs_closedir(&audio_dir_entry);
+-    // file_count++;
+     LOG_INF("new num files: %d", file_count);
+ 
+     res = move_write_pointer(file_count);
+@@ -113,8 +104,7 @@
+         return -1;
+     }
+ 
+-    move_read_pointer(file_count);
+-
++    res = move_read_pointer(file_count);
+     if (res) {
+         LOG_ERR("error while moving the reader pointer\n");
+         return -1;
+@@ -126,11 +116,29 @@
+     res = fs_stat(info_path, &info_file_entry); // for later
+     if (res) {
+         res = create_file("info.txt");
+-        save_offset(0);
++        if (res) {
++            LOG_ERR("info.txt creation failed: %d", res);
++            return -1;
++        }
++        res = save_offset(0);
++        if (res) {
++            return -1;
++        }
+         LOG_INF("result of info.txt creation: %d ", res);
+     }
+ 
+-    LOG_INF("result of check: %d", res);
++    uint32_t file_size = get_file_size(1);
++    int stored_offset = get_offset();
++    if (stored_offset < 0 || (uint32_t) stored_offset > file_size) {
++        LOG_WRN("invalid saved offset; resetting to zero");
++        stored_offset = 0;
++        if (save_offset(0)) {
++            return -1;
++        }
++    }
++    file_num_array[0] = file_size;
++    file_num_array[1] = (uint32_t) stored_offset;
++    sd_mounted = true;
+ 
+     return 0;
+ }
+@@ -197,10 +205,15 @@
+     struct fs_file_t read_file;
+     fs_file_t_init(&read_file);
+     uint8_t *temp_ptr = buf;
+-    struct fs_dirent entry;
+-
+-    int rc = fs_open(&read_file, read_buffer, FS_O_READ | FS_O_RDWR);
++    int rc = fs_open(&read_file, read_buffer, FS_O_READ);
++    if (rc < 0) {
++        return rc;
++    }
+     rc = fs_seek(&read_file, offset, FS_SEEK_SET);
++    if (rc < 0) {
++        fs_close(&read_file);
++        return rc;
++    }
+     rc = fs_read(&read_file, temp_ptr, amount);
+     // LOG_PRINTK("read data :");
+     // for (int i = 0; i < amount;i++) {
+@@ -217,10 +230,19 @@
+     struct fs_file_t write_file;
+     fs_file_t_init(&write_file);
+     uint8_t *write_ptr = data;
+-    fs_open(&write_file, write_buffer, FS_O_WRITE | FS_O_APPEND);
+-    fs_write(&write_file, write_ptr, length);
+-    fs_close(&write_file);
+-    return 0;
++    int rc = fs_open(&write_file, write_buffer, FS_O_WRITE | FS_O_APPEND);
++    if (rc < 0) {
++        return rc;
++    }
++    rc = fs_write(&write_file, write_ptr, length);
++    int close_rc = fs_close(&write_file);
++    if (rc < 0) {
++        return rc;
++    }
++    if ((uint32_t) rc != length) {
++        return -EIO;
++    }
++    return close_rc < 0 ? close_rc : rc;
+ }
+ 
+ int initialize_audio_file(uint8_t num)
+@@ -229,9 +251,9 @@
+     if (header == NULL) {
+         return -1;
+     }
++    int rc = create_file(header);
+     k_free(header);
+-    create_file(header);
+-    return 0;
++    return rc;
+ }
+ 
+ char *generate_new_audio_header(uint8_t num)
+@@ -373,8 +395,13 @@
+     res = fs_write(&write_file, &buf, 4);
+     if (res < 0) {
+         LOG_ERR("error writing file %d", res);
++        fs_close(&write_file);
+         return -1;
+     }
++    if (res != sizeof(buf)) {
++        fs_close(&write_file);
++        return -EIO;
++    }
+     fs_close(&write_file);
+     return 0;
+ }
+@@ -384,7 +411,7 @@
+     uint8_t buf[4];
+     struct fs_file_t read_file;
+     fs_file_t_init(&read_file);
+-    int rc = fs_open(&read_file, "/SD:/info.txt", FS_O_READ | FS_O_RDWR);
++    int rc = fs_open(&read_file, "/SD:/info.txt", FS_O_READ);
+     if (rc < 0) {
+         LOG_ERR("error opening file %d", rc);
+         return -1;
+@@ -400,11 +427,14 @@
+         return -1;
+     }
+     fs_close(&read_file);
+-    uint32_t *offset_ptr = (uint32_t *) buf;
+-    LOG_INF("get offset is %d", offset_ptr[0]);
+-    fs_close(&read_file);
++    if (rc != sizeof(buf)) {
++        return -EIO;
++    }
++    uint32_t stored_offset = (uint32_t) buf[0] | ((uint32_t) buf[1] << 8) | ((uint32_t) buf[2] << 16) |
++                             ((uint32_t) buf[3] << 24);
++    LOG_INF("get offset is %u", stored_offset);
+ 
+-    return offset_ptr[0];
++    return (int) stored_offset;
+ }
+ 
+ void sd_off()
+@@ -439,5 +469,5 @@
+ 
+ bool is_sd_on()
+ {
+-    return sd_enabled;
++    return sd_enabled && sd_mounted;
+ }
+
+--- a/src/storage.c
++++ b/src/storage.c
+@@ -84,11 +84,11 @@
+ 
+ static void storage_config_changed_handler(const struct bt_gatt_attr *attr, uint16_t value)
+ {
+-
+-    storage_is_on = true;
+     if (value == BT_GATT_CCC_NOTIFY) {
++        storage_is_on = true;
+         LOG_INF("Client subscribed for notifications");
+     } else if (value == 0) {
++        storage_is_on = false;
+         LOG_INF("Client unsubscribed from notifications");
+     } else {
+         LOG_ERR("Invalid CCC value: %u", value);
+@@ -147,7 +147,11 @@
+         remaining_length = get_file_size(file_count);
+     }
+ 
+-    remaining_length = remaining_length - offset;
++    if (offset > remaining_length) {
++        LOG_ERR("Saved/requested offset is beyond file size");
++        offset = 0;
++    }
++    remaining_length -= offset;
+ 
+     // offset=offset_;
+     LOG_INF("remaining length: %d", remaining_length);
+@@ -270,17 +274,23 @@
+ // }
+ 
+ static void write_to_gatt(struct bt_conn *conn)
+-{ // unsafe. designed for max speeds. udp?
++{
+ 
+     uint32_t packet_size = MIN(remaining_length, SD_BLE_SIZE);
+ 
+     int r = read_audio_data(storage_write_buffer, packet_size, offset);
+-    offset = offset + packet_size;
++    if (r < 0 || (uint32_t) r != packet_size) {
++        LOG_ERR("Failed to read backlog block: %d", r);
++        remaining_length = 0;
++        save_offset(offset);
++        return;
++    }
+     int err = bt_gatt_notify(conn, &storage_service.attrs[1], &storage_write_buffer, packet_size);
+     if (err) {
+         LOG_PRINTK("error writing to gatt: %d\n", err);
+     } else {
+-        remaining_length = remaining_length - SD_BLE_SIZE;
++        offset += packet_size;
++        remaining_length -= packet_size;
+     }
+     // LOG_PRINTK("wrote to gatt %d\n",err);
+ }
+
+--- a/src/transport.c
++++ b/src/transport.c
+@@ -400,7 +400,8 @@
+ static void _transport_connected(struct bt_conn *conn, uint8_t err)
+ {
+     struct bt_conn_info info = {0};
+-    storage_is_on = true;
++    /* A BLE link alone does not mean that backlog transfer is active. */
++    storage_is_on = false;
+ 
+     err = bt_conn_get_info(conn, &info);
+     if (err) {
+@@ -641,37 +642,43 @@
+ // }
+ // for improving ble bandwidth
+ bool write_to_storage(void)
+-{ // max possible packing
++{
+     if (!read_from_tx_queue()) {
+         return false;
+     }
+ 
+     uint8_t *buffer = tx_buffer + 2;
+-    uint8_t packet_size = (uint8_t) (tx_buffer_size + OPUS_PREFIX_LENGTH);
++    uint16_t packet_size = (uint16_t) tx_buffer_size + OPUS_PREFIX_LENGTH;
++
++    if (packet_size > MAX_WRITE_SIZE || tx_buffer_size > UINT8_MAX) {
++        LOG_ERR("Encoded frame is too large for offline storage: %u", tx_buffer_size);
++        return false;
++    }
+ 
+-    // buffer_offset = buffer_offset+amount_to_fill;
+-    // check if adding the new packet will cause a overflow
+-    if (buffer_offset + packet_size > MAX_WRITE_SIZE - 1) {
+-
+-        storage_temp_data[buffer_offset] = tx_buffer_size;
+-        uint8_t *write_ptr = storage_temp_data;
+-        write_to_file(write_ptr, MAX_WRITE_SIZE);
+-
+-        buffer_offset = packet_size;
+-        storage_temp_data[0] = tx_buffer_size;
+-        memcpy(storage_temp_data + 1, buffer, tx_buffer_size);
+-
+-    } else if (buffer_offset + packet_size == MAX_WRITE_SIZE - 1) { // exact frame needed
+-        storage_temp_data[buffer_offset] = tx_buffer_size;
+-        memcpy(storage_temp_data + buffer_offset + 1, buffer, tx_buffer_size);
++    /* Flush a zero-padded block before adding a frame that would cross it. */
++    if (buffer_offset + packet_size > MAX_WRITE_SIZE) {
++        memset(storage_temp_data + buffer_offset, 0, MAX_WRITE_SIZE - buffer_offset);
++        int rc = write_to_file(storage_temp_data, MAX_WRITE_SIZE);
++        if (rc != MAX_WRITE_SIZE) {
++            LOG_ERR("Offline storage write failed: %d", rc);
++            return false;
++        }
++        memset(storage_temp_data, 0, sizeof(storage_temp_data));
+         buffer_offset = 0;
+-        uint8_t *write_ptr = (uint8_t *) storage_temp_data;
+-        write_to_file(write_ptr, MAX_WRITE_SIZE);
++    }
+ 
+-    } else {
+-        storage_temp_data[buffer_offset] = tx_buffer_size;
+-        memcpy(storage_temp_data + buffer_offset + 1, buffer, tx_buffer_size);
+-        buffer_offset = buffer_offset + packet_size;
++    storage_temp_data[buffer_offset] = (uint8_t) tx_buffer_size;
++    memcpy(storage_temp_data + buffer_offset + OPUS_PREFIX_LENGTH, buffer, tx_buffer_size);
++    buffer_offset += packet_size;
++
++    if (buffer_offset == MAX_WRITE_SIZE) {
++        int rc = write_to_file(storage_temp_data, MAX_WRITE_SIZE);
++        if (rc != MAX_WRITE_SIZE) {
++            LOG_ERR("Offline storage write failed: %d", rc);
++            return false;
++        }
++        memset(storage_temp_data, 0, sizeof(storage_temp_data));
++        buffer_offset = 0;
+     }
+ 
+     return true;
+
+--- a/src/button.c
++++ b/src/button.c
+@@ -55,12 +55,12 @@
+         LOG_ERR("Invalid CCC value: %u", value);
+     }
+ }
+-struct gpio_dt_spec d4_pin = {.port = DEVICE_DT_GET(DT_NODELABEL(gpio0)),
+-                              .pin = 4,
+-                              .dt_flags = GPIO_OUTPUT_ACTIVE}; // 3.3
+-struct gpio_dt_spec d5_pin_input = {.port = DEVICE_DT_GET(DT_NODELABEL(gpio0)),
+-                                    .pin = 5,
+-                                    .dt_flags = GPIO_INT_EDGE_RISING};
++#define ANTICIPY_BUTTON_NODE DT_ALIAS(anticipy_button)
++#if !DT_NODE_HAS_STATUS(ANTICIPY_BUTTON_NODE, okay)
++#error "Anticipy button alias is missing or disabled"
++#endif
++
++static const struct gpio_dt_spec button_pin = GPIO_DT_SPEC_GET(ANTICIPY_BUTTON_NODE, gpios);
+ 
+ static bool was_pressed = false;
+ 
+@@ -69,13 +69,9 @@
+ //
+ void button_pressed_callback(const struct device *dev, struct gpio_callback *cb, uint32_t pins)
+ {
+-    int temp = gpio_pin_get_raw(dev, d5_pin_input.pin);
+-    LOG_PRINTK("button_pressed_callback %d\n", temp);
+-    if (temp) {
+-        was_pressed = false;
+-    } else {
+-        was_pressed = true;
+-    }
++    int pressed = gpio_pin_get_dt(&button_pin);
++    LOG_PRINTK("button_pressed_callback %d\n", pressed);
++    was_pressed = pressed > 0;
+ }
+ #define BUTTON_CHECK_INTERVAL 40 // 0.04 seconds, 25 Hz
+ 
+@@ -452,45 +448,33 @@
+ 
+ int button_init()
+ {
+-    if (gpio_is_ready_dt(&d4_pin)) {
+-        LOG_INF("D4 Pin ready");
+-    } else {
+-        LOG_ERR("Error setting up D4 Pin");
+-        return -1;
+-    }
+-    if (gpio_pin_configure_dt(&d4_pin, GPIO_OUTPUT_ACTIVE) < 0) {
+-        LOG_ERR("Error setting up D4 Pin Voltage");
+-        return -1;
+-    } else {
+-        LOG_INF("D4 ready to transmit voltage");
+-    }
+-    if (gpio_is_ready_dt(&d5_pin_input)) {
+-        LOG_INF("D5 Pin ready");
++    if (gpio_is_ready_dt(&button_pin)) {
++        LOG_INF("D7 button pin ready");
+     } else {
+-        LOG_ERR("D5 Pin not ready");
++        LOG_ERR("D7 button pin not ready");
+         return -1;
+     }
+ 
+-    int err2 = gpio_pin_configure_dt(&d5_pin_input, GPIO_INPUT);
++    int err2 = gpio_pin_configure_dt(&button_pin, GPIO_INPUT);
+ 
+     if (err2 != 0) {
+-        LOG_ERR("Error setting up D5 Pin");
++        LOG_ERR("Error setting up D7 button input");
+         return -1;
+     } else {
+-        LOG_INF("D5 ready");
++        LOG_INF("D7 button input ready");
+     }
+-    // GPIO_INT_LEVEL_INACTIVE
+-    err2 = gpio_pin_interrupt_configure_dt(&d5_pin_input, GPIO_INT_EDGE_BOTH);
++    err2 = gpio_pin_interrupt_configure_dt(&button_pin, GPIO_INT_EDGE_BOTH);
+ 
+     if (err2 != 0) {
+-        LOG_ERR("D5 unable to detect button presses");
++        LOG_ERR("D7 unable to detect button presses");
+         return -1;
+     } else {
+-        LOG_INF("D5 ready to detect button presses");
++        LOG_INF("D7 ready to detect button presses");
+     }
+ 
+-    gpio_init_callback(&button_cb_data, button_pressed_callback, BIT(d5_pin_input.pin));
+-    gpio_add_callback(d5_pin_input.port, &button_cb_data);
++    was_pressed = gpio_pin_get_dt(&button_pin) > 0;
++    gpio_init_callback(&button_cb_data, button_pressed_callback, BIT(button_pin.pin));
++    gpio_add_callback(button_pin.port, &button_cb_data);
+ 
+     return 0;
+ }
+
+--- a/overlay/xiao_ble_sense_devkitv2-adafruit.overlay
++++ b/overlay/xiao_ble_sense_devkitv2-adafruit.overlay
+@@ -1,3 +1,18 @@
++/ {
++    aliases {
++        anticipy-button = &anticipy_button;
++    };
++
++    buttons {
++        compatible = "gpio-keys";
++
++        anticipy_button: button_d7 {
++            gpios = <&gpio1 12 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
++            label = "Anticipy Button";
++        };
++    };
++};
++
+ &i2s0 {
+     status = "okay";
+     pinctrl-0 = <&i2s0_default>;
+@@ -90,4 +105,3 @@
+ &temp {
+     status = "disabled";
+ };
+-

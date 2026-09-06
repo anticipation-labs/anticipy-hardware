@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "header": "uint16-le sequence, uint8 fragment index, payload",
+  "cases": [
+    {
+      "name": "fragmented_boundary_and_final_flush",
+      "packets_hex": ["2a00001122", "2b00013344", "2c000055"],
+      "finish": true,
+      "frames_hex": ["11223344", "55"],
+      "stats": {"frames_emitted": 2}
+    },
+    {
+      "name": "sequence_gap_drops_pending_frame",
+      "packets_hex": ["640000aa", "660001bb", "670000cc"],
+      "finish": true,
+      "frames_hex": ["cc"],
+      "stats": {"frames_emitted": 1, "dropped_frames": 1, "sequence_discontinuities": 1, "orphan_fragments": 1}
+    },
+    {
+      "name": "exact_duplicate_is_ignored",
+      "packets_hex": ["c80000aa", "c80000aa", "c90001bb", "ca0000cc"],
+      "finish": true,
+      "frames_hex": ["aabb", "cc"],
+      "stats": {"frames_emitted": 2, "duplicate_packets": 1}
+    },
+    {
+      "name": "conflicting_duplicate_poisoned_frame",
+      "packets_hex": ["2a0000aa", "2a0000bb", "2b0000cc"],
+      "finish": true,
+      "frames_hex": ["cc"],
+      "stats": {"frames_emitted": 1, "dropped_frames": 1, "sequence_discontinuities": 1}
+    },
+    {
+      "name": "out_of_order_fragment_drops_pending_frame",
+      "packets_hex": ["2c0100aa", "2d0102cc", "2e0101bb", "2f0100dd"],
+      "finish": true,
+      "frames_hex": ["dd"],
+      "stats": {"frames_emitted": 1, "dropped_frames": 1, "out_of_order_fragments": 1, "orphan_fragments": 1}
+    },
+    {
+      "name": "uint16_sequence_wrap_is_contiguous",
+      "packets_hex": ["ffff00aa", "000001bb", "010000cc"],
+      "finish": true,
+      "frames_hex": ["aabb", "cc"],
+      "stats": {"frames_emitted": 2}
+    },
+    {
+      "name": "final_flush_preserves_last_frame",
+      "packets_hex": ["0900000102"],
+      "finish": true,
+      "frames_hex": ["0102"],
+      "stats": {"frames_emitted": 1}
+    },
+    {
+      "name": "malformed_notifications_are_dropped",
+      "packets_hex": ["", "01", "0102", "010000"],
+      "finish": true,
+      "frames_hex": [],
+      "stats": {"malformed_packets": 4}
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+# ─── Byte fidelity ──────────────────────────────────────────────────────────
+# This repository is a checksum-verified archive: 99_MANIFESTS/SHA256SUMS.txt
+# must keep verifying after any clone. Disable ALL end-of-line conversion so
+# files round-trip byte-for-byte. Diffs still work for textual formats.
+* -text
+
+# ─── Git LFS ────────────────────────────────────────────────────────────────
+# Scoped deliberately to ONLY the two files that exceed GitHub's 50 MB warning
+# threshold. Everything else is stored as normal git objects so that cloning
+# this repository never depends on an LFS bandwidth quota. Both of these are
+# superseded meshes kept for history.
+04_MECHANICAL/SUPERSEDED_AND_MOCKUPS/OVERSIZED_MESHES_500mah_2026-08-22/anticipy-back-half-500mah-c0p35.stl   filter=lfs diff=lfs merge=lfs -text
+04_MECHANICAL/SUPERSEDED_AND_MOCKUPS/OVERSIZED_MESHES_500mah_2026-08-22/anticipy-front-half-500mah-c0p35.stl  filter=lfs diff=lfs merge=lfs -text
+
+# ─── Binary: never diff, never line-ending-convert ──────────────────────────
+*.stl   binary
+*.step  binary
+*.stp   binary
+*.3mf   binary
+*.obj   binary
+*.f3d   binary
+*.zip   binary
+*.uf2   binary
+*.hex   binary
+*.bin   binary
+*.elf   binary
+*.bundle binary
+*.pdf   binary
+*.docx  binary
+*.xlsx  binary
+*.png   binary
+*.jpg   binary
+*.wav   binary
+*.b64   binary
+
+# ─── Text: keep diffable. KiCad and OpenSCAD sources are text and MUST stay
+#     diffable — reviewing a board or enclosure change depends on it. ────────
+*.kicad_pcb  text
+*.kicad_sch  text
+*.kicad_pro  text
+*.kicad_mod  text
+*.kicad_dru  text
+*.scad       text
+*.dxf        text
+*.md         text
+*.csv        text
+*.json       text
+*.py         text

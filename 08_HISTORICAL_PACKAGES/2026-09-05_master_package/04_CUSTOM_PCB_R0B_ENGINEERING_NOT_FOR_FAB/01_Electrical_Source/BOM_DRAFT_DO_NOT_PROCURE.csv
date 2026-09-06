@@ -1,0 +1,57 @@
+reference,quantity_per_board,value,manufacturer,mpn,footprint,side,description,datasheet
+U1,1,MDBT50Q-1MV2,Raytac,MDBT50Q-1MV2,Anticipy_R0B:Raytac_MDBT50Q_R0B,Top,Certified nRF52840 module; rotation 0 puts antenna at the top board edge,https://www.raytac.com/download/index.php?index_id=43
+U2,1,nPM1300,Nordic Semiconductor,NPM1300-QEAA-R,Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.45x3.45mm,Top,"PMIC, USB charger, two bucks, two LDO/load switches",https://docs.nordicsemi.com/bundle/ps_npm1300/
+U3,1,LIS2DW12TR,STMicroelectronics,LIS2DW12TR,Package_LGA:LGA-12_2x2mm_P0.5mm,Top,"Low-power accelerometer, I2C, SA0 low",https://www.st.com/resource/en/datasheet/lis2dw12.pdf
+U4,1,TPD2EUSB30DRTR,Texas Instruments,TPD2EUSB30DRTR,Anticipy_R0B:Texas_DRT-3_R0B,Top,USB 2.0 data-line ESD protection,https://www.ti.com/lit/ds/symlink/tpd2eusb30.pdf
+U6,1,TPD2E2U06DCKR,Texas Instruments,TPD2E2U06DCKR,Package_TO_SOT_SMD:SOT-323_SC-70,Top,Connector-side 5.5-V CC1/CC2 shunt ESD protection; no series impedance,https://www.ti.com/lit/gpn/TPD2E2U06
+U5,1,MX35LF4GE4AD-Z4I,Macronix,MX35LF4GE4AD-Z4I,Package_SON:WSON-8-1EP_8x6mm_P1.27mm_EP3.4x4.3mm,Top,"4-Gbit SLC serial NAND; firmware needs ECC, bad-block and power-loss handling",https://www.macronix.com/Lists/Datasheet/Attachments/9047/MX35LF4GE4AD%2C%203V%2C%204Gb%2C%20v1.6.pdf
+MIC1,1,CMM-3424DT-26165-TR,Same Sky,CMM-3424DT-26165-TR,Anticipy_R0B:SameSky_CMM-3424DT-26165-TR_TopPort_PDM,Top,Front-side top-port IP67 PDM microphone; SELECT low,https://www.sameskydevices.com/product/resource/cmm-3424dt-26165-tr.pdf
+MIC2,1,CMM-3424DT-26165-TR,Same Sky,CMM-3424DT-26165-TR,Anticipy_R0B:SameSky_CMM-3424DT-26165-TR_TopPort_PDM,Top,Front-side top-port IP67 PDM microphone; SELECT high,https://www.sameskydevices.com/product/resource/cmm-3424dt-26165-tr.pdf
+J1,1,USB4500-03-1-A,GCT,USB4500-03-1-A,Anticipy_R0B:USB_C_Receptacle_GCT_USB4500-03-1-A_MidMount,Top,0.8-mm mid-mount USB-C; 12 grouped contacts plus four plated shell stakes,https://gct.co/connector/usb4500
+BT1,1,PROVISIONAL <=26x15.5x4.8mm PROTECTED 10kNTC,TBD,BATTERY-TBD-3WIRE,Anticipy_R0B:Battery_LiPo_3Wire_Solder_26x15.5,Rear / hand solder,"DO NOT SOURCE: exact protected three-wire pack, controlled max-tolerance drawing, polarity, 10k NTC configuration, UN38.3/IEC62133/MSDS, stock and runtime are release gates",
+SW1,1,B3U-1000P,Omron,B3U-1000P,Button_Switch_SMD:SW_SPST_B3U-1000P,Top,Hard reset / ship-hold button; intentionally not tied to MCU,
+LED1,1,APHB1608LVBDSEKJ3C,Kingbright,APHB1608LVBDSEKJ3C,Anticipy_R0B:LED_Kingbright_APHB1608LVBDSEKJ3C,Top,Red/blue status LED on nPM1300 fixed 5-mA sinks; blue low-battery brightness is a first-article gate,https://www.kingbrightusa.com/images/catalog/SPEC/APHB1608LVBDSEKJ3C.pdf
+Q1,1,AO3400A,Alpha & Omega Semiconductor,AO3400A,Package_TO_SOT_SMD:SOT-23,Top,Low-side haptic MOSFET,
+D1,1,1N4148WS-7-F,Diodes Incorporated,1N4148WS-7-F,Diode_SMD:D_SOD-323,Top,Active-lifecycle haptic flyback diode; KiCad pad 1 is cathode,https://www.diodes.com/assets/Datasheets/ds12019.pdf
+D2,1,ESD441DPYR,Texas Instruments,ESD441DPYR,Anticipy_R0B:TI_DPY0002A_X1SON,Top,Connector-side 5.5-V VBUS shunt ESD/surge protector; TI DPY0002A land pattern,https://www.ti.com/lit/gpn/ESD441
+M1,1,VCLP1020B002L,Vybronics,VCLP1020B002L,Anticipy_R0B:Haptic_VCLP1020B002L_WirePads,Rear / hand solder,"10-mm coin haptic, hand soldered",
+NT1,1,PVSS1-GND,Anticipy,NETTIE,NetTie:NetTie-2_SMD_Pad0.5mm,Top,Single-point buck-1 power-ground tie,
+NT2,1,PVSS2-GND,Anticipy,NETTIE,NetTie:NetTie-2_SMD_Pad0.5mm,Top,Single-point buck-2 power-ground tie,
+L1,1,2.2uH,Samsung Electro-Mechanics,CIGT201610EH2R2MNE,Inductor_SMD:L_Murata_DFE201610P,Top,Buck-1 inductor,
+L2,1,2.2uH,Samsung Electro-Mechanics,CIGT201610EH2R2MNE,Inductor_SMD:L_Murata_DFE201610P,Top,Buck-2 inductor,
+R1,1,10k 1%,Yageo,RC0201FR-0710KL,Resistor_SMD:R_0201_0603Metric,Top,I2C pull-up,
+R2,1,10k 1%,Yageo,RC0201FR-0710KL,Resistor_SMD:R_0201_0603Metric,Top,I2C pull-up,
+R3,1,330k 1%,Yageo,RC0201FR-07330KL,Resistor_SMD:R_0201_0603Metric,Top,Buck-1 starts at 2.7 V; firmware raises 3V_MAIN to 3.0 V,
+R4,1,150k 1%,Yageo,RC0201FR-07150KL,Resistor_SMD:R_0201_0603Metric,Top,Buck-2 starts at 3.0 V,
+R5,1,100R 1%,Yageo,RC0402FR-07100RL,Resistor_SMD:R_0402_1005Metric,Top,MOSFET gate resistor,
+R6,1,100k 1%,Yageo,RC0402FR-07100KL,Resistor_SMD:R_0402_1005Metric,Top,MOSFET gate pulldown,
+R7,1,100k 1%,Yageo,RC0402FR-07100KL,Resistor_SMD:R_0402_1005Metric,Top,Flash chip-select default high,
+R8,1,100R 1%,Yageo,RC0402FR-07100RL,Resistor_SMD:R_0402_1005Metric,Top,PDM source isolation,
+R9,1,100R 1%,Yageo,RC0402FR-07100RL,Resistor_SMD:R_0402_1005Metric,Top,PDM source isolation,
+R10,1,27R 1%,Vishay Dale,CRCW020127R0FNED,Resistor_SMD:R_0201_0603Metric,Top,Raytac-recommended USB D+ series resistor,
+R11,1,27R 1%,Vishay Dale,CRCW020127R0FNED,Resistor_SMD:R_0201_0603Metric,Top,Raytac-recommended USB D- series resistor,
+C1,1,1uF 16V X7R,TDK,C1608X7R1C105K080AC,Capacitor_SMD:C_0603_1608Metric,Top,PMIC VBUS input,
+C2,1,10uF 25V X5R,Murata,GRM188R61E106MA73J,Capacitor_SMD:C_0603_1608Metric,Top,Buck-1 PVDD local return,
+C3,1,10uF 25V X5R,Murata,GRM188R61E106MA73J,Capacitor_SMD:C_0603_1608Metric,Top,Buck-2 PVDD local return,
+C4,1,10uF 25V X5R,Murata,GRM188R61E106MA73J,Capacitor_SMD:C_0603_1608Metric,Top,System rail bulk,
+C5,1,1uF 16V X7R,TDK,C1608X7R1C105K080AC,Capacitor_SMD:C_0603_1608Metric,Top,Protected USB output bypass,
+C6,1,2.2uF 16V X7R,Taiyo Yuden,EMK107BB7225KA-T,Capacitor_SMD:C_0603_1608Metric,Top,Battery input bypass,
+C7,1,10uF 25V X5R,Murata,GRM188R61E106MA73J,Capacitor_SMD:C_0603_1608Metric,Top,Buck-1 output,
+C8,1,10uF 25V X5R,Murata,GRM188R61E106MA73J,Capacitor_SMD:C_0603_1608Metric,Top,Buck-2 output,
+C9,1,10uF 25V X5R,Murata,GRM188R61E106MA73J,Capacitor_SMD:C_0603_1608Metric,Top,System rail second bulk,
+C10,1,10uF 25V X5R,Murata,GRM188R61E106MA73J,Capacitor_SMD:C_0603_1608Metric,Top,Microphone LDO output,
+C13,1,100nF 16V X5R,TDK,C0603X5R1C104K030BC,Capacitor_SMD:C_0201_0603Metric,Top,PMIC logic bypass; Nordic QEAA 0201 assembler gate,
+C14,1,100nF 16V X7R,KEMET,C0402C104M4RAC7867,Capacitor_SMD:C_0402_1005Metric,Top,Buck-1 high-frequency input bypass; Nordic QEAA ref 1.2,
+C15,1,100nF 16V X7R,KEMET,C0402C104M4RAC7867,Capacitor_SMD:C_0402_1005Metric,Top,Buck-2 high-frequency input bypass; Nordic QEAA ref 1.2,
+C16,1,100nF 16V X7R,KEMET,C0402C104M4RAC7867,Capacitor_SMD:C_0402_1005Metric,Top,System high-frequency bypass; Nordic QEAA ref 1.2,
+C17,1,100nF 10V X7R,TDK,C1005X7R1A104K050BC,Capacitor_SMD:C_0402_1005Metric,Top,Flash local bypass,
+C18,1,1uF 16V X7R,TDK,C1608X7R1C105K080AC,Capacitor_SMD:C_0603_1608Metric,Top,Flash local bulk,
+C19,1,100nF 10V X7R,TDK,C1005X7R1A104K050BC,Capacitor_SMD:C_0402_1005Metric,Top,MIC1 local bypass,
+C20,1,100nF 10V X7R,TDK,C1005X7R1A104K050BC,Capacitor_SMD:C_0402_1005Metric,Top,MIC2 local bypass,
+C21,1,100nF 16V X5R,TDK,C0603X5R1C104K030BC,Capacitor_SMD:C_0201_0603Metric,Top,Accelerometer VDD local bypass,
+C22,1,100nF 10V X7R,TDK,C1005X7R1A104K050BC,Capacitor_SMD:C_0402_1005Metric,Top,Motor brush-noise capacitor,
+C23,1,47uF 6.3V X5R,Yageo,CC0805MKX5R5BB476,Capacitor_SMD:C_0805_2012Metric,Top,Haptic rail bulk,
+C24,1,10uF 25V X5R,Murata,GRM188R61E106MA73J,Capacitor_SMD:C_0603_1608Metric,Top,Accelerometer local bulk,
+C25,1,10uF 6.3V X5R,Murata,GRM155R60J106ME15D,Capacitor_SMD:C_0402_1005Metric,Top,Raytac VDD/VDDH local bulk; effective capacitance is a first-article gate,
+C26,1,10uF 6.3V X5R,Murata,GRM155R60J106ME15D,Capacitor_SMD:C_0402_1005Metric,Top,Raytac VBUS local bulk; effective capacitance is a first-article gate,
+C27,1,100nF 16V X5R,TDK,C0603X5R1C104K030BC,Capacitor_SMD:C_0201_0603Metric,Top,Accelerometer VDDIO local bypass,

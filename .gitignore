@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Editor / OS noise
+*.swp
+*~
+Thumbs.db
+
+# Build output — this is an archive, not a build tree. Nothing here should be
+# generated. If a build directory appears, it does not belong in this repo.
+build/
+.build/
+__pycache__/
+*.pyc
+
+# NOTE: *.kicad_prl and other KiCad local state are deliberately NOT ignored.
+# They arrived inside the original handoff packages and are covered by
+# 99_MANIFESTS/SHA256SUMS.txt, so excluding them would break verification.

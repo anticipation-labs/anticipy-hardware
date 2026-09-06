@@ -1,0 +1,68 @@
+name: Build Anticipy EVT firmware
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "src/**"
+      - "overlay/**"
+      - "CMakeLists.txt"
+      - "Kconfig"
+      - "prj_xiao_ble_sense_devkitv2-adafruit.conf"
+      - "west.yml"
+      - ".github/workflows/build-evt-firmware.yml"
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 90
+    steps:
+      - name: Check out firmware pack
+        uses: actions/checkout@v4
+        with:
+          path: app
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Set up NCS/Zephyr workspace
+        uses: zephyrproject-rtos/action-zephyr-setup@v1
+        with:
+          app-path: app
+          toolchains: arm-zephyr-eabi
+          sdk-version: 0.16.5
+          west-version: 1.3.0
+
+      - name: Run host checks
+        working-directory: app
+        run: python3 host_checks.py
+
+      - name: Fetch Nordic binary blobs
+        run: west blobs fetch hal_nordic
+
+      - name: Build UF2
+        run: >-
+          west build -d build/anticipy_evt
+          -b xiao_ble/nrf52840/sense
+          --pristine always app --
+          -DNCS_TOOLCHAIN_VERSION=NONE
+          -DCONF_FILE=prj_xiao_ble_sense_devkitv2-adafruit.conf
+          -DDTC_OVERLAY_FILE=${{ github.workspace }}/app/overlay/xiao_ble_sense_devkitv2-adafruit.overlay
+          -DPLATFORM=nrf52840
+          -DCACHED_CONF_FILE=${{ github.workspace }}/app/prj_xiao_ble_sense_devkitv2-adafruit.conf
+
+      - name: Collect flash file
+        run: |
+          mkdir -p artifact
+          cp build/anticipy_evt/zephyr/zephyr.uf2 artifact/Anticipy_EVT_NoPCB.uf2
+          sha256sum artifact/Anticipy_EVT_NoPCB.uf2 > artifact/SHA256SUMS.txt
+
+      - name: Upload UF2
+        uses: actions/upload-artifact@v4
+        with:
+          name: anticipy-evt-uf2
+          path: artifact/
+          if-no-files-found: error
+          retention-days: 14

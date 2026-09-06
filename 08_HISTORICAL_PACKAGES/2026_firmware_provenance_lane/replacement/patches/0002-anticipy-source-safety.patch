@@ -1,0 +1,6170 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index a592faa..0cb33d1 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -1,5 +1,4 @@
+ # SPDX-License-Identifier: Apache-2.0
+-set(BOARD seeed_xiao_nrf52840_sense)
+ cmake_minimum_required(VERSION 3.20.0)
+ find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
+ project(nrf52840_nordic)
+@@ -8,88 +7,31 @@ enable_language(C ASM)
+ target_sources(app PRIVATE
+     src/main.c
+     src/transport.c
++    src/transport_safety.c
+     src/mic.c
+     src/led.c
+     src/codec.c
+     src/lib/battery/battery.c
+-    src/button.c
+-    src/speaker.c
+-    src/sdcard.c
+-    src/storage.c
+-	# src/nfc.c future release
++    src/battery_math.c
++    src/battery_smoother.c
+ )
+ 
++# The selected firmware contract is CELT-only restricted-low-delay Opus.
++# Compiling dormant SILK/Hybrid files previously produced real array-bound
++# diagnostics in code that this image must never select.
+ target_sources_ifdef(CONFIG_CODEC_OPUS app PRIVATE
+-    src/lib/opus-1.2.1/A2NLSF.c
+-    src/lib/opus-1.2.1/CNG.c
+-    src/lib/opus-1.2.1/HP_variable_cutoff.c
+-    src/lib/opus-1.2.1/LPC_analysis_filter.c
+-    src/lib/opus-1.2.1/LPC_fit.c
+-    src/lib/opus-1.2.1/LPC_inv_pred_gain.c
+-    src/lib/opus-1.2.1/LP_variable_cutoff.c
+-    src/lib/opus-1.2.1/LTP_analysis_filter_FIX.c
+-    src/lib/opus-1.2.1/LTP_scale_ctrl_FIX.c
+-    src/lib/opus-1.2.1/NLSF2A.c
+-    src/lib/opus-1.2.1/NLSF_VQ.c
+-    src/lib/opus-1.2.1/NLSF_VQ_weights_laroia.c
+-    src/lib/opus-1.2.1/NLSF_decode.c
+-    src/lib/opus-1.2.1/NLSF_del_dec_quant.c
+-    src/lib/opus-1.2.1/NLSF_encode.c
+-    src/lib/opus-1.2.1/NLSF_stabilize.c
+-    src/lib/opus-1.2.1/NLSF_unpack.c
+-    src/lib/opus-1.2.1/NSQ.c
+-    src/lib/opus-1.2.1/NSQ_del_dec.c
+-    src/lib/opus-1.2.1/PLC.c
+-    src/lib/opus-1.2.1/VAD.c
+-    src/lib/opus-1.2.1/VQ_WMat_EC.c
+-    src/lib/opus-1.2.1/ana_filt_bank_1.c
++    src/opus_packet_helpers.c
+     src/lib/opus-1.2.1/analysis.c
+-    src/lib/opus-1.2.1/apply_sine_window_FIX.c
+-    src/lib/opus-1.2.1/autocorr_FIX.c
+     src/lib/opus-1.2.1/bands.c
+     src/lib/opus-1.2.1/biquad_alt.c
+-    src/lib/opus-1.2.1/burg_modified_FIX.c
+-    src/lib/opus-1.2.1/bwexpander.c
+-    src/lib/opus-1.2.1/bwexpander_32.c
+     src/lib/opus-1.2.1/celt.c
+     src/lib/opus-1.2.1/celt_decoder.c
+     src/lib/opus-1.2.1/celt_encoder.c
+     src/lib/opus-1.2.1/celt_lpc.c
+-    src/lib/opus-1.2.1/arm/celt_pitch_xcorr_arm_gcc.s
+-    src/lib/opus-1.2.1/check_control_input.c
+-    src/lib/opus-1.2.1/code_signs.c
+-    src/lib/opus-1.2.1/control_SNR.c
+-    src/lib/opus-1.2.1/control_audio_bandwidth.c
+-    src/lib/opus-1.2.1/control_codec.c
+-    src/lib/opus-1.2.1/corrMatrix_FIX.c
+     src/lib/opus-1.2.1/cwrs.c
+-    src/lib/opus-1.2.1/debug.c
+-    src/lib/opus-1.2.1/dec_API.c
+-    src/lib/opus-1.2.1/decode_core.c
+-    src/lib/opus-1.2.1/decode_frame.c
+-    src/lib/opus-1.2.1/decode_indices.c
+-    src/lib/opus-1.2.1/decode_parameters.c
+-    src/lib/opus-1.2.1/decode_pitch.c
+-    src/lib/opus-1.2.1/decode_pulses.c
+-    src/lib/opus-1.2.1/decoder_set_fs.c
+-    src/lib/opus-1.2.1/enc_API.c
+-    src/lib/opus-1.2.1/encode_frame_FIX.c
+-    src/lib/opus-1.2.1/encode_indices.c
+-    src/lib/opus-1.2.1/encode_pulses.c
+     src/lib/opus-1.2.1/entcode.c
+     src/lib/opus-1.2.1/entdec.c
+     src/lib/opus-1.2.1/entenc.c
+-    src/lib/opus-1.2.1/find_LPC_FIX.c
+-    src/lib/opus-1.2.1/find_LTP_FIX.c
+-    src/lib/opus-1.2.1/find_pitch_lags_FIX.c
+-    src/lib/opus-1.2.1/find_pred_coefs_FIX.c
+-    src/lib/opus-1.2.1/gain_quant.c
+-    src/lib/opus-1.2.1/init_decoder.c
+-    src/lib/opus-1.2.1/init_encoder.c
+-    src/lib/opus-1.2.1/inner_prod_aligned.c
+-    src/lib/opus-1.2.1/interpolate.c
+-    src/lib/opus-1.2.1/k2a_FIX.c
+-    src/lib/opus-1.2.1/k2a_Q16_FIX.c
+     src/lib/opus-1.2.1/kiss_fft.c
+     src/lib/opus-1.2.1/laplace.c
+     src/lib/opus-1.2.1/lin2log.c
+@@ -99,59 +41,34 @@ target_sources_ifdef(CONFIG_CODEC_OPUS app PRIVATE
+     src/lib/opus-1.2.1/mlp.c
+     src/lib/opus-1.2.1/mlp_data.c
+     src/lib/opus-1.2.1/modes.c
+-    src/lib/opus-1.2.1/noise_shape_analysis_FIX.c
+     src/lib/opus-1.2.1/opus.c
+-    src/lib/opus-1.2.1/opus_decoder.c
+     src/lib/opus-1.2.1/opus_encoder.c
+-    src/lib/opus-1.2.1/opus_multistream.c
+-    src/lib/opus-1.2.1/opus_multistream_decoder.c
+-    src/lib/opus-1.2.1/opus_multistream_encoder.c
+     src/lib/opus-1.2.1/pitch.c
+-    src/lib/opus-1.2.1/pitch_analysis_core_FIX.c
+-    src/lib/opus-1.2.1/pitch_est_tables.c
+-    src/lib/opus-1.2.1/process_NLSFs.c
+-    src/lib/opus-1.2.1/process_gains_FIX.c
+-    src/lib/opus-1.2.1/quant_LTP_gains.c
+     src/lib/opus-1.2.1/quant_bands.c
+     src/lib/opus-1.2.1/rate.c
+-    src/lib/opus-1.2.1/regularize_correlations_FIX.c
+     src/lib/opus-1.2.1/repacketizer.c
+-    src/lib/opus-1.2.1/resampler.c
+-    src/lib/opus-1.2.1/resampler_down2.c
+-    src/lib/opus-1.2.1/resampler_down2_3.c
+-    src/lib/opus-1.2.1/resampler_private_AR2.c
+-    src/lib/opus-1.2.1/resampler_private_IIR_FIR.c
+-    src/lib/opus-1.2.1/resampler_private_down_FIR.c
+-    src/lib/opus-1.2.1/resampler_private_up2_HQ.c
+-    src/lib/opus-1.2.1/resampler_rom.c
+-    src/lib/opus-1.2.1/residual_energy16_FIX.c
+-    src/lib/opus-1.2.1/residual_energy_FIX.c
+-    src/lib/opus-1.2.1/schur64_FIX.c
+-    src/lib/opus-1.2.1/schur_FIX.c
+-    src/lib/opus-1.2.1/shell_coder.c
+-    src/lib/opus-1.2.1/sigm_Q15.c
+-    src/lib/opus-1.2.1/sort.c
+-    src/lib/opus-1.2.1/stereo_LR_to_MS.c
+-    src/lib/opus-1.2.1/stereo_MS_to_LR.c
+-    src/lib/opus-1.2.1/stereo_decode_pred.c
+-    src/lib/opus-1.2.1/stereo_encode_pred.c
+-    src/lib/opus-1.2.1/stereo_find_predictor.c
+-    src/lib/opus-1.2.1/stereo_quant_pred.c
+-    src/lib/opus-1.2.1/sum_sqr_shift.c
+-    src/lib/opus-1.2.1/table_LSF_cos.c
+-    src/lib/opus-1.2.1/tables_LTP.c
+-    src/lib/opus-1.2.1/tables_NLSF_CB_NB_MB.c
+-    src/lib/opus-1.2.1/tables_NLSF_CB_WB.c
+-    src/lib/opus-1.2.1/tables_gain.c
+-    src/lib/opus-1.2.1/tables_other.c
+-    src/lib/opus-1.2.1/tables_pitch_lag.c
+-    src/lib/opus-1.2.1/tables_pulses_per_block.c
+-    src/lib/opus-1.2.1/vector_ops_FIX.c
+     src/lib/opus-1.2.1/vq.c
+-    src/lib/opus-1.2.1/warped_autocorrelation_FIX.c
+     src/lib/opus-1.2.1/arm/celt_pitch_xcorr_arm_gcc.s
+ )
+ 
++target_compile_options(app PRIVATE
++    -Werror=array-bounds=2
++    -Werror=bool-compare
++    -Werror=discarded-qualifiers
++    -Werror=format
++    -Werror=implicit-function-declaration
++    -Werror=incompatible-pointer-types
++    -Werror=logical-not-parentheses
++    -Werror=overflow
++    -Werror=return-type
++    -Werror=stringop-overflow=2
++    -Werror=stringop-overread
++    -Werror=unused-function
++    -Werror=unused-result
++    -Werror=unused-variable
++    -Werror=use-after-free=2
++)
++
+ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DARM_MATH_CM4")
+ # set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DVAR_ARRAYS")
+ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DOPUS_ARM_ASM")
+@@ -167,4 +84,3 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DHAVE_CONFIG_H")
+ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DHAVE_ALLOCA_H")
+ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fsingle-precision-constant") # A lot of constants are written as doubles
+ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DHAVE_LRINT -DHAVE_LRINTF")
+-
+diff --git a/CMakePresets.json b/CMakePresets.json
+deleted file mode 100644
+index 1bc3c2a..0000000
+--- a/CMakePresets.json
++++ /dev/null
+@@ -1,58 +0,0 @@
+-{
+-    "version": 2,
+-	"cmakeMinimumRequired": {
+-		"major": 3,
+-		"minor": 20,
+-		"patch": 0
+-	},
+-	"configurePresets": [
+-		{
+-			"name": "build_xiao_ble_sense_devkitv1",
+-			"displayName": "Devkit V1",
+-			"configuration": "Debug",
+-			"hidden": false,
+-			"description": "Debug build for devkit v1 device with no external modules",
+-			"generator": "Ninja",
+-			"binaryDir": "${sourceDir}/build/build_xiao_ble_sense_devkitv1",
+-			"cacheVariables": {
+-				"CMAKE_EXPORT_COMPILE_COMMANDS": "YES",
+-				"CMAKE_BUILD_TYPE": "Debug",
+-				"PLATFORM": "nrf52840",
+-				"BOARD": "xiao_ble_sense",
+-				"CACHED_CONF_FILE": "${sourceDir}/prj_xiao_ble_sense_devkitv1.conf"
+-            }
+-		},{
+-			"name": "build_xiao_ble_sense_devkitv1-spisd.",
+-			"displayName": "Devkit V1 (with SPI SD)",
+-			"configuration": "Debug",
+-			"hidden": false,
+-			"description": "Debug build for devkit v1 device with external SPI SD card module",
+-			"generator": "Ninja",
+-			"binaryDir": "${sourceDir}/build/build_xiao_ble_sense_devkitv1-spisd",
+-			"cacheVariables": {
+-				"CMAKE_EXPORT_COMPILE_COMMANDS": "YES",
+-				"CMAKE_BUILD_TYPE": "Debug",
+-				"PLATFORM": "nrf52840",
+-				"BOARD": "xiao_ble_sense",
+-				"CACHED_CONF_FILE": "${sourceDir}/prj_xiao_ble_sense_devkitv1-spisd.conf",
+-				"DTC_OVERLAY_FILE": "${sourceDir}/overlay/xiao_ble_sense_devkitv1-spisd.overlay"
+-            }
+-        },{
+-			"name": "build_xiao_ble_sense_devkitv2-adafruit.",
+-			"displayName": "Devkit V2 (with Adafruit BFF Module)",
+-			"configuration": "Debug",
+-			"hidden": false,
+-			"description": "Debug build for devkit v2 device with adafruit audio bff module",
+-			"generator": "Ninja",
+-			"binaryDir": "${sourceDir}/build/build_xiao_ble_sense_devkitv2-adafruit",
+-			"cacheVariables": {
+-				"CMAKE_EXPORT_COMPILE_COMMANDS": "YES",
+-				"CMAKE_BUILD_TYPE": "Debug",
+-				"PLATFORM": "nrf52840",
+-				"BOARD": "xiao_ble_sense",
+-				"CACHED_CONF_FILE": "${sourceDir}/prj_xiao_ble_sense_devkitv2-adafruit.conf",
+-				"DTC_OVERLAY_FILE": "${sourceDir}/overlay/xiao_ble_sense_devkitv2-adafruit.overlay"
+-            }
+-        }
+-    ]
+-}
+diff --git a/Kconfig b/Kconfig
+index e60ad2f..f3a43dd 100644
+--- a/Kconfig
++++ b/Kconfig
+@@ -6,15 +6,10 @@ config CODEC_OPUS
+     default n
+ 
+ config OFFLINE_STORAGE
+-	bool "Offline SD Card Storage Support"
+-	default n
+-config ACCELEROMETER
+-    bool "Accelerometer Support"
++    bool
+     default n
+-config ENABLE_BUTTON
+-    bool "Button support on Devkit2"
+-    default n
+-config ENABLE_SPEAKER
+-    bool "Enable the speaker!!"
+-    default n 
++    help
++      Reserved compatibility symbol. The Anticipy live-stream candidate
++      excludes all disconnected recording and storage source.
++
+ endmenu
+diff --git a/README.rst b/README.rst
+index 96fbe03..8e86730 100644
+--- a/README.rst
++++ b/README.rst
+@@ -1,83 +1,26 @@
+-# Friend Hardware Firmware
+-
+-This repository contains the firmware for the Friend AI wearable device.
+-
+-## Overview
+-
+-The Friend firmware is built on the Zephyr RTOS and provides functionality for audio capture, processing, and battery. It includes Bluetooth connectivity for streaming audio data. Given the complex nature of this firmware its not buildable in Arduino IDE and requires a more advanced toolchain.
+-
+-## Directory Structure
+-
+-- `src/`: Contains the source code files
+-- `include/`: Header files
+-- `boards/`: Board-specific configurations (not used)
+-- `overlays/`: Device-specific overlay files
+-- `CMakeLists.txt`: CMake build configuration
+-- `prj.conf`: Project configuration file
+-
+-## Prerequisites
+-
+-- (Visual Studio Code)[https://code.visualstudio.com/]
+-- (nRF Connect for VS Code extension)[https://marketplace.visualstudio.com/items?itemName=NordicSemiconductor.nrf-connect-for-visual-studio-code]
+-- (nRF Command Line Tools)[https://www.nordicsemi.com/Software-and-tools/Development-Tools/nRF-Command-Line-Tools/Download]
+-
+-## Building the Firmware
+-
+-1. Open the project in Visual Studio Code.
+-2. Install the recommended VS Code extensions when prompted.
+-3. Use the nRF Connect extension to build the firmware:
+-   - Open the nRF Connect extension sidebar.
+-   - Select your project configuration.
+-   - Click on "Build" in the extension's toolbar.
+-
+-## Flashing the Firmware
+-
+-1. Double-tap the reset button on your device to enter bootloader mode. This will open a USB drive on your computer which is used for flashing.
+-2. Locate the `zephyr.uf2` file in your build output directory.
+-3. Copy the `zephyr.uf2` file to the USB drive that appeared when you put the device in bootloader mode.
+-4. The device will automatically flash and restart with the new firmware.
+-
+-## Device-Specific Builds
+-
+-For different device versions (e.g., V1 and V2), use separate overlay files and project configuration files. See `CMakePresets.json` for the available configurations.
+-
+-These overlay files provide context on pins and device functions to the firmware when building. Each device will need its own unique build.
+-
+-To select the appropriate overlay file select the configuration in the nRF Connect extension sidebar which is set in `CMakePresets.json`.
+-
+-## Debugging
+-
+-To enable USB serial debugging:
+-
+-1. Uncomment the debug lines in `main.c`.
+-2. Use the nRF Terminal in VS Code to view debug output.
+-3. Full live-code debugging is also supported using the nRF Connect extension however this requires a J-Link debugger device and additional setup.
+-
+-## Key Components
+-
+-- **Main Application**: Coordinates the overall functionality of the device from initialization to shutdown.
+-- **Audio Capture**: Handles microphone input and audio buffering.
+-- **Codec**: Processes raw audio data.
+-- **Transport**: Manages Bluetooth connectivity and audio streaming.
+-- **Storage**: Handles SD card operations and audio file management.
+-- **LED Control**: Provides visual feedback about device status.
+-
+-## On the Storage Reads
+-The storage will automatically activate whenever there is no bluetooth connection to the app. Whenever you turn on the device, a new file is created which
+-will begin filling with opus encoded data. Whenever you connect to the app, the contents of the storage will begin streaming to the app. When it is finished, it will try to delete the file on the device.
+-
+-The format of each packet is similar to the mic packets: that is, there is a 3 byte header denoting the order of packet arrival. The fourth bit is the number of bytes contained in the opus packet. The next bytes are the opus bytes themselves. The rest can be ignored.
+-Each packet (for now) is 83 bytes each for ease of transmission.
+-
+-You don't need the app to test! Simply insert your device id in the file get_audio_file.py, and then run the file. If you want to decode the current file, then run decode_audio.py afterwards. There are some numbers that get sent by the device as a format
+-of acknowledgement. All of them are one byte each, so check for these status codes by checking the message lengths. Here are the important ones:
+-
+-0 - This means the command was successfully parsed by the device. This means the start of transmission of audio data or deletion of a file.
+-
+-100 - This number means the end of the audio transmission. You can know that the transmission ended with this code.
+-
+-1,2,3,4,5 - These usually denote some error bits. They also mean that the device rejects the command and no transmission/deletion happens as a result.
+-
+-Messages to the device take the form [a,b] or [a,b,c,d,e,f], where a denotes (0 for read) and (1 for delete), while b denotes the file number (1 is the first file, 2 is the second, etc. There is no notion of a 0th file). The optional [c,d,e,f] bytes denote the offset in uint format
+-in case you want to read from a file at some offset.
+-
++Anticipy live-stream firmware candidate
++=======================================
++
++This source package contains one fail-closed candidate for the Seeed XIAO
++nRF52840 Sense board. It captures live audio only after an encrypted current
++connection performs a fresh audio-CCC write. Offline recording, SD/filesystem
++support, application DFU, NFC, speaker, button, haptic, accelerometer, legacy
++board presets, host recording clients, and scripts that copy firmware to a
++mounted device are intentionally absent.
++
++The only selected application configuration is
++``prj_xiao_ble_sense_devkitv2-adafruit.conf`` with
++``overlay/xiao_ble_sense_devkitv2-adafruit_module.overlay``. Builds are
++performed by the repository's locked candidate pipeline; this directory does
++not contain an operator flash script.
++
++Safety status
++-------------
++
++This is not production firmware. Encryption and one persisted bond do not
++authenticate an owner: without a physical enrollment/erase gesture or an
++allowlist, the first nearby central can still take the sole bond. The battery
++percentage is a conservative development estimate based on an uncalibrated
++voltage curve. A pinned embedded build, physical calibration, consent and
++reconnect tests, indicator tests, and hardware verification remain required
++before release or flashing.
+diff --git a/build.sh b/build.sh
+deleted file mode 100644
+index e367ab5..0000000
+--- a/build.sh
++++ /dev/null
+@@ -1,3 +0,0 @@
+-set -e
+-west build
+-cp build/zephyr/zephyr.uf2 /Volumes/XIAO-SENSE/
+\ No newline at end of file
+diff --git a/client.py b/client.py
+deleted file mode 100644
+index 97b8f2d..0000000
+--- a/client.py
++++ /dev/null
+@@ -1,153 +0,0 @@
+-import asyncio
+-import bleak
+-from bleak import BleakClient
+-import wave
+-from datetime import datetime
+-import numpy as np
+-import time
+-import os
+-import struct
+-from scipy.signal import stft, istft
+-
+-DEVICE_NAME = "Friend"
+-SERVICE_UUID = "19B10000-E8F2-537E-4F6C-D104768A1214"
+-CHARACTERISTIC_UUID = "19B10001-E8F2-537E-4F6C-D104768A1214"
+-
+-CODEC = "pcm"  # "pcm" or "mulaw" 
+-SAMPLE_RATE = 8000  # Sample rate for the audio
+-SAMPLE_WIDTH = 2  # 16-bit audio
+-CHANNELS = 1  # Mono audio
+-CAPTURE_TIME = 10  # Time to capture audio in seconds
+-
+-def ulaw2linear(ulaw_byte):
+-    """Convert a µ-law byte to a 16-bit linear PCM value."""
+-    EXPONENT_LUT = [0, 132, 396, 924, 1980, 4092, 8316, 16764]
+-    ulaw_byte = ~ulaw_byte
+-    sign = (ulaw_byte & 0x80)
+-    exponent = (ulaw_byte >> 4) & 0x07
+-    mantissa = ulaw_byte & 0x0F
+-    sample = EXPONENT_LUT[exponent] + (mantissa << (exponent + 3))
+-    if sign != 0:
+-        sample = -sample
+-    
+-    return sample
+-
+-def ulaw_bytes_to_pcm16(ulaw_data):
+-    """Convert a sequence of µ-law encoded bytes to a list of 16-bit PCM values."""
+-    return [ulaw2linear(byte) for byte in ulaw_data]
+-
+-async def main():
+-    print("Discovering AudioRecorder...")
+-    devices = await bleak.discover(timeout=2.0)
+-    audio_recorder = None
+-    for device in devices:
+-        if device.name:
+-            print(device.name, device.address)
+-        if device.name == DEVICE_NAME:
+-            audio_recorder = device
+-            break
+-    
+-    if not audio_recorder:
+-        print("AudioRecorder not found")
+-        return
+-    def handle_ble_disconnect(client):
+-        print("Disconnected from AudioRecorder")
+-
+-    # def ulawToLinear(ulawByte):
+-    #     ulawByte = ~ulawByte & 0xFF  # Invert and mask to 8-bit
+-    #     sign = (ulawByte & 0x80)
+-    #     exponent = (ulawByte >> 4) & 0x07
+-    #     mantissa = ulawByte & 0x0F
+-    #     sample = (0x80 + (mantissa << 4)) << max(0, exponent - 1)
+-    #     sample -= 0x84 << 2  # Adjusting back the bias used during encoding
+-    
+-    #     if sign == 0:
+-    #         sample = -sample
+-    
+-    #     # Adjust output to fit into 16-bit PCM range
+-    #     return sample & 0xFFFF
+-
+-    def filter_audio_data(audio_data):
+-        
+-        if CODEC == "mulaw":
+-            # pcm16_samples = audioop.ulaw2lin(audio_data, 2)
+-            # pcm16_samples = struct.unpack('<' + 'h' * (len(pcm16_samples) // 2), pcm16_samples)
+-            # print(pcm16_samples)
+-            pcm16_samples = ulaw_bytes_to_pcm16(audio_data)
+-            audio_data = np.array(pcm16_samples, dtype=np.int16)
+-
+-        if CODEC == "pcm":
+-            audio_data = audio_data[:len(audio_data) - len(audio_data) % 2]
+-            audio_data = np.frombuffer(audio_data, dtype=np.int16)
+-        
+-        # Normalize
+-        # scaling_factor = 2*32768 / (max(0, np.max(audio_data)) - min(0, np.min(audio_data)))
+-        # return (audio_data * scaling_factor).astype(np.int16)
+-        return audio_data
+-    
+-    def export_audio_data(filtered_audio_data, raw_file, file_extension):
+-        recordings_dir = "recordings"
+-        if not os.path.exists(recordings_dir):
+-            os.makedirs(recordings_dir)
+-        filename = os.path.join(recordings_dir, datetime.now().strftime("%H-%M-%S-%f") + file_extension)
+-        print(filename)
+-        # filename = os.path.join(recordings_dir, "recording" + file_extension)
+-        if file_extension == ".txt":
+-            with open(filename, "w") as file:
+-                file.write(str(list(raw_file)))
+-        else:
+-            # Directly use the filename with wave.open for .wav files
+-            with wave.open(filename, "wb") as wav_file:
+-                wav_file.setnchannels(CHANNELS)
+-                wav_file.setsampwidth(SAMPLE_WIDTH)
+-                wav_file.setframerate(SAMPLE_RATE)
+-                wav_file.writeframes(filtered_audio_data.tobytes())  # Ensure data is in bytes format
+-
+-
+-    async def process_audio(audio_data):
+-        if len(audio_data) == 0:
+-            print("Warning: Received empty audio data array.")
+-            return
+-            
+-        filtered_audio_data = filter_audio_data(audio_data)
+-        export_audio_data(filtered_audio_data, audio_data, ".wav")
+-        export_audio_data(filtered_audio_data, audio_data, ".txt")
+-        pass
+-
+-    async with BleakClient(audio_recorder.address, services=[SERVICE_UUID], disconnect_callback=handle_ble_disconnect) as client:
+-        print("Connected to AudioRecorder")
+-        services = await client.get_services()
+-        audio_service = services.get_service(SERVICE_UUID)
+-        audio_characteristic = audio_service.get_characteristic(CHARACTERISTIC_UUID)
+-
+-        audio_data = bytearray()
+-        # end_signal = b"\xFF"
+-
+-        def handle_audio_data(sender, data):
+-            # print("---handle_audio_data---")
+-            # print(f"Received {len(data)} bytes at {time.time()}")
+-            audio_data.extend(data[3:])
+-            # if data == [end_signal]:
+-            #     print(f"End signal received after {len(audio_data)} bytes")
+-            
+-
+-        async def record_audio():
+-            await client.start_notify(audio_characteristic.uuid, handle_audio_data)
+-            print("Recording audio...")
+-            await asyncio.sleep(CAPTURE_TIME)
+-            print("Recording stopped")
+-            await client.stop_notify(audio_characteristic.uuid)
+-        
+-        async def record_and_process():
+-            while True:
+-                await record_audio()
+-                print(len(audio_data))
+-                asyncio.ensure_future(process_audio(audio_data.copy()))
+-                audio_data.clear()
+-                
+-        await record_and_process()
+-        
+-        # await record_audio()
+-        
+-  
+-asyncio.run(main())
+diff --git a/overlay/xiao_ble_sense_devkitv1-spisd.overlay b/overlay/xiao_ble_sense_devkitv1-spisd.overlay
+deleted file mode 100644
+index 0be31f6..0000000
+--- a/overlay/xiao_ble_sense_devkitv1-spisd.overlay
++++ /dev/null
+@@ -1,27 +0,0 @@
+-&spi2 {
+-    status = "okay";
+-    pinctrl-0 = <&custom_spi>;
+-    pinctrl-1 = <&custom_spi>;
+-    pinctrl-names = "default", "sleep";
+-    cs-gpios = <&gpio0 28 GPIO_ACTIVE_LOW>;  // CS pin on P0.28
+-    sdhc0: sdhc@0 {
+-        compatible = "zephyr,sdhc-spi-slot";
+-        reg = <0>;
+-        status = "okay";
+-        label = "SDHC_0";
+-        mmc {
+-            compatible = "zephyr,sdmmc-disk";
+-            status = "okay";
+-        };
+-        spi-max-frequency = <24000000>;  // 24 MHz SPI speed for SD card
+-    };
+-};
+-&pinctrl {
+-    custom_spi: custom_spi {
+-        group1 {
+-            psels = <NRF_PSEL(SPIM_SCK, 1, 13)>,  // SCK on P1.13
+-                    <NRF_PSEL(SPIM_MOSI, 1, 15)>, // MOSI on P1.15
+-                    <NRF_PSEL(SPIM_MISO, 1, 14)>; // MISO on P1.14
+-        };
+-    };
+-};
+diff --git a/overlay/xiao_ble_sense_devkitv1.overlay b/overlay/xiao_ble_sense_devkitv1.overlay
+deleted file mode 100644
+index 9d6d1f5..0000000
+--- a/overlay/xiao_ble_sense_devkitv1.overlay
++++ /dev/null
+@@ -1 +0,0 @@
+-// All pins are disabled no modules in use
+diff --git a/overlay/xiao_ble_sense_devkitv2-adafruit_module.overlay b/overlay/xiao_ble_sense_devkitv2-adafruit_module.overlay
+index 354328d..5366c5c 100644
+--- a/overlay/xiao_ble_sense_devkitv2-adafruit_module.overlay
++++ b/overlay/xiao_ble_sense_devkitv2-adafruit_module.overlay
+@@ -1,48 +1,9 @@
+ &i2s0 {
+-    status = "okay";
+-    pinctrl-0 = <&i2s0_default>;
+-    pinctrl-names = "default";
+-    label = "I2S_0";
+-};
+-
+-&pinctrl {
+-    i2s0_default: i2s0_default {
+-        group1 {
+-            psels = <NRF_PSEL(I2S_SCK_M, 0, 29)>,    // SCK pin (bit clock) A3
+-                    <NRF_PSEL(I2S_LRCK_M, 0, 28)>,   // LRCK pin (word select clock) A2
+-                    <NRF_PSEL(I2S_SDOUT, 0, 3)>;    // SDOUT pin (data out) A1
+-        };
+-    };
++    status = "disabled";
+ };
+ 
+ &spi2 {
+-    status = "okay";
+-    pinctrl-0 = <&custom_spi>;
+-    pinctrl-1 = <&custom_spi>;
+-    pinctrl-names = "default", "sleep";
+-    cs-gpios = <&gpio0 2 GPIO_ACTIVE_LOW>;  // CS pin on P0.28
+-
+-    sdhc0: sdhc@0 {
+-        compatible = "zephyr,sdhc-spi-slot";
+-        reg = <0>;
+-        status = "okay";
+-        label = "SDHC_0";
+-        mmc {
+-            compatible = "zephyr,sdmmc-disk";
+-            status = "okay";
+-        };
+-        spi-max-frequency = <24000000>;  // 24 MHz SPI speed for SD card
+-    };
+-};
+-
+-&pinctrl {
+-    custom_spi: custom_spi {
+-        group1 {
+-            psels = <NRF_PSEL(SPIM_SCK, 1, 13)>,  // SCK on P1.13
+-                    <NRF_PSEL(SPIM_MOSI, 1, 15)>, // MOSI on P1.15
+-                    <NRF_PSEL(SPIM_MISO, 1, 14)>; // MISO on P1.14
+-        };
+-    };
++    status = "disabled";
+ };
+ 
+ &uart0 {
+diff --git a/prj_xiao_ble_sense_devkitv1-spisd.conf b/prj_xiao_ble_sense_devkitv1-spisd.conf
+deleted file mode 100644
+index 141969d..0000000
+--- a/prj_xiao_ble_sense_devkitv1-spisd.conf
++++ /dev/null
+@@ -1,115 +0,0 @@
+-#
+-# Hardware settings
+-#
+-
+-CONFIG_GPIO=y
+-CONFIG_NRFX_PDM=y
+-CONFIG_ADC=y
+-
+-# To flash via dev board
+-#CONFIG_BUILD_OUTPUT_UF2=n
+-#CONFIG_USE_DT_CODE_PARTITION=n
+-
+-#
+-# Bluetooth settings
+-#
+-
+-CONFIG_BT=y
+-CONFIG_BT_PERIPHERAL=y
+-CONFIG_BT_DEVICE_NAME="Friend"
+-CONFIG_BT_MAX_CONN=1
+-CONFIG_BT_MAX_PAIRED=1
+-CONFIG_BT_DEVICE_APPEARANCE=22
+-CONFIG_BT_GATT_DYNAMIC_DB=y
+-
+-# Max transmit power supported by nRF52840
+-CONFIG_BT_CTLR_TX_PWR_ANTENNA=8
+-CONFIG_BT_PHY_UPDATE=y
+-
+-# CONFIG_BT_L2CAP_DYNAMIC_CHANNEL=y
+-# CONFIG_BT_SMP=y
+-# CONFIG_BT_LL_SW_SPLIT=y # Alternative implementation
+-
+-# Battery and Device Information services
+-CONFIG_BT_BAS=y
+-CONFIG_BT_DIS=y
+-CONFIG_BT_DIS_PNP=n
+-CONFIG_BT_DIS_MODEL="Friend DevKit 1 SPI SD"
+-CONFIG_BT_DIS_MANUF="Based Hardware"
+-CONFIG_BT_DIS_FW_REV=y
+-CONFIG_BT_DIS_HW_REV=y
+-CONFIG_BT_DIS_FW_REV_STR="1.0.5"
+-CONFIG_BT_DIS_HW_REV_STR="Seeed Xiao BLE Sense"
+-
+-# Large packets
+-CONFIG_BT_L2CAP_TX_MTU=498
+-CONFIG_BT_L2CAP_TX_BUF_COUNT=10
+-# CONFIG_BT_ATT_TX_COUNT=10
+-CONFIG_BT_CONN_TX_MAX=30
+-CONFIG_BT_BUF_ACL_RX_SIZE=2048
+-CONFIG_BT_BUF_ACL_TX_SIZE=2048
+-CONFIG_BT_CTLR_DATA_LENGTH_MAX=251
+-
+-CONFIG_BT_USER_DATA_LEN_UPDATE=y
+-CONFIG_BT_AUTO_DATA_LEN_UPDATE=y
+-CONFIG_BT_USER_PHY_UPDATE=y
+-CONFIG_BT_AUTO_PHY_UPDATE=y
+-
+-# Codecs
+-# CONFIG_LIBLC3=y
+-
+-# Debug
+-# Enable the lines below to enable debug logs via UART/USB
+-
+-CONFIG_DEBUG=y
+-CONFIG_DEBUG_OPTIMIZATIONS=y
+-CONFIG_LOG=y
+-CONFIG_LOG_PRINTK=y
+-CONFIG_LOG_MODE_IMMEDIATE=y
+-CONFIG_SERIAL=y
+-CONFIG_UART_CONSOLE=y
+-CONFIG_LOG_BACKEND_UART=y
+-CONFIG_LOG_BACKEND_UART_OUTPUT_TEXT=y
+-CONFIG_LOG_DEFAULT_LEVEL=3
+-
+-# Debug (This value breaks some builds)
+-# CONFIG_ASSERT=y
+-
+-# Log Levels
+-# CONFIG_BT_DEBUG_LOG=y
+-# CONFIG_BT_L2CAP_LOG_LEVEL_DBG=y
+-# CONFIG_BT_LOG_LEVEL_DBG=y
+-
+-# CONFIG_LOG_PROCESS_THREAD_STACK_SIZE=4096
+-# CONFIG_BT_RX_STACK_SIZE=4096
+-# CONFIG_BT_CTLR_RX_PRIO_STACK_SIZE=4096
+-# CONFIG_BT_DEBUG_LOG=y
+-# CONFIG_LOG_BUFFER_SIZE=32000
+-# CONFIG_LOG_OVERRIDE_LEVEL=4
+-# CONFIG_LOG_PROCESS_THREAD_STACK_SIZE=4096
+-# CONFIG_BT_RX_STACK_SIZE=4096
+-# CONFIG_BT_CTLR_RX_PRIO_STACK_SIZE=4096
+-
+-# RTT
+-# CONFIG_UART_CONSOLE=n
+-# CONFIG_SEGGER_RTT_BUFFER_SIZE_UP=2048
+-# CONFIG_RTT_CONSOLE=y
+-# CONFIG_LOG_BACKEND_RTT=y
+-CONFIG_CODEC_OPUS=y
+-
+-# SD Card Support
+-CONFIG_OFFLINE_STORAGE=y
+-CONFIG_DISK_ACCESS=y
+-CONFIG_FILE_SYSTEM=y
+-CONFIG_FAT_FILESYSTEM_ELM=y
+-CONFIG_FS_FATFS_MOUNT_MKFS=y
+-CONFIG_FS_FATFS_EXFAT=y
+-CONFIG_PRINTK=y
+-CONFIG_MAIN_STACK_SIZE=5096
+-CONFIG_DISK_DRIVER_SDMMC=y
+-CONFIG_SPI=y
+-CONFIG_HEAP_MEM_POOL_SIZE=3048
+-
+-# Increase stack and heap sizes
+-CONFIG_MAIN_STACK_SIZE=8192
+-CONFIG_HEAP_MEM_POOL_SIZE=4096
+diff --git a/prj_xiao_ble_sense_devkitv1.conf b/prj_xiao_ble_sense_devkitv1.conf
+deleted file mode 100644
+index b230970..0000000
+--- a/prj_xiao_ble_sense_devkitv1.conf
++++ /dev/null
+@@ -1,104 +0,0 @@
+-#
+-# Hardware settings
+-#
+-
+-CONFIG_GPIO=y
+-CONFIG_NRFX_PDM=y
+-CONFIG_ADC=y
+-
+-# To flash via dev board
+-#CONFIG_BUILD_OUTPUT_UF2=n
+-#CONFIG_USE_DT_CODE_PARTITION=n
+-
+-#
+-# Bluetooth settings
+-#
+-
+-CONFIG_BT=y
+-CONFIG_BT_PERIPHERAL=y
+-CONFIG_BT_DEVICE_NAME="Friend"
+-CONFIG_BT_MAX_CONN=1
+-CONFIG_BT_MAX_PAIRED=1
+-CONFIG_BT_DEVICE_APPEARANCE=22
+-CONFIG_BT_GATT_DYNAMIC_DB=y
+-
+-# Max transmit power supported by nRF52840
+-CONFIG_BT_CTLR_TX_PWR_ANTENNA=8
+-CONFIG_BT_PHY_UPDATE=y
+-
+-# CONFIG_BT_L2CAP_DYNAMIC_CHANNEL=y
+-# CONFIG_BT_SMP=y
+-# CONFIG_BT_LL_SW_SPLIT=y # Alternative implementation
+-
+-# Battery and Device Information services
+-CONFIG_BT_BAS=y
+-CONFIG_BT_DIS=y
+-CONFIG_BT_DIS_PNP=n
+-CONFIG_BT_DIS_MODEL="Friend DevKit 1"
+-CONFIG_BT_DIS_MANUF="Based Hardware"
+-CONFIG_BT_DIS_FW_REV=y
+-CONFIG_BT_DIS_HW_REV=y
+-CONFIG_BT_DIS_FW_REV_STR="1.0.5"
+-CONFIG_BT_DIS_HW_REV_STR="Seeed Xiao BLE Sense"
+-
+-# Large packets
+-CONFIG_BT_L2CAP_TX_MTU=498
+-CONFIG_BT_L2CAP_TX_BUF_COUNT=10
+-# CONFIG_BT_ATT_TX_COUNT=10
+-CONFIG_BT_CONN_TX_MAX=30
+-CONFIG_BT_BUF_ACL_RX_SIZE=2048
+-CONFIG_BT_BUF_ACL_TX_SIZE=2048
+-CONFIG_BT_CTLR_DATA_LENGTH_MAX=251
+-
+-CONFIG_BT_USER_DATA_LEN_UPDATE=y
+-CONFIG_BT_AUTO_DATA_LEN_UPDATE=y
+-CONFIG_BT_USER_PHY_UPDATE=y
+-CONFIG_BT_AUTO_PHY_UPDATE=y
+-
+-# Codecs
+-# CONFIG_LIBLC3=y
+-
+-# Debug
+-# Enable the lines below to enable debug logs via UART/USB
+-
+-CONFIG_DEBUG=y
+-CONFIG_DEBUG_OPTIMIZATIONS=y
+-CONFIG_LOG=y
+-CONFIG_LOG_PRINTK=y
+-CONFIG_LOG_MODE_IMMEDIATE=y
+-CONFIG_SERIAL=y
+-CONFIG_UART_CONSOLE=y
+-CONFIG_LOG_BACKEND_UART=y
+-CONFIG_LOG_BACKEND_UART_OUTPUT_TEXT=y
+-CONFIG_LOG_DEFAULT_LEVEL=3
+-
+-# Debug (This value breaks some builds)
+-# CONFIG_ASSERT=y
+-
+-# Log Levels
+-# CONFIG_BT_DEBUG_LOG=y
+-# CONFIG_BT_L2CAP_LOG_LEVEL_DBG=y
+-# CONFIG_BT_LOG_LEVEL_DBG=y
+-
+-# CONFIG_LOG_PROCESS_THREAD_STACK_SIZE=4096
+-# CONFIG_BT_RX_STACK_SIZE=4096
+-# CONFIG_BT_CTLR_RX_PRIO_STACK_SIZE=4096
+-# CONFIG_BT_DEBUG_LOG=y
+-# CONFIG_LOG_BUFFER_SIZE=32000
+-# CONFIG_LOG_OVERRIDE_LEVEL=4
+-# CONFIG_LOG_PROCESS_THREAD_STACK_SIZE=4096
+-# CONFIG_BT_RX_STACK_SIZE=4096
+-# CONFIG_BT_CTLR_RX_PRIO_STACK_SIZE=4096
+-
+-CONFIG_LSM6DSL=y
+-CONFIG_LSM6DSL_ENABLE_TEMP=n
+-CONFIG_LSM6DSL_TRIGGER_GLOBAL_THREAD=y
+-CONFIG_SENSOR=y
+-
+-# RTT
+-# CONFIG_UART_CONSOLE=n
+-# CONFIG_SEGGER_RTT_BUFFER_SIZE_UP=2048
+-# CONFIG_RTT_CONSOLE=y
+-# CONFIG_LOG_BACKEND_RTT=y
+-CONFIG_CODEC_OPUS=y
+-
+diff --git a/prj_xiao_ble_sense_devkitv2-adafruit.conf b/prj_xiao_ble_sense_devkitv2-adafruit.conf
+index 4c40cd2..3a7c582 100644
+--- a/prj_xiao_ble_sense_devkitv2-adafruit.conf
++++ b/prj_xiao_ble_sense_devkitv2-adafruit.conf
+@@ -16,11 +16,21 @@ CONFIG_ADC=y
+ 
+ CONFIG_BT=y
+ CONFIG_BT_PERIPHERAL=y
+-CONFIG_BT_DEVICE_NAME="Friend DevKit 2"
++CONFIG_BT_DEVICE_NAME="Anticipy"
+ CONFIG_BT_MAX_CONN=1
+ CONFIG_BT_MAX_PAIRED=1
+ CONFIG_BT_DEVICE_APPEARANCE=22
+ CONFIG_BT_GATT_DYNAMIC_DB=y
++CONFIG_BT_SMP=y
++CONFIG_BT_SMP_SC_PAIR_ONLY=y
++CONFIG_BT_BONDING_REQUIRED=y
++CONFIG_BT_SETTINGS=y
++CONFIG_SETTINGS=y
++CONFIG_SETTINGS_NVS=y
++CONFIG_FLASH=y
++CONFIG_FLASH_MAP=y
++CONFIG_FLASH_PAGE_LAYOUT=y
++CONFIG_NVS=y
+ 
+ #
+ # Max transmit power supported by nRF52840
+@@ -36,11 +46,10 @@ CONFIG_BT_PHY_UPDATE=y
+ CONFIG_BT_BAS=y
+ CONFIG_BT_DIS=y
+ CONFIG_BT_DIS_PNP=n
+-CONFIG_BT_DIS_MODEL="Friend DevKit 2"
++CONFIG_BT_DIS_MODEL="Anticipy Pendant"
+ CONFIG_BT_DIS_MANUF="Based Hardware"
+-CONFIG_BT_DIS_FW_REV=y
++CONFIG_BT_DIS_FW_REV=n
+ CONFIG_BT_DIS_HW_REV=y
+-CONFIG_BT_DIS_FW_REV_STR="1.0.5"
+ CONFIG_BT_DIS_HW_REV_STR="Seeed Xiao BLE Sense"
+ 
+ #
+@@ -105,22 +114,6 @@ CONFIG_BT_AUTO_PHY_UPDATE=y
+ #
+ CONFIG_CODEC_OPUS=y
+ 
+-#
+-# SD Card Support (all devices required)
+-#
+-
+-CONFIG_OFFLINE_STORAGE=y
+-CONFIG_DISK_ACCESS=y
+-CONFIG_FILE_SYSTEM=y
+-CONFIG_FAT_FILESYSTEM_ELM=y
+-CONFIG_FS_FATFS_MOUNT_MKFS=y
+-CONFIG_FS_FATFS_EXFAT=y
+-# CONFIG_PRINTK=y
+-CONFIG_MAIN_STACK_SIZE=5096
+-# CONFIG_DISK_DRIVER_SDMMC=y
+-# CONFIG_SPI=y
+-CONFIG_HEAP_MEM_POOL_SIZE=3048
+-
+ #
+ # Increase stack and heap sizes
+ #
+@@ -129,44 +122,27 @@ CONFIG_MAIN_STACK_SIZE=8192
+ CONFIG_HEAP_MEM_POOL_SIZE=4096
+ 
+ #
+-# Disable unused peripherals
++# Live-stream-only candidate. Build 12 discovers only the audio and Battery
++# services, so offline storage and unused peripheral stacks stay excluded.
+ #
++CONFIG_OFFLINE_STORAGE=n
++CONFIG_DISK_ACCESS=n
++CONFIG_FILE_SYSTEM=n
++CONFIG_FAT_FILESYSTEM_ELM=n
+ CONFIG_I2C=n
+-# CONFIG_NRFX_TWIM0=n
+-# CONFIG_NRFX_TWIM1=n
+-
+-#
+-# LSM6DSL sensor (accelerometer and gyroscope)
+-#
+-CONFIG_LSM6DSL=y
+-CONFIG_LSM6DSL_ENABLE_TEMP=n
+-# CONFIG_LSM6DSL_TRIGGER_GLOBAL_THREAD=y
+-CONFIG_SENSOR=y
+-
+-#
+-# Speaker
+-#
+-CONFIG_I2S=y
+-CONFIG_I2S_NRFX=y
+-CONFIG_SPI_NRFX=y
+-
+-#
+-# NFC (in the future)
+-#
+-
+-# CONFIG_NFC_T2T_NRFXLIB=y
+-# CONFIG_NFC_NDEF=y
+-# CONFIG_NFC_NDEF_MSG=y
+-# CONFIG_NFC_NDEF_RECORD=y
+-# CONFIG_NFC_NDEF_URI_MSG=y
+-# CONFIG_NFC_NDEF_URI_REC=y
+-# CONFIG_HWINFO=y
+-
+-#
+-#EVERYTHING ELSE
+-#
+-
+-CONFIG_ACCELEROMETER=y
+-CONFIG_ENABLE_BUTTON=y
+-CONFIG_ENABLE_SPEAKER=y
+-
++CONFIG_SENSOR=n
++CONFIG_LSM6DSL=n
++CONFIG_I2S=n
++CONFIG_SPI=n
++
++#
++# Application USB is intentionally disabled. The immutable Adafruit
++# bootloader keeps its own UF2 recovery USB identity, while this image has no
++# reviewed application VID/PID or CDC interface.
++#
++CONFIG_USB_DEVICE_STACK=n
++CONFIG_USB_DEVICE_INITIALIZE_AT_BOOT=n
++CONFIG_USB_CDC_ACM=n
++CONFIG_SERIAL=n
++CONFIG_CONSOLE=n
++CONFIG_UART_CONSOLE=n
+diff --git a/src/battery_math.c b/src/battery_math.c
+new file mode 100644
+index 0000000..481806b
+--- /dev/null
++++ b/src/battery_math.c
+@@ -0,0 +1,38 @@
++// SPDX-License-Identifier: MIT
++
++#include "battery_math.h"
++
++#include <errno.h>
++#include <limits.h>
++#include <stddef.h>
++#include <stdint.h>
++
++int battery_scale_divider_millivolts(
++    uint32_t adc_millivolt,
++    uint32_t divider_high_kohm,
++    uint32_t divider_low_kohm,
++    uint16_t *battery_millivolt)
++{
++    if (battery_millivolt == NULL || divider_low_kohm == 0u) {
++        return -EINVAL;
++    }
++
++    uint64_t divider_sum =
++        (uint64_t)divider_high_kohm + divider_low_kohm;
++    uint64_t rounding = divider_low_kohm / 2u;
++    if (divider_sum == 0u ||
++        adc_millivolt >
++            (UINT64_MAX - rounding) / divider_sum) {
++        return -EOVERFLOW;
++    }
++
++    uint64_t scaled =
++        ((uint64_t)adc_millivolt * divider_sum + rounding) /
++        divider_low_kohm;
++    if (scaled > UINT16_MAX) {
++        return -EOVERFLOW;
++    }
++
++    *battery_millivolt = (uint16_t)scaled;
++    return 0;
++}
+diff --git a/src/battery_math.h b/src/battery_math.h
+new file mode 100644
+index 0000000..53d6eae
+--- /dev/null
++++ b/src/battery_math.h
+@@ -0,0 +1,14 @@
++// SPDX-License-Identifier: MIT
++
++#ifndef ANTICIPY_BATTERY_MATH_H
++#define ANTICIPY_BATTERY_MATH_H
++
++#include <stdint.h>
++
++int battery_scale_divider_millivolts(
++    uint32_t adc_millivolt,
++    uint32_t divider_high_kohm,
++    uint32_t divider_low_kohm,
++    uint16_t *battery_millivolt);
++
++#endif
+diff --git a/src/battery_smoother.c b/src/battery_smoother.c
+new file mode 100644
+index 0000000..fd0d8f3
+--- /dev/null
++++ b/src/battery_smoother.c
+@@ -0,0 +1,44 @@
++// SPDX-License-Identifier: MIT
++
++#include "battery_smoother.h"
++
++#define BATTERY_PERCENT_MAX 100u
++#define BATTERY_PERCENT_Q8_SCALE 256u
++#define BATTERY_EMA_PREVIOUS_WEIGHT 3u
++#define BATTERY_EMA_SAMPLE_WEIGHT 1u
++#define BATTERY_EMA_WEIGHT_TOTAL 4u
++
++void battery_smoother_reset(struct battery_smoother *smoother)
++{
++    smoother->percentage_q8 = 0u;
++    smoother->initialized = false;
++}
++
++uint8_t battery_smoother_update(struct battery_smoother *smoother,
++                                uint8_t sample_percentage)
++{
++    if (sample_percentage > BATTERY_PERCENT_MAX) {
++        sample_percentage = BATTERY_PERCENT_MAX;
++    }
++
++    uint16_t sample_q8 = (uint16_t)sample_percentage * BATTERY_PERCENT_Q8_SCALE;
++
++    if (!smoother->initialized) {
++        smoother->percentage_q8 = sample_q8;
++        smoother->initialized = true;
++    } else {
++        uint32_t weighted_q8 =
++            BATTERY_EMA_PREVIOUS_WEIGHT * (uint32_t)smoother->percentage_q8 +
++            BATTERY_EMA_SAMPLE_WEIGHT * (uint32_t)sample_q8;
++        smoother->percentage_q8 = (uint16_t)(
++            (weighted_q8 + BATTERY_EMA_WEIGHT_TOTAL / 2u) /
++            BATTERY_EMA_WEIGHT_TOTAL);
++    }
++
++    uint16_t rounded_percentage = (uint16_t)(
++        (smoother->percentage_q8 + BATTERY_PERCENT_Q8_SCALE / 2u) /
++        BATTERY_PERCENT_Q8_SCALE);
++    return (uint8_t)(rounded_percentage > BATTERY_PERCENT_MAX
++                         ? BATTERY_PERCENT_MAX
++                         : rounded_percentage);
++}
+diff --git a/src/battery_smoother.h b/src/battery_smoother.h
+new file mode 100644
+index 0000000..e4c44f5
+--- /dev/null
++++ b/src/battery_smoother.h
+@@ -0,0 +1,18 @@
++// SPDX-License-Identifier: MIT
++
++#ifndef ANTICIPY_BATTERY_SMOOTHER_H
++#define ANTICIPY_BATTERY_SMOOTHER_H
++
++#include <stdbool.h>
++#include <stdint.h>
++
++struct battery_smoother {
++    uint16_t percentage_q8;
++    bool initialized;
++};
++
++void battery_smoother_reset(struct battery_smoother *smoother);
++uint8_t battery_smoother_update(struct battery_smoother *smoother,
++                                uint8_t sample_percentage);
++
++#endif
+diff --git a/src/button.c b/src/button.c
+deleted file mode 100644
+index 618626c..0000000
+--- a/src/button.c
++++ /dev/null
+@@ -1,366 +0,0 @@
+-#include <zephyr/kernel.h>
+-#include <zephyr/bluetooth/bluetooth.h>
+-#include <zephyr/bluetooth/uuid.h>
+-#include <zephyr/bluetooth/gatt.h>
+-#include <zephyr/bluetooth/l2cap.h>
+-#include <zephyr/bluetooth/services/bas.h>
+-#include <zephyr/logging/log.h>
+-#include <zephyr/drivers/gpio.h>
+-#include "button.h"
+-#include "transport.h"
+-
+-LOG_MODULE_REGISTER(button, CONFIG_LOG_DEFAULT_LEVEL);
+-
+-bool is_off = false;
+-static void button_ccc_config_changed_handler(const struct bt_gatt_attr *attr, uint16_t value);
+-static ssize_t button_data_read_characteristic(struct bt_conn *conn, const struct bt_gatt_attr *attr, void *buf, uint16_t len, uint16_t offset);
+-static struct gpio_callback button_cb_data;
+-
+-static struct bt_uuid_128 button_uuid = BT_UUID_INIT_128(BT_UUID_128_ENCODE(0x23BA7924,0x0000,0x1000,0x7450,0x346EAC492E92));
+-static struct bt_uuid_128 button_uuid_x = BT_UUID_INIT_128(BT_UUID_128_ENCODE(0x23BA7925 ,0x0000,0x1000,0x7450,0x346EAC492E92));
+-
+-static struct bt_gatt_attr button_service_attr[] = {
+-    BT_GATT_PRIMARY_SERVICE(&button_uuid),
+-    BT_GATT_CHARACTERISTIC(&button_uuid_x.uuid, BT_GATT_CHRC_READ | BT_GATT_CHRC_NOTIFY, BT_GATT_PERM_READ, button_data_read_characteristic, NULL, NULL),
+-    BT_GATT_CCC(button_ccc_config_changed_handler, BT_GATT_PERM_READ | BT_GATT_PERM_WRITE),
+-};
+-
+-static struct bt_gatt_service button_service = BT_GATT_SERVICE(button_service_attr);
+-
+-static void button_ccc_config_changed_handler(const struct bt_gatt_attr *attr, uint16_t value) 
+-{
+-    if (value == BT_GATT_CCC_NOTIFY)
+-    {
+-        LOG_INF("Client subscribed for notifications");
+-    }
+-    else if (value == 0)
+-    {
+-        LOG_INF("Client unsubscribed from notifications");
+-    }
+-    else
+-    {
+-        LOG_ERR("Invalid CCC value: %u", value);
+-    }
+-
+-}
+-struct gpio_dt_spec d4_pin = {.port = DEVICE_DT_GET(DT_NODELABEL(gpio0)), .pin=4, .dt_flags = GPIO_OUTPUT_ACTIVE}; //3.3
+-struct gpio_dt_spec d5_pin_input = {.port = DEVICE_DT_GET(DT_NODELABEL(gpio0)), .pin=5, .dt_flags = GPIO_INT_EDGE_RISING};
+-
+-static uint32_t current_button_time = 0;
+-static uint32_t previous_button_time = 0;
+-
+-const int max_debounce_interval = 700;
+-static bool was_pressed = false;
+-
+-//
+-// button
+-//
+-void button_pressed(const struct device *dev, struct gpio_callback *cb,
+-		    uint32_t pins)
+-{
+-    current_button_time = k_cycle_get_32();
+-	if (current_button_time - previous_button_time < max_debounce_interval) 
+-    { //too low!
+-	}
+-	else 
+-    { //right...    
+-        int temp = gpio_pin_get_raw(dev,d5_pin_input.pin);
+-        if (temp) 
+-        {
+-            was_pressed = false;
+-        }
+-        else 
+-        {
+-            was_pressed = true;
+-        }
+-	}
+-	previous_button_time = current_button_time;
+-}
+-#define BUTTON_CHECK_INTERVAL 40 // 0.04 seconds, 25 Hz
+-
+-void check_button_level(struct k_work *work_item);
+-
+-K_WORK_DELAYABLE_DEFINE(button_work, check_button_level);
+-
+-
+-#define DEFAULT_STATE 0
+-#define SINGLE_TAP 1
+-#define DOUBLE_TAP 2
+-#define LONG_TAP 3
+-#define BUTTON_PRESS 4
+-#define BUTTON_RELEASE 5
+-
+-
+-// 4 is button down, 5 is button up
+-static FSM_STATE_T current_button_state = IDLE;
+-static uint32_t inc_count_1 = 0;
+-static uint32_t inc_count_0 = 0;
+-
+-static int final_button_state[2] = {0,0};
+-const static int threshold = 10;
+-
+-static void reset_count() 
+-{
+-    inc_count_0 = 0;
+-    inc_count_1 = 0;
+-}
+-static inline void notify_press() 
+-{
+-    final_button_state[0] = BUTTON_PRESS;
+-    LOG_INF("pressed");
+-    struct bt_conn *conn = get_current_connection();
+-    if (conn != NULL)
+-    { 
+-        bt_gatt_notify(conn, &button_service.attrs[1], &final_button_state, sizeof(final_button_state));
+-    }
+-}
+-
+-static inline void notify_unpress() 
+-{
+-    final_button_state[0] = BUTTON_RELEASE; 
+-    LOG_INF("unpressed");
+-    struct bt_conn *conn = get_current_connection();
+-    if (conn != NULL)
+-    { 
+-        bt_gatt_notify(conn, &button_service.attrs[1], &final_button_state, sizeof(final_button_state));
+-    }
+-}
+-
+-static inline void notify_tap() 
+-{
+-    final_button_state[0] = SINGLE_TAP;
+-    LOG_INF("tap");
+-    struct bt_conn *conn = get_current_connection();
+-    if (conn != NULL)
+-    { 
+-        bt_gatt_notify(conn, &button_service.attrs[1], &final_button_state, sizeof(final_button_state));
+-    }
+-}
+-
+-static inline void notify_double_tap() 
+-{
+-    final_button_state[0] = DOUBLE_TAP; //button press
+-    LOG_INF("double tap");
+-    struct bt_conn *conn = get_current_connection();
+-    if (conn != NULL)
+-    { 
+-        bt_gatt_notify(conn, &button_service.attrs[1], &final_button_state, sizeof(final_button_state));
+-    }
+-}
+-
+-static inline void notify_long_tap() 
+-{
+-    final_button_state[0] = LONG_TAP; //button press
+-    LOG_INF("long tap");
+-    struct bt_conn *conn = get_current_connection();
+-    if (conn != NULL)
+-    { 
+-        bt_gatt_notify(conn, &button_service.attrs[1], &final_button_state, sizeof(final_button_state));
+-    }
+-}
+-
+-#define LONG_PRESS_INTERVAL 50
+-#define SINGLE_PRESS_INTERVAL 2
+-void check_button_level(struct k_work *work_item) 
+-{
+-     //insert the current button state here
+-    int state_ = was_pressed ? 1 : 0;
+-    if (current_button_state == IDLE) 
+-    {
+-        if (state_ == 0) 
+-        {
+-            //Do nothing!
+-        }
+-        else if (state_ == 1) 
+-        {
+-            //Also do nothing, but transition to the next state
+-            notify_press();
+-            current_button_state = ONE_PRESS;
+-        }
+-    }
+-
+-    else if (current_button_state == ONE_PRESS) 
+-    {
+-        if (state_ == 0) 
+-        {
+-            
+-            if(inc_count_0 == 0) 
+-            {
+-                notify_unpress();
+-            }
+-            inc_count_0++; //button is unpressed
+-            if (inc_count_0 > SINGLE_PRESS_INTERVAL) 
+-            {
+-                //If button is not pressed for a little while....... 
+-                //transition to Two_press. button could be a single or double tap
+-                current_button_state = TWO_PRESS;
+-                reset_count();          
+-            }
+-        }
+-        if (state_ == 1) 
+-        {
+-            inc_count_1++; //button is pressed
+-
+-            if (inc_count_1 > LONG_PRESS_INTERVAL) 
+-            {
+-                //If button is pressed for a long time.......
+-                notify_long_tap();
+-                //Fire the long mode notify and enter a grace period
+-                //turn off herre
+-                is_off = !is_off;
+-                current_button_state = GRACE;
+-                reset_count();
+-            }
+-
+-        }
+-
+-    }
+-
+-    else if (current_button_state == TWO_PRESS) 
+-    {
+-        if (state_ == 0) 
+-        {
+-            if (inc_count_1 > 0) 
+-            { // if button has been pressed......
+-                notify_unpress();
+-                notify_double_tap();
+-                
+-                //Fire the notify and enter a grace period
+-                current_button_state = GRACE;
+-                reset_count();
+-            }
+-             //single button press
+-            else if (inc_count_0 > 10)
+-            {
+-                notify_tap(); //Fire the notify and enter a grace period
+-                current_button_state = GRACE;
+-                reset_count();
+-            }
+-            else 
+-            {
+-                inc_count_0++; //not pressed
+-            }
+-        }
+-        else if (state_ == 1 ) 
+-        {
+-            if (inc_count_1 == 0) 
+-            {
+-                notify_press();
+-                inc_count_1++;
+-            }
+-            if (inc_count_1 > threshold) 
+-            {
+-                notify_long_tap();
+-                //Fire the notify and enter a grace period
+-                current_button_state = GRACE;
+-                reset_count();
+-            }
+-        }
+-    }
+-
+-    else if (current_button_state == GRACE) 
+-    {
+-        if (state_ == 0) 
+-        {
+-            if (inc_count_0 == 0 && (inc_count_1 > 0)) 
+-            {
+-                notify_unpress();
+-            }
+-            inc_count_0++;
+-            if (inc_count_0 > 10) 
+-            {
+-                current_button_state = IDLE;
+-                reset_count();
+-            }
+-        }
+-        else if (state_ == 1) 
+-        {
+-            inc_count_1++;
+-        }
+-    }
+-    k_work_reschedule(&button_work, K_MSEC(BUTTON_CHECK_INTERVAL));
+-}
+-
+-
+-static ssize_t button_data_read_characteristic(struct bt_conn *conn, const struct bt_gatt_attr *attr, void *buf, uint16_t len, uint16_t offset) 
+-{
+-    LOG_INF("button_data_read_characteristic");
+-    int lint = 1;
+-    LOG_INF("was_pressed: %d", was_pressed);
+-    return bt_gatt_attr_read(conn, attr, buf, len, offset, &lint, sizeof(lint));
+-
+-}
+-int button_init() 
+-{
+-    if (gpio_is_ready_dt(&d4_pin)) 
+-    {
+-	    LOG_INF("D4 Pin ready");
+-	}
+-    else 
+-    {
+-		LOG_ERR("Error setting up D4 Pin");
+-        return -1;
+-	}
+-	if (gpio_pin_configure_dt(&d4_pin, GPIO_OUTPUT_ACTIVE) < 0) 
+-    {
+-		LOG_ERR("Error setting up D4 Pin Voltage");
+-        return -1;
+-	}
+-	else 
+-    {
+-		LOG_INF("D4 ready to transmit voltage");
+-	}
+-	if (gpio_is_ready_dt(&d5_pin_input)) 
+-    {
+-		LOG_INF("D5 Pin ready");
+-	}
+-	else 
+-    {
+-		LOG_ERR("D5 Pin not ready");
+-        return -1;
+-	}
+-
+-	int err2 = gpio_pin_configure_dt(&d5_pin_input,GPIO_INPUT);
+-
+-	if (err2 != 0) 
+-    {
+-		LOG_ERR("Error setting up D5 Pin");
+-		return -1;
+-	}
+-	else 
+-    {
+-		LOG_INF("D5 ready");
+-	}
+-
+-	err2 =  gpio_pin_interrupt_configure_dt(&d5_pin_input,GPIO_INT_EDGE_BOTH);
+-
+-	if (err2 != 0) 
+-    {
+-		LOG_ERR("D5 unable to detect button presses");
+-		return -1;
+-	}
+-	else 
+-    {
+-		LOG_INF("D5 ready to detect button presses");
+-	}
+-
+-    gpio_init_callback(&button_cb_data, button_pressed, BIT(d5_pin_input.pin));
+-	gpio_add_callback(d5_pin_input.port, &button_cb_data);
+-
+-    return 0;
+-}
+-
+-void activate_button_work() 
+-{
+-     k_work_schedule(&button_work, K_MSEC(BUTTON_CHECK_INTERVAL));
+-}
+-
+-void register_button_service() 
+-{
+-    bt_gatt_service_register(&button_service);
+-}
+-
+-FSM_STATE_T get_current_button_state() 
+-{
+-    return current_button_state;
+-}
+\ No newline at end of file
+diff --git a/src/button.h b/src/button.h
+deleted file mode 100644
+index 7108889..0000000
+--- a/src/button.h
++++ /dev/null
+@@ -1,17 +0,0 @@
+-#ifndef BUTTON_H
+-#define BUTTON_H
+-
+-typedef enum {
+-    IDLE, 
+-    ONE_PRESS,
+-    TWO_PRESS,
+-    GRACE
+-} FSM_STATE_T;
+-
+-int button_init();
+-void activate_button_work();
+-void register_button_service();
+-
+-FSM_STATE_T get_current_button_state();
+-
+-#endif
+\ No newline at end of file
+diff --git a/src/codec.c b/src/codec.c
+index c99d0f7..c79765b 100644
+--- a/src/codec.c
++++ b/src/codec.c
+@@ -1,140 +1,245 @@
++#include <errno.h>
++#include <stdbool.h>
++#include <string.h>
++
++#include <zephyr/kernel.h>
+ #include <zephyr/logging/log.h>
++#include <zephyr/sys/atomic.h>
+ #include <zephyr/sys/ring_buffer.h>
++
+ #include "codec.h"
+ #include "config.h"
+ #include "utils.h"
+-#ifdef CODEC_OPUS
++
++#if CODEC_OPUS
++#include "lib/opus-1.2.1/config.h"
+ #include "lib/opus-1.2.1/opus.h"
+ #endif
+ 
+ LOG_MODULE_REGISTER(codec, CONFIG_LOG_DEFAULT_LEVEL);
+ 
+-//
+-// Output
+-//
++static codec_callback output_callback;
++static codec_error_callback error_callback;
++static uint8_t codec_ring_buffer_data[AUDIO_BUFFER_SAMPLES * 2u];
++static struct ring_buf codec_ring_buf;
++static struct k_spinlock codec_ring_lock;
++static atomic_t codec_epoch;
++K_SEM_DEFINE(codec_data_ready, 0, 1);
+ 
+-static volatile codec_callback _callback = NULL;
++static int16_t codec_input_samples[CODEC_PACKAGE_SAMPLES];
++static uint8_t codec_output_bytes[CODEC_OUTPUT_MAX_BYTES];
++K_THREAD_STACK_DEFINE(codec_stack, 32000);
++static struct k_thread codec_thread;
++static int execute_codec(void);
++
++#if CODEC_OPUS
++#if CONFIG_OPUS_MODE != CONFIG_OPUS_MODE_CELT
++#error "Anticipy firmware supports only the reviewed CELT-only Opus mode"
++#endif
++#define OPUS_ENCODER_CAPACITY_BYTES 7180u
++__ALIGN(4)
++static uint8_t opus_encoder_memory[OPUS_ENCODER_CAPACITY_BYTES];
++static OpusEncoder *const opus_state =
++    (OpusEncoder *)opus_encoder_memory;
++#endif
+ 
+ void set_codec_callback(codec_callback callback)
+ {
+-    _callback = callback;
++    output_callback = callback;
+ }
+ 
+-//
+-// Input
+-//
+-
+-uint8_t codec_ring_buffer_data[AUDIO_BUFFER_SAMPLES * 2]; // 2 bytes per sample
+-struct ring_buf codec_ring_buf;
+-int codec_receive_pcm(int16_t *data, size_t len) //this gets called after mic data is finished 
+-{   
+-   
+-    int written = ring_buf_put(&codec_ring_buf, (uint8_t *)data, len * 2);
+-    if (written != len * 2)
+-    {
+-        LOG_ERR("Failed to write %d bytes to codec ring buffer", len * 2);
+-        return -1;
++void set_codec_error_callback(codec_error_callback callback)
++{
++    error_callback = callback;
++}
++
++int codec_receive_pcm(int16_t *data, size_t len)
++{
++    if (data == NULL || len == 0u ||
++        len > SIZE_MAX / sizeof(*data)) {
++        return -EINVAL;
++    }
++
++    size_t bytes = len * sizeof(*data);
++    if (bytes > UINT32_MAX) {
++        return -EOVERFLOW;
++    }
++    k_spinlock_key_t key = k_spin_lock(&codec_ring_lock);
++    if (ring_buf_space_get(&codec_ring_buf) < bytes) {
++        k_spin_unlock(&codec_ring_lock, key);
++        LOG_ERR("Codec PCM queue is full");
++        return -ENOSPC;
++    }
++    uint32_t written =
++        ring_buf_put(&codec_ring_buf, (uint8_t *)data, bytes);
++    k_spin_unlock(&codec_ring_lock, key);
++    if (written != bytes) {
++        LOG_ERR("Codec PCM queue write was unexpectedly partial");
++        codec_reset();
++        return -ENOSPC;
+     }
+-    
+ 
++    k_sem_give(&codec_data_ready);
+     return 0;
+ }
+ 
+-//
+-// Thread
+-//
++void codec_reset(void)
++{
++    k_spinlock_key_t key = k_spin_lock(&codec_ring_lock);
++    ring_buf_reset(&codec_ring_buf);
++    memset(codec_ring_buffer_data, 0, sizeof(codec_ring_buffer_data));
++    atomic_inc(&codec_epoch);
++    k_spin_unlock(&codec_ring_lock, key);
++    k_sem_give(&codec_data_ready);
++}
+ 
+-int16_t codec_input_samples[CODEC_PACKAGE_SAMPLES];
+-uint8_t codec_output_bytes[CODEC_OUTPUT_MAX_BYTES];
+-K_THREAD_STACK_DEFINE(codec_stack, 32000);
+-static struct k_thread codec_thread;
+-uint16_t execute_codec();
++static bool read_codec_frame(atomic_val_t *frame_epoch)
++{
++    const uint32_t required = sizeof(codec_input_samples);
++    k_spinlock_key_t key = k_spin_lock(&codec_ring_lock);
++    if (ring_buf_size_get(&codec_ring_buf) < required) {
++        k_spin_unlock(&codec_ring_lock, key);
++        return false;
++    }
++    *frame_epoch = atomic_get(&codec_epoch);
++    uint32_t bytes_read =
++        ring_buf_get(&codec_ring_buf, (uint8_t *)codec_input_samples,
++                     required);
++    k_spin_unlock(&codec_ring_lock, key);
++    if (bytes_read != required) {
++        LOG_ERR("Codec PCM queue returned a short frame: %u",
++                (unsigned int)bytes_read);
++        return false;
++    }
++    return true;
++}
+ 
+ #if CODEC_OPUS
+-#if (CONFIG_OPUS_MODE == CONFIG_OPUS_MODE_CELT)
+-#define OPUS_ENCODER_SIZE 7180
+-#endif
+-#if (CONFIG_OPUS_MODE == CONFIG_OPUS_MODE_HYBRID)
+-#define OPUS_ENCODER_SIZE 10916
+-#endif
+-__ALIGN(4)
+-static uint8_t m_opus_encoder[OPUS_ENCODER_SIZE];
+-static OpusEncoder *const m_opus_state = (OpusEncoder *)m_opus_encoder;
++static int reset_encoder_state(void)
++{
++    int result = opus_encoder_ctl(opus_state, OPUS_RESET_STATE);
++    if (result != OPUS_OK) {
++        LOG_ERR("Opus encoder reset failed: %d", result);
++        return -EIO;
++    }
++    return 0;
++}
++#else
++static int reset_encoder_state(void)
++{
++    return 0;
++}
+ #endif
+ 
+-void codec_entry()
++static void codec_entry(void *unused1, void *unused2, void *unused3)
+ {
+-
+-    uint16_t output_size;
+-    while (1)
+-    {
+-
+-        // Check if we have enough data
+-        if (ring_buf_size_get(&codec_ring_buf) < CODEC_PACKAGE_SAMPLES * 2)
+-        {
+-            // printk("waiting on data....\n");
+-            k_sleep(K_MSEC(10));
+-            continue;
+-        }
+-        // Read package
+-        ring_buf_get(&codec_ring_buf, (uint8_t *)codec_input_samples, CODEC_PACKAGE_SAMPLES * 2);
+-
+-        // Run Codec
+-        output_size = execute_codec();
+-
+-        // Notify
+-        if (_callback)
+-        {
+-            _callback(codec_output_bytes, output_size);
++    ARG_UNUSED(unused1);
++    ARG_UNUSED(unused2);
++    ARG_UNUSED(unused3);
++
++    atomic_val_t applied_epoch = atomic_get(&codec_epoch);
++    while (true) {
++        (void)k_sem_take(&codec_data_ready, K_FOREVER);
++        while (true) {
++            atomic_val_t current_epoch = atomic_get(&codec_epoch);
++            if (current_epoch != applied_epoch) {
++                /*
++                 * Only this thread touches the Opus encoder. Consent/session
++                 * resets therefore cannot race opus_encode(), and every new
++                 * epoch resets CELT overlap/predictor state before its first
++                 * PCM frame is encoded.
++                 */
++                int reset_error = reset_encoder_state();
++                applied_epoch = current_epoch;
++                memset(codec_input_samples, 0,
++                       sizeof(codec_input_samples));
++                memset(codec_output_bytes, 0,
++                       sizeof(codec_output_bytes));
++                if (reset_error != 0) {
++                    if (error_callback != NULL) {
++                        error_callback(reset_error);
++                    }
++                    break;
++                }
++            }
++
++            atomic_val_t frame_epoch;
++            if (!read_codec_frame(&frame_epoch)) {
++                break;
++            }
++            int output_size = execute_codec();
++            if (output_size < 0) {
++                LOG_ERR("Opus encoding failed: %d", output_size);
++                if (error_callback != NULL) {
++                    error_callback(-EIO);
++                }
++                codec_reset();
++            } else if (output_size > 0 && output_callback != NULL &&
++                       atomic_get(&codec_epoch) == frame_epoch) {
++                output_callback(
++                    codec_output_bytes, (size_t)output_size);
++            }
++            memset(codec_input_samples, 0, sizeof(codec_input_samples));
++            memset(codec_output_bytes, 0, sizeof(codec_output_bytes));
++            if (output_size < 0) {
++                break;
++            }
+         }
+-
+-        // Yield
+-        k_yield();
+     }
+ }
+ 
+-int codec_start()
++int codec_start(void)
+ {
+-
+-// OPUS
+ #if CODEC_OPUS
+-    ASSERT_TRUE(opus_encoder_get_size(1) == sizeof(m_opus_encoder));
+-    ASSERT_TRUE(opus_encoder_init(m_opus_state, 16000, 1, CODEC_OPUS_APPLICATION) == OPUS_OK);
+-    ASSERT_TRUE(opus_encoder_ctl(m_opus_state, OPUS_SET_BITRATE(CODEC_OPUS_BITRATE)) == OPUS_OK);
+-    ASSERT_TRUE(opus_encoder_ctl(m_opus_state, OPUS_SET_VBR(CODEC_OPUS_VBR)) == OPUS_OK);
+-    ASSERT_TRUE(opus_encoder_ctl(m_opus_state, OPUS_SET_VBR_CONSTRAINT(0)) == OPUS_OK);
+-    ASSERT_TRUE(opus_encoder_ctl(m_opus_state, OPUS_SET_COMPLEXITY(CODEC_OPUS_COMPLEXITY)) == OPUS_OK);
+-    ASSERT_TRUE(opus_encoder_ctl(m_opus_state, OPUS_SET_SIGNAL(OPUS_SIGNAL_VOICE)) == OPUS_OK);
+-    ASSERT_TRUE(opus_encoder_ctl(m_opus_state, OPUS_SET_LSB_DEPTH(16)) == OPUS_OK);
+-    ASSERT_TRUE(opus_encoder_ctl(m_opus_state, OPUS_SET_DTX(0)) == OPUS_OK);
+-    ASSERT_TRUE(opus_encoder_ctl(m_opus_state, OPUS_SET_INBAND_FEC(0)) == OPUS_OK);
+-    ASSERT_TRUE(opus_encoder_ctl(m_opus_state, OPUS_SET_PACKET_LOSS_PERC(0)) == OPUS_OK);
++    int required_size = opus_encoder_get_size(1);
++    if (required_size <= 0 ||
++        (size_t)required_size > sizeof(opus_encoder_memory)) {
++        LOG_ERR("Opus encoder needs %d bytes; capacity is %u",
++                required_size,
++                (unsigned int)sizeof(opus_encoder_memory));
++        return -ENOMEM;
++    }
++    ASSERT_TRUE(opus_encoder_init(opus_state, 16000, 1,
++                                  CODEC_OPUS_APPLICATION) == OPUS_OK);
++    ASSERT_TRUE(opus_encoder_ctl(
++                    opus_state,
++                    OPUS_SET_BITRATE(CODEC_OPUS_BITRATE)) == OPUS_OK);
++    ASSERT_TRUE(opus_encoder_ctl(
++                    opus_state, OPUS_SET_VBR(CODEC_OPUS_VBR)) == OPUS_OK);
++    ASSERT_TRUE(opus_encoder_ctl(
++                    opus_state, OPUS_SET_VBR_CONSTRAINT(0)) == OPUS_OK);
++    ASSERT_TRUE(opus_encoder_ctl(
++                    opus_state,
++                    OPUS_SET_COMPLEXITY(CODEC_OPUS_COMPLEXITY)) == OPUS_OK);
++    ASSERT_TRUE(opus_encoder_ctl(
++                    opus_state, OPUS_SET_SIGNAL(OPUS_SIGNAL_VOICE)) == OPUS_OK);
++    ASSERT_TRUE(opus_encoder_ctl(
++                    opus_state, OPUS_SET_LSB_DEPTH(16)) == OPUS_OK);
++    ASSERT_TRUE(opus_encoder_ctl(opus_state, OPUS_SET_DTX(0)) == OPUS_OK);
++    ASSERT_TRUE(opus_encoder_ctl(
++                    opus_state, OPUS_SET_INBAND_FEC(0)) == OPUS_OK);
++    ASSERT_TRUE(opus_encoder_ctl(
++                    opus_state, OPUS_SET_PACKET_LOSS_PERC(0)) == OPUS_OK);
+ #endif
+ 
+-    // Thread
+-    ring_buf_init(&codec_ring_buf, sizeof(codec_ring_buffer_data), codec_ring_buffer_data);
+-    k_thread_create(&codec_thread, codec_stack, K_THREAD_STACK_SIZEOF(codec_stack), (k_thread_entry_t)codec_entry, NULL, NULL, NULL, K_PRIO_PREEMPT(4), 0, K_NO_WAIT);
+-
+-    // Success
++    ring_buf_init(&codec_ring_buf, sizeof(codec_ring_buffer_data),
++                  codec_ring_buffer_data);
++    k_thread_create(&codec_thread, codec_stack,
++                    K_THREAD_STACK_SIZEOF(codec_stack), codec_entry,
++                    NULL, NULL, NULL, K_PRIO_PREEMPT(4), 0, K_NO_WAIT);
+     return 0;
+ }
+ 
+-//
+-// Opus codec
+-//
+-
+ #if CODEC_OPUS
+-
+-uint16_t execute_codec()
++static int execute_codec(void)
+ {
+-    opus_int32 size = opus_encode(m_opus_state, codec_input_samples, CODEC_PACKAGE_SAMPLES, codec_output_bytes, sizeof(codec_output_bytes));
+-    if (size < 0)
+-    {
+-        LOG_WRN("Opus encoding failed: %d", size);
+-        return 0;
++    opus_int32 size =
++        opus_encode(opus_state, codec_input_samples,
++                    CODEC_PACKAGE_SAMPLES, codec_output_bytes,
++                    sizeof(codec_output_bytes));
++    if (size < 0) {
++        return (int)size;
+     }
+-    LOG_DBG("Opus encoding success: %i", size);
+-    return size;
++    return (int)size;
+ }
+-
+ #endif
+diff --git a/src/codec.h b/src/codec.h
+index bb542dd..f77ee03 100644
+--- a/src/codec.h
++++ b/src/codec.h
+@@ -1,22 +1,16 @@
+ #ifndef CODEC_H
+ #define CODEC_H
+-#include <zephyr/kernel.h>
+ 
+-// Callback
+-typedef void (*codec_callback)(uint8_t *data, size_t len);
+-void set_codec_callback(codec_callback callback);
++#include <stddef.h>
++#include <stdint.h>
+ 
+-// Integration
++typedef void (*codec_callback)(uint8_t *data, size_t len);
++typedef void (*codec_error_callback)(int error);
+ 
++void set_codec_callback(codec_callback callback);
++void set_codec_error_callback(codec_error_callback callback);
+ int codec_receive_pcm(int16_t *data, size_t len);
++int codec_start(void);
++void codec_reset(void);
+ 
+-/**
+- * @brief Initialize the Codec
+- *
+- * Initializes the codec
+- *
+- * @return 0 if successful, negative errno code if error
+- */
+-int codec_start();
+-
+-#endif
+\ No newline at end of file
++#endif
+diff --git a/src/led.c b/src/led.c
+index 062eb8b..3e620d0 100644
+--- a/src/led.c
++++ b/src/led.c
+@@ -5,7 +5,7 @@
+ 
+ LOG_MODULE_REGISTER(led, CONFIG_LOG_DEFAULT_LEVEL);
+ 
+-int led_start()
++int led_start(void)
+ {
+     ASSERT_TRUE(gpio_is_ready_dt(&led_red));
+     ASSERT_OK(gpio_pin_configure_dt(&led_red, GPIO_OUTPUT_INACTIVE));
+@@ -17,17 +17,17 @@ int led_start()
+     return 0;
+ }
+ 
+-void set_led_red(bool on)
++int set_led_red(bool on)
+ {
+-    gpio_pin_set_dt(&led_red, on);
++    return gpio_pin_set_dt(&led_red, on);
+ }
+ 
+-void set_led_green(bool on)
++int set_led_green(bool on)
+ {
+-    gpio_pin_set_dt(&led_green, on);
++    return gpio_pin_set_dt(&led_green, on);
+ }
+ 
+-void set_led_blue(bool on)
++int set_led_blue(bool on)
+ {
+-    gpio_pin_set_dt(&led_blue, on);
++    return gpio_pin_set_dt(&led_blue, on);
+ }
+diff --git a/src/led.h b/src/led.h
+index 68b1058..2e47edf 100644
+--- a/src/led.h
++++ b/src/led.h
+@@ -15,9 +15,9 @@ static const struct gpio_dt_spec led_blue = GPIO_DT_SPEC_GET(DT_ALIAS(led2), gpi
+  *
+  * @return 0 if successful, negative errno code if error
+  */
+-int led_start();
+-void set_led_red(bool on);
+-void set_led_green(bool on);
+-void set_led_blue(bool on);
++int led_start(void);
++int set_led_red(bool on);
++int set_led_green(bool on);
++int set_led_blue(bool on);
+ 
+-#endif
+\ No newline at end of file
++#endif
+diff --git a/src/lib/battery/battery.c b/src/lib/battery/battery.c
+index 17b0153..8b8b947 100644
+--- a/src/lib/battery/battery.c
++++ b/src/lib/battery/battery.c
+@@ -15,6 +15,7 @@
+  */
+ 
+ #include "battery.h"
++#include "../../battery_math.h"
+ 
+ #include <zephyr/kernel.h>
+ #include <zephyr/device.h>
+@@ -74,9 +75,11 @@ typedef struct
+ } BatteryState;
+ 
+ #define BATTERY_STATES_COUNT 12
+-// Assuming LiPo battery.
+-// Source: https://forum.evolvapor.com/topic/65565-discharge-profiles-csv-for-2-3-18650-batteries-sony-vtc6-sammy-30q/
+-// SHOULD USE YOUR BATTERY'S DATASHEET
++/*
++ * Coarse development estimate only. These generic voltage points are not a
++ * pendant-specific state-of-charge calibration and must not be represented
++ * as production battery accuracy.
++ */
+ BatteryState battery_states[BATTERY_STATES_COUNT] = {
+     {4200, 100},
+     {4160, 99},
+@@ -94,12 +97,12 @@ BatteryState battery_states[BATTERY_STATES_COUNT] = {
+ 
+ static uint8_t is_initialized = false;
+ 
+-static int battery_enable_read()
++static int battery_enable_read(void)
+ {
+     return gpio_pin_set(gpio_battery_dev, GPIO_BATTERY_READ_ENABLE, 1);
+ }
+ 
+-int battery_set_fast_charge()
++int battery_set_fast_charge(void)
+ {
+     if (!is_initialized)
+     {
+@@ -109,7 +112,7 @@ int battery_set_fast_charge()
+     return gpio_pin_set(gpio_battery_dev, GPIO_BATTERY_CHARGE_SPEED, 1); // FAST charge 100mA
+ }
+ 
+-int battery_set_slow_charge()
++int battery_set_slow_charge(void)
+ {
+     if (!is_initialized)
+     {
+@@ -119,7 +122,7 @@ int battery_set_slow_charge()
+     return gpio_pin_set(gpio_battery_dev, GPIO_BATTERY_CHARGE_SPEED, 0); // SLOW charge 50mA
+ }
+ 
+-int battery_charge_start()
++int battery_charge_start(void)
+ {
+     int ret = 0;
+ 
+@@ -132,7 +135,7 @@ int battery_charge_start()
+     return ret;
+ }
+ 
+-int battery_charge_stop()
++int battery_charge_stop(void)
+ {
+     if (!is_initialized)
+     {
+@@ -144,23 +147,24 @@ int battery_charge_stop()
+ 
+ int battery_get_millivolt(uint16_t *battery_millivolt)
+ {
+-
+-    int ret = 0;
++    if (battery_millivolt == NULL) {
++        return -EINVAL;
++    }
+ 
+     // Voltage divider circuit (Should tune R1 in software if possible)
+-    const uint16_t R1 = 1037; // Originally 1M ohm, calibrated after measuring actual voltage values. Can happen due to resistor tolerances, temperature ect..
+-    const uint16_t R2 = 510;  // 510K ohm
++    const uint32_t divider_high_kohm = 1037u;
++    const uint32_t divider_low_kohm = 510u;
+ 
+     // ADC measure
+     uint16_t adc_vref = adc_ref_internal(adc_battery_dev);
+     int adc_mv = 0;
+ 
+     k_mutex_lock(&battery_mut, K_FOREVER);
+-    ret |= adc_read(adc_battery_dev, &sequence);
+-
+-    if (ret)
+-    {
++    int ret = adc_read(adc_battery_dev, &sequence);
++    if (ret != 0) {
++        k_mutex_unlock(&battery_mut);
+         LOG_WRN("ADC read failed (error %d)", ret);
++        return ret;
+     }
+ 
+     // Get average sample value.
+@@ -171,11 +175,27 @@ int battery_get_millivolt(uint16_t *battery_millivolt)
+     adc_mv /= ADC_TOTAL_SAMPLES;
+ 
+     // Convert ADC value to millivolts
+-    ret |= adc_raw_to_millivolts(adc_vref, ADC_GAIN, ADC_RESOLUTION, &adc_mv);
++    ret = adc_raw_to_millivolts(
++        adc_vref, ADC_GAIN, ADC_RESOLUTION, &adc_mv);
++    if (ret != 0 || adc_mv < 0) {
++        k_mutex_unlock(&battery_mut);
++        LOG_WRN("ADC conversion failed (error %d, value %d)", ret, adc_mv);
++        return ret != 0 ? ret : -ERANGE;
++    }
+ 
+-    // Calculate battery voltage.
+-    *battery_millivolt = adc_mv * ((R1 + R2) / R2);
++    /*
++     * Preserve the full divider ratio and round once. The former integer
++     * division truncated 1547/510 to 3 before multiplying.
++     */
++    ret = battery_scale_divider_millivolts(
++        (uint32_t)adc_mv,
++        divider_high_kohm,
++        divider_low_kohm,
++        battery_millivolt);
+     k_mutex_unlock(&battery_mut);
++    if (ret != 0) {
++        return ret;
++    }
+ 
+     LOG_DBG("%d mV", *battery_millivolt);
+     return ret;
+@@ -183,12 +203,20 @@ int battery_get_millivolt(uint16_t *battery_millivolt)
+ 
+ int battery_get_percentage(uint8_t *battery_percentage, uint16_t battery_millivolt)
+ {
++    if (battery_percentage == NULL) {
++        return -EINVAL;
++    }
+ 
+     // Ensure voltage is within bounds
+-    if (battery_millivolt > battery_states[0].voltage)
++    if (battery_millivolt >= battery_states[0].voltage) {
+         *battery_percentage = 100;
+-    if (battery_millivolt < battery_states[BATTERY_STATES_COUNT - 1].voltage)
++        return 0;
++    }
++    if (battery_millivolt <=
++        battery_states[BATTERY_STATES_COUNT - 1].voltage) {
+         *battery_percentage = 0;
++        return 0;
++    }
+ 
+     for (uint16_t i = 0; i < BATTERY_STATES_COUNT - 1; i++)
+     {
+@@ -208,7 +236,7 @@ int battery_get_percentage(uint8_t *battery_percentage, uint16_t battery_millivo
+     return -ESPIPE;
+ }
+ 
+-int battery_init()
++int battery_init(void)
+ {
+     int ret = 0;
+ 
+diff --git a/src/main.c b/src/main.c
+index c56ca33..079e9e2 100644
+--- a/src/main.c
++++ b/src/main.c
+@@ -1,224 +1,168 @@
+-#include <zephyr/logging/log.h>
++#include <stdbool.h>
++#include <stdint.h>
++#include <errno.h>
++
+ #include <zephyr/kernel.h>
+-#include "transport.h"
+-#include "mic.h"
+-#include "utils.h"
+-#include "led.h"
+-#include "config.h"
++#include <zephyr/logging/log.h>
++
+ #include "codec.h"
+-// #include "nfc.h"
+-#include "sdcard.h"
+-#include "storage.h"
+-#include "speaker.h"
++#include "config.h"
++#include "led.h"
++#include "mic.h"
++#include "transport.h"
++
+ #define BOOT_BLINK_DURATION_MS 600
+ #define BOOT_PAUSE_DURATION_MS 200
++
+ LOG_MODULE_REGISTER(main, CONFIG_LOG_DEFAULT_LEVEL);
+ 
+ static void codec_handler(uint8_t *data, size_t len)
+ {
+-	int err = broadcast_audio_packets(data, len);
+-    if (err) 
+-    {
+-        LOG_ERR("Failed to broadcast audio packets: %d", err);
++    if (!transport_audio_is_active()) {
++        return;
++    }
++
++    int err = broadcast_audio_packets(data, len);
++    if (err != 0 && err != -ECANCELED) {
++        LOG_ERR("Failed to queue audio packet: %d", err);
++        transport_audio_fault(err);
+     }
+ }
+ 
+ static void mic_handler(int16_t *buffer)
+ {
++    if (!transport_audio_is_active()) {
++        return;
++    }
++
+     int err = codec_receive_pcm(buffer, MIC_BUFFER_SAMPLES);
+-    if (err) 
+-    {
+-        LOG_ERR("Failed to process PCM data: %d", err);
++    if (err != 0 && err != -ECANCELED) {
++        LOG_ERR("Failed to queue PCM data: %d", err);
++        transport_audio_fault(err);
+     }
+ }
+ 
++static void mic_error_handler(int error)
++{
++    transport_audio_fault(error);
++}
++
+ void bt_ctlr_assert_handle(char *name, int type)
+ {
+-	LOG_INF("Bluetooth assert: %s (type %d)", name ? name : "NULL", type);
++    /*
++     * Controller state is no longer trustworthy. Cut microphone power
++     * directly, leave the recording indicator conservatively lit, and enter
++     * Zephyr's fatal path instead of returning to corrupt streaming state.
++     */
++    mic_emergency_power_off();
++    (void)set_led_blue(true);
++    LOG_ERR("Bluetooth controller assertion: %s (type %d)",
++            name ? name : "NULL", type);
++    k_panic();
+ }
+ 
+-bool is_connected = false;
+-bool is_charging = false;
+-extern bool is_off;
+-static void boot_led_sequence(void)
++static int boot_led_sequence(void)
+ {
+-    // Red blink
+-    set_led_red(true);
++    int err = set_led_red(true);
++    if (err != 0) {
++        return err;
++    }
+     k_msleep(BOOT_BLINK_DURATION_MS);
+-    set_led_red(false);
++    if (set_led_red(false) != 0) {
++        return -EIO;
++    }
+     k_msleep(BOOT_PAUSE_DURATION_MS);
+-    // Green blink
+-    set_led_green(true);
++
++    if (set_led_green(true) != 0) {
++        return -EIO;
++    }
+     k_msleep(BOOT_BLINK_DURATION_MS);
+-    set_led_green(false);
++    if (set_led_green(false) != 0) {
++        return -EIO;
++    }
+     k_msleep(BOOT_PAUSE_DURATION_MS);
+-    // Blue blink
+-    set_led_blue(true);
++
++    if (set_led_blue(true) != 0) {
++        return -EIO;
++    }
+     k_msleep(BOOT_BLINK_DURATION_MS);
+-    set_led_blue(false);
++    if (set_led_blue(false) != 0) {
++        return -EIO;
++    }
+     k_msleep(BOOT_PAUSE_DURATION_MS);
+-    // All LEDs on
+-    set_led_red(true);
+-    set_led_green(true);
+-    set_led_blue(true);
++
++    if (set_led_red(true) != 0 ||
++        set_led_green(true) != 0 ||
++        set_led_blue(true) != 0) {
++        return -EIO;
++    }
+     k_msleep(BOOT_BLINK_DURATION_MS);
+-    // All LEDs off
+-    set_led_red(false);
+-    set_led_green(false);
+-    set_led_blue(false);
++    if (set_led_red(false) != 0 ||
++        set_led_green(false) != 0 ||
++        set_led_blue(false) != 0) {
++        return -EIO;
++    }
++    return 0;
+ }
+-void set_led_state()
++
++static void show_startup_failure(void)
+ {
+-	// Recording and connected state - BLUE
+-    if(is_off)
+-    {
+-		set_led_red(false);
+-		set_led_green(false);
+-		set_led_blue(false);
+-        return;
++    for (int index = 0; index < 5; index++) {
++        set_led_red(true);
++        k_msleep(200);
++        set_led_red(false);
++        k_msleep(200);
+     }
+-	if (is_connected)
+-	{
+-		set_led_red(false);
+-		set_led_green(false);
+-		set_led_blue(true);
+-		return;
+-	}
+-
+-	// Recording but lost connection - RED
+-	if (!is_connected)
+-	{
+-		set_led_red(true);
+-		set_led_green(false);
+-		set_led_blue(false);
+-		return;
+-	}
+-
+-	// Not recording, but charging - WHITE
+-	if (is_charging)
+-	{
+-		set_led_red(true);
+-		set_led_green(true);
+-		set_led_blue(true);
+-		return;
+-	}
+-
+-	// Not recording - OFF
+-	set_led_red(false);
+-	set_led_green(false);
+-	set_led_blue(false);
+ }
+ 
+-// Main loop
+ int main(void)
+ {
+-	int err;
+-
+-    LOG_INF("Friend device firmware starting...");
+-    err = led_start();
+-    if (err) 
+-    {
+-        LOG_ERR("Failed to initialize LEDs: %d", err);
++    int err = led_start();
++    if (err != 0) {
++        /*
++         * The LEDs are the only physical recording indicator. Refuse to
++         * initialize the microphone or advertise when they are unavailable.
++         */
++        LOG_ERR("Recording indicator unavailable: %d", err);
++        return err;
++    }
++    err = boot_led_sequence();
++    if (err != 0) {
++        LOG_ERR("Recording indicator self-test failed: %d", err);
+         return err;
+     }
+-    // Run the boot LED sequence
+-    boot_led_sequence();
+-    // Indicate transport initialization
+-    set_led_green(true);
+-    set_led_green(false);
+ 
+-    err = transport_start();
+-    if (err) 
+-    {
+-        LOG_ERR("Failed to start transport: %d", err);
+-        // Blink green LED to indicate error
+-        for (int i = 0; i < 5; i++) 
+-        {
+-            set_led_green(!gpio_pin_get_dt(&led_green));
+-            k_msleep(200);
+-        }
+-        set_led_green(false);
+-        // return err;
+-    }
+-    err = mount_sd_card();
+-    if (err)
+-    {
+-        LOG_ERR("Failed to mount SD card: %d", err);
+-    }
+-    LOG_INF("result of mount:%d",err);
+-
+-    k_msleep(500);
+-    err = storage_init();
+-    if (err)
+-    {
+-        LOG_ERR("Failed to initialize storage: %d", err);
+-    }
+-    err = init_haptic_pin();
+-    if (err)
+-    {
+-        LOG_ERR("Failed to initialize haptic pin: %d", err);
+-    }
+-    play_haptic_milli(500);
+-    set_led_blue(true);
+     set_codec_callback(codec_handler);
++    set_codec_error_callback(mic_error_handler);
+     err = codec_start();
+-    if (err) 
+-    {
+-        LOG_ERR("Failed to start codec: %d", err);
+-        // Blink blue LED to indicate error
+-        for (int i = 0; i < 5; i++) 
+-        {
+-            set_led_blue(!gpio_pin_get_dt(&led_blue));
+-            k_msleep(200);
+-        }
+-        set_led_blue(false);
++    if (err != 0) {
++        LOG_ERR("Failed to initialize codec: %d", err);
++        show_startup_failure();
+         return err;
+     }
+-    set_led_blue(false);
+ 
+-    // Indicate microphone initialization
+-    set_led_red(true);
+-    set_led_green(true);
+-    LOG_INF("Starting microphone initialization");
+     set_mic_callback(mic_handler);
+-    err = mic_start();
+-    if (err) 
+-    {
+-        LOG_ERR("Failed to start microphone: %d", err);
+-        // Blink red and green LEDs to indicate error
+-        for (int i = 0; i < 5; i++) 
+-        {
+-            set_led_red(!gpio_pin_get_dt(&led_red));
+-            set_led_green(!gpio_pin_get_dt(&led_green));
+-            k_msleep(200);
+-        }
+-        set_led_red(false);
+-        set_led_green(false);
++    set_mic_error_callback(mic_error_handler);
++    err = mic_init();
++    if (err != 0) {
++        LOG_ERR("Failed to initialize microphone: %d", err);
++        show_startup_failure();
++        return err;
++    }
++
++    /*
++     * Advertising is the startup commit. The codec, microphone, and physical
++     * indicator are ready before an iPhone can discover codec ID 20.
++     */
++    err = transport_start();
++    if (err != 0) {
++        LOG_ERR("Failed to start transport: %d", err);
++        show_startup_failure();
+         return err;
+     }
+-    set_led_red(false);
+-    set_led_green(false);
+-    // // Initialize NFC first
+-    // LOG_INF("Initializing NFC...");
+-    // err = nfc_init();
+-    // if (err != 0) {
+-    //     LOG_ERR("Failed to initialize NFC: %d", err);
+-    //     // Consider whether to continue or return based on the severity of the error
+-    // } else {
+-    //     LOG_INF("NFC initialized successfully");
+-    // }
+-
+-    // Indicate successful initialization
+-    LOG_INF("Omi firmware initialized successfully\n");
+-    set_led_blue(true);
+-    k_msleep(1000);
+-    set_led_blue(false);
+-
+-	while (1)
+-	{
+-		set_led_state();
+-		k_msleep(500);
+-	}
+-	// Unreachable
+-	return 0;
++
++    LOG_INF("Anticipy live-stream firmware initialized");
++    while (true) {
++        k_sleep(K_FOREVER);
++    }
+ }
+diff --git a/src/mic.c b/src/mic.c
+index 3cf951a..b2f7912 100644
+--- a/src/mic.c
++++ b/src/mic.c
+@@ -1,103 +1,258 @@
+-#include <zephyr/logging/log.h>
+-#include <zephyr/kernel.h>
+-#include <zephyr/device.h>
+-#include <zephyr/drivers/gpio.h>
++#include <errno.h>
++#include <string.h>
++
+ #include <haly/nrfy_gpio.h>
+-#include "nrfx_clock.h"
+-#include "nrfx_pdm.h"
++#include <zephyr/irq.h>
++#include <zephyr/kernel.h>
++#include <zephyr/logging/log.h>
++#include <zephyr/sys/atomic.h>
++
+ #include "config.h"
+ #include "mic.h"
+-#include "utils.h"
+-#include "led.h"
++#include "nrfx_clock.h"
++#include "nrfx_pdm.h"
+ 
+ LOG_MODULE_REGISTER(mic, CONFIG_LOG_DEFAULT_LEVEL);
+ 
+-//
+-// Port of this code: https://github.com/Seeed-Studio/Seeed_Arduino_Mic/blob/master/src/hardware/nrf52840_adc.cpp
+-//
++#define PDM_STOP_TIMEOUT_MS 250
+ 
+-static int16_t _buffer_0[MIC_BUFFER_SAMPLES];
+-static int16_t _buffer_1[MIC_BUFFER_SAMPLES];
+-static volatile uint8_t _next_buffer_index = 0;
+-static volatile mix_handler _callback = NULL;
++static int16_t buffer_0[MIC_BUFFER_SAMPLES];
++static int16_t buffer_1[MIC_BUFFER_SAMPLES];
++static atomic_t next_buffer_index;
++static mic_handler sample_callback;
++static mic_error_handler error_callback;
++static atomic_t initialized;
++static atomic_t running;
++static atomic_t hardware_started;
++static atomic_t stopping;
++static atomic_t session_epoch;
++static K_MUTEX_DEFINE(mic_lifecycle_lock);
++K_SEM_DEFINE(pdm_stopped, 0, 1);
+ 
+-static void pdm_irq_handler(nrfx_pdm_evt_t const *event)
++static int stop_hardware_locked(void)
+ {
+-    // Ignore error (how to handle?)
+-    if (event->error)
+-    {
+-        LOG_ERR("PDM error: %d", event->error);
+-        return;
++    atomic_clear(&running);
++    nrfy_gpio_pin_clear(PDM_PWR_PIN);
++    if (!atomic_get(&hardware_started)) {
++        memset(buffer_0, 0, sizeof(buffer_0));
++        memset(buffer_1, 0, sizeof(buffer_1));
++        return 0;
++    }
++    if (atomic_get(&stopping)) {
++        int wait_error =
++            k_sem_take(&pdm_stopped, K_MSEC(PDM_STOP_TIMEOUT_MS));
++        if (wait_error != 0) {
++            LOG_ERR("PDM remains in the stopping state: %d",
++                    wait_error);
++            return -ETIMEDOUT;
++        }
++        memset(buffer_0, 0, sizeof(buffer_0));
++        memset(buffer_1, 0, sizeof(buffer_1));
++        return 0;
++    }
++
++    k_sem_reset(&pdm_stopped);
++    atomic_set(&stopping, 1);
++    nrfx_err_t result = nrfx_pdm_stop();
++    if (result != NRFX_SUCCESS) {
++        atomic_clear(&stopping);
++        LOG_ERR("PDM stop failed: %d", result);
++        return -EIO;
+     }
+ 
+-    // Assign buffer
+-    if (event->buffer_requested)
+-    {
+-        LOG_DBG("Audio buffer requested");
+-        if (_next_buffer_index == 0)
+-        {
+-            nrfx_pdm_buffer_set(_buffer_0, MIC_BUFFER_SAMPLES);
+-            _next_buffer_index = 1;
++    /*
++     * Pinned nrfx stops STARTING/IDLE synchronously, but RUNNING stops only
++     * after the current frame and a final callback. Never scrub DMA buffers
++     * or permit restart until the peripheral is observably disabled.
++     */
++    if (nrfx_pdm_enable_check()) {
++        int wait_error =
++            k_sem_take(&pdm_stopped, K_MSEC(PDM_STOP_TIMEOUT_MS));
++        if (wait_error != 0) {
++            LOG_ERR("Timed out waiting for PDM quiescence: %d",
++                    wait_error);
++            return -ETIMEDOUT;
+         }
+-        else
+-        {
+-            nrfx_pdm_buffer_set(_buffer_1, MIC_BUFFER_SAMPLES);
+-            _next_buffer_index = 0;
++    } else {
++        atomic_clear(&hardware_started);
++        atomic_clear(&stopping);
++    }
++
++    memset(buffer_0, 0, sizeof(buffer_0));
++    memset(buffer_1, 0, sizeof(buffer_1));
++    return 0;
++}
++
++static void record_pdm_fault(int error)
++{
++    if (error == 0) {
++        error = -EIO;
++    }
++    atomic_val_t fault_epoch = atomic_get(&session_epoch);
++    if (!atomic_cas(&running, 1, 0)) {
++        return;
++    }
++    if (fault_epoch != atomic_get(&session_epoch)) {
++        return;
++    }
++    nrfy_gpio_pin_clear(PDM_PWR_PIN);
++    /*
++     * The registered callback is transport_audio_fault(), which only uses
++     * ISR-safe atomics, a spinlock, and k_sem_give(). The audio-control
++     * thread owns the serialized/quiescence-confirmed nrfx stop.
++     */
++    if (error_callback != NULL) {
++        error_callback(error);
++    }
++}
++
++static void pdm_irq_handler(nrfx_pdm_evt_t const *event)
++{
++    if (atomic_get(&stopping)) {
++        if (!nrfx_pdm_enable_check()) {
++            atomic_clear(&hardware_started);
++            atomic_clear(&stopping);
++            k_sem_give(&pdm_stopped);
+         }
++        return;
++    }
++
++    if (event->error != 0) {
++        LOG_ERR("PDM IRQ error: %d", event->error);
++        record_pdm_fault(-EIO);
++        return;
+     }
+ 
+-    // Release buffer
+-    if (event->buffer_released)
+-    {
+-        LOG_DBG("Audio buffer requested");
+-        if (_callback)
+-        {
+-            _callback(event->buffer_released);
++    if (event->buffer_requested && atomic_get(&running)) {
++        atomic_val_t buffer_index = atomic_inc(&next_buffer_index);
++        int16_t *next_buffer =
++            (buffer_index & 1) == 0 ? buffer_0 : buffer_1;
++        nrfx_err_t result =
++            nrfx_pdm_buffer_set(next_buffer, MIC_BUFFER_SAMPLES);
++        if (result != NRFX_SUCCESS) {
++            LOG_ERR("PDM buffer queue failed: %d", result);
++            record_pdm_fault(-ENOBUFS);
++            return;
+         }
+     }
++
++    if (event->buffer_released != NULL && atomic_get(&running) &&
++        sample_callback != NULL) {
++        sample_callback(event->buffer_released);
++    }
+ }
+ 
+-int mic_start()
++int mic_init(void)
+ {
++    if (atomic_get(&initialized)) {
++        return 0;
++    }
+ 
+-    // Start the high frequency clock
+-    if (!nrf_clock_hf_is_running(NRF_CLOCK, NRF_CLOCK_HFCLK_HIGH_ACCURACY))
+-    {
++    if (!nrf_clock_hf_is_running(NRF_CLOCK,
++                                 NRF_CLOCK_HFCLK_HIGH_ACCURACY)) {
+         nrf_clock_task_trigger(NRF_CLOCK, NRF_CLOCK_TASK_HFCLKSTART);
+     }
+ 
+-    // Configure PDM
+-    nrfx_pdm_config_t pdm_config = NRFX_PDM_DEFAULT_CONFIG(PDM_CLK_PIN, PDM_DIN_PIN);
+-    pdm_config.gain_l = MIC_GAIN;
+-    pdm_config.gain_r = MIC_GAIN;
+-    pdm_config.interrupt_priority = MIC_IRC_PRIORITY;
+-    pdm_config.clock_freq = NRF_PDM_FREQ_1280K;
+-    pdm_config.mode = NRF_PDM_MODE_MONO;
+-    pdm_config.edge = NRF_PDM_EDGE_LEFTFALLING;
+-    pdm_config.ratio = NRF_PDM_RATIO_80X;
+-    IRQ_DIRECT_CONNECT(PDM_IRQn, 5, nrfx_pdm_irq_handler, 0); // IMPORTANT!
+-    if (nrfx_pdm_init(&pdm_config, pdm_irq_handler) != NRFX_SUCCESS)
+-    {
+-        LOG_ERR("Audio unable to initialize PDM");
+-        return -1;
++    nrfx_pdm_config_t config =
++        NRFX_PDM_DEFAULT_CONFIG(PDM_CLK_PIN, PDM_DIN_PIN);
++    config.gain_l = MIC_GAIN;
++    config.gain_r = MIC_GAIN;
++    config.interrupt_priority = MIC_IRC_PRIORITY;
++    config.clock_freq = NRF_PDM_FREQ_1280K;
++    config.mode = NRF_PDM_MODE_MONO;
++    config.edge = NRF_PDM_EDGE_LEFTFALLING;
++    config.ratio = NRF_PDM_RATIO_80X;
++
++    /*
++     * Match the pinned Zephyr nrfx PDM driver: nrfx_isr is a regular,
++     * kernel-aware ISR wrapper. The event callback may therefore use
++     * ISR-safe Zephyr primitives such as k_sem_give().
++     */
++    IRQ_CONNECT(
++        PDM_IRQn, MIC_IRC_PRIORITY,
++        nrfx_isr, nrfx_pdm_irq_handler, 0);
++    nrfx_err_t result = nrfx_pdm_init(&config, pdm_irq_handler);
++    if (result != NRFX_SUCCESS) {
++        LOG_ERR("PDM initialization failed: %d", result);
++        return -EIO;
+     }
+ 
+-    // Power on Mic
+     nrfy_gpio_cfg_output(PDM_PWR_PIN);
+-    nrfy_gpio_pin_set(PDM_PWR_PIN);
++    nrfy_gpio_pin_clear(PDM_PWR_PIN);
++    atomic_set(&initialized, 1);
++    return 0;
++}
+ 
+-    // Start PDM
+-    if (nrfx_pdm_start() != NRFX_SUCCESS)
+-    {
+-        LOG_ERR("Audio unable to start PDM");
+-        return -1;
++int mic_start(void)
++{
++    k_mutex_lock(&mic_lifecycle_lock, K_FOREVER);
++    if (!atomic_get(&initialized)) {
++        k_mutex_unlock(&mic_lifecycle_lock);
++        return -EACCES;
++    }
++    if (atomic_get(&running)) {
++        k_mutex_unlock(&mic_lifecycle_lock);
++        return 0;
++    }
++    if (atomic_get(&hardware_started) ||
++        atomic_get(&stopping)) {
++        k_mutex_unlock(&mic_lifecycle_lock);
++        return -EBUSY;
+     }
+ 
+-    LOG_INF("Audio microphone started");
++    atomic_inc(&session_epoch);
++    atomic_set(&next_buffer_index, 0);
++    memset(buffer_0, 0, sizeof(buffer_0));
++    memset(buffer_1, 0, sizeof(buffer_1));
++    nrfy_gpio_pin_set(PDM_PWR_PIN);
++    atomic_set(&hardware_started, 1);
++    atomic_set(&running, 1);
++    nrfx_err_t result = nrfx_pdm_start();
++    if (result != NRFX_SUCCESS) {
++        atomic_clear(&running);
++        atomic_clear(&hardware_started);
++        atomic_inc(&session_epoch);
++        nrfy_gpio_pin_clear(PDM_PWR_PIN);
++        LOG_ERR("PDM start failed: %d", result);
++        k_mutex_unlock(&mic_lifecycle_lock);
++        return -EIO;
++    }
++    k_mutex_unlock(&mic_lifecycle_lock);
+     return 0;
+ }
+ 
+-void set_mic_callback(mix_handler callback) 
++int mic_stop(void)
++{
++    k_mutex_lock(&mic_lifecycle_lock, K_FOREVER);
++    /*
++     * Clear running before advancing the epoch so an IRQ can only claim the
++     * old session or observe a stopped microphone, never the new epoch.
++     */
++    atomic_clear(&running);
++    atomic_inc(&session_epoch);
++    int err = stop_hardware_locked();
++    k_mutex_unlock(&mic_lifecycle_lock);
++    return err;
++}
++
++bool mic_is_running(void)
++{
++    return atomic_get(&running) != 0;
++}
++
++void mic_emergency_power_off(void)
++{
++    atomic_clear(&running);
++    atomic_inc(&session_epoch);
++    nrfy_gpio_pin_clear(PDM_PWR_PIN);
++}
++
++void set_mic_callback(mic_handler callback)
++{
++    sample_callback = callback;
++}
++
++void set_mic_error_callback(mic_error_handler callback)
+ {
+-    _callback = callback;
++    error_callback = callback;
+ }
+diff --git a/src/mic.h b/src/mic.h
+index 33865c7..cb164ea 100644
+--- a/src/mic.h
++++ b/src/mic.h
+@@ -1,16 +1,22 @@
+ #ifndef MIC_H
+ #define MIC_H
+ 
+-typedef void (*mix_handler)(int16_t *);
++#include <stdbool.h>
++#include <stdint.h>
+ 
+-/**
+- * @brief Initialize the Microphone
+- *
+- * Initializes the Microphone
+- *
+- * @return 0 if successful, negative errno code if error
++typedef void (*mic_handler)(int16_t *buffer);
++typedef void (*mic_error_handler)(int error);
++
++/*
++ * mic_init() configures the PDM peripheral without sampling. mic_start() and
++ * mic_stop() are bound to the audio CCC state by transport.c.
+  */
+-int mic_start();
+-void set_mic_callback(mix_handler _callback);
++int mic_init(void);
++int mic_start(void);
++int mic_stop(void);
++bool mic_is_running(void);
++void mic_emergency_power_off(void);
++void set_mic_callback(mic_handler callback);
++void set_mic_error_callback(mic_error_handler callback);
+ 
+-#endif
+\ No newline at end of file
++#endif
+diff --git a/src/nfc.c b/src/nfc.c
+deleted file mode 100644
+index fe86fd7..0000000
+--- a/src/nfc.c
++++ /dev/null
+@@ -1,166 +0,0 @@
+-#include "nfc.h"
+-#include <zephyr/logging/log.h>
+-#include <zephyr/drivers/hwinfo.h>
+-#include <nfc_t2t_lib.h>
+-#include <nfc/ndef/msg.h>
+-#include <nfc/ndef/uri_msg.h>
+-
+-//for later......
+-LOG_MODULE_REGISTER(nfc, CONFIG_LOG_DEFAULT_LEVEL);
+-
+-#define MAX_URI_LENGTH 64
+-#define MAX_DEVICE_ID_LENGTH 7  // 6 chars + null terminator
+-#define NDEF_MSG_BUF_SIZE 256
+-#define MAX_REC_COUNT 1
+-
+-static uint8_t ndef_msg_buf[NDEF_MSG_BUF_SIZE];
+-static char device_id[MAX_DEVICE_ID_LENGTH];
+-static char uri_buffer[MAX_URI_LENGTH];
+-
+-// int get_device_id(char *device_id_out, size_t len)
+-// {
+-//     if (len < MAX_DEVICE_ID_LENGTH) {
+-//         return -EINVAL;
+-//     }
+-
+-//     uint8_t dev_id[8];
+-//     ssize_t ret;
+-
+-//     ret = hwinfo_get_device_id(dev_id, sizeof(dev_id));
+-//     if (ret < 0) {
+-//         LOG_ERR("Failed to get device ID, error: %d", ret);
+-//         return ret;
+-//     }
+-
+-//     snprintf(device_id_out, len, "%02X%02X%02X", dev_id[5], dev_id[6], dev_id[7]);
+-//     LOG_INF("Device ID: %s", device_id_out);
+-
+-//     return 0;
+-// }
+-int get_device_id(char *device_id_out, size_t len)
+-{
+-    if (len < MAX_DEVICE_ID_LENGTH) {
+-        return -EINVAL;
+-    }
+-
+-    // Hardcoded device ID for testing
+-    const char *test_device_id = "ABC123";
+-
+-    strncpy(device_id_out, test_device_id, len - 1);
+-    device_id_out[len - 1] = '\0';  // Ensure null-termination
+-
+-    LOG_INF("Device ID (hardcoded): %s", device_id_out);
+-
+-    return 0;
+-}
+-
+-int nfc_sleep(void)
+-{
+-    int err = nfc_t2t_emulation_stop();
+-    if (err != 0) {
+-        LOG_ERR("Failed to stop NFC emulation, error: %d", err);
+-        return err;
+-    }
+-    LOG_INF("NFC entered sleep mode");
+-    return 0;
+-}
+-
+-int nfc_wake(void)
+-{
+-    int err = nfc_t2t_emulation_start();
+-    if (err != 0) {
+-        LOG_ERR("Failed to start NFC emulation, error: %d", err);
+-        return err;
+-    }
+-    LOG_INF("NFC woke from sleep mode");
+-    return 0;
+-}
+-
+-static void nfc_callback(void *context, nfc_t2t_event_t event, const uint8_t *data, size_t data_length)
+-{
+-    LOG_INF("NFC Event: %d", event);
+-}
+-
+-static int nfc_create_message(void)
+-{
+-    int err;
+-
+-    if (get_device_id(device_id, sizeof(device_id)) != 0) {
+-        LOG_ERR("Failed to get device ID");
+-        return -EIO;
+-    }
+-
+-    snprintf(uri_buffer, sizeof(uri_buffer), "https://friend.based.com/pair?id=%s", device_id);
+-
+-    NFC_NDEF_MSG_DEF(nfc_msg, MAX_REC_COUNT);
+-    NFC_NDEF_URI_RECORD_DESC_DEF(uri_rec, 0, uri_buffer, strlen(uri_buffer));
+-
+-    err = nfc_ndef_msg_record_add(&NFC_NDEF_MSG(nfc_msg), &NFC_NDEF_URI_RECORD_DESC(uri_rec));
+-    if (err != 0) {
+-        LOG_ERR("Failed to add record to NDEF message, error: %d", err);
+-        return -EIO;
+-    }
+-
+-    uint32_t msg_len = sizeof(ndef_msg_buf);
+-    err = nfc_ndef_msg_encode(&NFC_NDEF_MSG(nfc_msg), ndef_msg_buf, &msg_len);
+-    if (err != 0) {
+-        LOG_ERR("Failed to encode NDEF message, error: %d", err);
+-        return -EIO;
+-    }
+-
+-    return 0;
+-}
+-
+-int nfc_init(void)
+-{
+-    int err;
+-
+-    err = nfc_create_message();
+-    if (err != 0) {
+-        LOG_ERR("Failed to create NFC message, error: %d", err);
+-        return err;
+-    }
+-
+-    /* Set up NFC */
+-    err = nfc_t2t_setup(nfc_callback, NULL);
+-    if (err != 0) {
+-        LOG_ERR("Failed to setup NFC T2T library, error: %d", err);
+-        return err;
+-    }
+-
+-    /* Set payload */
+-    err = nfc_t2t_payload_set(ndef_msg_buf, sizeof(ndef_msg_buf));
+-    if (err != 0) {
+-        LOG_ERR("Failed to set NFC payload, error: %d", err);
+-        return err;
+-    }
+-
+-    /* Start sensing NFC field */
+-    err = nfc_t2t_emulation_start();
+-    if (err != 0) {
+-        LOG_ERR("Failed to start NFC emulation, error: %d", err);
+-        return err;
+-    }
+-
+-    LOG_INF("NFC initialized successfully");
+-    return 0;
+-}
+-
+-int nfc_update_payload(const uint8_t *new_data, size_t len)
+-{
+-    if (len > sizeof(ndef_msg_buf)) {
+-        LOG_ERR("New payload too large");
+-        return -EINVAL;
+-    }
+-
+-    memcpy(ndef_msg_buf, new_data, len);
+-
+-    int err = nfc_t2t_payload_set(ndef_msg_buf, len);
+-    if (err) {
+-        LOG_ERR("Failed to update NFC payload, error: %d", err);
+-        return err;
+-    }
+-
+-    LOG_INF("NFC payload updated successfully");
+-    return 0;
+-}
+diff --git a/src/nfc.h b/src/nfc.h
+deleted file mode 100644
+index 48e75ee..0000000
+--- a/src/nfc.h
++++ /dev/null
+@@ -1,41 +0,0 @@
+-#ifndef NFC_H
+-#define NFC_H
+-
+-//for later.......
+-int nfc_sleep(void);
+-int nfc_wake(void);
+-
+-#include <zephyr/kernel.h>
+-
+-/**
+- * @brief Initialize NFC functionality
+- *
+- * This function sets up NFC with the device's pairing ID and URL.
+- *
+- * @return 0 if successful, negative errno code if error
+- */
+-int nfc_init(void);
+-
+-/**
+- * @brief Update NFC payload
+- *
+- * This function updates the NFC payload with new data if needed.
+- *
+- * @param new_data Pointer to the new data
+- * @param len Length of the new data
+- * @return 0 if successful, negative errno code if error
+- */
+-int nfc_update_payload(const uint8_t *new_data, size_t len);
+-
+-/**
+- * @brief Get Device ID
+- *
+- * This function fetches the hardware device ID.
+- *
+- * @param device_id Device ID pointer
+- * @param len Length of the device ID
+- * @return 0 if successful, negative errno code if error
+- */
+-int get_device_id(char *device_id, size_t len);
+-
+-#endif /* NFC_H */
+diff --git a/src/opus_packet_helpers.c b/src/opus_packet_helpers.c
+new file mode 100644
+index 0000000..dccdc80
+--- /dev/null
++++ b/src/opus_packet_helpers.c
+@@ -0,0 +1,28 @@
++// SPDX-License-Identifier: MIT
++
++#include "lib/opus-1.2.1/opus.h"
++
++/*
++ * The encoder's repacketizer needs this small TOC parser, but pulling the
++ * complete decoder object into an encoder-only image also retains dormant
++ * SILK decoder references. Keep the encoder link closed over the reviewed
++ * CELT/encoder source set.
++ */
++int opus_packet_get_nb_frames(const unsigned char packet[], opus_int32 len)
++{
++    if (len < 1) {
++        return OPUS_BAD_ARG;
++    }
++
++    int code = packet[0] & 0x3;
++    if (code == 0) {
++        return 1;
++    }
++    if (code != 3) {
++        return 2;
++    }
++    if (len < 2) {
++        return OPUS_INVALID_PACKET;
++    }
++    return packet[1] & 0x3f;
++}
+diff --git a/src/sdcard.c b/src/sdcard.c
+deleted file mode 100644
+index c858ec4..0000000
+--- a/src/sdcard.c
++++ /dev/null
+@@ -1,388 +0,0 @@
+-#include <ff.h>
+-#include <zephyr/kernel.h>
+-#include <zephyr/device.h>
+-#include <zephyr/drivers/gpio.h>
+-#include <zephyr/fs/fs.h>
+-#include <zephyr/fs/fs_sys.h>
+-#include <zephyr/logging/log.h>
+-#include <zephyr/storage/disk_access.h>
+-#include <zephyr/sys/check.h>
+-#include "sdcard.h"
+-
+-LOG_MODULE_REGISTER(sdcard, CONFIG_LOG_DEFAULT_LEVEL);
+-
+-static FATFS fat_fs;
+-
+-static struct fs_mount_t mount_point = {
+-	.type = FS_FATFS,
+-	.fs_data = &fat_fs,
+-};
+-
+-struct gpio_dt_spec sd_en_gpio_pin = { .port = DEVICE_DT_GET(DT_NODELABEL(gpio0)), .pin=19, .dt_flags = GPIO_INT_DISABLE };
+-
+-uint8_t file_count = 0;
+-
+-#define MAX_PATH_LENGTH 32
+-static char current_full_path[MAX_PATH_LENGTH];
+-static char read_buffer[MAX_PATH_LENGTH];
+-static char write_buffer[MAX_PATH_LENGTH];
+-
+-uint32_t file_num_array[40];    
+-
+-static const char *disk_mount_pt = "/SD:/";
+-
+-int mount_sd_card(void)
+-{
+-    //initialize the sd card enable pin (v2)
+-    if (gpio_is_ready_dt(&sd_en_gpio_pin)) 
+-    {
+-		LOG_INF("SD Enable Pin ready");
+-	}
+-    else 
+-    {
+-		LOG_ERR("Error setting up SD Enable Pin");
+-        return -1;
+-	}
+-
+-	if (gpio_pin_configure_dt(&sd_en_gpio_pin, GPIO_OUTPUT_ACTIVE) < 0) 
+-    {
+-		LOG_ERR("Error setting up SD Pin");
+-        return -1;
+-	}
+-    //initialize the sd card
+-    const char *disk_pdrv = "SD";  
+-	int err = disk_access_init(disk_pdrv); 
+-    LOG_INF("disk_access_init: %d\n", err);
+-    if (err) 
+-    {   //reattempt
+-        k_msleep(1000);
+-        err = disk_access_init(disk_pdrv); 
+-        if (err) 
+-        {
+-            LOG_ERR("disk_access_init failed");
+-            return -1;
+-        }
+-    }
+-
+-    mount_point.mnt_point = "/SD:";
+-    int res = fs_mount(&mount_point);
+-    if (res == FR_OK) 
+-    {
+-        LOG_INF("SD card mounted successfully");
+-    } 
+-    else 
+-    {
+-        LOG_ERR("f_mount failed: %d", res);
+-        return -1;
+-    }
+-    
+-    res = fs_mkdir("/SD:/audio");
+-
+-    if (res == FR_OK) 
+-    {
+-        LOG_INF("audio directory created successfully");
+-        initialize_audio_file(1);
+-    }
+-    else if (res == FR_EXIST) 
+-    {
+-        LOG_INF("audio directory already exists");
+-    }
+-    else 
+-    {
+-        LOG_INF("audio directory creation failed: %d", res);
+-    }
+-
+-    struct fs_dir_t audio_dir_entry;
+-    fs_dir_t_init(&audio_dir_entry);
+-    err = fs_opendir(&audio_dir_entry,"/SD:/audio");
+-    if (err) 
+-    {
+-        LOG_ERR("error while opening directory ",err);
+-        return -1;
+-    }
+-    LOG_INF("result of opendir: %d",err);
+-    
+-    struct fs_dirent file_count_entry;
+-    file_count = get_file_contents(&audio_dir_entry, &file_count_entry);
+-    file_count = 1;
+-    if (file_count < 0) 
+-    {
+-        LOG_ERR(" error getting file count");
+-        return -1;
+-    }
+-
+-    fs_closedir(&audio_dir_entry);
+-    // file_count++;
+-    LOG_INF("new num files: %d",file_count);
+-
+-    res = move_write_pointer(file_count); 
+-    if (res) 
+-    {
+-        LOG_ERR("erro while moving the write pointer");
+-        return -1;
+-    }
+-
+-    move_read_pointer(file_count);
+-
+-    if (res) 
+-    {
+-        LOG_ERR("error while moving the reader pointer\n");
+-        return -1;
+-    }
+-    LOG_INF("file count: %d",file_count);
+-   
+-    struct fs_dirent info_file_entry; //check if the info file exists. if not, generate new info file
+-    const char *info_path = "/SD:/info.txt";
+-    res = fs_stat(info_path,&info_file_entry); //for later
+-    if (res) 
+-    {
+-        res = create_file("info.txt");
+-        LOG_INF("result of info.txt creation: %d ",res);
+-    }
+-    LOG_INF("result of check: %d",res);
+-
+-	return 0;
+-}
+-
+-uint32_t get_file_size(uint8_t num)
+-{
+-    char *ptr = generate_new_audio_header(num);
+-    snprintf(current_full_path, sizeof(current_full_path), "%s%s", disk_mount_pt, ptr);
+-    k_free(ptr);
+-    struct fs_dirent entry;
+-    int res = fs_stat(&current_full_path,&entry);
+-    if (res)
+-    {
+-        LOG_ERR("invalid file\n");
+-        return 0;  
+-    }
+-    return (uint32_t)entry.size;
+-}
+-
+-int move_read_pointer(uint8_t num) 
+-{
+-    char *read_ptr = generate_new_audio_header(num);
+-    snprintf(read_buffer, sizeof(read_buffer), "%s%s", disk_mount_pt, read_ptr);
+-    k_free(read_ptr);
+-    struct fs_dirent entry; 
+-    int res = fs_stat(&read_buffer,&entry);
+-    if (res) 
+-    {
+-        LOG_ERR("invalid file\n");
+-        return -1;  
+-    }
+-    return 0;
+-}
+-
+-int move_write_pointer(uint8_t num) 
+-{
+-    char *write_ptr = generate_new_audio_header(num);
+-    snprintf(write_buffer, sizeof(write_buffer), "%s%s", disk_mount_pt, write_ptr);
+-    k_free(write_ptr);
+-    struct fs_dirent entry;
+-    int res = fs_stat(&write_buffer,&entry);
+-    if (res) 
+-    {
+-        LOG_ERR("invalid file\n");  
+-        return -1;  
+-    }
+-    return 0;   
+-}
+-
+-int create_file(const char *file_path)
+-{
+-    int ret = 0;
+-    snprintf(current_full_path, sizeof(current_full_path), "%s%s", disk_mount_pt, file_path);
+-	struct fs_file_t data_file;
+-	fs_file_t_init(&data_file);
+-	ret = fs_open(&data_file, current_full_path, FS_O_WRITE | FS_O_CREATE);
+-	if (ret) 
+-	{
+-        LOG_ERR("File creation failed %d", ret);
+-		return -2;
+-	} 
+-    fs_close(&data_file);
+-    return 0;
+-}
+-
+-int read_audio_data(uint8_t *buf, int amount,int offset) 
+-{
+-    struct fs_file_t read_file;
+-   	fs_file_t_init(&read_file); 
+-    uint8_t *temp_ptr = buf;
+-    struct fs_dirent entry;  
+-
+-	int rc = fs_open(&read_file, read_buffer, FS_O_READ | FS_O_RDWR);
+-    rc = fs_seek(&read_file,offset,FS_SEEK_SET);
+-    rc = fs_read(&read_file, temp_ptr, amount);
+-    // printk("read data :");
+-    // for (int i = 0; i < amount;i++) {
+-    //     printk("%d ",temp_ptr[i]);
+-    // }
+-    // printk("\n");
+-  	fs_close(&read_file);
+-
+-    return rc;
+-}
+-
+-int write_to_file(uint8_t *data,uint32_t length)
+-{
+-
+-    struct fs_file_t write_file;
+-	fs_file_t_init(&write_file);
+-    uint8_t *write_ptr = data;
+-   	fs_open(&write_file, write_buffer , FS_O_WRITE | FS_O_APPEND);
+-	fs_write(&write_file, write_ptr, length);
+-    fs_close(&write_file);
+-
+-    return 0;
+-}
+-    
+-int initialize_audio_file(uint8_t num) 
+-{
+-    char *header = generate_new_audio_header(num);
+-    if (header == NULL) 
+-    {
+-        return -1;
+-    }
+-    k_free(header);
+-    create_file(header);
+-    return 0;
+-}
+-
+-char* generate_new_audio_header(uint8_t num) 
+-{
+-    if (num > 99 ) return NULL;
+-    char *ptr_ = k_malloc(14);
+-    ptr_[0] = 'a';
+-    ptr_[1] = 'u';
+-    ptr_[2] = 'd';
+-    ptr_[3] = 'i';
+-    ptr_[4] = 'o';
+-    ptr_[5] = '/';
+-    ptr_[6] = 'a';
+-    ptr_[7] = 48 + (num / 10);
+-    ptr_[8] = 48 + (num % 10);
+-    ptr_[9] = '.';
+-    ptr_[10] = 't';
+-    ptr_[11] = 'x';
+-    ptr_[12] = 't';
+-    ptr_[13] = '\0';
+-
+-    return ptr_;
+-}
+-
+-int get_file_contents(struct fs_dir_t *zdp, struct fs_dirent *entry) 
+-{
+-   if (zdp->mp->fs->readdir(zdp, entry) ) 
+-   {
+-    return -1;
+-   }
+-   if (entry->name[0] == 0) 
+-   {
+-    return 0;
+-   }
+-   int count = 0;  
+-   file_num_array[count] = entry->size;
+-   LOG_INF("file numarray %d %d ",count,file_num_array[count]);
+-   LOG_INF("file name is %s ", entry->name);
+-   count++;
+-   while (zdp->mp->fs->readdir(zdp, entry) == 0 ) 
+-   {
+-        if (entry->name[0] ==  0 )
+-        {
+-            break;
+-        }
+-        file_num_array[count] = entry->size;
+-        LOG_INF("file numarray %d %d ",count,file_num_array[count]);
+-        LOG_INF("file name is %s ", entry->name);
+-        count++;
+-   }
+-   return count;
+-}
+-//we should clear instead of delete since we lose fifo structure 
+-int clear_audio_file(uint8_t num) 
+-{
+-    char *clear_header = generate_new_audio_header(num);
+-    snprintf(current_full_path, sizeof(current_full_path), "%s%s", disk_mount_pt, clear_header);
+-    k_free(clear_header);
+-    int res = fs_unlink(current_full_path);
+-    if (res) 
+-    {
+-        LOG_ERR("error deleting file");
+-        return -1;
+-    }
+-
+-    char *create_file_header = generate_new_audio_header(num);
+-    k_msleep(10);
+-    res = create_file(create_file_header);
+-    k_free(create_file_header);
+-    if (res) 
+-    {
+-        LOG_ERR("error creating file");
+-        return -1;
+-    }
+-
+-    return 0;
+-}
+-
+-int delete_audio_file(uint8_t num) 
+-{
+-    char *ptr = generate_new_audio_header(num);
+-    snprintf(current_full_path, sizeof(current_full_path), "%s%s", disk_mount_pt, ptr);
+-    k_free(ptr);
+-    int res = fs_unlink(current_full_path);
+-    if (res) 
+-    {
+-        printk("error deleting file in delete\n");
+-        return -1;
+-    }
+-
+-    return 0;
+-}
+-//the nuclear option.
+-int clear_audio_directory() 
+-{
+-    if (file_count == 1) 
+-    {
+-        return 0;
+-    }
+-    //check if all files are zero
+-    // char* path_ = "/SD:/audio";
+-    // clear_audio_file(file_count);
+-    int res=0;
+-    for (uint8_t i = file_count ; i > 0; i-- ) 
+-    {
+-        res = delete_audio_file(i);
+-        k_msleep(10);
+-        if (res) 
+-        {
+-            printk("error on %d\n",i);
+-            return -1;
+-        }  
+-    }
+-    res = fs_unlink("/SD:/audio");
+-    if (res) 
+-    {
+-        printk("error deleting file\n");
+-        return -1;
+-    }
+-    res = fs_mkdir("/SD:/audio");
+-    if (res) 
+-    {
+-        printk("failed to make directory \n");
+-        return -1;
+-    }
+-    res = create_file("audio/a01.txt");
+-    if (res) 
+-    {
+-        printk("failed to make new file in directory files\n");
+-        return -1;
+-    }
+-    printk("done with clearing\n");
+-
+-    file_count = 1;  
+-    move_write_pointer(1);
+-    return 0;
+-    //if files are cleared, then directory is oked for destrcution.
+-}
+\ No newline at end of file
+diff --git a/src/sdcard.h b/src/sdcard.h
+deleted file mode 100644
+index 7c5ed1a..0000000
+--- a/src/sdcard.h
++++ /dev/null
+@@ -1,96 +0,0 @@
+-#ifndef SDCARD_H
+-#define SDCARD_H
+-
+-/**
+- * @brief Mount the SD Card. Initializes the audio files 
+- *
+- * Mounts the SD Card and initializes the audio files. If the SD card does not contain those files, the 
+- * function will create them.
+- * 
+- * @return 0 if successful, negative errno code if error
+- */
+-int mount_sd_card(void);
+-
+-/**
+- * @brief Create a file
+- *
+- * Creates a file at the given path
+- * 
+- * @return 0 if successful, negative errno code if error
+- */
+-int create_file(const char* file_path);
+-//private
+-char* generate_new_audio_header(uint8_t num);
+-
+-/**
+- * @brief Initialize an audio file of number 1
+- *
+- * Initializes an audio file. It will be called a nn.txt, where nn is the number of the file.
+- *  example: initialize_audio_file(1) will create a file called a01.txt
+- * @return 0 if successful, negative errno code if error
+- */
+-int initialize_audio_file(uint8_t num);
+-
+-/**
+- * @brief Write to the current audio file specified by the write pointer
+- *
+- * 
+- * 
+- * @return number of bytes written
+- */
+-int write_to_file(uint8_t *data,uint32_t length);
+-
+-/**
+- * @brief Read from the current audio file specified by the read pointer
+- *
+- * 
+- * 
+- * @return number of bytes read
+- */
+-int read_audio_data(uint8_t *buf, int amount,int offset);
+-/**
+- * @brief Get the size of the specified audio file number
+- *
+- * 
+- * 
+- * @return size of the file in bytes
+- */
+-uint32_t get_file_size(uint8_t num);
+-
+-/**
+- * @brief Move the read pointer to the specified audio file position
+- *
+- * 
+- * 
+- * @return 0 if successful, negative errno code if error
+- */
+-int move_read_pointer(uint8_t num);
+-
+-/**
+- * @brief Move the write pointer to the specified audio file position
+- *
+- * 
+- * 
+- * @return 0 if successful, negative errno code if error
+- */
+-int move_write_pointer(uint8_t num);
+-
+-/**
+- * @brief Clear the specified audio file
+- *
+- * 
+- * 
+- * @return 0 if successful, negative errno code if error
+- */
+-int clear_audio_file(uint8_t num);
+-
+-/**
+- * @brief Clear the audio directory. 
+- *
+- * This deletes all audio files and leaves the audio directory with only one file left, a01.txt.
+- * This automatically moves the read and write pointers to a01.txt.
+- * @return 0 if successful, negative errno code if error
+- */
+-int clear_audio_directory();
+-
+-#endif
+diff --git a/src/speaker.c b/src/speaker.c
+deleted file mode 100644
+index 2587b54..0000000
+--- a/src/speaker.c
++++ /dev/null
+@@ -1,235 +0,0 @@
+-#include <zephyr/kernel.h>
+-#include <zephyr/sys/printk.h>
+-#include <zephyr/device.h>
+-#include <zephyr/drivers/i2s.h>
+-#include <zephyr/drivers/gpio.h>
+-#include <math.h>
+-#include <zephyr/logging/log.h>
+-#include <zephyr/logging/log_ctrl.h>
+-#include "speaker.h"
+-LOG_MODULE_REGISTER(speaker, CONFIG_LOG_DEFAULT_LEVEL);
+-
+-
+-#define MAX_BLOCK_SIZE   10000 //24000 * 2
+-
+-#define BLOCK_COUNT 2     
+-#define SAMPLE_FREQUENCY 8000
+-#define NUMBER_OF_CHANNELS 2
+-#define PACKET_SIZE 400
+-#define WORD_SIZE 16
+-#define NUM_CHANNELS 2
+-
+-#define PI 3.14159265358979323846
+-
+-#define MAX_HAPTIC_DURATION 5000
+-K_MEM_SLAB_DEFINE_STATIC(mem_slab, MAX_BLOCK_SIZE, BLOCK_COUNT, 2);
+-
+-struct device *audio_speaker;
+-
+-static void* rx_buffer;
+-static void* buzz_buffer;
+-static int16_t *ptr2;
+-static int16_t *clear_ptr;
+-
+-static uint16_t current_length;
+-static uint16_t offset;
+-
+-struct gpio_dt_spec haptic_gpio_pin = {.port = DEVICE_DT_GET(DT_NODELABEL(gpio1)), .pin=11, .dt_flags = GPIO_INT_DISABLE};
+-
+-int speaker_init() 
+-{
+-    LOG_INF("Speaker init");
+-    audio_speaker = device_get_binding("I2S_0");
+-    
+-    if (!device_is_ready(audio_speaker)) 
+-    {
+-        LOG_ERR("Speaker device is not supported : %s", audio_speaker->name);
+-        return -1;
+-    }
+-    struct i2s_config config = {
+-    .word_size= WORD_SIZE, //how long is one left/right word.
+-    .channels = NUMBER_OF_CHANNELS, //how many words in a frame 2 
+-    .format = I2S_FMT_DATA_FORMAT_LEFT_JUSTIFIED, //format
+-    // .format = I2S_FMT_DATA_FORMAT_I2S,
+-    .options = I2S_OPT_FRAME_CLK_MASTER | I2S_OPT_BIT_CLK_MASTER | I2S_OPT_BIT_CLK_GATED, //how to configure the mclock
+-    .frame_clk_freq = SAMPLE_FREQUENCY, /* Sampling rate */ 
+-    .mem_slab = &mem_slab,/* Memory slab to store rx/tx data */
+-    .block_size = MAX_BLOCK_SIZE,/* size of ONE memory block in bytes */
+-    .timeout = -1, /* Number of milliseconds to wait in case Tx queue is full or RX queue is empty, or 0, or SYS_FOREVER_MS */
+-    };
+-    int err = i2s_configure(audio_speaker, I2S_DIR_TX, &config);
+-	if (err) 
+-    {
+-		LOG_ERR("Failed to configure Speaker (%d)", err);
+-        return -1;
+-	}
+-    err = k_mem_slab_alloc(&mem_slab, &rx_buffer, K_MSEC(200));
+-	if (err)
+-    {
+-		LOG_INF("Failed to allocate memory for speaker%d)", err);
+-        return -1;
+-	}
+-
+-	err = k_mem_slab_alloc(&mem_slab, &buzz_buffer, K_MSEC(200));
+-	if (err) 
+-    {
+-		LOG_INF("Failed to allocate for chime (%d)", err);
+-        return -1;
+-	}
+-      
+-    memset(rx_buffer, 0, MAX_BLOCK_SIZE);
+-    memset(buzz_buffer, 0, MAX_BLOCK_SIZE);
+-    return 0;
+-}
+-
+-uint16_t speak(uint16_t len, const void *buf) //direct from bt
+-{
+-	uint16_t amount = 0;
+-    amount = len;
+-	if (len == 4)  //if stage 1 
+-	{
+-        current_length = ((uint32_t *)buf)[0];
+-	    LOG_INF("About to write %u bytes", current_length);
+-        ptr2 = (int16_t *)rx_buffer;
+-        clear_ptr = (int16_t *)rx_buffer;
+-	}
+-    else 
+-    { //if not stage 1
+-        if (current_length > PACKET_SIZE) 
+-        {
+-            LOG_INF("Data length: %u", len);
+-            current_length = current_length - PACKET_SIZE;
+-            LOG_INF("remaining data: %u", current_length);
+-
+-            for (int i = 0; i < (int)(len/2); i++) 
+-            {
+-                *ptr2++ = ((int16_t *)buf)[i];  
+-                ptr2++;
+-            }
+-            offset = offset + len;
+-        }
+-        else if (current_length < PACKET_SIZE) 
+-        {
+-            LOG_INF("entered the final stretch");
+-            LOG_INF("Data length: %u", len);
+-            current_length = current_length - len;
+-            LOG_INF("remaining data: %u", current_length);
+-            // memcpy(rx_buffer+offset, buf, len);
+-            for (int i = 0; i < len/2; i++) 
+-            {
+-                *ptr2++ = ((int16_t *)buf)[i];  
+-                ptr2++;
+-            }
+-            offset = offset + len;
+-            LOG_INF("offset: %u", offset);
+-            
+-            i2s_write(audio_speaker, rx_buffer,  MAX_BLOCK_SIZE);
+-            i2s_trigger(audio_speaker, I2S_DIR_TX, I2S_TRIGGER_START);// calls are probably non blocking       
+-	        i2s_trigger(audio_speaker, I2S_DIR_TX, I2S_TRIGGER_DRAIN);
+-
+-            //clear the buffer
+-            k_sleep(K_MSEC(4000));
+-            memset(clear_ptr, 0, MAX_BLOCK_SIZE);
+-
+-        }
+-
+-    }
+-    return amount;
+-}
+-
+-
+-void generate_gentle_chime(int16_t *buffer, int num_samples)
+-{
+-    LOG_INF("Generating gentle chime");//2500
+-    const float frequencies[] = {523.25, 659.25, 783.99, 1046.50}; // C5, E5, G5, C6
+-    const int num_freqs = sizeof(frequencies) / sizeof(frequencies[0]);//4
+-
+-    for (int i = 0; i < num_samples; i++) 
+-    { 
+-        float t = (float)i / SAMPLE_FREQUENCY;//0.000125
+-        float sample = 0;
+-        for (int j = 0; j < num_freqs; j++) 
+-        {
+-           sample += sinf(2 * PI * frequencies[j] * t) * (1.0 - t);
+-        }
+-        int16_t int_sample = (int16_t)(sample / num_freqs * 32767 * 0.5);
+-        buffer[i * NUM_CHANNELS] = int_sample;
+-        buffer[i * NUM_CHANNELS + 1] = int_sample;
+-    }
+-    LOG_INF("Done generating gentle chime");
+-}
+-
+-int play_boot_sound(void)
+-{
+-    int ret;
+-    int16_t *buffer = (int16_t *) buzz_buffer;
+-    const int samples_per_block = MAX_BLOCK_SIZE / (NUM_CHANNELS * sizeof(int16_t));
+-
+-    generate_gentle_chime(buffer, samples_per_block);
+-    LOG_INF("Writing to speaker");
+-    k_sleep(K_MSEC(100));
+-    ret = i2s_write(audio_speaker, buffer, MAX_BLOCK_SIZE);
+-    if (ret) 
+-    {
+-        LOG_ERR("Failed to write initial I2S data: %d", ret);
+-        return ret;
+-    }
+-
+-    ret = i2s_trigger(audio_speaker, I2S_DIR_TX, I2S_TRIGGER_START);
+-    if (ret) 
+-    {
+-        LOG_ERR("Failed to start I2S transmission: %d", ret);
+-        return ret;
+-    }  
+-    k_sleep(K_MSEC(500));  
+-
+-    ret = i2s_trigger(audio_speaker, I2S_DIR_TX, I2S_TRIGGER_DRAIN);
+-    if (ret != 0) 
+-    {
+-        LOG_ERR("Failed to drain I2S transmission: %d", ret);
+-        return ret;
+-    }
+-
+-    return 0;
+-}
+-
+-int init_haptic_pin() 
+-{
+-    if (gpio_is_ready_dt(&haptic_gpio_pin)) 
+-    {
+-		LOG_INF("Haptic Pin ready");
+-	}
+-    else 
+-    {
+-		LOG_ERR("Error setting up Haptic Pin");
+-        return -1;
+-	}
+-	if (gpio_pin_configure_dt(&haptic_gpio_pin, GPIO_OUTPUT_INACTIVE) < 0) 
+-    {
+-		LOG_ERR("Error setting up Haptic Pin");
+-        return -1;
+-	}
+-    gpio_pin_set_dt(&haptic_gpio_pin, 0);
+-
+-    return 0;
+-}
+-
+-void haptic_timer_callback(struct k_timer *timer);
+-
+-K_TIMER_DEFINE(my_status_timer, haptic_timer_callback, NULL);
+-
+-void haptic_timer_callback(struct k_timer *timer)
+-{
+-    gpio_pin_set_dt(&haptic_gpio_pin, 0);
+-}
+-
+-void play_haptic_milli(uint32_t duration)
+-{
+-    if (duration > MAX_HAPTIC_DURATION)
+-    {
+-        LOG_ERR("Duration is too long");
+-        return;
+-    }
+-    gpio_pin_set_dt(&haptic_gpio_pin, 1);
+-    k_timer_start(&my_status_timer, K_MSEC(duration), K_NO_WAIT);
+-}
+diff --git a/src/speaker.h b/src/speaker.h
+deleted file mode 100644
+index c678875..0000000
+--- a/src/speaker.h
++++ /dev/null
+@@ -1,53 +0,0 @@
+-#ifndef SPEAKER_H
+-#define SPEAKER_H
+-
+-#include <zephyr/kernel.h>
+-/**
+- * @brief Initialize the Speaker
+- *
+- * Initializes the speaker
+- *
+- * @return 0 if successful, negative errno code if error
+- */
+-int speaker_init();
+-
+-/**
+- * @brief Endpoint function for streaming audio
+- *
+- * Call this function in the following way (Via ble)
+- * 1. Send a 2 byte packet containing the audio data size
+- * 2. Send to the ble notify id 400 byte packets (with notify), with each 2 bytes being the audio data
+- * 3. Repeat step 2 until the audio data is sent. Then the speaker will automatically play the sound
+- * when the audio data sent is equal to the audio data size sent in step 1
+- * 
+- * @return The amount of data successfully sent in bytes.
+- */
+-uint16_t speak(uint16_t len, const void *buf);
+-
+-/**
+- * @brief Play a chime effect
+- *
+- * This function plays a chime effect. Use this to check if the speaker works correctly
+- *
+- * @return 0 if successful, negative errno code if error
+- */
+-int play_boot_sound();
+-
+-/**
+- * @brief Initialize the Haptic Pin
+- *
+- * On Call, activates the haptic pin
+- *
+- * @return 0 if successful, negative errno code if error
+- */
+-int init_haptic_pin();
+-
+-/**
+- * @brief Activate the haptic pin for a given duration
+- *
+- * On Call, starts the haptic pin, creating a vibration for the given duration in milliseconds
+- *
+- * @return a sound hopefully
+- */
+-void play_haptic_milli(uint32_t duration);
+-#endif
+\ No newline at end of file
+diff --git a/src/storage.c b/src/storage.c
+deleted file mode 100644
+index ded2382..0000000
+--- a/src/storage.c
++++ /dev/null
+@@ -1,343 +0,0 @@
+-#include <string.h>
+-#include <stdio.h>
+-#include <zephyr/kernel.h>
+-#include <zephyr/bluetooth/bluetooth.h>
+-#include <zephyr/bluetooth/uuid.h>
+-#include <zephyr/bluetooth/gatt.h>
+-#include <zephyr/bluetooth/l2cap.h>
+-#include <zephyr/bluetooth/services/bas.h>
+-#include <zephyr/logging/log.h>
+-#include <zephyr/sys/atomic.h>
+-#include "utils.h"
+-#include "sdcard.h"
+-#include "storage.h"
+-#include "transport.h"
+-
+-LOG_MODULE_REGISTER(storage, CONFIG_LOG_DEFAULT_LEVEL);
+-
+-#define MAX_PACKET_LENGTH 256
+-#define OPUS_ENTRY_LENGTH 80
+-#define FRAME_PREFIX_LENGTH 3
+-
+-#define READ_COMMAND 0
+-#define DELETE_COMMAND 1
+-#define NUKE 2
+-#define STOP_COMMAND 3
+-
+-#define INVALID_FILE_SIZE 3
+-#define ZERO_FILE_SIZE 4
+-#define INVALID_COMMAND 6
+-static void storage_config_changed_handler(const struct bt_gatt_attr *attr, uint16_t value);
+-static ssize_t storage_write_handler(struct bt_conn *conn, const struct bt_gatt_attr *attr, const void *buf, uint16_t len, uint16_t offset, uint8_t flags);
+-
+-static struct bt_uuid_128 storage_service_uuid = BT_UUID_INIT_128(BT_UUID_128_ENCODE(0x30295780, 0x4301, 0xEABD, 0x2904, 0x2849ADFEAE43));
+-static struct bt_uuid_128 storage_write_uuid = BT_UUID_INIT_128(BT_UUID_128_ENCODE(0x30295781, 0x4301, 0xEABD, 0x2904, 0x2849ADFEAE43));
+-static struct bt_uuid_128 storage_read_uuid = BT_UUID_INIT_128(BT_UUID_128_ENCODE(0x30295782, 0x4301, 0xEABD, 0x2904, 0x2849ADFEAE43));
+-static ssize_t storage_read_characteristic(struct bt_conn *conn, const struct bt_gatt_attr *attr, void *buf, uint16_t len, uint16_t offset);
+-
+-K_THREAD_STACK_DEFINE(storage_stack, 4096);
+-static struct k_thread storage_thread;
+-
+-extern uint8_t file_count;
+-extern uint32_t file_num_array[40];
+-void broadcast_storage_packet(struct k_work *work_item);
+-
+-static struct bt_gatt_attr storage_service_attr[] = {
+-    BT_GATT_PRIMARY_SERVICE(&storage_service_uuid),
+-    BT_GATT_CHARACTERISTIC(&storage_write_uuid.uuid, BT_GATT_CHRC_WRITE | BT_GATT_CHRC_NOTIFY, BT_GATT_PERM_WRITE, NULL, storage_write_handler, NULL),
+-    BT_GATT_CCC(storage_config_changed_handler, BT_GATT_PERM_READ | BT_GATT_PERM_WRITE),
+-    BT_GATT_CHARACTERISTIC(&storage_read_uuid.uuid, BT_GATT_CHRC_READ | BT_GATT_CHRC_NOTIFY, BT_GATT_PERM_READ, storage_read_characteristic, NULL, NULL),
+-    BT_GATT_CCC(storage_config_changed_handler, BT_GATT_PERM_READ | BT_GATT_PERM_WRITE),
+-
+-};
+-
+-struct bt_gatt_service storage_service = BT_GATT_SERVICE(storage_service_attr);
+-
+-bool storage_is_on = false;
+-
+-
+-static void storage_config_changed_handler(const struct bt_gatt_attr *attr, uint16_t value) 
+-{
+-
+-    storage_is_on = true;
+-    if (value == BT_GATT_CCC_NOTIFY)
+-    {
+-        LOG_INF("Client subscribed for notifications");
+-    }
+-    else if (value == 0)
+-    {
+-        LOG_INF("Client unsubscribed from notifications");
+-    }
+-    else
+-    {
+-        LOG_ERR("Invalid CCC value: %u", value);
+-    }
+-
+-}
+-
+-static ssize_t storage_read_characteristic(struct bt_conn *conn, const struct bt_gatt_attr *attr, void *buf, uint16_t len, uint16_t offset) 
+-{
+-    k_msleep(10);
+-    uint32_t amount[50] = {0};
+-    for (int i = 0; i < file_count; i++) {
+-           amount[i] = file_num_array[i];
+-        }
+-    ssize_t result = bt_gatt_attr_read(conn, attr, buf, len, offset, amount, 1 * sizeof(uint32_t));
+-    return result;
+-}
+-
+-uint8_t transport_started = 0;
+-
+-
+-static uint16_t packet_next_index = 0;
+-
+-static uint8_t storage_write_buffer[400];
+-
+-static uint32_t offset = 0;
+-static uint8_t index = 0;
+-static uint8_t current_packet_size = 0;
+-static uint8_t tx_buffer_size = 0;
+-static uint8_t stop_started = 0;
+-static uint8_t delete_started = 0;
+-static uint8_t current_read_num = 1;
+-uint32_t remaining_length = 0;
+-
+-static int setup_storage_tx() 
+-{
+-    transport_started = (uint8_t)0; 
+-    // offset = 0;
+-    LOG_INF("about to transmit storage\n");
+-    k_msleep(1000);
+-    int res = move_read_pointer(current_read_num);
+-    if (res) 
+-    {
+-        LOG_INF("bad pointer");
+-        transport_started = 0;
+-        current_read_num = 1;
+-        remaining_length = 0;
+-        return -1;
+-    }
+-
+-    LOG_INF("current read ptr %d",current_read_num);
+-   
+-    remaining_length = file_num_array[current_read_num-1];
+-    if(current_read_num == file_count) 
+-    {
+-        remaining_length = get_file_size(file_count);
+-    }
+-
+-    remaining_length = remaining_length - offset;
+-    
+-    // offset=offset_;
+-    LOG_INF("remaining length: %d",remaining_length);
+-    LOG_INF("offset: %d",offset);
+-    LOG_INF("file: %d",current_read_num);
+-    
+-    return 0;
+-
+-}
+-uint8_t delete_num = 0;
+-uint8_t nuke_started = 0;
+-static uint8_t parse_storage_command(void *buf,uint16_t len) 
+-{
+-
+-    if (len != 6 && len != 2) 
+-    {
+-        LOG_INF("invalid command");
+-        return INVALID_COMMAND;
+-    }
+-    const uint8_t command = ((uint8_t*)buf)[0];
+-    const uint8_t file_num = ((uint8_t*)buf)[1];
+-    uint32_t size = 0;
+-    if ( len == 6 ) 
+-    {
+-        size = ((uint8_t*)buf)[2] <<24 |((uint8_t*)buf)[3] << 16 | ((uint8_t*)buf)[4] << 8 | ((uint8_t*)buf)[5];
+-    }
+-    printk("command successful: command: %d file: %d size: %d \n",command,file_num,size);
+-
+-    if (file_num == 0) 
+-    {
+-        LOG_INF("invalid file count 0");
+-        return INVALID_FILE_SIZE;
+-    }
+-    if (file_num > file_count)  //invalid file count 
+-    {
+-        LOG_INF("invalid file count");
+-        return INVALID_FILE_SIZE;
+-    //add audio all?
+-    }
+-    if (command == READ_COMMAND) //read 
+-    { 
+-        uint32_t temp = file_num_array[file_num-1];
+-        if ( file_num == ( file_count ) ) 
+-        {
+-            LOG_INF("file_count == final file");
+-            offset = size;
+-            current_read_num = file_num;
+-            transport_started = 1;           
+-        }
+-        else if (temp == 0) 
+-        {
+-            LOG_INF("file size is 0");
+-            return ZERO_FILE_SIZE;
+-        }
+-        else if (size > temp) 
+-        {
+-            LOG_INF("requested size is too large");
+-            return 5;
+-        }
+-        else 
+-        {
+-            LOG_INF("valid command, setting up ");
+-            offset = size;
+-            current_read_num = file_num;
+-            transport_started = 1;
+-        }
+-    }
+-    else if (command == DELETE_COMMAND) 
+-    {
+-        delete_num = file_num;
+-        delete_started = 1;
+-    }
+-    else if (command == NUKE) 
+-    {
+-        nuke_started = 1;
+-    }
+-    else if (command == STOP_COMMAND) 
+-    {
+-        remaining_length = 80;
+-        stop_started = 1;
+-    }
+-    else 
+-    {
+-        LOG_INF("invalid command \n");
+-        return 6;
+-    }
+-    return 0;
+-
+-}
+-
+-static ssize_t storage_write_handler(struct bt_conn *conn, const struct bt_gatt_attr *attr, const void *buf, uint16_t len, uint16_t offset, uint8_t flags) 
+-{
+-    LOG_INF("about to schedule the storage");
+-    LOG_INF("was sent %d  ", ((uint8_t*)buf)[0] );
+-
+-    uint8_t result_buffer[1] = {0};
+-    uint8_t result = parse_storage_command(buf,len);
+-    result_buffer[0] = result; 
+-    LOG_INF("length of storage write: %d",len);
+-    LOG_INF("result: %d ", result);
+-    bt_gatt_notify(conn, &storage_service.attrs[1], &result_buffer,1);
+-    k_msleep(500);
+-    return len;
+-}
+-
+-static void write_to_gatt(struct bt_conn *conn) 
+-{
+-    uint32_t id = packet_next_index++;
+-    index = 0;
+-    storage_write_buffer[0] = id & 0xFF;
+-    storage_write_buffer[1] = (id >> 8) & 0xFF;
+-    storage_write_buffer[2] = index;
+-
+-    const uint32_t packet_size = MIN(remaining_length,OPUS_ENTRY_LENGTH);
+-
+-    int r = read_audio_data(storage_write_buffer+FRAME_PREFIX_LENGTH,packet_size,offset);
+-    offset = offset + packet_size;
+-    remaining_length = remaining_length - OPUS_ENTRY_LENGTH;
+-    index++;
+-
+-    int err = bt_gatt_notify(conn, &storage_service.attrs[1], &storage_write_buffer,packet_size+FRAME_PREFIX_LENGTH);
+-}
+-
+-// static void write_to_gatt(struct bt_conn *conn) { //unsafe. designed for max speeds. udp?
+-
+-//     uint32_t packet_size = MIN(remaining_length,OPUS_ENTRY_LENGTH*5);
+-
+-//     int r = read_audio_data(storage_write_buffer,packet_size,offset);
+-//     offset = offset + packet_size;
+-//     remaining_length = remaining_length - packet_size;
+-//     printk("remaining length%d\n",remaining_length);
+-//     int err = bt_gatt_notify(conn, &storage_service.attrs[1], &storage_write_buffer,packet_size);
+-// }
+-
+-void storage_write(void) 
+-{
+-  while (1) 
+-  {
+-    struct bt_conn *conn = get_current_connection();
+-    
+-    if ( transport_started ) 
+-    {
+-        LOG_INF("transpor started in side : %d",transport_started);
+-        setup_storage_tx();
+-    }
+-    //probably prefer to implement using work orders for delete,nuke,etc...
+-    if (delete_started) 
+-    { 
+-        LOG_INF("delete:%d\n",delete_started);
+-        int err = clear_audio_file(delete_num);
+-        if (err) 
+-        {
+-            printk("error clearing\n");
+-        }
+-        else 
+-        {
+-            uint8_t result_buffer[1] = {200};
+-            if (conn) 
+-            {
+-                bt_gatt_notify(get_current_connection(), &storage_service.attrs[1], &result_buffer,1);
+-            }
+-        }
+-        delete_started = 0;
+-        k_msleep(10);
+-    }
+-    if (nuke_started) 
+-    {
+-        clear_audio_directory();
+-        nuke_started = 0;
+-    }
+-    if (stop_started) 
+-    { 
+-        remaining_length = 0;
+-        stop_started = 0;
+-    }
+-
+-    if(remaining_length > 0 ) 
+-    {
+-        if (conn == NULL)  
+-        {
+-            LOG_ERR("invalid connection");
+-            remaining_length = 0;
+-            k_yield();
+-        }
+-        write_to_gatt(conn);
+-
+-        transport_started = 0;
+-       if (remaining_length == 0 ) 
+-        {
+-            if(stop_started)
+-            {
+-                stop_started = 0;
+-            }
+-            else
+-            {
+-                printk("done. attempting to download more files\n");
+-                uint8_t stop_result[1] = {100};
+-                int err = bt_gatt_notify(get_current_connection(), &storage_service.attrs[1], &stop_result,1);
+-                k_sleep(K_MSEC(10));
+-            }
+-
+-        }   
+-     }
+-     k_yield();
+-
+-  }
+-
+-}
+-
+-int storage_init() 
+-{
+-    k_thread_create(&storage_thread, storage_stack, K_THREAD_STACK_SIZEOF(storage_stack), (k_thread_entry_t)storage_write, NULL, NULL, NULL, K_PRIO_PREEMPT(7), 0, K_NO_WAIT);
+-    return 0;
+-}
+\ No newline at end of file
+diff --git a/src/storage.h b/src/storage.h
+deleted file mode 100644
+index 13c0366..0000000
+--- a/src/storage.h
++++ /dev/null
+@@ -1,14 +0,0 @@
+-#ifndef STORAGE_H
+-#define STORAGE_H
+-#include <stdbool.h>
+-
+-/**
+- * @brief Initializes the Storage Transport thread
+- *
+- * Initializes the Storage Transport thread
+- *
+- * @return 0 if successful, negative errno code if error
+- */
+-int storage_init();
+-
+-#endif
+\ No newline at end of file
+diff --git a/src/transport.c b/src/transport.c
+index 1a5c655..96071af 100644
+--- a/src/transport.c
++++ b/src/transport.c
+@@ -1,793 +1,1030 @@
+-#include <zephyr/kernel.h>
++#include <errno.h>
++#include <stdbool.h>
++#include <stdint.h>
++#include <string.h>
++
+ #include <zephyr/bluetooth/bluetooth.h>
+-#include <zephyr/bluetooth/uuid.h>
++#include <zephyr/bluetooth/conn.h>
+ #include <zephyr/bluetooth/gatt.h>
+-#include <zephyr/bluetooth/l2cap.h>
+ #include <zephyr/bluetooth/services/bas.h>
+-#include <zephyr/drivers/sensor.h>
+-#include <zephyr/drivers/gpio.h>
++#include <zephyr/bluetooth/uuid.h>
++#include <zephyr/kernel.h>
+ #include <zephyr/logging/log.h>
++#include <zephyr/settings/settings.h>
+ #include <zephyr/sys/atomic.h>
+ #include <zephyr/sys/ring_buffer.h>
+-#include "transport.h"
++
++#include "battery_smoother.h"
++#include "codec.h"
+ #include "config.h"
+-#include "utils.h"
+-// #include "nfc.h"
+-#include "speaker.h"
+-#include "button.h"
+-#include "sdcard.h"
+-#include "storage.h"
+-#include "button.h"
++#include "led.h"
+ #include "lib/battery/battery.h"
++#include "mic.h"
++#include "transport.h"
++#include "transport_safety.h"
+ 
+ LOG_MODULE_REGISTER(transport, CONFIG_LOG_DEFAULT_LEVEL);
+ 
+-extern bool is_connected;
+-extern bool storage_is_on;
+-extern uint8_t file_count;
+-extern uint32_t file_num_array[40];
+-struct bt_conn *current_connection = NULL;
+-uint16_t current_mtu = 0;
+-uint16_t current_package_index = 0; 
+-//
+-// Internal
+-//
+-
+-
+-static ssize_t audio_data_write_handler(struct bt_conn *conn, const struct bt_gatt_attr *attr, const void *buf, uint16_t len, uint16_t offset, uint8_t flags);
+-
+-static struct bt_conn_cb _callback_references;
+-static void audio_ccc_config_changed_handler(const struct bt_gatt_attr *attr, uint16_t value);
+-static ssize_t audio_data_read_characteristic(struct bt_conn *conn, const struct bt_gatt_attr *attr, void *buf, uint16_t len, uint16_t offset);
+-static ssize_t audio_codec_read_characteristic(struct bt_conn *conn, const struct bt_gatt_attr *attr, void *buf, uint16_t len, uint16_t offset);
+-
+-static void dfu_ccc_config_changed_handler(const struct bt_gatt_attr *attr, uint16_t value);
+-static ssize_t dfu_control_point_write_handler(struct bt_conn *conn, const struct bt_gatt_attr *attr, const void *buf, uint16_t len, uint16_t offset, uint8_t flags);
+-
+-//
+-// Service and Characteristic
+-//
+-// Audio service with UUID 19B10000-E8F2-537E-4F6C-D104768A1214
+-// exposes following characteristics:
+-// - Audio data (UUID 19B10001-E8F2-537E-4F6C-D104768A1214) to send audio data (read/notify)
+-// - Audio codec (UUID 19B10002-E8F2-537E-4F6C-D104768A1214) to send audio codec type (read)
+-// TODO: The current audio service UUID seems to come from old Intel sample code,
+-// we should change it to UUID 814b9b7c-25fd-4acd-8604-d28877beee6d
+-static struct bt_uuid_128 audio_service_uuid = BT_UUID_INIT_128(BT_UUID_128_ENCODE(0x19B10000, 0xE8F2, 0x537E, 0x4F6C, 0xD104768A1214));
+-static struct bt_uuid_128 audio_characteristic_data_uuid = BT_UUID_INIT_128(BT_UUID_128_ENCODE(0x19B10001, 0xE8F2, 0x537E, 0x4F6C, 0xD104768A1214));
+-static struct bt_uuid_128 audio_characteristic_format_uuid = BT_UUID_INIT_128(BT_UUID_128_ENCODE(0x19B10002, 0xE8F2, 0x537E, 0x4F6C, 0xD104768A1214));
+-static struct bt_uuid_128 audio_characteristic_speaker_uuid = BT_UUID_INIT_128(BT_UUID_128_ENCODE(0x19B10003, 0xE8F2, 0x537E, 0x4F6C, 0xD104768A1214));
+-
++#define BATTERY_REFRESH_INTERVAL 15000
++#define AUDIO_VALUE_ATTRIBUTE_INDEX 2u
++#define AUDIO_NOTIFY_RETRY_LIMIT 8u
++#define AUDIO_NOTIFY_RETRY_DELAY_MS 1u
++#define ADVERTISING_RESTART_RETRY_LIMIT 8u
++#define ADVERTISING_RESTART_DELAY_MS 100u
++#define ADVERTISING_RECOVERY_DELAY_MS 5000u
++#define TX_RECORD_HEADER_BYTES 2u
++
++static struct bt_conn *current_connection;
++static struct k_spinlock connection_lock;
++static atomic_t audio_stream_active;
++static atomic_t audio_epoch;
++static atomic_t pending_audio_error;
++static atomic_t requested_audio_state;
++static atomic_t audio_request_epoch;
++static struct k_spinlock audio_request_lock;
++static atomic_t fresh_audio_ccc_authorized;
++static struct bt_conn *fresh_audio_ccc_connection;
++static atomic_t transport_ready;
++static atomic_t advertising_restart_attempts;
++
++static struct bt_uuid_128 audio_service_uuid =
++    BT_UUID_INIT_128(BT_UUID_128_ENCODE(
++        0x19B10000, 0xE8F2, 0x537E, 0x4F6C, 0xD104768A1214));
++static struct bt_uuid_128 audio_characteristic_data_uuid =
++    BT_UUID_INIT_128(BT_UUID_128_ENCODE(
++        0x19B10001, 0xE8F2, 0x537E, 0x4F6C, 0xD104768A1214));
++static struct bt_uuid_128 audio_characteristic_format_uuid =
++    BT_UUID_INIT_128(BT_UUID_128_ENCODE(
++        0x19B10002, 0xE8F2, 0x537E, 0x4F6C, 0xD104768A1214));
++
++static void audio_ccc_config_changed_handler(
++    const struct bt_gatt_attr *attr,
++    uint16_t value);
++static ssize_t audio_ccc_authorize_write(
++    struct bt_conn *conn,
++    const struct bt_gatt_attr *attr,
++    uint16_t value);
++static bool audio_ccc_authorized_match(
++    struct bt_conn *conn,
++    const struct bt_gatt_attr *attr);
++static ssize_t audio_data_read_characteristic(
++    struct bt_conn *conn,
++    const struct bt_gatt_attr *attr,
++    void *buf,
++    uint16_t len,
++    uint16_t offset);
++static ssize_t audio_codec_read_characteristic(
++    struct bt_conn *conn,
++    const struct bt_gatt_attr *attr,
++    void *buf,
++    uint16_t len,
++    uint16_t offset);
++
++static struct _bt_gatt_ccc audio_ccc =
++    BT_GATT_CCC_INITIALIZER(
++        audio_ccc_config_changed_handler,
++        audio_ccc_authorize_write,
++        audio_ccc_authorized_match);
++
++/*
++ * These encrypted permissions create a bonded link before codec reads or
++ * audio subscription. This is not owner authentication: without a physical
++ * enrollment/erase gesture, the first nearby central can still become the
++ * sole stored bond.
++ */
+ static struct bt_gatt_attr audio_service_attr[] = {
+     BT_GATT_PRIMARY_SERVICE(&audio_service_uuid),
+-    BT_GATT_CHARACTERISTIC(&audio_characteristic_data_uuid.uuid, BT_GATT_CHRC_READ | BT_GATT_CHRC_NOTIFY, BT_GATT_PERM_READ, audio_data_read_characteristic, NULL, NULL),
+-    BT_GATT_CCC(audio_ccc_config_changed_handler, BT_GATT_PERM_READ | BT_GATT_PERM_WRITE),
+-    BT_GATT_CHARACTERISTIC(&audio_characteristic_format_uuid.uuid, BT_GATT_CHRC_READ, BT_GATT_PERM_READ, audio_codec_read_characteristic, NULL, NULL),
+-// #ifdef CONFIG_ENABLE_SPEAKER
+-//     BT_GATT_CHARACTERISTIC(&audio_characteristic_speaker_uuid.uuid, BT_GATT_CHRC_WRITE | BT_GATT_CHRC_NOTIFY, BT_GATT_PERM_WRITE, NULL, audio_data_write_handler, NULL),
+-//     BT_GATT_CCC(audio_ccc_config_changed_handler, BT_GATT_PERM_READ | BT_GATT_PERM_WRITE), //
+-// #endif
+-    
++    BT_GATT_CHARACTERISTIC(
++        &audio_characteristic_data_uuid.uuid,
++        BT_GATT_CHRC_READ | BT_GATT_CHRC_NOTIFY,
++        BT_GATT_PERM_READ_ENCRYPT,
++        audio_data_read_characteristic,
++        NULL,
++        NULL),
++    BT_GATT_CCC_MANAGED(
++        &audio_ccc,
++        BT_GATT_PERM_READ_ENCRYPT | BT_GATT_PERM_WRITE_ENCRYPT),
++    BT_GATT_CHARACTERISTIC(
++        &audio_characteristic_format_uuid.uuid,
++        BT_GATT_CHRC_READ,
++        BT_GATT_PERM_READ_ENCRYPT,
++        audio_codec_read_characteristic,
++        NULL,
++        NULL),
+ };
+ 
+-static struct bt_gatt_service audio_service = BT_GATT_SERVICE(audio_service_attr);
+-
+-// Nordic Legacy DFU service with UUID 00001530-1212-EFDE-1523-785FEABCD123
+-// exposes following characteristics:
+-// - Control point (UUID 00001531-1212-EFDE-1523-785FEABCD123) to start the OTA update process (write/notify)
+-static struct bt_uuid_128 dfu_service_uuid = BT_UUID_INIT_128(BT_UUID_128_ENCODE(0x00001530, 0x1212, 0xEFDE, 0x1523, 0x785FEABCD123));
+-static struct bt_uuid_128 dfu_control_point_uuid = BT_UUID_INIT_128(BT_UUID_128_ENCODE(0x00001531, 0x1212, 0xEFDE, 0x1523, 0x785FEABCD123));
++static struct bt_gatt_service audio_service =
++    BT_GATT_SERVICE(audio_service_attr);
+ 
+-static struct bt_gatt_attr dfu_service_attr[] = {
+-    BT_GATT_PRIMARY_SERVICE(&dfu_service_uuid),
+-    BT_GATT_CHARACTERISTIC(&dfu_control_point_uuid.uuid, BT_GATT_CHRC_WRITE | BT_GATT_CHRC_NOTIFY, BT_GATT_PERM_WRITE, NULL, dfu_control_point_write_handler, NULL),
+-    BT_GATT_CCC(dfu_ccc_config_changed_handler, BT_GATT_PERM_READ | BT_GATT_PERM_WRITE),
++static const struct bt_data advertising_data[] = {
++    BT_DATA_BYTES(BT_DATA_FLAGS,
++                  BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR),
++    BT_DATA(BT_DATA_UUID128_ALL, audio_service_uuid.val,
++            sizeof(audio_service_uuid.val)),
++    BT_DATA(BT_DATA_NAME_COMPLETE, CONFIG_BT_DEVICE_NAME,
++            sizeof(CONFIG_BT_DEVICE_NAME) - 1u),
+ };
+ 
+-static struct bt_gatt_service dfu_service = BT_GATT_SERVICE(dfu_service_attr);
+-//Acceleration data
+-//this code activates the onboard accelerometer. some cute ideas may include shaking the necklace to color strobe
+-//
+-static struct sensors mega_sensor;
+-static struct device *lsm6dsl_dev;
+-//Arbritrary uuid, feel free to change
+-static struct bt_uuid_128 accel_uuid = BT_UUID_INIT_128(BT_UUID_128_ENCODE(0x32403790,0x0000,0x1000,0x7450,0xBF445E5829A2));
+-static struct bt_uuid_128 accel_uuid_x = BT_UUID_INIT_128(BT_UUID_128_ENCODE(0x32403791,0x0000,0x1000,0x7450,0xBF445E5829A2));
+-
+-static void accel_ccc_config_changed_handler(const struct bt_gatt_attr *attr, uint16_t value);
+-static ssize_t accel_data_read_characteristic(struct bt_conn *conn, const struct bt_gatt_attr *attr, void *buf, uint16_t len, uint16_t offset);
+-
+-static struct bt_gatt_attr accel_service_attr[] = {
+-    BT_GATT_PRIMARY_SERVICE(&accel_uuid),//primary description
+-    BT_GATT_CHARACTERISTIC(&accel_uuid_x.uuid, BT_GATT_CHRC_READ | BT_GATT_CHRC_NOTIFY, BT_GATT_PERM_READ, accel_data_read_characteristic, NULL, NULL),//data type
+-    BT_GATT_CCC(accel_ccc_config_changed_handler, BT_GATT_PERM_READ | BT_GATT_PERM_WRITE),//scheduler
++static const struct bt_data scan_response_data[] = {
++    BT_DATA_BYTES(
++        BT_DATA_UUID16_ALL,
++        BT_UUID_16_ENCODE(BT_UUID_BAS_VAL),
++        BT_UUID_16_ENCODE(BT_UUID_DIS_VAL)),
+ };
+-static struct bt_gatt_service accel_service = BT_GATT_SERVICE(accel_service_attr);
+ 
+-static ssize_t accel_data_read_characteristic(struct bt_conn *conn, const struct bt_gatt_attr *attr, void *buf, uint16_t len, uint16_t offset)
++static struct bt_conn *acquire_current_connection(void)
+ {
+-    LOG_INF("Acceleration data read characteristic");
+-    int axis_mode = 6; //3 for accel, 6 for (also) gyro
+-    return bt_gatt_attr_read(conn, attr, buf, len, offset, &axis_mode, sizeof(axis_mode));
++    k_spinlock_key_t key = k_spin_lock(&connection_lock);
++    struct bt_conn *conn = current_connection;
++    if (conn != NULL) {
++        conn = bt_conn_ref(conn);
++    }
++    k_spin_unlock(&connection_lock, key);
++    return conn;
+ }
+ 
++static bool connection_is_current(struct bt_conn *conn)
++{
++    k_spinlock_key_t key = k_spin_lock(&connection_lock);
++    bool current =
++        conn != NULL && current_connection == conn;
++    k_spin_unlock(&connection_lock, key);
++    return current;
++}
+ 
+-#define ACCEL_REFRESH_INTERVAL 1000 // 1.0 seconds
+-
+-void broadcast_accel(struct k_work *work_item);
+-K_WORK_DELAYABLE_DEFINE(accel_work, broadcast_accel);
+-
+-void broadcast_accel(struct k_work *work_item) {
++static void clear_fresh_audio_authorization(void)
++{
++    k_spinlock_key_t key = k_spin_lock(&connection_lock);
++    fresh_audio_ccc_connection = NULL;
++    atomic_clear(&fresh_audio_ccc_authorized);
++    k_spin_unlock(&connection_lock, key);
++}
+ 
+-    sensor_sample_fetch_chan(lsm6dsl_dev, SENSOR_CHAN_ACCEL_XYZ);
+-	sensor_channel_get(lsm6dsl_dev, SENSOR_CHAN_ACCEL_X, &mega_sensor.a_x);
+-	sensor_channel_get(lsm6dsl_dev, SENSOR_CHAN_ACCEL_Y, &mega_sensor.a_y);
+-	sensor_channel_get(lsm6dsl_dev, SENSOR_CHAN_ACCEL_Z, &mega_sensor.a_z);
++static bool bind_fresh_audio_authorization(struct bt_conn *conn)
++{
++    k_spinlock_key_t key = k_spin_lock(&connection_lock);
++    bool authorized =
++        conn != NULL && current_connection == conn;
++    fresh_audio_ccc_connection = authorized ? conn : NULL;
++    atomic_set(&fresh_audio_ccc_authorized, authorized ? 1 : 0);
++    k_spin_unlock(&connection_lock, key);
++    return authorized;
++}
+ 
+-    sensor_sample_fetch_chan(lsm6dsl_dev, SENSOR_CHAN_GYRO_XYZ);
+-	sensor_channel_get(lsm6dsl_dev, SENSOR_CHAN_GYRO_X, &mega_sensor.g_x);
+-	sensor_channel_get(lsm6dsl_dev, SENSOR_CHAN_GYRO_Y, &mega_sensor.g_y);
+-	sensor_channel_get(lsm6dsl_dev, SENSOR_CHAN_GYRO_Z, &mega_sensor.g_z);
++static bool connection_has_fresh_audio_authorization(
++    struct bt_conn *conn)
++{
++    k_spinlock_key_t key = k_spin_lock(&connection_lock);
++    bool authorized =
++        conn != NULL &&
++        current_connection == conn &&
++        fresh_audio_ccc_connection == conn &&
++        atomic_get(&fresh_audio_ccc_authorized) != 0;
++    k_spin_unlock(&connection_lock, key);
++    return authorized;
++}
+ 
+-   //only time mega sensor is changed is through here (hopefully),  so no chance of race condition
+-    int err = bt_gatt_notify(current_connection, &accel_service.attrs[1], &mega_sensor, sizeof(mega_sensor));
+-    if (err) 
+-    {
+-       LOG_ERR("Error updating Accelerometer data");
+-    }
+-    k_work_reschedule(&accel_work, K_MSEC(ACCEL_REFRESH_INTERVAL));
++static bool audio_capture_authorized(struct bt_conn *conn)
++{
++    return connection_has_fresh_audio_authorization(conn) &&
++           bt_gatt_is_subscribed(
++               conn,
++               &audio_service.attrs[AUDIO_VALUE_ATTRIBUTE_INDEX],
++               BT_GATT_CCC_NOTIFY);
+ }
+ 
++static void restart_advertising(struct k_work *work_item);
++K_WORK_DELAYABLE_DEFINE(advertising_restart_work, restart_advertising);
+ 
+-//use d4,d5
+-static void accel_ccc_config_changed_handler(const struct bt_gatt_attr *attr, uint16_t value) 
++static void restart_advertising(struct k_work *work_item)
+ {
+-    if (value == BT_GATT_CCC_NOTIFY)
+-    {
+-        LOG_INF("Client subscribed for notifications");
+-    }
+-    else if (value == 0)
+-    {
+-        LOG_INF("Client unsubscribed from notifications");
+-    }
+-    else
+-    {
+-        LOG_ERR("Invalid CCC value: %u", value);
++    ARG_UNUSED(work_item);
++    if (!atomic_get(&transport_ready)) {
++        return;
+     }
+-}
+ 
+-int accel_start() 
+-{
+-    struct sensor_value odr_attr;
+-    lsm6dsl_dev = DEVICE_DT_GET_ONE(st_lsm6dsl);
+-    k_msleep(50);
+-    if (lsm6dsl_dev == NULL) 
+-    {
+-        LOG_ERR("Could not get LSM6DSL device");
+-        return 0;
+-	}
+-    if (!device_is_ready(lsm6dsl_dev)) 
+-    {
+-		LOG_ERR("LSM6DSL: not ready");
+-		return 0;
+-	}
+-    odr_attr.val1 = 52;
+-	odr_attr.val2 = 0;
++    struct bt_conn *conn = acquire_current_connection();
++    if (conn != NULL) {
++        bt_conn_unref(conn);
++        return;
++    }
+ 
+-    if (sensor_attr_set(lsm6dsl_dev, SENSOR_CHAN_ACCEL_XYZ,
+-		SENSOR_ATTR_SAMPLING_FREQUENCY, &odr_attr) < 0) 
+-    {
+-	    LOG_ERR("Cannot set sampling frequency for Accelerometer.");
+-		return 0;
+-	}
+-    if (sensor_attr_set(lsm6dsl_dev, SENSOR_CHAN_GYRO_XYZ,
+-		SENSOR_ATTR_SAMPLING_FREQUENCY, &odr_attr) < 0) {
+-	    LOG_ERR("Cannot set sampling frequency for gyro.");
+-	    return 0;
+-	}
+-    if (sensor_sample_fetch(lsm6dsl_dev) < 0) 
+-    {
+-        LOG_ERR("Sensor sample update error");
+-        return 0;
+-	}
++    int err = bt_le_adv_start(
++        BT_LE_ADV_CONN,
++        advertising_data,
++        ARRAY_SIZE(advertising_data),
++        scan_response_data,
++        ARRAY_SIZE(scan_response_data));
++    if (err == 0 || err == -EALREADY) {
++        atomic_clear(&advertising_restart_attempts);
++        LOG_INF("Connectable advertising restored");
++        return;
++    }
+ 
+-    LOG_INF("Accelerometer is ready for use \n");
+-    
+-    return 1;
++    atomic_val_t attempt =
++        atomic_inc(&advertising_restart_attempts) + 1;
++    if (attempt < ADVERTISING_RESTART_RETRY_LIMIT) {
++        LOG_WRN("Advertising restart attempt %d failed: %d",
++                (int)attempt, err);
++        (void)k_work_reschedule(
++            &advertising_restart_work,
++            K_MSEC(ADVERTISING_RESTART_DELAY_MS));
++    } else {
++        LOG_ERR("Advertising restart exhausted after %d attempts: %d",
++                (int)attempt, err);
++        /*
++         * Bound each fast retry burst without permanently stranding the
++         * device after a transient controller/resource fault.
++         */
++        atomic_clear(&advertising_restart_attempts);
++        (void)k_work_reschedule(
++            &advertising_restart_work,
++            K_MSEC(ADVERTISING_RECOVERY_DELAY_MS));
++    }
+ }
+-// Advertisement data
+-static const struct bt_data bt_ad[] = {
+-    BT_DATA_BYTES(BT_DATA_FLAGS, (BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR)),
+-    BT_DATA(BT_DATA_UUID128_ALL, audio_service_uuid.val, sizeof(audio_service_uuid.val)),
+-    BT_DATA(BT_DATA_NAME_COMPLETE, "Friend", sizeof("Friend") - 1),
+-};
+-
+-// Scan response data
+-static const struct bt_data bt_sd[] = {
+-    BT_DATA_BYTES(BT_DATA_UUID16_ALL, BT_UUID_16_ENCODE(BT_UUID_DIS_VAL)),
+-    BT_DATA(BT_DATA_UUID128_ALL, dfu_service_uuid.val, sizeof(dfu_service_uuid.val)),
+-};
+ 
+-//
+-// State and Characteristics
+-//
++static uint8_t tx_queue[
++    NETWORK_RING_BUF_SIZE *
++    (CODEC_OUTPUT_MAX_BYTES + TX_RECORD_HEADER_BYTES)];
++static struct ring_buf tx_ring_buf;
++static struct k_spinlock tx_ring_lock;
++K_SEM_DEFINE(tx_data_ready, 0, 1);
+ 
+-static void audio_ccc_config_changed_handler(const struct bt_gatt_attr *attr, uint16_t value)
++static void reset_audio_queues(void)
+ {
+-    if (value == BT_GATT_CCC_NOTIFY)
+-    {
+-        LOG_INF("Client subscribed for notifications");
+-    }
+-    else if (value == 0)
+-    {
+-        LOG_INF("Client unsubscribed from notifications");
+-    }
+-    else
+-    {
+-        LOG_INF("Invalid CCC value: %u", value);
+-    }
++    atomic_clear(&audio_stream_active);
++    codec_reset();
++
++    k_spinlock_key_t key = k_spin_lock(&tx_ring_lock);
++    ring_buf_reset(&tx_ring_buf);
++    memset(tx_queue, 0, sizeof(tx_queue));
++    atomic_inc(&audio_epoch);
++    k_spin_unlock(&tx_ring_lock, key);
++    k_sem_give(&tx_data_ready);
+ }
+ 
+-static ssize_t audio_data_read_characteristic(struct bt_conn *conn, const struct bt_gatt_attr *attr, void *buf, uint16_t len, uint16_t offset)
++static int stop_audio_pipeline(void)
+ {
+-    LOG_DBG("audio_data_read_characteristic");
+-    return bt_gatt_attr_read(conn, attr, buf, len, offset, NULL, 0);
++    atomic_clear(&audio_stream_active);
++    int mic_error = mic_stop();
++    reset_audio_queues();
++    if (mic_error != 0) {
++        /*
++         * Keep the recording indicator lit if hardware stop is unconfirmed.
++         */
++        return mic_error;
++    }
++    return set_led_blue(false);
+ }
+ 
+-static ssize_t audio_codec_read_characteristic(struct bt_conn *conn, const struct bt_gatt_attr *attr, void *buf, uint16_t len, uint16_t offset)
++static int start_audio_pipeline(struct bt_conn *authorized_connection)
+ {
+-    uint8_t value[1] = {CODEC_ID};
+-    LOG_DBG("audio_codec_read_characteristic %d", CODEC_ID);
+-    return bt_gatt_attr_read(conn, attr, buf, len, offset, value, sizeof(value));
++    int err = stop_audio_pipeline();
++    if (err != 0) {
++        return err;
++    }
++    err = set_led_blue(true);
++    if (err != 0) {
++        return err;
++    }
++    /*
++     * Revalidate the same current connection and its fresh CCC write at the
++     * last possible point before powering PDM. Subscription state alone is
++     * insufficient because a restored CCC or replacement connection can
++     * otherwise race an already queued start request.
++     */
++    if (!audio_capture_authorized(authorized_connection)) {
++        (void)set_led_blue(false);
++        return -EACCES;
++    }
++    err = mic_start();
++    if (err != 0) {
++        (void)set_led_blue(false);
++        reset_audio_queues();
++        return err;
++    }
++    return 0;
+ }
+ 
+-static ssize_t audio_data_write_handler(struct bt_conn *conn, const struct bt_gatt_attr *attr, const void *buf, uint16_t len, uint16_t offset, uint8_t flags)
++bool transport_audio_is_active(void)
+ {
+-    uint16_t amount = 0;
+-    bt_gatt_notify(conn, attr, &amount, sizeof(amount));
+-    amount = speak(len, buf);
+-    return len;
++    return atomic_get(&audio_stream_active) != 0;
+ }
+ 
+-//
+-// DFU Service Handlers
+-//
++K_SEM_DEFINE(audio_control_event, 0, 1);
++K_THREAD_STACK_DEFINE(audio_control_stack, 2048);
++static struct k_thread audio_control_thread;
+ 
+-static void dfu_ccc_config_changed_handler(const struct bt_gatt_attr *attr, uint16_t value)
++static void request_audio_state(bool enabled, int error)
+ {
+-    if (value == BT_GATT_CCC_NOTIFY)
+-    {
+-        LOG_INF("Client subscribed for notifications");
+-    }
+-    else if (value == 0)
+-    {
+-        LOG_INF("Client unsubscribed from notifications");
++    k_spinlock_key_t key = k_spin_lock(&audio_request_lock);
++    if (!enabled) {
++        atomic_clear(&audio_stream_active);
+     }
+-    else
+-    {
+-        LOG_INF("Invalid CCC value: %u", value);
++    atomic_set(&requested_audio_state, enabled ? 1 : 0);
++    atomic_inc(&audio_request_epoch);
++    k_spin_unlock(&audio_request_lock, key);
++    if (error != 0) {
++        atomic_set(&pending_audio_error, error);
+     }
++    k_sem_give(&audio_control_event);
+ }
+ 
+-static ssize_t dfu_control_point_write_handler(struct bt_conn *conn, const struct bt_gatt_attr *attr, const void *buf, uint16_t len, uint16_t offset, uint8_t flags)
++static ssize_t audio_ccc_authorize_write(
++    struct bt_conn *conn,
++    const struct bt_gatt_attr *attr,
++    uint16_t value)
+ {
+-    LOG_INF("dfu_control_point_write_handler");
+-    if (len == 1 && ((uint8_t *)buf)[0] == 0x06)
+-    {
+-        NRF_POWER->GPREGRET = 0xA8;
+-        NVIC_SystemReset();
++    ARG_UNUSED(attr);
++    if (value != 0u && value != BT_GATT_CCC_NOTIFY) {
++        return BT_GATT_ERR(BT_ATT_ERR_VALUE_NOT_ALLOWED);
+     }
+-    else if (len == 2 && ((uint8_t *)buf)[0] == 0x01)
+-    {
+-        uint8_t notification_value = 0x10;
+-        bt_gatt_notify(conn, attr, &notification_value, sizeof(notification_value));
+ 
+-        NRF_POWER->GPREGRET = 0xA8;
+-        NVIC_SystemReset();
++    bool authorized =
++        value == BT_GATT_CCC_NOTIFY &&
++        bind_fresh_audio_authorization(conn);
++    if (!authorized) {
++        clear_fresh_audio_authorization();
++    }
++    /*
++     * This callback runs only for an actual CCC write from the current
++     * encrypted connection. Restored bonded CCC state never reaches it. If
++     * the stored CCC was already NOTIFY, cfg_changed will not run again, so
++     * explicitly authorize that already-committed value here.
++     */
++    if (!authorized) {
++        request_audio_state(false, value == 0u ? 0 : -EACCES);
++    } else if (bt_gatt_is_subscribed(
++                   conn,
++                   &audio_service.attrs[AUDIO_VALUE_ATTRIBUTE_INDEX],
++                   BT_GATT_CCC_NOTIFY)) {
++        request_audio_state(true, 0);
+     }
+-    return len;
++    return sizeof(value);
+ }
+ 
++static bool audio_ccc_authorized_match(
++    struct bt_conn *conn,
++    const struct bt_gatt_attr *attr)
++{
++    ARG_UNUSED(attr);
++    return connection_has_fresh_audio_authorization(conn);
++}
+ 
++static void audio_control(
++    void *unused1,
++    void *unused2,
++    void *unused3)
++{
++    ARG_UNUSED(unused1);
++    ARG_UNUSED(unused2);
++    ARG_UNUSED(unused3);
++
++    while (true) {
++        (void)k_sem_take(&audio_control_event, K_FOREVER);
++        int pending_error =
++            (int)atomic_set(&pending_audio_error, 0);
++        if (pending_error != 0) {
++            LOG_ERR("Audio pipeline faulted: %d", pending_error);
++        }
+ 
+-//
+-// Battery Service Handlers
+-//
+-
+-#define BATTERY_REFRESH_INTERVAL 15000 // 15 seconds
+-
+-void broadcast_battery_level(struct k_work *work_item);
+-
+-K_WORK_DELAYABLE_DEFINE(battery_work, broadcast_battery_level);
+-
+-void broadcast_battery_level(struct k_work *work_item) {
+-    uint16_t battery_millivolt;
+-    uint8_t battery_percentage;
+-    if (battery_get_millivolt(&battery_millivolt) == 0 &&
+-        battery_get_percentage(&battery_percentage, battery_millivolt) == 0) {
+-
++        k_spinlock_key_t key =
++            k_spin_lock(&audio_request_lock);
++        bool requested =
++            atomic_get(&requested_audio_state) != 0;
++        atomic_val_t request_epoch =
++            atomic_get(&audio_request_epoch);
++        k_spin_unlock(&audio_request_lock, key);
++
++        if (!requested) {
++            int stop_error = stop_audio_pipeline();
++            if (stop_error != 0) {
++                LOG_ERR("Audio pipeline stop failed: %d", stop_error);
++            }
++            continue;
++        }
+ 
+-        LOG_INF("Battery at %d mV (capacity %d%%)", battery_millivolt, battery_percentage);
++        struct bt_conn *conn = acquire_current_connection();
++        if (!audio_capture_authorized(conn)) {
++            if (conn != NULL) {
++                bt_conn_unref(conn);
++            }
++            request_audio_state(false, -EACCES);
++            continue;
++        }
+ 
++        int start_error = start_audio_pipeline(conn);
++        if (start_error != 0) {
++            bt_conn_unref(conn);
++            request_audio_state(false, start_error);
++            continue;
++        }
+ 
+-        // Use the Zephyr BAS function to set (and notify) the battery level
+-        int err = bt_bas_set_battery_level(battery_percentage);
+-        if (err) {
+-            LOG_ERR("Error updating battery level: %d", err);
++        key = k_spin_lock(&audio_request_lock);
++        bool commit =
++            atomic_get(&requested_audio_state) != 0 &&
++            atomic_get(&audio_request_epoch) == request_epoch &&
++            audio_capture_authorized(conn);
++        if (commit) {
++            atomic_set(&audio_stream_active, 1);
++        }
++        k_spin_unlock(&audio_request_lock, key);
++        bt_conn_unref(conn);
++        if (commit) {
++            LOG_INF("Encrypted audio capture started");
++        } else {
++            int stop_error = stop_audio_pipeline();
++            if (stop_error != 0) {
++                LOG_ERR("Superseded audio start could not stop: %d",
++                        stop_error);
++            }
+         }
+-    } else {
+-        LOG_ERR("Failed to read battery level");
+     }
++}
+ 
+-    k_work_reschedule(&battery_work, K_MSEC(BATTERY_REFRESH_INTERVAL));
++void transport_audio_fault(int error)
++{
++    request_audio_state(false, error != 0 ? error : -EIO);
+ }
+ 
+-//
+-// Connection Callbacks
+-//
++static ssize_t audio_data_read_characteristic(
++    struct bt_conn *conn,
++    const struct bt_gatt_attr *attr,
++    void *buf,
++    uint16_t len,
++    uint16_t offset)
++{
++    return bt_gatt_attr_read(conn, attr, buf, len, offset, NULL, 0);
++}
+ 
+-static void _transport_connected(struct bt_conn *conn, uint8_t err)
++static ssize_t audio_codec_read_characteristic(
++    struct bt_conn *conn,
++    const struct bt_gatt_attr *attr,
++    void *buf,
++    uint16_t len,
++    uint16_t offset)
+ {
+-    struct bt_conn_info info = {0};
+-    storage_is_on = true;
++    const uint8_t codec_id = CODEC_ID;
++    return bt_gatt_attr_read(
++        conn, attr, buf, len, offset, &codec_id, sizeof(codec_id));
++}
+ 
+-    err = bt_conn_get_info(conn, &info);
+-    if (err)
+-    {
+-        LOG_ERR("Failed to get connection info (err %d)", err);
++static void audio_ccc_config_changed_handler(
++    const struct bt_gatt_attr *attr,
++    uint16_t value)
++{
++    ARG_UNUSED(attr);
++    if (value == BT_GATT_CCC_NOTIFY) {
++        struct bt_conn *conn = acquire_current_connection();
++        bool authorized =
++            connection_has_fresh_audio_authorization(conn);
++        if (conn != NULL) {
++            bt_conn_unref(conn);
++        }
++        if (authorized) {
++            request_audio_state(true, 0);
++        } else {
++            /*
++             * BT_SETTINGS may restore a bonded peer's old CCC. Restoration
++             * is not fresh per-connection consent and must never start PDM.
++             */
++            request_audio_state(false, -EACCES);
++        }
+         return;
+     }
+ 
+-    LOG_INF("bluetooth activated");
+-
+-    current_connection = bt_conn_ref(conn);
+-    current_mtu = info.le.data_len->tx_max_len;
+-    LOG_INF("Transport connected");
+-    LOG_DBG("Interval: %d, latency: %d, timeout: %d", info.le.interval, info.le.latency, info.le.timeout);
+-    LOG_DBG("TX PHY %s, RX PHY %s", phy2str(info.le.phy->tx_phy), phy2str(info.le.phy->rx_phy));
+-    LOG_DBG("LE data len updated: TX (len: %d time: %d) RX (len: %d time: %d)", info.le.data_len->tx_max_len, info.le.data_len->tx_max_time, info.le.data_len->rx_max_len, info.le.data_len->rx_max_time);
+-
+-    k_work_schedule(&battery_work, K_MSEC(BATTERY_REFRESH_INTERVAL));
+-
+-	is_connected = true;
+-
+-    // // Put NFC to sleep when Bluetooth is connected
+-    // nfc_sleep();
+-// #ifdef CONFIG_ACCELEROMETER
+-//      k_work_schedule(&accel_work, K_MSEC(ACCEL_REFRESH_INTERVAL));
+-// #endif
+-
++    clear_fresh_audio_authorization();
++    request_audio_state(false, 0);
++    if (value == 0u) {
++        LOG_INF("Audio capture stop requested");
++    } else {
++        LOG_ERR("Unsupported audio CCC value: %u", value);
++    }
+ }
+ 
+-static void _transport_disconnected(struct bt_conn *conn, uint8_t err)
++static struct battery_smoother battery_percentage_smoother;
++static bool battery_ready;
++static K_MUTEX_DEFINE(battery_smoother_lock);
++static atomic_t battery_epoch;
++static void broadcast_battery_level(struct k_work *work_item);
++K_WORK_DELAYABLE_DEFINE(battery_work, broadcast_battery_level);
++
++static void broadcast_battery_level(struct k_work *work_item)
+ {
+-    is_connected = false;
+-    storage_is_on = false;
++    ARG_UNUSED(work_item);
++    if (!battery_ready) {
++        return;
++    }
+ 
+-    LOG_INF("Transport disconnected");
+-    bt_conn_unref(conn);
+-    current_connection = NULL;
+-    current_mtu = 0;
++    struct bt_conn *conn = acquire_current_connection();
++    if (conn == NULL) {
++        return;
++    }
++    atomic_val_t measurement_epoch = atomic_get(&battery_epoch);
++    uint16_t battery_millivolt;
++    uint8_t raw_battery_percentage;
++    int voltage_error = battery_get_millivolt(&battery_millivolt);
++    int percentage_error =
++        voltage_error == 0
++            ? battery_get_percentage(
++                  &raw_battery_percentage, battery_millivolt)
++            : voltage_error;
++    if (percentage_error == 0) {
++        k_mutex_lock(&battery_smoother_lock, K_FOREVER);
++        bool current =
++            measurement_epoch == atomic_get(&battery_epoch) &&
++            connection_is_current(conn);
++        uint8_t battery_percentage = 0u;
++        if (current) {
++            battery_percentage =
++                battery_smoother_update(
++                    &battery_percentage_smoother,
++                    raw_battery_percentage);
++        }
++        k_mutex_unlock(&battery_smoother_lock);
++
++        if (current &&
++            measurement_epoch == atomic_get(&battery_epoch) &&
++            connection_is_current(conn)) {
++            int err =
++                bt_bas_set_battery_level(battery_percentage);
++            if (err != 0) {
++                LOG_ERR("Battery notification failed: %d", err);
++            }
++        }
++    } else {
++        LOG_ERR("Battery measurement failed: %d", percentage_error);
++        /*
++         * BAS has no unknown/stale sentinel. Disconnect instead of leaving
++         * a normal-looking stale percentage or misrepresenting "unknown" as
++         * 0%. Startup measurement failure remains fatal before advertising.
++         */
++        k_mutex_lock(&battery_smoother_lock, K_FOREVER);
++        battery_smoother_reset(&battery_percentage_smoother);
++        k_mutex_unlock(&battery_smoother_lock);
++        if (measurement_epoch == atomic_get(&battery_epoch) &&
++            connection_is_current(conn)) {
++            int err = bt_conn_disconnect(
++                conn, BT_HCI_ERR_REMOTE_USER_TERM_CONN);
++            if (err != 0) {
++                LOG_ERR("Battery fault disconnect failed: %d", err);
++            }
++        }
++    }
+ 
+-	// // restart NFC
+-	// nfc_wake();
++    if (percentage_error == 0 &&
++        measurement_epoch == atomic_get(&battery_epoch) &&
++        connection_is_current(conn)) {
++        k_work_reschedule(
++            &battery_work, K_MSEC(BATTERY_REFRESH_INTERVAL));
++    }
++    bt_conn_unref(conn);
+ }
+ 
+-static bool _le_param_req(struct bt_conn *conn, struct bt_le_conn_param *param)
++static void transport_connected(struct bt_conn *conn, uint8_t err)
+ {
+-    LOG_INF("Transport connection parameters update request received.");
+-    LOG_DBG("Minimum interval: %d, Maximum interval: %d", param->interval_min, param->interval_max);
+-    LOG_DBG("Latency: %d, Timeout: %d", param->latency, param->timeout);
++    if (err != 0) {
++        LOG_ERR("Bluetooth connection failed: %u", err);
++        return;
++    }
+ 
+-    return true;
+-}
++    /*
++     * Track every successful connection before optional diagnostic queries.
++     * Missing LE data-length/PHY fields must not create an untracked live link.
++     */
++    struct bt_conn *new_connection = bt_conn_ref(conn);
++    k_spinlock_key_t key = k_spin_lock(&connection_lock);
++    struct bt_conn *old_connection = current_connection;
++    current_connection = new_connection;
++    fresh_audio_ccc_connection = NULL;
++    atomic_clear(&fresh_audio_ccc_authorized);
++    k_spin_unlock(&connection_lock, key);
++    if (old_connection != NULL) {
++        bt_conn_unref(old_connection);
++    }
++    (void)k_work_cancel_delayable(&advertising_restart_work);
++    atomic_clear(&advertising_restart_attempts);
++
++    request_audio_state(false, 0);
++    atomic_inc(&battery_epoch);
++    if (battery_ready) {
++        k_mutex_lock(&battery_smoother_lock, K_FOREVER);
++        battery_smoother_reset(&battery_percentage_smoother);
++        k_mutex_unlock(&battery_smoother_lock);
++        (void)k_work_reschedule(&battery_work, K_NO_WAIT);
++    }
+ 
+-static void _le_param_updated(struct bt_conn *conn, uint16_t interval,
+-                              uint16_t latency, uint16_t timeout)
+-{
+-    LOG_INF("Connection parameters updated.");
+-	LOG_DBG("[ interval: %d, latency: %d, timeout: %d ]", interval, latency, timeout);
++    struct bt_conn_info info = {0};
++    int info_error = bt_conn_get_info(conn, &info);
++    if (info_error != 0) {
++        LOG_WRN("Connection diagnostics unavailable: %d", info_error);
++    } else if (info.type == BT_CONN_TYPE_LE) {
++        if (info.le.phy != NULL) {
++            LOG_DBG("LE PHY TX %u RX %u",
++                    (unsigned int)info.le.phy->tx_phy,
++                    (unsigned int)info.le.phy->rx_phy);
++        }
++        if (info.le.data_len != NULL) {
++            LOG_DBG("LE data length TX %u RX %u",
++                    (unsigned int)info.le.data_len->tx_max_len,
++                    (unsigned int)info.le.data_len->rx_max_len);
++        }
++    }
++    LOG_INF("Bluetooth connected; capture remains off until CCC subscribe");
+ }
+ 
+-static void _le_phy_updated(struct bt_conn *conn,
+-                            struct bt_conn_le_phy_info *param)
++static void transport_disconnected(
++    struct bt_conn *conn,
++    uint8_t reason)
+ {
+-    // LOG_DBG("LE PHY updated: TX PHY %s, RX PHY %s",
+-    //        phy2str(param->tx_phy), phy2str(param->rx_phy));
++    LOG_INF("Bluetooth disconnected: %u", reason);
++
++    k_spinlock_key_t key = k_spin_lock(&connection_lock);
++    struct bt_conn *old_connection = NULL;
++    if (current_connection == conn) {
++        old_connection = current_connection;
++        current_connection = NULL;
++        fresh_audio_ccc_connection = NULL;
++        atomic_clear(&fresh_audio_ccc_authorized);
++    }
++    k_spin_unlock(&connection_lock, key);
++
++    if (old_connection != NULL) {
++        atomic_inc(&battery_epoch);
++        request_audio_state(false, 0);
++        (void)k_work_cancel_delayable(&battery_work);
++        bt_conn_unref(old_connection);
++        atomic_clear(&advertising_restart_attempts);
++        (void)k_work_reschedule(
++            &advertising_restart_work, K_NO_WAIT);
++    }
+ }
+ 
+-static void _le_data_length_updated(struct bt_conn *conn,
+-                                    struct bt_conn_le_data_len_info *info)
++static bool le_param_req(
++    struct bt_conn *conn,
++    struct bt_le_conn_param *param)
+ {
+-    LOG_DBG("LE data len updated: TX (len: %d time: %d)"
+-           " RX (len: %d time: %d)",
+-           info->tx_max_len,
+-           info->tx_max_time, info->rx_max_len, info->rx_max_time);
+-    current_mtu = info->tx_max_len;
++    ARG_UNUSED(conn);
++    ARG_UNUSED(param);
++    return true;
+ }
+ 
+-static struct bt_conn_cb _callback_references = {
+-    .connected = _transport_connected,
+-    .disconnected = _transport_disconnected,
+-    .le_param_req = _le_param_req,
+-    .le_param_updated = _le_param_updated,
+-    .le_phy_updated = _le_phy_updated,
+-    .le_data_len_updated = _le_data_length_updated,
++static struct bt_conn_cb connection_callbacks = {
++    .connected = transport_connected,
++    .disconnected = transport_disconnected,
++    .le_param_req = le_param_req,
+ };
+ 
+-//
+-// Ring Buffer
+-//
+-
+-#define NET_BUFFER_HEADER_SIZE 3
+-#define RING_BUFFER_HEADER_SIZE 2
+-static uint8_t tx_queue[NETWORK_RING_BUF_SIZE * (CODEC_OUTPUT_MAX_BYTES + RING_BUFFER_HEADER_SIZE)];
+-static uint8_t tx_buffer[CODEC_OUTPUT_MAX_BYTES + RING_BUFFER_HEADER_SIZE];
+-static uint8_t tx_buffer_2[CODEC_OUTPUT_MAX_BYTES + RING_BUFFER_HEADER_SIZE];
+-static uint32_t tx_buffer_size = 0;
+-static struct ring_buf ring_buf;
+-
+-static bool write_to_tx_queue(uint8_t *data, size_t size)
++static bool write_to_tx_queue(const uint8_t *data, size_t size)
+ {
+-    if (size > CODEC_OUTPUT_MAX_BYTES)
+-    {
++    if (data == NULL || size == 0u ||
++        size > CODEC_OUTPUT_MAX_BYTES) {
+         return false;
+     }
+ 
+-    // Copy data (TODO: Avoid this copy)
+-    tx_buffer_2[0] = size & 0xFF;
+-    tx_buffer_2[1] = (size >> 8) & 0xFF;
+-    memcpy(tx_buffer_2 + RING_BUFFER_HEADER_SIZE, data, size);
++    uint8_t record[
++        CODEC_OUTPUT_MAX_BYTES + TX_RECORD_HEADER_BYTES] = {0};
++    record[0] = (uint8_t)(size & 0xffu);
++    record[1] = (uint8_t)((size >> 8u) & 0xffu);
++    memcpy(record + TX_RECORD_HEADER_BYTES, data, size);
+ 
+-    // Write to ring buffer 
+-    int written = ring_buf_put(&ring_buf, tx_buffer_2, (CODEC_OUTPUT_MAX_BYTES + RING_BUFFER_HEADER_SIZE)); // It always fits completely or not at all
+-    if (written != CODEC_OUTPUT_MAX_BYTES + RING_BUFFER_HEADER_SIZE)
+-    {
++    k_spinlock_key_t key = k_spin_lock(&tx_ring_lock);
++    if (ring_buf_space_get(&tx_ring_buf) < sizeof(record)) {
++        k_spin_unlock(&tx_ring_lock, key);
+         return false;
+     }
+-    else
+-    {
+-        return true;
++    uint32_t written =
++        ring_buf_put(&tx_ring_buf, record, sizeof(record));
++    k_spin_unlock(&tx_ring_lock, key);
++    if (written != sizeof(record)) {
++        return false;
+     }
++    k_sem_give(&tx_data_ready);
++    return true;
+ }
+ 
+-static bool read_from_tx_queue()
++static bool read_from_tx_queue(
++    uint8_t *frame,
++    uint32_t *frame_size)
+ {
+-
+-    // Read from ring buffer
+-    // memset(tx_buffer, 0, sizeof(tx_buffer));
+-    tx_buffer_size = ring_buf_get(&ring_buf, tx_buffer, (CODEC_OUTPUT_MAX_BYTES + RING_BUFFER_HEADER_SIZE)); // It always fits completely or not at all
+-    if (tx_buffer_size != (CODEC_OUTPUT_MAX_BYTES + RING_BUFFER_HEADER_SIZE))
+-    {
+-        LOG_ERR("Failed to read from ring buffer. not enough data %d", tx_buffer_size);
++    uint8_t record[
++        CODEC_OUTPUT_MAX_BYTES + TX_RECORD_HEADER_BYTES];
++    k_spinlock_key_t key = k_spin_lock(&tx_ring_lock);
++    uint32_t bytes_read =
++        ring_buf_get(&tx_ring_buf, record, sizeof(record));
++    k_spin_unlock(&tx_ring_lock, key);
++    if (bytes_read == 0u) {
++        return false;
++    }
++    if (bytes_read != sizeof(record)) {
++        LOG_ERR("Audio queue returned a partial record: %u",
++                (unsigned int)bytes_read);
+         return false;
+     }
+ 
+-    // Adjust size
+-    tx_buffer_size = tx_buffer[0] + (tx_buffer[1] << 8);
+-    // printk("tx_buffer_size %d\n",tx_buffer_size);
+-
++    uint32_t size =
++        (uint32_t)record[0] |
++        ((uint32_t)record[1] << 8u);
++    if (size == 0u || size > CODEC_OUTPUT_MAX_BYTES) {
++        LOG_ERR("Audio queue contained invalid frame size: %u",
++                (unsigned int)size);
++        return false;
++    }
++    memcpy(frame, record + TX_RECORD_HEADER_BYTES, size);
++    *frame_size = size;
+     return true;
+ }
+ 
+-//
+-// Pusher
+-//
+-
+-// Thread
+-K_THREAD_STACK_DEFINE(pusher_stack, 4096);
+-static struct k_thread pusher_thread;
+-static uint16_t packet_next_index = 0;
+-static uint8_t pusher_temp_data[CODEC_OUTPUT_MAX_BYTES + NET_BUFFER_HEADER_SIZE];
+-static char storage_temp_data[400];
+-
+-static bool push_to_gatt(struct bt_conn *conn)
++static int notify_with_bounded_retry(
++    struct bt_conn *conn,
++    const void *data,
++    uint16_t len)
+ {
+-    // Read data from ring buffer
+-    if (!read_from_tx_queue())
+-    {
+-
+-        return false;
+-    }
+-
+-    // Push each frame
+-    uint8_t *buffer = tx_buffer + RING_BUFFER_HEADER_SIZE;
+-    uint32_t offset = 0;
+-    uint8_t index = 0;
+-    while (offset < tx_buffer_size)
+-    {
+-        // Recombine packet
+-        uint32_t id = packet_next_index++;
+-        uint32_t packet_size = MIN(current_mtu - NET_BUFFER_HEADER_SIZE, tx_buffer_size - offset);
+-        pusher_temp_data[0] = id & 0xFF;
+-        pusher_temp_data[1] = (id >> 8) & 0xFF;
+-        pusher_temp_data[2] = index;
+-        memcpy(pusher_temp_data + NET_BUFFER_HEADER_SIZE, buffer + offset, packet_size);
+-        // printk("sent %d bytes \n",tx_buffer_size);
+-
+-        offset += packet_size;
+-        index++;
+-
+-        while (true)
+-        {
+-            // Try send notification
+-            int err = bt_gatt_notify(conn, &audio_service.attrs[1], pusher_temp_data, packet_size + NET_BUFFER_HEADER_SIZE);
+-
+-            // Log failure
+-            if (err)
+-            {
+-                LOG_DBG("bt_gatt_notify failed (err %d)", err);
+-                LOG_DBG("MTU: %d, packet_size: %d", current_mtu, packet_size + NET_BUFFER_HEADER_SIZE);
+-                k_sleep(K_MSEC(1));
+-            }
+-
+-            // Try to send more data if possible
+-            if (err == -EAGAIN || err == -ENOMEM)
+-            {
+-                continue;
+-            }
++    int err = -ENOTCONN;
++    for (uint8_t attempt = 0u;
++         attempt < AUDIO_NOTIFY_RETRY_LIMIT;
++         attempt++) {
++        /*
++         * Pinned Zephyr's explicit-connection notify path does not consult
++         * the managed CCC match callback. Recheck current-connection identity,
++         * fresh per-connection consent, and live subscription at every send
++         * attempt so revocation cannot leak a retry notification.
++         */
++        if (!transport_audio_is_active()) {
++            return -ECANCELED;
++        }
++        if (!audio_capture_authorized(conn)) {
++            return -EACCES;
++        }
+ 
+-            // Break if success
+-            break;
++        err = bt_gatt_notify(
++            conn,
++            &audio_service.attrs[AUDIO_VALUE_ATTRIBUTE_INDEX],
++            data,
++            len);
++        if (err == 0) {
++            return 0;
++        }
++        if (err != -EAGAIN && err != -ENOMEM) {
++            return err;
++        }
++        if (attempt + 1u < AUDIO_NOTIFY_RETRY_LIMIT) {
++            k_sleep(K_MSEC(AUDIO_NOTIFY_RETRY_DELAY_MS));
+         }
+     }
++    return err;
++}
+ 
+-    return true;
++struct audio_tx_state {
++    bool pending;
++    uint32_t frame_size;
++    uint8_t frame[CODEC_OUTPUT_MAX_BYTES];
++    struct transport_fragment_state fragment;
++    atomic_val_t epoch;
++};
++
++static void reset_local_tx_state(
++    struct audio_tx_state *state,
++    atomic_val_t epoch)
++{
++    state->pending = false;
++    state->frame_size = 0u;
++    state->fragment.offset = 0u;
++    state->fragment.fragment_index = 0u;
++    state->epoch = epoch;
++    memset(state->frame, 0, sizeof(state->frame));
+ }
+-#define OPUS_PREFIX_LENGTH 1
+-#define OPUS_PADDED_LENGTH 80
+-#define MAX_WRITE_SIZE 400
+-static uint32_t offset = 0;
+-static uint16_t buffer_offset = 0;
+-bool write_to_storage(void) 
++
++static int send_next_fragment(
++    struct bt_conn *conn,
++    struct audio_tx_state *state)
+ {
+-    if (!read_from_tx_queue())
+-    {
+-        return false;
++    if (!audio_capture_authorized(conn)) {
++        return -EACCES;
+     }
+ 
+-    uint8_t *buffer = tx_buffer+2;
+-    const uint32_t packet_size = tx_buffer_size;
+-    //load into write at 400 bytes at a time. is faster 
+-    memcpy(storage_temp_data + OPUS_PREFIX_LENGTH + buffer_offset, buffer, packet_size);
+-    storage_temp_data[buffer_offset] = (uint8_t)tx_buffer_size;
+-    
+-    buffer_offset = buffer_offset+OPUS_PADDED_LENGTH;
+-    if(buffer_offset >= OPUS_PADDED_LENGTH*5) { 
+-    uint8_t *write_ptr = (uint8_t*)storage_temp_data;
+-    write_to_file(write_ptr,OPUS_PADDED_LENGTH*5);
+-
+-    buffer_offset = 0;
++    uint16_t att_mtu = bt_gatt_get_mtu(conn);
++    size_t payload_bytes;
++    int err = transport_fragment_plan(
++        att_mtu,
++        state->frame_size,
++        &state->fragment,
++        &payload_bytes);
++    if (err != 0) {
++        return err;
+     }
+ 
+-    return true;
++    uint8_t notification[
++        CODEC_OUTPUT_MAX_BYTES + TRANSPORT_AUDIO_HEADER_BYTES];
++    notification[0] =
++        (uint8_t)(state->fragment.sequence & 0xffu);
++    notification[1] =
++        (uint8_t)((state->fragment.sequence >> 8u) & 0xffu);
++    notification[2] = state->fragment.fragment_index;
++    memcpy(
++        notification + TRANSPORT_AUDIO_HEADER_BYTES,
++        state->frame + state->fragment.offset,
++        payload_bytes);
++
++    size_t notification_bytes =
++        payload_bytes + TRANSPORT_AUDIO_HEADER_BYTES;
++    err = notify_with_bounded_retry(
++        conn, notification, (uint16_t)notification_bytes);
++
++    struct transport_fragment_state next;
++    int commit_error = transport_fragment_commit(
++        &state->fragment, payload_bytes, err, &next);
++    if (commit_error != 0) {
++        return commit_error;
++    }
++    state->fragment = next;
++    if (state->fragment.offset == state->frame_size) {
++        state->pending = false;
++        state->frame_size = 0u;
++        state->fragment.offset = 0u;
++        state->fragment.fragment_index = 0u;
++        memset(state->frame, 0, sizeof(state->frame));
++    }
++    return 0;
+ }
+-//for improving ble bandwidth
+-// bool write_to_storage(void) {//max possible packing
+-//     if (!read_from_tx_queue())
+-//     {
+-//         return false;
+-//     }
+-
+-//     uint8_t *buffer = tx_buffer+2;
+-//     uint8_t packet_size = (uint8_t)(tx_buffer_size+ OPUS_PREFIX_LENGTH);
+-
+-//     // buffer_offset = buffer_offset+amount_to_fill;
+-//     //check if adding the new packet will cause a overflow
+-//     if(buffer_offset+packet_size > MAX_WRITE_SIZE) { 
+-
+-//     storage_temp_data[buffer_offset] = packet_size-1;
+-//     uint8_t *write_ptr = (uint8_t*)storage_temp_data;
+-//     write_to_file(write_ptr,MAX_WRITE_SIZE);
+-
+-//     buffer_offset = packet_size;
+-//     storage_temp_data[0] = packet_size-1;
+-//     memcpy(storage_temp_data +1, buffer, packet_size-1);
+-
+-//     }
+-//     else if (buffer_offset + packet_size == MAX_WRITE_SIZE) { //exact frame needed 
+-//     storage_temp_data[buffer_offset] = packet_size-1;
+-//     memcpy(storage_temp_data+ buffer_offset+1, buffer, packet_size-1);
+-//     buffer_offset = 0;
+-//     uint8_t *write_ptr = (uint8_t*)storage_temp_data;
+-//     write_to_file(write_ptr,MAX_WRITE_SIZE);
+-    
+-//     }
+-//     else {
+-//     storage_temp_data[buffer_offset] = packet_size-1;
+-//     memcpy(storage_temp_data+ buffer_offset+1, buffer, packet_size-1);
+-//     buffer_offset = buffer_offset + packet_size;
+-//     }
+-
+-//     return true;
+-// }
+-extern bool is_off;
+-static bool use_storage = true;
+-#define MAX_FILES 10
+-#define MAX_AUDIO_FILE_SIZE 300000
+-static int recent_file_size_updated = 0;
+-
+-void update_file_size() 
+-{
+-    file_num_array[0] = get_file_size(1);
+-    printk("file size for file count %d %d\n",file_count,file_num_array[0]);
+-}
+-
+-void pusher(void)
+-{
+-    k_msleep(500);
+-    while (1)
+-    {
+-        //
+-        // Load current connection
+-        //
+-        if(!is_off)
+-        {
+-            struct bt_conn *conn = current_connection;
+-            //updating the most recent file size is expensive!
+-            static bool file_size_updated = true;
+-            static bool connection_was_true = false;
+-            if (conn && !connection_was_true) 
+-            {
+-                k_msleep(100);
+-                file_size_updated = false;
+-                connection_was_true = true;
+-            } 
+-            else if (!conn) 
+-            {
+-                connection_was_true = false;
+-            }
+-            if (!file_size_updated) 
+-            {
+-                printk("updating file size\n");
+-                update_file_size();
+-                file_size_updated = true;
+-            }
+-            if (conn)
+-            {
+-                conn = bt_conn_ref(conn);
+-            }
+-            bool valid = true;
+-            if (current_mtu < MINIMAL_PACKET_SIZE)
+-            {
+-                valid = false;
+-            }
+-            else if (!conn)
+-            {
+-                valid = false;
+-            }
+-            else
+-            {
+-                valid = bt_gatt_is_subscribed(conn, &audio_service.attrs[1], BT_GATT_CCC_NOTIFY); // Check if subscribed
++
++K_THREAD_STACK_DEFINE(pusher_stack, 4096);
++static struct k_thread pusher_thread;
++
++static void pusher(void *unused1, void *unused2, void *unused3)
++{
++    ARG_UNUSED(unused1);
++    ARG_UNUSED(unused2);
++    ARG_UNUSED(unused3);
++
++    struct audio_tx_state state = {0};
++    state.epoch = atomic_get(&audio_epoch);
++
++    while (true) {
++        (void)k_sem_take(&tx_data_ready, K_FOREVER);
++        atomic_val_t wake_epoch = atomic_get(&audio_epoch);
++        if (state.epoch != wake_epoch) {
++            reset_local_tx_state(&state, wake_epoch);
++        }
++        while (transport_audio_is_active()) {
++            atomic_val_t epoch = atomic_get(&audio_epoch);
++            if (state.epoch != epoch) {
++                reset_local_tx_state(&state, epoch);
+             }
+-            
+-            if (!valid  && !storage_is_on) 
+-            {
+-                bool result = write_to_storage();
+-                if (result)
+-                {
+-    
+-                }
+-                else 
+-                {
+-        
+-                }
+-            }    
+-            if (valid)
+-            {
+-                bool sent = push_to_gatt(conn);
+-                if (!sent)
+-                {
+-                    // k_sleep(K_MSEC(50));
++            if (!state.pending) {
++                if (!read_from_tx_queue(
++                        state.frame, &state.frame_size)) {
++                    break;
+                 }
++                state.pending = true;
+             }
+-            if (conn)
+-            {
++
++            struct bt_conn *conn = acquire_current_connection();
++            if (conn == NULL) {
++                break;
++            }
++            if (!audio_capture_authorized(conn)) {
+                 bt_conn_unref(conn);
++                transport_audio_fault(-EACCES);
++                break;
+             }
+-        }
+ 
+-      k_yield();
++            int err = send_next_fragment(conn, &state);
++            bt_conn_unref(conn);
++            if (err != 0) {
++                /*
++                 * send_next_fragment commits offset/sequence only after a
++                 * successful notification. A fatal or exhausted retry stops
++                 * capture and zeroes both queues.
++                 */
++                transport_audio_fault(err);
++                break;
++            }
++        }
+     }
+ }
+-extern struct bt_gatt_service storage_service;
+-//
+-// Public functions
+-//
+ 
+-int transport_start()
++int broadcast_audio_packets(uint8_t *buffer, size_t size)
+ {
+-    // Configure callbacks
+-    bt_conn_cb_register(&_callback_references);
++    if (!transport_audio_is_active()) {
++        return -ECANCELED;
++    }
++    if (!write_to_tx_queue(buffer, size)) {
++        return -ENOSPC;
++    }
++    return 0;
++}
+ 
+-    // Enable Bluetooth
+-    int err = bt_enable(NULL);
+-    if (err)
+-    {
+-        LOG_ERR("Transport bluetooth init failed (err %d)", err);
++static int initialize_battery_service(void)
++{
++    int err = battery_init();
++    if (err != 0) {
+         return err;
+     }
+-    LOG_INF("Transport bluetooth initialized");
+-    //  Enable accelerometer
+-#ifdef CONFIG_ACCELEROMETER
+-    err = accel_start();
+-    if (!err) 
+-    {
+-        LOG_INF("Accelerometer failed to activate\n");
+-    }
+-    else 
+-    {
+-        LOG_INF("Accelerometer initialized");
+-        bt_gatt_service_register(&accel_service);
+-    }
+-#endif
+-    //  Enable button
+-#ifdef CONFIG_ENABLE_BUTTON
+-    button_init();
+-    register_button_service();
+-    activate_button_work();
+-#endif
+-
+-#ifdef CONFIG_ENABLE_SPEAKER
+-    err = speaker_init();
+-    if (err) 
+-    {
+-        LOG_ERR("Speaker failed to start");
+-        return 0;
+-    }
+-    else
+-    {
+-        LOG_INF("Speaker initialized");
+-    }
+-
+-    play_boot_sound();
+-#endif
+-    // Start advertising
+-
+-    memset(storage_temp_data, 0, OPUS_PADDED_LENGTH * 4);
+-    bt_gatt_service_register(&storage_service);
+-    bt_gatt_service_register(&audio_service);
+-    bt_gatt_service_register(&dfu_service);
+-    err = bt_le_adv_start(BT_LE_ADV_CONN, bt_ad, ARRAY_SIZE(bt_ad), bt_sd, ARRAY_SIZE(bt_sd));
+-    if (err)
+-    {
+-        LOG_ERR("Transport advertising failed to start (err %d)", err);
++    err = battery_charge_start();
++    if (err != 0) {
+         return err;
+     }
+-    else
+-    {
+-        LOG_INF("Advertising successfully started");
+-    }
+-
+-    int battErr = 0;
+-	battErr |= battery_init();
+-	battErr |= battery_charge_start();
+-	if (battErr)
+-	{
+-		LOG_ERR("Battery init failed (err %d)", battErr);
+-	}
+-	else
+-	{
+-		LOG_INF("Battery initialized");
+-	}
+-
+-    // Start pusher
+-    ring_buf_init(&ring_buf, sizeof(tx_queue), tx_queue);
+-    k_thread_create(&pusher_thread, pusher_stack, K_THREAD_STACK_SIZEOF(pusher_stack), (k_thread_entry_t)pusher, NULL, NULL, NULL, K_PRIO_PREEMPT(7), 0, K_NO_WAIT);
+ 
+-    return 0;
++    uint16_t battery_millivolt;
++    uint8_t battery_percentage;
++    err = battery_get_millivolt(&battery_millivolt);
++    if (err != 0) {
++        return err;
++    }
++    err = battery_get_percentage(
++        &battery_percentage, battery_millivolt);
++    if (err != 0) {
++        return err;
++    }
++    return bt_bas_set_battery_level(battery_percentage);
+ }
+ 
+-struct bt_conn *get_current_connection()
++int transport_start(void)
+ {
+-    return current_connection;
+-}
++    ring_buf_init(&tx_ring_buf, sizeof(tx_queue), tx_queue);
++    k_thread_create(
++        &audio_control_thread,
++        audio_control_stack,
++        K_THREAD_STACK_SIZEOF(audio_control_stack),
++        audio_control,
++        NULL,
++        NULL,
++        NULL,
++        K_PRIO_PREEMPT(6),
++        0,
++        K_NO_WAIT);
++    k_thread_create(
++        &pusher_thread,
++        pusher_stack,
++        K_THREAD_STACK_SIZEOF(pusher_stack),
++        pusher,
++        NULL,
++        NULL,
++        NULL,
++        K_PRIO_PREEMPT(7),
++        0,
++        K_NO_WAIT);
++
++    bt_conn_cb_register(&connection_callbacks);
++
++    /*
++     * Pinned Zephyr permits a dynamic service registration before bt_enable,
++     * or after settings_load, but not between them. Register first so its CCC
++     * slots exist when persistent settings are loaded.
++     */
++    int err = bt_gatt_service_register(&audio_service);
++    if (err != 0) {
++        LOG_ERR("Audio service registration failed: %d", err);
++        return err;
++    }
+ 
+-int broadcast_audio_packets(uint8_t *buffer, size_t size)
+-{
+-    while (!write_to_tx_queue(buffer, size))
+-    {
+-        k_sleep(K_MSEC(1));
++    err = bt_enable(NULL);
++    if (err != 0) {
++        LOG_ERR("Bluetooth initialization failed: %d", err);
++        return err;
++    }
++
++    err = settings_load();
++    if (err != 0) {
++        LOG_ERR("Bond/settings load failed: %d", err);
++        return err;
+     }
++
++    battery_ready = false;
++    err = initialize_battery_service();
++    if (err != 0) {
++        LOG_ERR("Battery service initialization failed: %d", err);
++        return err;
++    }
++    battery_ready = true;
++
++    /*
++     * All startup gates have passed. Publish readiness before the controller
++     * starts advertising so an immediate connect/disconnect callback cannot
++     * lose its restart request.
++     */
++    atomic_set(&transport_ready, 1);
++    err = bt_le_adv_start(
++        BT_LE_ADV_CONN,
++        advertising_data,
++        ARRAY_SIZE(advertising_data),
++        scan_response_data,
++        ARRAY_SIZE(scan_response_data));
++    if (err != 0) {
++        /*
++         * Report startup failure to the caller, but keep the fully initialized
++         * transport eligible for the same indefinite recovery used after a
++         * disconnect. Exiting main does not stop Zephyr system workqueues.
++         */
++        LOG_ERR("Initial advertising failed; recovery scheduled: %d", err);
++        atomic_clear(&advertising_restart_attempts);
++        (void)k_work_reschedule(
++            &advertising_restart_work,
++            K_MSEC(ADVERTISING_RESTART_DELAY_MS));
++        return err;
++    }
++
++    LOG_INF("Advertising live audio + Battery Service");
+     return 0;
+ }
+diff --git a/src/transport.h b/src/transport.h
+index 6b22d6d..7273d37 100644
+--- a/src/transport.h
++++ b/src/transport.h
+@@ -1,26 +1,13 @@
+ #ifndef TRANSPORT_H
+ #define TRANSPORT_H
+ 
+-#include <zephyr/drivers/sensor.h>
+-typedef struct sensors {
++#include <stdbool.h>
++#include <stddef.h>
++#include <stdint.h>
+ 
+-	struct sensor_value a_x;
+-	struct sensor_value a_y;
+-	struct sensor_value a_z;
+-    struct sensor_value g_x;
+-    struct sensor_value g_y;
+-    struct sensor_value g_z;
+-
+-};
+-/**
+- * @brief Initialize the BLE transport logic
+- *
+- * Initializes the BLE Logic
+- *
+- * @return 0 if successful, negative errno code if error
+- */
+-int transport_start();
++int transport_start(void);
+ int broadcast_audio_packets(uint8_t *buffer, size_t size);
+-struct bt_conn *get_current_connection();
++bool transport_audio_is_active(void);
++void transport_audio_fault(int error);
+ 
+-#endif
+\ No newline at end of file
++#endif
+diff --git a/src/transport_safety.c b/src/transport_safety.c
+new file mode 100644
+index 0000000..d4dcc1f
+--- /dev/null
++++ b/src/transport_safety.c
+@@ -0,0 +1,65 @@
++// SPDX-License-Identifier: MIT
++
++#include "transport_safety.h"
++
++#include <errno.h>
++#include <limits.h>
++
++int transport_fragment_plan(
++    uint16_t att_mtu,
++    uint32_t frame_size,
++    const struct transport_fragment_state *current,
++    size_t *payload_bytes)
++{
++    if (current == NULL || payload_bytes == NULL) {
++        return -EINVAL;
++    }
++    if (current->offset >= frame_size) {
++        return -ERANGE;
++    }
++    if (att_mtu < TRANSPORT_MINIMUM_ATT_MTU) {
++        return -EMSGSIZE;
++    }
++
++    size_t value_capacity =
++        (size_t)att_mtu - TRANSPORT_ATT_NOTIFY_OVERHEAD_BYTES;
++    if (value_capacity <= TRANSPORT_AUDIO_HEADER_BYTES) {
++        return -EMSGSIZE;
++    }
++    size_t audio_capacity =
++        value_capacity - TRANSPORT_AUDIO_HEADER_BYTES;
++    size_t remaining = (size_t)(frame_size - current->offset);
++    *payload_bytes =
++        remaining < audio_capacity ? remaining : audio_capacity;
++    return 0;
++}
++
++int transport_fragment_commit(
++    const struct transport_fragment_state *current,
++    size_t payload_bytes,
++    int notify_result,
++    struct transport_fragment_state *next)
++{
++    if (current == NULL || next == NULL) {
++        return -EINVAL;
++    }
++    if (notify_result != 0) {
++        return notify_result;
++    }
++    if (payload_bytes == 0u) {
++        return -ERANGE;
++    }
++    if (payload_bytes > UINT32_MAX ||
++        current->offset > UINT32_MAX - (uint32_t)payload_bytes) {
++        return -EOVERFLOW;
++    }
++    if (current->fragment_index == UINT8_MAX) {
++        return -EOVERFLOW;
++    }
++
++    *next = *current;
++    next->offset += (uint32_t)payload_bytes;
++    next->sequence++;
++    next->fragment_index++;
++    return 0;
++}
+diff --git a/src/transport_safety.h b/src/transport_safety.h
+new file mode 100644
+index 0000000..cfb4d73
+--- /dev/null
++++ b/src/transport_safety.h
+@@ -0,0 +1,30 @@
++// SPDX-License-Identifier: MIT
++
++#ifndef ANTICIPY_TRANSPORT_SAFETY_H
++#define ANTICIPY_TRANSPORT_SAFETY_H
++
++#include <stddef.h>
++#include <stdint.h>
++
++#define TRANSPORT_ATT_NOTIFY_OVERHEAD_BYTES 3u
++#define TRANSPORT_AUDIO_HEADER_BYTES 3u
++#define TRANSPORT_MINIMUM_ATT_MTU 100u
++
++struct transport_fragment_state {
++    uint32_t offset;
++    uint16_t sequence;
++    uint8_t fragment_index;
++};
++
++int transport_fragment_plan(
++    uint16_t att_mtu,
++    uint32_t frame_size,
++    const struct transport_fragment_state *current,
++    size_t *payload_bytes);
++int transport_fragment_commit(
++    const struct transport_fragment_state *current,
++    size_t payload_bytes,
++    int notify_result,
++    struct transport_fragment_state *next);
++
++#endif
+diff --git a/src/utils.h b/src/utils.h
+index fc23b8d..49fae7b 100644
+--- a/src/utils.h
++++ b/src/utils.h
+@@ -1,21 +1,28 @@
+ #ifndef UTILS_H
+ #define UTILS_H
+ 
++#include <errno.h>
++#include <stdbool.h>
+ #include <zephyr/logging/log.h>
+ #include <zephyr/bluetooth/gatt.h>
+ 
+-#define ASSERT_OK(result)                                          \
+-    if ((result) < 0)                                              \
+-    {                                                              \
+-        LOG_ERR("Error at %s:%d:%d", __FILE__, __LINE__, result); \
+-        return (result);                                           \
+-    }
++#define ASSERT_OK(expression)                                            \
++    do {                                                                 \
++        int _anticipy_result = (expression);                             \
++        if (_anticipy_result < 0) {                                      \
++            LOG_ERR("Error at %s:%d: %d", __FILE__, __LINE__,           \
++                    _anticipy_result);                                   \
++            return _anticipy_result;                                     \
++        }                                                                \
++    } while (false)
+ 
+-#define ASSERT_TRUE(result)                                        \
+-    if (!result)                                                   \
+-    {                                                              \
+-        LOG_ERR("Error at %s:%d:%d", __FILE__, __LINE__, result); \
+-        return -1;                                                 \
+-    }
++#define ASSERT_TRUE(expression)                                          \
++    do {                                                                 \
++        bool _anticipy_result = (expression);                            \
++        if (!_anticipy_result) {                                        \
++            LOG_ERR("Assertion failed at %s:%d", __FILE__, __LINE__);   \
++            return -EINVAL;                                              \
++        }                                                                \
++    } while (false)
+ 
+-#endif
+\ No newline at end of file
++#endif

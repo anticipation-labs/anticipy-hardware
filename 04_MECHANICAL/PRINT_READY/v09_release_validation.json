@@ -1,0 +1,129 @@
+{
+  "validation_date": "2026-08-28",
+  "status": "PASS_DIGITAL_ONLY",
+  "fit_checks": {
+    "passed": 27,
+    "total": 27,
+    "failed": []
+  },
+  "finished_body_mm": [
+    66.2,
+    27.2,
+    14.2
+  ],
+  "mass_estimate_g": {
+    "printed_pla": 8.95,
+    "electronics_and_retention": 14.45,
+    "nominal": 23.4,
+    "with_15_percent_uncertainty": 26.91,
+    "external_printed_backplate": 1.17,
+    "body_plus_printed_backplate_nominal": 24.57,
+    "note": "CAD/material estimate, not a scale measurement; Jauch current datasheet mass is approx. 7.5 g"
+  },
+  "primary_meshes": {
+    "v09_compact_base.stl": {
+      "watertight": true,
+      "bodies": 1,
+      "positive_volume": true,
+      "volume_mm3": 3938.611,
+      "bounds_mm": [
+        66.2,
+        27.2,
+        12.6
+      ]
+    },
+    "v09_compact_lid.stl": {
+      "watertight": true,
+      "bodies": 1,
+      "positive_volume": true,
+      "volume_mm3": 3224.552,
+      "bounds_mm": [
+        66.2,
+        27.2,
+        5.15
+      ]
+    },
+    "v09_lanyard_clip.stl": {
+      "watertight": true,
+      "bodies": 1,
+      "positive_volume": true,
+      "volume_mm3": 936.523,
+      "bounds_mm": [
+        42.0,
+        18.0,
+        1.6
+      ]
+    }
+  },
+  "step_solids": {
+    "v09_compact_base.step": {
+      "solids": 1,
+      "bounds_mm": [
+        66.2,
+        27.2,
+        12.6
+      ]
+    },
+    "v09_compact_lid.step": {
+      "solids": 1,
+      "bounds_mm": [
+        66.2,
+        27.2,
+        5.15
+      ]
+    },
+    "v09_lanyard_clip.step": {
+      "solids": 1,
+      "bounds_mm": [
+        42.0,
+        18.0,
+        1.6
+      ]
+    }
+  },
+  "five_unit_3mf": {
+    "zip_package": true,
+    "objects": 30,
+    "all_watertight": true,
+    "all_positive_volume": true,
+    "xy_bounds_mm": [
+      [
+        8.9,
+        14.4
+      ],
+      [
+        243.0,
+        216.799
+      ]
+    ],
+    "inside_256mm_plate": true,
+    "model_mass_g_at_1p25_density": 50.84
+  },
+  "print_orientation_downward_horizontal_area_mm2": {
+    "v09_compact_base.stl": 10.0,
+    "v09_compact_lid.stl": 0.0,
+    "v09_lanyard_clip.stl": 0.0
+  },
+  "sha256": {
+    "generate_v09_compact.py": "3f377eccc59c5221c88630b22c406f4fd8d5be85427cf9e20fe6b4c7a1f518a1",
+    "make_v09_five_unit_plate.py": "0fc9f536645081fbc4c2705f0ea3c5c08e7accc6284370bbab9d23021fe97b72",
+    "validate_v09_release.py": "70c0fea2d0a7b429bc6214dc8a8315e79d2a7d1f8af2c068e7bfb7484ae7631f",
+    "v09_compact_base.stl": "2fdc66ba1cac30e6d75841af770724cfdec8a8a660c53d34ca4c0c5c4c812c9c",
+    "v09_compact_lid.stl": "7551b8a79410d379b1269c15a9a08665f4e9c84662b2fbdb1ea1f6e15f539061",
+    "v09_lanyard_clip.stl": "9a49869b9131f0e58d9454d2bf935b155d06a1342a34fd94cd3a5577608c3d7c",
+    "v09_compact_base.step": "206465154099406698b9dfa7b3e9a5a8b40e61c854c79d864fd7d5bc24a9ea23",
+    "v09_compact_lid.step": "d40af142978f4cbd0da957f83913a5646624d17b6f329d312668a34a9a7371b5",
+    "v09_lanyard_clip.step": "b4c742c269516d3d4951be6b639ccc46aea924942ede1ebd7002aaaf26e18276",
+    "Anticipy_v09_five_units_P2S.3mf": "4ee25587592ad98d0f18f8f10d95e2702fffb1ffd3f49e157f141854c3f77eb3",
+    "v09_fit_report.json": "e9f032fba7c52564e659dcdf0dae67144b3f2e695d0e437c49aafccefaa317bb",
+    "Anticipy_v09_five_units_plate_report.json": "288a8af62d89543944e44b0bc1332ac23a799ff7563d962048e2f0f89e2e63f8",
+    "PRINT_AND_ASSEMBLE_P2S.md": "9dc255f590c2ceed5a1c0e540e21abb1ccb543ea14540a06ffd94564e3a3620a"
+  },
+  "physical_gates_still_required": [
+    "caliper fit of delivered stack and pack",
+    "sliced preview and one calibration print",
+    "sealed audio/BLE/storage tests",
+    "16h runtime and 20h backlog tests",
+    "shake and inspectable drop tests"
+  ]
+}

@@ -1,0 +1,5 @@
+0f4dc109c68549a86ae47f65f16716af9fc4255404ec375f462dafcf21bc6689  /development/output/zephyr/zephyr.elf
+c0a6bde2319d36e3381b2b29279c5490063f75b7d1d1cf5e8cf5a5ebd8a2f4db  /development/output/zephyr/zephyr.hex
+b7cddedb7010c68a56d126124a9906f9097236da609db5dd6c2d249665fd6506  /development/output/zephyr/zephyr.bin
+437dc9e33ef5ad86eaa25d8eccd593110c08569d68df64cb1efbfeadf536ad99  /development/output/zephyr/zephyr.uf2
+f34011c1082e7718e38e5cdaa5efd14021c4e388ea0e4169bbaac2da64034ad1  /development/output/zephyr/zephyr.map

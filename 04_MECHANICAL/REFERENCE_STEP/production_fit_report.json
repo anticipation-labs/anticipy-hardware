@@ -1,0 +1,158 @@
+{
+  "version": "1.0 retained production mechanical candidate",
+  "classification": "retention-complete CAD candidate; not routed PCB or physically qualified production unit",
+  "hard_maximum_mm": [
+    51.0,
+    21.0,
+    11.0
+  ],
+  "nominal_body_envelope_mm": [
+    50.5,
+    20.5,
+    10.8
+  ],
+  "nominal_finished_envelope_including_button_mm": [
+    50.5,
+    20.68,
+    10.8
+  ],
+  "positive_finished_tolerance_mm": 0.15,
+  "battery": {
+    "sourced_cell": "LP571225 200 mAh",
+    "controlled_finished_envelope_mm": [
+      27.0,
+      12.5,
+      6.0
+    ],
+    "average_current_ceiling_ma": 10.625
+  },
+  "storage": {
+    "codec_design_rate_kB_s": 5.0,
+    "hours": 20,
+    "margin_pct": 15,
+    "required_MB": 413.99999999999994,
+    "usable_budget_MB": 481.0
+  },
+  "mass": {
+    "nominal_budget_g": 12.692923120484503,
+    "with_15pct_g": 14.596861588557177,
+    "hard_max_g": 17.4
+  },
+  "checks": [
+    {
+      "name": "finished envelope below hard maximum",
+      "pass": true,
+      "detail": "finished nominal 50.5 x 20.68 x 10.8; +0.15 tolerance remains below 51.0 x 21.0 x 11.0 mm"
+    },
+    {
+      "name": "chain geometry",
+      "pass": true,
+      "detail": "4.2 mm hole; 1.15 mm nominal end wall"
+    },
+    {
+      "name": "all modeled items fit with 15% XY reserve",
+      "pass": true,
+      "detail": "all clear"
+    },
+    {
+      "name": "component courtyards fit shaped PCB with 15% XY reserve",
+      "pass": true,
+      "detail": "all clear"
+    },
+    {
+      "name": "actual 3-D component collision check",
+      "pass": true,
+      "detail": "no solid overlaps"
+    },
+    {
+      "name": "chassis/support versus component collision check",
+      "pass": true,
+      "detail": "no chassis, ledge or locator overlaps"
+    },
+    {
+      "name": "15%-expanded same-layer collision check",
+      "pass": true,
+      "detail": "no expanded courtyard overlaps"
+    },
+    {
+      "name": "RF mechanical keepout",
+      "pass": true,
+      "detail": "15%-expanded AN54LV antenna end clears controlled battery/motor and is 3.058 mm from aluminum; copper DRC and closed-device RF test still required"
+    },
+    {
+      "name": "front-cap split",
+      "pass": true,
+      "detail": "zero overlap; 0.15 mm seam"
+    },
+    {
+      "name": "retained structural cap stack",
+      "pass": true,
+      "detail": "0.05 recess + 0.80 aluminum + 0.15 VHB; 1.15 bond land"
+    },
+    {
+      "name": "battery and motor worst-case planning separation",
+      "pass": true,
+      "detail": "0.500 mm controlled-pack to maximum-can gap; 0.300 mm after full cradle travel"
+    },
+    {
+      "name": "PCB motor scallop clearance",
+      "pass": true,
+      "detail": "R4.30 leaves 0.218 mm beyond 1.15 x maximum can radius"
+    },
+    {
+      "name": "motor pocket assembly clearance",
+      "pass": true,
+      "detail": "0.200 mm diametral clearance; 0.60 mm shelf; molder tolerance and keeper strain remain open"
+    },
+    {
+      "name": "GAW337 vent-seat depth",
+      "pass": true,
+      "detail": "0.38 mm exterior recess plus local annular boss"
+    },
+    {
+      "name": "explicit vertical gaps",
+      "pass": true,
+      "detail": "battery 1.00-7.00; motor 7.25-9.35; lowest component 7.95; PCB 9.45-10.05; rear inner 10.20"
+    },
+    {
+      "name": "placed motor STEP Z bounds",
+      "pass": true,
+      "detail": "STEP motor 7.25-9.35; intended 7.25-9.35"
+    },
+    {
+      "name": "20-hour backlog arithmetic",
+      "pass": true,
+      "detail": "needs 414 MB incl. 15%; design budget 481 MB usable"
+    },
+    {
+      "name": "16-hour battery requirement calculated",
+      "pass": true,
+      "detail": "theoretical 85%-capacity ceiling 10.625 mA; use <=10.0 mA conservative production target until pack/cold/aging tests close"
+    },
+    {
+      "name": "mass planning ceiling",
+      "pass": true,
+      "detail": "shell CAD 3.79 g; 12.69 g total budget; 14.60 g with 15%; physical weigh-in required"
+    },
+    {
+      "name": "direct dual-microphone geometry",
+      "pass": true,
+      "detail": "28.6 mm spacing; direct PCB/rear ducts"
+    },
+    {
+      "name": "print/export meshes watertight",
+      "pass": true,
+      "detail": "production_chassis.stl=True, production_aluminum_cap.stl=True, production_rf_cap.stl=True, production_print_front.stl=True, production_visual_pebble.stl=True, production_button_plunger.stl=True, production_button_boot.stl=True"
+    },
+    {
+      "name": "one connected body per enclosure part",
+      "pass": true,
+      "detail": "production_chassis.stl=1, production_aluminum_cap.stl=1, production_rf_cap.stl=1, production_print_front.stl=1, production_visual_pebble.stl=1, production_button_plunger.stl=1, production_button_boot.stl=1"
+    },
+    {
+      "name": "exported STEP regression",
+      "pass": true,
+      "detail": "16 solids; 50.500 x 20.680 x 10.800 mm; 0 positive-volume overlaps"
+    }
+  ]
+}

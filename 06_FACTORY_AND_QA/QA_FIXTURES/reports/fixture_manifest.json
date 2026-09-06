@@ -1,0 +1,437 @@
+{
+  "pendant_nominal_mm": [
+    51.0,
+    21.0,
+    11.0
+  ],
+  "printed_part_count": 42,
+  "drop_pose_key_count": 26,
+  "parts": {
+    "rattle_cassette_base_petg": {
+      "stl": "stl/rattle_cassette_base_petg.stl",
+      "step": "step/rattle_cassette_base_petg.step",
+      "bounds_mm": [
+        70.002,
+        38.002,
+        9.205
+      ],
+      "volume_mm3": 15160.895
+    },
+    "rattle_cassette_lid_petg": {
+      "stl": "stl/rattle_cassette_lid_petg.stl",
+      "step": "step/rattle_cassette_lid_petg.step",
+      "bounds_mm": [
+        70.002,
+        38.002,
+        7.006
+      ],
+      "volume_mm3": 11258.579
+    },
+    "rattle_cassette_liner_base_tpu95a": {
+      "stl": "stl/rattle_cassette_liner_base_tpu95a.stl",
+      "step": "step/rattle_cassette_liner_base_tpu95a.step",
+      "bounds_mm": [
+        54.2,
+        24.508,
+        6.808
+      ],
+      "volume_mm3": 2307.088
+    },
+    "rattle_cassette_liner_lid_tpu95a": {
+      "stl": "stl/rattle_cassette_liner_lid_tpu95a.stl",
+      "step": "step/rattle_cassette_liner_lid_tpu95a.step",
+      "bounds_mm": [
+        54.2,
+        24.508,
+        1.008
+      ],
+      "volume_mm3": 695.147
+    },
+    "rattle_rotor_disk_petg": {
+      "stl": "stl/rattle_rotor_disk_petg.stl",
+      "step": "step/rattle_rotor_disk_petg.step",
+      "bounds_mm": [
+        100.031,
+        100.0,
+        6.031
+      ],
+      "volume_mm3": 46018.161
+    },
+    "rattle_edge_axis_adapter_petg": {
+      "stl": "stl/rattle_edge_axis_adapter_petg.stl",
+      "step": "step/rattle_edge_axis_adapter_petg.step",
+      "bounds_mm": [
+        90.002,
+        50.002,
+        78.001
+      ],
+      "volume_mm3": 60436.925
+    },
+    "rattle_base_plate_petg_or_plywood_template": {
+      "stl": "stl/rattle_base_plate_petg_or_plywood_template.stl",
+      "step": "step/rattle_base_plate_petg_or_plywood_template.step",
+      "bounds_mm": [
+        230.004,
+        90.004,
+        6.004
+      ],
+      "volume_mm3": 123284.729
+    },
+    "rattle_608_bearing_tower_petg_print_two": {
+      "stl": "stl/rattle_608_bearing_tower_petg_print_two.stl",
+      "step": "step/rattle_608_bearing_tower_petg_print_two.step",
+      "bounds_mm": [
+        34.0,
+        55.0,
+        78.001
+      ],
+      "volume_mm3": 55282.719
+    },
+    "rattle_nema17_mount_petg": {
+      "stl": "stl/rattle_nema17_mount_petg.stl",
+      "step": "step/rattle_nema17_mount_petg.step",
+      "bounds_mm": [
+        34.0,
+        66.0,
+        66.001
+      ],
+      "volume_mm3": 37882.33
+    },
+    "inert_51x21x11_pendant_dummy": {
+      "stl": "stl/inert_51x21x11_pendant_dummy.stl",
+      "step": "step/inert_51x21x11_pendant_dummy.step",
+      "bounds_mm": [
+        51.001,
+        21.007,
+        11.007
+      ],
+      "volume_mm3": 10663.149
+    },
+    "drop_collet_body_petg": {
+      "stl": "stl/drop_collet_body_petg.stl",
+      "step": "step/drop_collet_body_petg.step",
+      "bounds_mm": [
+        204.599,
+        185.001,
+        8.046
+      ],
+      "volume_mm3": 135292.077
+    },
+    "drop_finger_guide_petg_print_three": {
+      "stl": "stl/drop_finger_guide_petg_print_three.stl",
+      "step": "step/drop_finger_guide_petg_print_three.step",
+      "bounds_mm": [
+        85.002,
+        30.002,
+        9.002
+      ],
+      "volume_mm3": 16963.578
+    },
+    "drop_radial_finger_petg_print_three": {
+      "stl": "stl/drop_radial_finger_petg_print_three.stl",
+      "step": "step/drop_radial_finger_petg_print_three.step",
+      "bounds_mm": [
+        40.001,
+        10.001,
+        5.002
+      ],
+      "volume_mm3": 1791.845
+    },
+    "drop_common_latch_plate_petg": {
+      "stl": "stl/drop_common_latch_plate_petg.stl",
+      "step": "step/drop_common_latch_plate_petg.step",
+      "bounds_mm": [
+        190.059,
+        190.0,
+        10.03
+      ],
+      "volume_mm3": 89847.604
+    },
+    "drop_three_cord_lift_yoke_petg": {
+      "stl": "stl/drop_three_cord_lift_yoke_petg.stl",
+      "step": "step/drop_three_cord_lift_yoke_petg.step",
+      "bounds_mm": [
+        83.002,
+        94.603,
+        6.002
+      ],
+      "volume_mm3": 25705.121
+    },
+    "drop_inert_51x21x11_dummy": {
+      "stl": "stl/drop_inert_51x21x11_dummy.stl",
+      "step": "step/drop_inert_51x21x11_dummy.step",
+      "bounds_mm": [
+        51.001,
+        21.007,
+        11.007
+      ],
+      "volume_mm3": 10663.149
+    },
+    "drop_pose_key_01_F_XP": {
+      "stl": "stl/drop_pose_key_01_F_XP.stl",
+      "step": "step/drop_pose_key_01_F_XP.step",
+      "bounds_mm": [
+        90.003,
+        90.003,
+        16.008
+      ],
+      "volume_mm3": 105029.56
+    },
+    "drop_pose_key_02_F_XM": {
+      "stl": "stl/drop_pose_key_02_F_XM.stl",
+      "step": "step/drop_pose_key_02_F_XM.step",
+      "bounds_mm": [
+        90.003,
+        90.003,
+        16.008
+      ],
+      "volume_mm3": 105029.56
+    },
+    "drop_pose_key_03_F_YP": {
+      "stl": "stl/drop_pose_key_03_F_YP.stl",
+      "step": "step/drop_pose_key_03_F_YP.step",
+      "bounds_mm": [
+        90.003,
+        90.003,
+        31.006
+      ],
+      "volume_mm3": 198610.229
+    },
+    "drop_pose_key_04_F_YM": {
+      "stl": "stl/drop_pose_key_04_F_YM.stl",
+      "step": "step/drop_pose_key_04_F_YM.step",
+      "bounds_mm": [
+        90.003,
+        90.003,
+        31.006
+      ],
+      "volume_mm3": 198610.229
+    },
+    "drop_pose_key_05_F_ZP": {
+      "stl": "stl/drop_pose_key_05_F_ZP.stl",
+      "step": "step/drop_pose_key_05_F_ZP.step",
+      "bounds_mm": [
+        90.003,
+        90.003,
+        36.005
+      ],
+      "volume_mm3": 228993.498
+    },
+    "drop_pose_key_06_F_ZM": {
+      "stl": "stl/drop_pose_key_06_F_ZM.stl",
+      "step": "step/drop_pose_key_06_F_ZM.step",
+      "bounds_mm": [
+        90.003,
+        90.003,
+        36.005
+      ],
+      "volume_mm3": 228993.498
+    },
+    "drop_pose_key_07_E_XP_YP": {
+      "stl": "stl/drop_pose_key_07_E_XP_YP.stl",
+      "step": "step/drop_pose_key_07_E_XP_YP.step",
+      "bounds_mm": [
+        90.003,
+        90.003,
+        17.137
+      ],
+      "volume_mm3": 112123.233
+    },
+    "drop_pose_key_08_E_XP_YM": {
+      "stl": "stl/drop_pose_key_08_E_XP_YM.stl",
+      "step": "step/drop_pose_key_08_E_XP_YM.step",
+      "bounds_mm": [
+        90.003,
+        90.003,
+        17.137
+      ],
+      "volume_mm3": 112123.233
+    },
+    "drop_pose_key_09_E_XM_YP": {
+      "stl": "stl/drop_pose_key_09_E_XM_YP.stl",
+      "step": "step/drop_pose_key_09_E_XM_YP.step",
+      "bounds_mm": [
+        90.003,
+        90.003,
+        17.137
+      ],
+      "volume_mm3": 112123.233
+    },
+    "drop_pose_key_10_E_XM_YM": {
+      "stl": "stl/drop_pose_key_10_E_XM_YM.stl",
+      "step": "step/drop_pose_key_10_E_XM_YM.step",
+      "bounds_mm": [
+        90.003,
+        90.003,
+        17.137
+      ],
+      "volume_mm3": 112123.233
+    },
+    "drop_pose_key_11_E_XP_ZP": {
+      "stl": "stl/drop_pose_key_11_E_XP_ZP.stl",
+      "step": "step/drop_pose_key_11_E_XP_ZP.step",
+      "bounds_mm": [
+        90.003,
+        90.003,
+        15.646
+      ],
+      "volume_mm3": 102856.774
+    },
+    "drop_pose_key_12_E_XP_ZM": {
+      "stl": "stl/drop_pose_key_12_E_XP_ZM.stl",
+      "step": "step/drop_pose_key_12_E_XP_ZM.step",
+      "bounds_mm": [
+        90.003,
+        90.003,
+        15.646
+      ],
+      "volume_mm3": 102856.772
+    },
+    "drop_pose_key_13_E_XM_ZP": {
+      "stl": "stl/drop_pose_key_13_E_XM_ZP.stl",
+      "step": "step/drop_pose_key_13_E_XM_ZP.step",
+      "bounds_mm": [
+        90.003,
+        90.003,
+        15.646
+      ],
+      "volume_mm3": 102856.772
+    },
+    "drop_pose_key_14_E_XM_ZM": {
+      "stl": "stl/drop_pose_key_14_E_XM_ZM.stl",
+      "step": "step/drop_pose_key_14_E_XM_ZM.step",
+      "bounds_mm": [
+        90.003,
+        90.003,
+        15.646
+      ],
+      "volume_mm3": 102856.774
+    },
+    "drop_pose_key_15_E_YP_ZP": {
+      "stl": "stl/drop_pose_key_15_E_YP_ZP.stl",
+      "step": "step/drop_pose_key_15_E_YP_ZP.step",
+      "bounds_mm": [
+        90.003,
+        90.003,
+        30.073
+      ],
+      "volume_mm3": 193277.662
+    },
+    "drop_pose_key_16_E_YP_ZM": {
+      "stl": "stl/drop_pose_key_16_E_YP_ZM.stl",
+      "step": "step/drop_pose_key_16_E_YP_ZM.step",
+      "bounds_mm": [
+        90.003,
+        90.003,
+        30.073
+      ],
+      "volume_mm3": 193277.662
+    },
+    "drop_pose_key_17_E_YM_ZP": {
+      "stl": "stl/drop_pose_key_17_E_YM_ZP.stl",
+      "step": "step/drop_pose_key_17_E_YM_ZP.step",
+      "bounds_mm": [
+        90.003,
+        90.003,
+        30.073
+      ],
+      "volume_mm3": 193277.662
+    },
+    "drop_pose_key_18_E_YM_ZM": {
+      "stl": "stl/drop_pose_key_18_E_YM_ZM.stl",
+      "step": "step/drop_pose_key_18_E_YM_ZM.step",
+      "bounds_mm": [
+        90.003,
+        90.003,
+        30.073
+      ],
+      "volume_mm3": 193277.663
+    },
+    "drop_pose_key_19_C_XP_YP_ZP": {
+      "stl": "stl/drop_pose_key_19_C_XP_YP_ZP.stl",
+      "step": "step/drop_pose_key_19_C_XP_YP_ZP.step",
+      "bounds_mm": [
+        90.003,
+        90.003,
+        16.745
+      ],
+      "volume_mm3": 109738.514
+    },
+    "drop_pose_key_20_C_XP_YP_ZM": {
+      "stl": "stl/drop_pose_key_20_C_XP_YP_ZM.stl",
+      "step": "step/drop_pose_key_20_C_XP_YP_ZM.step",
+      "bounds_mm": [
+        90.003,
+        90.003,
+        16.745
+      ],
+      "volume_mm3": 109738.516
+    },
+    "drop_pose_key_21_C_XP_YM_ZP": {
+      "stl": "stl/drop_pose_key_21_C_XP_YM_ZP.stl",
+      "step": "step/drop_pose_key_21_C_XP_YM_ZP.step",
+      "bounds_mm": [
+        90.003,
+        90.003,
+        16.745
+      ],
+      "volume_mm3": 109738.514
+    },
+    "drop_pose_key_22_C_XP_YM_ZM": {
+      "stl": "stl/drop_pose_key_22_C_XP_YM_ZM.stl",
+      "step": "step/drop_pose_key_22_C_XP_YM_ZM.step",
+      "bounds_mm": [
+        90.003,
+        90.003,
+        16.745
+      ],
+      "volume_mm3": 109738.516
+    },
+    "drop_pose_key_23_C_XM_YP_ZP": {
+      "stl": "stl/drop_pose_key_23_C_XM_YP_ZP.stl",
+      "step": "step/drop_pose_key_23_C_XM_YP_ZP.step",
+      "bounds_mm": [
+        90.003,
+        90.003,
+        16.745
+      ],
+      "volume_mm3": 109738.516
+    },
+    "drop_pose_key_24_C_XM_YP_ZM": {
+      "stl": "stl/drop_pose_key_24_C_XM_YP_ZM.stl",
+      "step": "step/drop_pose_key_24_C_XM_YP_ZM.step",
+      "bounds_mm": [
+        90.003,
+        90.003,
+        16.745
+      ],
+      "volume_mm3": 109738.514
+    },
+    "drop_pose_key_25_C_XM_YM_ZP": {
+      "stl": "stl/drop_pose_key_25_C_XM_YM_ZP.stl",
+      "step": "step/drop_pose_key_25_C_XM_YM_ZP.step",
+      "bounds_mm": [
+        90.003,
+        90.003,
+        16.745
+      ],
+      "volume_mm3": 109738.516
+    },
+    "drop_pose_key_26_C_XM_YM_ZM": {
+      "stl": "stl/drop_pose_key_26_C_XM_YM_ZM.stl",
+      "step": "step/drop_pose_key_26_C_XM_YM_ZM.step",
+      "bounds_mm": [
+        90.003,
+        90.003,
+        16.745
+      ],
+      "volume_mm3": 109738.515
+    }
+  },
+  "notes": [
+    "All values are millimetres.",
+    "PETG functional parts; TPU 95A only for named cassette liners.",
+    "Drop fixture guides the release head, never the falling pendant.",
+    "Do not use these files for battery short, crush, puncture, overcharge, or fire tests."
+  ]
+}

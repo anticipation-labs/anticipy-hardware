@@ -1,0 +1,31 @@
+3ca2ce86206a72c99b82e4c8460934ff85834753 2026-08-30 docs: honest route status
+496785fc26d1ca37afe68f2be15ec6e117b05534 2026-08-30 v43: GND 36, non-GND 23
+4f91e2489afde5c7b503d80fe14ca5277a659503 2026-08-30 v41: GND stitched down to 51; non-GND at 23
+41470ca2e9e37dfc765ef22dd43339b303f2f9fc 2026-08-30 v40: 23 non-GND unconnected, stable
+2ef24772ad89458d58cb8fa3e93da5a41eebe5c2 2026-08-30 v39: 23 non-GND unconnected (from 199)
+bb00eba1bebb7aacc9aa73c0e1fdc9101fbe4736 2026-08-30 v38: bridge attempts; count unchanged - geometry mismatch between route cells and board copper
+344a006c4ad341dc0c64c68568e4c0cf493640cc 2026-08-30 v37: 33 non-GND unconnected remain
+5cbd1aa205d0fdb3648fcf944d74942bf4ba9ef3 2026-08-30 v36: 72 non-GND unconnected; big buses in
+24b16cae66865d5caaca3e990cff3cf0ce9e9fc1 2026-08-30 v35: B-side buses; 78 non-GND unconnected
+a9680901c9e2f6be287b171600598cb15548abb4 2026-08-30 v34: U2 pad vias; 74 non-GND unconnected
+32cb7fadeb1cb0fb844ed34fdeb2ad2173f1eec5 2026-08-30 v33: power trunks added; 86 unconnected remain (pad-escape gaps)
+f48f4ce0d21e802448d1bdbc65c9dc40b905953a 2026-08-30 v32: U1 pad links wired; 84 non-GND unconnected
+ec8a3feb477470eb0201c623b3973728e7bf64e6 2026-08-30 v31: NTC/USB_CC dogbones; 86 non-GND unconnected
+ae5c14bf8754e0652f9bd5c2fb9440ce1eb9d4a8 2026-08-30 v30: dogbone exit wires connected (LED/SD/MIC/LDO/VSET); 92 remain
+68cc1dc28440f916083c202a05947b3953d96429 2026-08-30 v29: QFN dogbones fix 8 nets; 96 non-GND unconnected
+40c927acca86e1d44bb852622f200d44ee8996fc 2026-08-30 v28: wave-v27 partial; similar convergence ceiling
+7fca3d8d8971f90932873ed3044ea18e3d26f56f 2026-08-30 v26: hand-fixed VBUSOUT+DCCH, 104 non-GND unconnected
+f4c9ea6d8c08d02185d78751fce8c6b8654d6721 2026-08-30 v25: VBUSOUT+DCCH hand-rerouted; 108 non-GND unconnected remain
+a173c777c46b2d2a9e02af690b539e9866f2ff90 2026-08-30 v23/v24: 108 non-GND unconnected; route state converged at this level
+99adb81c9d7acb8b94e8769fd17a097d5f09fc42 2026-08-30 v21: 26 nets re-completed; remaining gaps small
+4c9a63da3835bc63ad00f4b132ca0ddfb09984d1 2026-08-30 v20: PMIC_INT + USER_BTN hand-fixed, 120 unconnected remain
+939940448322882116d2523b067f528227cb1f9e 2026-08-30 v19: 40 stitch vias, 122 unconnected remain
+755c896a57b196c76d9a69d7269db626e63a1abc 2026-08-30 v18: best routed state (126 unconnected GND-plane items + small fixups)
+81449d879b1731b0ea221fb3496c0ded453adff5 2026-08-30 wip route experiments
+1d3e8d4d45fb57759cbc3619f527be2b390f31ad 2026-08-30 checkpoint: v6 (59 shorts, 320 clearance) before final targeted repair
+d7c215ffa464348932dfca396b5e013cfea3bf00 2026-08-30 all 45 nets routed with copper (455+ stubs cleaned, vias normalized)
+142514d5956ec4ce880b91e18168847d500ba6a4 2026-08-29 negotiated-congestion routing: 39/45 nets complete, 0 conflicts
+ba2c1efe023ebc502667e1ec0ae92a2cc85d9c1a 2026-08-29 placement DRC-clean: 0 errors except unconnected; KiCad 10 footprints, fixed J1/U2/U4/LED/BT1 clusters
+e450b6007b8193b40e413162d49044491a6af152 2026-08-29 KiCad 10 port: regenerate with L3/DCCH + J1 fix; verifier green; 171 unconnected await routing
+22ce3ec340c03ce58e189b634d18f4181e08035e 2026-08-29 audit: datasheet-verified netlist review; add L3 DCCH inductor; J1 edge fix; verifier updates
+221e19daf509f469410777416df80fcf62ef1d4a 2026-08-29 ANT-PROD-R0 EVT KiCad checkpoint: recover and preserve (source: Anticipy_ANT_PROD_R0_EVT_KiCad_Source.zip 2026-08-29)

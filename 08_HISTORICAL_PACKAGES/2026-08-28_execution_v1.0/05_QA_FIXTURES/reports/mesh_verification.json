@@ -1,0 +1,1059 @@
+{
+  "result": "PASS",
+  "stl_count": 42,
+  "failure_count": 0,
+  "failed_files": [],
+  "scope": "Geometry/manifold/build-volume checks only. This does not validate print quality, release timing, drop spin, structural strength, electrical safety, or calibration.",
+  "meshes": [
+    {
+      "file": "stl/drop_collet_body_petg.stl",
+      "sha256": "2ccaf64fae5970c83746ab138155d17a7a252138ad39e3cb8e568f56937b0e98",
+      "vertices": 6076,
+      "faces": 12224,
+      "connected_bodies": 1,
+      "extents_mm": [
+        204.596,
+        184.977,
+        8.0
+      ],
+      "volume_mm3": 135256.199,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/drop_common_latch_plate_petg.stl",
+      "sha256": "15ea924270c424cb2d6da480882f3aeb1c93c9b2ff4f8e0dc2de2db0d2c75022",
+      "vertices": 2808,
+      "faces": 5640,
+      "connected_bodies": 1,
+      "extents_mm": [
+        190.0,
+        189.941,
+        10.0
+      ],
+      "volume_mm3": 89811.246,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/drop_finger_guide_petg_print_three.stl",
+      "sha256": "948ed0a0760d2f016a8f5820e264d17933dc6a05fd26d9968e233ffa496dbf3a",
+      "vertices": 1280,
+      "faces": 2572,
+      "connected_bodies": 1,
+      "extents_mm": [
+        85.0,
+        30.0,
+        9.0
+      ],
+      "volume_mm3": 16963.611,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/drop_inert_51x21x11_dummy.stl",
+      "sha256": "152259bef5454ab72f88262276c268f26b9d118cee1e6d4f1f15698494f38e41",
+      "vertices": 8448,
+      "faces": 16892,
+      "connected_bodies": 1,
+      "extents_mm": [
+        50.993,
+        21.0,
+        11.0
+      ],
+      "volume_mm3": 10661.475,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/drop_pose_key_01_F_XP.stl",
+      "sha256": "838cffdcecc7e2627c8ca6f70f2b22fb2a2ffd8614278dec3d460efdc4ae81b5",
+      "vertices": 2512,
+      "faces": 5020,
+      "connected_bodies": 1,
+      "extents_mm": [
+        90.0,
+        90.0,
+        16.0
+      ],
+      "volume_mm3": 105029.248,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/drop_pose_key_02_F_XM.stl",
+      "sha256": "70dd9d300e7830b7dd33dd2ec06a49860dfa4a79f53d635ec0ad407ed62b2be7",
+      "vertices": 2512,
+      "faces": 5020,
+      "connected_bodies": 1,
+      "extents_mm": [
+        90.0,
+        90.0,
+        16.0
+      ],
+      "volume_mm3": 105029.248,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/drop_pose_key_03_F_YP.stl",
+      "sha256": "c35822d121736680f7acf27a1017ddc3cb853c011c0091e69a5d01c807aceea2",
+      "vertices": 2774,
+      "faces": 5544,
+      "connected_bodies": 1,
+      "extents_mm": [
+        90.0,
+        90.0,
+        31.0
+      ],
+      "volume_mm3": 198609.481,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/drop_pose_key_04_F_YM.stl",
+      "sha256": "dbdc6a6b422c81949b1661d8d639030649d3789a1947508d490486e3dd6f7bb9",
+      "vertices": 2774,
+      "faces": 5544,
+      "connected_bodies": 1,
+      "extents_mm": [
+        90.0,
+        90.0,
+        31.0
+      ],
+      "volume_mm3": 198609.481,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/drop_pose_key_05_F_ZP.stl",
+      "sha256": "8a04df311efd9a0b4bc49a8a8498ff1c4d2dffd4c5e01e0f47f6e7d84e62239d",
+      "vertices": 4752,
+      "faces": 9500,
+      "connected_bodies": 1,
+      "extents_mm": [
+        90.0,
+        90.0,
+        36.0
+      ],
+      "volume_mm3": 228992.61,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/drop_pose_key_06_F_ZM.stl",
+      "sha256": "6e36820ec8fa3edc031adc342e852788591e9a857910777faa456b96da41fa55",
+      "vertices": 4752,
+      "faces": 9500,
+      "connected_bodies": 1,
+      "extents_mm": [
+        90.0,
+        90.0,
+        36.0
+      ],
+      "volume_mm3": 228992.61,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/drop_pose_key_07_E_XP_YP.stl",
+      "sha256": "5b63f5d567193571b45288647ea3b5f7edd41b429f33ca417ed589ef72d17cc5",
+      "vertices": 2644,
+      "faces": 5284,
+      "connected_bodies": 1,
+      "extents_mm": [
+        90.0,
+        90.0,
+        17.13
+      ],
+      "volume_mm3": 112122.876,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/drop_pose_key_08_E_XP_YM.stl",
+      "sha256": "1bbea4df0b9e1bfb8b15bfac7bbe5db52fc41c5a5c85f197cf6f01b6fd5e9abc",
+      "vertices": 2644,
+      "faces": 5284,
+      "connected_bodies": 1,
+      "extents_mm": [
+        90.0,
+        90.0,
+        17.13
+      ],
+      "volume_mm3": 112122.888,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/drop_pose_key_09_E_XM_YP.stl",
+      "sha256": "5546b487bf1fbaf0f32673685db971ca1a9b0b2f7f6b3bca489467d5f2f6c269",
+      "vertices": 2644,
+      "faces": 5284,
+      "connected_bodies": 1,
+      "extents_mm": [
+        90.0,
+        90.0,
+        17.13
+      ],
+      "volume_mm3": 112122.888,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/drop_pose_key_10_E_XM_YM.stl",
+      "sha256": "099dc1b09d527910f44b6bb30be351740cacf71de6b376148dc8aac5f6667c83",
+      "vertices": 2644,
+      "faces": 5284,
+      "connected_bodies": 1,
+      "extents_mm": [
+        90.0,
+        90.0,
+        17.13
+      ],
+      "volume_mm3": 112122.876,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/drop_pose_key_11_E_XP_ZP.stl",
+      "sha256": "dcd6cc97d64a2ea56f78ceafdab7ef5f8435901cd5510bbc43d55a2ac749150c",
+      "vertices": 1887,
+      "faces": 3770,
+      "connected_bodies": 1,
+      "extents_mm": [
+        90.0,
+        90.0,
+        15.64
+      ],
+      "volume_mm3": 102856.282,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/drop_pose_key_12_E_XP_ZM.stl",
+      "sha256": "76e38f0ace385bce5396cd9ad20771553f4cd394c4c5d6f3ff815745a5cc8d97",
+      "vertices": 1887,
+      "faces": 3770,
+      "connected_bodies": 1,
+      "extents_mm": [
+        90.0,
+        90.0,
+        15.64
+      ],
+      "volume_mm3": 102856.282,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/drop_pose_key_13_E_XM_ZP.stl",
+      "sha256": "7cb3d17a3d082f3ac591cf2b0dbd6d3c5bd8a1561c5a23254708b2d8242af3d2",
+      "vertices": 1887,
+      "faces": 3770,
+      "connected_bodies": 1,
+      "extents_mm": [
+        90.0,
+        90.0,
+        15.64
+      ],
+      "volume_mm3": 102856.282,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/drop_pose_key_14_E_XM_ZM.stl",
+      "sha256": "02c0544a555308f435aef8e54120f3335e6b13b300ff9338b13a9bd493e6a540",
+      "vertices": 1887,
+      "faces": 3770,
+      "connected_bodies": 1,
+      "extents_mm": [
+        90.0,
+        90.0,
+        15.64
+      ],
+      "volume_mm3": 102856.282,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/drop_pose_key_15_E_YP_ZP.stl",
+      "sha256": "30bd6316a96633844bb3fde8da25cf314f18191ccbbc2f2a38bcee8d8b73b41c",
+      "vertices": 1583,
+      "faces": 3162,
+      "connected_bodies": 1,
+      "extents_mm": [
+        90.0,
+        90.0,
+        30.067
+      ],
+      "volume_mm3": 193276.709,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/drop_pose_key_16_E_YP_ZM.stl",
+      "sha256": "45b4b05775050a74be274e60b46deb0afc39eed699d5a78a5a5482dddb0885ea",
+      "vertices": 1583,
+      "faces": 3162,
+      "connected_bodies": 1,
+      "extents_mm": [
+        90.0,
+        90.0,
+        30.067
+      ],
+      "volume_mm3": 193276.709,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/drop_pose_key_17_E_YM_ZP.stl",
+      "sha256": "b8366a6845b61483ef676779667e538c72f8b19e72104878aa0139b296519da2",
+      "vertices": 1583,
+      "faces": 3162,
+      "connected_bodies": 1,
+      "extents_mm": [
+        90.0,
+        90.0,
+        30.067
+      ],
+      "volume_mm3": 193276.709,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/drop_pose_key_18_E_YM_ZM.stl",
+      "sha256": "a826cabb0d8a33db16e3e9d00fc7fae980160bd524739f4f14c25b000a6aa1d9",
+      "vertices": 1583,
+      "faces": 3162,
+      "connected_bodies": 1,
+      "extents_mm": [
+        90.0,
+        90.0,
+        30.067
+      ],
+      "volume_mm3": 193276.709,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/drop_pose_key_19_C_XP_YP_ZP.stl",
+      "sha256": "20dfe43f9ef62976697b665254a078875456ae4c1f8c7c927c09c82bd873dfdb",
+      "vertices": 2065,
+      "faces": 4126,
+      "connected_bodies": 1,
+      "extents_mm": [
+        90.0,
+        90.0,
+        16.736
+      ],
+      "volume_mm3": 109738.009,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/drop_pose_key_20_C_XP_YP_ZM.stl",
+      "sha256": "2074a4566819b91ceb9e84a1b5f4adf9948f65934fbf06b085cb068051ba908a",
+      "vertices": 2081,
+      "faces": 4158,
+      "connected_bodies": 1,
+      "extents_mm": [
+        90.0,
+        90.0,
+        16.736
+      ],
+      "volume_mm3": 109738.008,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/drop_pose_key_21_C_XP_YM_ZP.stl",
+      "sha256": "4786a3a79ee0a28697283944f3968e6af4ae3434339b711b010b71d468d5de7c",
+      "vertices": 2081,
+      "faces": 4158,
+      "connected_bodies": 1,
+      "extents_mm": [
+        90.0,
+        90.0,
+        16.736
+      ],
+      "volume_mm3": 109738.008,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/drop_pose_key_22_C_XP_YM_ZM.stl",
+      "sha256": "cf371b423b6929a23310082e04c60b190d7cc72e8a737701b61b1823f7cebd51",
+      "vertices": 2065,
+      "faces": 4126,
+      "connected_bodies": 1,
+      "extents_mm": [
+        90.0,
+        90.0,
+        16.736
+      ],
+      "volume_mm3": 109738.009,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/drop_pose_key_23_C_XM_YP_ZP.stl",
+      "sha256": "f72ea6f25fd8c87e29bd3cc4a5137fa4441fa8c244f23110ec2399a30b2216d6",
+      "vertices": 2081,
+      "faces": 4158,
+      "connected_bodies": 1,
+      "extents_mm": [
+        90.0,
+        90.0,
+        16.736
+      ],
+      "volume_mm3": 109738.008,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/drop_pose_key_24_C_XM_YP_ZM.stl",
+      "sha256": "013027acd90848b469586ac33fb7358866336f01f7f4e930b6791002c82de0c7",
+      "vertices": 2065,
+      "faces": 4126,
+      "connected_bodies": 1,
+      "extents_mm": [
+        90.0,
+        90.0,
+        16.736
+      ],
+      "volume_mm3": 109738.009,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/drop_pose_key_25_C_XM_YM_ZP.stl",
+      "sha256": "5926e1168f6e2c2001f7da031ca1269ff0b96ad50a31e2cfa90c4fe72e4644a1",
+      "vertices": 2065,
+      "faces": 4126,
+      "connected_bodies": 1,
+      "extents_mm": [
+        90.0,
+        90.0,
+        16.736
+      ],
+      "volume_mm3": 109738.009,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/drop_pose_key_26_C_XM_YM_ZM.stl",
+      "sha256": "5f26671b6e5ea179a3f347dbeb3ab65dfd20c3c52276069c4835ef9e870643d4",
+      "vertices": 2081,
+      "faces": 4158,
+      "connected_bodies": 1,
+      "extents_mm": [
+        90.0,
+        90.0,
+        16.736
+      ],
+      "volume_mm3": 109738.008,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/drop_radial_finger_petg_print_three.stl",
+      "sha256": "5357326793681d1cb81d9161a61d2512d65b0344c2c0afba68f62519b9604112",
+      "vertices": 728,
+      "faces": 1456,
+      "connected_bodies": 1,
+      "extents_mm": [
+        40.0,
+        10.0,
+        5.0
+      ],
+      "volume_mm3": 1791.886,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/drop_three_cord_lift_yoke_petg.stl",
+      "sha256": "ac9188bf5c4532e860ef5e95ed1ce1c4f531a22b3360aa108e547385e6ee6014",
+      "vertices": 1266,
+      "faces": 2544,
+      "connected_bodies": 1,
+      "extents_mm": [
+        83.0,
+        94.6,
+        6.0
+      ],
+      "volume_mm3": 25705.128,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/inert_51x21x11_pendant_dummy.stl",
+      "sha256": "152259bef5454ab72f88262276c268f26b9d118cee1e6d4f1f15698494f38e41",
+      "vertices": 8448,
+      "faces": 16892,
+      "connected_bodies": 1,
+      "extents_mm": [
+        50.993,
+        21.0,
+        11.0
+      ],
+      "volume_mm3": 10661.475,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/rattle_608_bearing_tower_petg_print_two.stl",
+      "sha256": "15ae5d662a1eb39d23b0ba660c5f9e2786ffb8bde334f2e5f63e406e9c6ba1a3",
+      "vertices": 1528,
+      "faces": 3072,
+      "connected_bodies": 1,
+      "extents_mm": [
+        34.0,
+        55.0,
+        78.0
+      ],
+      "volume_mm3": 55284.152,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/rattle_base_plate_petg_or_plywood_template.stl",
+      "sha256": "b1f21039959f59c684f8c55110c053e5178cd1c162411dd6ec2a9f518f547e32",
+      "vertices": 2280,
+      "faces": 4588,
+      "connected_bodies": 1,
+      "extents_mm": [
+        230.0,
+        90.0,
+        6.0
+      ],
+      "volume_mm3": 123284.759,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/rattle_cassette_base_petg.stl",
+      "sha256": "6c272689bbdcaf860865947b8f94a7b979459ce7ecc57fb0d4cf554cbe694fc1",
+      "vertices": 1528,
+      "faces": 3068,
+      "connected_bodies": 1,
+      "extents_mm": [
+        70.0,
+        38.0,
+        9.2
+      ],
+      "volume_mm3": 15162.309,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/rattle_cassette_lid_petg.stl",
+      "sha256": "f92b0bb081f90557bf319450347a0a77e1afd4d106eb3b96e70d789d47892c70",
+      "vertices": 1784,
+      "faces": 3584,
+      "connected_bodies": 1,
+      "extents_mm": [
+        70.0,
+        38.0,
+        7.0
+      ],
+      "volume_mm3": 11259.668,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/rattle_cassette_liner_base_tpu95a.stl",
+      "sha256": "580efaefff17609a558231d0a1621ec8a6370164cc48fd8d5cc3b201705c748d",
+      "vertices": 512,
+      "faces": 1020,
+      "connected_bodies": 1,
+      "extents_mm": [
+        54.192,
+        24.5,
+        6.8
+      ],
+      "volume_mm3": 2306.632,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/rattle_cassette_liner_lid_tpu95a.stl",
+      "sha256": "ec132e7f0dd2049338fba71297d91bec6619198d0988218b205ce192a2806180",
+      "vertices": 512,
+      "faces": 1024,
+      "connected_bodies": 1,
+      "extents_mm": [
+        54.192,
+        24.5,
+        1.0
+      ],
+      "volume_mm3": 695.016,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/rattle_edge_axis_adapter_petg.stl",
+      "sha256": "08f08535cf940e18a1180f365d6b7382a01f01d56c87edf5c921b31e6fd8e4d5",
+      "vertices": 3320,
+      "faces": 6684,
+      "connected_bodies": 1,
+      "extents_mm": [
+        90.0,
+        50.0,
+        78.0
+      ],
+      "volume_mm3": 60437.144,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/rattle_nema17_mount_petg.stl",
+      "sha256": "34510c64facc60fb5170c2a6f7ee6f875e197ac0d9e574e54bd2106b6f2296f5",
+      "vertices": 2292,
+      "faces": 4616,
+      "connected_bodies": 1,
+      "extents_mm": [
+        34.0,
+        66.0,
+        66.0
+      ],
+      "volume_mm3": 37884.122,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    },
+    {
+      "file": "stl/rattle_rotor_disk_petg.stl",
+      "sha256": "51791fa06ee3499a5969d0e7609d8d8f45cafc1485c00ed6e0d92d961aa7fcaa",
+      "vertices": 2568,
+      "faces": 5168,
+      "connected_bodies": 1,
+      "extents_mm": [
+        100.0,
+        99.969,
+        6.0
+      ],
+      "volume_mm3": 45998.965,
+      "degenerate_faces": 0,
+      "checks": {
+        "finite": true,
+        "watertight": true,
+        "winding_consistent": true,
+        "is_volume": true,
+        "positive_volume": true,
+        "one_connected_body": true,
+        "zero_degenerate_faces": true,
+        "fits_P2S_build_volume_in_some_axis_aligned_orientation": true
+      },
+      "pass": true
+    }
+  ]
+}

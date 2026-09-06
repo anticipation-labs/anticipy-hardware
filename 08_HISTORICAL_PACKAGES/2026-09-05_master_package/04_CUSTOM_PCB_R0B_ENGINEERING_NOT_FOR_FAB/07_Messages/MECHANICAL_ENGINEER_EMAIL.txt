@@ -1,0 +1,14 @@
+Subject: Urgent Anticipy pendant enclosure CAD - compact EVT handoff
+
+Hi,
+
+We need a mechanical engineer to design and release the enclosure for Anticipy, a compact Bluetooth audio pendant. The finished device must remain within 51 x 21 x 11 mm and use a rounded capsule form.
+
+I am attaching the handoff package. It includes a provisional 45.8 x 18.0 mm board-only STEP and DXF, placement image, electrical interfaces, material strategy and required CAD deliverables. The provisional files are for packaging studies only. Final CAD must use the released PCBA STEP and exact approved battery STEP.
+
+The intended construction is 0.60 mm brushed 5052-H32 aluminum front and rear faces around a polycarbonate structural centre. The antenna end must remain polymer-only. The enclosure must integrate two microphone paths, USB-C, button, red/blue light pipe, battery, haptic motor, insulation, strain relief, acoustic mesh, anti-rattle retention and chain/bail hardware.
+
+Please confirm whether you can begin immediately, work in parallel with the PCB engineer, and produce the STEP, 3MF, aluminum DXFs, drawings, mechanical BOM and assembly specification listed in the package.
+
+Thank you.
+

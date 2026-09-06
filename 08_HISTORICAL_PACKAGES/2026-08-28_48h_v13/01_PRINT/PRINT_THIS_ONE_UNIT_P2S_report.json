@@ -1,0 +1,48 @@
+{
+  "printer": "Bambu Lab P2S, 0.4 mm nozzle",
+  "plate_mm": [
+    256,
+    256
+  ],
+  "objects_expected": 3,
+  "objects_reloaded": 3,
+  "inside_plate": true,
+  "placements": [
+    {
+      "name": "ANTICIPY_BASE",
+      "centre_xy_mm": [
+        72,
+        128
+      ],
+      "extents_mm": [
+        71.998,
+        33.0,
+        14.4
+      ]
+    },
+    {
+      "name": "ANTICIPY_LID",
+      "centre_xy_mm": [
+        174,
+        128
+      ],
+      "extents_mm": [
+        68.0,
+        33.0,
+        6.8
+      ]
+    },
+    {
+      "name": "ANTICIPY_BUTTON",
+      "centre_xy_mm": [
+        128,
+        176
+      ],
+      "extents_mm": [
+        3.6,
+        3.599,
+        2.5
+      ]
+    }
+  ]
+}

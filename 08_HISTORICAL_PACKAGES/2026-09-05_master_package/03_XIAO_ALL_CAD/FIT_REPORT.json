@@ -1,0 +1,2361 @@
+{
+  "status": "CAD PASS with 4.50 mm-rise band against exact historical body/face geometry; a printed or ordered physical shell and all finished components still require gauges and no-load closure",
+  "ordered_shell_nominal_mm": {
+    "outer_closed_original": [
+      51.0,
+      22.0,
+      10.0
+    ],
+    "cavity_plan": [
+      48.0,
+      19.0
+    ],
+    "original_clear_height": 8.0,
+    "recovered_main_clear_height": 12.5,
+    "recovered_hook_zone_clear_height": 11.5,
+    "recovered_outer_height": 14.5
+  },
+  "component_envelopes_mm": {
+    "xiao_official_step_bbox": [
+      22.4819811502,
+      17.78,
+      4.4600000149
+    ],
+    "battery_finished_maximum": [
+      25.0,
+      10.0,
+      5.5
+    ],
+    "Vybronics_VCLP1020B002L_tolerance_max": [
+      10.2,
+      10.2,
+      2.3
+    ],
+    "PRIMARY_RENATA_ONLY_motor_mechanical_max": [
+      10.2,
+      10.2,
+      2.7
+    ],
+    "barrel_motor_full_swept": [
+      11.29,
+      4.03,
+      4.03
+    ],
+    "driver_reserved": [
+      8.0,
+      4.0,
+      2.0
+    ]
+  },
+  "layout_centres_mm": {
+    "xiao": [
+      -6.0,
+      0.0
+    ],
+    "battery": [
+      -3.5,
+      0.0
+    ],
+    "motor": [
+      12.75,
+      0.0
+    ],
+    "driver": [
+      -5.0,
+      7.3
+    ],
+    "microphone_drill": [
+      2.929500000000001,
+      -4.5874
+    ],
+    "antenna_keepout_x": [
+      0.24099057509999966,
+      5.2409905751
+    ]
+  },
+  "vertical_budget_mm": {
+    "floor_insulation": 0.05,
+    "battery": 5.5,
+    "cell_to_board_barrier_and_expansion": 0.9000000000000004,
+    "xiao": 4.4600000149,
+    "top_clearance": 0.25,
+    "required": 11.1600000149,
+    "original_shortage": 3.1600000148999996,
+    "recovered_main_margin": 1.3399999851000004,
+    "recovered_hook_margin_before_top_allowance": 0.5899999851000004
+  },
+  "plan_clearances_mm": {
+    "battery_to_motor": 1.7349999999999994,
+    "battery_to_driver": 0.2999999999999998,
+    "battery_foil_overlap_into_last_5mm_antenna_zone": 5.0,
+    "antenna_tip_not_over_battery": -3.7590094249000003
+  },
+  "checks": {
+    "xiao_plan_inside_nominal_capsule": true,
+    "battery_plan_inside_nominal_capsule": true,
+    "motor_plan_inside_nominal_capsule": true,
+    "driver_plan_inside_nominal_capsule": true,
+    "original_8mm_height_fits": false,
+    "raised_main_height_fits": true,
+    "raised_hook_zone_fits_without_top_allowance": true
+  },
+  "alternate_battery_Vybronics_motor": {
+    "battery_12x10x5p5_Vybronics_10p2x2p3": {
+      "battery_centre_mm": [
+        -6.1,
+        0.0
+      ],
+      "coin_centre_mm": [
+        -18.4,
+        0.0
+      ],
+      "battery_inside_capsule": true,
+      "coin_inside_capsule_exact_circle_test": true,
+      "coin_shell_radial_margin_mm": 0.5000000000000018,
+      "coin_to_battery_plan_gap_mm": 1.1999999999999993,
+      "battery_foil_overlap_into_last_5mm_antenna_zone": 0.0,
+      "antenna_tip_not_over_battery": 5.0,
+      "vertical_required_mm": 11.1600000149,
+      "raised_main_margin_mm": 1.3399999851000004,
+      "coin_to_bridge_vertical_clearance_mm": 3.6000000000000005
+    },
+    "battery_15x10x5p5_Vybronics_10p2x2p3": {
+      "battery_centre_mm": [
+        -5.5,
+        0.0
+      ],
+      "coin_centre_mm": [
+        -18.4,
+        0.0
+      ],
+      "battery_inside_capsule": true,
+      "coin_inside_capsule_exact_circle_test": true,
+      "coin_shell_radial_margin_mm": 0.5000000000000018,
+      "coin_to_battery_plan_gap_mm": 0.29999999999999893,
+      "battery_foil_overlap_into_last_5mm_antenna_zone": 1.7590094249000003,
+      "antenna_tip_not_over_battery": 3.2409905750999997,
+      "vertical_required_mm": 11.1600000149,
+      "raised_main_margin_mm": 1.3399999851000004,
+      "coin_to_bridge_vertical_clearance_mm": 3.6000000000000005
+    },
+    "battery_24x10x5p5_Vybronics_10p2x2p3": {
+      "battery_centre_mm": [
+        -3.5,
+        0.0
+      ],
+      "coin_centre_mm": [
+        18.4,
+        0.0
+      ],
+      "battery_inside_capsule": true,
+      "coin_inside_capsule_exact_circle_test": true,
+      "coin_shell_radial_margin_mm": 0.5000000000000018,
+      "coin_to_battery_plan_gap_mm": 4.799999999999999,
+      "battery_foil_overlap_into_last_5mm_antenna_zone": 5.0,
+      "antenna_tip_not_over_battery": -3.2590094249000003,
+      "vertical_required_mm": 11.1600000149,
+      "raised_main_margin_mm": 1.3399999851000004,
+      "coin_to_bridge_vertical_clearance_mm": 3.6000000000000005
+    },
+    "battery_25x10x5p5_Vybronics_10p2x2p3": {
+      "battery_centre_mm": [
+        -3.5,
+        0.0
+      ],
+      "coin_centre_mm": [
+        18.4,
+        0.0
+      ],
+      "battery_inside_capsule": true,
+      "coin_inside_capsule_exact_circle_test": true,
+      "coin_shell_radial_margin_mm": 0.5000000000000018,
+      "coin_to_battery_plan_gap_mm": 4.299999999999999,
+      "battery_foil_overlap_into_last_5mm_antenna_zone": 5.0,
+      "antenna_tip_not_over_battery": -3.7590094249000003,
+      "vertical_required_mm": 11.1600000149,
+      "raised_main_margin_mm": 1.3399999851000004,
+      "coin_to_bridge_vertical_clearance_mm": 3.6000000000000005
+    }
+  },
+  "conditional_plan_b_DTP401525_Vybronics": {
+    "status": "CAD candidate only; exact received pack identity, documents, caliper measurements, lead route and no-pressure closure remain mandatory",
+    "documented_reference": "SparkFun PRT-13853 / Data Power DTP401525; not evidence that Lee PID8834 is the same pack",
+    "battery_total_envelope_mm": [
+      25.3,
+      15.0,
+      4.0
+    ],
+    "battery_centre_mm": [
+      -4.15,
+      0.0
+    ],
+    "Vybronics_motor_envelope_mm": [
+      10.2,
+      10.2,
+      2.3
+    ],
+    "motor_centre_mm": [
+      18.4,
+      0.0
+    ],
+    "rotated_driver_envelope_mm": [
+      4.0,
+      8.0,
+      2.0
+    ],
+    "driver_centre_mm": [
+      10.9,
+      0.0
+    ],
+    "existing_bridge_reused": true,
+    "battery_inside_capsule": true,
+    "motor_inside_capsule_exact_circle_test": true,
+    "driver_inside_capsule": true,
+    "battery_to_driver_plan_gap_mm": 0.40000000000000036,
+    "driver_to_motor_plan_gap_mm": 0.3999999999999986,
+    "battery_top_from_floor_mm": 4.05,
+    "historical_shelf_underside_from_floor_mm": 4.2,
+    "nominal_battery_to_shelf_underside_gap_mm": 0.15000000000000036,
+    "existing_bridge_deck_underside_from_floor_mm": 5.95,
+    "nominal_battery_to_bridge_gap_mm": 1.9000000000000004,
+    "battery_foil_overlap_into_last_5mm_antenna_zone": 5.0
+  },
+  "PRIMARY_RENATA_ONLY_M2_screw_retention": {
+    "status": "CAD PASS against exact historical STEP; physical drill coupon, actual M2 screw and destructive retention tests remain mandatory",
+    "scope": "Renata ICP501022UPM / part 100640 envelope <=24x10x5.5 mm plus mechanically qualified motor envelope <=10.2x10.2x2.7 mm",
+    "motor_qualification": {
+      "mechanical_envelope_max_mm": [
+        10.2,
+        10.2,
+        2.7
+      ],
+      "ordered_Vybronics_is_inside_envelope": true,
+      "listed_Lee_PID10431_body_is_inside_envelope": true,
+      "Lee_release_still_requires": [
+        "received finished body passes the max-envelope gauge",
+        "manufacturer and part identity",
+        "rated voltage, current, startup/stall peak and duty limit",
+        "matched driver and firmware polarity",
+        "open- and closed-case electrical, thermal, audio, BLE/RF, haptic and abuse tests"
+      ]
+    },
+    "not_compatible_with": [
+      "conditional Plan B 25.3x15x4 mm battery plus rotated 4x8x2 mm driver",
+      "barrel-motor primary layout",
+      "either adhesive-only midband filename"
+    ],
+    "print_files": [
+      "PRINT_FULL_SHELL_body_exact_historical_geometry.stl",
+      "PRINT_FULL_SHELL_hooked_face_exact_historical_geometry.stl",
+      "PRIMARY_RENATA_ONLY_M2_screw_retained_midband_rise_4p50mm_nominal.stl",
+      "PRINT_TWO_PRIMARY_RENATA_ONLY_M2_keyed_retainer_posts_HEAD_DOWN.stl",
+      "PRIMARY_RENATA_ONLY_M2_body_drill_marking_jig_USB_NOTCH.stl",
+      "PRIMARY_RENATA_ONLY_MEASURE_MAX_coin_motor_10p2x2p7.stl"
+    ],
+    "post_centres_xy_mm": [
+      [
+        11.0,
+        3.0
+      ],
+      [
+        11.0,
+        -3.0
+      ]
+    ],
+    "post_geometry_mm": {
+      "keyed_shaft_square": 3.6,
+      "band_socket_square": 3.9,
+      "head_square": 5.6,
+      "head_thickness": 0.8,
+      "installed_shaft_height": 9.0,
+      "printed_blind_M2_pilot_diameter": 1.6
+    },
+    "body_drill_geometry_mm": {
+      "jig_marking_holes": 1.0,
+      "preferred_body_clearance_holes": 2.2,
+      "maximum_audited_body_clearance_holes": 2.4,
+      "approved_imperial_substitute": "3/32 inch = 2.38125 mm",
+      "countersink_included_angle_deg": 90,
+      "conservative_max_countersink_diameter": 4.0,
+      "rule": "stop as soon as the actual flat-head screw is flush; 4.0 mm is an audit ceiling, not a machining target"
+    },
+    "target_fastener": {
+      "description": "M2 x 10 mm flat countersunk screw, 2 required plus spares",
+      "local_candidate": "Lee's Electronic PID6836; online finish is unspecified",
+      "url": "https://leeselectronic.com/en/product/6836-screw-m2x10mm-flat-countersunk-10pcspkg.html"
+    },
+    "nominal_hard_part_plan_gaps_mm": {
+      "Renata_battery_to_post_shaft": 0.6999999999999993,
+      "post_shaft_to_primary_motor_max_x_envelope": 0.4999999999999982,
+      "XIAO_to_post_shaft": 3.9590094248999996,
+      "2p4mm_max_hole_edge_to_antenna_through_opening_bbox": 3.8000000000000007,
+      "2p4mm_max_hole_edge_to_antenna_flange_recess_bbox": 2.3000000000000007,
+      "4p0mm_countersink_edge_to_antenna_flange_recess_bbox": 1.5
+    },
+    "assembly_release_gates": [
+      "Use an empty sacrificial body for the first drill and countersink; remove the battery, PCB, motor and antenna-window insert before every drilling operation.",
+      "Seat the USB-notched jig, transfer both centres through its 1.0 mm holes, remove the jig, drill 1.0 mm pilots, then enlarge the body to 2.2 mm preferred or no more than the audited 2.4 mm; a 3/32 inch (2.381 mm) bit is allowed.",
+      "Make each 90 degree countersink from the outside and stop when the actual M2 flat head is flush; never drill to the 4.0 mm audit ceiling by measurement alone.",
+      "Hand-thread or M2x0.4 tap the actual printed post's 1.6 mm blind pilot before final assembly; reject splitting, whitening, loose threads or a bottomed screw.",
+      "Deburr, vacuum and inspect both sides until no plastic or metal swarf remains before any battery returns to the enclosure.",
+      "Torque only until the post head seats and the band cannot lift; use thread-safe low-strength retention only after material compatibility is proven, never extra torque.",
+      "Release only after 100 vigorous hand shakes, a controlled 1 m drop sequence onto a protected hard surface, torsion, face removal/reinstall and a second electrical/thermal/RF test show no loosening, cracks or battery contact."
+    ]
+  },
+  "exact_historical_shell_boolean_audit": {
+    "reference_files": {
+      "body": "reference/alu_body.step",
+      "face": "reference/alu_face_front_v3.step"
+    },
+    "reference_bounds_mm": {
+      "body": [
+        51.0,
+        22.0,
+        10.0
+      ],
+      "face_with_hooks": [
+        47.8,
+        20.3,
+        2.0
+      ]
+    },
+    "assembly_positions_mm": {
+      "midband_global_z": 9.0,
+      "face_global_z": 13.5,
+      "face_drop_x": 0.75,
+      "face_locked_x": -0.75,
+      "component_floor_global_z": 1.0
+    },
+    "body_to_midband_intersection_mm3": {
+      "nominal": 0.0,
+      "loose": 0.0,
+      "PRIMARY_RENATA_ONLY_M2_nominal": 0.0,
+      "PRIMARY_RENATA_ONLY_M2_loose": 0.0
+    },
+    "face_to_midband_drop_path_intersection_mm3": {
+      "nominal": {
+        "z_+16.500": 0.0,
+        "z_+16.250": 0.0,
+        "z_+16.000": 0.0,
+        "z_+15.750": 0.0,
+        "z_+15.500": 0.0,
+        "z_+15.250": 0.0,
+        "z_+15.000": 0.0,
+        "z_+14.750": 0.0,
+        "z_+14.500": 0.0,
+        "z_+14.250": 0.0,
+        "z_+14.000": 0.0,
+        "z_+13.750": 0.0,
+        "z_+13.500": 0.0
+      },
+      "loose": {
+        "z_+16.500": 0.0,
+        "z_+16.250": 0.0,
+        "z_+16.000": 0.0,
+        "z_+15.750": 0.0,
+        "z_+15.500": 0.0,
+        "z_+15.250": 0.0,
+        "z_+15.000": 0.0,
+        "z_+14.750": 0.0,
+        "z_+14.500": 0.0,
+        "z_+14.250": 0.0,
+        "z_+14.000": 0.0,
+        "z_+13.750": 0.0,
+        "z_+13.500": 0.0
+      },
+      "PRIMARY_RENATA_ONLY_M2_nominal": {
+        "z_+16.500": 0.0,
+        "z_+16.250": 0.0,
+        "z_+16.000": 0.0,
+        "z_+15.750": 0.0,
+        "z_+15.500": 0.0,
+        "z_+15.250": 0.0,
+        "z_+15.000": 0.0,
+        "z_+14.750": 0.0,
+        "z_+14.500": 0.0,
+        "z_+14.250": 0.0,
+        "z_+14.000": 0.0,
+        "z_+13.750": 0.0,
+        "z_+13.500": 0.0
+      },
+      "PRIMARY_RENATA_ONLY_M2_loose": {
+        "z_+16.500": 0.0,
+        "z_+16.250": 0.0,
+        "z_+16.000": 0.0,
+        "z_+15.750": 0.0,
+        "z_+15.500": 0.0,
+        "z_+15.250": 0.0,
+        "z_+15.000": 0.0,
+        "z_+14.750": 0.0,
+        "z_+14.500": 0.0,
+        "z_+14.250": 0.0,
+        "z_+14.000": 0.0,
+        "z_+13.750": 0.0,
+        "z_+13.500": 0.0
+      }
+    },
+    "face_to_midband_slide_path_intersection_mm3": {
+      "nominal": {
+        "x_+0.750": 0.0,
+        "x_+0.675": 0.0,
+        "x_+0.600": 0.0,
+        "x_+0.525": 0.0,
+        "x_+0.450": 0.0,
+        "x_+0.375": 0.0,
+        "x_+0.300": 0.0,
+        "x_+0.225": 0.0,
+        "x_+0.150": 0.0,
+        "x_+0.075": 0.0,
+        "x_+0.000": 0.0,
+        "x_-0.075": 0.0,
+        "x_-0.150": 0.0,
+        "x_-0.225": 0.0,
+        "x_-0.300": 0.0,
+        "x_-0.375": 0.0,
+        "x_-0.450": 0.0,
+        "x_-0.525": 0.0,
+        "x_-0.600": 0.0,
+        "x_-0.675": 0.0,
+        "x_-0.750": 0.0
+      },
+      "loose": {
+        "x_+0.750": 0.0,
+        "x_+0.675": 0.0,
+        "x_+0.600": 0.0,
+        "x_+0.525": 0.0,
+        "x_+0.450": 0.0,
+        "x_+0.375": 0.0,
+        "x_+0.300": 0.0,
+        "x_+0.225": 0.0,
+        "x_+0.150": 0.0,
+        "x_+0.075": 0.0,
+        "x_+0.000": 0.0,
+        "x_-0.075": 0.0,
+        "x_-0.150": 0.0,
+        "x_-0.225": 0.0,
+        "x_-0.300": 0.0,
+        "x_-0.375": 0.0,
+        "x_-0.450": 0.0,
+        "x_-0.525": 0.0,
+        "x_-0.600": 0.0,
+        "x_-0.675": 0.0,
+        "x_-0.750": 0.0
+      },
+      "PRIMARY_RENATA_ONLY_M2_nominal": {
+        "x_+0.750": 0.0,
+        "x_+0.675": 0.0,
+        "x_+0.600": 0.0,
+        "x_+0.525": 0.0,
+        "x_+0.450": 0.0,
+        "x_+0.375": 0.0,
+        "x_+0.300": 0.0,
+        "x_+0.225": 0.0,
+        "x_+0.150": 0.0,
+        "x_+0.075": 0.0,
+        "x_+0.000": 0.0,
+        "x_-0.075": 0.0,
+        "x_-0.150": 0.0,
+        "x_-0.225": 0.0,
+        "x_-0.300": 0.0,
+        "x_-0.375": 0.0,
+        "x_-0.450": 0.0,
+        "x_-0.525": 0.0,
+        "x_-0.600": 0.0,
+        "x_-0.675": 0.0,
+        "x_-0.750": 0.0
+      },
+      "PRIMARY_RENATA_ONLY_M2_loose": {
+        "x_+0.750": 0.0,
+        "x_+0.675": 0.0,
+        "x_+0.600": 0.0,
+        "x_+0.525": 0.0,
+        "x_+0.450": 0.0,
+        "x_+0.375": 0.0,
+        "x_+0.300": 0.0,
+        "x_+0.225": 0.0,
+        "x_+0.150": 0.0,
+        "x_+0.075": 0.0,
+        "x_+0.000": 0.0,
+        "x_-0.075": 0.0,
+        "x_-0.150": 0.0,
+        "x_-0.225": 0.0,
+        "x_-0.300": 0.0,
+        "x_-0.375": 0.0,
+        "x_-0.450": 0.0,
+        "x_-0.525": 0.0,
+        "x_-0.600": 0.0,
+        "x_-0.675": 0.0,
+        "x_-0.750": 0.0
+      }
+    },
+    "primary_25mm_cell_barrel_layout": {
+      "part_to_body_intersection_mm3": {
+        "battery": 0.0,
+        "xiao": 0.0,
+        "barrel_motor": 0.0,
+        "driver": 0.0,
+        "bridge": 0.0
+      },
+      "part_to_nominal_midband_intersection_mm3": {
+        "battery": 0.0,
+        "xiao": 0.0,
+        "barrel_motor": 0.0,
+        "driver": 0.0,
+        "bridge": 0.0
+      },
+      "part_to_locked_face_intersection_mm3": {
+        "battery": 0.0,
+        "xiao": 0.0,
+        "barrel_motor": 0.0,
+        "driver": 0.0,
+        "bridge": 0.0
+      },
+      "part_pair_intersection_mm3": {
+        "barrel_motor__battery": 0.0,
+        "barrel_motor__bridge": 0.0,
+        "barrel_motor__driver": 0.0,
+        "barrel_motor__xiao": 0.0,
+        "battery__bridge": 0.0,
+        "battery__driver": 0.0,
+        "battery__xiao": 0.0,
+        "bridge__driver": 0.0,
+        "bridge__xiao": 0.0,
+        "driver__xiao": 0.0
+      }
+    },
+    "alternate_battery_Vybronics_layouts": {
+      "battery_12x10x5p5": {
+        "part_to_body_intersection_mm3": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "part_to_nominal_midband_intersection_mm3": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "part_to_locked_face_intersection_mm3": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "part_pair_intersection_mm3": {
+          "battery__bridge": 0.0,
+          "battery__coin_motor": 0.0,
+          "battery__driver": 0.0,
+          "battery__xiao": 0.0,
+          "bridge__coin_motor": 0.0,
+          "bridge__driver": 0.0,
+          "bridge__xiao": 0.0,
+          "coin_motor__driver": 0.0,
+          "coin_motor__xiao": 0.0,
+          "driver__xiao": 0.0
+        }
+      },
+      "battery_15x10x5p5": {
+        "part_to_body_intersection_mm3": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "part_to_nominal_midband_intersection_mm3": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "part_to_locked_face_intersection_mm3": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "part_pair_intersection_mm3": {
+          "battery__bridge": 0.0,
+          "battery__coin_motor": 0.0,
+          "battery__driver": 0.0,
+          "battery__xiao": 0.0,
+          "bridge__coin_motor": 0.0,
+          "bridge__driver": 0.0,
+          "bridge__xiao": 0.0,
+          "coin_motor__driver": 0.0,
+          "coin_motor__xiao": 0.0,
+          "driver__xiao": 0.0
+        }
+      },
+      "battery_24x10x5p5": {
+        "part_to_body_intersection_mm3": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "part_to_nominal_midband_intersection_mm3": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "part_to_locked_face_intersection_mm3": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "part_pair_intersection_mm3": {
+          "battery__bridge": 0.0,
+          "battery__coin_motor": 0.0,
+          "battery__driver": 0.0,
+          "battery__xiao": 0.0,
+          "bridge__coin_motor": 0.0,
+          "bridge__driver": 0.0,
+          "bridge__xiao": 0.0,
+          "coin_motor__driver": 0.0,
+          "coin_motor__xiao": 0.0,
+          "driver__xiao": 0.0
+        }
+      },
+      "battery_25x10x5p5": {
+        "part_to_body_intersection_mm3": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "part_to_nominal_midband_intersection_mm3": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "part_to_locked_face_intersection_mm3": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "part_pair_intersection_mm3": {
+          "battery__bridge": 0.0,
+          "battery__coin_motor": 0.0,
+          "battery__driver": 0.0,
+          "battery__xiao": 0.0,
+          "bridge__coin_motor": 0.0,
+          "bridge__driver": 0.0,
+          "bridge__xiao": 0.0,
+          "coin_motor__driver": 0.0,
+          "coin_motor__xiao": 0.0,
+          "driver__xiao": 0.0
+        }
+      }
+    },
+    "conditional_plan_b_DTP401525_Vybronics_layout": {
+      "part_to_body_intersection_mm3": {
+        "battery": 0.0,
+        "xiao": 0.0,
+        "coin_motor": 0.0,
+        "driver_rotated": 0.0,
+        "bridge": 0.0
+      },
+      "part_to_nominal_midband_intersection_mm3": {
+        "battery": 0.0,
+        "xiao": 0.0,
+        "coin_motor": 0.0,
+        "driver_rotated": 0.0,
+        "bridge": 0.0
+      },
+      "part_to_locked_face_intersection_mm3": {
+        "battery": 0.0,
+        "xiao": 0.0,
+        "coin_motor": 0.0,
+        "driver_rotated": 0.0,
+        "bridge": 0.0
+      },
+      "part_pair_intersection_mm3": {
+        "battery__bridge": 0.0,
+        "battery__coin_motor": 0.0,
+        "battery__driver_rotated": 0.0,
+        "battery__xiao": 0.0,
+        "bridge__coin_motor": 0.0,
+        "bridge__driver_rotated": 0.0,
+        "bridge__xiao": 0.0,
+        "coin_motor__driver_rotated": 0.0,
+        "coin_motor__xiao": 0.0,
+        "driver_rotated__xiao": 0.0
+      }
+    },
+    "face_to_components_drop_and_slide_path_intersection_mm3": {
+      "primary_25mm_cell_barrel_layout": {
+        "drop_z_+16.500": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "barrel_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+16.250": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "barrel_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+16.000": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "barrel_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+15.750": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "barrel_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+15.500": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "barrel_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+15.250": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "barrel_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+15.000": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "barrel_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+14.750": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "barrel_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+14.500": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "barrel_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+14.250": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "barrel_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+14.000": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "barrel_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+13.750": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "barrel_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+13.500": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "barrel_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.750": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "barrel_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.675": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "barrel_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.600": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "barrel_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.525": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "barrel_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.450": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "barrel_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.375": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "barrel_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.300": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "barrel_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.225": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "barrel_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.150": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "barrel_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.075": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "barrel_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.000": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "barrel_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.075": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "barrel_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.150": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "barrel_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.225": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "barrel_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.300": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "barrel_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.375": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "barrel_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.450": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "barrel_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.525": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "barrel_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.600": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "barrel_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.675": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "barrel_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.750": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "barrel_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        }
+      },
+      "battery_12x10x5p5_Vybronics": {
+        "drop_z_+16.500": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+16.250": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+16.000": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+15.750": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+15.500": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+15.250": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+15.000": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+14.750": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+14.500": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+14.250": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+14.000": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+13.750": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+13.500": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.750": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.675": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.600": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.525": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.450": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.375": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.300": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.225": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.150": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.075": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.000": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.075": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.150": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.225": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.300": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.375": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.450": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.525": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.600": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.675": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.750": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        }
+      },
+      "battery_15x10x5p5_Vybronics": {
+        "drop_z_+16.500": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+16.250": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+16.000": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+15.750": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+15.500": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+15.250": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+15.000": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+14.750": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+14.500": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+14.250": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+14.000": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+13.750": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+13.500": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.750": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.675": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.600": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.525": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.450": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.375": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.300": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.225": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.150": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.075": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.000": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.075": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.150": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.225": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.300": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.375": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.450": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.525": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.600": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.675": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.750": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        }
+      },
+      "battery_24x10x5p5_Vybronics": {
+        "drop_z_+16.500": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+16.250": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+16.000": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+15.750": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+15.500": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+15.250": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+15.000": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+14.750": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+14.500": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+14.250": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+14.000": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+13.750": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+13.500": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.750": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.675": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.600": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.525": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.450": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.375": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.300": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.225": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.150": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.075": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.000": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.075": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.150": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.225": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.300": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.375": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.450": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.525": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.600": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.675": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.750": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        }
+      },
+      "battery_25x10x5p5_Vybronics": {
+        "drop_z_+16.500": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+16.250": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+16.000": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+15.750": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+15.500": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+15.250": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+15.000": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+14.750": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+14.500": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+14.250": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+14.000": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+13.750": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+13.500": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.750": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.675": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.600": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.525": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.450": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.375": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.300": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.225": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.150": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.075": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.000": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.075": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.150": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.225": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.300": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.375": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.450": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.525": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.600": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.675": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.750": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0
+        }
+      },
+      "conditional_plan_b_DTP401525_Vybronics": {
+        "drop_z_+16.500": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver_rotated": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+16.250": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver_rotated": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+16.000": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver_rotated": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+15.750": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver_rotated": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+15.500": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver_rotated": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+15.250": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver_rotated": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+15.000": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver_rotated": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+14.750": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver_rotated": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+14.500": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver_rotated": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+14.250": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver_rotated": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+14.000": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver_rotated": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+13.750": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver_rotated": 0.0,
+          "bridge": 0.0
+        },
+        "drop_z_+13.500": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver_rotated": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.750": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver_rotated": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.675": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver_rotated": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.600": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver_rotated": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.525": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver_rotated": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.450": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver_rotated": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.375": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver_rotated": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.300": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver_rotated": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.225": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver_rotated": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.150": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver_rotated": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.075": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver_rotated": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_+0.000": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver_rotated": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.075": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver_rotated": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.150": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver_rotated": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.225": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver_rotated": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.300": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver_rotated": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.375": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver_rotated": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.450": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver_rotated": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.525": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver_rotated": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.600": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver_rotated": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.675": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver_rotated": 0.0,
+          "bridge": 0.0
+        },
+        "slide_x_-0.750": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver_rotated": 0.0,
+          "bridge": 0.0
+        }
+      }
+    },
+    "PRIMARY_RENATA_ONLY_M2_screw_retention": {
+      "scope": "24x10x5.5_mm_Renata_class_cell_plus_motor_envelope_max_10p2x10p2x2p7",
+      "explicitly_incompatible_with_conditional_plan_b": true,
+      "post_centres_xy_mm": [
+        [
+          11.0,
+          3.0
+        ],
+        [
+          11.0,
+          -3.0
+        ]
+      ],
+      "band_to_body_intersection_mm3": 0.0,
+      "posts_to_body_intersection_mm3": 0.0,
+      "posts_to_band_intersection_mm3": 0.0,
+      "face_to_posts_drop_and_slide_path_intersection_mm3": {
+        "drop_z_+16.500": 0.0,
+        "drop_z_+16.250": 0.0,
+        "drop_z_+16.000": 0.0,
+        "drop_z_+15.750": 0.0,
+        "drop_z_+15.500": 0.0,
+        "drop_z_+15.250": 0.0,
+        "drop_z_+15.000": 0.0,
+        "drop_z_+14.750": 0.0,
+        "drop_z_+14.500": 0.0,
+        "drop_z_+14.250": 0.0,
+        "drop_z_+14.000": 0.0,
+        "drop_z_+13.750": 0.0,
+        "drop_z_+13.500": 0.0,
+        "slide_x_+0.750": 0.0,
+        "slide_x_+0.675": 0.0,
+        "slide_x_+0.600": 0.0,
+        "slide_x_+0.525": 0.0,
+        "slide_x_+0.450": 0.0,
+        "slide_x_+0.375": 0.0,
+        "slide_x_+0.300": 0.0,
+        "slide_x_+0.225": 0.0,
+        "slide_x_+0.150": 0.0,
+        "slide_x_+0.075": 0.0,
+        "slide_x_+0.000": 0.0,
+        "slide_x_-0.075": 0.0,
+        "slide_x_-0.150": 0.0,
+        "slide_x_-0.225": 0.0,
+        "slide_x_-0.300": 0.0,
+        "slide_x_-0.375": 0.0,
+        "slide_x_-0.450": 0.0,
+        "slide_x_-0.525": 0.0,
+        "slide_x_-0.600": 0.0,
+        "slide_x_-0.675": 0.0,
+        "slide_x_-0.750": 0.0
+      },
+      "band_and_posts_to_primary_components_intersection_mm3": {
+        "band": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0,
+          "antenna_keepout": 0.0
+        },
+        "posts": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0,
+          "antenna_keepout": 0.0
+        }
+      },
+      "full_height_2p4mm_max_drill_axis_to_primary_components_intersection_mm3": {
+        "post_1": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0,
+          "antenna_keepout": 0.0
+        },
+        "post_2": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "coin_motor": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0,
+          "antenna_keepout": 0.0
+        }
+      },
+      "2p4mm_max_floor_hole_to_antenna_features_intersection_mm3": {
+        "post_1": {
+          "through_opening_bbox": 0.0,
+          "flange_recess_bbox": 0.0
+        },
+        "post_2": {
+          "through_opening_bbox": 0.0,
+          "flange_recess_bbox": 0.0
+        }
+      },
+      "4p0mm_max_countersink_envelope_to_antenna_features_intersection_mm3": {
+        "post_1": {
+          "through_opening_bbox": 0.0,
+          "flange_recess_bbox": 0.0
+        },
+        "post_2": {
+          "through_opening_bbox": 0.0,
+          "flange_recess_bbox": 0.0
+        }
+      },
+      "exact_body_material_on_each_2p4mm_max_floor_axis_mm3": {
+        "post_1": 4.523893421169303,
+        "post_2": 4.523893421169303
+      },
+      "conditional_plan_b_rotated_driver_to_posts_intersection_mm3": 32.27752280681015,
+      "plan_b_rejection_passes_when_intersection_is_positive": true,
+      "qualified_motor_max_envelope_audit": {
+        "mechanical_envelope_max_mm": [
+          10.2,
+          10.2,
+          2.7
+        ],
+        "existing_centre_xy_mm": [
+          18.4,
+          0.0
+        ],
+        "covers_listed_Lee_PID10431_body_mm": [
+          10.0,
+          10.0,
+          2.7
+        ],
+        "mechanical_fit_does_not_qualify_electrical_identity": true,
+        "to_exact_nylon_body_intersection_mm3": 0.0,
+        "to_screw_band_intersection_mm3": 0.0,
+        "to_locked_nylon_face_intersection_mm3": 0.0,
+        "to_full_nylon_face_drop_and_slide_path_intersection_mm3": {
+          "drop_z_+16.500": 0.0,
+          "drop_z_+16.250": 0.0,
+          "drop_z_+16.000": 0.0,
+          "drop_z_+15.750": 0.0,
+          "drop_z_+15.500": 0.0,
+          "drop_z_+15.250": 0.0,
+          "drop_z_+15.000": 0.0,
+          "drop_z_+14.750": 0.0,
+          "drop_z_+14.500": 0.0,
+          "drop_z_+14.250": 0.0,
+          "drop_z_+14.000": 0.0,
+          "drop_z_+13.750": 0.0,
+          "drop_z_+13.500": 0.0,
+          "slide_x_+0.750": 0.0,
+          "slide_x_+0.675": 0.0,
+          "slide_x_+0.600": 0.0,
+          "slide_x_+0.525": 0.0,
+          "slide_x_+0.450": 0.0,
+          "slide_x_+0.375": 0.0,
+          "slide_x_+0.300": 0.0,
+          "slide_x_+0.225": 0.0,
+          "slide_x_+0.150": 0.0,
+          "slide_x_+0.075": 0.0,
+          "slide_x_+0.000": 0.0,
+          "slide_x_-0.075": 0.0,
+          "slide_x_-0.150": 0.0,
+          "slide_x_-0.225": 0.0,
+          "slide_x_-0.300": 0.0,
+          "slide_x_-0.375": 0.0,
+          "slide_x_-0.450": 0.0,
+          "slide_x_-0.525": 0.0,
+          "slide_x_-0.600": 0.0,
+          "slide_x_-0.675": 0.0,
+          "slide_x_-0.750": 0.0
+        },
+        "to_primary_parts_intersection_mm3": {
+          "battery": 0.0,
+          "xiao": 0.0,
+          "driver": 0.0,
+          "bridge": 0.0,
+          "antenna_keepout": 0.0
+        },
+        "to_each_retainer_post_intersection_mm3": {
+          "post_1": 0.0,
+          "post_2": 0.0
+        },
+        "to_each_full_height_2p4mm_drill_axis_intersection_mm3": {
+          "post_1": 0.0,
+          "post_2": 0.0
+        },
+        "global_z_bounds_mm": [
+          1.05,
+          3.75
+        ],
+        "positive_z_clearances_mm": {
+          "to_bridge_lowest_geometry": 2.4699999999999998,
+          "to_xiao_bottom": 3.7,
+          "to_screw_band_bottom": 5.25,
+          "to_locked_face_lowest_geometry": 8.75,
+          "to_recovered_main_clear_height": 9.75
+        }
+      },
+      "minimum_required_body_floor_material_per_2p4mm_axis_mm3": 4.478654486957609
+    },
+    "intersection_value_count": 1424,
+    "intersection_tolerance_mm3": 1e-06,
+    "maximum_intersection_mm3": 0.0,
+    "all_exact_intersections_within_tolerance": true
+  },
+  "hard_gates": [
+    "Measure the ACTUAL MJF cavity and every finished component; nominal CAD is not a ship authorization.",
+    "Use either the <=25.0 x 10.0 x 5.5 mm primary battery envelope or the named DTP401525 Plan B <=25.3 x 15.0 x 4.0 mm envelope; never mix their layouts or gauges.",
+    "Use only a protected 1S cell whose datasheet explicitly permits the configured 50 mA charge current.",
+    "Meter polarity before soldering; never rely on wire colour or JST convention.",
+    "Use either the ordered PA12 shell or the supplied full-shell PETG prints only after physical fit, closed-case BLE, audio, thermal and drop tests pass.",
+    "A 24-25 mm battery lies under the conservative antenna zone; a real closed-case RF test is mandatory.",
+    "The Plan B battery has only 0.15 mm nominal clearance below the historical shelf; any physical friction, thickness over 4.00 mm, pouch/wrap/tab mark or shell load is a rejection.",
+    "SparkFun PRT-13853/DTP401525 and Lee PID8834 are not interchangeable identities. Neither is a shipping battery without an exact received label, matching datasheet and matching UN38.3 record.",
+    "Lee PID160959/PID8834, PID10431/PID104281 and Lee driver parts are delivery fallbacks only until manufacturer, finished dimensions, electrical limits and polarity are counter-verified.",
+    "Do not install either printed plan gauge; they are measurement fixtures only.",
+    "The PRIMARY_RENATA_ONLY M2 screw-retained band is a separate architecture. Never combine it with Plan B, the barrel-motor layout, or either adhesive-only band."
+  ]
+}

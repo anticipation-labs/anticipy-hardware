@@ -1,0 +1,35 @@
+/* Anticipy design DNA — titanium hardware, one amber signal */
+:root {
+  --ground: #F3F2EF; --panel: #FFFFFF; --ink: #1B1C1E; --muted: #5C5F63;
+  --line: #D8D6D1; --titanium: #75787D; --amber: #B97F22; --amber-soft: #F4E8D4;
+  --ok: #3E7A4E; --risk: #A6402F; --chip: #E9E7E2;
+  --mono: ui-monospace, "SF Mono", Menlo, monospace;
+  --display: "Avenir Next Condensed", "Helvetica Neue", -apple-system, sans-serif;
+  --body: -apple-system, "Helvetica Neue", "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ground: #141518; --panel: #1D1E22; --ink: #E9E8E5; --muted: #A2A4A8;
+    --line: #34363B; --titanium: #8C8F94; --amber: #E0A63C; --amber-soft: #3A3020;
+    --ok: #6FAE7E; --risk: #D0705B; --chip: #2A2C31;
+  }
+}
+body { background: var(--ground); color: var(--ink); font: 15px/1.5 var(--body); margin: 0; padding: 20px; }
+h1, h2 { font-family: var(--display); text-transform: uppercase; letter-spacing: .02em; }
+h1 { font-size: 28px; font-weight: 800; margin: 0 0 4px; }
+h2 { font-size: 19px; font-weight: 700; margin: 18px 0 6px; }
+.eyebrow { font: 700 11px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--amber); }
+.spec-table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+.spec-table th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); border-bottom: 2px solid var(--ink); padding: 5px 8px 5px 0; }
+.spec-table td { border-bottom: 1px solid var(--line); padding: 6px 8px 6px 0; }
+.spec-row-key { font-family: var(--mono); font-size: 12.5px; color: var(--muted); }
+.dim-label { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+.step-card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; margin: 8px 0; }
+.step-card .n { font: 800 15px var(--display); color: var(--amber); margin-right: 8px; }
+.status-badge { display: inline-block; border-radius: 999px; padding: 2px 10px; font: 700 11px var(--mono); letter-spacing: .05em; }
+.status-badge.ok { background: color-mix(in srgb, var(--ok) 18%, transparent); color: var(--ok); }
+.status-badge.risk { background: color-mix(in srgb, var(--risk) 18%, transparent); color: var(--risk); }
+.swatch { display: inline-block; width: 44px; height: 44px; border-radius: 8px; border: 1px solid var(--line); margin-right: 8px; }
+figure { margin: 12px 0; } figcaption { font-size: 12.5px; color: var(--muted); }
+svg { max-width: 100%; height: auto; }
+a { color: var(--amber); }

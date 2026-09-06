@@ -1,0 +1,2807 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/workspace/scratch/295a51172f48/anticipy_pcb_kicad_r0b/Anticipy_PROD_R0B_EVT.kicad_sch</source>
+    <date>Sat Aug 29 16:23:06 2026</date>
+    <tool>Eeschema 7.0.11+dfsg-1build4</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Anticipy ANT-PROD-R0B electrical design</title>
+        <company>Anticipy</company>
+        <rev>R0B EVT</rev>
+        <date>2026-08-29</date>
+        <source>Anticipy_PROD_R0B_EVT.kicad_sch</source>
+        <comment number="1" value="EDITABLE ENGINEERING CHECKPOINT - NOT RELEASED FOR FABRICATION"/>
+        <comment number="2" value="Connectivity is verified from KiCad netlist; CLI ERC is unavailable in KiCad 7"/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="BT1">
+      <value>PROVISIONAL &lt;=26x15.5x4.8mm PROTECTED 10kNTC</value>
+      <footprint>Anticipy_R0B:Battery_LiPo_3Wire_Solder_26x15.5</footprint>
+      <fields>
+        <field name="Description">DO NOT SOURCE: exact protected three-wire pack, controlled max-tolerance drawing, polarity, 10k NTC configuration, UN38.3/IEC62133/MSDS, stock and runtime are release gates</field>
+        <field name="MPN">BATTERY-TBD-3WIRE</field>
+        <field name="Manufacturer">TBD</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_BT1" description=""/>
+      <property name="Manufacturer" value="TBD"/>
+      <property name="MPN" value="BATTERY-TBD-3WIRE"/>
+      <property name="Description" value="DO NOT SOURCE: exact protected three-wire pack, controlled max-tolerance drawing, polarity, 10k NTC configuration, UN38.3/IEC62133/MSDS, stock and runtime are release gates"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c18855c2-6be7-5b27-9684-654a9eccf896</tstamps>
+    </comp>
+    <comp ref="C1">
+      <value>1uF 16V X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description">PMIC VBUS input</field>
+        <field name="MPN">C1608X7R1C105K080AC</field>
+        <field name="Manufacturer">TDK</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_C1" description=""/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="MPN" value="C1608X7R1C105K080AC"/>
+      <property name="Description" value="PMIC VBUS input"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bdaa1099-1156-5901-b44f-1e8de0ddb89f</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>10uF 25V X5R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description">Buck-1 PVDD local return</field>
+        <field name="MPN">GRM188R61E106MA73J</field>
+        <field name="Manufacturer">Murata</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_C2" description=""/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R61E106MA73J"/>
+      <property name="Description" value="Buck-1 PVDD local return"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f8040ae4-2c03-5ed1-b531-51ce56fe4e36</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>10uF 25V X5R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description">Buck-2 PVDD local return</field>
+        <field name="MPN">GRM188R61E106MA73J</field>
+        <field name="Manufacturer">Murata</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_C3" description=""/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R61E106MA73J"/>
+      <property name="Description" value="Buck-2 PVDD local return"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f45932cf-a50d-526a-b043-7ce5711d0ea5</tstamps>
+    </comp>
+    <comp ref="C4">
+      <value>10uF 25V X5R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description">System rail bulk</field>
+        <field name="MPN">GRM188R61E106MA73J</field>
+        <field name="Manufacturer">Murata</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_C4" description=""/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R61E106MA73J"/>
+      <property name="Description" value="System rail bulk"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>43dbf69d-5282-5c5b-8001-df79f195981f</tstamps>
+    </comp>
+    <comp ref="C5">
+      <value>1uF 16V X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description">Protected USB output bypass</field>
+        <field name="MPN">C1608X7R1C105K080AC</field>
+        <field name="Manufacturer">TDK</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_C5" description=""/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="MPN" value="C1608X7R1C105K080AC"/>
+      <property name="Description" value="Protected USB output bypass"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7dd94f6c-daea-524f-8061-ffe225fb57ef</tstamps>
+    </comp>
+    <comp ref="C6">
+      <value>2.2uF 16V X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description">Battery input bypass</field>
+        <field name="MPN">EMK107BB7225KA-T</field>
+        <field name="Manufacturer">Taiyo Yuden</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_C6" description=""/>
+      <property name="Manufacturer" value="Taiyo Yuden"/>
+      <property name="MPN" value="EMK107BB7225KA-T"/>
+      <property name="Description" value="Battery input bypass"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a67c1a04-b0fc-50e6-9ac3-3007a5ea87f8</tstamps>
+    </comp>
+    <comp ref="C7">
+      <value>10uF 25V X5R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description">Buck-1 output</field>
+        <field name="MPN">GRM188R61E106MA73J</field>
+        <field name="Manufacturer">Murata</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_C7" description=""/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R61E106MA73J"/>
+      <property name="Description" value="Buck-1 output"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1e5d3078-447b-5956-93bf-05e3573bfb1c</tstamps>
+    </comp>
+    <comp ref="C8">
+      <value>10uF 25V X5R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description">Buck-2 output</field>
+        <field name="MPN">GRM188R61E106MA73J</field>
+        <field name="Manufacturer">Murata</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_C8" description=""/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R61E106MA73J"/>
+      <property name="Description" value="Buck-2 output"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5864f98c-d507-522d-8578-04646cd23b04</tstamps>
+    </comp>
+    <comp ref="C9">
+      <value>10uF 25V X5R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description">System rail second bulk</field>
+        <field name="MPN">GRM188R61E106MA73J</field>
+        <field name="Manufacturer">Murata</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_C9" description=""/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R61E106MA73J"/>
+      <property name="Description" value="System rail second bulk"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f3d2382b-d7b4-5085-a627-03f8569c026e</tstamps>
+    </comp>
+    <comp ref="C10">
+      <value>10uF 25V X5R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description">Microphone LDO output</field>
+        <field name="MPN">GRM188R61E106MA73J</field>
+        <field name="Manufacturer">Murata</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_C10" description=""/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R61E106MA73J"/>
+      <property name="Description" value="Microphone LDO output"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>221f53bb-aa89-5e4a-a0da-5e1c733d7c43</tstamps>
+    </comp>
+    <comp ref="C13">
+      <value>100nF 16V X5R</value>
+      <footprint>Capacitor_SMD:C_0201_0603Metric</footprint>
+      <fields>
+        <field name="Description">PMIC logic bypass; Nordic QEAA 0201 assembler gate</field>
+        <field name="MPN">C0603X5R1C104K030BC</field>
+        <field name="Manufacturer">TDK</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_C13" description=""/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="MPN" value="C0603X5R1C104K030BC"/>
+      <property name="Description" value="PMIC logic bypass; Nordic QEAA 0201 assembler gate"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0b3229af-3003-500b-8bf9-0563fa6bd2a4</tstamps>
+    </comp>
+    <comp ref="C14">
+      <value>100nF 16V X7R</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description">Buck-1 high-frequency input bypass; Nordic QEAA ref 1.2</field>
+        <field name="MPN">C0402C104M4RAC7867</field>
+        <field name="Manufacturer">KEMET</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_C14" description=""/>
+      <property name="Manufacturer" value="KEMET"/>
+      <property name="MPN" value="C0402C104M4RAC7867"/>
+      <property name="Description" value="Buck-1 high-frequency input bypass; Nordic QEAA ref 1.2"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>51a3a668-8906-529a-8315-b0f4b1752f42</tstamps>
+    </comp>
+    <comp ref="C15">
+      <value>100nF 16V X7R</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description">Buck-2 high-frequency input bypass; Nordic QEAA ref 1.2</field>
+        <field name="MPN">C0402C104M4RAC7867</field>
+        <field name="Manufacturer">KEMET</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_C15" description=""/>
+      <property name="Manufacturer" value="KEMET"/>
+      <property name="MPN" value="C0402C104M4RAC7867"/>
+      <property name="Description" value="Buck-2 high-frequency input bypass; Nordic QEAA ref 1.2"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>671e4bef-f0c8-5e11-84e6-8fcf76df8303</tstamps>
+    </comp>
+    <comp ref="C16">
+      <value>100nF 16V X7R</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description">System high-frequency bypass; Nordic QEAA ref 1.2</field>
+        <field name="MPN">C0402C104M4RAC7867</field>
+        <field name="Manufacturer">KEMET</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_C16" description=""/>
+      <property name="Manufacturer" value="KEMET"/>
+      <property name="MPN" value="C0402C104M4RAC7867"/>
+      <property name="Description" value="System high-frequency bypass; Nordic QEAA ref 1.2"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8a51dabf-02b4-51ab-8ca1-e82123b6514f</tstamps>
+    </comp>
+    <comp ref="C17">
+      <value>100nF 10V X7R</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description">Flash local bypass</field>
+        <field name="MPN">C1005X7R1A104K050BC</field>
+        <field name="Manufacturer">TDK</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_C17" description=""/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="MPN" value="C1005X7R1A104K050BC"/>
+      <property name="Description" value="Flash local bypass"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8868cf30-4c24-5aea-b7ef-e8cab44680cc</tstamps>
+    </comp>
+    <comp ref="C18">
+      <value>1uF 16V X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description">Flash local bulk</field>
+        <field name="MPN">C1608X7R1C105K080AC</field>
+        <field name="Manufacturer">TDK</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_C18" description=""/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="MPN" value="C1608X7R1C105K080AC"/>
+      <property name="Description" value="Flash local bulk"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f217669d-51b4-5c7c-9e66-24275e085888</tstamps>
+    </comp>
+    <comp ref="C19">
+      <value>100nF 10V X7R</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description">MIC1 local bypass</field>
+        <field name="MPN">C1005X7R1A104K050BC</field>
+        <field name="Manufacturer">TDK</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_C19" description=""/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="MPN" value="C1005X7R1A104K050BC"/>
+      <property name="Description" value="MIC1 local bypass"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f508778d-f132-5943-833d-136ed16286c0</tstamps>
+    </comp>
+    <comp ref="C20">
+      <value>100nF 10V X7R</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description">MIC2 local bypass</field>
+        <field name="MPN">C1005X7R1A104K050BC</field>
+        <field name="Manufacturer">TDK</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_C20" description=""/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="MPN" value="C1005X7R1A104K050BC"/>
+      <property name="Description" value="MIC2 local bypass"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>68007f09-4dea-50f8-bdb9-afb5176b2fb9</tstamps>
+    </comp>
+    <comp ref="C21">
+      <value>100nF 16V X5R</value>
+      <footprint>Capacitor_SMD:C_0201_0603Metric</footprint>
+      <fields>
+        <field name="Description">Accelerometer VDD local bypass</field>
+        <field name="MPN">C0603X5R1C104K030BC</field>
+        <field name="Manufacturer">TDK</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_C21" description=""/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="MPN" value="C0603X5R1C104K030BC"/>
+      <property name="Description" value="Accelerometer VDD local bypass"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>575a67b6-2f5c-5a45-879a-165405bc69c2</tstamps>
+    </comp>
+    <comp ref="C22">
+      <value>100nF 10V X7R</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description">Motor brush-noise capacitor</field>
+        <field name="MPN">C1005X7R1A104K050BC</field>
+        <field name="Manufacturer">TDK</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_C22" description=""/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="MPN" value="C1005X7R1A104K050BC"/>
+      <property name="Description" value="Motor brush-noise capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>40222ac4-0791-5417-83b9-5a7dc6167fa1</tstamps>
+    </comp>
+    <comp ref="C23">
+      <value>47uF 6.3V X5R</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Description">Haptic rail bulk</field>
+        <field name="MPN">CC0805MKX5R5BB476</field>
+        <field name="Manufacturer">Yageo</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_C23" description=""/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="CC0805MKX5R5BB476"/>
+      <property name="Description" value="Haptic rail bulk"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8724752c-c515-5fa2-b359-817b602e28af</tstamps>
+    </comp>
+    <comp ref="C24">
+      <value>10uF 25V X5R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description">Accelerometer local bulk</field>
+        <field name="MPN">GRM188R61E106MA73J</field>
+        <field name="Manufacturer">Murata</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_C24" description=""/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R61E106MA73J"/>
+      <property name="Description" value="Accelerometer local bulk"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c4893f57-a74b-51ba-9df3-fd30d6bb4973</tstamps>
+    </comp>
+    <comp ref="C25">
+      <value>10uF 6.3V X5R</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description">Raytac VDD/VDDH local bulk; effective capacitance is a first-article gate</field>
+        <field name="MPN">GRM155R60J106ME15D</field>
+        <field name="Manufacturer">Murata</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_C25" description=""/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM155R60J106ME15D"/>
+      <property name="Description" value="Raytac VDD/VDDH local bulk; effective capacitance is a first-article gate"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a191904e-70a5-5375-be29-351b503ccbd7</tstamps>
+    </comp>
+    <comp ref="C26">
+      <value>10uF 6.3V X5R</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description">Raytac VBUS local bulk; effective capacitance is a first-article gate</field>
+        <field name="MPN">GRM155R60J106ME15D</field>
+        <field name="Manufacturer">Murata</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_C26" description=""/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM155R60J106ME15D"/>
+      <property name="Description" value="Raytac VBUS local bulk; effective capacitance is a first-article gate"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6def4820-64c8-53b5-a05d-fa9d72107bb1</tstamps>
+    </comp>
+    <comp ref="C27">
+      <value>100nF 16V X5R</value>
+      <footprint>Capacitor_SMD:C_0201_0603Metric</footprint>
+      <fields>
+        <field name="Description">Accelerometer VDDIO local bypass</field>
+        <field name="MPN">C0603X5R1C104K030BC</field>
+        <field name="Manufacturer">TDK</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_C27" description=""/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="MPN" value="C0603X5R1C104K030BC"/>
+      <property name="Description" value="Accelerometer VDDIO local bypass"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9eda8d8a-379d-5892-8a67-1783edf5ea97</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>1N4148WS-7-F</value>
+      <footprint>Diode_SMD:D_SOD-323</footprint>
+      <datasheet>https://www.diodes.com/assets/Datasheets/ds12019.pdf</datasheet>
+      <fields>
+        <field name="Description">Active-lifecycle haptic flyback diode; KiCad pad 1 is cathode</field>
+        <field name="MPN">1N4148WS-7-F</field>
+        <field name="Manufacturer">Diodes Incorporated</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_D1" description=""/>
+      <property name="Manufacturer" value="Diodes Incorporated"/>
+      <property name="MPN" value="1N4148WS-7-F"/>
+      <property name="Description" value="Active-lifecycle haptic flyback diode; KiCad pad 1 is cathode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c5bde6ba-45dc-5ef2-bafd-47b1be89408a</tstamps>
+    </comp>
+    <comp ref="D2">
+      <value>ESD441DPYR</value>
+      <footprint>Anticipy_R0B:TI_DPY0002A_X1SON</footprint>
+      <datasheet>https://www.ti.com/lit/gpn/ESD441</datasheet>
+      <fields>
+        <field name="Description">Connector-side 5.5-V VBUS shunt ESD/surge protector; TI DPY0002A land pattern</field>
+        <field name="MPN">ESD441DPYR</field>
+        <field name="Manufacturer">Texas Instruments</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_D2" description=""/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="MPN" value="ESD441DPYR"/>
+      <property name="Description" value="Connector-side 5.5-V VBUS shunt ESD/surge protector; TI DPY0002A land pattern"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>aea1db7a-189e-5ff0-bd8d-1236eaecfbd4</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>USB4500-03-1-A</value>
+      <footprint>Anticipy_R0B:USB_C_Receptacle_GCT_USB4500-03-1-A_MidMount</footprint>
+      <datasheet>https://gct.co/connector/usb4500</datasheet>
+      <fields>
+        <field name="Description">0.8-mm mid-mount USB-C; 12 grouped contacts plus four plated shell stakes</field>
+        <field name="MPN">USB4500-03-1-A</field>
+        <field name="Manufacturer">GCT</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_J1" description=""/>
+      <property name="Manufacturer" value="GCT"/>
+      <property name="MPN" value="USB4500-03-1-A"/>
+      <property name="Description" value="0.8-mm mid-mount USB-C; 12 grouped contacts plus four plated shell stakes"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a78ffdeb-ebb0-5337-acb2-17c0ade075f1</tstamps>
+    </comp>
+    <comp ref="L1">
+      <value>2.2uH</value>
+      <footprint>Inductor_SMD:L_Murata_DFE201610P</footprint>
+      <fields>
+        <field name="Description">Buck-1 inductor</field>
+        <field name="MPN">CIGT201610EH2R2MNE</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_L1" description=""/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="MPN" value="CIGT201610EH2R2MNE"/>
+      <property name="Description" value="Buck-1 inductor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0361d001-afbc-5737-bd58-023c00819f3f</tstamps>
+    </comp>
+    <comp ref="L2">
+      <value>2.2uH</value>
+      <footprint>Inductor_SMD:L_Murata_DFE201610P</footprint>
+      <fields>
+        <field name="Description">Buck-2 inductor</field>
+        <field name="MPN">CIGT201610EH2R2MNE</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_L2" description=""/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="MPN" value="CIGT201610EH2R2MNE"/>
+      <property name="Description" value="Buck-2 inductor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3175094e-245f-5b42-9c59-4bac992092f7</tstamps>
+    </comp>
+    <comp ref="LED1">
+      <value>APHB1608LVBDSEKJ3C</value>
+      <footprint>Anticipy_R0B:LED_Kingbright_APHB1608LVBDSEKJ3C</footprint>
+      <datasheet>https://www.kingbrightusa.com/images/catalog/SPEC/APHB1608LVBDSEKJ3C.pdf</datasheet>
+      <fields>
+        <field name="Description">Red/blue status LED on nPM1300 fixed 5-mA sinks; blue low-battery brightness is a first-article gate</field>
+        <field name="MPN">APHB1608LVBDSEKJ3C</field>
+        <field name="Manufacturer">Kingbright</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_LED1" description=""/>
+      <property name="Manufacturer" value="Kingbright"/>
+      <property name="MPN" value="APHB1608LVBDSEKJ3C"/>
+      <property name="Description" value="Red/blue status LED on nPM1300 fixed 5-mA sinks; blue low-battery brightness is a first-article gate"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>439efcd8-c459-5278-9653-077839c6db16</tstamps>
+    </comp>
+    <comp ref="M1">
+      <value>VCLP1020B002L</value>
+      <footprint>Anticipy_R0B:Haptic_VCLP1020B002L_WirePads</footprint>
+      <fields>
+        <field name="Description">10-mm coin haptic, hand soldered</field>
+        <field name="MPN">VCLP1020B002L</field>
+        <field name="Manufacturer">Vybronics</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_M1" description=""/>
+      <property name="Manufacturer" value="Vybronics"/>
+      <property name="MPN" value="VCLP1020B002L"/>
+      <property name="Description" value="10-mm coin haptic, hand soldered"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c8411c0a-1fa0-5feb-a379-49c4442b5e4f</tstamps>
+    </comp>
+    <comp ref="MIC1">
+      <value>CMM-3424DT-26165-TR</value>
+      <footprint>Anticipy_R0B:SameSky_CMM-3424DT-26165-TR_TopPort_PDM</footprint>
+      <datasheet>https://www.sameskydevices.com/product/resource/cmm-3424dt-26165-tr.pdf</datasheet>
+      <fields>
+        <field name="Description">Front-side top-port IP67 PDM microphone; SELECT low</field>
+        <field name="MPN">CMM-3424DT-26165-TR</field>
+        <field name="Manufacturer">Same Sky</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_MIC1" description=""/>
+      <property name="Manufacturer" value="Same Sky"/>
+      <property name="MPN" value="CMM-3424DT-26165-TR"/>
+      <property name="Description" value="Front-side top-port IP67 PDM microphone; SELECT low"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3d922bad-ddf5-5b2a-9ec8-db0043692890</tstamps>
+    </comp>
+    <comp ref="MIC2">
+      <value>CMM-3424DT-26165-TR</value>
+      <footprint>Anticipy_R0B:SameSky_CMM-3424DT-26165-TR_TopPort_PDM</footprint>
+      <datasheet>https://www.sameskydevices.com/product/resource/cmm-3424dt-26165-tr.pdf</datasheet>
+      <fields>
+        <field name="Description">Front-side top-port IP67 PDM microphone; SELECT high</field>
+        <field name="MPN">CMM-3424DT-26165-TR</field>
+        <field name="Manufacturer">Same Sky</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_MIC2" description=""/>
+      <property name="Manufacturer" value="Same Sky"/>
+      <property name="MPN" value="CMM-3424DT-26165-TR"/>
+      <property name="Description" value="Front-side top-port IP67 PDM microphone; SELECT high"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1c85f284-3542-501a-be49-8058c309bce2</tstamps>
+    </comp>
+    <comp ref="NT1">
+      <value>PVSS1-GND</value>
+      <footprint>NetTie:NetTie-2_SMD_Pad0.5mm</footprint>
+      <fields>
+        <field name="Description">Single-point buck-1 power-ground tie</field>
+        <field name="MPN">NETTIE</field>
+        <field name="Manufacturer">Anticipy</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_NT1" description=""/>
+      <property name="Manufacturer" value="Anticipy"/>
+      <property name="MPN" value="NETTIE"/>
+      <property name="Description" value="Single-point buck-1 power-ground tie"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a9b38460-c38a-52b2-a379-32fc7692ffc0</tstamps>
+    </comp>
+    <comp ref="NT2">
+      <value>PVSS2-GND</value>
+      <footprint>NetTie:NetTie-2_SMD_Pad0.5mm</footprint>
+      <fields>
+        <field name="Description">Single-point buck-2 power-ground tie</field>
+        <field name="MPN">NETTIE</field>
+        <field name="Manufacturer">Anticipy</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_NT2" description=""/>
+      <property name="Manufacturer" value="Anticipy"/>
+      <property name="MPN" value="NETTIE"/>
+      <property name="Description" value="Single-point buck-2 power-ground tie"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>27240fd5-c637-5992-98f9-925852dfb341</tstamps>
+    </comp>
+    <comp ref="Q1">
+      <value>AO3400A</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <fields>
+        <field name="Description">Low-side haptic MOSFET</field>
+        <field name="MPN">AO3400A</field>
+        <field name="Manufacturer">Alpha &amp; Omega Semiconductor</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_Q1" description=""/>
+      <property name="Manufacturer" value="Alpha &amp; Omega Semiconductor"/>
+      <property name="MPN" value="AO3400A"/>
+      <property name="Description" value="Low-side haptic MOSFET"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>eec23c0b-fa91-5e70-942a-0ec9ded4e311</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>10k 1%</value>
+      <footprint>Resistor_SMD:R_0201_0603Metric</footprint>
+      <fields>
+        <field name="Description">I2C pull-up</field>
+        <field name="MPN">RC0201FR-0710KL</field>
+        <field name="Manufacturer">Yageo</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_R1" description=""/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0201FR-0710KL"/>
+      <property name="Description" value="I2C pull-up"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>30f03ef8-7bd0-59ad-baf5-740b9382fc01</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>10k 1%</value>
+      <footprint>Resistor_SMD:R_0201_0603Metric</footprint>
+      <fields>
+        <field name="Description">I2C pull-up</field>
+        <field name="MPN">RC0201FR-0710KL</field>
+        <field name="Manufacturer">Yageo</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_R2" description=""/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0201FR-0710KL"/>
+      <property name="Description" value="I2C pull-up"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>401ceda4-af70-56e9-8fbd-28e716178c46</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>330k 1%</value>
+      <footprint>Resistor_SMD:R_0201_0603Metric</footprint>
+      <fields>
+        <field name="Description">Buck-1 starts at 2.7 V; firmware raises 3V_MAIN to 3.0 V</field>
+        <field name="MPN">RC0201FR-07330KL</field>
+        <field name="Manufacturer">Yageo</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_R3" description=""/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0201FR-07330KL"/>
+      <property name="Description" value="Buck-1 starts at 2.7 V; firmware raises 3V_MAIN to 3.0 V"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>29421123-0413-5b9b-a919-3583c41bc54a</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>150k 1%</value>
+      <footprint>Resistor_SMD:R_0201_0603Metric</footprint>
+      <fields>
+        <field name="Description">Buck-2 starts at 3.0 V</field>
+        <field name="MPN">RC0201FR-07150KL</field>
+        <field name="Manufacturer">Yageo</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_R4" description=""/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0201FR-07150KL"/>
+      <property name="Description" value="Buck-2 starts at 3.0 V"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>17ab8bb0-2802-57c0-a5eb-e9548b4b29d5</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>100R 1%</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description">MOSFET gate resistor</field>
+        <field name="MPN">RC0402FR-07100RL</field>
+        <field name="Manufacturer">Yageo</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_R5" description=""/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0402FR-07100RL"/>
+      <property name="Description" value="MOSFET gate resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d3dd63e0-f331-52f3-ae43-bf7b048b991b</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>100k 1%</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description">MOSFET gate pulldown</field>
+        <field name="MPN">RC0402FR-07100KL</field>
+        <field name="Manufacturer">Yageo</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_R6" description=""/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0402FR-07100KL"/>
+      <property name="Description" value="MOSFET gate pulldown"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e15ad634-6998-564a-a62a-01e434d99d94</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>100k 1%</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description">Flash chip-select default high</field>
+        <field name="MPN">RC0402FR-07100KL</field>
+        <field name="Manufacturer">Yageo</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_R7" description=""/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0402FR-07100KL"/>
+      <property name="Description" value="Flash chip-select default high"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1fd6119e-645b-5cb2-b3da-2b2435db3c5c</tstamps>
+    </comp>
+    <comp ref="R8">
+      <value>100R 1%</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description">PDM source isolation</field>
+        <field name="MPN">RC0402FR-07100RL</field>
+        <field name="Manufacturer">Yageo</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_R8" description=""/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0402FR-07100RL"/>
+      <property name="Description" value="PDM source isolation"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7a9eba34-fb58-581e-85b0-0e95f2882c78</tstamps>
+    </comp>
+    <comp ref="R9">
+      <value>100R 1%</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <fields>
+        <field name="Description">PDM source isolation</field>
+        <field name="MPN">RC0402FR-07100RL</field>
+        <field name="Manufacturer">Yageo</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_R9" description=""/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0402FR-07100RL"/>
+      <property name="Description" value="PDM source isolation"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b8996a2e-4d1d-57da-9f77-3efbd07839fc</tstamps>
+    </comp>
+    <comp ref="R10">
+      <value>27R 1%</value>
+      <footprint>Resistor_SMD:R_0201_0603Metric</footprint>
+      <fields>
+        <field name="Description">Raytac-recommended USB D+ series resistor</field>
+        <field name="MPN">CRCW020127R0FNED</field>
+        <field name="Manufacturer">Vishay Dale</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_R10" description=""/>
+      <property name="Manufacturer" value="Vishay Dale"/>
+      <property name="MPN" value="CRCW020127R0FNED"/>
+      <property name="Description" value="Raytac-recommended USB D+ series resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>204e4bd8-6296-5d89-9aff-5f5d1796edd1</tstamps>
+    </comp>
+    <comp ref="R11">
+      <value>27R 1%</value>
+      <footprint>Resistor_SMD:R_0201_0603Metric</footprint>
+      <fields>
+        <field name="Description">Raytac-recommended USB D- series resistor</field>
+        <field name="MPN">CRCW020127R0FNED</field>
+        <field name="Manufacturer">Vishay Dale</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_R11" description=""/>
+      <property name="Manufacturer" value="Vishay Dale"/>
+      <property name="MPN" value="CRCW020127R0FNED"/>
+      <property name="Description" value="Raytac-recommended USB D- series resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b3dd4455-1cc2-5d53-a734-05d4c846a3b0</tstamps>
+    </comp>
+    <comp ref="SW1">
+      <value>B3U-1000P</value>
+      <footprint>Button_Switch_SMD:SW_SPST_B3U-1000P</footprint>
+      <fields>
+        <field name="Description">Hard reset / ship-hold button; intentionally not tied to MCU</field>
+        <field name="MPN">B3U-1000P</field>
+        <field name="Manufacturer">Omron</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_SW1" description=""/>
+      <property name="Manufacturer" value="Omron"/>
+      <property name="MPN" value="B3U-1000P"/>
+      <property name="Description" value="Hard reset / ship-hold button; intentionally not tied to MCU"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>92d2523e-bbaf-5f7a-9c23-79704b8b3662</tstamps>
+    </comp>
+    <comp ref="TP1">
+      <value>SWDIO</value>
+      <footprint>Anticipy_R0B:PogoPad_D1.0mm</footprint>
+      <fields>
+        <field name="Description">Factory test point: SWDIO</field>
+        <field name="MPN">TESTPAD</field>
+        <field name="Manufacturer">Anticipy</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_TP1" description=""/>
+      <property name="Manufacturer" value="Anticipy"/>
+      <property name="MPN" value="TESTPAD"/>
+      <property name="Description" value="Factory test point: SWDIO"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ea57d48c-f461-5776-bd2b-131b05dbc07c</tstamps>
+    </comp>
+    <comp ref="TP2">
+      <value>SWDCLK</value>
+      <footprint>Anticipy_R0B:PogoPad_D1.0mm</footprint>
+      <fields>
+        <field name="Description">Factory test point: SWDCLK</field>
+        <field name="MPN">TESTPAD</field>
+        <field name="Manufacturer">Anticipy</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_TP2" description=""/>
+      <property name="Manufacturer" value="Anticipy"/>
+      <property name="MPN" value="TESTPAD"/>
+      <property name="Description" value="Factory test point: SWDCLK"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bcb753bb-7c19-5c4d-9b69-50821a275e43</tstamps>
+    </comp>
+    <comp ref="TP3">
+      <value>RESET</value>
+      <footprint>Anticipy_R0B:PogoPad_D1.0mm</footprint>
+      <fields>
+        <field name="Description">Factory test point: RESET</field>
+        <field name="MPN">TESTPAD</field>
+        <field name="Manufacturer">Anticipy</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_TP3" description=""/>
+      <property name="Manufacturer" value="Anticipy"/>
+      <property name="MPN" value="TESTPAD"/>
+      <property name="Description" value="Factory test point: RESET"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e87b46ee-cf07-5406-a00d-fc5f1b8f9ec1</tstamps>
+    </comp>
+    <comp ref="TP4">
+      <value>3V_MAIN</value>
+      <footprint>Anticipy_R0B:PogoPad_D1.0mm</footprint>
+      <fields>
+        <field name="Description">Factory test point: 3V_MAIN</field>
+        <field name="MPN">TESTPAD</field>
+        <field name="Manufacturer">Anticipy</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_TP4" description=""/>
+      <property name="Manufacturer" value="Anticipy"/>
+      <property name="MPN" value="TESTPAD"/>
+      <property name="Description" value="Factory test point: 3V_MAIN"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c984496d-ea19-5b4b-a4d3-6fc25ac68f1b</tstamps>
+    </comp>
+    <comp ref="TP5">
+      <value>GND</value>
+      <footprint>Anticipy_R0B:PogoPad_D1.0mm</footprint>
+      <fields>
+        <field name="Description">Factory test point: GND</field>
+        <field name="MPN">TESTPAD</field>
+        <field name="Manufacturer">Anticipy</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_TP5" description=""/>
+      <property name="Manufacturer" value="Anticipy"/>
+      <property name="MPN" value="TESTPAD"/>
+      <property name="Description" value="Factory test point: GND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4d9f989c-d26b-54d9-8dbd-44c73748ac8a</tstamps>
+    </comp>
+    <comp ref="TP6">
+      <value>UART_TX</value>
+      <footprint>Anticipy_R0B:PogoPad_D1.0mm</footprint>
+      <fields>
+        <field name="Description">Factory test point: UART_TX</field>
+        <field name="MPN">TESTPAD</field>
+        <field name="Manufacturer">Anticipy</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_TP6" description=""/>
+      <property name="Manufacturer" value="Anticipy"/>
+      <property name="MPN" value="TESTPAD"/>
+      <property name="Description" value="Factory test point: UART_TX"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>04ecafbf-764a-55bb-9f65-721087d81831</tstamps>
+    </comp>
+    <comp ref="TP7">
+      <value>UART_RX</value>
+      <footprint>Anticipy_R0B:PogoPad_D1.0mm</footprint>
+      <fields>
+        <field name="Description">Factory test point: UART_RX</field>
+        <field name="MPN">TESTPAD</field>
+        <field name="Manufacturer">Anticipy</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_TP7" description=""/>
+      <property name="Manufacturer" value="Anticipy"/>
+      <property name="MPN" value="TESTPAD"/>
+      <property name="Description" value="Factory test point: UART_RX"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d11d0c20-9c05-5c1b-963f-3da342065ab4</tstamps>
+    </comp>
+    <comp ref="TP8">
+      <value>VBAT</value>
+      <footprint>Anticipy_R0B:PogoPad_D1.0mm</footprint>
+      <fields>
+        <field name="Description">Factory test point: VBAT</field>
+        <field name="MPN">TESTPAD</field>
+        <field name="Manufacturer">Anticipy</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_TP8" description=""/>
+      <property name="Manufacturer" value="Anticipy"/>
+      <property name="MPN" value="TESTPAD"/>
+      <property name="Description" value="Factory test point: VBAT"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b8263766-ae34-5abd-bf08-ba6a0f5f179a</tstamps>
+    </comp>
+    <comp ref="TP9">
+      <value>VBUS</value>
+      <footprint>Anticipy_R0B:PogoPad_D1.0mm</footprint>
+      <fields>
+        <field name="Description">Factory test point: VBUS</field>
+        <field name="MPN">TESTPAD</field>
+        <field name="Manufacturer">Anticipy</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_TP9" description=""/>
+      <property name="Manufacturer" value="Anticipy"/>
+      <property name="MPN" value="TESTPAD"/>
+      <property name="Description" value="Factory test point: VBUS"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a3b25704-2d05-52d5-9c62-0dcf2fe1f050</tstamps>
+    </comp>
+    <comp ref="TP10">
+      <value>VSYS</value>
+      <footprint>Anticipy_R0B:PogoPad_D1.0mm</footprint>
+      <fields>
+        <field name="Description">Factory test point: VSYS</field>
+        <field name="MPN">TESTPAD</field>
+        <field name="Manufacturer">Anticipy</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_TP10" description=""/>
+      <property name="Manufacturer" value="Anticipy"/>
+      <property name="MPN" value="TESTPAD"/>
+      <property name="Description" value="Factory test point: VSYS"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ec2aeb8b-9a3a-57bc-8121-b899e32fd1a3</tstamps>
+    </comp>
+    <comp ref="TP11">
+      <value>VBUSOUT</value>
+      <footprint>Anticipy_R0B:PogoPad_D1.0mm</footprint>
+      <fields>
+        <field name="Description">Factory test point: VBUSOUT</field>
+        <field name="MPN">TESTPAD</field>
+        <field name="Manufacturer">Anticipy</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_TP11" description=""/>
+      <property name="Manufacturer" value="Anticipy"/>
+      <property name="MPN" value="TESTPAD"/>
+      <property name="Description" value="Factory test point: VBUSOUT"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f05f863f-18c6-5fac-a638-cd31cac20d7c</tstamps>
+    </comp>
+    <comp ref="TP12">
+      <value>3V_FLASH</value>
+      <footprint>Anticipy_R0B:PogoPad_D1.0mm</footprint>
+      <fields>
+        <field name="Description">Factory test point: 3V_FLASH</field>
+        <field name="MPN">TESTPAD</field>
+        <field name="Manufacturer">Anticipy</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_TP12" description=""/>
+      <property name="Manufacturer" value="Anticipy"/>
+      <property name="MPN" value="TESTPAD"/>
+      <property name="Description" value="Factory test point: 3V_FLASH"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5486fdad-48b5-5223-9e4c-aba048ecd555</tstamps>
+    </comp>
+    <comp ref="TP13">
+      <value>3V_MIC</value>
+      <footprint>Anticipy_R0B:PogoPad_D1.0mm</footprint>
+      <fields>
+        <field name="Description">Factory test point: 3V_MIC</field>
+        <field name="MPN">TESTPAD</field>
+        <field name="Manufacturer">Anticipy</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_TP13" description=""/>
+      <property name="Manufacturer" value="Anticipy"/>
+      <property name="MPN" value="TESTPAD"/>
+      <property name="Description" value="Factory test point: 3V_MIC"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>01b3a6ec-d746-579e-b100-4fcbf0c1a45c</tstamps>
+    </comp>
+    <comp ref="TP14">
+      <value>PMIC_INT</value>
+      <footprint>Anticipy_R0B:PogoPad_D1.0mm</footprint>
+      <fields>
+        <field name="Description">Factory test point: PMIC_INT</field>
+        <field name="MPN">TESTPAD</field>
+        <field name="Manufacturer">Anticipy</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_TP14" description=""/>
+      <property name="Manufacturer" value="Anticipy"/>
+      <property name="MPN" value="TESTPAD"/>
+      <property name="Description" value="Factory test point: PMIC_INT"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0c5fdc7d-fc04-5417-a6bf-241d6dde974d</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>MDBT50Q-1MV2</value>
+      <footprint>Anticipy_R0B:Raytac_MDBT50Q_R0B</footprint>
+      <datasheet>https://www.raytac.com/download/index.php?index_id=43</datasheet>
+      <fields>
+        <field name="Description">Certified nRF52840 module; rotation 0 puts antenna at the top board edge</field>
+        <field name="MPN">MDBT50Q-1MV2</field>
+        <field name="Manufacturer">Raytac</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_U1" description=""/>
+      <property name="Manufacturer" value="Raytac"/>
+      <property name="MPN" value="MDBT50Q-1MV2"/>
+      <property name="Description" value="Certified nRF52840 module; rotation 0 puts antenna at the top board edge"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9f02df6f-45a0-56a9-938b-f1275e4a81db</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>nPM1300</value>
+      <footprint>Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.45x3.45mm</footprint>
+      <datasheet>https://docs.nordicsemi.com/bundle/ps_npm1300/</datasheet>
+      <fields>
+        <field name="Description">PMIC, USB charger, two bucks, two LDO/load switches</field>
+        <field name="MPN">NPM1300-QEAA-R</field>
+        <field name="Manufacturer">Nordic Semiconductor</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_U2" description=""/>
+      <property name="Manufacturer" value="Nordic Semiconductor"/>
+      <property name="MPN" value="NPM1300-QEAA-R"/>
+      <property name="Description" value="PMIC, USB charger, two bucks, two LDO/load switches"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9fcf3f3d-cac2-55be-9e49-56dc0b384906</tstamps>
+    </comp>
+    <comp ref="U3">
+      <value>LIS2DW12TR</value>
+      <footprint>Package_LGA:LGA-12_2x2mm_P0.5mm</footprint>
+      <datasheet>https://www.st.com/resource/en/datasheet/lis2dw12.pdf</datasheet>
+      <fields>
+        <field name="Description">Low-power accelerometer, I2C, SA0 low</field>
+        <field name="MPN">LIS2DW12TR</field>
+        <field name="Manufacturer">STMicroelectronics</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_U3" description=""/>
+      <property name="Manufacturer" value="STMicroelectronics"/>
+      <property name="MPN" value="LIS2DW12TR"/>
+      <property name="Description" value="Low-power accelerometer, I2C, SA0 low"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>82ac1d34-a316-5f6e-a652-3b969c4266ba</tstamps>
+    </comp>
+    <comp ref="U4">
+      <value>TPD2EUSB30DRTR</value>
+      <footprint>Anticipy_R0B:Texas_DRT-3_R0B</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tpd2eusb30.pdf</datasheet>
+      <fields>
+        <field name="Description">USB 2.0 data-line ESD protection</field>
+        <field name="MPN">TPD2EUSB30DRTR</field>
+        <field name="Manufacturer">Texas Instruments</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_U4" description=""/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="MPN" value="TPD2EUSB30DRTR"/>
+      <property name="Description" value="USB 2.0 data-line ESD protection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5df6511b-23ef-5133-9ca4-f745c238c8cf</tstamps>
+    </comp>
+    <comp ref="U5">
+      <value>MX35LF4GE4AD-Z4I</value>
+      <footprint>Package_SON:WSON-8-1EP_8x6mm_P1.27mm_EP3.4x4.3mm</footprint>
+      <datasheet>https://www.macronix.com/Lists/Datasheet/Attachments/9047/MX35LF4GE4AD%2C%203V%2C%204Gb%2C%20v1.6.pdf</datasheet>
+      <fields>
+        <field name="Description">4-Gbit SLC serial NAND; firmware needs ECC, bad-block and power-loss handling</field>
+        <field name="MPN">MX35LF4GE4AD-Z4I</field>
+        <field name="Manufacturer">Macronix</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_U5" description=""/>
+      <property name="Manufacturer" value="Macronix"/>
+      <property name="MPN" value="MX35LF4GE4AD-Z4I"/>
+      <property name="Description" value="4-Gbit SLC serial NAND; firmware needs ECC, bad-block and power-loss handling"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>32cfd818-5325-5e11-9fb9-fe5798d421b6</tstamps>
+    </comp>
+    <comp ref="U6">
+      <value>TPD2E2U06DCKR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-323_SC-70</footprint>
+      <datasheet>https://www.ti.com/lit/gpn/TPD2E2U06</datasheet>
+      <fields>
+        <field name="Description">Connector-side 5.5-V CC1/CC2 shunt ESD protection; no series impedance</field>
+        <field name="MPN">TPD2E2U06DCKR</field>
+        <field name="Manufacturer">Texas Instruments</field>
+      </fields>
+      <libsource lib="Anticipy" part="R0B_U6" description=""/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="MPN" value="TPD2E2U06DCKR"/>
+      <property name="Description" value="Connector-side 5.5-V CC1/CC2 shunt ESD protection; no series impedance"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Anticipy_PROD_R0B_EVT.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f526d137-8c89-5448-a72e-0e01d60030e4</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Anticipy" part="R0B_BT1">
+      <fields>
+        <field name="Reference">BT</field>
+        <field name="Value">PROVISIONAL &lt;=26x15.5x4.8mm PROTECTED 10kNTC</field>
+        <field name="Footprint">Anticipy_R0B:Battery_LiPo_3Wire_Solder_26x15.5</field>
+        <field name="Manufacturer">TBD</field>
+        <field name="MPN">BATTERY-TBD-3WIRE</field>
+        <field name="Description">DO NOT SOURCE: exact protected three-wire pack, controlled max-tolerance drawing, polarity, 10k NTC configuration, UN38.3/IEC62133/MSDS, stock and runtime are release gates</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VBAT+" type="power_out"/>
+        <pin num="2" name="NTC_10K" type="output"/>
+        <pin num="3" name="VBAT-" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_C1">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">1uF 16V X7R</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Manufacturer">TDK</field>
+        <field name="MPN">C1608X7R1C105K080AC</field>
+        <field name="Description">PMIC VBUS input</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_C10">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">10uF 25V X5R</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R61E106MA73J</field>
+        <field name="Description">Microphone LDO output</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_C13">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">100nF 16V X5R</field>
+        <field name="Footprint">Capacitor_SMD:C_0201_0603Metric</field>
+        <field name="Manufacturer">TDK</field>
+        <field name="MPN">C0603X5R1C104K030BC</field>
+        <field name="Description">PMIC logic bypass; Nordic QEAA 0201 assembler gate</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_C14">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">100nF 16V X7R</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Manufacturer">KEMET</field>
+        <field name="MPN">C0402C104M4RAC7867</field>
+        <field name="Description">Buck-1 high-frequency input bypass; Nordic QEAA ref 1.2</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_C15">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">100nF 16V X7R</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Manufacturer">KEMET</field>
+        <field name="MPN">C0402C104M4RAC7867</field>
+        <field name="Description">Buck-2 high-frequency input bypass; Nordic QEAA ref 1.2</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_C16">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">100nF 16V X7R</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Manufacturer">KEMET</field>
+        <field name="MPN">C0402C104M4RAC7867</field>
+        <field name="Description">System high-frequency bypass; Nordic QEAA ref 1.2</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_C17">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">100nF 10V X7R</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Manufacturer">TDK</field>
+        <field name="MPN">C1005X7R1A104K050BC</field>
+        <field name="Description">Flash local bypass</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_C18">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">1uF 16V X7R</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Manufacturer">TDK</field>
+        <field name="MPN">C1608X7R1C105K080AC</field>
+        <field name="Description">Flash local bulk</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_C19">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">100nF 10V X7R</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Manufacturer">TDK</field>
+        <field name="MPN">C1005X7R1A104K050BC</field>
+        <field name="Description">MIC1 local bypass</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_C2">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">10uF 25V X5R</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R61E106MA73J</field>
+        <field name="Description">Buck-1 PVDD local return</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_C20">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">100nF 10V X7R</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Manufacturer">TDK</field>
+        <field name="MPN">C1005X7R1A104K050BC</field>
+        <field name="Description">MIC2 local bypass</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_C21">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">100nF 16V X5R</field>
+        <field name="Footprint">Capacitor_SMD:C_0201_0603Metric</field>
+        <field name="Manufacturer">TDK</field>
+        <field name="MPN">C0603X5R1C104K030BC</field>
+        <field name="Description">Accelerometer VDD local bypass</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_C22">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">100nF 10V X7R</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Manufacturer">TDK</field>
+        <field name="MPN">C1005X7R1A104K050BC</field>
+        <field name="Description">Motor brush-noise capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_C23">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">47uF 6.3V X5R</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">CC0805MKX5R5BB476</field>
+        <field name="Description">Haptic rail bulk</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_C24">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">10uF 25V X5R</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R61E106MA73J</field>
+        <field name="Description">Accelerometer local bulk</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_C25">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">10uF 6.3V X5R</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM155R60J106ME15D</field>
+        <field name="Description">Raytac VDD/VDDH local bulk; effective capacitance is a first-article gate</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_C26">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">10uF 6.3V X5R</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM155R60J106ME15D</field>
+        <field name="Description">Raytac VBUS local bulk; effective capacitance is a first-article gate</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_C27">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">100nF 16V X5R</field>
+        <field name="Footprint">Capacitor_SMD:C_0201_0603Metric</field>
+        <field name="Manufacturer">TDK</field>
+        <field name="MPN">C0603X5R1C104K030BC</field>
+        <field name="Description">Accelerometer VDDIO local bypass</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_C3">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">10uF 25V X5R</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R61E106MA73J</field>
+        <field name="Description">Buck-2 PVDD local return</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_C4">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">10uF 25V X5R</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R61E106MA73J</field>
+        <field name="Description">System rail bulk</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_C5">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">1uF 16V X7R</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Manufacturer">TDK</field>
+        <field name="MPN">C1608X7R1C105K080AC</field>
+        <field name="Description">Protected USB output bypass</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_C6">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">2.2uF 16V X7R</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Manufacturer">Taiyo Yuden</field>
+        <field name="MPN">EMK107BB7225KA-T</field>
+        <field name="Description">Battery input bypass</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_C7">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">10uF 25V X5R</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R61E106MA73J</field>
+        <field name="Description">Buck-1 output</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_C8">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">10uF 25V X5R</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R61E106MA73J</field>
+        <field name="Description">Buck-2 output</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_C9">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">10uF 25V X5R</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R61E106MA73J</field>
+        <field name="Description">System rail second bulk</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_D1">
+      <docs>https://www.diodes.com/assets/Datasheets/ds12019.pdf</docs>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">1N4148WS-7-F</field>
+        <field name="Footprint">Diode_SMD:D_SOD-323</field>
+        <field name="Datasheet">https://www.diodes.com/assets/Datasheets/ds12019.pdf</field>
+        <field name="Manufacturer">Diodes Incorporated</field>
+        <field name="MPN">1N4148WS-7-F</field>
+        <field name="Description">Active-lifecycle haptic flyback diode; KiCad pad 1 is cathode</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_D2">
+      <docs>https://www.ti.com/lit/gpn/ESD441</docs>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">ESD441DPYR</field>
+        <field name="Footprint">Anticipy_R0B:TI_DPY0002A_X1SON</field>
+        <field name="Datasheet">https://www.ti.com/lit/gpn/ESD441</field>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="MPN">ESD441DPYR</field>
+        <field name="Description">Connector-side 5.5-V VBUS shunt ESD/surge protector; TI DPY0002A land pattern</field>
+      </fields>
+      <pins>
+        <pin num="1" name="IO" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_J1">
+      <docs>https://gct.co/connector/usb4500</docs>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">USB4500-03-1-A</field>
+        <field name="Footprint">Anticipy_R0B:USB_C_Receptacle_GCT_USB4500-03-1-A_MidMount</field>
+        <field name="Datasheet">https://gct.co/connector/usb4500</field>
+        <field name="Manufacturer">GCT</field>
+        <field name="MPN">USB4500-03-1-A</field>
+        <field name="Description">0.8-mm mid-mount USB-C; 12 grouped contacts plus four plated shell stakes</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND_A1_B12" type="power_in"/>
+        <pin num="2" name="VBUS_A4_B9" type="power_out"/>
+        <pin num="3" name="SBU2_B8" type="bidirectional"/>
+        <pin num="4" name="CC1_A5" type="bidirectional"/>
+        <pin num="5" name="D-_B7" type="bidirectional"/>
+        <pin num="6" name="D+_A6" type="bidirectional"/>
+        <pin num="7" name="D-_A7" type="bidirectional"/>
+        <pin num="8" name="D+_B6" type="bidirectional"/>
+        <pin num="9" name="SBU1_A8" type="bidirectional"/>
+        <pin num="10" name="CC2_B5" type="bidirectional"/>
+        <pin num="11" name="VBUS_B4_A9" type="power_out"/>
+        <pin num="12" name="GND_B1_A12" type="power_in"/>
+        <pin num="S1" name="SHIELD" type="passive"/>
+        <pin num="S2" name="SHIELD" type="passive"/>
+        <pin num="S3" name="SHIELD" type="passive"/>
+        <pin num="S4" name="SHIELD" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_L1">
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">2.2uH</field>
+        <field name="Footprint">Inductor_SMD:L_Murata_DFE201610P</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="MPN">CIGT201610EH2R2MNE</field>
+        <field name="Description">Buck-1 inductor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_L2">
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">2.2uH</field>
+        <field name="Footprint">Inductor_SMD:L_Murata_DFE201610P</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="MPN">CIGT201610EH2R2MNE</field>
+        <field name="Description">Buck-2 inductor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_LED1">
+      <docs>https://www.kingbrightusa.com/images/catalog/SPEC/APHB1608LVBDSEKJ3C.pdf</docs>
+      <fields>
+        <field name="Reference">LED</field>
+        <field name="Value">APHB1608LVBDSEKJ3C</field>
+        <field name="Footprint">Anticipy_R0B:LED_Kingbright_APHB1608LVBDSEKJ3C</field>
+        <field name="Datasheet">https://www.kingbrightusa.com/images/catalog/SPEC/APHB1608LVBDSEKJ3C.pdf</field>
+        <field name="Manufacturer">Kingbright</field>
+        <field name="MPN">APHB1608LVBDSEKJ3C</field>
+        <field name="Description">Red/blue status LED on nPM1300 fixed 5-mA sinks; blue low-battery brightness is a first-article gate</field>
+      </fields>
+      <pins>
+        <pin num="1" name="BLUE_K" type="input"/>
+        <pin num="2" name="BLUE_A" type="power_in"/>
+        <pin num="3" name="RED_K" type="input"/>
+        <pin num="4" name="RED_A" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_M1">
+      <fields>
+        <field name="Reference">M</field>
+        <field name="Value">VCLP1020B002L</field>
+        <field name="Footprint">Anticipy_R0B:Haptic_VCLP1020B002L_WirePads</field>
+        <field name="Manufacturer">Vybronics</field>
+        <field name="MPN">VCLP1020B002L</field>
+        <field name="Description">10-mm coin haptic, hand soldered</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="power_in"/>
+        <pin num="2" name="-" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_MIC1">
+      <docs>https://www.sameskydevices.com/product/resource/cmm-3424dt-26165-tr.pdf</docs>
+      <fields>
+        <field name="Reference">MIC</field>
+        <field name="Value">CMM-3424DT-26165-TR</field>
+        <field name="Footprint">Anticipy_R0B:SameSky_CMM-3424DT-26165-TR_TopPort_PDM</field>
+        <field name="Datasheet">https://www.sameskydevices.com/product/resource/cmm-3424dt-26165-tr.pdf</field>
+        <field name="Manufacturer">Same Sky</field>
+        <field name="MPN">CMM-3424DT-26165-TR</field>
+        <field name="Description">Front-side top-port IP67 PDM microphone; SELECT low</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VDD" type="power_in"/>
+        <pin num="2" name="SELECT" type="input"/>
+        <pin num="3" name="CLOCK" type="input"/>
+        <pin num="4" name="DATA" type="output"/>
+        <pin num="5" name="GND" type="power_in"/>
+        <pin num="6" name="GND" type="power_in"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_MIC2">
+      <docs>https://www.sameskydevices.com/product/resource/cmm-3424dt-26165-tr.pdf</docs>
+      <fields>
+        <field name="Reference">MIC</field>
+        <field name="Value">CMM-3424DT-26165-TR</field>
+        <field name="Footprint">Anticipy_R0B:SameSky_CMM-3424DT-26165-TR_TopPort_PDM</field>
+        <field name="Datasheet">https://www.sameskydevices.com/product/resource/cmm-3424dt-26165-tr.pdf</field>
+        <field name="Manufacturer">Same Sky</field>
+        <field name="MPN">CMM-3424DT-26165-TR</field>
+        <field name="Description">Front-side top-port IP67 PDM microphone; SELECT high</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VDD" type="power_in"/>
+        <pin num="2" name="SELECT" type="input"/>
+        <pin num="3" name="CLOCK" type="input"/>
+        <pin num="4" name="DATA" type="output"/>
+        <pin num="5" name="GND" type="power_in"/>
+        <pin num="6" name="GND" type="power_in"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_NT1">
+      <fields>
+        <field name="Reference">NT</field>
+        <field name="Value">PVSS1-GND</field>
+        <field name="Footprint">NetTie:NetTie-2_SMD_Pad0.5mm</field>
+        <field name="Manufacturer">Anticipy</field>
+        <field name="MPN">NETTIE</field>
+        <field name="Description">Single-point buck-1 power-ground tie</field>
+      </fields>
+      <pins>
+        <pin num="1" name="PVSS1" type="passive"/>
+        <pin num="2" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_NT2">
+      <fields>
+        <field name="Reference">NT</field>
+        <field name="Value">PVSS2-GND</field>
+        <field name="Footprint">NetTie:NetTie-2_SMD_Pad0.5mm</field>
+        <field name="Manufacturer">Anticipy</field>
+        <field name="MPN">NETTIE</field>
+        <field name="Description">Single-point buck-2 power-ground tie</field>
+      </fields>
+      <pins>
+        <pin num="1" name="PVSS2" type="passive"/>
+        <pin num="2" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_Q1">
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">AO3400A</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Manufacturer">Alpha &amp; Omega Semiconductor</field>
+        <field name="MPN">AO3400A</field>
+        <field name="Description">Low-side haptic MOSFET</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="power_in"/>
+        <pin num="3" name="D" type="open_collector"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_R1">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">10k 1%</field>
+        <field name="Footprint">Resistor_SMD:R_0201_0603Metric</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0201FR-0710KL</field>
+        <field name="Description">I2C pull-up</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_R10">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">27R 1%</field>
+        <field name="Footprint">Resistor_SMD:R_0201_0603Metric</field>
+        <field name="Manufacturer">Vishay Dale</field>
+        <field name="MPN">CRCW020127R0FNED</field>
+        <field name="Description">Raytac-recommended USB D+ series resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_R11">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">27R 1%</field>
+        <field name="Footprint">Resistor_SMD:R_0201_0603Metric</field>
+        <field name="Manufacturer">Vishay Dale</field>
+        <field name="MPN">CRCW020127R0FNED</field>
+        <field name="Description">Raytac-recommended USB D- series resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_R2">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">10k 1%</field>
+        <field name="Footprint">Resistor_SMD:R_0201_0603Metric</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0201FR-0710KL</field>
+        <field name="Description">I2C pull-up</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_R3">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">330k 1%</field>
+        <field name="Footprint">Resistor_SMD:R_0201_0603Metric</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0201FR-07330KL</field>
+        <field name="Description">Buck-1 starts at 2.7 V; firmware raises 3V_MAIN to 3.0 V</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_R4">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">150k 1%</field>
+        <field name="Footprint">Resistor_SMD:R_0201_0603Metric</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0201FR-07150KL</field>
+        <field name="Description">Buck-2 starts at 3.0 V</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_R5">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">100R 1%</field>
+        <field name="Footprint">Resistor_SMD:R_0402_1005Metric</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0402FR-07100RL</field>
+        <field name="Description">MOSFET gate resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_R6">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">100k 1%</field>
+        <field name="Footprint">Resistor_SMD:R_0402_1005Metric</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0402FR-07100KL</field>
+        <field name="Description">MOSFET gate pulldown</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_R7">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">100k 1%</field>
+        <field name="Footprint">Resistor_SMD:R_0402_1005Metric</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0402FR-07100KL</field>
+        <field name="Description">Flash chip-select default high</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_R8">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">100R 1%</field>
+        <field name="Footprint">Resistor_SMD:R_0402_1005Metric</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0402FR-07100RL</field>
+        <field name="Description">PDM source isolation</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_R9">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">100R 1%</field>
+        <field name="Footprint">Resistor_SMD:R_0402_1005Metric</field>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0402FR-07100RL</field>
+        <field name="Description">PDM source isolation</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_SW1">
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">B3U-1000P</field>
+        <field name="Footprint">Button_Switch_SMD:SW_SPST_B3U-1000P</field>
+        <field name="Manufacturer">Omron</field>
+        <field name="MPN">B3U-1000P</field>
+        <field name="Description">Hard reset / ship-hold button; intentionally not tied to MCU</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="B" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_TP1">
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">SWDIO</field>
+        <field name="Footprint">Anticipy_R0B:PogoPad_D1.0mm</field>
+        <field name="Manufacturer">Anticipy</field>
+        <field name="MPN">TESTPAD</field>
+        <field name="Description">Factory test point: SWDIO</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SWDIO" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_TP10">
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">VSYS</field>
+        <field name="Footprint">Anticipy_R0B:PogoPad_D1.0mm</field>
+        <field name="Manufacturer">Anticipy</field>
+        <field name="MPN">TESTPAD</field>
+        <field name="Description">Factory test point: VSYS</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VSYS" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_TP11">
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">VBUSOUT</field>
+        <field name="Footprint">Anticipy_R0B:PogoPad_D1.0mm</field>
+        <field name="Manufacturer">Anticipy</field>
+        <field name="MPN">TESTPAD</field>
+        <field name="Description">Factory test point: VBUSOUT</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VBUSOUT" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_TP12">
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">3V_FLASH</field>
+        <field name="Footprint">Anticipy_R0B:PogoPad_D1.0mm</field>
+        <field name="Manufacturer">Anticipy</field>
+        <field name="MPN">TESTPAD</field>
+        <field name="Description">Factory test point: 3V_FLASH</field>
+      </fields>
+      <pins>
+        <pin num="1" name="3V_FLASH" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_TP13">
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">3V_MIC</field>
+        <field name="Footprint">Anticipy_R0B:PogoPad_D1.0mm</field>
+        <field name="Manufacturer">Anticipy</field>
+        <field name="MPN">TESTPAD</field>
+        <field name="Description">Factory test point: 3V_MIC</field>
+      </fields>
+      <pins>
+        <pin num="1" name="3V_MIC" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_TP14">
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">PMIC_INT</field>
+        <field name="Footprint">Anticipy_R0B:PogoPad_D1.0mm</field>
+        <field name="Manufacturer">Anticipy</field>
+        <field name="MPN">TESTPAD</field>
+        <field name="Description">Factory test point: PMIC_INT</field>
+      </fields>
+      <pins>
+        <pin num="1" name="PMIC_INT" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_TP2">
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">SWDCLK</field>
+        <field name="Footprint">Anticipy_R0B:PogoPad_D1.0mm</field>
+        <field name="Manufacturer">Anticipy</field>
+        <field name="MPN">TESTPAD</field>
+        <field name="Description">Factory test point: SWDCLK</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SWDCLK" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_TP3">
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">RESET</field>
+        <field name="Footprint">Anticipy_R0B:PogoPad_D1.0mm</field>
+        <field name="Manufacturer">Anticipy</field>
+        <field name="MPN">TESTPAD</field>
+        <field name="Description">Factory test point: RESET</field>
+      </fields>
+      <pins>
+        <pin num="1" name="RESET" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_TP4">
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">3V_MAIN</field>
+        <field name="Footprint">Anticipy_R0B:PogoPad_D1.0mm</field>
+        <field name="Manufacturer">Anticipy</field>
+        <field name="MPN">TESTPAD</field>
+        <field name="Description">Factory test point: 3V_MAIN</field>
+      </fields>
+      <pins>
+        <pin num="1" name="3V_MAIN" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_TP5">
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">GND</field>
+        <field name="Footprint">Anticipy_R0B:PogoPad_D1.0mm</field>
+        <field name="Manufacturer">Anticipy</field>
+        <field name="MPN">TESTPAD</field>
+        <field name="Description">Factory test point: GND</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_TP6">
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">UART_TX</field>
+        <field name="Footprint">Anticipy_R0B:PogoPad_D1.0mm</field>
+        <field name="Manufacturer">Anticipy</field>
+        <field name="MPN">TESTPAD</field>
+        <field name="Description">Factory test point: UART_TX</field>
+      </fields>
+      <pins>
+        <pin num="1" name="UART_TX" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_TP7">
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">UART_RX</field>
+        <field name="Footprint">Anticipy_R0B:PogoPad_D1.0mm</field>
+        <field name="Manufacturer">Anticipy</field>
+        <field name="MPN">TESTPAD</field>
+        <field name="Description">Factory test point: UART_RX</field>
+      </fields>
+      <pins>
+        <pin num="1" name="UART_RX" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_TP8">
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">VBAT</field>
+        <field name="Footprint">Anticipy_R0B:PogoPad_D1.0mm</field>
+        <field name="Manufacturer">Anticipy</field>
+        <field name="MPN">TESTPAD</field>
+        <field name="Description">Factory test point: VBAT</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VBAT" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_TP9">
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">VBUS</field>
+        <field name="Footprint">Anticipy_R0B:PogoPad_D1.0mm</field>
+        <field name="Manufacturer">Anticipy</field>
+        <field name="MPN">TESTPAD</field>
+        <field name="Description">Factory test point: VBUS</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VBUS" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_U1">
+      <docs>https://www.raytac.com/download/index.php?index_id=43</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MDBT50Q-1MV2</field>
+        <field name="Footprint">Anticipy_R0B:Raytac_MDBT50Q_R0B</field>
+        <field name="Datasheet">https://www.raytac.com/download/index.php?index_id=43</field>
+        <field name="Manufacturer">Raytac</field>
+        <field name="MPN">MDBT50Q-1MV2</field>
+        <field name="Description">Certified nRF52840 module; rotation 0 puts antenna at the top board edge</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="P1.10" type="bidirectional"/>
+        <pin num="4" name="P1.11" type="bidirectional"/>
+        <pin num="5" name="P1.12" type="bidirectional"/>
+        <pin num="6" name="P1.13" type="bidirectional"/>
+        <pin num="7" name="P1.14" type="bidirectional"/>
+        <pin num="8" name="P1.15" type="bidirectional"/>
+        <pin num="9" name="P0.03/AIN1" type="bidirectional"/>
+        <pin num="10" name="P0.29/AIN5" type="bidirectional"/>
+        <pin num="11" name="P0.02/AIN0" type="bidirectional"/>
+        <pin num="12" name="P0.31/AIN7" type="bidirectional"/>
+        <pin num="13" name="P0.28/AIN4" type="bidirectional"/>
+        <pin num="14" name="P0.30/AIN6" type="bidirectional"/>
+        <pin num="15" name="GND" type="power_in"/>
+        <pin num="16" name="P0.27" type="bidirectional"/>
+        <pin num="17" name="P0.00/XL1" type="bidirectional"/>
+        <pin num="18" name="P0.01/XL2" type="bidirectional"/>
+        <pin num="19" name="P0.26" type="bidirectional"/>
+        <pin num="20" name="P0.04/AIN2" type="bidirectional"/>
+        <pin num="21" name="P0.05/AIN3" type="bidirectional"/>
+        <pin num="22" name="P0.06" type="bidirectional"/>
+        <pin num="23" name="P0.07/TRACECLK" type="bidirectional"/>
+        <pin num="24" name="P0.08" type="bidirectional"/>
+        <pin num="25" name="P1.08" type="bidirectional"/>
+        <pin num="26" name="P1.09/TRACEDATA3" type="bidirectional"/>
+        <pin num="27" name="P0.11/TRACEDATA2" type="bidirectional"/>
+        <pin num="28" name="VDD" type="power_in"/>
+        <pin num="29" name="P0.12/TRACEDATA1" type="bidirectional"/>
+        <pin num="30" name="VDDH" type="power_in"/>
+        <pin num="31" name="DCCH" type="bidirectional"/>
+        <pin num="32" name="VBUS" type="power_in"/>
+        <pin num="33" name="GND" type="power_in"/>
+        <pin num="34" name="D-" type="bidirectional"/>
+        <pin num="35" name="D+" type="bidirectional"/>
+        <pin num="36" name="P0.14" type="bidirectional"/>
+        <pin num="37" name="P0.13" type="bidirectional"/>
+        <pin num="38" name="P0.16" type="bidirectional"/>
+        <pin num="39" name="P0.15" type="bidirectional"/>
+        <pin num="40" name="P0.18/RESET" type="bidirectional"/>
+        <pin num="41" name="P0.17" type="bidirectional"/>
+        <pin num="42" name="P0.19" type="bidirectional"/>
+        <pin num="43" name="P0.21" type="bidirectional"/>
+        <pin num="44" name="P0.20" type="bidirectional"/>
+        <pin num="45" name="P0.23" type="bidirectional"/>
+        <pin num="46" name="P0.22" type="bidirectional"/>
+        <pin num="47" name="P1.00/TRACEDATA0" type="bidirectional"/>
+        <pin num="48" name="P0.24" type="bidirectional"/>
+        <pin num="49" name="P0.25" type="bidirectional"/>
+        <pin num="50" name="P1.02" type="bidirectional"/>
+        <pin num="51" name="SWDIO" type="bidirectional"/>
+        <pin num="52" name="P0.09/NFC1" type="bidirectional"/>
+        <pin num="53" name="SWDCLK" type="bidirectional"/>
+        <pin num="54" name="P0.10/NFC2" type="bidirectional"/>
+        <pin num="55" name="GND" type="power_in"/>
+        <pin num="56" name="P1.04" type="bidirectional"/>
+        <pin num="57" name="P1.06" type="bidirectional"/>
+        <pin num="58" name="P1.07" type="bidirectional"/>
+        <pin num="59" name="P1.05" type="bidirectional"/>
+        <pin num="60" name="P1.03" type="bidirectional"/>
+        <pin num="61" name="P1.01" type="bidirectional"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_U2">
+      <docs>https://docs.nordicsemi.com/bundle/ps_npm1300/</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">nPM1300</field>
+        <field name="Footprint">Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.45x3.45mm</field>
+        <field name="Datasheet">https://docs.nordicsemi.com/bundle/ps_npm1300/</field>
+        <field name="Manufacturer">Nordic Semiconductor</field>
+        <field name="MPN">NPM1300-QEAA-R</field>
+        <field name="Description">PMIC, USB charger, two bucks, two LDO/load switches</field>
+      </fields>
+      <pins>
+        <pin num="1" name="BUCK1OUT" type="power_out"/>
+        <pin num="2" name="PVSS1" type="power_in"/>
+        <pin num="3" name="SW1" type="power_out"/>
+        <pin num="4" name="PVDD1" type="power_in"/>
+        <pin num="5" name="SW2" type="power_out"/>
+        <pin num="6" name="PVSS2" type="power_in"/>
+        <pin num="7" name="GPIO0" type="bidirectional"/>
+        <pin num="8" name="GPIO1" type="bidirectional"/>
+        <pin num="9" name="GPIO2" type="bidirectional"/>
+        <pin num="10" name="GPIO3" type="bidirectional"/>
+        <pin num="11" name="GPIO4" type="bidirectional"/>
+        <pin num="12" name="VDDGPIO" type="power_in"/>
+        <pin num="13" name="SDA" type="bidirectional"/>
+        <pin num="14" name="SCL" type="input"/>
+        <pin num="15" name="SHPHLD" type="bidirectional"/>
+        <pin num="16" name="VSET2" type="input"/>
+        <pin num="17" name="VSET1" type="input"/>
+        <pin num="18" name="NTC" type="input"/>
+        <pin num="19" name="VBAT" type="power_in"/>
+        <pin num="20" name="VSYS" type="power_out"/>
+        <pin num="21" name="VBUS" type="power_in"/>
+        <pin num="22" name="VBUSOUT" type="power_out"/>
+        <pin num="23" name="CC1" type="bidirectional"/>
+        <pin num="24" name="CC2" type="bidirectional"/>
+        <pin num="25" name="LED0" type="open_collector"/>
+        <pin num="26" name="LED1" type="open_collector"/>
+        <pin num="27" name="LED2" type="open_collector"/>
+        <pin num="28" name="LDO1IN" type="power_in"/>
+        <pin num="29" name="LDO1OUT" type="power_out"/>
+        <pin num="30" name="LDO2IN" type="power_in"/>
+        <pin num="31" name="LDO2OUT" type="power_out"/>
+        <pin num="32" name="BUCK2OUT" type="power_out"/>
+        <pin num="33" name="EP" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_U3">
+      <docs>https://www.st.com/resource/en/datasheet/lis2dw12.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LIS2DW12TR</field>
+        <field name="Footprint">Package_LGA:LGA-12_2x2mm_P0.5mm</field>
+        <field name="Datasheet">https://www.st.com/resource/en/datasheet/lis2dw12.pdf</field>
+        <field name="Manufacturer">STMicroelectronics</field>
+        <field name="MPN">LIS2DW12TR</field>
+        <field name="Description">Low-power accelerometer, I2C, SA0 low</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SCL/SPC" type="input"/>
+        <pin num="2" name="CS" type="input"/>
+        <pin num="3" name="SDO/SA0" type="bidirectional"/>
+        <pin num="4" name="SDA/SDI/SDO" type="bidirectional"/>
+        <pin num="5" name="RES" type="passive"/>
+        <pin num="6" name="GND" type="power_in"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="GND" type="power_in"/>
+        <pin num="9" name="VDD_IO" type="power_in"/>
+        <pin num="10" name="VDD" type="power_in"/>
+        <pin num="11" name="INT2" type="output"/>
+        <pin num="12" name="INT1" type="output"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_U4">
+      <docs>https://www.ti.com/lit/ds/symlink/tpd2eusb30.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPD2EUSB30DRTR</field>
+        <field name="Footprint">Anticipy_R0B:Texas_DRT-3_R0B</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tpd2eusb30.pdf</field>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="MPN">TPD2EUSB30DRTR</field>
+        <field name="Description">USB 2.0 data-line ESD protection</field>
+      </fields>
+      <pins>
+        <pin num="1" name="IO1" type="bidirectional"/>
+        <pin num="2" name="IO2" type="bidirectional"/>
+        <pin num="3" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_U5">
+      <docs>https://www.macronix.com/Lists/Datasheet/Attachments/9047/MX35LF4GE4AD%2C%203V%2C%204Gb%2C%20v1.6.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MX35LF4GE4AD-Z4I</field>
+        <field name="Footprint">Package_SON:WSON-8-1EP_8x6mm_P1.27mm_EP3.4x4.3mm</field>
+        <field name="Datasheet">https://www.macronix.com/Lists/Datasheet/Attachments/9047/MX35LF4GE4AD%2C%203V%2C%204Gb%2C%20v1.6.pdf</field>
+        <field name="Manufacturer">Macronix</field>
+        <field name="MPN">MX35LF4GE4AD-Z4I</field>
+        <field name="Description">4-Gbit SLC serial NAND; firmware needs ECC, bad-block and power-loss handling</field>
+      </fields>
+      <pins>
+        <pin num="1" name="CS#" type="input"/>
+        <pin num="2" name="SO/SIO1" type="bidirectional"/>
+        <pin num="3" name="WP#/SIO2" type="bidirectional"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="SI/SIO0" type="bidirectional"/>
+        <pin num="6" name="SCLK" type="input"/>
+        <pin num="7" name="HOLD#/SIO3" type="bidirectional"/>
+        <pin num="8" name="VCC" type="power_in"/>
+        <pin num="9" name="EP" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Anticipy" part="R0B_U6">
+      <docs>https://www.ti.com/lit/gpn/TPD2E2U06</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPD2E2U06DCKR</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-323_SC-70</field>
+        <field name="Datasheet">https://www.ti.com/lit/gpn/TPD2E2U06</field>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="MPN">TPD2E2U06DCKR</field>
+        <field name="Description">Connector-side 5.5-V CC1/CC2 shunt ESD protection; no series impedance</field>
+      </fields>
+      <pins>
+        <pin num="1" name="IO1" type="bidirectional"/>
+        <pin num="2" name="IO2" type="bidirectional"/>
+        <pin num="3" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries/>
+  <nets>
+    <net code="1" name="/3V_FLASH">
+      <node ref="C17" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C18" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C8" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="L2" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R7" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="TP12" pin="1" pinfunction="3V_FLASH" pintype="passive"/>
+      <node ref="U2" pin="32" pinfunction="BUCK2OUT" pintype="power_out"/>
+      <node ref="U5" pin="8" pinfunction="VCC" pintype="power_in"/>
+    </net>
+    <net code="2" name="/3V_MAIN">
+      <node ref="C13" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C21" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C22" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C23" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C24" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C25" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C27" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C7" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="L1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="M1" pin="1" pinfunction="+" pintype="power_in"/>
+      <node ref="R1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R2" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="TP4" pin="1" pinfunction="3V_MAIN" pintype="passive"/>
+      <node ref="U1" pin="28" pinfunction="VDD" pintype="power_in"/>
+      <node ref="U1" pin="30" pinfunction="VDDH" pintype="power_in"/>
+      <node ref="U2" pin="1" pinfunction="BUCK1OUT" pintype="power_out"/>
+      <node ref="U2" pin="12" pinfunction="VDDGPIO" pintype="power_in"/>
+      <node ref="U3" pin="10" pinfunction="VDD" pintype="power_in"/>
+      <node ref="U3" pin="2" pinfunction="CS" pintype="input"/>
+      <node ref="U3" pin="9" pinfunction="VDD_IO" pintype="power_in"/>
+    </net>
+    <net code="3" name="/3V_MIC">
+      <node ref="C10" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C19" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C20" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="MIC1" pin="1" pinfunction="VDD" pintype="power_in"/>
+      <node ref="MIC2" pin="1" pinfunction="VDD" pintype="power_in"/>
+      <node ref="MIC2" pin="2" pinfunction="SELECT" pintype="input"/>
+      <node ref="TP13" pin="1" pinfunction="3V_MIC" pintype="passive"/>
+      <node ref="U2" pin="29" pinfunction="LDO1OUT" pintype="power_out"/>
+    </net>
+    <net code="4" name="/ACC_INT1">
+      <node ref="U1" pin="48" pinfunction="P0.24" pintype="bidirectional"/>
+      <node ref="U3" pin="12" pinfunction="INT1" pintype="output"/>
+    </net>
+    <net code="5" name="/ACC_INT2">
+      <node ref="U1" pin="49" pinfunction="P0.25" pintype="bidirectional"/>
+      <node ref="U3" pin="11" pinfunction="INT2" pintype="output"/>
+    </net>
+    <net code="6" name="/FLASH_CS">
+      <node ref="R7" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U1" pin="44" pinfunction="P0.20" pintype="bidirectional"/>
+      <node ref="U5" pin="1" pinfunction="CS#" pintype="input"/>
+    </net>
+    <net code="7" name="/FLASH_IO0">
+      <node ref="U1" pin="43" pinfunction="P0.21" pintype="bidirectional"/>
+      <node ref="U5" pin="5" pinfunction="SI/SIO0" pintype="bidirectional"/>
+    </net>
+    <net code="8" name="/FLASH_IO1">
+      <node ref="U1" pin="46" pinfunction="P0.22" pintype="bidirectional"/>
+      <node ref="U5" pin="2" pinfunction="SO/SIO1" pintype="bidirectional"/>
+    </net>
+    <net code="9" name="/FLASH_IO2">
+      <node ref="U1" pin="45" pinfunction="P0.23" pintype="bidirectional"/>
+      <node ref="U5" pin="3" pinfunction="WP#/SIO2" pintype="bidirectional"/>
+    </net>
+    <net code="10" name="/FLASH_IO3">
+      <node ref="U1" pin="47" pinfunction="P1.00/TRACEDATA0" pintype="bidirectional"/>
+      <node ref="U5" pin="7" pinfunction="HOLD#/SIO3" pintype="bidirectional"/>
+    </net>
+    <net code="11" name="/FLASH_SCK">
+      <node ref="U1" pin="42" pinfunction="P0.19" pintype="bidirectional"/>
+      <node ref="U5" pin="6" pinfunction="SCLK" pintype="input"/>
+    </net>
+    <net code="12" name="/GND">
+      <node ref="BT1" pin="3" pinfunction="VBAT-" pintype="power_out"/>
+      <node ref="C1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C10" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C13" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C16" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C17" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C18" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C19" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C20" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C21" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C23" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C24" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C25" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C26" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C27" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C4" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C5" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C6" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C9" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D2" pin="2" pinfunction="GND" pintype="power_in"/>
+      <node ref="J1" pin="1" pinfunction="GND_A1_B12" pintype="power_in"/>
+      <node ref="J1" pin="12" pinfunction="GND_B1_A12" pintype="power_in"/>
+      <node ref="J1" pin="S1" pinfunction="SHIELD" pintype="passive"/>
+      <node ref="J1" pin="S2" pinfunction="SHIELD" pintype="passive"/>
+      <node ref="J1" pin="S3" pinfunction="SHIELD" pintype="passive"/>
+      <node ref="J1" pin="S4" pinfunction="SHIELD" pintype="passive"/>
+      <node ref="MIC1" pin="2" pinfunction="SELECT" pintype="input"/>
+      <node ref="MIC1" pin="5" pinfunction="GND" pintype="power_in"/>
+      <node ref="MIC1" pin="6" pinfunction="GND" pintype="power_in"/>
+      <node ref="MIC1" pin="7" pinfunction="GND" pintype="power_in"/>
+      <node ref="MIC1" pin="8" pinfunction="GND" pintype="power_in"/>
+      <node ref="MIC2" pin="5" pinfunction="GND" pintype="power_in"/>
+      <node ref="MIC2" pin="6" pinfunction="GND" pintype="power_in"/>
+      <node ref="MIC2" pin="7" pinfunction="GND" pintype="power_in"/>
+      <node ref="MIC2" pin="8" pinfunction="GND" pintype="power_in"/>
+      <node ref="NT1" pin="2" pinfunction="GND" pintype="passive"/>
+      <node ref="NT2" pin="2" pinfunction="GND" pintype="passive"/>
+      <node ref="Q1" pin="2" pinfunction="S" pintype="power_in"/>
+      <node ref="R3" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R4" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R6" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="SW1" pin="2" pinfunction="B" pintype="passive"/>
+      <node ref="TP5" pin="1" pinfunction="GND" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="15" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="2" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="33" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="55" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="33" pinfunction="EP" pintype="power_in"/>
+      <node ref="U3" pin="3" pinfunction="SDO/SA0" pintype="bidirectional"/>
+      <node ref="U3" pin="6" pinfunction="GND" pintype="power_in"/>
+      <node ref="U3" pin="7" pinfunction="GND" pintype="power_in"/>
+      <node ref="U3" pin="8" pinfunction="GND" pintype="power_in"/>
+      <node ref="U4" pin="3" pinfunction="GND" pintype="power_in"/>
+      <node ref="U5" pin="4" pinfunction="GND" pintype="power_in"/>
+      <node ref="U5" pin="9" pinfunction="EP" pintype="power_in"/>
+      <node ref="U6" pin="3" pinfunction="GND" pintype="power_in"/>
+    </net>
+    <net code="13" name="/HAPTIC_GATE">
+      <node ref="Q1" pin="1" pinfunction="G" pintype="input"/>
+      <node ref="R5" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R6" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="14" name="/HAPTIC_NEG">
+      <node ref="C22" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="M1" pin="2" pinfunction="-" pintype="power_in"/>
+      <node ref="Q1" pin="3" pinfunction="D" pintype="open_collector"/>
+    </net>
+    <net code="15" name="/HAPTIC_PWM">
+      <node ref="R5" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="24" pinfunction="P0.08" pintype="bidirectional"/>
+    </net>
+    <net code="16" name="/I2C_SCL">
+      <node ref="R1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U1" pin="19" pinfunction="P0.26" pintype="bidirectional"/>
+      <node ref="U2" pin="14" pinfunction="SCL" pintype="input"/>
+      <node ref="U3" pin="1" pinfunction="SCL/SPC" pintype="input"/>
+    </net>
+    <net code="17" name="/I2C_SDA">
+      <node ref="R2" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U1" pin="16" pinfunction="P0.27" pintype="bidirectional"/>
+      <node ref="U2" pin="13" pinfunction="SDA" pintype="bidirectional"/>
+      <node ref="U3" pin="4" pinfunction="SDA/SDI/SDO" pintype="bidirectional"/>
+    </net>
+    <net code="18" name="/LED_BLUE_K">
+      <node ref="LED1" pin="1" pinfunction="BLUE_K" pintype="input"/>
+      <node ref="U2" pin="25" pinfunction="LED0" pintype="open_collector"/>
+    </net>
+    <net code="19" name="/LED_RED_K">
+      <node ref="LED1" pin="3" pinfunction="RED_K" pintype="input"/>
+      <node ref="U2" pin="26" pinfunction="LED1" pintype="open_collector"/>
+    </net>
+    <net code="20" name="/NTC">
+      <node ref="BT1" pin="2" pinfunction="NTC_10K" pintype="output"/>
+      <node ref="U2" pin="18" pinfunction="NTC" pintype="input"/>
+    </net>
+    <net code="21" name="/PDM_CLK">
+      <node ref="MIC1" pin="3" pinfunction="CLOCK" pintype="input"/>
+      <node ref="MIC2" pin="3" pinfunction="CLOCK" pintype="input"/>
+      <node ref="U1" pin="38" pinfunction="P0.16" pintype="bidirectional"/>
+    </net>
+    <net code="22" name="/PDM_DATA">
+      <node ref="R8" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R9" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U1" pin="39" pinfunction="P0.15" pintype="bidirectional"/>
+    </net>
+    <net code="23" name="/PDM_DATA_MIC1">
+      <node ref="MIC1" pin="4" pinfunction="DATA" pintype="output"/>
+      <node ref="R8" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="24" name="/PDM_DATA_MIC2">
+      <node ref="MIC2" pin="4" pinfunction="DATA" pintype="output"/>
+      <node ref="R9" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="25" name="/PMIC_INT">
+      <node ref="TP14" pin="1" pinfunction="PMIC_INT" pintype="passive"/>
+      <node ref="U1" pin="41" pinfunction="P0.17" pintype="bidirectional"/>
+      <node ref="U2" pin="7" pinfunction="GPIO0" pintype="bidirectional"/>
+    </net>
+    <net code="26" name="/PVSS1">
+      <node ref="C14" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C2" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C7" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="NT1" pin="1" pinfunction="PVSS1" pintype="passive"/>
+      <node ref="U2" pin="2" pinfunction="PVSS1" pintype="power_in"/>
+    </net>
+    <net code="27" name="/PVSS2">
+      <node ref="C15" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C3" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="C8" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="NT2" pin="1" pinfunction="PVSS2" pintype="passive"/>
+      <node ref="U2" pin="6" pinfunction="PVSS2" pintype="power_in"/>
+    </net>
+    <net code="28" name="/RESET">
+      <node ref="TP3" pin="1" pinfunction="RESET" pintype="passive"/>
+      <node ref="U1" pin="40" pinfunction="P0.18/RESET" pintype="bidirectional"/>
+    </net>
+    <net code="29" name="/SHPHLD_BTN">
+      <node ref="SW1" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="U2" pin="15" pinfunction="SHPHLD" pintype="bidirectional"/>
+    </net>
+    <net code="30" name="/SW1">
+      <node ref="L1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U2" pin="3" pinfunction="SW1" pintype="power_out"/>
+    </net>
+    <net code="31" name="/SW2">
+      <node ref="L2" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U2" pin="5" pinfunction="SW2" pintype="power_out"/>
+    </net>
+    <net code="32" name="/SWDCLK">
+      <node ref="TP2" pin="1" pinfunction="SWDCLK" pintype="passive"/>
+      <node ref="U1" pin="53" pinfunction="SWDCLK" pintype="bidirectional"/>
+    </net>
+    <net code="33" name="/SWDIO">
+      <node ref="TP1" pin="1" pinfunction="SWDIO" pintype="passive"/>
+      <node ref="U1" pin="51" pinfunction="SWDIO" pintype="bidirectional"/>
+    </net>
+    <net code="34" name="/UART_RX">
+      <node ref="TP7" pin="1" pinfunction="UART_RX" pintype="passive"/>
+      <node ref="U1" pin="20" pinfunction="P0.04/AIN2" pintype="bidirectional"/>
+    </net>
+    <net code="35" name="/UART_TX">
+      <node ref="TP6" pin="1" pinfunction="UART_TX" pintype="passive"/>
+      <node ref="U1" pin="21" pinfunction="P0.05/AIN3" pintype="bidirectional"/>
+    </net>
+    <net code="36" name="/USB_CC1">
+      <node ref="J1" pin="4" pinfunction="CC1_A5" pintype="bidirectional"/>
+      <node ref="U2" pin="23" pinfunction="CC1" pintype="bidirectional"/>
+      <node ref="U6" pin="1" pinfunction="IO1" pintype="bidirectional"/>
+    </net>
+    <net code="37" name="/USB_CC2">
+      <node ref="J1" pin="10" pinfunction="CC2_B5" pintype="bidirectional"/>
+      <node ref="U2" pin="24" pinfunction="CC2" pintype="bidirectional"/>
+      <node ref="U6" pin="2" pinfunction="IO2" pintype="bidirectional"/>
+    </net>
+    <net code="38" name="/USB_D+">
+      <node ref="J1" pin="6" pinfunction="D+_A6" pintype="bidirectional"/>
+      <node ref="J1" pin="8" pinfunction="D+_B6" pintype="bidirectional"/>
+      <node ref="R10" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U4" pin="1" pinfunction="IO1" pintype="bidirectional"/>
+    </net>
+    <net code="39" name="/USB_D-">
+      <node ref="J1" pin="5" pinfunction="D-_B7" pintype="bidirectional"/>
+      <node ref="J1" pin="7" pinfunction="D-_A7" pintype="bidirectional"/>
+      <node ref="R11" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U4" pin="2" pinfunction="IO2" pintype="bidirectional"/>
+    </net>
+    <net code="40" name="/USB_MCU_D+">
+      <node ref="R10" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U1" pin="35" pinfunction="D+" pintype="bidirectional"/>
+    </net>
+    <net code="41" name="/USB_MCU_D-">
+      <node ref="R11" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U1" pin="34" pinfunction="D-" pintype="bidirectional"/>
+    </net>
+    <net code="42" name="/VBAT">
+      <node ref="BT1" pin="1" pinfunction="VBAT+" pintype="power_out"/>
+      <node ref="C6" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="TP8" pin="1" pinfunction="VBAT" pintype="passive"/>
+      <node ref="U2" pin="19" pinfunction="VBAT" pintype="power_in"/>
+    </net>
+    <net code="43" name="/VBUS">
+      <node ref="C1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="D2" pin="1" pinfunction="IO" pintype="power_in"/>
+      <node ref="J1" pin="11" pinfunction="VBUS_B4_A9" pintype="power_out"/>
+      <node ref="J1" pin="2" pinfunction="VBUS_A4_B9" pintype="power_out"/>
+      <node ref="TP9" pin="1" pinfunction="VBUS" pintype="passive"/>
+      <node ref="U2" pin="21" pinfunction="VBUS" pintype="power_in"/>
+    </net>
+    <net code="44" name="/VBUSOUT">
+      <node ref="C26" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C5" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="TP11" pin="1" pinfunction="VBUSOUT" pintype="passive"/>
+      <node ref="U1" pin="32" pinfunction="VBUS" pintype="power_in"/>
+      <node ref="U2" pin="22" pinfunction="VBUSOUT" pintype="power_out"/>
+    </net>
+    <net code="45" name="/VSET1">
+      <node ref="R3" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U2" pin="17" pinfunction="VSET1" pintype="input"/>
+    </net>
+    <net code="46" name="/VSET2">
+      <node ref="R4" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U2" pin="16" pinfunction="VSET2" pintype="input"/>
+    </net>
+    <net code="47" name="/VSYS">
+      <node ref="C14" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C15" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C16" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C2" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C3" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C4" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C9" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="LED1" pin="2" pinfunction="BLUE_A" pintype="power_in"/>
+      <node ref="LED1" pin="4" pinfunction="RED_A" pintype="power_in"/>
+      <node ref="TP10" pin="1" pinfunction="VSYS" pintype="passive"/>
+      <node ref="U2" pin="20" pinfunction="VSYS" pintype="power_out"/>
+      <node ref="U2" pin="28" pinfunction="LDO1IN" pintype="power_in"/>
+      <node ref="U2" pin="4" pinfunction="PVDD1" pintype="power_in"/>
+    </net>
+    <net code="48" name="unconnected-(J1-SBU1_A8-Pad9)">
+      <node ref="J1" pin="9" pinfunction="SBU1_A8" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="49" name="unconnected-(J1-SBU2_B8-Pad3)">
+      <node ref="J1" pin="3" pinfunction="SBU2_B8" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="50" name="unconnected-(U1-DCCH-Pad31)">
+      <node ref="U1" pin="31" pinfunction="DCCH" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="51" name="unconnected-(U1-P0.00{slash}XL1-Pad17)">
+      <node ref="U1" pin="17" pinfunction="P0.00/XL1" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="52" name="unconnected-(U1-P0.01{slash}XL2-Pad18)">
+      <node ref="U1" pin="18" pinfunction="P0.01/XL2" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="53" name="unconnected-(U1-P0.02{slash}AIN0-Pad11)">
+      <node ref="U1" pin="11" pinfunction="P0.02/AIN0" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="54" name="unconnected-(U1-P0.03{slash}AIN1-Pad9)">
+      <node ref="U1" pin="9" pinfunction="P0.03/AIN1" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="55" name="unconnected-(U1-P0.06-Pad22)">
+      <node ref="U1" pin="22" pinfunction="P0.06" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="56" name="unconnected-(U1-P0.07{slash}TRACECLK-Pad23)">
+      <node ref="U1" pin="23" pinfunction="P0.07/TRACECLK" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="57" name="unconnected-(U1-P0.09{slash}NFC1-Pad52)">
+      <node ref="U1" pin="52" pinfunction="P0.09/NFC1" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="58" name="unconnected-(U1-P0.10{slash}NFC2-Pad54)">
+      <node ref="U1" pin="54" pinfunction="P0.10/NFC2" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="59" name="unconnected-(U1-P0.11{slash}TRACEDATA2-Pad27)">
+      <node ref="U1" pin="27" pinfunction="P0.11/TRACEDATA2" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="60" name="unconnected-(U1-P0.12{slash}TRACEDATA1-Pad29)">
+      <node ref="U1" pin="29" pinfunction="P0.12/TRACEDATA1" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="61" name="unconnected-(U1-P0.13-Pad37)">
+      <node ref="U1" pin="37" pinfunction="P0.13" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="62" name="unconnected-(U1-P0.14-Pad36)">
+      <node ref="U1" pin="36" pinfunction="P0.14" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="63" name="unconnected-(U1-P0.28{slash}AIN4-Pad13)">
+      <node ref="U1" pin="13" pinfunction="P0.28/AIN4" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="64" name="unconnected-(U1-P0.29{slash}AIN5-Pad10)">
+      <node ref="U1" pin="10" pinfunction="P0.29/AIN5" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="65" name="unconnected-(U1-P0.30{slash}AIN6-Pad14)">
+      <node ref="U1" pin="14" pinfunction="P0.30/AIN6" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="66" name="unconnected-(U1-P0.31{slash}AIN7-Pad12)">
+      <node ref="U1" pin="12" pinfunction="P0.31/AIN7" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="67" name="unconnected-(U1-P1.01-Pad61)">
+      <node ref="U1" pin="61" pinfunction="P1.01" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="68" name="unconnected-(U1-P1.02-Pad50)">
+      <node ref="U1" pin="50" pinfunction="P1.02" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="69" name="unconnected-(U1-P1.03-Pad60)">
+      <node ref="U1" pin="60" pinfunction="P1.03" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="70" name="unconnected-(U1-P1.04-Pad56)">
+      <node ref="U1" pin="56" pinfunction="P1.04" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="71" name="unconnected-(U1-P1.05-Pad59)">
+      <node ref="U1" pin="59" pinfunction="P1.05" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="72" name="unconnected-(U1-P1.06-Pad57)">
+      <node ref="U1" pin="57" pinfunction="P1.06" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="73" name="unconnected-(U1-P1.07-Pad58)">
+      <node ref="U1" pin="58" pinfunction="P1.07" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="74" name="unconnected-(U1-P1.08-Pad25)">
+      <node ref="U1" pin="25" pinfunction="P1.08" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="75" name="unconnected-(U1-P1.09{slash}TRACEDATA3-Pad26)">
+      <node ref="U1" pin="26" pinfunction="P1.09/TRACEDATA3" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="76" name="unconnected-(U1-P1.10-Pad3)">
+      <node ref="U1" pin="3" pinfunction="P1.10" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="77" name="unconnected-(U1-P1.11-Pad4)">
+      <node ref="U1" pin="4" pinfunction="P1.11" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="78" name="unconnected-(U1-P1.12-Pad5)">
+      <node ref="U1" pin="5" pinfunction="P1.12" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="79" name="unconnected-(U1-P1.13-Pad6)">
+      <node ref="U1" pin="6" pinfunction="P1.13" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="80" name="unconnected-(U1-P1.14-Pad7)">
+      <node ref="U1" pin="7" pinfunction="P1.14" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="81" name="unconnected-(U1-P1.15-Pad8)">
+      <node ref="U1" pin="8" pinfunction="P1.15" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="82" name="unconnected-(U2-GPIO1-Pad8)">
+      <node ref="U2" pin="8" pinfunction="GPIO1" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="83" name="unconnected-(U2-GPIO2-Pad9)">
+      <node ref="U2" pin="9" pinfunction="GPIO2" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="84" name="unconnected-(U2-GPIO3-Pad10)">
+      <node ref="U2" pin="10" pinfunction="GPIO3" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="85" name="unconnected-(U2-GPIO4-Pad11)">
+      <node ref="U2" pin="11" pinfunction="GPIO4" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="86" name="unconnected-(U2-LDO2IN-Pad30)">
+      <node ref="U2" pin="30" pinfunction="LDO2IN" pintype="power_in+no_connect"/>
+    </net>
+    <net code="87" name="unconnected-(U2-LDO2OUT-Pad31)">
+      <node ref="U2" pin="31" pinfunction="LDO2OUT" pintype="power_out+no_connect"/>
+    </net>
+    <net code="88" name="unconnected-(U2-LED2-Pad27)">
+      <node ref="U2" pin="27" pinfunction="LED2" pintype="open_collector+no_connect"/>
+    </net>
+    <net code="89" name="unconnected-(U3-RES-Pad5)">
+      <node ref="U3" pin="5" pinfunction="RES" pintype="passive+no_connect"/>
+    </net>
+  </nets>
+</export>

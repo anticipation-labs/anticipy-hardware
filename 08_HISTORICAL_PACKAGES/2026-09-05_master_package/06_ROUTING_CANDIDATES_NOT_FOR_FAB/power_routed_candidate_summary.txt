@@ -1,0 +1,18 @@
+Anticipy R0B PMIC/power routing candidate
+input=/workspace/scratch/295a51172f48/anticipy_pcb_kicad_r0b/Anticipy_PROD_R0B_EVT.kicad_pcb
+output=/workspace/scratch/295a51172f48/anticipy_pcb_kicad_r0b/reports/POWER_ROUTED_CANDIDATE.kicad_pcb
+raw_unconnected=176
+refilled_baseline_unconnected=171
+final_unconnected=134
+unconnected_reduction=37
+accepted_groups=31
+rejected_groups=1
+drc_violations=0
+in1_signal_tracks=0
+via_geometry_mm=0.45/0.20
+bcu_route_groups=PVSS1_TO_NETTIE
+u2_ep_via_status=REJECT (not present in saved candidate)
+cam_gate=U2 exposed-pad GND/thermal connection must be rerouted around In2 VSYS, then reviewed as filled/capped via-in-pad or relocated dogbones before release.
+remaining_local_open=VBUS U2.21-to-C1.1 and U2.33 exposed-pad GND; global rail/test-point loads remain for later stages.
+release_status=PARTIAL CANDIDATE - NOT FABRICATION READY
+reference_limit=NT1/NT2 and R0B C9 function differ from Nordic Config 4; see manifest rationales.

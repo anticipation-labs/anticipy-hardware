@@ -1,0 +1,21 @@
+priority,supplier,quantity,manufacturer_part_number,supplier_part_number,description,unit_price_cad_checked,extended_cad_checked,verified_state,source
+1,DigiKey Canada,2,102010469,1597-102010469-ND,Seeed XIAO nRF52840 Sense headerless,25.22,50.44,"1471 stocked; delivery date requires checkout",https://www.digikey.ca/en/products/detail/seeed-technology-co-ltd/102010469/16652896
+1,DigiKey Canada,2,5769,1528-5769-ND,Adafruit Audio BFF,8.85,17.70,"233 stocked; delivery date requires checkout",https://www.digikey.ca/en/products/detail/adafruit-industries-llc/5769/21839817
+1,DigiKey Canada,2,VCLP1020B002L,1670-VCLP1020B002L-ND,Low-current 3V 10x2.1mm ERM motor,4.69,9.38,"4645 stocked",https://www.digikey.ca/en/products/detail/vybronics-inc/VCLP1020B002L/10285888
+1,DigiKey Canada,3,PN2222ATA,PN2222ATACT-ND,NPN motor transistor,0.51,1.53,"1117 stocked; verify E-B-C drawing",https://www.digikey.ca/en/products/detail/onsemi/PN2222ATA/1047608
+1,DigiKey Canada,3,1N4148,1N4148FS-ND,Motor flyback diode,0.15,0.45,"stocked",https://www.digikey.ca/en/products/detail/onsemi/1N4148/458603
+1,DigiKey Canada,3,MFR25SFTF52-1K,13-MFR25SFTF52-1KCT-ND,1k base resistor,0.15,0.45,"stocked",https://www.digikey.ca/en/products/detail/yageo/MFR25SFTF52-1K/9144386
+1,DigiKey Canada,3,CF14JT100K,CF14JT100KCT-ND,100k base pulldown resistor,0.16,0.48,"stocked",https://www.digikey.ca/en/products/detail/stackpole-electronics-inc/CF14JT100K/1741489
+1,DigiKey Canada,3,C322C104K5R5TA,399-4329-ND,100nF X7R motor suppression capacitor,1.73,5.19,"stocked",https://www.digikey.ca/en/products/detail/kemet/C322C104K5R5TA/818105
+1,DigiKey Canada,3,6TPE100MAZB,P16256CT-ND,Low-profile 100uF 6.3V polymer bulk capacitor,2.45,7.35,"7053 stocked; polarized",https://www.digikey.ca/en/products/detail/panasonic-industry/6TPE100MAZB/4146628
+1,DigiKey Canada,2,KSC201G-LFS,108-KSC201GLFSCT-ND,Sealed momentary button,1.02,2.04,"74459 stocked",https://www.digikey.ca/en/products/detail/c-k/KSC201G-LFS/1003819
+1,DigiKey Canada,2,OS102011MA1QN1,CKN9559-ND,Hard-off slide switch,1.12,2.24,"78276 stocked",https://www.digikey.ca/en/products/detail/c-k/OS102011MA1QN1/1981430
+1,DigiKey Canada,1 each,2001-2006,1528-2015-ND through 1528-2020-ND,30AWG silicone wire six colours,1.12,6.72,"stocked",https://www.digikey.ca/en/products/filter/single-conductor-cables-hook-up-wire/474
+1,DigiKey Canada,1 ft,B2 1/16,2786-B21/16BLACKSPL-ND,Small heat-shrink tubing,1.59,1.59,"stocked",https://www.digikey.ca/
+1,DigiKey Canada,1 ft,B2 3/16,2786-B23/16BLACKSPL-ND,Large heat-shrink tubing,1.89,1.89,"stocked",https://www.digikey.ca/
+1,Canada Computers Vancouver West Broadway,2,TUSDH32GCL10U03,,TEAMGROUP 32GB microSDHC,13.99,27.98,"6 shown locally; reserve pickup before travel",https://www.canadacomputers.com/en/microsd-cards/249848/teamgroup-32gb-microsdhc-uhs-i-u1-tusdh32gcl10u03.html
+1,BBM Battery Canada,2,602535,,Protected 3.7V 500mAh LiPo 35x25x6mm,16.95,33.90,"exact verified part; checkout controls arrival",https://bbmbattery.ca/products/li-po-602535-battery-3-7v-500mah-lithium-polymer-with-protection
+1-ALT,Amazon Canada,2,602535-500mAh,,Protected 3.7V 500mAh LiPo 35x25x6mm search fallback,,,"use only if the listing explicitly confirms protection and exact dimensions and checkout shows Day-1 arrival; do not buy both routes",https://www.amazon.ca/s?k=602535+500mAh+protected+lipo+battery
+2,Local hardware,8,M2x8,,M2x8 button-head screws plus spares,,,"fit before battery assembly",
+2,Local hardware,1 sheet,, ,0.2-0.5mm closed-cell EVA plus PET or Kapton shim sheet,,,"edge restraint only",
+2,Local hardware,1 roll,, ,Kapton tape and thin electronics-grade PSA,,,"strain relief and removable retention",

@@ -1,0 +1,159 @@
+{
+  "classification": "four-day no-custom-PCB founder prototype; not customer production",
+  "finished_envelope_mm": [
+    76.0,
+    33.0,
+    19.0
+  ],
+  "reference_target_mm": [
+    51,
+    21,
+    11
+  ],
+  "excess_over_target_mm": [
+    25.0,
+    12.0,
+    8.0
+  ],
+  "margin_inside": {
+    "BBM protected 602535 500 mAh pack": true,
+    "Vybronics VCLP1020B002L ERM": true,
+    "haptic driver + 100 uF bulk-cap cluster": true,
+    "C&K OS102011MA1QN1 hard-off switch": true,
+    "Adafruit Audio BFF 5769 with microSD": true,
+    "Seeed XIAO nRF52840 Sense headerless": true,
+    "C&K KSC201G-LFS button": true
+  },
+  "expanded_collisions": [],
+  "actual_collisions": [],
+  "component_structure_collisions": [],
+  "printed_part_collisions": [],
+  "z_gaps_mm": {
+    "floor_to_battery": 0.2000000000000004,
+    "battery_to_carrier": 1.0999999999999996,
+    "carrier_to_boards": 0.1999999999999993,
+    "xiao_to_lid": 4.600000000000001,
+    "audio_bff_to_lid": 2.8000000000000007,
+    "button_to_lid": 2.8000000000000007
+  },
+  "z_margin_15_percent_gaps_mm": {
+    "battery_115_to_carrier": 0.1999999999999993,
+    "motor_115_to_keeper": 0.1349999999999998,
+    "haptic_115_to_carrier": 0.3000000000000007,
+    "switch_115_to_keeper": 0.1200000000000001,
+    "audio_bff_115_to_lid": 2.0500000000000007,
+    "xiao_115_to_lid": 4.120000000000001,
+    "button_115_to_lid": 2.275000000000002
+  },
+  "mesh_checks": {
+    "v07_base_shell": {
+      "watertight": true,
+      "positive_bodies": 1,
+      "negative_void_shells": 0,
+      "bounds": [
+        75.993,
+        33.0,
+        17.3
+      ]
+    },
+    "v07_lid": {
+      "watertight": true,
+      "positive_bodies": 1,
+      "negative_void_shells": 0,
+      "bounds": [
+        75.993,
+        33.0,
+        9.5
+      ]
+    },
+    "v07_carrier": {
+      "watertight": true,
+      "positive_bodies": 1,
+      "negative_void_shells": 0,
+      "bounds": [
+        50.0,
+        28.4,
+        6.45
+      ]
+    },
+    "v07_button_plunger_4p0": {
+      "watertight": true,
+      "positive_bodies": 1,
+      "negative_void_shells": 0,
+      "bounds": [
+        3.8,
+        3.799,
+        4.55
+      ]
+    },
+    "v07_button_plunger_4p3": {
+      "watertight": true,
+      "positive_bodies": 1,
+      "negative_void_shells": 0,
+      "bounds": [
+        3.8,
+        3.799,
+        4.85
+      ]
+    },
+    "v07_button_plunger_4p6": {
+      "watertight": true,
+      "positive_bodies": 1,
+      "negative_void_shells": 0,
+      "bounds": [
+        3.8,
+        3.799,
+        5.15
+      ]
+    }
+  },
+  "mass": {
+    "printed_plastic_estimate_g": 17.11,
+    "electronics_assumption_g": 17.5,
+    "screws_foam_tape_wires_assumption_g": 2.3,
+    "nominal_total_estimate_g": 36.91,
+    "with_15_percent_uncertainty_g": 42.44
+  },
+  "checks": [
+    {
+      "name": "finished envelope",
+      "pass": true
+    },
+    {
+      "name": "15% XY envelopes inside cavity and outside chain keepout",
+      "pass": true
+    },
+    {
+      "name": "15% same-layer envelopes do not overlap",
+      "pass": true
+    },
+    {
+      "name": "actual component boxes do not collide",
+      "pass": true
+    },
+    {
+      "name": "actual components do not intersect printed structure",
+      "pass": true
+    },
+    {
+      "name": "base, carrier and lid close without solid interference",
+      "pass": true
+    },
+    {
+      "name": "all explicit Z gaps positive",
+      "pass": true
+    },
+    {
+      "name": "15% seated Z envelopes retain positive keeper/lid gaps",
+      "pass": true
+    },
+    {
+      "name": "primary print meshes watertight",
+      "pass": true
+    },
+    {
+      "name": "one positive body per primary print mesh",
+      "pass": true
+    }
+  ]
+}

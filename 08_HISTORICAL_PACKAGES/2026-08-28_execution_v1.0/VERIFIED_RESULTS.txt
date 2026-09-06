@@ -1,0 +1,18 @@
+Anticipy v1.0 package verification — 2026-08-29 UTC
+
+PASS | required package files | all present
+PASS | production mechanical checks | 23/23 pass
+PASS | PLAUD-size envelope | 50.5 x 20.68 x 10.8 mm
+PASS | 20-hour storage math | 414 MB required; 481 MB usable candidate
+PASS | print-now digital validation | 27/27 pass
+PASS | PCB fabrication hold preserved | segments=0, vias=0, zones=0
+PASS | no misleading Gerbers | none
+PASS | lab UF2 identity | de31edba36d077338b6fb1649782a68cce61e89c01a68cdfd9749c2ffc011f44
+PASS | factory reference identities | 9 references
+PASS | factory blockers exposed | 22 blockers
+
+RESULT: 10/10 package checks passed
+FABRICATION STATE: HOLD — NO GERBERS
+
+These are digital/package checks. Physical audio, RF, battery, thermal, drop,
+rattle, sweat/ingress and customer-safety tests have not happened.

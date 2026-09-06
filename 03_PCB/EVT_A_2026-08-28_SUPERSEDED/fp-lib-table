@@ -1,0 +1,1 @@
+(fp_lib_table (lib (name "Anticipy")(type "KiCad")(uri "${KIPRJMOD}/libraries/Anticipy.pretty")(options "")(descr "Anticipy controlled footprints")))

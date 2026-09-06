@@ -1,0 +1,12 @@
+Subject: Urgent local EVT integration - 12 Anticipy wearable units
+
+Hi,
+
+We are preparing a rush EVT build of 12 compact Bluetooth audio pendants in Vancouver. We need a skilled electronics integration technician to install tested PCBAs, protected batteries and haptic motors into a polycarbonate/aluminum enclosure, then seal and test the units using a controlled assembly traveler.
+
+The microscopic SMT work will be completed by the PCBA factory. Your work would include rear hand-soldering of the approved three-wire battery and motor after programming, insulation and strain relief, enclosure integration, adhesive/cure control, and per-unit functional testing.
+
+We will build and validate two first articles before releasing the remaining ten. Please confirm fine-soldering experience, battery-powered hardware experience, immediate availability, equipment, hourly/day rate, and whether you can maintain serial-numbered assembly and test records.
+
+Thank you.
+

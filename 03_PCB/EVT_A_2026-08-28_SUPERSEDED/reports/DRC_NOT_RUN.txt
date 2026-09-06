@@ -1,0 +1,2 @@
+NOT RUN: kicad-cli is not installed in this runtime. No DRC result is claimed.
+The board is intentionally unrouted while the U1 and J3 land maps are gated; Gerbers must not be generated.

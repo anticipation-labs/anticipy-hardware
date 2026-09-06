@@ -1,0 +1,10 @@
+{
+  "result": "PASS",
+  "stl_count": 42,
+  "step_count": 45,
+  "drop_orientation_count": 26,
+  "bom_line_count": 47,
+  "acceptance_test_count": 59,
+  "errors": [],
+  "note": "Firmware receives host-side structural checks here; flash and bench-test it on the exact controller before fixture use."
+}

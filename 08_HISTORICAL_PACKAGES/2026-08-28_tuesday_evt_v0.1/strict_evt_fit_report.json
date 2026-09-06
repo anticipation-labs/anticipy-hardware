@@ -1,0 +1,216 @@
+{
+  "classification": "strict-size component-built EVT; nominal CAD only; not customer-release-ready",
+  "finished_body_mm": [
+    56.0,
+    23.0,
+    12.0
+  ],
+  "official_reference_mm": [
+    51.0,
+    21.0,
+    11.0
+  ],
+  "hard_10_percent_ceiling_mm": [
+    56.1,
+    23.1,
+    12.1
+  ],
+  "outline_radius_mm": 7.0,
+  "materials": {
+    "structure_and_rf_nose": "printed non-conductive polymer",
+    "front_and_back_battery_end": "0.64 mm brushed aluminum",
+    "rf_nose_finish": "color-matched silver non-conductive finish",
+    "reason_for_hybrid": "continuous metal over the XIAO antenna would reduce BLE performance"
+  },
+  "board_feature_source": {
+    "model": "Seeed Studio XIAO nRF52840 Sense official STEP",
+    "url": "https://files.seeedstudio.com/wiki/XIAO-BLE/seeed-studio-xiao-nrf52840-3d-model.zip",
+    "verified_features": [
+      "PCB envelope",
+      "USB-C",
+      "MSM261D3526H1CPM microphone",
+      "LED",
+      "ANT1"
+    ]
+  },
+  "components": [
+    {
+      "name": "protected 502025 200 mAh LiPo",
+      "size": [
+        25.0,
+        20.0,
+        5.0
+      ],
+      "center": [
+        -8.4,
+        0.0,
+        2.85
+      ],
+      "mass_g": 5.0
+    },
+    {
+      "name": "XIAO nRF52840 Sense + Adafruit 5683 direct stack",
+      "size": [
+        17.8,
+        21.4,
+        7.5
+      ],
+      "center": [
+        13.7,
+        0.0,
+        3.9
+      ],
+      "mass_g": 4.2
+    },
+    {
+      "name": "Vybronics VC0625B001L ERM",
+      "size": [
+        6.0,
+        6.0,
+        2.5
+      ],
+      "center": [
+        -14.3,
+        5.6,
+        7.75
+      ],
+      "mass_g": 0.5
+    },
+    {
+      "name": "insulated discrete haptic driver",
+      "size": [
+        8.0,
+        5.0,
+        1.5
+      ],
+      "center": [
+        -5.0,
+        -5.7,
+        7.2
+      ],
+      "mass_g": 0.3
+    },
+    {
+      "name": "C&K PTS810 tactile switch",
+      "size": [
+        4.2,
+        3.2,
+        2.5
+      ],
+      "center": [
+        -8.0,
+        0.0,
+        7.8
+      ],
+      "mass_g": 0.1
+    }
+  ],
+  "nominal_xy_gap_mm": 0.7,
+  "chain_boss_to_battery_gap_mm": 0.8,
+  "battery_runtime_gate": {
+    "nominal_capacity_mAh": 200,
+    "usable_capacity_assumption_percent": 85,
+    "16h_average_current_ceiling_mA": 10.625,
+    "status": "must be measured on a sealed unit; not yet proven"
+  },
+  "release_hold": [
+    "measure and bin every XIAO/BFF stack and battery before assembly",
+    "build and test unit 1 before cutting or assembling the remaining 11",
+    "prove charge current, cell temperature, BLE range, audio, SD and button/haptic",
+    "do not claim 16 hours until a sealed unit passes a continuous runtime test",
+    "the Tuesday battery source and its production UN38.3/SDS packet are not yet verified"
+  ],
+  "checks": [
+    {
+      "name": "body within +10% ceiling",
+      "pass": true
+    },
+    {
+      "name": "R7 Anticipy rounded outline",
+      "pass": true
+    },
+    {
+      "name": "battery nominal footprint inside rounded cavity",
+      "pass": true
+    },
+    {
+      "name": "board nominal footprint inside rounded cavity",
+      "pass": true
+    },
+    {
+      "name": "battery and board have nominal wire gap",
+      "pass": true
+    },
+    {
+      "name": "chain boss clears nominal battery",
+      "pass": true
+    },
+    {
+      "name": "battery clears chain partition",
+      "pass": true
+    },
+    {
+      "name": "battery stays below rigid bridge",
+      "pass": true
+    },
+    {
+      "name": "board stack clears face",
+      "pass": true
+    },
+    {
+      "name": "haptic parts clear face",
+      "pass": true
+    },
+    {
+      "name": "button clears face",
+      "pass": true
+    }
+  ],
+  "meshes": {
+    "anticipy_strict_evt_polymer_frame": {
+      "watertight": true,
+      "body_count": 1,
+      "bounds_mm": [
+        56.0,
+        23.0,
+        10.43
+      ]
+    },
+    "anticipy_strict_evt_battery_bridge": {
+      "watertight": true,
+      "body_count": 1,
+      "bounds_mm": [
+        24.35,
+        21.1,
+        0.6
+      ]
+    },
+    "anticipy_strict_evt_front_rf_nose": {
+      "watertight": true,
+      "body_count": 1,
+      "bounds_mm": [
+        23.54,
+        23.0,
+        0.635
+      ]
+    },
+    "anticipy_strict_evt_back_rf_nose": {
+      "watertight": true,
+      "body_count": 1,
+      "bounds_mm": [
+        23.54,
+        23.0,
+        0.635
+      ]
+    },
+    "anticipy_strict_evt_button_plunger_1p30": {
+      "watertight": true,
+      "body_count": 1,
+      "bounds_mm": [
+        4.0,
+        3.9988,
+        2.185
+      ]
+    }
+  }
+}

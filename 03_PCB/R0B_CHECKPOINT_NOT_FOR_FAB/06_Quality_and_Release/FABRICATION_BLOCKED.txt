@@ -1,0 +1,17 @@
+ANT-PROD-R0B FABRICATION IS BLOCKED
+
+Do not generate or send production Gerbers from this checkpoint.
+Do not issue a PCB or PCBA purchase order from this checkpoint.
+
+Verified blockers on 2026-08-29:
+- 176 unrouted PCB connections remain.
+- Exact protected three-wire battery is not selected or approved.
+- 0.80 mm target versus 0.82 mm provisional STEP thickness is unresolved.
+- Fabricator stack-up and 90-ohm USB geometry are not approved.
+- Final PCBA STEP is not generated or collision-reviewed.
+- Final enclosure CAD is not released.
+- Production firmware binary and programming/test package are not released.
+
+Release requires an accountable senior PCB engineer to close every gate in
+RELEASE_AND_QA_GATES.md and issue a dated, checksummed manufacturing ZIP.
+

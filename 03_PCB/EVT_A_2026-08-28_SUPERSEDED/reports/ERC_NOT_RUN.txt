@@ -1,0 +1,2 @@
+NOT RUN: kicad-cli is not installed in this runtime. No ERC result is claimed.
+Open the project in KiCad after importing the gated U1/SW1/J3 vendor definitions and run unfiltered ERC.

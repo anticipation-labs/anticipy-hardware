@@ -1,0 +1,316 @@
+{
+  "active_west_projects": [
+    {
+      "commit": "289166425805f937abfe9058f57323085ec96523",
+      "path": "bootloader/mcuboot",
+      "remote_name": "ncs",
+      "repository": "https://github.com/nrfconnect/sdk-mcuboot"
+    },
+    {
+      "commit": "57b61a9a2da75c860f15ca79522b24d57992df2c",
+      "path": "modules/bsim_hw_models/nrf_hw_models",
+      "remote_name": "upstream",
+      "repository": "https://github.com/zephyrproject-rtos/nrf_hw_models"
+    },
+    {
+      "commit": "acea48fc8a5eb227033b55e6ec012731218e257f",
+      "path": "modules/crypto/mbedtls",
+      "remote_name": "ncs",
+      "repository": "https://github.com/nrfconnect/sdk-mbedtls"
+    },
+    {
+      "commit": "3e9a49d2672ec01435ffbf0d788db6d95ef28de0",
+      "path": "modules/crypto/tinycrypt",
+      "remote_name": "upstream",
+      "repository": "https://github.com/zephyrproject-rtos/tinycrypt"
+    },
+    {
+      "commit": "1ede7ce8e7ab226e9a84d95266241ba3f38d91d2",
+      "path": "modules/debug/TraceRecorder",
+      "remote_name": "upstream",
+      "repository": "https://github.com/zephyrproject-rtos/TraceRecorderSource"
+    },
+    {
+      "commit": "a819419603a2dfcb47f7f39092e1bc112e45d1ef",
+      "path": "modules/debug/mipi-sys-t",
+      "remote_name": "upstream",
+      "repository": "https://github.com/zephyrproject-rtos/mipi-sys-t"
+    },
+    {
+      "commit": "9d0191285956cef43daf411edc2f1a7788346def",
+      "path": "modules/debug/segger",
+      "remote_name": "upstream",
+      "repository": "https://github.com/zephyrproject-rtos/segger"
+    },
+    {
+      "commit": "427159bf95ea49b7680facffaa29ad506b42709b",
+      "path": "modules/fs/fatfs",
+      "remote_name": "upstream",
+      "repository": "https://github.com/zephyrproject-rtos/fatfs"
+    },
+    {
+      "commit": "ca583fd297ceb48bced3c2548600dc615d67af24",
+      "path": "modules/fs/littlefs",
+      "remote_name": "upstream",
+      "repository": "https://github.com/zephyrproject-rtos/littlefs"
+    },
+    {
+      "commit": "9f6b3812237fbb0d4157ba3584c13f1644fcbe3a",
+      "path": "modules/hal/cirrus-logic",
+      "remote_name": "ncs",
+      "repository": "https://github.com/nrfconnect/sdk-mcu-drivers"
+    },
+    {
+      "commit": "1abf29132e608826752e2edd1f4799a065db4031",
+      "path": "modules/hal/cmsis",
+      "remote_name": "upstream",
+      "repository": "https://github.com/zephyrproject-rtos/cmsis"
+    },
+    {
+      "commit": "b91611a6f47dd29fb24c46e5621e797557f80ec6",
+      "path": "modules/hal/libmetal",
+      "remote_name": "upstream",
+      "repository": "https://github.com/zephyrproject-rtos/libmetal"
+    },
+    {
+      "commit": "427ee1a519e8a0844d0f78f7cbc8cdfc134ef00d",
+      "path": "modules/hal/nordic",
+      "remote_name": "upstream",
+      "repository": "https://github.com/zephyrproject-rtos/hal_nordic"
+    },
+    {
+      "commit": "9b128caf3e7b2e750169b880e83f210ea2213473",
+      "path": "modules/hal/st",
+      "remote_name": "upstream",
+      "repository": "https://github.com/zephyrproject-rtos/hal_st"
+    },
+    {
+      "commit": "24ca9873c3d608fad1fea0431836bc8f144c132e",
+      "path": "modules/hal/wurthelektronik",
+      "remote_name": "upstream",
+      "repository": "https://github.com/zephyrproject-rtos/hal_wurthelektronik"
+    },
+    {
+      "commit": "308c171cb4b5eed266649012a68406487ec81fb2",
+      "path": "modules/lib/azure-sdk-for-c",
+      "remote_name": "ncs",
+      "repository": "https://github.com/nrfconnect/azure-sdk-for-c"
+    },
+    {
+      "commit": "dec12fa3f0d790cafa8414a4c2930ea71ab72ffd",
+      "path": "modules/lib/canopennode",
+      "remote_name": "upstream",
+      "repository": "https://github.com/zephyrproject-rtos/canopennode"
+    },
+    {
+      "commit": "b7955c27e50485b7dafdc3888d7d6afdc2ac6d96",
+      "path": "modules/lib/chre",
+      "remote_name": "upstream",
+      "repository": "https://github.com/zephyrproject-rtos/chre"
+    },
+    {
+      "commit": "c6af068b7f05207b28d68880740e4b9ec1e4b50a",
+      "path": "modules/lib/cjson",
+      "remote_name": "ncs",
+      "repository": "https://github.com/nrfconnect/sdk-cjson"
+    },
+    {
+      "commit": "8a6a2d1d29d17d1e4bdc94c243c146a39d635fdd",
+      "path": "modules/lib/gui/lvgl",
+      "remote_name": "upstream",
+      "repository": "https://github.com/zephyrproject-rtos/lvgl"
+    },
+    {
+      "commit": "d82c309c2e7eea5f08bbc1ac9e2f4c4622fbe998",
+      "path": "modules/lib/hostap",
+      "remote_name": "ncs",
+      "repository": "https://github.com/nrfconnect/sdk-hostap"
+    },
+    {
+      "commit": "448f3de31f49a838988a162ef1e23a89ddf2d2ed",
+      "path": "modules/lib/liblc3",
+      "remote_name": "upstream",
+      "repository": "https://github.com/zephyrproject-rtos/liblc3"
+    },
+    {
+      "commit": "3029c9f304bf46a6e5205f3c8455dbc23108efec",
+      "path": "modules/lib/loramac-node",
+      "remote_name": "upstream",
+      "repository": "https://github.com/zephyrproject-rtos/loramac-node"
+    },
+    {
+      "commit": "8e303c264fc21c2116dc612658003a22e933124d",
+      "path": "modules/lib/lz4",
+      "remote_name": "upstream",
+      "repository": "https://github.com/zephyrproject-rtos/lz4"
+    },
+    {
+      "commit": "fd9be717210fa386277f1fdd19115c1ed48ccad0",
+      "path": "modules/lib/matter",
+      "remote_name": "ncs",
+      "repository": "https://github.com/nrfconnect/sdk-connectedhomeip"
+    },
+    {
+      "commit": "c374e92a4b9615a00d8ec6d2caf77fc60eff8c3c",
+      "path": "modules/lib/memfault-firmware-sdk",
+      "remote_name": "memfault",
+      "repository": "https://github.com/memfault/memfault-firmware-sdk"
+    },
+    {
+      "commit": "42fa8b211e946b90b9d968523fce7b1cfe27617e",
+      "path": "modules/lib/nanopb",
+      "remote_name": "upstream",
+      "repository": "https://github.com/zephyrproject-rtos/nanopb"
+    },
+    {
+      "commit": "42b7c577714b8f22ce82a901e19c1814af4609a8",
+      "path": "modules/lib/open-amp",
+      "remote_name": "upstream",
+      "repository": "https://github.com/zephyrproject-rtos/open-amp"
+    },
+    {
+      "commit": "57ef721eeed2550835c528ab7b8e77671f7039d6",
+      "path": "modules/lib/openthread",
+      "remote_name": "ncs",
+      "repository": "https://github.com/nrfconnect/sdk-openthread"
+    },
+    {
+      "commit": "d07c38ff051386f8e09a143ea0a6c1d6d66dd1d8",
+      "path": "modules/lib/picolibc",
+      "remote_name": "upstream",
+      "repository": "https://github.com/zephyrproject-rtos/picolibc"
+    },
+    {
+      "commit": "5fe2cb613bd7e4590bd1b00c2adf181ac0229379",
+      "path": "modules/lib/uoscore-uedhoc",
+      "remote_name": "upstream",
+      "repository": "https://github.com/zephyrproject-rtos/uoscore-uedhoc"
+    },
+    {
+      "commit": "0e213ab6a421298484a81a9d18f5c31c4b8084a8",
+      "path": "modules/lib/wfa-qt-control-app",
+      "remote_name": "ncs",
+      "repository": "https://github.com/nrfconnect/sdk-wi-fiquicktrack-controlappc"
+    },
+    {
+      "commit": "67fd8bb88d3136738661fa8bb5f9989103f4599e",
+      "path": "modules/lib/zcbor",
+      "remote_name": "upstream",
+      "repository": "https://github.com/zephyrproject-rtos/zcbor"
+    },
+    {
+      "commit": "34c3432e81085bb717e4871d21ca419ae0058ec5",
+      "path": "modules/lib/zscilib",
+      "remote_name": "upstream",
+      "repository": "https://github.com/zephyrproject-rtos/zscilib"
+    },
+    {
+      "commit": "6a17330e0dfb5f319730f974d5b05f7b7f04757b",
+      "path": "modules/tee/tf-m/psa-arch-tests",
+      "remote_name": "upstream",
+      "repository": "https://github.com/zephyrproject-rtos/psa-arch-tests"
+    },
+    {
+      "commit": "751d36583a9ce1a640900c57e13c9b6b8f3a2ba2",
+      "path": "modules/tee/tf-m/qcbor",
+      "remote_name": "origin",
+      "repository": "https://github.com/laurencelundblade/QCBOR.git"
+    },
+    {
+      "commit": "a878426da78fbd1486dfc29d6c6b82be4ee79e72",
+      "path": "modules/tee/tf-m/tf-m-tests",
+      "remote_name": "upstream",
+      "repository": "https://github.com/zephyrproject-rtos/tf-m-tests"
+    },
+    {
+      "commit": "afd54b6bad00c56098cb84a7b79ac72cc44f082b",
+      "path": "modules/tee/tf-m/trusted-firmware-m",
+      "remote_name": "ncs",
+      "repository": "https://github.com/nrfconnect/sdk-trusted-firmware-m"
+    },
+    {
+      "commit": "1fae141fc6713dd331b797fc96c90dc84552242d",
+      "path": "nrf",
+      "remote_name": "origin",
+      "repository": "https://github.com/nrfconnect/sdk-nrf.git"
+    },
+    {
+      "commit": "78cc07ed7c9f168c3d6316db5af969ac5f7c977a",
+      "path": "nrfxlib",
+      "remote_name": "ncs",
+      "repository": "https://github.com/nrfconnect/sdk-nrfxlib"
+    },
+    {
+      "commit": "f65066f15d8248e6dcb778efb8739904a4512087",
+      "path": "test/cmock",
+      "remote_name": "throwtheswitch",
+      "repository": "https://github.com/ThrowTheSwitch/cmock"
+    },
+    {
+      "commit": "384a091445c57b44ac8cbd18ebd245b47c71db94",
+      "path": "tools/bsim",
+      "remote_name": "babblesim",
+      "repository": "https://github.com/BabbleSim/bsim_west"
+    },
+    {
+      "commit": "64e5105ad82390164fb73fc654be3f73a608209a",
+      "path": "tools/edtt",
+      "remote_name": "upstream",
+      "repository": "https://github.com/zephyrproject-rtos/edtt"
+    },
+    {
+      "commit": "e0828aa9629b533644dc96ff6d1295c939bd713c",
+      "path": "tools/net-tools",
+      "remote_name": "upstream",
+      "repository": "https://github.com/zephyrproject-rtos/net-tools"
+    },
+    {
+      "commit": "2e2523efe52a7ac89f0567b8798fd857b1e71ae3",
+      "path": "zephyr",
+      "remote_name": "ncs",
+      "repository": "https://github.com/nrfconnect/sdk-zephyr"
+    }
+  ],
+  "artifacts": {
+    "zephyr.bin": {
+      "bytes": 274468,
+      "sha256": "b7cddedb7010c68a56d126124a9906f9097236da609db5dd6c2d249665fd6506"
+    },
+    "zephyr.elf": {
+      "bytes": 5240756,
+      "sha256": "0f4dc109c68549a86ae47f65f16716af9fc4255404ec375f462dafcf21bc6689"
+    },
+    "zephyr.hex": {
+      "bytes": 772213,
+      "sha256": "c0a6bde2319d36e3381b2b29279c5490063f75b7d1d1cf5e8cf5a5ebd8a2f4db"
+    },
+    "zephyr.map": {
+      "bytes": 1525047,
+      "sha256": "f34011c1082e7718e38e5cdaa5efd14021c4e388ea0e4169bbaac2da64034ad1"
+    },
+    "zephyr.uf2": {
+      "bytes": 549376,
+      "sha256": "437dc9e33ef5ad86eaa25d8eccd593110c08569d68df64cb1efbfeadf536ad99"
+    }
+  },
+  "candidate_commit": "5786f71b38b7a07ef5cb590159d77c4808059525",
+  "flash_approved": false,
+  "flash_performed": false,
+  "schema": 1,
+  "source": {
+    "content_tree_sha256": "cb066c79980475b14569dcb9555962e179edd8f941046f14f5e88b96a222d074",
+    "patch_sha256": "78ce347d4df1a0a043a1d5ad607c9cff7be75b449c3105c6b202d8ab56dc3b66",
+    "source_receipt_sha256": "ba3a6fa71fd7262ad84bb3bcb96930644e6dfae45f4e5da2e477be61c5c95c1a",
+    "upstream_commit": "ee9892562648f074e3c6b59d508127d81fa21010",
+    "upstream_repository": "https://github.com/BasedHardware/omi.git"
+  },
+  "status": "DEVELOPMENT_COMPONENT_INVENTORY_NOT_AN_SPDX_SBOM_NOT_ATTESTED",
+  "toolchain_container": {
+    "config_digest": "sha256:207d3b4bb50b2e6b4252c53d654c315f8960af1a2f7bcd5b26ed1b44c7f9fc29",
+    "digest": "sha256:f50c51b711bbb3f502496c4b83e88dda778420fb83327d4791f9bc0e34916d01",
+    "image": "docker.io/nordicplayground/nrfconnect-sdk",
+    "manifest_compressed_layer_bytes": 2371792915,
+    "manifest_sha256": "f50c51b711bbb3f502496c4b83e88dda778420fb83327d4791f9bc0e34916d01",
+    "platform": "linux/amd64"
+  }
+}

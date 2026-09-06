@@ -1,0 +1,57 @@
+ANTICIPY R0B AUDIO/STORAGE ROUTING CHECKPOINT
+Generated: 2026-08-29 16:54:44 (saved candidate/report/manifest)
+
+AUTHORITATIVE CHECKPOINT FILES
+- Board: reports/AUDIO_STORAGE_ROUTED_CANDIDATE.kicad_pcb
+- DRC: reports/audio_storage_routed_candidate_drc.txt
+- Route manifest: reports/audio_storage_routes.csv
+- Router source: route_audio_storage_clean_candidate.py
+
+VERIFIED SAVED-BOARD STATE
+- Candidate reload: PASS
+- Geometric DRC violations: 0
+- Live unconnected count after reload: 152
+- Raw main-board unconnected count: 176
+- Filled-plane baseline unconnected count: 171
+- Accepted manifest rows: 19
+- Routed items: 128 track segments plus 26 through vias
+- Track layers: 108 F.Cu segments, 20 In2.Cu segments
+- Forbidden signal tracks: 0 on In1.Cu, 0 on B.Cu
+- Via geometry: all 26 vias are standard 0.45 mm / 0.20 mm
+- Candidate SHA-256: 44364cf3fe177873e787d4b05e60ef465ddf34d872edc972d425d62050c409a7
+- Regenerated-base SHA-256: 33f213ba72478b5c2eb90671c13cd50aa2c7c1edea4e26f627c2d5aed247a44b
+
+ROUTED CHECKPOINT SCOPE
+- Both microphone PDM data branches through R8/R9, shared PDM data, and shared PDM clock to U1.
+- All six serial-flash signals between U5 and U1, including the R7 chip-select branch.
+- U5/C17/C18/R7 local 3V_FLASH branches.
+- MIC2 SELECT-high tie and C19/C20-to-microphone local 3V_MIC branches.
+
+CRITICAL ROUTE FACTS
+- FLASH_SCK: 14.094 mm, F.Cu/In2.Cu, four 0.45/0.20 mm vias.
+- FLASH_IO0: 14.374 mm, F.Cu, zero vias.
+- FLASH_IO1: 20.553 mm, F.Cu/In2.Cu, four vias.
+- FLASH_IO2: 20.618 mm, F.Cu/In2.Cu, four vias.
+- FLASH_IO3: 11.855 mm, F.Cu/In2.Cu, two vias.
+- FLASH_CS links: 11.960 mm plus 14.858 mm, four vias total.
+- PDM clock links: 5.752 mm plus 17.043 mm, two vias total.
+- PDM data trunk: 5.256 mm plus 14.497 mm, two vias total.
+
+EVT CLOCK RESTRICTION
+- FLASH_SCK was not reduced below four vias in this checkpoint.
+- Set an initial EVT firmware ceiling of 8 MHz for flash SCK. This is a conservative bring-up limit, not a model-backed or certified maximum.
+- Do not raise the clock until first articles pass repeated read/program/erase, temperature, supply-margin, and oscilloscope edge/ringing checks. The stackup impedance and via discontinuities have not been simulated or measured.
+
+FIRST-ARTICLE FIRMWARE BLOCKER
+- U5 (MX35LF4GE4AD) is raw serial NAND, not ordinary serial NOR.
+- Firmware compatibility is NOT solved by this routing. The storage driver must prove NAND page-to-cache/cache-to-page command sequencing, status polling, internal ECC handling, bad-block management, erase/program failure handling, and power-loss recovery on the actual nRF52840 build.
+- If that driver cannot be demonstrated before release, replace U5 with a supported serial-NOR/storage architecture and re-spin the schematic/PCB.
+
+NOT A FABRICATION RELEASE
+- The board still has 152 unconnected items. PMIC/source rail trunks, remaining power, control, USB, test, and other board routing are outside this checkpoint.
+- Local MIC1/MIC2, C19/C20, U5, C17, and C18 ground escapes are not present in this saved checkpoint and remain integration work.
+- This file documents a DRC-clean partial routing stage only. Do not generate manufacturing files from it.
+
+PROVENANCE NOTE
+- The saved candidate, saved DRC report, and 19-row manifest are mutually consistent and are the checkpoint of record.
+- The router source has a later timestamp because ground-routing work was staged after this checkpoint; those later edits were not rerun into the authoritative saved board and must be independently verified before use.

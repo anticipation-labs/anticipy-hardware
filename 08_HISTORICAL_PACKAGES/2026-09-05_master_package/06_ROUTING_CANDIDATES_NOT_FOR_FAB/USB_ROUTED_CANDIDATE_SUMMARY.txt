@@ -1,0 +1,17 @@
+ANTICIPY R0B USB-ONLY ROUTING CANDIDATE — NOT FOR FAB
+Input: /workspace/scratch/295a51172f48/anticipy_pcb_kicad_r0b/Anticipy_PROD_R0B_EVT.kicad_pcb
+Output: /workspace/scratch/295a51172f48/anticipy_pcb_kicad_r0b/reports/USB_ROUTED_CANDIDATE.kicad_pcb
+DRC violations: 0
+Raw unconnected before GND fill: 176
+Unconnected after baseline GND fill: 171
+Unconnected after USB stage: 149
+USB-stage reduction from filled baseline: 22
+Total reduction from raw clean board: 27
+D+ routed copper length excluding resistor body: 45.073538 mm
+D- routed copper length excluding resistor body: 45.073669 mm
+Absolute copper-length skew: 0.000131 mm
+USB nominal width/gap: 0.127/0.127 mm
+Created vias: 22 total; 2 at 0.36/0.16 mm; 20 at 0.45/0.20 mm
+In1 signal copper: 0
+Impedance status: provisional; fabricator field-solver approval required
+Release status: BLOCKED while any ratsnest remains and until electrical/DFM review

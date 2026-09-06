@@ -1,0 +1,51 @@
+{
+   "schemaVersion": 2,
+   "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+   "config": {
+      "mediaType": "application/vnd.docker.container.image.v1+json",
+      "size": 7388,
+      "digest": "sha256:207d3b4bb50b2e6b4252c53d654c315f8960af1a2f7bcd5b26ed1b44c7f9fc29"
+   },
+   "layers": [
+      {
+         "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+         "size": 29535688,
+         "digest": "sha256:6414378b647780fee8fd903ddb9541d134a1947ce092d08bdeb23a54cb3684ac"
+      },
+      {
+         "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+         "size": 97,
+         "digest": "sha256:8878562910d30df5a24156ade666d43882b74ddc8b65d04e07698288fb882606"
+      },
+      {
+         "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+         "size": 179246207,
+         "digest": "sha256:1f28331371748199805606f5e97faaffb2a7592f91f4019e4a37dd96a29eaefa"
+      },
+      {
+         "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+         "size": 1122833733,
+         "digest": "sha256:1793b29afa31e25ef6bc8e65f61cc21f3fa2195b7ddedc540f4fb886e5dc1d81"
+      },
+      {
+         "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+         "size": 1365,
+         "digest": "sha256:c4f521ac7096ffb114db6c400a8a315354b133241aafe90c0a9468e2523b4201"
+      },
+      {
+         "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+         "size": 105345086,
+         "digest": "sha256:ba100e55a8178ca6f8fb98dd188a2c01d4723756c4fbd6be040aa05780503cee"
+      },
+      {
+         "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+         "size": 934830581,
+         "digest": "sha256:31277c59ed953ddd1d2100e3843688fb7b0f11399e29198d696d025a91d40e1f"
+      },
+      {
+         "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+         "size": 158,
+         "digest": "sha256:99b5adcee986b431c6f0b7ded52fe0ec7c55ee28f7ef5f15ff94c157efec75f9"
+      }
+   ]
+}

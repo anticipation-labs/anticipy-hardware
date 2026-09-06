@@ -1,0 +1,351 @@
+<title>Anticipy Build Book</title>
+<style>
+  :root {
+    --ground: #F3F2EF; --panel: #FFFFFF; --ink: #1B1C1E; --muted: #5C5F63;
+    --line: #D8D6D1; --ti: #75787D; --amber: #B97F22; --amber-soft: #F4E8D4;
+    --ok: #3E7A4E; --risk: #A6402F; --risk-soft: #F3E2DD; --ok-soft: #E2EDE4;
+    --chip: #E9E7E2; --mono: ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #141518; --panel: #1D1E22; --ink: #E9E8E5; --muted: #A2A4A8;
+      --line: #34363B; --ti: #8C8F94; --amber: #E0A63C; --amber-soft: #3A3020;
+      --ok: #6FAE7E; --risk: #D0705B; --risk-soft: #3A2620; --ok-soft: #223327;
+      --chip: #2A2C31;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #141518; --panel: #1D1E22; --ink: #E9E8E5; --muted: #A2A4A8;
+    --line: #34363B; --ti: #8C8F94; --amber: #E0A63C; --amber-soft: #3A3020;
+    --ok: #6FAE7E; --risk: #D0705B; --risk-soft: #3A2620; --ok-soft: #223327;
+    --chip: #2A2C31;
+  }
+  body { background: var(--ground); color: var(--ink); margin: 0;
+    font: 16px/1.55 -apple-system, "Helvetica Neue", Segoe UI, sans-serif; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 40px 22px 90px; }
+  h1, h2, h3 { font-family: "Avenir Next Condensed", "Helvetica Neue", -apple-system, sans-serif;
+    text-wrap: balance; }
+  h1 { font-size: 42px; font-weight: 800; letter-spacing: .01em; margin: 6px 0 4px;
+    text-transform: uppercase; }
+  .sub { color: var(--muted); margin: 0 0 26px; max-width: 62ch; }
+  h2 { font-size: 26px; font-weight: 700; text-transform: uppercase; letter-spacing: .02em;
+    margin: 54px 0 6px; display: flex; align-items: baseline; gap: 12px; }
+  h2 .n { color: var(--amber); font-variant-numeric: tabular-nums; }
+  h3 { font-size: 18px; margin: 26px 0 6px; }
+  .donewhen { border-left: 3px solid var(--ok); background: var(--ok-soft);
+    padding: 8px 14px; margin: 14px 0 4px; font-size: 14.5px; border-radius: 0 6px 6px 0; }
+  .donewhen b { color: var(--ok); text-transform: uppercase; font-size: 12px; letter-spacing: .06em; }
+  .warn { border-left: 3px solid var(--risk); background: var(--risk-soft);
+    padding: 8px 14px; margin: 14px 0; font-size: 14.5px; border-radius: 0 6px 6px 0; }
+  .warn b { color: var(--risk); text-transform: uppercase; font-size: 12px; letter-spacing: .06em; }
+  .note { border-left: 3px solid var(--amber); background: var(--amber-soft);
+    padding: 8px 14px; margin: 14px 0; font-size: 14.5px; border-radius: 0 6px 6px 0; }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; margin: 12px 0; }
+  .tablewrap { overflow-x: auto; }
+  th { text-align: left; font-size: 11.5px; text-transform: uppercase; letter-spacing: .07em;
+    color: var(--muted); border-bottom: 2px solid var(--ink); padding: 6px 10px 6px 0; }
+  td { border-bottom: 1px solid var(--line); padding: 8px 10px 8px 0; vertical-align: top; }
+  td.num, .mono { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 13px; }
+  a { color: var(--amber); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  .decisions { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 10px; margin: 20px 0 8px; }
+  .dcard { background: var(--panel); border: 1px solid var(--line); border-radius: 8px;
+    padding: 12px 14px; font-size: 14px; }
+  .dcard b { display: block; font-size: 11.5px; letter-spacing: .07em; text-transform: uppercase;
+    color: var(--amber); margin-bottom: 4px; }
+  .chip { display: inline-block; background: var(--chip); border-radius: 999px;
+    font-size: 11.5px; padding: 2px 10px; margin: 0 4px 4px 0; font-family: var(--mono); }
+  ol.steps { padding-left: 22px; } ol.steps li { margin: 8px 0; }
+  ul { padding-left: 20px; } li { margin: 5px 0; }
+  figure { margin: 22px 0; background: var(--panel); border: 1px solid var(--line);
+    border-radius: 10px; padding: 16px; overflow-x: auto; }
+  figcaption { font-size: 13px; color: var(--muted); margin-top: 8px; }
+  svg { max-width: 100%; height: auto; display: block; }
+  .cal { display: grid; grid-template-columns: 92px 1fr; gap: 0 14px; font-size: 14.5px;
+    margin: 14px 0; }
+  .cal .d { font-family: var(--mono); font-size: 13px; color: var(--amber); padding: 7px 0;
+    border-top: 1px solid var(--line); white-space: nowrap; }
+  .cal .w { padding: 7px 0; border-top: 1px solid var(--line); }
+  .small { font-size: 13px; color: var(--muted); }
+  .gate li { margin: 8px 0; }
+  code { font-family: var(--mono); font-size: 13px; background: var(--chip);
+    padding: 1px 6px; border-radius: 4px; }
+</style>
+
+<div class="wrap">
+<p class="small mono" style="letter-spacing:.1em; text-transform:uppercase; color:var(--amber); margin:0;">Anticipation Labs · pre-unit sprint · Aug 18 → 27, 2026</p>
+<h1>Anticipy Build Book</h1>
+<p class="sub">Three wearable, working pendant pre-units, printed on the P2S, that stream audio, capture offline for 4–8&nbsp;hours, reconnect, snap onto a charger, and hang on a chain your hands can actually operate. Every number in here was researched or machine-verified today. Nothing is decorative.</p>
+
+<div class="decisions">
+  <div class="dcard"><b>Shell</b>v5 flat tag, 33.4 × 80.7 × 16.2&nbsp;mm (storage build). Click-fit tongue joint. 40/40 machine fit-proofs pass — including the battery-seat defect the July file shipped with (found + fixed today).</div>
+  <div class="dcard"><b>Material</b>Black ABS you already own, painted to hand-brushed titanium. Silk PLA is out (sheen dies when sanded, deforms at 55&nbsp;°C with a LiPo inside a car). PETG is out (CA glue won't bond it).</div>
+  <div class="dcard"><b>Offline storage</b>Adafruit 4682 microSD board + 32&nbsp;GB card. The Omi devkit firmware already contains the entire offline buffer-and-sync stack for this exact board — we port, not write.</div>
+  <div class="dcard"><b>Charging</b>Magnetic snap USB-C tip in the flush port + printed nightstand dock. Zero soldering, zero polarity risk, feels wireless. Bare 3-pin pogo puck = experiment on one shell only.</div>
+  <div class="dcard"><b>Chain</b>5&nbsp;mm stainless curb, 22", threaded straight through the Ø6.4 bail. Magnetic clasp converter at the nape — big hands never touch a lobster clasp again. Magnet-snap bail = experiment on two shells.</div>
+  <div class="dcard"><b>100 units</b>JLC3DP MJF nylon, dyed black — ≈CAD $1.4–2k landed, ships to buyers mid-October. CNC titanium is the premium path (≈US$4–7.5k, mid-November). Your engraved metal samples cannot hold this battery — confirmed.</div>
+</div>
+
+<h2><span class="n">00</span> The nine days</h2>
+<div class="cal">
+  <div class="d">Aug 18 (now)</div><div class="w">Place the two Amazon orders below. Start the ABS plate printing tonight. Slice check: ABS profile, not PLA.</div>
+  <div class="d">Aug 19–20</div><div class="w">Parts land. Bench-wire SD module to the bare spare XIAO on leads. Build the Omi devkit firmware with the two patches; verify the card mounts and <code>audio/a01.txt</code> grows while BLE is off.</div>
+  <div class="d">Aug 21</div><div class="w">Full offline→reconnect→sync loop on the bench. Decide: Anticipy iOS app speaks the storage service, or demo sync with the stock Omi app.</div>
+  <div class="d">Aug 22</div><div class="w">Wire the real unit(s). Dry click-fit assembly. Run the FULL test gate closed-but-unglued.</div>
+  <div class="d">Aug 23</div><div class="w">Units that pass get acetone-welded shut. Cure 24&nbsp;h. Print dock cradles + magnet-experiment shells.</div>
+  <div class="d">Aug 24</div><div class="w">Sand seams 220→600. Primer ×2. Metallic coat + steel-wool grain. First clear coat.</div>
+  <div class="d">Aug 25</div><div class="w">Second clear coat. 48-hour cure clock starts. Cut chains, fit nape clasps, thread bails.</div>
+  <div class="d">Aug 26</div><div class="w">4–8&nbsp;h offline soak test on battery while curing. Yank-power corruption test on the bench mule. Dock metering on every unit.</div>
+  <div class="d">Aug 27</div><div class="w">Run the gate (§09). Wear it to the shop.</div>
+</div>
+<div class="warn"><b>One honest risk</b> Everything above is guaranteed-able except one item: the offline-sync firmware port is 2–4 days of real work (the code exists upstream; it must build, flash, and sync against your app). If it slips, the Aug 27 units still stream, charge, and wear perfectly — offline capture follows days later, not weeks. Plan the demo script both ways.</div>
+
+<h2><span class="n">01</span> Order right now — Amazon.ca</h2>
+<p>Two carts. Everything must show <b>delivery on or before Aug 25</b> at checkout — if a listing slips, use its alternate. Aerosols sometimes ship ground-only: if a spray can shows late, buy the same can at Canadian Tire tomorrow instead.</p>
+<h3>Cart A — the build cannot proceed without these</h3>
+<div class="tablewrap"><table>
+<tr><th>Part</th><th>Why</th><th>Price</th><th>Link</th></tr>
+<tr><td>Adafruit 4682 3V microSD breakout</td><td>THE storage board. Pure 3.3&nbsp;V — the common blue modules have 5&nbsp;V level shifters and silently fail on battery. ~18×18&nbsp;mm, fits the shell pocket.</td><td class="num">~$12</td><td><a href="https://www.amazon.ca/Adafruit-4682-Micro-SDIO-Breakout/dp/B09K6XVS9R">B09K6XVS9R</a> · <a href="https://www.amazon.ca/4682-Micro-SDIO-Breakout-Board/dp/B09PGBQDWF">alt</a></td></tr>
+<tr><td>WWZMDiB 3.3&nbsp;V mini SD modules, 6-pack</td><td>Spares + units 2 and 3. Check the photo shows NO 8-pin shifter chip.</td><td class="num">~$14</td><td><a href="https://www.amazon.ca/WWZMDiB-Module-Adapter-Memory-Shield/dp/B0BV8ZQ81F">B0BV8ZQ81F</a></td></tr>
+<tr><td>SanDisk Ultra 32&nbsp;GB microSDHC</td><td>278&nbsp;h of audio per card. Buy a 2-pack.</td><td class="num">~$15</td><td><a href="https://www.amazon.ca/s?k=sandisk+ultra+32gb+microsd">pick Prime listing</a></td></tr>
+<tr><td>Magnetic USB-C snap adapter, 2-pack</td><td>The charging system. Tip lives in the pendant's flush port; cable snaps on magnetically.</td><td class="num">~$20</td><td><a href="https://www.amazon.ca/USB-Magnetic-Adapter-240W-2Pack/dp/B0FPQ8KTB4">B0FPQ8KTB4</a> · <a href="https://www.amazon.ca/Magnetic-Adapter-Connector-Transfer-Compatible/dp/B0B3XFJM96">right-angle alt</a></td></tr>
+<tr><td>5&nbsp;mm stainless curb chain, 16.5&nbsp;ft roll</td><td>Cut eight 22" chains — every prototype chained for the price of one retail chain.</td><td class="num">$27.99</td><td><a href="https://www.amazon.ca/dp/B0CHHP74MV">B0CHHP74MV</a></td></tr>
+<tr><td>Finished 5&nbsp;mm Cuban chain, 22"</td><td>Wear-test control with a factory clasp. Fastest arrival (Aug 19).</td><td class="num">$11.89</td><td><a href="https://www.amazon.ca/dp/B09DYL4MWF">B09DYL4MWF</a></td></tr>
+<tr><td>AIEX magnetic clasp converters, 12&nbsp;pcs</td><td>Snap-together necklace closure at the nape. This alone solves the big-hands clasp problem.</td><td class="num">$9.89</td><td><a href="https://www.amazon.ca/dp/B0B4D2NXMH">B0B4D2NXMH</a></td></tr>
+<tr><td>Gorilla Super Glue Gel 20&nbsp;g</td><td>Instant-grab bond; bonds ABS properly (this is why PETG lost).</td><td class="num">~$9</td><td><a href="https://www.amazon.ca/Gorilla-7700104-Super-Glue-Gel/dp/B00OAAUAX8">B00OAAUAX8</a></td></tr>
+<tr><td>100% pure acetone, 1&nbsp;L</td><td>Solvent-welds the ABS halves into one part + seam slurry. Must say 100% — nail remover won't weld.</td><td class="num">~$15</td><td><a href="https://www.amazon.ca/100-acetone/s?k=100%25+acetone">pick Prime listing</a> (or Canadian Tire today)</td></tr>
+<tr><td>Rust-Oleum 2-in-1 Filler &amp; Sandable Primer</td><td>Kills layer lines under the metal coat.</td><td class="num">~$17</td><td><a href="https://www.amazon.ca/Rust-Oleum-Automotive-260510-12-Ounce-Sandable/dp/B006ZLQ4HQ">B006ZLQ4HQ</a></td></tr>
+<tr><td>Rub 'n Buff Silver Leaf + a tube of Ebony</td><td>The titanium look. Silver cut with a touch of black = titanium's darker warmth.</td><td class="num">~$12 ea</td><td><a href="https://www.amazon.ca/s?k=rub+n+buff+silver+leaf">pick Prime listing</a></td></tr>
+<tr><td>Krylon COLORmaxx SATIN Crystal Clear</td><td>Mandatory seal — Rub 'n Buff rubs off on skin without it. Satin, not gloss: titanium is satin.</td><td class="num">~$14</td><td><a href="https://www.amazon.ca/s?k=krylon+colormaxx+satin+crystal+clear">pick Prime listing</a></td></tr>
+<tr><td>30&nbsp;AWG silicone wire kit (6 colors)</td><td>The six SD lines. Silicone insulation won't melt while soldering next to the battery.</td><td class="num">~$16</td><td><a href="https://www.amazon.ca/s?k=30+awg+silicone+wire+kit+6+colors">pick Prime listing</a></td></tr>
+<tr><td>Capacitor kit incl. 100&nbsp;µF + 0.1&nbsp;µF</td><td>Decoupling at the SD module — SD write bursts + BLE TX can brown-out the radio without it.</td><td class="num">~$15</td><td><a href="https://www.amazon.ca/s?k=electrolytic+ceramic+capacitor+assortment+kit">pick Prime listing</a></td></tr>
+<tr><td>Adhesive EVA foam, 1–2&nbsp;mm sheet</td><td>The padding you asked for — lines both bays, kills rattle, cushions the cell.</td><td class="num">~$12</td><td><a href="https://www.amazon.ca/s?k=adhesive+eva+foam+sheet+2mm">pick Prime listing</a></td></tr>
+<tr><td>0000 steel wool</td><td>The single-direction graining pass that sells "hand-brushed".</td><td class="num">~$10</td><td><a href="https://www.amazon.ca/s?k=0000+super+fine+steel+wool">pick Prime listing</a> (or Canadian Tire)</td></tr>
+</table></div>
+<h3>Cart B — the two experiments</h3>
+<div class="tablewrap"><table>
+<tr><th>Part</th><th>Why</th><th>Price</th><th>Link</th></tr>
+<tr><td>1N5819 Schottky diodes, 20&nbsp;pcs</td><td>MANDATORY for the pogo experiment — a reversed magnetic mate without it permanently kills the charge chip.</td><td class="num">$7.99</td><td><a href="https://www.amazon.ca/dp/B07RL3SCL4">B07RL3SCL4</a></td></tr>
+<tr><td>Magnetic pogo pin pairs w/ location hole, 2 pairs</td><td>Embedded-puck charging experiment (one shell).</td><td class="num">$15.99</td><td><a href="https://www.amazon.ca/dp/B0F52FJRTQ">B0F52FJRTQ</a></td></tr>
+<tr><td>JHYOSSTHI round magnetic pogo, 3-pin</td><td>The "three-prong" smartwatch-puck look. Pick the 3Pin variant on the page.</td><td class="num">$15.99</td><td><a href="https://www.amazon.ca/dp/B0F6L8HWM3">B0F6L8HWM3</a></td></tr>
+<tr><td>9×3&nbsp;mm neodymium discs, 50-pack</td><td>Magnet-snap chain experiment. Sized up because Amazon packs rarely state N-grade.</td><td class="num">~$15</td><td><a href="https://www.amazon.ca/dp/B0F186MZN6">B0F186MZN6</a></td></tr>
+<tr><td>6×3&nbsp;mm discs, 60-pack</td><td>Lighter variant test.</td><td class="num">~$12</td><td><a href="https://www.amazon.ca/dp/B0F183S6QK">B0F183S6QK</a></td></tr>
+<tr><td>10&nbsp;mm × 1.4&nbsp;mm stainless jump rings</td><td>Heavy-duty rings for the magnet-barrel and any bail rework.</td><td class="num">~$10</td><td><a href="https://www.amazon.ca/dp/B0844RWPSH">B0844RWPSH</a></td></tr>
+</table></div>
+<div class="donewhen"><b>Done when</b> both carts show ≤ Aug 25 delivery at checkout and are placed.</div>
+
+<h2><span class="n">02</span> Print tonight</h2>
+<div class="note"><b>Step 0 — the 10-minute coupon (added Aug 19, after the Devin-night print).</b> Print <code>COUPON_FIRST.3mf</code> first, same ABS filament and same profile as the plate below. It is four thumb-size slices of the real click joint: one tongue piece and three groove pieces at 0.16 / 0.22 / 0.28&nbsp;mm clearance (count the little edge notches: 1&nbsp;=&nbsp;0.16, 2&nbsp;=&nbsp;0.22, 3&nbsp;=&nbsp;0.28). Press the tongue piece into each groove piece. The <b>snuggest one that still clicks fully home by hand</b> is this printer's number. If it's 0.16 (1 notch) — print the plate below unchanged. If it's 0.22 or 0.28, regenerate the six halves first with <code>-D LIP_CLR_OVERRIDE=0.22</code> (or 0.28) and rebuild the plate — one command per half, ~5 minutes total. This is what makes "the halves will click" a measured fact instead of a hope.</div>
+<p>Open <code>~/Desktop/anticipy-shell/PRINT_ME_v5_3pendants.3mf</code> in Bambu Studio. It holds six halves = three pendants: <b>V1-STORAGE</b> (the unit), <b>V2-STORAGE-ROOMY</b> (fit insurance), <b>V1-standard</b> (thin control, 12.6&nbsp;mm).</p>
+<ul>
+<li>Filament: <b>your black ABS</b> — select the ABS filament profile so the chamber flaps stay closed. AMS not needed (single material).</li>
+<li>Plate: Textured PEI, <b>90–100&nbsp;°C</b> bed, thin glue-stick film. Nozzle 265&nbsp;°C.</li>
+<li>Process: 0.12&nbsp;mm layers, <b>4 walls</b>, 25–40% gyroid, Arachne on, seam Back/Aligned, elephant-foot compensation 0.15&nbsp;mm, 5&nbsp;mm brim, part fan ≤30%, aux fan OFF, door + lid closed.</li>
+<li>Halves lie exactly as arranged — flat face down, no supports, don't rotate anything.</li>
+<li>ABS makes styrene fumes: ventilated room, carbon filter on.</li>
+</ul>
+<div class="note"><b>Why not the silver silk PLA you bought for this:</b> its chrome sheen is destroyed by the sanding the seam needs, it strings on fine text, and PLA softens at 55&nbsp;°C — a parked car kills a LiPo-carrying PLA pendant. The black ABS + paint stack in §07 looks <i>more</i> like the website's titanium, not less.</div>
+<div class="donewhen"><b>Done when</b> the coupon has named a clearance, six halves (at that clearance) are off the plate with clean USB openings (one pass of a needle file), and the click joints snap shut dry.</div>
+
+<h2><span class="n">03</span> Wiring — the diagram</h2>
+<figure>
+<svg viewBox="0 0 940 620" role="img" aria-label="Wiring diagram: battery already on BAT pads; six colored wires from the XIAO's clipped header stubs to the microSD module with decoupling capacitors; magnetic tip in the USB-C port to the dock; optional pogo puck experiment through a 1N5819 diode.">
+  <defs><marker id="arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><polygon points="0,0 8,4 0,8" fill="currentColor"/></marker></defs>
+  <!-- XIAO board -->
+  <rect x="70" y="150" width="240" height="190" rx="8" fill="none" stroke="currentColor" stroke-width="1.6"/>
+  <text x="88" y="176" font-size="14" font-weight="700" fill="currentColor">XIAO nRF52840 Sense</text>
+  <text x="88" y="194" font-size="11" fill="currentColor" opacity=".65">headers clipped flush · stubs are your solder pads</text>
+  <!-- USB on right edge -->
+  <rect x="310" y="216" width="26" height="46" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+  <text x="323" y="208" font-size="11" text-anchor="middle" fill="currentColor">USB-C</text>
+  <!-- pads column -->
+  <g font-size="12" font-family="ui-monospace,Menlo,monospace" fill="currentColor">
+    <text x="88" y="226">3V3</text><text x="88" y="248">GND</text>
+    <text x="88" y="270">D0 (P0.02)</text><text x="88" y="292">D8 (P1.13)</text>
+    <text x="88" y="314">D9 (P1.14)</text><text x="88" y="331">D10 (P1.15)</text>
+  </g>
+  <!-- BAT pads + battery -->
+  <text x="200" y="331" font-size="12" font-family="ui-monospace,Menlo,monospace" fill="currentColor">BAT+ / BAT−</text>
+  <rect x="70" y="420" width="200" height="70" rx="8" fill="none" stroke="currentColor" stroke-width="1.6"/>
+  <text x="88" y="448" font-size="13" font-weight="700" fill="currentColor">BLL 752042 LiPo</text>
+  <text x="88" y="466" font-size="11" fill="currentColor" opacity=".65">3.7 V · 500 mAh · 8.0×20.5×43</text>
+  <path d="M170 420 V 345" stroke="#B33A3A" stroke-width="2.4" marker-end="url(#arr)"/>
+  <path d="M195 420 V 345" stroke="currentColor" stroke-width="2.4" marker-end="url(#arr)"/>
+  <text x="205" y="390" font-size="11.5" fill="#3E7A4E" font-weight="700">ALREADY SOLDERED ✓</text>
+  <!-- SD module -->
+  <rect x="560" y="120" width="230" height="210" rx="8" fill="none" stroke="currentColor" stroke-width="1.6"/>
+  <text x="578" y="146" font-size="14" font-weight="700" fill="currentColor">Adafruit 4682 microSD</text>
+  <text x="578" y="163" font-size="11" fill="currentColor" opacity=".65">3.3 V-direct · lies flat on the battery</text>
+  <g font-size="12" font-family="ui-monospace,Menlo,monospace" fill="currentColor">
+    <text x="578" y="196">3V</text><text x="578" y="218">GND</text><text x="578" y="240">CS</text>
+    <text x="578" y="262">SCK</text><text x="578" y="284">DO (MISO)</text><text x="578" y="306">DI (MOSI)</text>
+  </g>
+  <!-- wires: 6 lines, colored, labeled -->
+  <g stroke-width="2.2" fill="none">
+    <path d="M120 222 H 570" stroke="#B33A3A"/>
+    <path d="M120 244 C 300 244 380 214 570 214" stroke="#6B6E73"/>
+    <path d="M150 266 C 320 266 400 236 570 236" stroke="#C9C9CE"/>
+    <path d="M150 288 C 330 288 410 258 570 258" stroke="#C9A227"/>
+    <path d="M150 310 C 340 310 420 280 570 280" stroke="#4C8A57"/>
+    <path d="M150 327 C 350 327 430 302 570 302" stroke="#3D6FA8"/>
+  </g>
+  <g font-size="10.5" font-family="ui-monospace,Menlo,monospace" fill="currentColor" opacity=".8">
+    <text x="360" y="212">red · 3V3</text>
+    <text x="360" y="240">black · GND</text>
+    <text x="360" y="262">white · CS→D0</text>
+    <text x="360" y="284">yellow · SCK→D8</text>
+    <text x="360" y="306">green · MISO→D9</text>
+    <text x="360" y="323">blue · MOSI→D10</text>
+  </g>
+  <text x="430" y="185" font-size="11.5" fill="currentColor">30 AWG silicone · every lead &lt; 5 cm</text>
+  <!-- caps -->
+  <rect x="810" y="186" width="14" height="40" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/>
+  <path d="M790 196 H 810 M790 216 H 810" stroke="currentColor" stroke-width="1.6"/>
+  <text x="836" y="200" font-size="11" fill="currentColor">100 µF +</text>
+  <text x="836" y="214" font-size="11" fill="currentColor">0.1 µF</text>
+  <text x="836" y="230" font-size="10.5" fill="currentColor" opacity=".65">across 3V/GND</text>
+  <text x="836" y="243" font-size="10.5" fill="currentColor" opacity=".65">at the module</text>
+  <!-- charging: dock -->
+  <rect x="420" y="430" width="120" height="56" rx="8" fill="none" stroke="currentColor" stroke-width="1.6"/>
+  <text x="480" y="453" font-size="12" text-anchor="middle" font-weight="700" fill="currentColor">Magnetic tip</text>
+  <text x="480" y="470" font-size="10.5" text-anchor="middle" fill="currentColor" opacity=".65">lives in the port</text>
+  <path d="M420 458 C 380 458 372 300 336 262" stroke="#B97F22" stroke-width="2.6" fill="none" marker-end="url(#arr)"/>
+  <text x="332" y="420" font-size="11.5" fill="#B97F22" font-weight="700">seats in flush USB-C</text>
+  <rect x="640" y="430" width="150" height="56" rx="8" fill="none" stroke="currentColor" stroke-width="1.6"/>
+  <text x="715" y="453" font-size="12" text-anchor="middle" font-weight="700" fill="currentColor">Printed dock</text>
+  <text x="715" y="470" font-size="10.5" text-anchor="middle" fill="currentColor" opacity=".65">USB-A wall cube · cable up</text>
+  <path d="M640 458 H 548" stroke="#B97F22" stroke-width="2.6" stroke-dasharray="7 5" marker-end="url(#arr)"/>
+  <text x="594" y="448" font-size="10.5" text-anchor="middle" fill="#B97F22">snap ⌁</text>
+  <!-- experiment inset -->
+  <g>
+    <rect x="70" y="520" width="720" height="76" rx="8" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="6 5"/>
+    <text x="88" y="544" font-size="11.5" font-weight="700" fill="currentColor">EXPERIMENT (one shell): bare 3-pin pogo puck GND–5V–GND</text>
+    <text x="88" y="564" font-size="11.5" fill="currentColor">puck 5V ─▶|─ <tspan font-weight="700">1N5819, band (cathode) toward the XIAO 5V pad</tspan> · GND → GND · meter the dock face for +5 V before the first snap, every unit</text>
+    <text x="88" y="582" font-size="11" fill="currentColor" opacity=".7">Reversed mate without the diode = −5 V on the charge chip = dead board. The diode makes reversal harmless.</text>
+  </g>
+</svg>
+<figcaption>The whole electrical build: the battery is already done; the six SD lines are the only required soldering; charging needs none at all.</figcaption>
+</figure>
+<ul>
+<li><b>Solder-near-LiPo SOP:</b> kapton over the pouch, never rest the iron near it, heat-shrink every joint, and before every power-up: continuity-check 3V3↔GND and 5V↔GND for shorts.</li>
+<li><b>Bench first:</b> wire the SPARE XIAO + SD module on loose leads and prove firmware BEFORE touching the good soldered unit.</li>
+<li>D7 stays free. The old assumption that CS lives on D7 is wrong — stock firmware uses <b>D0</b>.</li>
+</ul>
+<div class="donewhen"><b>Done when</b> the bench mule mounts the card and <code>audio/a01.txt</code> grows with BLE off.</div>
+
+<h2><span class="n">04</span> Battery map</h2>
+<figure>
+<svg viewBox="0 0 940 330" role="img" aria-label="Battery map: runtime bars per mode, charge time at 50 versus 100 milliamps, and storage capacity comparison showing onboard flash holds 8 minutes while a 32 gigabyte card holds 278 hours against the 4 to 8 hour requirement.">
+  <g font-size="12" fill="currentColor">
+    <text x="20" y="30" font-weight="700" font-size="13">RUNTIME on the 500 mAh cell</text>
+    <text x="20" y="58">BLE streaming</text>
+    <rect x="190" y="46" width="330" height="16" rx="3" fill="#B97F22"/>
+    <text x="530" y="58" font-family="ui-monospace,Menlo,monospace">25–30 h continuous</text>
+    <text x="20" y="86">Offline → SD</text>
+    <rect x="190" y="74" width="430" height="16" rx="3" fill="#B97F22" opacity=".75"/>
+    <text x="630" y="86" font-family="ui-monospace,Menlo,monospace">~40 h+ (radio off)</text>
+    <text x="20" y="114">Standby (worn, quiet)</text>
+    <rect x="190" y="102" width="560" height="16" rx="3" fill="#B97F22" opacity=".45"/>
+    <text x="760" y="114" font-family="ui-monospace,Menlo,monospace">1–3 weeks</text>
+    <text x="20" y="152" font-weight="700" font-size="13">CHARGE (via BQ25101 on the board)</text>
+    <text x="20" y="180">Stock 50 mA</text>
+    <rect x="190" y="168" width="470" height="16" rx="3" fill="currentColor" opacity=".28"/>
+    <text x="670" y="180" font-family="ui-monospace,Menlo,monospace">~11 h</text>
+    <text x="20" y="208">Patched 100 mA</text>
+    <rect x="190" y="196" width="256" height="16" rx="3" fill="#3E7A4E"/>
+    <text x="456" y="208" font-family="ui-monospace,Menlo,monospace">~6 h · firmware drives P0.13 low · 0.2C, safe</text>
+    <text x="20" y="246" font-weight="700" font-size="13">STORAGE vs the 4–8 h offline requirement (Opus @ 32 kbps = 14.4 MB/h)</text>
+    <text x="20" y="274">Onboard 2 MB flash</text>
+    <rect x="190" y="262" width="8" height="16" rx="2" fill="#A6402F"/>
+    <text x="208" y="274" font-family="ui-monospace,Menlo,monospace" >≈ 8 min — not enough, ever</text>
+    <text x="20" y="302">32 GB microSD</text>
+    <rect x="190" y="290" width="620" height="16" rx="3" fill="#3E7A4E"/>
+    <text x="20" y="326" opacity=".7" font-size="11.5">requirement: 4 h = 58 MB · 8 h = 115 MB · the card holds ≈ 278 hours — 35× the worst case</text>
+  </g>
+</svg>
+<figcaption>Why the SD card is non-negotiable and the battery is not the constraint. The website's "3-day battery" is honest for mixed daily use; continuous streaming is 25–30 h.</figcaption>
+</figure>
+<ul>
+<li>Cell: BLL 752042 · 3.7&nbsp;V · 500&nbsp;mAh · 1.85&nbsp;Wh · max 8.0×20.5×43&nbsp;mm; the shell bay allows 10% swelling headroom.</li>
+<li>Prototype accepts ~0.5–1&nbsp;mA SD idle (VCC tied to 3V3). Production re-adds the power-gate on D1 + P-MOSFET.</li>
+<li>Charge at 16&nbsp;kbps offline if configurable: halves both the storage AND the hour-long worst-case BLE sync drain.</li>
+<li>LiPo rules: mic hole stays open (it's the vent), no charging in a hot car or direct sun, first full charge attended.</li>
+</ul>
+
+<h2><span class="n">05</span> Firmware — port, don't write</h2>
+<p>The offline system already exists in <code>BasedHardware/omi → firmware/devkit</code>, targeting this exact board: when BLE drops, Opus packets append to <code>audio/aXX.txt</code> on the SD card; a GATT storage service streams files back with offset-resume, then deletes on ack. The Omi app has the sync screen. Your slim dual-hatch build has this deliberately disabled (<code>CONFIG_SPI=n</code>, <code>CONFIG_FAT_FILESYSTEM_ELM=n</code>).</p>
+<ol class="steps">
+<li><b>Patch 1 (mandatory):</b> the devkit gates SD power via P0.19, which the XIAO doesn't break out. Stub the enable-GPIO in <code>sdcard.c</code> and tie module VCC to 3V3.</li>
+<li><b>Patch 2 (mandatory):</b> drive P0.13 as gpio output-low at boot → 100&nbsp;mA charge. Skipping it silently doubles charge time.</li>
+<li><b>Check 3:</b> confirm the Opus bitrate is configurable and set 16&nbsp;kbps for offline capture; if not, 32&nbsp;kbps still fits the card easily.</li>
+<li>Build for the XIAO Sense target, flash the BENCH mule (1200-baud touch or double-tap RST — both proven on your hardware), verify mount + file growth offline, then the full sync loop against the app.</li>
+<li><b>App decision by Aug 25:</b> if the Anticipy iOS app doesn't speak the storage service (<code>302957…5781/5782</code>), demo offline sync with the stock Omi app and port the client next sprint (+2–3 days).</li>
+<li>Torture pass: yank power mid-write (FATFS batching bounds the loss — verify), and &gt;2 disconnect cycles so file rollover + app drain both prove out.</li>
+</ol>
+<div class="donewhen"><b>Done when</b> the mule survives: record 30 min offline → reconnect → full sync → audio decodes → file deleted.</div>
+
+<h2><span class="n">06</span> Assemble — test before you glue</h2>
+<p>The v5 shell CLICK-CLOSES and holds. That means the complete unit gets fully tested while still openable. Nothing is welded until it has already proven itself. That is the zero-failure mechanism.</p>
+<ol class="steps">
+<li>Clip the header pins flush (glasses on — pins fly). Kapton over the stubs and the battery pouch.</li>
+<li>Line both bays with 1–2&nbsp;mm adhesive EVA. Battery into the back-half bay on foam, wire-end toward the board. Wires must NEVER cross in the closing channel — fold the upper-pad wire with a 2&nbsp;mm sideways jog, kapton the fold.</li>
+<li>SD module lies flat on the battery's face in its pocket (storage halves have the depth for it), caps across its power pins, leads dressed through the tunnel.</li>
+<li>Board into the front half nose-first at ~15° tilt, USB nose leading into the port hole, then flat onto the shelf. Sanity check: RST sits toward the bail, LEDs visible — the amber glow through the front dot is your product LED, exactly like the website's.</li>
+<li>Seat the magnetic USB-C tip into the flush port from outside.</li>
+<li><b>Click shut. Run the whole gate (§09) now, unglued.</b> Anything fails → pop it open, fix, repeat.</li>
+<li>Only after a full pass: open, thin acetone coat on both rims (or CA gel), close, rubber-band, wiggle a waxed jig cable in the port at 2 min so nothing bonds to it. Cure 24&nbsp;h. Fill the seam with acetone+ABS slurry.</li>
+</ol>
+<div class="donewhen"><b>Done when</b> a welded unit re-passes the gate after 24&nbsp;h cure.</div>
+
+<h2><span class="n">07</span> The titanium finish</h2>
+<ol class="steps">
+<li>Sand the seam 220 → 320 dry, then 400 → 600 wet, over the whole body. Mask the mic dot (toothpick) and the port (tape) through every step from here.</li>
+<li>Primer ×2, wet-sand 400 between coats.</li>
+<li>Metal: Rub 'n Buff Silver Leaf cut with a touch of Ebony, rubbed and buffed. (Backup: Rust-Oleum Metallic Aluminum, 2 light coats.)</li>
+<li>Grain: 0000 steel wool, straight single-direction strokes along the long axis only. This is the stroke that reads "machined".</li>
+<li>Seal: Krylon SATIN clear ×2 — mandatory on skin. Cure 48&nbsp;h before anyone wears it.</li>
+<li>No acetone vapor, no heat — both would erase the debossed wordmark.</li>
+</ol>
+<div class="donewhen"><b>Done when</b> a stranger at the shop asks where you bought it.</div>
+
+<h2><span class="n">08</span> Chain + the two experiments</h2>
+<ul>
+<li><b>Every demo unit:</b> 22" cut from the curb roll, threaded straight through the Ø6.4 bail (5&nbsp;mm curb passes; no jump ring needed), AIEX magnetic converter closing it at the nape. On, off, one hand, eyes closed.</li>
+<li><b>Experiment A — magnet-snap bail (2 shells):</b> Ø9.2×3.4&nbsp;mm glue-in pockets, one 9×3 disc in the pendant top, mate disc in a tiny printed barrel on the chain end. Sharpie polarity on the stack BEFORE separating discs. Layout keeps the magnet &gt;10&nbsp;mm from the BLE antenna — verified in CAD. Bench-test pull with a luggage scale; expect ~1&nbsp;kg+ axial. Snag = breakaway (feature and risk).</li>
+<li><b>Experiment B — embedded pogo puck (1 shell):</b> when the pucks arrive Aug 19–20, measure with calipers and I'll cut the parametric pocket + reprint that back half same-day. Diode rules per §03.</li>
+</ul>
+
+<h2><span class="n">09</span> The gate — what "working pre-unit" means</h2>
+<p>One unit passes when ALL of these are true, in one continuous session, on battery:</p>
+<ul class="gate">
+<li>☐ Click-assembled (or welded) with padding — nothing rattles when shaken next to your ear.</li>
+<li>☐ Advertises, pairs, streams live audio to the app; amber dot glows through the front.</li>
+<li>☐ Phone leaves for 30+ minutes → pendant keeps capturing to SD.</li>
+<li>☐ Phone returns → sync completes untouched; the captured audio plays and is intelligible.</li>
+<li>☐ Snap-charges on its dock; charge current confirmed ≥90&nbsp;mA (USB meter).</li>
+<li>☐ Worn for a full day on the chain: clasp operable one-handed, no skin complaints, no edges.</li>
+<li>☐ Survives the drop test: chest height onto wood, three orientations, still passes the above.</li>
+</ul>
+<div class="warn"><b>Truth in demos</b> Pre-units are painted ABS at ~40&nbsp;g, not 8&nbsp;g titanium; charging is magnetic contact, not 15-ft over-the-air; "3-day battery" = mixed use, not 72&nbsp;h streaming. Say so to anyone who handles one — the site's claims stay roadmap, the pre-unit proves the system. (Qi coils physically don't fit this shell width; true over-the-air charging is B2B-only tech in 2026.)</div>
+
+<h2><span class="n">10</span> The 100-unit path (decide by Sept 1)</h2>
+<div class="tablewrap"><table>
+<tr><th>Plan</th><th>What</th><th>Cost, landed</th><th>Buyers get units</th><th>Verdict</th></tr>
+<tr><td><b>1 · MJF nylon</b></td><td>JLC3DP MJF PA12, dyed black, bead-blasted. Sample 5 by Sept 1 → 100-unit order by Sept 15.</td><td class="num">≈ CAD $1.4–2k</td><td class="num">mid-October</td><td>The move. Production look at one-tenth the metal price.</td></tr>
+<tr><td><b>2 · CNC titanium</b></td><td>China CNC Gr2/Gr5 via JLCCNC/PCBWay, bead-blast + laser engrave. RFQ Sept 1, approve sample by Oct 1 — zero slack for a second loop.</td><td class="num">≈ US$4–7.5k</td><td class="num">mid–late Nov</td><td>Matches the "machined titanium" promise. Run it in parallel for the metal-first buyers if cash allows.</td></tr>
+<tr><td><b>3 · Stamped stainless</b></td><td>New 61&nbsp;mm-class deep-draw tooling, ~US$2–8k tooling + $2–5/unit.</td><td class="num">tooling-gated</td><td class="num">Nov</td><td>Only if the titanium framing flexes. Ask your metal-sample vendor what a 61×27 version of their tool costs — if under ~$3k this reopens cheaply.</td></tr>
+</table></div>
+<ul>
+<li><b>Your engraved metal samples:</b> beautiful, and physically cannot hold the 43&nbsp;mm battery — they're look-references, not tooling. (Do email that vendor the two questions above this week.)</li>
+<li><b>Production electronics:</b> copy Omi DevKit2 — solder an 8&nbsp;GB SD-NAND on the custom PCB, same SPI interface, zero firmware change from your prototypes.</li>
+<li><b>Blocker to close before any metal order:</b> metal shells + wireless charging are in direct conflict (a shell that blocks and heats coils). Contact charging or a plastic charging window — decide at CAD freeze.</li>
+<li>Assembly at 100: ~10–15 min/unit, 4 printable jigs (solder fixture, 10-up glue cradle, charge-test station, packout tray). Print the jigs while waiting for parts.</li>
+</ul>
+
+<h2><span class="n">11</span> Files + one favor</h2>
+<ul>
+<li><span class="chip">COUPON_FIRST.3mf</span> the 10-min click-fit coupon (print first) · <span class="chip">PRINT_ME_v5_3pendants.3mf</span> the plate · <span class="chip">stl_v5/</span> halves + coupons + a 200&nbsp;mAh bonus pair · <span class="chip">pendant.scad</span> parametric source (v5.1) · <span class="chip">pendant_v4_shipped_backup.scad</span> the pre-fix file</li>
+<li>Every fit is machine-proven: 40/40 <code>test_*</code> exports empty across all variants — including the battery-seat defect that the July files shipped with, now fixed. <b>If you printed the July plate: those shells will jam the battery ~1&nbsp;mm short. Print v5.</b></li>
+<li><b>The favor (30 seconds, not blocking):</b> put a ruler on one metal sample half — length and width in mm — and tell me the numbers. It pins the production CAD to reality instead of my photo estimate (~35–40 × 22–28&nbsp;mm).</li>
+</ul>
+</div>

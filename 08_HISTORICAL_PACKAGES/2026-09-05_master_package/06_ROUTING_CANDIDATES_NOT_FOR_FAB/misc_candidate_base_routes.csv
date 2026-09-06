@@ -1,0 +1,7 @@
+label,net,from,to,method,segments,vias,length_mm,unconnected_before,unconnected_after
+I2C_SDA_U2_U3,I2C_SDA,U2.13,U3.4,astar,20,0,23.0880,171,170
+LED_RED_K,LED_RED_K,U2.26,LED1.3,reviewed-multilayer,5,2,7.6353,170,169
+LED_BLUE_K,LED_BLUE_K,U2.25,LED1.1,astar,7,0,7.1616,169,168
+ACC_INT2,ACC_INT2,U3.11,U1.49,astar,9,0,15.2556,168,167
+RESET_TEST,RESET,U1.40,TP3.1,astar,7,1,26.6805,167,166
+NTC_BATTERY,NTC,U2.18,BT1.2,reviewed-multilayer,5,1,28.5017,166,165

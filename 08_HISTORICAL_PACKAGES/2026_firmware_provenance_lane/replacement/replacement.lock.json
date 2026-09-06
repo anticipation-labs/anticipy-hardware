@@ -1,0 +1,86 @@
+{
+  "schema": 1,
+  "status": "SOURCE_CANDIDATE_ONLY_NOT_FLASH_APPROVED",
+  "upstream": {
+    "repository": "https://github.com/BasedHardware/omi.git",
+    "commit": "ee9892562648f074e3c6b59d508127d81fa21010",
+    "source_path": "Friend/firmware/firmware_v1.0",
+    "source_tree_git_oid": "7f896978ef937ae39f2e1cad00f5d95a4ff8152b"
+  },
+  "patch": {
+    "path": "replacement/patches/0002-anticipy-source-safety.patch",
+    "sha256": "e0c411dd18917ab18cb947701ff8a2d2660bd55cb348e09212c4d7f6342ee4f8"
+  },
+  "materialized_source": {
+    "source_receipt_sha256": "bdf5ad24fbf5521977fb284b968933f69d664784b197495da3fa9b273a884944",
+    "content_tree_sha256": "b8961221656e21aa2dfb2f47e2291e80ba38247694cbc83ce55d5469b41a386f",
+    "critical_file_sha256": {
+      "CMakeLists.txt": "c0908065e7e813fb4b2a90bf547b8e3180175e25f140b963fedfa29c4fff1d15",
+      "Kconfig": "df58d0dbef58a8c11521e821124a9fdb6d9c1563bc676254c083029cebf74cfe",
+      "README.rst": "5c6d4987e910479c6699208cd245a331732a7da7d058a93761523da53f56b7cb",
+      "overlay/xiao_ble_sense_devkitv2-adafruit_module.overlay": "ca447461f063a947faffd56eeaba24ad916e4bf1e4b10f7327fde1ab9a1eb618",
+      "prj_xiao_ble_sense_devkitv2-adafruit.conf": "1c3a5a6ddca97666971e805c5170d1cfbfade48dcdbc3fa2d8c674fd15e21ffc",
+      "src/battery_math.c": "94cde0ff8096804d6b559f6eb1e6f7b8d687e266895dac41202184cc90828ee9",
+      "src/battery_math.h": "d708462f61458f20002423da6b340230c77743ddc019f7c76458ccfd85fc18ce",
+      "src/battery_smoother.c": "2da61a90c2df5e9c1223268f844374ecf7ad6d5f2a5af2701f76afa2cd7fd2fc",
+      "src/battery_smoother.h": "2bbdb095355f0f86ce757b167a43c68008eb85b733183e09d158341d359f4174",
+      "src/codec.c": "5423aad81f8d37f95f0da89158c07edf39117f73068fb2b05d0ef85c0e712b12",
+      "src/codec.h": "9e7fa798c3065a05b6ffee565dda555ee35e3f7243c09a883371f8cf5c2e0c65",
+      "src/config.h": "fdbb91a4ced4892933baf3617567ad5b2fdb603a76fb95ed33c4ff87fae66d00",
+      "src/led.c": "6141f99c80ae63922e15ce220875ec4a7461fbe9d0af5dabed2c19c2181a3208",
+      "src/led.h": "5c8e06f7521fac7795e6db3ff14240996dcbe4f52fa91f2f881576f18a9505b7",
+      "src/lib/battery/battery.c": "ba119eae5998ec6bba6377d3564c38d1d8f8a5947db29423907190bd74739a7e",
+      "src/main.c": "9aee075b0754b54b6942cfeeabcfac6346573527de85581e472b12c4221cbc78",
+      "src/mic.c": "1d87a76e6324c35cee6b52c3150b47d794c17fd3b9ac35208a4b47a54416bf9d",
+      "src/mic.h": "05e099214f04c634e5681f8b74de28527e52a886758cd015b1723ea931735ead",
+      "src/opus_packet_helpers.c": "deb6b01c9a85d054c8aedd2a7389cdfa8e4e8305d130fa1592b50478749da514",
+      "src/transport.c": "de3d3c0b0749d753a3d9e1a3d548fb49c564719fb5b0e9fbc0bec3abc195fbe4",
+      "src/transport.h": "661c98f78d3516f538150f5de7d20d51d49d3aa473f2234a313f52da4e720308",
+      "src/transport_safety.c": "546ca7f31fa4537f8d2c9aaa929f85c6f86da05baa8a8bca515f46df58754b03",
+      "src/transport_safety.h": "e8a8ac7adaf282d9bab91055543c5fe4ed95c3ed4b881001063d3100dce0106e",
+      "src/utils.h": "87c01e3e4e12e13460dee3351cb4d266427f6b6ace86af62a92136fb67f98b77"
+    }
+  },
+  "behavior_contract": {
+    "advertised_complete_name": "Anticipy",
+    "device_information_model": "Anticipy Pendant",
+    "audio_service_uuid": "19B10000-E8F2-537E-4F6C-D104768A1214",
+    "audio_data_uuid": "19B10001-E8F2-537E-4F6C-D104768A1214",
+    "audio_codec_uuid": "19B10002-E8F2-537E-4F6C-D104768A1214",
+    "codec_id": 20,
+    "battery_service_uuid": "0000180F-0000-1000-8000-00805F9B34FB",
+    "battery_level_uuid": "00002A19-0000-1000-8000-00805F9B34FB",
+    "battery_first_notification_delay_ms": 0,
+    "battery_notification_interval_ms": 15000,
+    "battery_smoothing": {
+      "algorithm": "fixed-point exponential moving average",
+      "previous_weight": 3,
+      "sample_weight": 1,
+      "scale": 256,
+      "reset": "each BLE connection",
+      "first_published_value": "first successful measured percentage"
+    },
+    "audio_gatt_encryption_required": true,
+    "bond_persistence_configured": true,
+    "offline_storage_enabled": false,
+    "legacy_dfu_service_enabled": false,
+    "capture_requires_audio_ccc_subscription": true,
+    "capture_requires_fresh_per_connection_ccc_write": true,
+    "battery_percentage_is_uncalibrated_estimate": true,
+    "runtime_battery_measurement_failure_disconnects": true,
+    "firmware_revision_advertised": false,
+    "advertising_restart_enabled": true,
+    "initial_advertising_failure_recovery_enabled": true
+  },
+  "explicit_non_claims": {
+    "artifact_built": false,
+    "flash_performed": false,
+    "physical_ble_verified": false,
+    "physical_battery_verified": false,
+    "haptic_support_added": false,
+    "secure_update_added": false,
+    "owner_authenticated": false,
+    "physical_enrollment_gesture_added": false,
+    "bond_erase_gesture_added": false
+  }
+}

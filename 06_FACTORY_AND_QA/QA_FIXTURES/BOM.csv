@@ -1,0 +1,48 @@
+fixture,item_id,qty,description,minimum_spec,estimated_CAD_each,make_or_buy,notes
+rattle,R01,1,NEMA 17 stepper motor,42 mm body; 1.8 degree; 1 A/phase class; 5 mm shaft,18,buy,Use a current limit low enough that a jam cannot damage the cassette
+rattle,R02,1,TMC2209 silent stepper driver module,STEP/DIR mode; heatsink included,10,buy,A4988 works electrically but creates more acoustic noise
+rattle,R03,1,Arduino Nano compatible controller,5 V USB; ATmega328P compatible,12,buy,Controller firmware is included
+rattle,R04,1,12 V power adapter,CSA/cUL listed; 12 V 2 A; enclosed low-voltage output,22,buy,Never use an exposed mains supply
+rattle,R05,1,Inline fuse holder and fuse,1 A slow-blow on 12 V side,8,buy,Mount before driver
+rattle,R06,1,Guard interlock switch,Normally closed microswitch; lever type,6,buy,Motion firmware requires closed guard
+rattle,R07,1,Start/stop mushroom switch,Low-voltage maintained stop plus momentary start,15,buy,Not a certified emergency-stop system
+rattle,R08,1,GT2 closed-loop belt,2 mm pitch; approximately 180 mm; verify centre distance physically,8,buy,Do not order belt until shaft/motor position is dry-fitted
+rattle,R09,1,GT2 motor pulley,20 tooth; 5 mm bore; metal; set screws,7,buy,
+rattle,R10,1,GT2 shaft pulley,60 tooth; 8 mm bore; metal or reinforced polymer; clamping preferred,18,buy,3:1 reduction
+rattle,R11,1,Steel shaft,8 mm diameter x 125-160 mm; straight ground rod,12,buy,Cut only with adult supervision and deburr
+rattle,R12,2,608-2RS bearing,8 x 22 x 7 mm; rubber sealed,5,buy,
+rattle,R13,1,8 mm clamping flange hub,Four M4 flange holes on approximately 32 mm bolt circle,15,buy,Confirm rotor hole circle before ordering
+rattle,R14,1,Hall home sensor and magnet,Digital 5 V Hall module or roller microswitch,6,buy,Home flag must not contact moving cassette
+rattle,R15,1,Piezo contact sensor,27 mm piezo disc plus high-impedance preamp or USB audio interface,25,buy,Attach temporarily through cassette lid window
+rattle,R16,1,Shielded sensor cable,Flexible microphone cable; 1 m,6,buy,Strain-relieve near rotation axis
+rattle,R17,1,Polycarbonate guard,3 mm sheet enclosing rotor/belt with at least 10 mm moving clearance,30,buy/fabricate,No motion until guard is closed
+rattle,R18,1,Rubber feet set,Four non-slip feet,6,buy,
+rattle,R19,1,M3 hardware set,M3 x 30 cassette screws; assorted M3; washers; nyloc nuts; heat-set inserts,15,buy,No printed thread is a primary retainer
+rattle,R20,1,M4 hardware set,Assorted M4 screws; washers; nyloc nuts,12,buy,
+rattle,R21,0.50,PETG filament,Functional parts; dry filament; 5 walls; 40 percent infill,30,make,Quantity is kilograms
+rattle,R22,0.10,TPU 95A filament,Named liner parts only,10,make,Quantity is kilograms
+drop,D01,2,2020 aluminum extrusion,1500 mm length; straight,32,buy,Use two masts and a crossbar; anchor to wall/bench
+drop,D02,1,2020 aluminum crossbar,250 mm length,12,buy,
+drop,D03,1,2020 brackets and T-nuts set,Metal angle brackets; at least 12 T-nuts/screws,25,buy,Printed brackets are not structural mast anchors
+drop,D04,1,Weighted base,600 x 600 x 18 mm plywood plus at least 20 kg removable ballast,55,buy/fabricate,Wall tether remains mandatory
+drop,D05,3,M4 smooth guide rods,4 mm diameter x 80-100 mm steel; polished,4,buy,Guide common latch plate parallel
+drop,D06,6,M4 shaft collars,4 mm bore; clamp or set-screw,3,buy,Retain latch plate/guide springs
+drop,D07,3,Extension springs,Matched lot; approximately 0.5-1 N at 35 mm extension,4,buy,Measure and match within 10 percent
+drop,D08,3,M4 nylon adjustment screws,M4 x 30 nylon thumbscrew or stud with locknut,3,buy,Contact near DUT centre of mass
+drop,D09,3,M4 heat-set inserts,For PETG; exact OD matched to generated bore coupon,1,buy,Install only with adult supervision
+drop,D10,1,PTFE tape or thin POM caps,Smooth low-friction contact face,8,buy,Do not use tacky silicone on release tips
+drop,D11,1,12 V pull solenoid,At least 10 mm stroke and 20 N momentary pull; manufacturer duty cycle documented,25,buy,Pulse for no more than rated on-time
+drop,D12,1,12 V power adapter,CSA/cUL listed; current matched to solenoid,22,buy,Never use exposed mains terminals
+drop,D13,1,Fuse arm and drop control box,Inline fuse; guarded ARM switch; momentary DROP switch; flyback diode,25,buy/fabricate,Operator stands outside guard
+drop,D14,3,Lift cords,Equal-length low-stretch Dyneema line; 1 mm class,3,buy,Join symmetrically to common solenoid eye
+drop,D15,1,Clear polycarbonate guard,At least 200 x 200 mm clear fall corridor; 3 mm sheet; 1.3 m high,80,buy/fabricate,Guard must contain rebound without touching free-fall path
+drop,D16,1,Impact target,300 x 300 x 18 mm plywood over level concrete,15,buy,Replace if dented cracked wet or warped
+drop,D17,1,Setup lift,Small scissor lab jack or rigid height-adjustable platform,35,buy,Lower pose key at least 20 mm before release
+drop,D18,1,Height scale,Steel tape/ruler fixed to mast; 1 mm graduations,12,buy,Measure 1200 mm from intended DUT impact point
+drop,D19,1,Fastener set,M3/M4/M5 shoulder bolts washers nyloc nuts,25,buy,Metal fasteners at every loaded joint
+drop,D20,1,Phone tripod and contrast grid,Stable 240 fps side-view mount and printed grid,25,buy,Validates no contact and <=5 degree release spin
+drop,D21,1,Fire-safe quarantine container,Noncombustible vented battery quarantine container and sand nearby,45,buy,Do not use a sealed ammunition box for a failing LiPo
+drop,D22,1.00,PETG filament,Collet body guides fingers latch and pose keys,30,make,Quantity is kilograms
+shared,S01,1,Digital scale,0.01 g resolution; 100 g capacity or greater,20,buy,Record DUT mass before and after tests
+shared,S02,1,Digital caliper,0.01 mm display; verify against gauge block,30,buy,For seam and fixture checks
+shared,S03,1,Eye protection,CSA-approved safety glasses for each operator,15,buy,Adult supervision required

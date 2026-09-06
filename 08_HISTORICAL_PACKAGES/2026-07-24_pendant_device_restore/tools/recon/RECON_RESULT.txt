@@ -1,0 +1,15 @@
+EVENT app_ready awaiting_explicit_start=true
+EVENT explicit_start
+EVENT manager_create authorization=not_determined
+EVENT central authorization=allowed_always state=powered_on
+EVENT scan service=19B10000-E8F2-537E-4F6C-D104768A1214
+EVENT discovered idHash=088e7806d8f34b87 rssi=-81 advertisedServices=[]
+EVENT connected
+EVENT services count=5 uuids=["1805", "180A", "180F", "9FA480E0-4967-4542-9390-D343DC5D04AE", "D0611E78-BBB4-4591-A5F8-487910AE4366"]
+EVENT characteristics service=180A count=2
+EVENT characteristics service=180F count=1
+EVENT characteristics service=1805 count=2
+EVENT characteristics service=D0611E78-BBB4-4591-A5F8-487910AE4366 count=1
+EVENT characteristics service=9FA480E0-4967-4542-9390-D343DC5D04AE count=1
+EVENT value_error characteristic=2A19
+RESULT {"authorization":"allowed_always","batteryRead":false,"captureSecondsActual":null,"captureSecondsRequested":20,"centralState":"powered_on","codec":null,"gatt":[{"characteristics":[{"properties":["read"],"uuid":"2A29"},{"properties":["read"],"uuid":"2A24"}],"uuid":"180A"},{"characteristics":[{"properties":["read","notify"],"uuid":"2A19"}],"uuid":"180F"},{"characteristics":[{"properties":["read","notify"],"uuid":"2A2B"},{"properties":["read"],"uuid":"2A0F"}],"uuid":"1805"},{"characteristics":[{"properties":["write","notify","extended_properties"],"uuid":"8667556C-9A37-4C91-84ED-54EE27D90049"}],"uuid":"D0611E78-BBB4-4591-A5F8-487910AE4366"},{"characteristics":[{"properties":["write","notify","extended_properties"],"uuid":"AF0BADB1-5B99-43CD-917A-A77BC549E3CC"}],"uuid":"9FA480E0-4967-4542-9390-D343DC5D04AE"}],"notificationBytes":0,"notificationCount":0,"packetMetrics":{"droppedFrames":0,"duplicatePackets":0,"firstSequence":null,"fragmentCounts":{},"frameLengths":{},"lastSequence":null,"malformedPackets":0,"notificationStreamSHA256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","packetLengths":{},"sequenceGaps":0,"validFrameBytes":0,"validFrames":0,"validOpusFramesSHA256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},"rawAudioPersisted":false,"reason":"unexpected_disconnect","schema":1,"serviceMatched":true}

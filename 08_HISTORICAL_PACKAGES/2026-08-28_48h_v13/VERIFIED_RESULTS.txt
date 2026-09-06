@@ -1,0 +1,5 @@
+PASS: 12/12 digital fit checks
+PASS: zero base/lid and controlled-component collisions
+PASS: three named 3MF objects inside the P2S build plate
+PASS: base, lid and button are single-body watertight meshes
+LIMIT: physical runtime, radio, audio, drop and heat tests remain required

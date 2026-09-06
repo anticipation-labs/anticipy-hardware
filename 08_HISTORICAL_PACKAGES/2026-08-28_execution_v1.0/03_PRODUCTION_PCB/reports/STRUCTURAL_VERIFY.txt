@@ -1,0 +1,38 @@
+ANTICIPY EVT-A STRUCTURAL VERIFICATION
+========================================
+
+PASS: 25
+  [PASS] native KiCad PCB and schematic S-expressions parse
+  [PASS] all 55 controlled named nets exist
+  [PASS] 81 unique board footprints parsed
+  [PASS] U1 remains deliberate zero-copper vendor gate
+  [PASS] SW1 remains deliberate zero-copper vendor gate
+  [PASS] J3 remains deliberate zero-copper vendor gate
+  [PASS] U2 physical pad/hole count = 6
+  [PASS] U3 physical pad/hole count = 6
+  [PASS] U4 physical pad/hole count = 9
+  [PASS] U5 physical pad/hole count = 35
+  [PASS] U6 physical pad/hole count = 9
+  [PASS] ANT1 physical pad/hole count = 2
+  [PASS] U4 exact controlled pad/net map matches
+  [PASS] U6 exact controlled pad/net map matches
+  [PASS] U2 exact controlled pad/net map matches
+  [PASS] U3 exact controlled pad/net map matches
+  [PASS] U5 exact controlled pad/net map matches
+  [PASS] U2 has official 0.60-mm acoustic NPTH
+  [PASS] U3 has official 0.60-mm acoustic NPTH
+  [PASS] board Edge.Cuts bounds = 37.50 x 14.00 mm
+  [PASS] retained motor scallop edge is present at controlled coordinates
+  [PASS] all 8 15%-expanded subsystem reserves and 81 placed courtyards pass XY checks
+  [PASS] schematic contains all 47 non-test board references
+  [PASS] schematic label connectivity covers power/storage/audio/haptic/RF
+  [PASS] symbol library and 8 custom footprint files parse
+
+EXPECTED WARNINGS: 3
+  [WARN] kicad-cli absent: ERC and DRC were NOT run and are NOT claimed
+  [WARN] board intentionally unrouted: U1, SW1 and J3 official vendor land maps remain release gates
+  [WARN] subsystem reserves carry 15% expansion; all current courtyards pass ordinary containment/non-overlap, but final routed-board 15%/DFM remains mandatory
+
+FAIL: 0
+
+RESULT: STRUCTURAL CHECK PASSED; FABRICATION STILL HELD

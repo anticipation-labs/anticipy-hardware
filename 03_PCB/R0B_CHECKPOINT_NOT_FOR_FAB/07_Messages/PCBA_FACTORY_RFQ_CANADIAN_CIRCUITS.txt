@@ -1,0 +1,38 @@
+To: sales@canadiancircuits.com
+Subject: RUSH capability and quote request - 12 compact four-layer Anticipy PCBAs
+
+Hi,
+
+We are preparing a rush EVT build of 12 compact four-layer PCBAs for Anticipy, a battery-powered Bluetooth audio wearable.
+
+Preliminary specifications:
+
+- 45.8 x 18.0 mm rounded board
+- 0.80 mm finished thickness target
+- Four copper layers
+- All SMT/reflow components on the top side
+- nRF52840 certified radio module
+- nPM1300 PMIC and LiPo charging
+- Two digital MEMS microphones
+- USB-C, soldered NAND storage, accelerometer, LED, button and haptic driver
+- Approximately 70 references
+- Quantity: 12
+- First-article hold after exactly two assembled boards
+
+The design remains under engineering review. We are asking you to reserve capacity and return the exact stack-up and capability limits before final files are released.
+
+Please confirm:
+
+1. 0.80 mm four-layer high-Tg FR-4 is physically in stock.
+2. 5/5 mil, 0.20/0.45 mm through-vias and two 0.16/0.36 mm USB fanout vias are accepted.
+3. You can calculate and return the L3 USB geometry for 90-ohm differential impedance over L2 ground and provide a panel coupon/TDR report.
+4. You accept the GCT USB4500 mid-mount plated-slot geometry, 0201 passives, QFN exposed pad and WSON exposed pad.
+5. You can provide one top-side stencil, one reflow pass, AOI and X-ray.
+6. You can build FA-001 and FA-002 first and hold the remaining ten until written release.
+7. Your fastest realistic fabrication, two-board assembly and remaining-ten assembly dates.
+8. Estimated NRE, fabrication, stencil, assembly, inspection and rush costs.
+
+Final Gerbers, drills, released BOM, CPL, fab/assembly drawings, IPC-356, STEP, programming and test files will follow only after engineering release.
+
+Thank you.
+

@@ -1,0 +1,21 @@
+SUBJECT: RELEASE REMAINING TEN - ANT-PROD-R0B EVT
+
+Release package revision:
+Release README SHA-256:
+FA-001 serial / test-record link:
+FA-002 serial / test-record link:
+Approved deviations:
+Firmware filename / SHA-256:
+Approved BOM revision:
+Approved assembly drawing revision:
+
+I confirm that FA-001 and FA-002 passed every Gate A item with complete records.
+The assembler is authorized to assemble the remaining ten PCBAs using only the
+identified release package, BOM, firmware, and process. No substitution, CAM
+change, repair, or process deviation is authorized without written approval.
+
+Approver:
+Role:
+Date/time and time zone:
+Signature/approval record:
+

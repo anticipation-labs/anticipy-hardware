@@ -1,0 +1,212 @@
+{
+  "project": "anticipy_evt_a",
+  "status": "EVT-A design checkpoint; fabrication prohibited",
+  "board": {
+    "thickness_mm": 0.6,
+    "layers": 4,
+    "cad_to_kicad": "Kx=100+CADx; Ky=100-CADy",
+    "overall_bounds_mm": [
+      78.5,
+      93.0,
+      116.0,
+      107.0
+    ],
+    "overall_size_mm": [
+      37.5,
+      14.0
+    ],
+    "rf_nose_mm": [
+      6.5,
+      6.5
+    ],
+    "motor_scallop": {
+      "center": [
+        116.9,
+        104.8
+      ],
+      "radius_mm": 4.1
+    }
+  },
+  "major_blocks": [
+    {
+      "ref": "U1",
+      "center": [
+        89.4,
+        97.7
+      ],
+      "size": [
+        6.3,
+        7.9
+      ],
+      "margin": 1.15,
+      "gate": "PINMAP"
+    },
+    {
+      "ref": "U4",
+      "center": [
+        98.3,
+        97.6
+      ],
+      "size": [
+        8.0,
+        6.0
+      ],
+      "margin": 1.15
+    },
+    {
+      "ref": "U5",
+      "center": [
+        106.2,
+        95.8
+      ],
+      "size": [
+        5.6,
+        4.8
+      ],
+      "margin": 1.15,
+      "note": "system reserve"
+    },
+    {
+      "ref": "U6",
+      "center": [
+        104.8,
+        104.7
+      ],
+      "size": [
+        3.8,
+        3.2
+      ],
+      "margin": 1.15,
+      "note": "system reserve"
+    },
+    {
+      "ref": "U2",
+      "center": [
+        87.2,
+        105.2
+      ],
+      "size": [
+        3.5,
+        2.65
+      ],
+      "margin": 1.15
+    },
+    {
+      "ref": "U3",
+      "center": [
+        113.8,
+        94.8
+      ],
+      "size": [
+        3.5,
+        2.65
+      ],
+      "margin": 1.15
+    },
+    {
+      "ref": "ANT1",
+      "center": [
+        79.55,
+        100.0
+      ],
+      "size": [
+        1.6,
+        3.2
+      ],
+      "margin": 1.15
+    },
+    {
+      "ref": "SW1",
+      "center": [
+        100.0,
+        104.95
+      ],
+      "size": [
+        3.5,
+        3.55
+      ],
+      "margin": 1.15,
+      "gate": "PADMAP",
+      "note": "actuator faces +KiCad Y / -mechanical CAD Y"
+    }
+  ],
+  "required_nets": [
+    "GND",
+    "CHG_5V",
+    "VBAT",
+    "BAT_NTC",
+    "VBUS",
+    "VBUSOUT",
+    "VSYS",
+    "1V8",
+    "3V0",
+    "SW_BUCK1",
+    "SW_BUCK2",
+    "VSET1",
+    "VSET2",
+    "LDO1_OUT",
+    "LDO2_OUT",
+    "CC1_NC",
+    "CC2_NC",
+    "SHPHLD",
+    "PMIC_SDA_TO_U1_PAD_TBD",
+    "PMIC_SCL_TO_U1_PAD_TBD",
+    "PMIC_GPIO0_TO_U1_PAD_TBD",
+    "PMIC_GPIO1_TO_U1_PAD_TBD",
+    "PMIC_GPIO2_TO_U1_PAD_TBD",
+    "PMIC_GPIO3_TO_U1_PAD_TBD",
+    "PMIC_LED0",
+    "PMIC_LED1",
+    "PMIC_LED2",
+    "FLASH_VDD",
+    "QSPI_CS_TO_U1_PAD_TBD",
+    "QSPI_CLK_TO_U1_PAD_TBD",
+    "QSPI_IO0_TO_U1_PAD_TBD",
+    "QSPI_IO1_TO_U1_PAD_TBD",
+    "QSPI_IO2_TO_U1_PAD_TBD",
+    "QSPI_IO3_TO_U1_PAD_TBD",
+    "PDM_CLK_TO_U1_PAD_TBD",
+    "PDM_DATA_TO_U1_PAD_TBD",
+    "MIC_A_VDD",
+    "MIC_B_VDD",
+    "HAPTIC_REG",
+    "HAPTIC_SDA_TO_U1_PAD_TBD",
+    "HAPTIC_SCL_TO_U1_PAD_TBD",
+    "HAPTIC_EN_TO_U1_PAD_TBD",
+    "HAPTIC_OUT_P",
+    "HAPTIC_OUT_M",
+    "BUTTON_TO_U1_PAD_TBD",
+    "STATUS_LED_TO_U1_PAD_TBD",
+    "STATUS_LED_A",
+    "RF_FEED_TO_U1_PAD_TBD",
+    "RF_MATCH_A",
+    "RF_MATCH_B",
+    "SWDIO_TO_U1_PAD_TBD",
+    "SWCLK_TO_U1_PAD_TBD",
+    "RESET_TO_U1_PAD_TBD",
+    "UART_TX_TO_U1_PAD_TBD",
+    "UART_RX_TO_U1_PAD_TBD"
+  ],
+  "gated_footprints": {
+    "U1": 0,
+    "SW1": 0,
+    "J3": 0
+  },
+  "verified_pad_counts": {
+    "U2": 6,
+    "U3": 6,
+    "U4": 9,
+    "U5": 35,
+    "U6": 9,
+    "ANT1": 2
+  },
+  "release_gates": [
+    "Import official Ezurio 453-00224R footprint, symbol, pinout and host schematic; then route.",
+    "Obtain Alps SKSCLCE010 formal delivery drawing; replace the zero-pad side-push envelope and couple it to the measured plunger stack.",
+    "Obtain the controlled JYC720FDRL FPC/hot-bar drawing and approved process window; replace J3's zero-pad landing-zone gate.",
+    "Approve exact battery supplier drawing, wire polarity, NTC, protection and certifications.",
+    "Select exact passive/LED orderable MPNs and obtain assembly DFM for 0.60-mm four-layer board.",
+    "Re-export the retained mechanical PCB STEP/DXF with the motor scallop; the earlier straight-edge STEP is superseded.",
+    "Complete routing, pours, impedance/stack-up, ERC, DRC, RF VNA tuning and physical EVT tests."
+  ]
+}

@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Anticipy Omi BLE Probe</title>
+<style>
+  :root { color-scheme: dark; font: 16px/1.5 system-ui, sans-serif; }
+  body { max-width: 780px; margin: 48px auto; padding: 0 24px; background: #0b0b0d; color: #f5f5f7; }
+  h1 { margin-bottom: 4px; }
+  .safe { color: #9ae6b4; }
+  button { font: inherit; font-weight: 700; padding: 12px 18px; border: 0; border-radius: 12px; cursor: pointer; }
+  button:disabled { cursor: default; opacity: .5; }
+  pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 16px; border-radius: 12px; background: #17171a; }
+</style>
+<h1>Omi pendant diagnostic</h1>
+<p class="safe">12 seconds · official audio-service UUID only · no DFU · no raw audio saved</p>
+<p>This verifies the live GATT surface and hashes a bounded notification sample in memory.</p>
+<button id="start" type="button">Choose Omi pendant and test</button>
+<pre id="status">Ready.</pre>
+<script>
+(() => {
+  'use strict';
+  const AUDIO_SERVICE = '19b10000-e8f2-537e-4f6c-d104768a1214';
+  const AUDIO_DATA = '19b10001-e8f2-537e-4f6c-d104768a1214';
+  const CODEC = '19b10002-e8f2-537e-4f6c-d104768a1214';
+  const BATTERY_SERVICE = 'battery_service';
+  const BATTERY_LEVEL = 'battery_level';
+  const CAPTURE_MS = 12_000;
+  const button = document.querySelector('#start');
+  const status = document.querySelector('#status');
+  let device = null;
+  let audio = null;
+  let packets = [];
+  let frames = [];
+  let notificationCount = 0;
+  let notificationBytes = 0;
+  let previousSequence = null;
+  let previousPacket = null;
+  let expectedFragment = 0;
+  let frame = [];
+  let sequenceGaps = 0;
+  let duplicatePackets = 0;
+  let malformedPackets = 0;
+  let droppedFrames = 0;
+  const packetLengths = {};
+  const fragmentCounts = {};
+  const frameLengths = {};
+  let firstSequence = null;
+  let lastSequence = null;
+
+  window.__omiProbeState = 'idle';
+  window.__omiProbeResult = null;
+
+  function show(value) {
+    status.textContent = typeof value === 'string' ? value : JSON.stringify(value, null, 2);
+  }
+
+  function equalBytes(a, b) {
+    if (!a || !b || a.length !== b.length) return false;
+    for (let i = 0; i < a.length; i += 1) if (a[i] !== b[i]) return false;
+    return true;
+  }
+
+  function isPinnedOpusPacket(bytes) {
+    if (bytes.length < 2 || bytes.length > 320) return false;
+    const toc = bytes[0];
+    if ((toc & 0x03) !== 0 || (toc & 0x04) !== 0) return false;
+    let samplesAt16K;
+    if ((toc & 0x80) !== 0) {
+      samplesAt16K = (16_000 << ((toc >> 3) & 0x03)) / 400;
+    } else if ((toc & 0x60) === 0x60) {
+      samplesAt16K = (toc & 0x08) !== 0 ? 320 : 160;
+    } else {
+      samplesAt16K = (16_000 << ((toc >> 3) & 0x03)) / 100;
+    }
+    return samplesAt16K === 160;
+  }
+
+  function discardPartial(countDrop) {
+    if (countDrop && frame.length) droppedFrames += 1;
+    frame = [];
+    expectedFragment = 0;
+  }
+
+  function emitFrame() {
+    if (!frame.length) return;
+    const complete = Uint8Array.from(frame);
+    discardPartial(false);
+    if (!isPinnedOpusPacket(complete)) {
+      droppedFrames += 1;
+      return;
+    }
+    frames.push(complete);
+    frameLengths[complete.length] = (frameLengths[complete.length] || 0) + 1;
+  }
+
+  function beginFrame(payload) {
+    if (!payload.length || payload.length > 320) {
+      droppedFrames += 1;
+      discardPartial(false);
+      return;
+    }
+    frame = Array.from(payload);
+    expectedFragment = 1;
+  }
+
+  function consume(packet) {
+    packets.push(packet);
+    notificationCount += 1;
+    notificationBytes += packet.length;
+    packetLengths[packet.length] = (packetLengths[packet.length] || 0) + 1;
+    if (packet.length <= 3) {
+      malformedPackets += 1;
+      return;
+    }
+    const sequence = packet[0] | (packet[1] << 8);
+    const fragment = packet[2];
+    const payload = packet.subarray(3);
+    firstSequence = firstSequence === null ? sequence : firstSequence;
+    lastSequence = sequence;
+    fragmentCounts[fragment] = (fragmentCounts[fragment] || 0) + 1;
+    if (equalBytes(previousPacket, packet)) {
+      duplicatePackets += 1;
+      return;
+    }
+    if (fragment >= 4) {
+      sequenceGaps += 1;
+      discardPartial(true);
+      previousSequence = sequence;
+      previousPacket = packet;
+      return;
+    }
+    if (previousSequence !== null && sequence !== ((previousSequence + 1) & 0xffff)) {
+      sequenceGaps += 1;
+      const conflictingDuplicate = sequence === previousSequence;
+      discardPartial(true);
+      previousSequence = sequence;
+      previousPacket = packet;
+      if (fragment === 0 && !conflictingDuplicate) beginFrame(payload);
+      return;
+    }
+    previousSequence = sequence;
+    previousPacket = packet;
+    if (fragment === 0) {
+      emitFrame();
+      beginFrame(payload);
+      return;
+    }
+    if (!frame.length || fragment !== expectedFragment) {
+      sequenceGaps += 1;
+      discardPartial(true);
+      return;
+    }
+    if (frame.length + payload.length > 320) {
+      discardPartial(true);
+      return;
+    }
+    frame.push(...payload);
+    expectedFragment = (fragment + 1) & 0xff;
+  }
+
+  function onNotification(event) {
+    const view = event.target.value;
+    consume(new Uint8Array(view.buffer.slice(view.byteOffset, view.byteOffset + view.byteLength)));
+  }
+
+  async function digest(chunks) {
+    const total = chunks.reduce((sum, item) => sum + item.length, 0);
+    const merged = new Uint8Array(total);
+    let offset = 0;
+    for (const item of chunks) {
+      merged.set(item, offset);
+      offset += item.length;
+    }
+    const hash = await crypto.subtle.digest('SHA-256', merged);
+    return [...new Uint8Array(hash)].map(byte => byte.toString(16).padStart(2, '0')).join('');
+  }
+
+  function propertyList(characteristic) {
+    const names = [
+      'authenticatedSignedWrites', 'broadcast', 'indicate', 'notify',
+      'read', 'reliableWrite', 'writableAuxiliaries', 'write', 'writeWithoutResponse'
+    ];
+    return names.filter(name => characteristic.properties[name]);
+  }
+
+  async function run() {
+    if (!navigator.bluetooth) throw new Error('Web Bluetooth is unavailable in this Chrome build.');
+    window.__omiProbeState = 'choosing';
+    show('Choose the pendant advertising the official Omi audio service…');
+    device = await navigator.bluetooth.requestDevice({
+      filters: [{ services: [AUDIO_SERVICE] }],
+      optionalServices: [BATTERY_SERVICE],
+    });
+    window.__omiProbeState = 'connecting';
+    show('Service match found. Connecting and reading GATT…');
+    const server = await device.gatt.connect();
+    const gatt = [];
+    const services = await server.getPrimaryServices();
+    for (const service of services) {
+      const characteristics = await service.getCharacteristics();
+      gatt.push({
+        uuid: service.uuid,
+        characteristics: characteristics.map(item => ({ uuid: item.uuid, properties: propertyList(item) })),
+      });
+    }
+    const audioService = await server.getPrimaryService(AUDIO_SERVICE);
+    const codecCharacteristic = await audioService.getCharacteristic(CODEC);
+    const codecValue = await codecCharacteristic.readValue();
+    const codec = codecValue.byteLength ? codecValue.getUint8(0) : null;
+    if (codec !== 20) throw new Error(`Unsupported codec ${codec}; expected pinned Opus codec 20.`);
+    let batteryRead = false;
+    try {
+      const batteryService = await server.getPrimaryService(BATTERY_SERVICE);
+      const batteryCharacteristic = await batteryService.getCharacteristic(BATTERY_LEVEL);
+      const batteryValue = await batteryCharacteristic.readValue();
+      batteryRead = batteryValue.byteLength > 0;
+    } catch (_) {
+      batteryRead = false;
+    }
+    audio = await audioService.getCharacteristic(AUDIO_DATA);
+    audio.addEventListener('characteristicvaluechanged', onNotification);
+    await audio.startNotifications();
+    window.__omiProbeState = 'capturing';
+    show('Connected. Capturing 12 seconds in memory; raw audio will not be saved…');
+    const startedAt = Date.now();
+    await new Promise(resolve => setTimeout(resolve, CAPTURE_MS));
+    await audio.stopNotifications();
+    audio.removeEventListener('characteristicvaluechanged', onNotification);
+    emitFrame();
+    if (notificationCount === 0) throw new Error('no_audio_notifications');
+    if (frames.length === 0) throw new Error('no_valid_opus_frames');
+    const packetHash = await digest(packets);
+    const frameHash = await digest(frames);
+    const validFrameBytes = frames.reduce((sum, item) => sum + item.length, 0);
+    server.disconnect();
+    const result = {
+      schema: 1,
+      serviceMatched: true,
+      codec,
+      batteryRead,
+      captureSecondsActual: (Date.now() - startedAt) / 1000,
+      notificationCount,
+      notificationBytes,
+      rawAudioPersisted: false,
+      gatt,
+      packetMetrics: {
+        firstSequence,
+        lastSequence,
+        sequenceGaps,
+        duplicatePackets,
+        malformedPackets,
+        droppedFrames,
+        validFrames: frames.length,
+        validFrameBytes,
+        packetLengths,
+        fragmentCounts,
+        frameLengths,
+        notificationStreamSHA256: packetHash,
+        validOpusFramesSHA256: frameHash,
+      },
+    };
+    packets = [];
+    frames = [];
+    window.__omiProbeResult = result;
+    window.__omiProbeState = 'complete';
+    show(result);
+  }
+
+  button.addEventListener('click', () => {
+    button.disabled = true;
+    run().catch(error => {
+      try { if (device && device.gatt && device.gatt.connected) device.gatt.disconnect(); } catch (_) {}
+      packets = [];
+      frames = [];
+      window.__omiProbeResult = { schema: 1, error: String(error && error.message || error), rawAudioPersisted: false };
+      window.__omiProbeState = 'error';
+      show(window.__omiProbeResult);
+      // Single-shot evidence: retrying in this document would mix counters from two devices/runs.
+      button.textContent = 'Reload this page to retry';
+    });
+  });
+})();
+</script>
+</html>

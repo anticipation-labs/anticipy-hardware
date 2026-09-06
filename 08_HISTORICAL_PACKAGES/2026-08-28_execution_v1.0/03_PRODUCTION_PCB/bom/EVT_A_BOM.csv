@@ -1,0 +1,24 @@
+References,Qty,Manufacturer,MPN,Description,Package,Verification/status
+U1,1,Ezurio,453-00224R,BL54L15U BLE module,6.3x7.9x1.75 mm,HOLD: official account-gated pad map not imported
+"U2,U3",2,Infineon,IM69D128S,69 dB SNR bottom-port PDM microphone,3.5x2.65x1.0 mm,PIN/FOOTPRINT VERIFIED; acoustic stack open
+U4,1,Winbond,W25N04KVZEIR,4-Gbit SPI NAND,8-WSON 8x6,PIN/FOOTPRINT VERIFIED; raw NAND firmware required
+U5,1,Nordic Semiconductor,nPM1300-CAAA,PMIC / charger,35-ball WLCSP,PIN/FOOTPRINT/REFERENCE TOPOLOGY VERIFIED
+U6,1,Texas Instruments,DRV2605LYZFR,Haptic driver,9-DSBGA,PIN MAP VERIFIED; assembly land review open
+ANT1,1,Johanson Technology,2450AT18A0100001E,2.4 GHz chip antenna,3.2x1.6x1.3 mm,VERIFIED; final match requires closed-unit VNA
+C_RF1,1,Johanson Technology,QSCF500Q1R0B1GV001T,1.0 pF evaluation match candidate,0402,DNP/TUNE; not a final product value
+L_RF1,1,Johanson Technology,LRC0402CS2N7GV001T,2.7 nH evaluation shunt candidate,0402,DNP/TUNE; not a final product value
+L_RF2,1,Johanson Technology,LRC0402CS3N9GV001T,3.9 nH evaluation series candidate,0402,DNP/TUNE; not a final product value
+"L1,L2",2,Samsung Electro-Mechanics,CIGT201610EH2R2MNE,2.2 uH buck inductor,2016 metric,EXACT Nordic Config 4 reference BOM
+C6,1,Taiyo Yuden,EMK107BB7225KA-T,2.2 uF X7R 16 V,0603,EXACT Nordic Config 4 reference BOM
+"C14,C15,C16",3,KEMET,C0402C104M4RAC7867,100 nF X7R 16 V 20%,0402,EXACT Nordic Config 4 HF-decoupling BOM; board placement open
+D1,1,Texas Instruments,TPD1E10B06DPYR,Bidirectional charge-input ESD,2-X1SON DPY,PIN/PACKAGE VERIFIED; land DFM review
+SW1,1,Alps Alpine,SKSCLCE010,"Side-push tactile switch, 1.6 N, 0.2 mm travel",3.5x3.55x1.25 mm,BODY/ORIENTATION VERIFIED; formal delivery drawing/pad map gate
+J3/M1,1,JIE YI Electronics,JYC720FDRL (family JYC0720FDRL),3 V FPC coin ERM motor; hot-bar attachment,7 mm dia x 2 mm,OFF BOARD; exact FPC land and hot-bar process drawing gate; J3 has zero copper
+J1/BT1,1,TBD,BAT-ANT-200-001,"Protected 1S 200 mAh, 10k NTC",max 26x12.5x6 mm,CONTROLLED PLACEHOLDER; supplier/certification gate
+R3,1,OPEN,OPEN,47k VSET1,0402,VALUE VERIFIED from Nordic Config 4; MPN open
+R4,1,OPEN,OPEN,150k VSET2,0402,VALUE VERIFIED from Nordic Config 4; MPN open
+"R1,R2",2,OPEN,OPEN,10k TWI pull-ups,0402,VALUE VERIFIED from Nordic Config 4; MPN open
+"R_FLASH_PWR,R_MIC_A,R_MIC_B,R_CHG",4,OPEN,OPEN,0 ohm debug/isolation,0402,ENGINEERING CHOICE; MPN open
+R_LED,1,OPEN,OPEN,Status LED current-set resistor,0402,VALUE OPEN until exact LED/current budget is frozen
+"C1-C5,C7-C10,C13,C_U2,C_U3,C_U4A,C_U4B,C_U6A,C_U6B",16,OPEN,OPEN,Reference/bypass capacitors as schematic,0402/0603,VALUES CONTROLLED; exact MPNs and derating open
+D2,1,OPEN,OPEN,Low-current status LED,1608 metric candidate,OPTICAL/MPN/current gate

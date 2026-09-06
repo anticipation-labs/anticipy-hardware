@@ -1,0 +1,2 @@
+schema_version,traveler_id,device_serial,work_order,lot_id,phase,step_sequence,step_id,step_instruction_revision,started_utc,completed_utc,operator_id,station_id,fixture_id,fixture_calibration_due_utc,input_revision_or_lot,measured_value,units,lower_limit,upper_limit,result,failure_code,ncr_id,rework_count,notes,record_signature_or_hash
+

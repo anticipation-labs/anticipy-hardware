@@ -1,0 +1,11 @@
+(version 1)
+(rule "EVT-A minimum copper clearance"
+  (constraint clearance (min 0.1000mm)))
+(rule "EVT-A minimum track width"
+  (constraint track_width (min 0.1000mm)))
+(rule "EVT-A minimum via"
+  (constraint via_diameter (min 0.3000mm))
+  (constraint hole_size (min 0.1500mm)))
+(rule "WLCSP local clearance candidate"
+  (condition "A.Reference == 'U5'")
+  (constraint clearance (min 0.0800mm)))

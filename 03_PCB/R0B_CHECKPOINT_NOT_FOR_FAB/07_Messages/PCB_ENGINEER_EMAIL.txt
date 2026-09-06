@@ -1,0 +1,42 @@
+Subject: Urgent Anticipy wearable PCB completion - 24-36 hour engineering sprint
+
+Hi,
+
+We need a senior KiCad hardware engineer to finish and validate a compact custom PCB for Anticipy, a wearable Bluetooth audio pendant.
+
+I'm attaching the current KiCad engineering package. It contains the preliminary PCB, component selection, pin map, BOM, net assignments and design notes. It is a starting point, not yet ready for fabrication.
+
+The finished device must remain within 51 x 21 x 11 mm and use a rounded capsule shape similar in size to the PLAUD NotePin S. The current PCB outline is 45.8 x 18.0 mm, but it remains unrouted and must be completed, reviewed, and released so the enclosure, battery, and assembly clearances fit.
+
+The board includes:
+
+- Raytac MDBT50Q-1MV2 nRF52840 Bluetooth module
+- Nordic nPM1300 charging and power management
+- Two PDM MEMS microphones
+- LIS2DW12 accelerometer
+- Soldered offline storage
+- USB-C
+- Red/blue indicator
+- User button
+- Haptic motor driver
+- Protected LiPo battery with NTC
+- SWD and diagnostic test pads
+
+Required deliverables:
+
+1. Complete editable KiCad schematic
+2. Final routed four-layer KiCad PCB
+3. Verified footprints and exact manufacturer part numbers
+4. Zero-error electrical and PCB design-rule reports
+5. Gerbers and drill files
+6. Final BOM with approved alternates
+7. Pick-and-place/CPL file
+8. Assembly and fabrication drawings
+9. PCBA STEP model
+10. Programming and test-point drawing
+11. Support during first-board power-up
+
+Please confirm whether you can begin immediately, complete the engineering release within 24-36 hours, and remain available for first-board debugging.
+
+Thank you.
+

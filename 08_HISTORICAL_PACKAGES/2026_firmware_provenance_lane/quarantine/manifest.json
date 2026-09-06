@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "classification": "UNVERIFIED_DO_NOT_FLASH",
+  "file": "anticipy-unverified-2e78015e.uf2",
+  "sha256": "2e78015e01d2c5c5f8b5a3b3b827ff2b763992218137bc5e5c989725b7e4dc8a",
+  "bytes": 624640,
+  "first_observed": "2026-07-21",
+  "observed_source": "/Users/omarebrahim/Downloads/anticipy.uf2",
+  "donor_provenance": {
+    "repository_path": "/Users/omarebrahim/Anticipy-pendant",
+    "commit": "bb9ff6f47cdb6993c3a0e37bcd7673867b6f7dfd",
+    "path": "firmware/anticipy.uf2",
+    "git_blob_oid": "20357c729f071a03faf46e91f8d27589b5b1463e"
+  },
+  "uf2": {
+    "family": "Nordic nRF52840",
+    "family_id": "0xada52840",
+    "flags": ["0x00002000"],
+    "blocks": 1220,
+    "payload_bytes_per_block": [256],
+    "payload_bytes": 312320,
+    "address_start": "0x00027000",
+    "address_end_exclusive": "0x00073400"
+  },
+  "embedded_string_clues": [
+    "Anticipy pendant firmware starting...",
+    "Anticipy",
+    "Anticipy Pendant",
+    "Zephyr OS v3.6.99-100befc70c74"
+  ],
+  "official_release_comparison": {
+    "release": "BasedHardware/omi v2.0.1-Omi",
+    "asset": "omi_2.0.1.uf2",
+    "sha256": "b1b32690e3e976c6e718ec2a5ce10370f80d4e47a723587712d8c35524894fd4",
+    "bytes": 622592,
+    "blocks": 1216,
+    "address_end_exclusive": "0x00073000",
+    "identical": false,
+    "overlapping_identical_blocks": 0,
+    "overlapping_blocks": 1216
+  }
+}
