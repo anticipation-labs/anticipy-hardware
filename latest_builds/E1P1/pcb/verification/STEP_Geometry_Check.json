@@ -1,0 +1,10 @@
+{
+  "valid": true,
+  "solids": 51,
+  "volume_mm3": 1115.666608703887,
+  "bounding_box_including_nominal_parts_mm": [
+    45.75,
+    17.880000000000003,
+    4.04
+  ]
+}

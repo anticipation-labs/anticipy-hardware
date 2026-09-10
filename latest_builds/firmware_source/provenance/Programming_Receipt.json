@@ -1,0 +1,238 @@
+{
+  "status": "MATCHED_EXISTING_DIAGNOSTIC_BENCH_HEX_NOT_FLASHED",
+  "created_at_utc": "2026-09-09T14:08:59.798211+00:00",
+  "destination_image": "Anticipy_E1P1_BUCK2_MAIN_FIRST_POWER.hex",
+  "image_sha256": "32f07cc6a49089f5488ea34ace23362a1aee2d62906eb0dfbf6f122faeda38d7",
+  "image_bytes": 784063,
+  "source_image": "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/outputs/Anticipy_Oval_E1_2026-09-09/firmware/binaries/Anticipy_E1P1_BUCK2_MAIN.hex",
+  "source_build_receipt": "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/outputs/Anticipy_Oval_E1_2026-09-09/firmware/receipts/current_2026-09-09/verification.json",
+  "source_build_receipt_sha256": "c09896f55cc99d0f94bc67a691fc96036f173d8b8f623989061a8fca53c9cfd2",
+  "source_application": "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/outputs/Anticipy_Oval_E1_2026-09-09/firmware/app",
+  "source_tree_sha256_algorithm": "SHA256 of sorted relative_path TAB file_sha256, newline joined, no trailing newline",
+  "source_tree_sha256": "68ca22925e41b8f59f4046707d09bd79a32a624099f8b8f831979c0b61bf3773",
+  "source_file_count": 253,
+  "source_manifest_workspace_path": "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/work/pcb-release-closure-20260909/programming/Current_Firmware_Source_Manifest.json",
+  "build_system_source_path_matches": true,
+  "linked_artifacts_match_prior_fresh_build": true,
+  "build_target": "anticipy_e1/nrf52840",
+  "ncs": "2.7.0",
+  "toolchain": "f8037e9b83",
+  "original_build_time_receipt_utc": "2026-09-09T10:28:49.205731+00:00",
+  "recompiled_this_handoff": false,
+  "dependency_dry_run": "ninja: Entering directory `/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/work/oval-firmware-build/target'\nninja: no work to do.",
+  "flash_link_allocation_bytes": 278692,
+  "ram_link_allocation_bytes": 177244,
+  "current_PCB_sha256": "78fe28acde6ceb3ab33aac8af503d4c418540cce31979cc91d3add5e5d0bec36",
+  "current_native_netlist_sha256": "e84bb5ce15d023e4084ed05bbf519515ec81f70e87bdd4d86126426a0edf52db",
+  "source_generated_dts_sha256": "4063683087137357bbb2672aba0137a70623028ec3ac8c8887a66514b04e6811",
+  "source_generated_config_sha256": "495ad9f436e52ac063ee914a831aaf2cdd219a026d36885cbcd64db9db831fd8",
+  "source_build_log_sha256": "5d7501ea0bcd1f0246dff293dc900be72ca54958547f8ff86317da6e52cb96a3",
+  "source_cmake_cache_sha256": "dd1b5f906e7fdfa30fff9800bb25b37d95bec8a31d0c7e95a822b4b1dba01897",
+  "key_source_hashes": {
+    "app/src/e1_board.c": "211b9b83ec54c03dd6632a8a00ec571642b66ecf5e0a2205c8272c39cf398112",
+    "app/src/main.c": "8d08e98084fb67fa28df6242d7b4852655ab9ba75946d9d88a656170c67f6efb",
+    "app/prj.conf": "30d75674e91a72559b62d34e3b60b2f6a13bf4bc90789119642210a9b42641f4",
+    "app/boards/anticipy/anticipy_e1/anticipy_e1_nrf52840.dts": "ac6a930539e7414336008be413111882add779b6e9b127a6db4ba37e49ac19a0",
+    "tests/check_power_contract.py": "6df8b63a55022bd25c5256e34499b9183e7e31970b0705f2647ba74b2b6ece3f"
+  },
+  "intel_hex_validation": {
+    "all_record_checksums_valid": true,
+    "eof_record_present": true,
+    "record_types": {
+      "0": 17429,
+      "2": 4,
+      "3": 1,
+      "1": 1
+    },
+    "address_ranges_half_open_hex": [
+      [
+        "0x0",
+        "0x440a4"
+      ]
+    ],
+    "unique_data_bytes": 278692,
+    "initial_stack_pointer": "0x20021c00",
+    "reset_vector": "0x1d371"
+  },
+  "power_contract_rerun": {
+    "status": "PASS",
+    "checks": [
+      {
+        "check": "BUCK1 auxiliary regulator-min-microvolt=2500000",
+        "pass": true
+      },
+      {
+        "check": "BUCK2 main regulator-min-microvolt=3000000",
+        "pass": true
+      },
+      {
+        "check": "BUCK1 auxiliary regulator-max-microvolt=2500000",
+        "pass": true
+      },
+      {
+        "check": "BUCK2 main regulator-max-microvolt=3000000",
+        "pass": true
+      },
+      {
+        "check": "BUCK1 auxiliary regulator-init-microvolt=2500000",
+        "pass": true
+      },
+      {
+        "check": "BUCK2 main regulator-init-microvolt=3000000",
+        "pass": true
+      },
+      {
+        "check": "BUCK1 auxiliary boot-off",
+        "pass": true
+      },
+      {
+        "check": "BUCK2 main always-on never boot-off",
+        "pass": true
+      },
+      {
+        "check": "charger node exists with no enable properties",
+        "pass": true
+      },
+      {
+        "check": "U2.32 on BUCK2 3V_MAIN",
+        "pass": true
+      },
+      {
+        "check": "L2.1 on BUCK2 3V_MAIN",
+        "pass": true
+      },
+      {
+        "check": "C8.1 on BUCK2 3V_MAIN",
+        "pass": true
+      },
+      {
+        "check": "U1.28 on BUCK2 3V_MAIN",
+        "pass": true
+      },
+      {
+        "check": "U1.30 on BUCK2 3V_MAIN",
+        "pass": true
+      },
+      {
+        "check": "U5.8 on BUCK2 3V_MAIN",
+        "pass": true
+      },
+      {
+        "check": "U2.1 on BUCK1 2V5_AUX",
+        "pass": true
+      },
+      {
+        "check": "L1.1 on BUCK1 2V5_AUX",
+        "pass": true
+      },
+      {
+        "check": "C7.1 on BUCK1 2V5_AUX",
+        "pass": true
+      },
+      {
+        "check": "TP12.1 on BUCK1 2V5_AUX",
+        "pass": true
+      },
+      {
+        "check": "U2.3 retains /SW1",
+        "pass": true
+      },
+      {
+        "check": "L1.2 retains /SW1",
+        "pass": true
+      },
+      {
+        "check": "U2.5 retains /SW2",
+        "pass": true
+      },
+      {
+        "check": "L2.2 retains /SW2",
+        "pass": true
+      }
+    ],
+    "dts_sha256": "4063683087137357bbb2672aba0137a70623028ec3ac8c8887a66514b04e6811",
+    "native_netlist_sha256": "e84bb5ce15d023e4084ed05bbf519515ec81f70e87bdd4d86126426a0edf52db",
+    "scope": "firmware/native-netlist revision pairing only; physical tests NOT_RUN"
+  },
+  "probe_wiring_verified_against_current_native_netlist": [
+    {
+      "test_point": "TP1",
+      "probe_signal": "SWDIO",
+      "net": "/SWDIO",
+      "module_destination": "U1.51",
+      "position_native_xy_mm": [
+        29.5,
+        35.0
+      ],
+      "side": "B.Cu",
+      "pad_diameter_mm": 1.0
+    },
+    {
+      "test_point": "TP2",
+      "probe_signal": "SWCLK",
+      "net": "/SWDCLK",
+      "module_destination": "U1.53",
+      "position_native_xy_mm": [
+        31.8,
+        35.0
+      ],
+      "side": "B.Cu",
+      "pad_diameter_mm": 1.0
+    },
+    {
+      "test_point": "TP3",
+      "probe_signal": "nRESET (optional)",
+      "net": "/RESET",
+      "module_destination": "U1.40",
+      "position_native_xy_mm": [
+        34.1,
+        35.0
+      ],
+      "side": "B.Cu",
+      "pad_diameter_mm": 1.0
+    },
+    {
+      "test_point": "TP4",
+      "probe_signal": "VTref input",
+      "net": "/3V_MAIN",
+      "module_destination": "U1.28/U1.30",
+      "position_native_xy_mm": [
+        36.4,
+        35.0
+      ],
+      "side": "B.Cu",
+      "pad_diameter_mm": 1.0
+    },
+    {
+      "test_point": "TP5",
+      "probe_signal": "GND",
+      "net": "/GND",
+      "module_destination": "U1 ground pins",
+      "position_native_xy_mm": [
+        38.7,
+        35.0
+      ],
+      "side": "B.Cu",
+      "pad_diameter_mm": 1.0
+    }
+  ],
+  "physical_board_programmed": false,
+  "physical_power_test_run": false,
+  "charging_enabled": false,
+  "NAND_operations": "Non-destructive ID probe only; no write/erase/offline recording implemented",
+  "product_limits": [
+    "Live microphone/Opus/BLE path is bench functionality, not physically qualified",
+    "Offline NAND recording, ECC/bad-block handling and backfill incomplete",
+    "Signed OTA and customer ownership workflow incomplete",
+    "Pack-specific charging disabled and unqualified",
+    "No16hour battery or assembled audio/RF test yet"
+  ],
+  "programming_reference_urls": [
+    "https://kb.segger.com/J-Link_Commander",
+    "https://kb.segger.com/VTref"
+  ],
+  "first_power_requirement_external_battery_disconnected": true,
+  "physical_reset_pin_configuration_verified": false,
+  "intel_hex_contains_UICR_records": false,
+  "readme_sha256": "fb0082763051a496c6d8e87c806cb51fb91e7f8a4679d3a7a55c639775b241dd"
+}

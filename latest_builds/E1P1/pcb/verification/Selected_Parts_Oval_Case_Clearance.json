@@ -1,0 +1,962 @@
+{
+  "status": "MAXIMUM_SELECTED_PARTS_PLUS_ALLOWANCE_CLEAR_EXISTING_OVAL_CASE",
+  "source_PCB_sha256": "78fe28acde6ceb3ab33aac8af503d4c418540cce31979cc91d3add5e5d0bec36",
+  "case_builder_sha256": "896fadb86149b1d2c6be8b45503d70978e0fa7eb544b2e79ab672fabacbd2c4c",
+  "case_assembly_STEP_sha256": "4be21a70c57f13895fe3332e3ac481fb47b7efede24154236cf1ce396f735c6d",
+  "pose_changes": [
+    {
+      "reference": "U4",
+      "field": "position_native_mm",
+      "old": [
+        28.5,
+        30.0
+      ],
+      "new": [
+        28.15,
+        29.45
+      ]
+    }
+  ],
+  "check_count": 145,
+  "checks": [
+    {
+      "reference": "U4",
+      "versus": "Jauch_LP561836JU_protected_pack_MAX_aftercycling",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "U4",
+      "versus": "Existing_10mm_motor_installation_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "U4",
+      "versus": "Rear_M2x4_screw_1_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "U4",
+      "versus": "Rear_M2x4_screw_2_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "U4",
+      "versus": "PCB_capture_pad_31.5_21.1",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "U4",
+      "versus": "PCB_capture_pad_48.7_21.1",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "U4",
+      "versus": "PCB_capture_pad_34_38.98",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "U4",
+      "versus": "PCB_capture_pad_49_38.98",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "U4",
+      "versus": "Microphone_gasket",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "U4",
+      "versus": "Lightpipe_retaining_adhesive",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "U4",
+      "versus": "LED_clear_lightpipe",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "U4",
+      "versus": "Recessed_button_plunger",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "U4",
+      "versus": "Textile_lanyard_internal_knot_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "U4",
+      "versus": "Front_oval_shell",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "U4",
+      "versus": "Rear_service_cover",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "U4",
+      "versus": "BATTERY_NEG_wire_OD1p2_R2_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "U4",
+      "versus": "BATTERY_NEG_PCB_joint_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "U4",
+      "versus": "BATTERY_POS_wire_OD1p2_R2_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "U4",
+      "versus": "BATTERY_POS_PCB_joint_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "U4",
+      "versus": "Separate_10k_NTC_TDK_G1540_insulated_MAX_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "U4",
+      "versus": "NTC_wire_1_OD0p5_R0p75_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "U4",
+      "versus": "NTC_PCB_joint_1_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "U4",
+      "versus": "NTC_wire_2_OD0p5_R0p75_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "U4",
+      "versus": "NTC_PCB_joint_2_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "U4",
+      "versus": "MOTOR_wire_1_OD0p5_R1_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "U4",
+      "versus": "MOTOR_PCB_joint_1_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "U4",
+      "versus": "MOTOR_wire_2_OD0p5_R1_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "U4",
+      "versus": "MOTOR_PCB_joint_2_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "U4",
+      "versus": "outside outer oval",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C23",
+      "versus": "Jauch_LP561836JU_protected_pack_MAX_aftercycling",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C23",
+      "versus": "Existing_10mm_motor_installation_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C23",
+      "versus": "Rear_M2x4_screw_1_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C23",
+      "versus": "Rear_M2x4_screw_2_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C23",
+      "versus": "PCB_capture_pad_31.5_21.1",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C23",
+      "versus": "PCB_capture_pad_48.7_21.1",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C23",
+      "versus": "PCB_capture_pad_34_38.98",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C23",
+      "versus": "PCB_capture_pad_49_38.98",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C23",
+      "versus": "Microphone_gasket",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C23",
+      "versus": "Lightpipe_retaining_adhesive",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C23",
+      "versus": "LED_clear_lightpipe",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C23",
+      "versus": "Recessed_button_plunger",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C23",
+      "versus": "Textile_lanyard_internal_knot_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C23",
+      "versus": "Front_oval_shell",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C23",
+      "versus": "Rear_service_cover",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C23",
+      "versus": "BATTERY_NEG_wire_OD1p2_R2_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C23",
+      "versus": "BATTERY_NEG_PCB_joint_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C23",
+      "versus": "BATTERY_POS_wire_OD1p2_R2_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C23",
+      "versus": "BATTERY_POS_PCB_joint_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C23",
+      "versus": "Separate_10k_NTC_TDK_G1540_insulated_MAX_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C23",
+      "versus": "NTC_wire_1_OD0p5_R0p75_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C23",
+      "versus": "NTC_PCB_joint_1_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C23",
+      "versus": "NTC_wire_2_OD0p5_R0p75_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C23",
+      "versus": "NTC_PCB_joint_2_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C23",
+      "versus": "MOTOR_wire_1_OD0p5_R1_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C23",
+      "versus": "MOTOR_PCB_joint_1_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C23",
+      "versus": "MOTOR_wire_2_OD0p5_R1_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C23",
+      "versus": "MOTOR_PCB_joint_2_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C23",
+      "versus": "outside outer oval",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C17",
+      "versus": "Jauch_LP561836JU_protected_pack_MAX_aftercycling",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C17",
+      "versus": "Existing_10mm_motor_installation_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C17",
+      "versus": "Rear_M2x4_screw_1_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C17",
+      "versus": "Rear_M2x4_screw_2_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C17",
+      "versus": "PCB_capture_pad_31.5_21.1",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C17",
+      "versus": "PCB_capture_pad_48.7_21.1",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C17",
+      "versus": "PCB_capture_pad_34_38.98",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C17",
+      "versus": "PCB_capture_pad_49_38.98",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C17",
+      "versus": "Microphone_gasket",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C17",
+      "versus": "Lightpipe_retaining_adhesive",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C17",
+      "versus": "LED_clear_lightpipe",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C17",
+      "versus": "Recessed_button_plunger",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C17",
+      "versus": "Textile_lanyard_internal_knot_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C17",
+      "versus": "Front_oval_shell",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C17",
+      "versus": "Rear_service_cover",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C17",
+      "versus": "BATTERY_NEG_wire_OD1p2_R2_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C17",
+      "versus": "BATTERY_NEG_PCB_joint_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C17",
+      "versus": "BATTERY_POS_wire_OD1p2_R2_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C17",
+      "versus": "BATTERY_POS_PCB_joint_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C17",
+      "versus": "Separate_10k_NTC_TDK_G1540_insulated_MAX_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C17",
+      "versus": "NTC_wire_1_OD0p5_R0p75_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C17",
+      "versus": "NTC_PCB_joint_1_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C17",
+      "versus": "NTC_wire_2_OD0p5_R0p75_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C17",
+      "versus": "NTC_PCB_joint_2_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C17",
+      "versus": "MOTOR_wire_1_OD0p5_R1_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C17",
+      "versus": "MOTOR_PCB_joint_1_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C17",
+      "versus": "MOTOR_wire_2_OD0p5_R1_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C17",
+      "versus": "MOTOR_PCB_joint_2_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C17",
+      "versus": "outside outer oval",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C19",
+      "versus": "Jauch_LP561836JU_protected_pack_MAX_aftercycling",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C19",
+      "versus": "Existing_10mm_motor_installation_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C19",
+      "versus": "Rear_M2x4_screw_1_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C19",
+      "versus": "Rear_M2x4_screw_2_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C19",
+      "versus": "PCB_capture_pad_31.5_21.1",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C19",
+      "versus": "PCB_capture_pad_48.7_21.1",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C19",
+      "versus": "PCB_capture_pad_34_38.98",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C19",
+      "versus": "PCB_capture_pad_49_38.98",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C19",
+      "versus": "Microphone_gasket",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C19",
+      "versus": "Lightpipe_retaining_adhesive",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C19",
+      "versus": "LED_clear_lightpipe",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C19",
+      "versus": "Recessed_button_plunger",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C19",
+      "versus": "Textile_lanyard_internal_knot_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C19",
+      "versus": "Front_oval_shell",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C19",
+      "versus": "Rear_service_cover",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C19",
+      "versus": "BATTERY_NEG_wire_OD1p2_R2_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C19",
+      "versus": "BATTERY_NEG_PCB_joint_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C19",
+      "versus": "BATTERY_POS_wire_OD1p2_R2_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C19",
+      "versus": "BATTERY_POS_PCB_joint_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C19",
+      "versus": "Separate_10k_NTC_TDK_G1540_insulated_MAX_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C19",
+      "versus": "NTC_wire_1_OD0p5_R0p75_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C19",
+      "versus": "NTC_PCB_joint_1_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C19",
+      "versus": "NTC_wire_2_OD0p5_R0p75_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C19",
+      "versus": "NTC_PCB_joint_2_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C19",
+      "versus": "MOTOR_wire_1_OD0p5_R1_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C19",
+      "versus": "MOTOR_PCB_joint_1_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C19",
+      "versus": "MOTOR_wire_2_OD0p5_R1_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C19",
+      "versus": "MOTOR_PCB_joint_2_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C19",
+      "versus": "outside outer oval",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C22",
+      "versus": "Jauch_LP561836JU_protected_pack_MAX_aftercycling",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C22",
+      "versus": "Existing_10mm_motor_installation_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C22",
+      "versus": "Rear_M2x4_screw_1_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C22",
+      "versus": "Rear_M2x4_screw_2_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C22",
+      "versus": "PCB_capture_pad_31.5_21.1",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C22",
+      "versus": "PCB_capture_pad_48.7_21.1",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C22",
+      "versus": "PCB_capture_pad_34_38.98",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C22",
+      "versus": "PCB_capture_pad_49_38.98",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C22",
+      "versus": "Microphone_gasket",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C22",
+      "versus": "Lightpipe_retaining_adhesive",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C22",
+      "versus": "LED_clear_lightpipe",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C22",
+      "versus": "Recessed_button_plunger",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C22",
+      "versus": "Textile_lanyard_internal_knot_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C22",
+      "versus": "Front_oval_shell",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C22",
+      "versus": "Rear_service_cover",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C22",
+      "versus": "BATTERY_NEG_wire_OD1p2_R2_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C22",
+      "versus": "BATTERY_NEG_PCB_joint_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C22",
+      "versus": "BATTERY_POS_wire_OD1p2_R2_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C22",
+      "versus": "BATTERY_POS_PCB_joint_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C22",
+      "versus": "Separate_10k_NTC_TDK_G1540_insulated_MAX_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C22",
+      "versus": "NTC_wire_1_OD0p5_R0p75_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C22",
+      "versus": "NTC_PCB_joint_1_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C22",
+      "versus": "NTC_wire_2_OD0p5_R0p75_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C22",
+      "versus": "NTC_PCB_joint_2_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C22",
+      "versus": "MOTOR_wire_1_OD0p5_R1_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C22",
+      "versus": "MOTOR_PCB_joint_1_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C22",
+      "versus": "MOTOR_wire_2_OD0p5_R1_PLANNING",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C22",
+      "versus": "MOTOR_PCB_joint_2_guard",
+      "intersection_mm3": 0,
+      "pass": true
+    },
+    {
+      "reference": "C22",
+      "versus": "outside outer oval",
+      "intersection_mm3": 0,
+      "pass": true
+    }
+  ],
+  "failures": [],
+  "clearances": {
+    "U4": {
+      "body_to_front_shell_mm": 2.8269909696761517,
+      "body_to_rear_cover_mm": 7.687733736284053,
+      "body_maximum_mm": [
+        1.25,
+        1.05,
+        0.5
+      ],
+      "additional_assembly_guard_mm": {
+        "xy_per_side": 0.2,
+        "height_above_maximum": 0.2
+      }
+    },
+    "C23": {
+      "body_to_front_shell_mm": 0.42720018726587533,
+      "body_to_rear_cover_mm": 1.8049999999999997,
+      "body_maximum_mm": [
+        2.2,
+        1.45,
+        1.45
+      ],
+      "additional_assembly_guard_mm": {
+        "xy_per_side": 0.2,
+        "height_above_maximum": 0.2
+      }
+    },
+    "C17": {
+      "body_to_front_shell_mm": 3.036722115134055,
+      "body_to_rear_cover_mm": 7.555,
+      "body_maximum_mm": [
+        1.05,
+        0.55,
+        0.55
+      ],
+      "additional_assembly_guard_mm": {
+        "xy_per_side": 0.2,
+        "height_above_maximum": 0.2
+      }
+    },
+    "C19": {
+      "body_to_front_shell_mm": 2.228392838478256,
+      "body_to_rear_cover_mm": 5.515546210485415,
+      "body_maximum_mm": [
+        1.05,
+        0.55,
+        0.55
+      ],
+      "additional_assembly_guard_mm": {
+        "xy_per_side": 0.2,
+        "height_above_maximum": 0.2
+      }
+    },
+    "C22": {
+      "body_to_front_shell_mm": 2.8763261511177474,
+      "body_to_rear_cover_mm": 2.2550000000000026,
+      "body_maximum_mm": [
+        1.05,
+        0.55,
+        0.55
+      ],
+      "additional_assembly_guard_mm": {
+        "xy_per_side": 0.2,
+        "height_above_maximum": 0.2
+      }
+    }
+  },
+  "scope": "Updated U4 pose and maximum selected U4/C23/C17/C19/C22 bodies versus existing shell, rear supports, battery, harness, controls, fasteners and retention details. PCB component-to-component solder/nozzle spacing is handled by the independent electrical assembly audit. Old case geometry and exports unchanged. No physical fit, RF or process validation implied."
+}

@@ -1,0 +1,497 @@
+{
+  "source": "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/outputs/Anticipy_E1P1_PCB_Manufacturing_Release_2026-09-09/pcb/electrical/Anticipy_R1_E1_PROTOTYPE.kicad_pcb",
+  "source_sha256": "78fe28acde6ceb3ab33aac8af503d4c418540cce31979cc91d3add5e5d0bec36",
+  "kicad_version": "10.0.6",
+  "board_thickness_mm": 0.8,
+  "copper_layers": [
+    "F.Cu",
+    "In1.Cu",
+    "In2.Cu",
+    "B.Cu"
+  ],
+  "footprint_count": 69,
+  "physical_pad_count": 279,
+  "named_net_pad_count": 209,
+  "named_net_count": 45,
+  "track_segments": 1310,
+  "via_count": 137,
+  "zones": 4,
+  "schematic_to_pcb_and_expected_map": {
+    "status": "PASS",
+    "mismatches": []
+  },
+  "native_saved_copper_unconnected_count": 0,
+  "native_connected_pad_groups": {
+    "/3V_MAIN": [
+      [
+        "R13.1",
+        "U1.28",
+        "U1.30",
+        "R2.1",
+        "R1.1",
+        "C8.1",
+        "U2.12",
+        "U2.28",
+        "U2.32",
+        "C17.1",
+        "D1.1",
+        "C13.1",
+        "R7.1",
+        "R12.1",
+        "C22.1",
+        "L2.1",
+        "C23.1",
+        "C18.1",
+        "U5.8",
+        "M1.1",
+        "C25.1",
+        "TP4.1"
+      ]
+    ],
+    "/FLASH_IO3": [
+      [
+        "R13.2",
+        "U1.47",
+        "U5.7"
+      ]
+    ],
+    "/HAPTIC_GATE": [
+      [
+        "R6.1",
+        "Q1.1",
+        "R5.2"
+      ]
+    ],
+    "/GND": [
+      [
+        "R6.2",
+        "C6.2",
+        "U4.3",
+        "U1.1",
+        "U1.2",
+        "U1.15",
+        "U1.33",
+        "U1.55",
+        "NT1.2",
+        "SW1.2",
+        "C20.2",
+        "Q1.2",
+        "U2.33",
+        "J1.1",
+        "J1.12",
+        "J1.S1",
+        "J1.S2",
+        "J1.S3",
+        "J1.S4",
+        "C17.2",
+        "MIC2.5",
+        "MIC2.6",
+        "MIC2.7",
+        "MIC2.8",
+        "C19.2",
+        "C13.2",
+        "U6.3",
+        "C4.2",
+        "C26.2",
+        "MIC1.2",
+        "MIC1.5",
+        "MIC1.6",
+        "MIC1.7",
+        "MIC1.8",
+        "C23.2",
+        "R3.2",
+        "C10.2",
+        "C9.2",
+        "D2.2",
+        "C1.2",
+        "C18.2",
+        "U5.4",
+        "U5.9",
+        "NT2.2",
+        "C16.2",
+        "C5.2",
+        "R4.2",
+        "TP5.1",
+        "TH1.2",
+        "BT1.2",
+        "C25.2"
+      ]
+    ],
+    "/2V5_AUX": [
+      [
+        "C7.1",
+        "L1.1",
+        "U2.1",
+        "TP12.1"
+      ]
+    ],
+    "/PVSS1": [
+      [
+        "C7.2",
+        "NT1.1",
+        "U2.2",
+        "C2.2",
+        "C14.2"
+      ]
+    ],
+    "/VBAT": [
+      [
+        "C6.1",
+        "U2.19",
+        "BT1.1",
+        "TP8.1"
+      ]
+    ],
+    "/USB_D+": [
+      [
+        "U4.1",
+        "J1.6",
+        "J1.8",
+        "R10.1"
+      ]
+    ],
+    "/USB_D-": [
+      [
+        "U4.2",
+        "J1.5",
+        "J1.7",
+        "R11.1"
+      ]
+    ],
+    "/SW1": [
+      [
+        "L1.2",
+        "U2.3"
+      ]
+    ],
+    "/I2C_SDA": [
+      [
+        "U1.16",
+        "R2.2",
+        "U2.13"
+      ]
+    ],
+    "/I2C_SCL": [
+      [
+        "U1.19",
+        "R1.2",
+        "U2.14"
+      ]
+    ],
+    "/UART_RX": [
+      [
+        "U1.20",
+        "TP7.1"
+      ]
+    ],
+    "/UART_TX": [
+      [
+        "U1.21",
+        "TP6.1"
+      ]
+    ],
+    "/HAPTIC_PWM": [
+      [
+        "U1.24",
+        "R5.1"
+      ]
+    ],
+    "/VBUSOUT": [
+      [
+        "U1.32",
+        "U2.22",
+        "C26.1",
+        "C5.1",
+        "TP11.1"
+      ]
+    ],
+    "/USB_MCU_D-": [
+      [
+        "U1.34",
+        "R11.2"
+      ]
+    ],
+    "/USB_MCU_D+": [
+      [
+        "U1.35",
+        "R10.2"
+      ]
+    ],
+    "/PDM_CLK": [
+      [
+        "U1.38",
+        "MIC2.3",
+        "MIC1.3"
+      ]
+    ],
+    "/PDM_DATA": [
+      [
+        "U1.39",
+        "R8.2",
+        "R9.2"
+      ]
+    ],
+    "/RESET": [
+      [
+        "U1.40",
+        "TP3.1"
+      ]
+    ],
+    "/PMIC_INT": [
+      [
+        "U1.41",
+        "U2.7",
+        "TP14.1"
+      ]
+    ],
+    "/FLASH_SCK": [
+      [
+        "U1.42",
+        "U5.6"
+      ]
+    ],
+    "/FLASH_IO0": [
+      [
+        "U1.43",
+        "U5.5"
+      ]
+    ],
+    "/FLASH_CS": [
+      [
+        "U1.44",
+        "R7.2",
+        "U5.1"
+      ]
+    ],
+    "/FLASH_IO2": [
+      [
+        "U1.45",
+        "R12.2",
+        "U5.3"
+      ]
+    ],
+    "/FLASH_IO1": [
+      [
+        "U1.46",
+        "U5.2"
+      ]
+    ],
+    "/SWDIO": [
+      [
+        "U1.51",
+        "TP1.1"
+      ]
+    ],
+    "/SWDCLK": [
+      [
+        "U1.53",
+        "TP2.1"
+      ]
+    ],
+    "/LED_BLUE_K": [
+      [
+        "LED1.1",
+        "U2.25"
+      ]
+    ],
+    "/VSYS": [
+      [
+        "LED1.2",
+        "LED1.4",
+        "U2.4",
+        "U2.20",
+        "C2.1",
+        "C14.1",
+        "C4.1",
+        "C3.1",
+        "C9.1",
+        "C15.1",
+        "C16.1",
+        "TP10.1"
+      ]
+    ],
+    "/LED_RED_K": [
+      [
+        "LED1.3",
+        "U2.26"
+      ]
+    ],
+    "/SHPHLD_BTN": [
+      [
+        "SW1.1",
+        "U2.15"
+      ]
+    ],
+    "/3V_MIC": [
+      [
+        "C20.1",
+        "U2.29",
+        "MIC2.1",
+        "MIC2.2",
+        "C19.1",
+        "MIC1.1",
+        "C10.1",
+        "TP13.1"
+      ]
+    ],
+    "/HAPTIC_NEG": [
+      [
+        "Q1.3",
+        "D1.2",
+        "C22.2",
+        "M1.2"
+      ]
+    ],
+    "/PVSS2": [
+      [
+        "C8.2",
+        "U2.6",
+        "C3.2",
+        "NT2.1",
+        "C15.2"
+      ]
+    ],
+    "/SW2": [
+      [
+        "U2.5",
+        "L2.2"
+      ]
+    ],
+    "/VSET2": [
+      [
+        "U2.16",
+        "R4.1"
+      ]
+    ],
+    "/VSET1": [
+      [
+        "U2.17",
+        "R3.1"
+      ]
+    ],
+    "/NTC": [
+      [
+        "U2.18",
+        "TH1.1"
+      ]
+    ],
+    "/VBUS": [
+      [
+        "U2.21",
+        "J1.2",
+        "J1.11",
+        "D2.1",
+        "C1.1",
+        "TP9.1"
+      ]
+    ],
+    "/USB_CC1": [
+      [
+        "U2.23",
+        "J1.4",
+        "U6.1"
+      ]
+    ],
+    "/USB_CC2": [
+      [
+        "U2.24",
+        "J1.10",
+        "U6.2"
+      ]
+    ],
+    "/PDM_DATA_MIC2": [
+      [
+        "MIC2.4",
+        "R9.1"
+      ]
+    ],
+    "/PDM_DATA_MIC1": [
+      [
+        "R8.1",
+        "MIC1.4"
+      ]
+    ]
+  },
+  "power_contract": {
+    "status": "PASS",
+    "checks": {
+      "U2.32": {
+        "expected": "3V_MAIN",
+        "actual": "3V_MAIN",
+        "pass_check": true
+      },
+      "L2.1": {
+        "expected": "3V_MAIN",
+        "actual": "3V_MAIN",
+        "pass_check": true
+      },
+      "C8.1": {
+        "expected": "3V_MAIN",
+        "actual": "3V_MAIN",
+        "pass_check": true
+      },
+      "U2.1": {
+        "expected": "2V5_AUX",
+        "actual": "2V5_AUX",
+        "pass_check": true
+      },
+      "L1.1": {
+        "expected": "2V5_AUX",
+        "actual": "2V5_AUX",
+        "pass_check": true
+      },
+      "C7.1": {
+        "expected": "2V5_AUX",
+        "actual": "2V5_AUX",
+        "pass_check": true
+      },
+      "TP12.1": {
+        "expected": "2V5_AUX",
+        "actual": "2V5_AUX",
+        "pass_check": true
+      },
+      "U2.12": {
+        "expected": "3V_MAIN",
+        "actual": "3V_MAIN",
+        "pass_check": true
+      },
+      "U2.28": {
+        "expected": "3V_MAIN",
+        "actual": "3V_MAIN",
+        "pass_check": true
+      },
+      "U5.8": {
+        "expected": "3V_MAIN",
+        "actual": "3V_MAIN",
+        "pass_check": true
+      }
+    }
+  },
+  "ignored_DRC_categories": [],
+  "ignored_ERC_categories": [],
+  "DRC_exclusions": [],
+  "ERC_exclusions": [],
+  "board_rules": {
+    "max_error": 0.005,
+    "min_clearance": 0.127,
+    "min_connection": 0.0,
+    "min_copper_edge_clearance": 0.0,
+    "min_groove_width": 0.0,
+    "min_hole_clearance": 0.25,
+    "min_hole_to_hole": 0.25,
+    "min_microvia_diameter": 0.2,
+    "min_microvia_drill": 0.1,
+    "min_resolved_spokes": 2,
+    "min_silk_clearance": 0.15,
+    "min_text_height": 0.8,
+    "min_text_thickness": 0.08,
+    "min_through_hole_diameter": 0.2,
+    "min_track_width": 0.127,
+    "min_via_annular_width": 0.1,
+    "min_via_diameter": 0.45,
+    "solder_mask_to_copper_clearance": 0.0,
+    "use_height_for_length_calcs": true
+  },
+  "custom_rules": "(version 1)\n(rule \"Normal copper edge\" (constraint edge_clearance (min 0.3mm)))\n(rule \"USB4500 intentional edge pads\" (constraint edge_clearance (min -0.6mm))\n (condition \"A.Type == 'Pad' && A.memberOfFootprint('J1')\"))\n\n(rule \"Nordic nPM1300 reference-cell courtyard allowance\"\n  (constraint courtyard_clearance (min -0.75mm))\n  (condition \"(A.Reference == 'C1' && B.Reference == 'C4') || (A.Reference == 'C4' && B.Reference == 'C1') || (A.Reference == 'C1' && B.Reference == 'C5') || (A.Reference == 'C5' && B.Reference == 'C1') || (A.Reference == 'C2' && B.Reference == 'C3') || (A.Reference == 'C3' && B.Reference == 'C2') || (A.Reference == 'C2' && B.Reference == 'C14') || (A.Reference == 'C14' && B.Reference == 'C2') || (A.Reference == 'C3' && B.Reference == 'C8') || (A.Reference == 'C8' && B.Reference == 'C3') || (A.Reference == 'C3' && B.Reference == 'C15') || (A.Reference == 'C15' && B.Reference == 'C3') || (A.Reference == 'C4' && B.Reference == 'C6') || (A.Reference == 'C6' && B.Reference == 'C4') || (A.Reference == 'C7' && B.Reference == 'C14') || (A.Reference == 'C14' && B.Reference == 'C7') || (A.Reference == 'C8' && B.Reference == 'C15') || (A.Reference == 'C15' && B.Reference == 'C8') || (A.Reference == 'C9' && B.Reference == 'C10') || (A.Reference == 'C10' && B.Reference == 'C9') || (A.Reference == 'R1' && B.Reference == 'R2') || (A.Reference == 'R2' && B.Reference == 'R1') || (A.Reference == 'R3' && B.Reference == 'R4') || (A.Reference == 'R4' && B.Reference == 'R3')\"))\n\n(rule \"USB B.Cu coplanar ground spacing\"\n  (layer \"B.Cu\")\n  (condition \"A.Type == 'Zone' && A.NetName == '/GND' && B.Type == 'Track' && (B.NetName == '/USB_D+' || B.NetName == '/USB_D-' || B.NetName == '/USB_MCU_D+' || B.NetName == '/USB_MCU_D-')\")\n  (constraint clearance (min 0.30mm)))\n",
+  "source_unchanged": true
+}

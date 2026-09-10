@@ -1,0 +1,6 @@
+# Local editor/runtime noise is not part of a release.
+.DS_Store
+__pycache__/
+*.pyc
+*.kicad_prl
+*.lck

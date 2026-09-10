@@ -1,0 +1,305 @@
+(footprint "D2__TI_DPY0002A_X1SON"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -0.85 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "a7ab533e-aa73-4cfd-9e3d-4d610b814670")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(property "Value" "ESD441DPYR"
+		(at 0 0.85 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ca9734af-4164-43a7-89c7-404d5a4fd7cf")
+		(effects
+			(font
+				(size 0.65 0.65)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.ti.com/lit/gpn/ESD441"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "035c8094-54f5-495f-af83-67c2728ccda5")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" "Connector-side 5.5-V VBUS shunt ESD/surge protector; TI DPY0002A land pattern"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c41a2a50-c7d9-40f0-92af-7b9c6f556c24")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Manufacturer" "Texas Instruments"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "d7e5a68f-d070-476e-81e0-7f6dd7ca3edf")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MPN" "ESD441DPYR"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "88db0b86-dbf1-4bf0-8897-ecbc7323d95d")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -0.58 -0.56)
+		(end -0.569282 -0.599999)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "8f74f2dc-2be5-4d5b-a744-6d44453dc993")
+	)
+	(fp_line
+		(start -0.569282 -0.599999)
+		(end -0.54 -0.629282)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "3b6dc6ec-3c6a-4f94-9bc3-b62571e2ac09")
+	)
+	(fp_line
+		(start -0.569282 -0.52)
+		(end -0.58 -0.56)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "2edfad89-81ef-48d2-9ea9-f8b161ddd5ee")
+	)
+	(fp_line
+		(start -0.54 -0.629282)
+		(end -0.5 -0.64)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "525e963d-6e84-41c3-b2cd-0b7da8a09b24")
+	)
+	(fp_line
+		(start -0.54 -0.490717)
+		(end -0.569282 -0.52)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "471d10fd-3078-478e-aaa4-21a7890a4939")
+	)
+	(fp_line
+		(start -0.5 -0.64)
+		(end -0.459999 -0.629282)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "4964fe01-43cf-49b6-ad62-5d8ed30a8cb5")
+	)
+	(fp_line
+		(start -0.5 -0.48)
+		(end -0.54 -0.490717)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "601f84fe-22f8-4368-b785-e37ad50f18a8")
+	)
+	(fp_line
+		(start -0.459999 -0.629282)
+		(end -0.430717 -0.6)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "b0bef532-9e92-456f-8f59-e9fa2a3a3249")
+	)
+	(fp_line
+		(start -0.459999 -0.490717)
+		(end -0.5 -0.48)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "acbeda3d-1d2c-4436-9aa1-cf6a4a5b7735")
+	)
+	(fp_line
+		(start -0.430717 -0.6)
+		(end -0.42 -0.56)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "58b93127-b872-436c-89a5-52bf73d7ccf2")
+	)
+	(fp_line
+		(start -0.430717 -0.52)
+		(end -0.459999 -0.490717)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "f262e2cd-ae98-4f94-b4e2-1316370b1a0e")
+	)
+	(fp_line
+		(start -0.42 -0.56)
+		(end -0.430717 -0.52)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "92eb63ed-d038-45a3-88dc-2d9031f1a6f7")
+	)
+	(fp_line
+		(start -0.7 -0.5)
+		(end 0.7 -0.5)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "1cb9248a-c701-46cd-a480-9d8168391a96")
+	)
+	(fp_line
+		(start -0.7 0.5)
+		(end -0.7 -0.5)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "c73baa59-1690-4417-9d24-3181f4f05060")
+	)
+	(fp_line
+		(start 0.7 -0.5)
+		(end 0.7 0.5)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "8f9b4695-3fcb-4510-9499-2be870b071e4")
+	)
+	(fp_line
+		(start 0.7 0.5)
+		(end -0.7 0.5)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "e91179d3-33cd-4da5-9d67-0639d799be67")
+	)
+	(fp_line
+		(start -0.5 -0.3)
+		(end 0.5 -0.3)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "73c52be5-1bed-4e83-8728-261e9250170e")
+	)
+	(fp_line
+		(start -0.5 0.3)
+		(end -0.5 -0.3)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "d9bd31fc-389f-44e6-b8be-552d80ba7be6")
+	)
+	(fp_line
+		(start 0.5 -0.3)
+		(end 0.5 0.3)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "ce3e4076-053c-4e23-8faa-e2e95df46a46")
+	)
+	(fp_line
+		(start 0.5 0.3)
+		(end -0.5 0.3)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "b7e0d53e-d5f2-4ca2-8e8d-572ef570cd55")
+	)
+	(pad "1" smd roundrect
+		(at -0.35 0)
+		(size 0.3 0.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.16)
+		(thermal_bridge_angle 45)
+		(uuid "4b484047-2107-4b15-acb3-76a57ed8279c")
+	)
+	(pad "2" smd roundrect
+		(at 0.35 0)
+		(size 0.3 0.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.16)
+		(thermal_bridge_angle 45)
+		(uuid "bdb2f70e-2cc0-4523-a2ee-56c6c0995447")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/models/D2_planning_envelope.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

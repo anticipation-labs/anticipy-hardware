@@ -1,0 +1,140 @@
+{
+  "date": "2026-09-09",
+  "read_only_sources": true,
+  "source_board": "outputs/Anticipy_Oval_E1_2026-09-09/pcb/electrical/Anticipy_R1_E1_PROTOTYPE.kicad_pcb",
+  "source_board_sha256": "137bf2814371842fb071526d6b6c3c138dfceb2d92459d390f8d55ac541d3a44",
+  "source_netlist": "outputs/Anticipy_Oval_E1_2026-09-09/pcb/verification/native_netlist.xml",
+  "source_firmware": "outputs/Anticipy_Oval_E1_2026-09-09/firmware/app/boards/anticipy/anticipy_e1/anticipy_e1_nrf52840.dts",
+  "parts": {
+    "C13": {
+      "original_mpn": "C0603X5R1C104K030BC",
+      "selected_mpn": "C0603X5R1E104K030BB",
+      "selected_manufacturer": "TDK",
+      "status": "SELECT_FOR_PROTOTYPE_RELEASE",
+      "pins": [
+        {
+          "pin": "1",
+          "net": "/3V_MAIN"
+        },
+        {
+          "pin": "2",
+          "net": "/GND"
+        }
+      ],
+      "rail_nominal_V": 3,
+      "maximum_body_mm_LWH": [
+        0.63,
+        0.33,
+        0.33
+      ],
+      "pcb_geometry_change_required_for_substitution": false,
+      "typical_DC_bias": {
+        "at_V": 3,
+        "C_typical_nF_range": [
+          60,
+          70
+        ],
+        "original_typical_nF_approx": 50
+      },
+      "graph_values_guaranteed": false,
+      "supplier": "DigiKey US",
+      "supplier_SKU_cut_tape": "445-13671-1-ND",
+      "live_stock": 933292,
+      "live_observation_window_UTC": "2026-09-09T13:50:00Z to 2026-09-09T13:55:00Z",
+      "stock_allocated": false,
+      "price_USD_each_at_20": 0.05,
+      "quantity_20_boards": 20,
+      "optional_quantity_with_10pct_spares": 22,
+      "cost_20_USD": 1.0,
+      "cost_22_USD": 1.1,
+      "source_url": "https://www.digikey.com/en/products/detail/tdk-corporation/C0603X5R1E104K030BB/3950907",
+      "manufacturer_page": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C0603X5R1E104K030BB",
+      "selected_value": "100nF 25V X5R",
+      "original_lifecycle_current": "Production",
+      "selected_lifecycle_current": "Production",
+      "manufacturer_mandated_successor_claim": false
+    },
+    "C23": {
+      "original_mpn": "CC0805MKX5R5BB476",
+      "selected_mpn": "GRM21BR60J476ME01L",
+      "selected_manufacturer": "Murata",
+      "status": "SELECT_FOR_PROTOTYPE_RELEASE",
+      "pins": [
+        {
+          "pin": "1",
+          "net": "/3V_MAIN"
+        },
+        {
+          "pin": "2",
+          "net": "/GND"
+        }
+      ],
+      "rail_nominal_V": 3,
+      "maximum_body_mm_LWH": [
+        2.2,
+        1.45,
+        1.45
+      ],
+      "pcb_geometry_change_required_for_substitution": false,
+      "typical_DC_bias": {
+        "at_V": 3,
+        "temperature_C": 25,
+        "AC_Vrms": 0.5,
+        "C_typical_uF_approx": 20,
+        "original_typical_uF": null
+      },
+      "graph_values_guaranteed": false,
+      "supplier": "DigiKey US",
+      "supplier_SKU_cut_tape": "490-GRM21BR60J476ME01LCT-ND",
+      "live_stock": 777,
+      "live_observation_window_UTC": "2026-09-09T13:50:00Z to 2026-09-09T13:55:00Z",
+      "stock_allocated": false,
+      "price_USD_each_at_20": 0.188,
+      "quantity_20_boards": 20,
+      "optional_quantity_with_10pct_spares": 22,
+      "cost_20_USD": 3.76,
+      "cost_22_USD": 4.136,
+      "source_url": "https://www.digikey.com/en/products/detail/murata-electronics/GRM21BR60J476ME01L/10703358",
+      "manufacturer_specification": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM21BR60J476ME01-01A-EN_PDF_CERAMICCAPACITORSMD",
+      "manufacturer_model_tool": "https://ds.murata.com/simsurfing/mlcc.html",
+      "manufacturer_model_database_date": "2026-09-02",
+      "model_part_family": "GRM21BR60J476ME01",
+      "manufacturer_specification_date": "2026-06-25",
+      "selected_value": "47uF 6.3V X5R",
+      "maximum_height_mm": 1.45,
+      "height_excludes_solder_standoff": true,
+      "operating_model": {
+        "DC_V": 3,
+        "temperature_C": 25,
+        "series_model": "Precise",
+        "Z_100kHz_ohm_graphical_range": [
+          0.08,
+          0.1
+        ],
+        "resonance_MHz_graphical_range": [
+          1,
+          2
+        ],
+        "R_100kHz_to_1MHz_ohm_graphical_range": [
+          0.0015,
+          0.0025
+        ]
+      },
+      "original_DC_bias_superiority_claim": false,
+      "voltage_label": "Derating1; endurance-test voltage <150% rating, not a 50% operating-voltage prohibition"
+    }
+  },
+  "native_edits_done_by_this_agent": false,
+  "emails_orders_uploads_done": false,
+  "whole_board_simulation_performed": false,
+  "manufacturer_plots_visually_inspected": true,
+  "curve_CSV_successfully_downloaded": false,
+  "release_actions": [
+    "Apply native metadata and consistent source BOM changes",
+    "Rerun native parity/ERC/DRC",
+    "Keep body-height plus solder allowance in mechanical stack",
+    "Assembler validates existing 0201 paste/stencil",
+    "First article verifies 3 V startup and motor/radio/NAND rail transient"
+  ],
+  "narrative": "C13_C23_Selection.md"
+}

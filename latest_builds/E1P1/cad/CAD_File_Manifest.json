@@ -1,0 +1,151 @@
+{
+  "PCB_sha256": "78fe28acde6ceb3ab33aac8af503d4c418540cce31979cc91d3add5e5d0bec36",
+  "scope": "CAD files only; this manifest excludes itself.",
+  "files": [
+    {
+      "path": "Button_Plunger.step",
+      "bytes": 36335,
+      "sha256": "f8676b77740b169252aa88e6d80abdf7d25302a19ab9a934ce46f564936552f6"
+    },
+    {
+      "path": "Button_Plunger.stl",
+      "bytes": 212984,
+      "sha256": "28a379edd8ca098f740f5d411c20a4812201f25b20545795db43463f796c3d69"
+    },
+    {
+      "path": "CAD_Rebuild_Receipt.json",
+      "bytes": 2324,
+      "sha256": "c3d5641e02dc933a4fc31a825a30b05c246a607dcb6b5c8f71f0b9ec07a9fb08"
+    },
+    {
+      "path": "Clear_Lightpipe.step",
+      "bytes": 28812,
+      "sha256": "8e1df1e291a805952205000b2419661e3dd6c7fc5a74025e7c5241bfcbe0ce89"
+    },
+    {
+      "path": "Clear_Lightpipe.stl",
+      "bytes": 151484,
+      "sha256": "dc2eac153e7195fb18648eb61f3c29ecd25c5f74b1b54f7494aeef4087ab9430"
+    },
+    {
+      "path": "Front_Oval_Shell.step",
+      "bytes": 2179653,
+      "sha256": "2c3230bb6f61acfaf40a1853a6fa57f5fb7c3f406e21e592795b1a4975a87d21"
+    },
+    {
+      "path": "Front_Oval_Shell.stl",
+      "bytes": 8130184,
+      "sha256": "9e1ec1a3e726233bb75cfbbd2ebd2081a0b5c714f8b9513aca5a057dae8ce99d"
+    },
+    {
+      "path": "Harness_Dimensional_Contract.json",
+      "bytes": 1088,
+      "sha256": "690406c0eeadafd2db83749af21bfdeda04aebe119a121863b33685989310f0f"
+    },
+    {
+      "path": "Lightpipe_Export_Checks.json",
+      "bytes": 599,
+      "sha256": "2363699877718ae0cee9e827d52f6dfbe2a7ebee2c45cabddc4287d3925bc9e0"
+    },
+    {
+      "path": "Mechanical_Handoff.md",
+      "bytes": 10262,
+      "sha256": "81551c6b979c694befeb6b4930945a61a1e7cb54c56404cf5b9ed77cfa8c2a87"
+    },
+    {
+      "path": "Oval_E1_Assembly_FIT_CANDIDATE.step",
+      "bytes": 4158287,
+      "sha256": "215ee91ce96ad8d1ea093dc2385effa8858a8242127eef9d34a2eebfa29d2428"
+    },
+    {
+      "path": "Oval_E1_Checks.json",
+      "bytes": 322325,
+      "sha256": "3ab822afca7e8442c7d9bb5c5b6b6c349be9160504e6d6f4bac443aff0de9d83"
+    },
+    {
+      "path": "Oval_E1_Exploded_Labeled.png",
+      "bytes": 307760,
+      "sha256": "80608cda603eb84ed8ae131a0e021b558f26b37439093db22c30b409b68853ce"
+    },
+    {
+      "path": "Oval_E1_Exploded_VIEW_ONLY.step",
+      "bytes": 4124711,
+      "sha256": "062a9c58f502160e2ed93cbfa97b9954e25dbfd6dae5c91900a28a2ded67af01"
+    },
+    {
+      "path": "Oval_E1_Gold_Exterior.png",
+      "bytes": 186451,
+      "sha256": "8b2ffb638fbf51ce6cb544ef4569bbcb927c6e3eeb315d857757e5d4dc72a78a"
+    },
+    {
+      "path": "Oval_E1_Inside.png",
+      "bytes": 203394,
+      "sha256": "0db1af916a2e00c102c825c6bd4f1b543229a9d7c337e99f46a80459c28c7d06"
+    },
+    {
+      "path": "Oval_E1_Port_and_Controls.png",
+      "bytes": 179820,
+      "sha256": "96e2ae48b2fe7cc7e795bf2694d99042f24fdeaaa3433c69d7842fdcd8bfe98b"
+    },
+    {
+      "path": "Oval_E1_Three_Print_Parts_GEOMETRY_ONLY.3mf",
+      "bytes": 3854428,
+      "sha256": "28c5ca0462438bef20a3b9a9ad5987f515665995452b081ce206108e2fb29e58"
+    },
+    {
+      "path": "Oval_Mechanical_Details.json",
+      "bytes": 1640,
+      "sha256": "a8e24eda76d300d5d038c1f574603f0dc77fd40be6dcf74a4b9bd3e845b99884"
+    },
+    {
+      "path": "Print_Export_Checks.json",
+      "bytes": 2609,
+      "sha256": "519abcdb1e5929c5cafd9d40c6dc9cffa4ec62f408422e7276120061b93cb310"
+    },
+    {
+      "path": "Rear_Service_Cover.step",
+      "bytes": 613301,
+      "sha256": "8652b136f081c7a052495b93756b7e07b88fe79bb0e06e29a533eb1063ff8a9a"
+    },
+    {
+      "path": "Rear_Service_Cover.stl",
+      "bytes": 7340784,
+      "sha256": "4e16acc055873e737043fe139244cd73549f6f4ec02064c66ef87496c49ebf67"
+    },
+    {
+      "path": "build_oval_e1.py",
+      "bytes": 21668,
+      "sha256": "af87f7a3a22252f794d7c4dbb62a8c25dcc143d6c031e9016cbc9971669f6717"
+    },
+    {
+      "path": "harness_fragment.py",
+      "bytes": 3893,
+      "sha256": "ab172416168d6b5a4398e93550e4c43848768753f478cbb1a4e1487ff306f823"
+    },
+    {
+      "path": "package_print_parts.py",
+      "bytes": 4495,
+      "sha256": "98775d7dfcae5348e0dbe720c89b25b65841263a125e8307fd31304325ea6c56"
+    },
+    {
+      "path": "render_details.py",
+      "bytes": 4219,
+      "sha256": "e7532f97944340b71ffa80ed245bdfeb3ebfa1d646d5d52c5a40b8ec711db0ce"
+    },
+    {
+      "path": "source_inputs/Final_PCB_Mechanical_Contract.json",
+      "bytes": 631920,
+      "sha256": "36b4f370ce584a81f6603b453867acf4dcb8f2ca2bd35bf09e306cc1f25bf359"
+    },
+    {
+      "path": "source_inputs/render_helpers.py",
+      "bytes": 3696,
+      "sha256": "81d2553e715f4c7bc5fe7baa97303d61f0a541c0cf771d1539358153e9707909"
+    },
+    {
+      "path": "validate_cad_handoff.py",
+      "bytes": 4876,
+      "sha256": "12c8f9073962acc856a11ded9714afb8893dfc6e5d3f67b86c7b906fbc959749"
+    }
+  ]
+}

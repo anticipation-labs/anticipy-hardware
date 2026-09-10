@@ -1,0 +1,1 @@
+(fp_lib_table (lib (name "Anticipy_E1_Release") (type "KiCad") (uri "${KIPRJMOD}/Anticipy_E1_Release.pretty") (options "") (descr "E1 project-local release footprints; see provenance and KiCad library license")))

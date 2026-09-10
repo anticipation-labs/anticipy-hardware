@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-09-09T10:28:49.205731+00:00",
+  "board_sha256": "137bf2814371842fb071526d6b6c3c138dfceb2d92459d390f8d55ac541d3a44",
+  "target": "anticipy_e1/nrf52840",
+  "ncs": "2.7.0",
+  "toolchain": "f8037e9b83",
+  "build": "PASS",
+  "flash_bytes": 278692,
+  "ram_bytes": 177244,
+  "source_changes_this_revision": false,
+  "physical_flash_or_test": false,
+  "charging_enabled": false,
+  "offline_NAND_recording_integrated": false,
+  "signed_updates_integrated": false,
+  "artifacts": {
+    "binaries/Anticipy_E1P1_BUCK2_MAIN.bin": "bc66b6957bb6f0d5f9c27736b39bd574b420fc9fc486183fc2af53a921f913d1",
+    "binaries/Anticipy_E1P1_BUCK2_MAIN.elf": "c807a0f622763c1c709885ce0da51a073847c72df28f82dd37ba03bdad628fe9",
+    "binaries/Anticipy_E1P1_BUCK2_MAIN.hex": "32f07cc6a49089f5488ea34ace23362a1aee2d62906eb0dfbf6f122faeda38d7"
+  },
+  "verification": [
+    "23 native-netlist/device-tree power checks PASS",
+    "firmware host logic PASS",
+    "10 million packet reassembly / bounded queue host stress PASS with deliberate overload drops",
+    "current E1 C Opus encoder (AddressSanitizer) to actual phone Swift decoder host contract PASS"
+  ],
+  "limits": "No physical ARM target, microphone, radio, charging, acoustic, 16-hour runtime, RF or iPhone-device validation."
+}

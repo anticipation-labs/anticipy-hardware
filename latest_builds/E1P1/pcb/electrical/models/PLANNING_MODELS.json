@@ -1,0 +1,61 @@
+{
+  "scope": "Simplified maximum/planning bodies only, not manufacturer detailed solid models. Dimensions are mm in KiCad footprint-local coordinates; USB model is mid-mount.",
+  "models": {
+    "U2": [
+      5.1,
+      5.1,
+      0.9,
+      0,
+      0,
+      0
+    ],
+    "U5": [
+      8.1,
+      6.1,
+      0.8,
+      0,
+      0,
+      0
+    ],
+    "MIC1": [
+      3.1,
+      4.1,
+      1.25,
+      0,
+      0,
+      0
+    ],
+    "MIC2": [
+      3.1,
+      4.1,
+      1.25,
+      0,
+      0,
+      0
+    ],
+    "LED1": [
+      1.7,
+      0.9,
+      0.6,
+      0,
+      0,
+      0
+    ],
+    "D2": [
+      1.05,
+      0.65,
+      0.55,
+      0,
+      0,
+      0
+    ],
+    "J1": [
+      9.2,
+      6.2,
+      3.16,
+      0,
+      -3.1,
+      -1.98
+    ]
+  }
+}

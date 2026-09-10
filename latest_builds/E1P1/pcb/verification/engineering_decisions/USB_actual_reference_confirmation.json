@@ -1,0 +1,27 @@
+{
+  "source_sha256": "3a24a58ccb9d19cac9abba010b2b4290a42bbe3eef289906950fdb5131f33bf4",
+  "reference_layer": "In2.Cu actual filled GND",
+  "keepout_explanation": "Named In2 track keepout disallows signal tracks but ALLOWS copper zone pour. It protects the filled GND reference; it is not a GND exclusion.",
+  "corridor_x_mm": [
+    29.6,
+    62.2
+  ],
+  "rows": [
+    {
+      "net": "/USB_D+",
+      "B_Cu_main_centerline_length_mm": 33.742993917145064,
+      "missing_actual_In2_filled_GND_projection_mm": 0.0,
+      "reference_dielectric_height_mm": 0.0994,
+      "width_mm": 0.135,
+      "pair_edge_gap_mm": 0.15
+    },
+    {
+      "net": "/USB_D-",
+      "B_Cu_main_centerline_length_mm": 33.73873212890258,
+      "missing_actual_In2_filled_GND_projection_mm": 0.0,
+      "reference_dielectric_height_mm": 0.0994,
+      "width_mm": 0.135,
+      "pair_edge_gap_mm": 0.15
+    }
+  ]
+}

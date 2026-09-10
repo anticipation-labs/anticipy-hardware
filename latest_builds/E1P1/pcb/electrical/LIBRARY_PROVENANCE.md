@@ -1,0 +1,5 @@
+# Library provenance
+
+Project-local assembled variants derived from the Anticipy R0B libraries, KiCad standard libraries and the named manufacturer drawings. Changes include the Nordic QFN32/thermal-via layout, ground net-tie copper geometry, corrected radio keepouts, NAND EP exclusion, baseline DNP, USB/ESD orientation, text/mask adjustments and local model paths. See verification/footprint_export_provenance.json and model_provenance.json.
+
+The reused KiCad library collection and its modifications retain the KiCad library CC-BY-SA4.0 license and electronic-design exception, in KICAD-LIBRARY-LICENSE.md. Original general model data came from the KiCad10.0.6 bundled libraries (https://gitlab.com/kicad/libraries). Anticipy-specific geometry is based on the user-supplied hardware project and factual package drawings; no manufacturer certification of these models is implied. Newly generated body models are explicitly identified in models/PLANNING_MODELS.json. See the full assembly planning STEP for maximum-body fit checks; stock library models are not certified maximum envelopes.

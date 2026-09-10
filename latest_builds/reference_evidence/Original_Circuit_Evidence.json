@@ -1,0 +1,146 @@
+{
+  "source": "outputs/Anticipy_Oval_E1_2026-09-09/pcb/verification/native_netlist.xml",
+  "sha256": "d75f5629048894487c9cb708d99315ac861295a24ee50c31e1630227648b011d",
+  "components": {
+    "C17": {
+      "value": "100nF 10V X7R",
+      "footprint": "Anticipy_E1_Release:C17__C_0402_1005Metric",
+      "fields": {
+        "Manufacturer": "TDK",
+        "MPN": "C1005X7R1A104K050BC",
+        "Footprint": "Anticipy_E1_Release:C17__C_0402_1005Metric",
+        "Datasheet": null,
+        "Description": "Flash local bypass"
+      },
+      "properties": {
+        "Manufacturer": "TDK",
+        "MPN": "C1005X7R1A104K050BC",
+        "Sheetname": "Anticipy_R1_E1_PROTOTYPE",
+        "Sheetfile": "Anticipy_R1_E1_PROTOTYPE.kicad_sch"
+      },
+      "nets": {
+        "1": {
+          "name": "/3V_MAIN",
+          "pinfunction": "1_1"
+        },
+        "2": {
+          "name": "/GND",
+          "pinfunction": "2_2"
+        }
+      }
+    },
+    "C19": {
+      "value": "100nF 10V X7R",
+      "footprint": "Anticipy_E1_Release:C19__C_0402_1005Metric",
+      "fields": {
+        "Manufacturer": "TDK",
+        "MPN": "C1005X7R1A104K050BC",
+        "Footprint": "Anticipy_E1_Release:C19__C_0402_1005Metric",
+        "Datasheet": null,
+        "Description": "MIC1 local bypass"
+      },
+      "properties": {
+        "Manufacturer": "TDK",
+        "MPN": "C1005X7R1A104K050BC",
+        "Sheetname": "Anticipy_R1_E1_PROTOTYPE",
+        "Sheetfile": "Anticipy_R1_E1_PROTOTYPE.kicad_sch"
+      },
+      "nets": {
+        "1": {
+          "name": "/3V_MIC",
+          "pinfunction": "1_1"
+        },
+        "2": {
+          "name": "/GND",
+          "pinfunction": "2_2"
+        }
+      }
+    },
+    "C20": {
+      "value": "100nF 10V X7R",
+      "footprint": "Anticipy_E1_Release:C20__C_0402_1005Metric",
+      "fields": {
+        "Manufacturer": "TDK",
+        "MPN": "C1005X7R1A104K050BC",
+        "Footprint": "Anticipy_E1_Release:C20__C_0402_1005Metric",
+        "Datasheet": null,
+        "Description": "MIC2 local bypass; optional second microphone, DNP for baseline"
+      },
+      "properties": {
+        "Manufacturer": "TDK",
+        "MPN": "C1005X7R1A104K050BC",
+        "Sheetname": "Anticipy_R1_E1_PROTOTYPE",
+        "Sheetfile": "Anticipy_R1_E1_PROTOTYPE.kicad_sch",
+        "dnp": null
+      },
+      "nets": {
+        "1": {
+          "name": "/3V_MIC",
+          "pinfunction": "1_1"
+        },
+        "2": {
+          "name": "/GND",
+          "pinfunction": "2_2"
+        }
+      }
+    },
+    "C22": {
+      "value": "100nF 10V X7R",
+      "footprint": "Anticipy_E1_Release:C22__C_0402_1005Metric",
+      "fields": {
+        "Manufacturer": "TDK",
+        "MPN": "C1005X7R1A104K050BC",
+        "Footprint": "Anticipy_E1_Release:C22__C_0402_1005Metric",
+        "Datasheet": null,
+        "Description": "Motor brush-noise capacitor"
+      },
+      "properties": {
+        "Manufacturer": "TDK",
+        "MPN": "C1005X7R1A104K050BC",
+        "Sheetname": "Anticipy_R1_E1_PROTOTYPE",
+        "Sheetfile": "Anticipy_R1_E1_PROTOTYPE.kicad_sch"
+      },
+      "nets": {
+        "1": {
+          "name": "/3V_MAIN",
+          "pinfunction": "1_1"
+        },
+        "2": {
+          "name": "/HAPTIC_NEG",
+          "pinfunction": "2_2"
+        }
+      }
+    },
+    "U4": {
+      "value": "TPD2EUSB30DRTR",
+      "footprint": "Anticipy_E1_Release:U4__Texas_DRT-3_R0B",
+      "fields": {
+        "Manufacturer": "Texas Instruments",
+        "MPN": "TPD2EUSB30DRTR",
+        "Footprint": "Anticipy_E1_Release:U4__Texas_DRT-3_R0B",
+        "Datasheet": "https://www.ti.com/lit/ds/symlink/tpd2eusb30.pdf",
+        "Description": "USB 2.0 data-line ESD protection"
+      },
+      "properties": {
+        "Manufacturer": "Texas Instruments",
+        "MPN": "TPD2EUSB30DRTR",
+        "Sheetname": "Anticipy_R1_E1_PROTOTYPE",
+        "Sheetfile": "Anticipy_R1_E1_PROTOTYPE.kicad_sch"
+      },
+      "nets": {
+        "3": {
+          "name": "/GND",
+          "pinfunction": "GND_3"
+        },
+        "1": {
+          "name": "/USB_D+",
+          "pinfunction": "IO1_1"
+        },
+        "2": {
+          "name": "/USB_D-",
+          "pinfunction": "IO2_2"
+        }
+      }
+    }
+  }
+}

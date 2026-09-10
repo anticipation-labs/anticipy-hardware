@@ -1,0 +1,5 @@
+  ok    recovery touch arms and disarms on the real thresholds
+  ok    backpressure is survivable and nothing else is
+  ok    the capture geometry divides, read from the real config.h
+  ok    a failed notify still refuses to advance the sequence
+firmware pure-logic checks: all passed (NOT a build, NOT hardware)

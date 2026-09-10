@@ -1,0 +1,21 @@
+{
+  "nrf_connect_sdk_release": "2.7.0",
+  "toolchain_bundle_id": "f8037e9b83",
+  "toolchain_reported_version": "2.7.20240620.1065210518403",
+  "zephyr_reported_version": "3.6.99",
+  "zephyr_build_tag": "v3.6.99-ncs2",
+  "west_version": "1.2.0",
+  "cmake_version": "3.21.0",
+  "python_version": "3.9.6",
+  "dtc_version": "1.6.1",
+  "gnu_ld_version": "2.38",
+  "board_target": "anticipy_e1/nrf52840",
+  "application_directory": "app",
+  "board_root": "app (set by app/CMakeLists.txt)",
+  "configuration": "app/prj.conf",
+  "sdk_source": "https://github.com/nrfconnect/sdk-nrf/tree/v2.7.0",
+  "sdk_manifest_reference": "https://github.com/nrfconnect/sdk-nrf/blob/v2.7.0/west.yml",
+  "sdk_dependencies": "Install the complete NCS 2.7.0 workspace and matching f8037e9b83 toolchain through Nordic tooling. SDK sources and proprietary toolchain binaries are intentionally not included.",
+  "evidence": "Original build log and retained CMakeCache.txt inspected locally; all application files match the programming receipt.",
+  "reproducibility_limit": "This snapshot preserves the matching application source and build invocation. A relocated rebuild has not been run. SDK worktree cleanliness and every installed SDK dependency commit were not independently audited in this source export; bit-identical output after relocation is not claimed."
+}

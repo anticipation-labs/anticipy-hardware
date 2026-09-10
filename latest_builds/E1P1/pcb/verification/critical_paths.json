@@ -1,0 +1,208 @@
+[
+  {
+    "net": "USB_D+",
+    "first": "J1.6",
+    "last": "R10.1",
+    "approx_planar_path_with_pad_spreading_mm": 38.724,
+    "via_height_excluded": true,
+    "overlap_junction_distance_costed": true
+  },
+  {
+    "net": "USB_MCU_D+",
+    "first": "R10.2",
+    "last": "U1.35",
+    "approx_planar_path_with_pad_spreading_mm": 1.903,
+    "via_height_excluded": true,
+    "overlap_junction_distance_costed": true
+  },
+  {
+    "net": "USB_D-",
+    "first": "J1.5",
+    "last": "R11.1",
+    "approx_planar_path_with_pad_spreading_mm": 37.988,
+    "via_height_excluded": true,
+    "overlap_junction_distance_costed": true
+  },
+  {
+    "net": "USB_MCU_D-",
+    "first": "R11.2",
+    "last": "U1.34",
+    "approx_planar_path_with_pad_spreading_mm": 1.945,
+    "via_height_excluded": true,
+    "overlap_junction_distance_costed": true
+  },
+  {
+    "net": "PDM_CLK",
+    "first": "U1.38",
+    "last": "MIC1.3",
+    "approx_planar_path_with_pad_spreading_mm": 25.031,
+    "via_height_excluded": true,
+    "overlap_junction_distance_costed": true
+  },
+  {
+    "net": "PDM_CLK",
+    "first": "MIC1.3",
+    "last": "MIC2.3",
+    "approx_planar_path_with_pad_spreading_mm": 7.637,
+    "via_height_excluded": true,
+    "overlap_junction_distance_costed": true
+  },
+  {
+    "net": "PDM_DATA",
+    "first": "R8.2",
+    "last": "U1.39",
+    "approx_planar_path_with_pad_spreading_mm": 22.649,
+    "via_height_excluded": true,
+    "overlap_junction_distance_costed": true
+  },
+  {
+    "net": "PDM_DATA_MIC1",
+    "first": "MIC1.4",
+    "last": "R8.1",
+    "approx_planar_path_with_pad_spreading_mm": 3.47,
+    "via_height_excluded": true,
+    "overlap_junction_distance_costed": true
+  },
+  {
+    "net": "I2C_SCL",
+    "first": "U1.19",
+    "last": "U2.14",
+    "approx_planar_path_with_pad_spreading_mm": 37.947,
+    "via_height_excluded": true,
+    "overlap_junction_distance_costed": true
+  },
+  {
+    "net": "I2C_SDA",
+    "first": "U1.16",
+    "last": "U2.13",
+    "approx_planar_path_with_pad_spreading_mm": 33.211,
+    "via_height_excluded": true,
+    "overlap_junction_distance_costed": true
+  },
+  {
+    "net": "FLASH_SCK",
+    "first": "U1.42",
+    "last": "U5.6",
+    "approx_planar_path_with_pad_spreading_mm": 14.31,
+    "via_height_excluded": true,
+    "overlap_junction_distance_costed": true
+  },
+  {
+    "net": "FLASH_IO0",
+    "first": "U1.43",
+    "last": "U5.5",
+    "approx_planar_path_with_pad_spreading_mm": 16.382,
+    "via_height_excluded": true,
+    "overlap_junction_distance_costed": true
+  },
+  {
+    "net": "FLASH_IO1",
+    "first": "U5.2",
+    "last": "U1.46",
+    "approx_planar_path_with_pad_spreading_mm": 23.662,
+    "via_height_excluded": true,
+    "overlap_junction_distance_costed": true
+  },
+  {
+    "net": "FLASH_CS",
+    "first": "U1.44",
+    "last": "U5.1",
+    "error": "No route in centerline approximation; inspect native connectivity"
+  },
+  {
+    "net": "SWDCLK",
+    "first": "TP2.1",
+    "last": "U1.53",
+    "approx_planar_path_with_pad_spreading_mm": 51.258,
+    "via_height_excluded": true,
+    "overlap_junction_distance_costed": true
+  },
+  {
+    "net": "SWDIO",
+    "first": "TP1.1",
+    "last": "U1.51",
+    "approx_planar_path_with_pad_spreading_mm": 50.023,
+    "via_height_excluded": true,
+    "overlap_junction_distance_costed": true
+  },
+  {
+    "net": "3V_MAIN",
+    "first": "L2.1",
+    "last": "U1.28",
+    "approx_planar_path_with_pad_spreading_mm": 49.838,
+    "via_height_excluded": true,
+    "overlap_junction_distance_costed": true
+  },
+  {
+    "net": "3V_MAIN",
+    "first": "L2.1",
+    "last": "U5.8",
+    "approx_planar_path_with_pad_spreading_mm": 51.81,
+    "via_height_excluded": true,
+    "overlap_junction_distance_costed": true
+  },
+  {
+    "net": "3V_MAIN",
+    "first": "L2.1",
+    "last": "M1.1",
+    "approx_planar_path_with_pad_spreading_mm": 42.121,
+    "via_height_excluded": true,
+    "overlap_junction_distance_costed": true
+  },
+  {
+    "net": "VBAT",
+    "first": "BT1.1",
+    "last": "U2.19",
+    "approx_planar_path_with_pad_spreading_mm": 31.47,
+    "via_height_excluded": true,
+    "overlap_junction_distance_costed": true
+  },
+  {
+    "net": "VBUS",
+    "first": "J1.2",
+    "last": "U2.21",
+    "approx_planar_path_with_pad_spreading_mm": 13.163,
+    "via_height_excluded": true,
+    "overlap_junction_distance_costed": true
+  },
+  {
+    "net": "USB_D+",
+    "first": "J1.8",
+    "last": "R10.1",
+    "approx_planar_path_with_pad_spreading_mm": 38.322,
+    "via_height_excluded": true,
+    "overlap_junction_distance_costed": true
+  },
+  {
+    "net": "USB_D-",
+    "first": "J1.7",
+    "last": "R11.1",
+    "approx_planar_path_with_pad_spreading_mm": 38.767,
+    "via_height_excluded": true,
+    "overlap_junction_distance_costed": true
+  },
+  {
+    "net": "2V5_AUX",
+    "first": "L1.1",
+    "last": "U2.1",
+    "approx_planar_path_with_pad_spreading_mm": 9.801,
+    "via_height_excluded": true,
+    "overlap_junction_distance_costed": true
+  },
+  {
+    "net": "2V5_AUX",
+    "first": "L1.1",
+    "last": "TP12.1",
+    "approx_planar_path_with_pad_spreading_mm": 9.776,
+    "via_height_excluded": true,
+    "overlap_junction_distance_costed": true
+  },
+  {
+    "net": "3V_MAIN",
+    "first": "L2.1",
+    "last": "U2.32",
+    "approx_planar_path_with_pad_spreading_mm": 16.337,
+    "via_height_excluded": true,
+    "overlap_junction_distance_costed": true
+  }
+]

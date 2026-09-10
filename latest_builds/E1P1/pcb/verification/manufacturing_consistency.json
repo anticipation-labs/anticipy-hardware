@@ -1,0 +1,18 @@
+{
+  "source_PCB_sha256": "78fe28acde6ceb3ab33aac8af503d4c418540cce31979cc91d3add5e5d0bec36",
+  "fitted_BOM_rows": 47,
+  "placement_rows": 47,
+  "same_exact_reference_set": true,
+  "stencil_exact_fitted_set": true,
+  "gerber_layers": 11,
+  "gerber_job": 1,
+  "drill_files": [
+    "Anticipy_R1_E1_PROTOTYPE-NPTH.drl",
+    "Anticipy_R1_E1_PROTOTYPE-PTH.drl"
+  ],
+  "through_vias": 137,
+  "open_plated_connector_slots": 4,
+  "NPTH_count": 0,
+  "source_BOM_status": "Released exact selected MPNs",
+  "product_qualification": "NOT_COMPLETE"
+}

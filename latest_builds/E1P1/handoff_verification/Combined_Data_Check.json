@@ -1,0 +1,18 @@
+{
+  "checked_UTC": "2026-09-09T14:40:53.001668+00:00",
+  "PCB_sha256": "78fe28acde6ceb3ab33aac8af503d4c418540cce31979cc91d3add5e5d0bec36",
+  "cad_input_matches_exact_PCB": true,
+  "cad_manifest_files_hash_verified": 29,
+  "CAD_geometry_checks": 2826,
+  "CAD_geometry_failures": 0,
+  "new_electrical_changes_in_handoff": false,
+  "physical_tests_performed": false,
+  "supplier_slot_booked": false,
+  "shipping_booked": false,
+  "procurement_rows": 48,
+  "exact_SMT_groups_checked": 27,
+  "SMT_pieces_20_boards": 940,
+  "SMT_pieces_22_boards": 1034,
+  "conditional_new_SMT_pieces": 970,
+  "procurement_matches_BOM_references_and_quantities": true
+}

@@ -1,0 +1,30 @@
+{
+  "created_utc": "2026-09-10T03:32:11.181389+00:00",
+  "status": "MATCHED_EXISTING_BENCH_SOURCE_AND_HEX",
+  "source_app_original_path": "outputs/Anticipy_Oval_E1_2026-09-09/firmware/app",
+  "source_file_count": 253,
+  "source_tree_sha256": "68ca22925e41b8f59f4046707d09bd79a32a624099f8b8f831979c0b61bf3773",
+  "source_tree_algorithm": "SHA256 of sorted relative_path TAB file_sha256 rows joined by newline, without trailing newline",
+  "released_hex_filename": "Anticipy_E1P1_BUCK2_MAIN_FIRST_POWER.hex",
+  "released_hex_sha256": "32f07cc6a49089f5488ea34ace23362a1aee2d62906eb0dfbf6f122faeda38d7",
+  "matching_hex_copies": [
+    "outputs/Anticipy_E1P1_Boston_Handoff_2026-09-09/programming/Anticipy_E1P1_BUCK2_MAIN_FIRST_POWER.hex",
+    "outputs/Anticipy_Oval_E1_2026-09-09/firmware/binaries/Anticipy_E1P1_BUCK2_MAIN.hex",
+    "work/oval-firmware-build/target/zephyr/zephyr.hex"
+  ],
+  "original_build_receipt_sha256": "c09896f55cc99d0f94bc67a691fc96036f173d8b8f623989061a8fca53c9cfd2",
+  "current_pcb_sha256": "78fe28acde6ceb3ab33aac8af503d4c418540cce31979cc91d3add5e5d0bec36",
+  "current_native_netlist_sha256": "e84bb5ce15d023e4084ed05bbf519515ec81f70e87bdd4d86126426a0edf52db",
+  "current_generated_dts_sha256": "4063683087137357bbb2672aba0137a70623028ec3ac8c8887a66514b04e6811",
+  "app_files_changed_for_export": false,
+  "target_recompiled_for_export": false,
+  "physical_flashing_or_testing": false,
+  "charging_enabled": false,
+  "offline_recording_integrated": false,
+  "notes": [
+    "The original build receipt names the prior oval PCB geometry. The later programming receipt binds this unchanged image to the manufacturing PCB through matching power/netlist checks.",
+    "The exact application README is retained as source ancestry and contains an older 200 mAh candidate battery note. The top-level README and current hardware BOM govern the supplied 350 mAh minimum protected pack; charging stays disabled.",
+    "NAND firmware performs identification only. Haptics and USB data are not implemented in this image. Signed updates, storage recovery/backfill and customer ownership remain incomplete.",
+    "No SDK, toolchain, binary image, build directory, cache, Git metadata or credentials are included in this source snapshot."
+  ]
+}

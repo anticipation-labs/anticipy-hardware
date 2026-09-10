@@ -1,0 +1,100 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "BUCK1 auxiliary regulator-min-microvolt=2500000",
+      "pass": true
+    },
+    {
+      "check": "BUCK2 main regulator-min-microvolt=3000000",
+      "pass": true
+    },
+    {
+      "check": "BUCK1 auxiliary regulator-max-microvolt=2500000",
+      "pass": true
+    },
+    {
+      "check": "BUCK2 main regulator-max-microvolt=3000000",
+      "pass": true
+    },
+    {
+      "check": "BUCK1 auxiliary regulator-init-microvolt=2500000",
+      "pass": true
+    },
+    {
+      "check": "BUCK2 main regulator-init-microvolt=3000000",
+      "pass": true
+    },
+    {
+      "check": "BUCK1 auxiliary boot-off",
+      "pass": true
+    },
+    {
+      "check": "BUCK2 main always-on never boot-off",
+      "pass": true
+    },
+    {
+      "check": "charger node exists with no enable properties",
+      "pass": true
+    },
+    {
+      "check": "U2.32 on BUCK2 3V_MAIN",
+      "pass": true
+    },
+    {
+      "check": "L2.1 on BUCK2 3V_MAIN",
+      "pass": true
+    },
+    {
+      "check": "C8.1 on BUCK2 3V_MAIN",
+      "pass": true
+    },
+    {
+      "check": "U1.28 on BUCK2 3V_MAIN",
+      "pass": true
+    },
+    {
+      "check": "U1.30 on BUCK2 3V_MAIN",
+      "pass": true
+    },
+    {
+      "check": "U5.8 on BUCK2 3V_MAIN",
+      "pass": true
+    },
+    {
+      "check": "U2.1 on BUCK1 2V5_AUX",
+      "pass": true
+    },
+    {
+      "check": "L1.1 on BUCK1 2V5_AUX",
+      "pass": true
+    },
+    {
+      "check": "C7.1 on BUCK1 2V5_AUX",
+      "pass": true
+    },
+    {
+      "check": "TP12.1 on BUCK1 2V5_AUX",
+      "pass": true
+    },
+    {
+      "check": "U2.3 retains /SW1",
+      "pass": true
+    },
+    {
+      "check": "L1.2 retains /SW1",
+      "pass": true
+    },
+    {
+      "check": "U2.5 retains /SW2",
+      "pass": true
+    },
+    {
+      "check": "L2.2 retains /SW2",
+      "pass": true
+    }
+  ],
+  "dts_sha256": "4063683087137357bbb2672aba0137a70623028ec3ac8c8887a66514b04e6811",
+  "native_netlist_sha256": "e84bb5ce15d023e4084ed05bbf519515ec81f70e87bdd4d86126426a0edf52db",
+  "scope": "firmware/native-netlist revision pairing only; physical tests NOT_RUN"
+}

@@ -1,0 +1,165 @@
+{
+  "source_sha256": {
+    "Anticipy_R1_E1_PROTOTYPE.kicad_pcb": "78fe28acde6ceb3ab33aac8af503d4c418540cce31979cc91d3add5e5d0bec36",
+    "Anticipy_R1_E1_PROTOTYPE.kicad_dru": "1d77d0ccfb86603e316149cf8dc873cbb134e1cc5ac28e2834af1e39f7dec228",
+    "Anticipy_R1_E1_PROTOTYPE.kicad_pro": "5aa1cf00ef686fe1953dae10c5770f88d3fc8213e220075f64641fdc4a51f113",
+    "Anticipy.kicad_sym": "8fd349480f5b8d0d75e9ad08471c7cce22329378a79cc15cb7a3364d500a3d9d",
+    "Anticipy_R1_E1_PROTOTYPE.kicad_sch": "763bbfa78953252aa27d7553bfb6abf9cb398650fb0bdceafd0432aee5e44021"
+  },
+  "source_unchanged": true,
+  "zone_basis": "Saved copper independently verified by native DRC; refill is separate evidence.",
+  "commands": [
+    {
+      "task": "assembly_top",
+      "command": [
+        "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+        "pcb",
+        "export",
+        "pdf",
+        "--mode-single",
+        "--layers",
+        "F.Fab,Edge.Cuts",
+        "--exclude-value",
+        "--black-and-white",
+        "--crossout-DNP-footprints-on-fab-layers",
+        "--scale",
+        "4",
+        "-o",
+        "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/outputs/Anticipy_E1P1_PCB_Manufacturing_Release_2026-09-09/pcb/manufacturing/Assembly_top.pdf",
+        "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/outputs/Anticipy_E1P1_PCB_Manufacturing_Release_2026-09-09/pcb/electrical/Anticipy_R1_E1_PROTOTYPE.kicad_pcb"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.294
+    },
+    {
+      "task": "assembly_bottom",
+      "command": [
+        "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+        "pcb",
+        "export",
+        "pdf",
+        "--mode-single",
+        "--layers",
+        "B.Fab,Edge.Cuts",
+        "--exclude-value",
+        "--black-and-white",
+        "--mirror",
+        "--scale",
+        "4",
+        "-o",
+        "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/outputs/Anticipy_E1P1_PCB_Manufacturing_Release_2026-09-09/pcb/manufacturing/Assembly_bottom.pdf",
+        "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/outputs/Anticipy_E1P1_PCB_Manufacturing_Release_2026-09-09/pcb/electrical/Anticipy_R1_E1_PROTOTYPE.kicad_pcb"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.297
+    },
+    {
+      "task": "schematic",
+      "command": [
+        "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+        "sch",
+        "export",
+        "pdf",
+        "-o",
+        "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/outputs/Anticipy_E1P1_PCB_Manufacturing_Release_2026-09-09/pcb/manufacturing/Schematic.pdf",
+        "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/outputs/Anticipy_E1P1_PCB_Manufacturing_Release_2026-09-09/pcb/electrical/Anticipy_R1_E1_PROTOTYPE.kicad_sch"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.309
+    },
+    {
+      "task": "gerbers_saved_fills",
+      "command": [
+        "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+        "pcb",
+        "export",
+        "gerbers",
+        "--layers",
+        "F.Cu,In1.Cu,In2.Cu,B.Cu,F.Mask,B.Mask,F.Paste,B.Paste,F.Silkscreen,B.Silkscreen,Edge.Cuts",
+        "--subtract-soldermask",
+        "-o",
+        "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/outputs/Anticipy_E1P1_PCB_Manufacturing_Release_2026-09-09/pcb/manufacturing/gerbers/",
+        "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/outputs/Anticipy_E1P1_PCB_Manufacturing_Release_2026-09-09/pcb/electrical/Anticipy_R1_E1_PROTOTYPE.kicad_pcb"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.336
+    },
+    {
+      "task": "drills",
+      "command": [
+        "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+        "pcb",
+        "export",
+        "drill",
+        "--excellon-separate-th",
+        "--generate-map",
+        "--generate-report",
+        "--map-format",
+        "pdf",
+        "--report-path",
+        "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/outputs/Anticipy_E1P1_PCB_Manufacturing_Release_2026-09-09/pcb/manufacturing/drill_report.txt",
+        "-o",
+        "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/outputs/Anticipy_E1P1_PCB_Manufacturing_Release_2026-09-09/pcb/manufacturing/drill/",
+        "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/outputs/Anticipy_E1P1_PCB_Manufacturing_Release_2026-09-09/pcb/electrical/Anticipy_R1_E1_PROTOTYPE.kicad_pcb"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.3
+    },
+    {
+      "task": "positions",
+      "command": [
+        "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+        "pcb",
+        "export",
+        "pos",
+        "--format",
+        "csv",
+        "--units",
+        "mm",
+        "--side",
+        "both",
+        "--exclude-dnp",
+        "-o",
+        "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/outputs/Anticipy_E1P1_PCB_Manufacturing_Release_2026-09-09/pcb/manufacturing/Placement.csv",
+        "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/outputs/Anticipy_E1P1_PCB_Manufacturing_Release_2026-09-09/pcb/electrical/Anticipy_R1_E1_PROTOTYPE.kicad_pcb"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.278
+    },
+    {
+      "task": "ipc356",
+      "command": [
+        "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+        "pcb",
+        "export",
+        "ipcd356",
+        "-o",
+        "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/outputs/Anticipy_E1P1_PCB_Manufacturing_Release_2026-09-09/pcb/manufacturing/Connectivity.ipc",
+        "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/outputs/Anticipy_E1P1_PCB_Manufacturing_Release_2026-09-09/pcb/electrical/Anticipy_R1_E1_PROTOTYPE.kicad_pcb"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.272
+    },
+    {
+      "task": "copper_pdf",
+      "command": [
+        "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+        "pcb",
+        "export",
+        "pdf",
+        "--mode-multipage",
+        "--layers",
+        "F.Cu,In1.Cu,In2.Cu,B.Cu",
+        "--common-layers",
+        "Edge.Cuts",
+        "--scale",
+        "0",
+        "-o",
+        "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/outputs/Anticipy_E1P1_PCB_Manufacturing_Release_2026-09-09/pcb/manufacturing/Copper_layers.pdf",
+        "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/outputs/Anticipy_E1P1_PCB_Manufacturing_Release_2026-09-09/pcb/electrical/Anticipy_R1_E1_PROTOTYPE.kicad_pcb"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.395
+    }
+  ]
+}

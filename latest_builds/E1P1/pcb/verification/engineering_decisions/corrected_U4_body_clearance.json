@@ -1,0 +1,20 @@
+{
+  "U4_new_center": [
+    28.15,
+    29.45
+  ],
+  "max_body_gap_mm": 0.375,
+  "after_assumed_0_05mm_placement_each_mm": 0.275,
+  "max_U4_whole_envelope_mm": [
+    1.25,
+    1.05,
+    0.5
+  ],
+  "footprint_rotation_deg": -90,
+  "C1_max_body_mm": [
+    1.7,
+    0.9,
+    0.9
+  ],
+  "U4_C1_negative_courtyard_rule": "removed"
+}

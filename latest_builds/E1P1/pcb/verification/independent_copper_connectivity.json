@@ -1,0 +1,944 @@
+[
+  {
+    "net": "2V5_AUX",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "C7.1": [
+        0
+      ],
+      "L1.1": [
+        0
+      ],
+      "U2.1": [
+        0
+      ],
+      "TP12.1": [
+        0
+      ]
+    }
+  },
+  {
+    "net": "3V_MAIN",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "R13.1": [
+        0
+      ],
+      "U1.28": [
+        0
+      ],
+      "U1.30": [
+        0
+      ],
+      "R2.1": [
+        0
+      ],
+      "R1.1": [
+        0
+      ],
+      "C8.1": [
+        0
+      ],
+      "U2.12": [
+        0
+      ],
+      "U2.28": [
+        0
+      ],
+      "U2.32": [
+        0
+      ],
+      "C17.1": [
+        0
+      ],
+      "D1.1": [
+        0
+      ],
+      "C13.1": [
+        0
+      ],
+      "R7.1": [
+        0
+      ],
+      "R12.1": [
+        0
+      ],
+      "C22.1": [
+        0
+      ],
+      "L2.1": [
+        0
+      ],
+      "C23.1": [
+        0
+      ],
+      "C18.1": [
+        0
+      ],
+      "U5.8": [
+        0
+      ],
+      "M1.1": [
+        0
+      ],
+      "C25.1": [
+        0
+      ],
+      "TP4.1": [
+        0
+      ]
+    }
+  },
+  {
+    "net": "3V_MIC",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "C20.1": [
+        0
+      ],
+      "U2.29": [
+        0
+      ],
+      "MIC2.1": [
+        0
+      ],
+      "MIC2.2": [
+        0
+      ],
+      "C19.1": [
+        0
+      ],
+      "MIC1.1": [
+        0
+      ],
+      "C10.1": [
+        0
+      ],
+      "TP13.1": [
+        0
+      ]
+    }
+  },
+  {
+    "net": "FLASH_CS",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "U1.44": [
+        2
+      ],
+      "R7.2": [
+        2
+      ],
+      "U5.1": [
+        2
+      ]
+    }
+  },
+  {
+    "net": "FLASH_IO0",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "U1.43": [
+        0
+      ],
+      "U5.5": [
+        0
+      ]
+    }
+  },
+  {
+    "net": "FLASH_IO1",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "U1.46": [
+        0
+      ],
+      "U5.2": [
+        0
+      ]
+    }
+  },
+  {
+    "net": "FLASH_IO2",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "U1.45": [
+        0
+      ],
+      "R12.2": [
+        0
+      ],
+      "U5.3": [
+        0
+      ]
+    }
+  },
+  {
+    "net": "FLASH_IO3",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "R13.2": [
+        2
+      ],
+      "U1.47": [
+        2
+      ],
+      "U5.7": [
+        2
+      ]
+    }
+  },
+  {
+    "net": "FLASH_SCK",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "U1.42": [
+        0
+      ],
+      "U5.6": [
+        0
+      ]
+    }
+  },
+  {
+    "net": "GND",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "R6.2": [
+        3
+      ],
+      "C6.2": [
+        3
+      ],
+      "U4.3": [
+        3
+      ],
+      "U1.1": [
+        3
+      ],
+      "U1.2": [
+        3
+      ],
+      "U1.15": [
+        3
+      ],
+      "U1.33": [
+        3
+      ],
+      "U1.55": [
+        3
+      ],
+      "NT1.2": [
+        3
+      ],
+      "SW1.2": [
+        3
+      ],
+      "C20.2": [
+        3
+      ],
+      "Q1.2": [
+        3
+      ],
+      "U2.33": [
+        3
+      ],
+      "J1.1": [
+        3
+      ],
+      "J1.12": [
+        3
+      ],
+      "J1.S1": [
+        3
+      ],
+      "J1.S2": [
+        3
+      ],
+      "J1.S3": [
+        3
+      ],
+      "J1.S4": [
+        3
+      ],
+      "C17.2": [
+        3
+      ],
+      "MIC2.5": [
+        3
+      ],
+      "MIC2.6": [
+        3
+      ],
+      "MIC2.7": [
+        3
+      ],
+      "MIC2.8": [
+        3
+      ],
+      "C19.2": [
+        3
+      ],
+      "C13.2": [
+        3
+      ],
+      "U6.3": [
+        3
+      ],
+      "C4.2": [
+        3
+      ],
+      "C26.2": [
+        3
+      ],
+      "MIC1.2": [
+        3
+      ],
+      "MIC1.5": [
+        3
+      ],
+      "MIC1.6": [
+        3
+      ],
+      "MIC1.7": [
+        3
+      ],
+      "MIC1.8": [
+        3
+      ],
+      "C23.2": [
+        3
+      ],
+      "R3.2": [
+        3
+      ],
+      "C10.2": [
+        3
+      ],
+      "C9.2": [
+        3
+      ],
+      "D2.2": [
+        3
+      ],
+      "C1.2": [
+        3
+      ],
+      "C18.2": [
+        3
+      ],
+      "U5.4": [
+        3
+      ],
+      "U5.9": [
+        3
+      ],
+      "NT2.2": [
+        3
+      ],
+      "C16.2": [
+        3
+      ],
+      "C5.2": [
+        3
+      ],
+      "R4.2": [
+        3
+      ],
+      "TP5.1": [
+        3
+      ],
+      "TH1.2": [
+        3
+      ],
+      "BT1.2": [
+        3
+      ],
+      "C25.2": [
+        3
+      ]
+    }
+  },
+  {
+    "net": "HAPTIC_GATE",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "R6.1": [
+        0
+      ],
+      "Q1.1": [
+        0
+      ],
+      "R5.2": [
+        0
+      ]
+    }
+  },
+  {
+    "net": "HAPTIC_NEG",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "Q1.3": [
+        0
+      ],
+      "D1.2": [
+        0
+      ],
+      "C22.2": [
+        0
+      ],
+      "M1.2": [
+        0
+      ]
+    }
+  },
+  {
+    "net": "HAPTIC_PWM",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "U1.24": [
+        0
+      ],
+      "R5.1": [
+        0
+      ]
+    }
+  },
+  {
+    "net": "I2C_SCL",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "U1.19": [
+        1
+      ],
+      "R1.2": [
+        1
+      ],
+      "U2.14": [
+        1
+      ]
+    }
+  },
+  {
+    "net": "I2C_SDA",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "U1.16": [
+        3
+      ],
+      "R2.2": [
+        3
+      ],
+      "U2.13": [
+        3
+      ]
+    }
+  },
+  {
+    "net": "LED_BLUE_K",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "LED1.1": [
+        1
+      ],
+      "U2.25": [
+        1
+      ]
+    }
+  },
+  {
+    "net": "LED_RED_K",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "LED1.3": [
+        0
+      ],
+      "U2.26": [
+        0
+      ]
+    }
+  },
+  {
+    "net": "NTC",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "U2.18": [
+        0
+      ],
+      "TH1.1": [
+        0
+      ]
+    }
+  },
+  {
+    "net": "PDM_CLK",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "U1.38": [
+        1
+      ],
+      "MIC2.3": [
+        1
+      ],
+      "MIC1.3": [
+        1
+      ]
+    }
+  },
+  {
+    "net": "PDM_DATA",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "U1.39": [
+        1
+      ],
+      "R8.2": [
+        1
+      ],
+      "R9.2": [
+        1
+      ]
+    }
+  },
+  {
+    "net": "PDM_DATA_MIC1",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "R8.1": [
+        0
+      ],
+      "MIC1.4": [
+        0
+      ]
+    }
+  },
+  {
+    "net": "PDM_DATA_MIC2",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "MIC2.4": [
+        0
+      ],
+      "R9.1": [
+        0
+      ]
+    }
+  },
+  {
+    "net": "PMIC_INT",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "U1.41": [
+        0
+      ],
+      "U2.7": [
+        0
+      ],
+      "TP14.1": [
+        0
+      ]
+    }
+  },
+  {
+    "net": "PVSS1",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "C7.2": [
+        0
+      ],
+      "NT1.1": [
+        0
+      ],
+      "U2.2": [
+        0
+      ],
+      "C2.2": [
+        0
+      ],
+      "C14.2": [
+        0
+      ]
+    }
+  },
+  {
+    "net": "PVSS2",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "C8.2": [
+        0
+      ],
+      "U2.6": [
+        0
+      ],
+      "C3.2": [
+        0
+      ],
+      "NT2.1": [
+        0
+      ],
+      "C15.2": [
+        0
+      ]
+    }
+  },
+  {
+    "net": "RESET",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "U1.40": [
+        0
+      ],
+      "TP3.1": [
+        0
+      ]
+    }
+  },
+  {
+    "net": "SHPHLD_BTN",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "SW1.1": [
+        1
+      ],
+      "U2.15": [
+        1
+      ]
+    }
+  },
+  {
+    "net": "SW1",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "L1.2": [
+        0
+      ],
+      "U2.3": [
+        0
+      ]
+    }
+  },
+  {
+    "net": "SW2",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "U2.5": [
+        0
+      ],
+      "L2.2": [
+        0
+      ]
+    }
+  },
+  {
+    "net": "SWDCLK",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "U1.53": [
+        1
+      ],
+      "TP2.1": [
+        1
+      ]
+    }
+  },
+  {
+    "net": "SWDIO",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "U1.51": [
+        2
+      ],
+      "TP1.1": [
+        2
+      ]
+    }
+  },
+  {
+    "net": "UART_RX",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "U1.20": [
+        1
+      ],
+      "TP7.1": [
+        1
+      ]
+    }
+  },
+  {
+    "net": "UART_TX",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "U1.21": [
+        0
+      ],
+      "TP6.1": [
+        0
+      ]
+    }
+  },
+  {
+    "net": "USB_CC1",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "U2.23": [
+        0
+      ],
+      "J1.4": [
+        0
+      ],
+      "U6.1": [
+        0
+      ]
+    }
+  },
+  {
+    "net": "USB_CC2",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "U2.24": [
+        1
+      ],
+      "J1.10": [
+        1
+      ],
+      "U6.2": [
+        1
+      ]
+    }
+  },
+  {
+    "net": "USB_D+",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "U4.1": [
+        1
+      ],
+      "J1.6": [
+        1
+      ],
+      "J1.8": [
+        1
+      ],
+      "R10.1": [
+        1
+      ]
+    }
+  },
+  {
+    "net": "USB_D-",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "U4.2": [
+        0
+      ],
+      "J1.5": [
+        0
+      ],
+      "J1.7": [
+        0
+      ],
+      "R11.1": [
+        0
+      ]
+    }
+  },
+  {
+    "net": "USB_MCU_D+",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "U1.35": [
+        0
+      ],
+      "R10.2": [
+        0
+      ]
+    }
+  },
+  {
+    "net": "USB_MCU_D-",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "U1.34": [
+        0
+      ],
+      "R11.2": [
+        0
+      ]
+    }
+  },
+  {
+    "net": "VBAT",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "C6.1": [
+        0
+      ],
+      "U2.19": [
+        0
+      ],
+      "BT1.1": [
+        0
+      ],
+      "TP8.1": [
+        0
+      ]
+    }
+  },
+  {
+    "net": "VBUS",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "U2.21": [
+        0
+      ],
+      "J1.2": [
+        0
+      ],
+      "J1.11": [
+        0
+      ],
+      "D2.1": [
+        0
+      ],
+      "C1.1": [
+        0
+      ],
+      "TP9.1": [
+        0
+      ]
+    }
+  },
+  {
+    "net": "VBUSOUT",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "U1.32": [
+        4
+      ],
+      "U2.22": [
+        4
+      ],
+      "C26.1": [
+        4
+      ],
+      "C5.1": [
+        4
+      ],
+      "TP11.1": [
+        4
+      ]
+    }
+  },
+  {
+    "net": "VSET1",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "U2.17": [
+        0
+      ],
+      "R3.1": [
+        0
+      ]
+    }
+  },
+  {
+    "net": "VSET2",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "U2.16": [
+        0
+      ],
+      "R4.1": [
+        0
+      ]
+    }
+  },
+  {
+    "net": "VSYS",
+    "pad_connected_components": 1,
+    "result": "PASS",
+    "pad_roots": {
+      "LED1.2": [
+        1
+      ],
+      "LED1.4": [
+        1
+      ],
+      "U2.4": [
+        1
+      ],
+      "U2.20": [
+        1
+      ],
+      "C2.1": [
+        1
+      ],
+      "C14.1": [
+        1
+      ],
+      "C4.1": [
+        1
+      ],
+      "C3.1": [
+        1
+      ],
+      "C9.1": [
+        1
+      ],
+      "C15.1": [
+        1
+      ],
+      "C16.1": [
+        1
+      ],
+      "TP10.1": [
+        1
+      ]
+    }
+  }
+]

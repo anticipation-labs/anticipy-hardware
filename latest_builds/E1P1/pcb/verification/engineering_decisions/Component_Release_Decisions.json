@@ -1,0 +1,166 @@
+{
+  "status": "ENGINEERING_SELECTION_FIXED_FOR_EXISTING_E1_CIRCUIT",
+  "created_at_utc": "2026-09-09T13:55:13.093825+00:00",
+  "review_scope": "U4 alternate and C17/C19/C22 fitted capacitor identity; C20 DNP metadata only",
+  "source_pcb": "outputs/Anticipy_Oval_E1_2026-09-09/pcb/electrical/Anticipy_R1_E1_PROTOTYPE.kicad_pcb",
+  "source_pcb_sha256": "137bf2814371842fb071526d6b6c3c138dfceb2d92459d390f8d55ac541d3a44",
+  "source_netlist_sha256": "d75f5629048894487c9cb708d99315ac861295a24ee50c31e1630227648b011d",
+  "mutated_electronics_files": false,
+  "no_orders_or_messages_to_suppliers": true,
+  "decisions": [
+    {
+      "reference": [
+        "U4"
+      ],
+      "old_mpn": "TPD2EUSB30DRTR",
+      "selected_mpn": "TPD2EUSB30ADRTR",
+      "manufacturer": "Texas Instruments",
+      "value": "TPD2EUSB30ADRTR",
+      "manufacturer_status": "ACTIVE",
+      "fit_per_board": 1,
+      "baseline_quantity_20_boards": 20,
+      "digikey_cut_tape": "296-28153-1-ND",
+      "stock_observed_2026_09_09_1351_utc": 80460,
+      "unit_price_usd_at_10": 0.648,
+      "source_url": "https://www.digikey.com/en/products/detail/texas-instruments/TPD2EUSB30ADRTR/2520830",
+      "circuit_net_map": {
+        "1": "/USB_D+",
+        "2": "/USB_D-",
+        "3": "/GND"
+      },
+      "direct_vbus_connection": false,
+      "same_package_and_pin_map": true,
+      "native_pad_size_mm": [
+        0.3,
+        0.3
+      ],
+      "native_signal_pad_pitch_mm": 0.7,
+      "native_opposite_ground_center_spacing_mm": 0.85,
+      "new_recommended_io_V": [
+        0,
+        3.6
+      ],
+      "old_recommended_io_V": [
+        0,
+        5.5
+      ],
+      "new_absolute_dc_max_V": 4,
+      "old_absolute_dc_max_V": 6,
+      "new_breakdown_min_at_1mA_V": 4.5,
+      "old_breakdown_min_at_1mA_V": 7,
+      "both_clamp_max_at_1A_V": 8,
+      "both_typ_capacitance_IO_GND_pF": 0.7,
+      "both_typ_capacitance_IO_IO_pF": 0.05,
+      "stencil_max_mm": 0.1016,
+      "ti_example_soldermask_clearance_mm": 0.05,
+      "sustained_5V_fault_protection_claim": false
+    },
+    {
+      "reference": [
+        "C17",
+        "C19",
+        "C22"
+      ],
+      "metadata_also_update_dnp_reference": [
+        "C20"
+      ],
+      "old_mpn_unverified": "C1005X7R1A104K050BC",
+      "selected_mpn": "C1005X7R1C104K050BC",
+      "manufacturer": "TDK",
+      "value": "100nF 16V X7R",
+      "manufacturer_status": "Production",
+      "fit_per_board": 3,
+      "baseline_quantity_20_boards": 60,
+      "DNP_C20_quantity": 0,
+      "digikey_cut_tape": "445-4952-1-ND",
+      "stock_observed_2026_09_09_1351_utc": 1506626,
+      "unit_price_usd_at_50": 0.0328,
+      "source_url": "https://www.digikey.com/en/products/detail/tdk-corporation/C1005X7R1C104K050BC/2093220",
+      "nominal_capacitance_nF": 100,
+      "initial_tolerance_percent": 10,
+      "rated_voltage_V": 16,
+      "dielectric": "X7R",
+      "maximum_body_LWT_mm": [
+        1.05,
+        0.55,
+        0.55
+      ],
+      "native_nominal_model_LWT_mm": [
+        1,
+        0.5,
+        0.5
+      ],
+      "oval_cad_guard_LWT_mm": [
+        1.4,
+        0.9,
+        0.7
+      ],
+      "native_pad_size_mm": [
+        0.56,
+        0.62
+      ],
+      "native_pad_gap_mm": 0.4,
+      "circuit_roles": {
+        "C17": "3V_MAIN-to-GND NAND bypass",
+        "C19": "3V_MIC-to-GND MIC1 bypass",
+        "C20": "3V_MIC-to-GND optional MIC2 bypass, DNP",
+        "C22": "3V_MAIN-to-HAPTIC_NEG across motor"
+      },
+      "dc_bias_and_impedance": "TDK publishes typical characterization; numerical graph read is supplementary, not guaranteed production minimum. Measure rails and motor switching waveform on actual assembled board.",
+      "manufacturer_reference_graph_observations": {
+        "method": "Independent agent visually read live official TDK interactive plots on2026-09-09",
+        "capacitance_at_3V_nF_approx": 92,
+        "capacitance_at_2V_nF_approx": [
+          95,
+          96
+        ],
+        "capacitance_at_4V_nF_approx": 88,
+        "impedance_at_100kHz_ohm_approx": 16,
+        "impedance_at_1MHz_ohm_approx": [
+          1.6,
+          1.8
+        ],
+        "impedance_minimum_ohm_approx": [
+          0.015,
+          0.02
+        ],
+        "impedance_minimum_frequency_MHz_approx": 30,
+        "impedance_bias_voltage_explicitly_shown": false,
+        "guaranteed_specification": false
+      }
+    }
+  ],
+  "stock_method": "Read-only live Chrome DOM of authorized supplier US product pages; no cached search inventory used",
+  "original_U4_live_stock": {
+    "DigiKey_US": 0,
+    "DigiKey_next_expected": "3000 on 2026-09-16",
+    "Mouser_US": 0,
+    "Mouser_next_expected": "2026-12-17"
+  },
+  "delivery_committed": false,
+  "physical_qualification_remaining": [
+    "USB enumeration and waveform amplitude across hosts/cables",
+    "Assembled port/enclosure ESD response",
+    "First-article reflow inspection; U4 stencil thickness <=.1016mm",
+    "NAND and microphone supply droop/ripple during record/store/BLE/motor",
+    "C22 switching voltage, current heating and microphone motor-noise test"
+  ],
+  "primary_sources": [
+    "https://www.ti.com/product/TPD2EUSB30A/part-details/TPD2EUSB30ADRTR",
+    "https://www.ti.com/lit/ds/symlink/tpd2eusb30a.pdf",
+    "https://docs.nordicsemi.com/r/bundle/ps_nrf52840/page/power.html",
+    "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1005X7R1C104K050BC",
+    "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1005X7R1A104K050BB",
+    "https://product.tdk.com/en/system/files/dam/doc/product/capacitor/ceramic/mlcc/charasheet/c1005x7r1c104k050bc.pdf"
+  ],
+  "local_TI_datasheet": {
+    "path": "../electrical_audit/tpd2eusb30a.pdf",
+    "sha256": "a2c0dd845043a5bbfe610f673879c29e38649544385dea51dbe0a4c49df39136"
+  },
+  "local_evidence_files": [
+    "Original_Circuit_Evidence.json",
+    "Original_Footprint_Evidence.json",
+    "TI_electrical_page5.png",
+    "TI_DRT_land_pattern.png"
+  ]
+}

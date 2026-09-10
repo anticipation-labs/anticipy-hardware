@@ -1,0 +1,223 @@
+{
+  "review_date_local": "2026-09-08",
+  "timezone": "America/Vancouver",
+  "scope": "Published supplier stackup, live USB impedance calculator, PCB/assembly capability, connector land pattern",
+  "not_done": [
+    "No design upload",
+    "No supplier message",
+    "No order",
+    "No paid quote",
+    "No supplier approval",
+    "No physical impedance measurement"
+  ],
+  "baseline_pcb_sha256": "8cc63d51d3df27cb8fce24892df49a9125897e959056eb1e8242a7dc21851b8e",
+  "selected_published_stackup": {
+    "supplier": "JLCPCB",
+    "code": "JLC04081H-3313",
+    "manufacturer_ui_classification": "Standard / recommended",
+    "finished_thickness_mm": 0.8,
+    "finished_thickness_tolerance_mm": 0.1,
+    "outer_copper_oz": 1,
+    "inner_copper_oz": 0.5,
+    "layer_table_mm": [
+      0.035,
+      0.0994,
+      0.0152,
+      0.5,
+      0.0152,
+      0.0994,
+      0.035
+    ],
+    "prepreg": "3313 RC57%",
+    "prepreg_dk": 4.1,
+    "core_basis": "Nan Ya NP-155F",
+    "core_dk_guide_0_5mm_row": 4.48,
+    "core_dk_generic_stackup_page": 4.6,
+    "source_url": "https://jlcpcb.com/impedance",
+    "method": "Live browser UI; selected 0.8mm. Static search content initially showed default 1.6mm and was not used for dimensions."
+  },
+  "calculator_runs": [
+    {
+      "url": "https://jlcpcb.com/pcb-impedance-calculator",
+      "stackup": "JLC04081H-3313",
+      "board_type": "Rigid",
+      "layers": 4,
+      "thickness_mm": 0.8,
+      "outer_oz": 1,
+      "inner_oz": 0.5,
+      "target_ohms": 90,
+      "type": "Differential Pair (Non coplanar)",
+      "signal_layer": "L1",
+      "top_reference": null,
+      "bottom_reference": "L2",
+      "input_pair_gap_mm": 0.15,
+      "output_width_mm": 0.1356,
+      "output_pair_gap_mm": 0.1501,
+      "numerical_tolerance_display_percent": 0.5,
+      "manufacturing_tolerance_claim_percent": 10,
+      "model_limit": "Uniform line with ground reference; excludes connector branches, discontinuities, pads, vias and return-plane gaps"
+    },
+    {
+      "url": "https://jlcpcb.com/pcb-impedance-calculator",
+      "stackup": "JLC04081H-3313",
+      "board_type": "Rigid",
+      "layers": 4,
+      "thickness_mm": 0.8,
+      "outer_oz": 1,
+      "inner_oz": 0.5,
+      "target_ohms": 90,
+      "type": "Coplanar Differential Pair",
+      "signal_layer": "L1",
+      "top_reference": null,
+      "bottom_reference": "L2",
+      "input_pair_gap_mm": 0.15,
+      "side_ground_gap_mm": 0.3,
+      "output_width_mm": 0.1349,
+      "output_pair_gap_mm": 0.1501,
+      "numerical_tolerance_display_percent": 0.5,
+      "manufacturing_tolerance_claim_percent": 10,
+      "model_limit": "Only valid if actual side ground is present at controlled 0.3mm separation and L2 reference is continuous"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://jlcpcb.com/help/article/user-guide-to-the-jlcpcb-impedance-calculator",
+      "type": "Official technical guide",
+      "visible_updated_date": "2026-06-15",
+      "verified": "Material assumptions, conductor model, effective Cu, mask and Dk table",
+      "caveat": "Guide effective outer Cu1.6mil differs from displayed stackup0.035mm. CAM must confirm finished etch geometry."
+    },
+    {
+      "url": "https://jlcpcb.com/capabilities/pcb-capabilities",
+      "type": "Official fabrication capability",
+      "verified": "0.09mm multilayer track/space, preferred0.20mm via drill and0.45mm land, copper-edge0.20mm, impedance\u00b110%, thin-board thickness\u00b10.10mm, legend constraints"
+    },
+    {
+      "url": "https://jlcpcb.com/capabilities/pcb-assembly-capabilities",
+      "type": "Official assembly capability",
+      "verified": "Standard handles0201/two sides; minimum panel70x70mm; rails/fiducials; assembly>=4days",
+      "caveat": "Not a quote; excludes component procurement and delivery. Economic is not suitable for current E1."
+    },
+    {
+      "url": "https://gct.co/connector/usb4500",
+      "type": "Official GCT product page and embedded PDF.js drawing",
+      "drawing_path_from_observed_iframe": "/files/drawings/USB4500.pdf",
+      "drawing_revision": "A2",
+      "drawing_revision_date_as_printed": "10/09/24",
+      "verified": "0.80mm nominal PCB thickness; recommended layout\u00b10.05mm; cutout9.24mm; stake-column spacing11.24mm; slots0.60x1.40/1.80mm; pads1.00x1.80/2.20mm",
+      "caveat": "Layout\u00b10.05mm is not unambiguously a separate finished-laminate thickness requirement. Final transformed pad/edge geometry not approved by this source review."
+    },
+    {
+      "url": "https://gct.co/download?name=USB4500.pdf&type=PDFDrawing",
+      "type": "Official drawing download",
+      "verified": "Link exists on official product page; embedded PDF read successfully",
+      "caveat": "Web reader rejected application/octet-stream. Browser download attempted without a verified local result; no local download claimed."
+    },
+    {
+      "url": "https://www.pcbway.com/pcb_prototype/_Stack_up_for_Prototypes.html",
+      "type": "Official alternate-supplier policy",
+      "verified": "Custom stackups subject to engineering/material-stock adjustment; link to multi-layer laminated structure",
+      "caveat": "No numeric PCBWay0.8mm stackup adopted"
+    },
+    {
+      "url": "https://m.pcbway.com/assembly-capabilities.html",
+      "type": "Official alternate assembly capability",
+      "verified": "8-48h assembly starts only after all parts/files ready",
+      "caveat": "Not a delivery or complete-turnkey promise"
+    }
+  ],
+  "local_rule_review": {
+    "project_min_edge_default_mm": 0,
+    "effective_normal_edge_rule_mm": 0.3,
+    "J1_pad_only_edge_allowance_mm": -0.6,
+    "project_min_silkscreen_clearance_mm": 0,
+    "project_default_silk_stroke_mm": 0.1,
+    "important": "Custom .kicad_dru overrides project edge default. Do not falsely report zero global edge enforcement. Root is screening final candidate with stricter legend settings."
+  },
+  "routing_application_note": {
+    "signal_layer": "L4 / B.Cu",
+    "reference_layer": "L3 / In2.Cu",
+    "width_mm": 0.135,
+    "edge_gap_mm": 0.15,
+    "coplanar_ground_gap_mm": 0.3,
+    "evidence_scope": "Live calculator observation remains L1/L2. Opposite-face application is an engineering inference from the published symmetric construction; CAM acceptance remains required."
+  },
+  "selected_final_package_audit": {
+    "pcb_sha256": "64ad065635d968ceb0e897401a73273f26e85d32013ea770b135329f9c5c1a3d",
+    "usb_ground_zone_rule_scope": "B.Cu GND Zone to USB Track only. Vias are not Zone objects and therefore are not constrained by this 0.30 mm rule. General electrical clearance still applies.",
+    "nearby_ground_vias_below_0_30mm": [
+      {
+        "via_uuid": "d57797b2-3172-4717-bded-2273ec037d4b",
+        "via_xy_mm": [
+          58.1813,
+          33.6144
+        ],
+        "via_diameter_mm": 0.45,
+        "nearest_usb_net": "/USB_D+",
+        "copper_edge_gap_mm": 0.135534,
+        "nearest_track_uuid": "f7110737-478d-412d-944b-f9b49fe06f45",
+        "region": "evaluated main corridor"
+      },
+      {
+        "via_uuid": "da319389-798c-4060-8b65-93e28f944c0f",
+        "via_xy_mm": [
+          28.71,
+          29.96
+        ],
+        "via_diameter_mm": 0.45,
+        "nearest_usb_net": "/USB_D+",
+        "copper_edge_gap_mm": 0.175302,
+        "nearest_track_uuid": "4895eb97-0d05-4311-ac48-ccf5685c5621",
+        "region": "connector launch outside evaluated main corridor"
+      },
+      {
+        "via_uuid": "ddef53a1-d424-4fba-b05c-6193928a1d62",
+        "via_xy_mm": [
+          30.0,
+          31.3
+        ],
+        "via_diameter_mm": 0.45,
+        "nearest_usb_net": "/USB_D-",
+        "copper_edge_gap_mm": 0.26003,
+        "nearest_track_uuid": "d7f0564b-5861-4fef-b952-3331484ffa53",
+        "region": "evaluated main corridor"
+      }
+    ],
+    "supplier_impedance_limitation": "Three GND via annuli near the four USB nets are below 0.30 mm and create local coplanar discontinuities. Published uniform-line 90 ohm calculation does not certify these regions; supplier CAM/impedance review required.",
+    "machine_placement_count": 47,
+    "placement_sides": {
+      "bottom": 3,
+      "top": 44
+    },
+    "bottom_refs": [
+      "C25",
+      "R10",
+      "R11"
+    ],
+    "documentation_corrections": [
+      {
+        "file": "sourcing/Custom_E1P1_Additional_Parts_For_Quote.csv",
+        "references": "R10 R11",
+        "field": "Sides",
+        "before": "top",
+        "after": "bottom"
+      },
+      {
+        "file": "sourcing/Exact_E1P1_Procurement_Reconciliation.json",
+        "references": "BT1",
+        "field": "Exact_MPN",
+        "before": "UNSELECTED protected 1S LiPo",
+        "after": "UNSELECTED"
+      }
+    ],
+    "supplier_research_updated": true,
+    "procurement_totals": {
+      "missing_fitted_components": 44,
+      "missing_exact_mpns": 24,
+      "credited_fitted_components": 3,
+      "total_machine_placements": 47
+    },
+    "historical_placeholder_handling": "Historical_Purchase_Reconciliation.json retains LP571225 only as explicitly labelled historical placeholder evidence; not modified. Selected native and procurement records hold BT1 unselected.",
+    "read_only_pcb_sha256_after_audit": "64ad065635d968ceb0e897401a73273f26e85d32013ea770b135329f9c5c1a3d"
+  }
+}

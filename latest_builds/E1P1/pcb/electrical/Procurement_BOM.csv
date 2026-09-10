@@ -1,0 +1,28 @@
+Manufacturer,MPN,References,Per board,For 20 boards,Assembly,Review
+Alpha & Omega Semiconductor,AO3400A,Q1,1,20,SMT,Add assembler setup attrition; supplier stock is not allocated
+Diodes Incorporated,1N4148WS-13-F,D1,1,20,SMT,Add assembler setup attrition; supplier stock is not allocated
+GCT,USB4500-03-1-A,J1,1,20,SMT,Add assembler setup attrition; supplier stock is not allocated
+KEMET,C0402C104M4RACTU,C14 C15 C16,3,60,SMT,Add assembler setup attrition; supplier stock is not allocated
+Kingbright,APHB1608LVBDSEKJ3C,LED1,1,20,SMT,Add assembler setup attrition; supplier stock is not allocated
+Macronix,MX35LF4GE4AD-Z4I,U5,1,20,SMT,Add assembler setup attrition; supplier stock is not allocated
+Murata,GRM155R60J106ME15D,C25 C26,2,40,SMT,Add assembler setup attrition; supplier stock is not allocated
+Murata,GRM188R61E106MA73D,C2 C3 C4 C7 C8 C9 C10,7,140,SMT,Add assembler setup attrition; supplier stock is not allocated
+Murata,GRM21BR60J476ME01L,C23,1,20,SMT,Add assembler setup attrition; supplier stock is not allocated
+Nordic Semiconductor,NPM1300-QEAA-R,U2,1,20,SMT,Add assembler setup attrition; supplier stock is not allocated
+Omron,B3U-1000P,SW1,1,20,SMT,Add assembler setup attrition; supplier stock is not allocated
+Raytac,MDBT50Q-1MV2,U1,1,20,SMT,Add assembler setup attrition; supplier stock is not allocated
+Same Sky,CMM-3424DT-26165-TR,MIC1,1,20,SMT,Add assembler setup attrition; supplier stock is not allocated
+Samsung Electro-Mechanics,CIGT201610EH2R2MNE,L1 L2,2,40,SMT,Add assembler setup attrition; supplier stock is not allocated
+TDK,C0603X5R1E104K030BB,C13,1,20,SMT,Add assembler setup attrition; supplier stock is not allocated
+TDK,C1005X7R1C104K050BC,C17 C19 C22,3,60,SMT,Add assembler setup attrition; supplier stock is not allocated
+TDK,C1608X7R1C105K080AC,C1 C5 C18,3,60,SMT,Add assembler setup attrition; supplier stock is not allocated
+Taiyo Yuden,EMK107BB7225KA-T,C6,1,20,SMT,Add assembler setup attrition; supplier stock is not allocated
+Texas Instruments,ESD441DPYR,D2,1,20,SMT,Add assembler setup attrition; supplier stock is not allocated
+Texas Instruments,TPD2E2U06DCKR,U6,1,20,SMT,Add assembler setup attrition; supplier stock is not allocated
+Texas Instruments,TPD2EUSB30ADRTR,U4,1,20,SMT,Add assembler setup attrition; supplier stock is not allocated
+Vishay Dale,CRCW02010000Z0ED,R10 R11,2,40,SMT,Add assembler setup attrition; supplier stock is not allocated
+Yageo,RC0201FR-0710KL,R1 R2,2,40,SMT,Add assembler setup attrition; supplier stock is not allocated
+Yageo,RC0201FR-07150KL,R3 R4,2,40,SMT,Add assembler setup attrition; supplier stock is not allocated
+Yageo,RC0402FR-07100KL,R6,1,20,SMT,Add assembler setup attrition; supplier stock is not allocated
+Yageo,RC0402FR-07100RL,R5 R8,2,40,SMT,Add assembler setup attrition; supplier stock is not allocated
+Yageo,RC0402FR-0710KL,R7 R12 R13,3,60,SMT,Add assembler setup attrition; supplier stock is not allocated

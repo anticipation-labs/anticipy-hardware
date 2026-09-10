@@ -1,0 +1,10 @@
+{
+  "before_pcb_sha256": "b8d641c3f6d678057f58691f64b46dea001e547aae3a2e42e418ac5bac3263b6",
+  "after_pcb_sha256": "78fe28acde6ceb3ab33aac8af503d4c418540cce31979cc91d3add5e5d0bec36",
+  "U4_mask_expansion_mm": 0.05,
+  "U4_matching_library": "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/outputs/Anticipy_E1P1_PCB_Manufacturing_Release_2026-09-09/pcb/electrical/Anticipy_E1_Release.pretty/U4__Texas_DRT-3_R0B.kicad_mod",
+  "global_via_filling_enabled": true,
+  "global_via_capping_enabled": true,
+  "mandatory_external_fabrication_spec": "All137 plated vias nonconductive epoxy filled, planarized and copper capped both ends IPC4761 TypeVII;128nominal.200mm+9nominal.304mm. Exclude4J1plated connector slots; keep open.",
+  "scope": "U4 mask and global via fabrication attributes only. No copper route, component pose, paste, MPN or schematic changes. ExportfreshGerberjob reflects filling/capping yes."
+}

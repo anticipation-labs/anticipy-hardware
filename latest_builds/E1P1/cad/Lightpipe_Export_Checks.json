@@ -1,0 +1,13 @@
+{
+  "STEP_sha256": "8e1df1e291a805952205000b2419661e3dd6c7fc5a74025e7c5241bfcbe0ce89",
+  "STL_sha256": "dc2eac153e7195fb18648eb61f3c29ecd25c5f74b1b54f7494aeef4087ab9430",
+  "STEP_reimport_valid": true,
+  "STEP_solids": 1,
+  "STL_watertight": true,
+  "STL_winding_consistent": true,
+  "STL_components": 1,
+  "removed_zero_area_triangles": 0,
+  "surface_deflection_setting_mm": 0.015,
+  "mesh_method": "Remove degenerate pole triangles only; no hole filling or dimension changes.",
+  "status": "Separate optical part. Material, optical finishing and adhesive require approval and physical testing."
+}

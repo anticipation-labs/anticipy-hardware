@@ -1,0 +1,41 @@
+{
+  "status": "Dimensions checked as explicitly declared gauges; supplier acceptance pending",
+  "NTC": {
+    "MPN": "TDK B57540G1103F000",
+    "glass_max_D_L_mm": [
+      0.8,
+      1.4
+    ],
+    "insulated_and_taped_gauge_LWT_mm": [
+      2.0,
+      1.4,
+      1.0
+    ],
+    "center_native_XY_mm": [
+      49.3,
+      34.235
+    ],
+    "body_bottom_top_z_mm": [
+      7.5,
+      8.5
+    ],
+    "first_bend_from_glass_end_mm": [
+      4.9,
+      4.7
+    ],
+    "centerline_min_bend_radius_mm": 0.75,
+    "factory_lead_diameter_mm": 0.15,
+    "lead_insulation_outside_diameter_gauge_mm": 0.5,
+    "source": "https://product.tdk.com/system/files/dam/doc/product/sensor/ntc/ntc_element/data_sheet/50/db/ntc/ntc_glass_enc_sensors_g1540.pdf"
+  },
+  "battery_lead_gauge": {
+    "outside_diameter_mm": 1.2,
+    "bend_radius_mm": 2.0,
+    "exit_coordinates": "planning\u2014manufacturer does not dimension them"
+  },
+  "motor_lead_gauge": {
+    "outside_diameter_mm": 0.5,
+    "bend_radius_mm": 1.0,
+    "exit_coordinates": "planning\u2014requires manufacturer/actual-part confirmation"
+  }
+}

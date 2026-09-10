@@ -1,0 +1,14 @@
+{
+  "combined_pdf": "E1P1_Fabrication_and_Assembly.pdf",
+  "pages": 12,
+  "source_PCB_sha256": "78fe28acde6ceb3ab33aac8af503d4c418540cce31979cc91d3add5e5d0bec36",
+  "contents": [
+    "release/process cover",
+    "Native schematic",
+    "Top assembly",
+    "Bottom assembly",
+    "Four copper layers",
+    "plated drill map"
+  ],
+  "empty_NPTH_map_excluded": true
+}

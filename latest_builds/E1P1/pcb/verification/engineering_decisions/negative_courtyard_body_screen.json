@@ -1,0 +1,678 @@
+[
+  {
+    "a": "C1",
+    "b": "C4",
+    "a_MPN": "C1608X7R1C105K080AC",
+    "b_MPN": "GRM188R61E106MA73J",
+    "a_pose": {
+      "ref": "C1",
+      "value": "1uF 16V X7R",
+      "footprint": "C1__C_0603_1608Metric",
+      "dnp": false,
+      "exclude_pos": false,
+      "exclude_bom": false,
+      "pos": [
+        29.5,
+        30.025
+      ],
+      "angle": -90.0,
+      "side": "top"
+    },
+    "b_pose": {
+      "ref": "C4",
+      "value": "10uF 25V X5R",
+      "footprint": "C4__C_0603_1608Metric",
+      "dnp": false,
+      "exclude_pos": false,
+      "exclude_bom": false,
+      "pos": [
+        29.5,
+        27.4
+      ],
+      "angle": 90.0,
+      "side": "top"
+    },
+    "a_max_envelope": [
+      1.7,
+      0.9,
+      0.9,
+      "TDK exact product page, 1.60\u00b1.10 \u00d7 .80\u00b1.10 \u00d7 .80\u00b1.10",
+      "verified"
+    ],
+    "b_max_envelope": [
+      1.8,
+      1.0,
+      1.0,
+      "Murata exact GRM188R61E106MA73-01A reference sheet p2, 1.6\u00b1.2 \u00d7 .8\u00b1.2 \u00d7 .8\u00b1.2",
+      "verified"
+    ],
+    "body_gap_mm": 0.875,
+    "overlap_area_mm2": 0.0,
+    "gap_after_assumed_0_05mm_independent_placement_each_mm": 0.775,
+    "basis": "Static max body bounding rectangles. No solder fillet/nozzle/rework margin included; placement tolerance .05 mm per part is an assumption, not supplier acceptance."
+  },
+  {
+    "a": "C1",
+    "b": "C5",
+    "a_MPN": "C1608X7R1C105K080AC",
+    "b_MPN": "C1608X7R1C105K080AC",
+    "a_pose": {
+      "ref": "C1",
+      "value": "1uF 16V X7R",
+      "footprint": "C1__C_0603_1608Metric",
+      "dnp": false,
+      "exclude_pos": false,
+      "exclude_bom": false,
+      "pos": [
+        29.5,
+        30.025
+      ],
+      "angle": -90.0,
+      "side": "top"
+    },
+    "b_pose": {
+      "ref": "C5",
+      "value": "1uF 16V X7R",
+      "footprint": "C5__C_0603_1608Metric",
+      "dnp": false,
+      "exclude_pos": false,
+      "exclude_bom": false,
+      "pos": [
+        30.7,
+        30.65
+      ],
+      "angle": -90.0,
+      "side": "top"
+    },
+    "a_max_envelope": [
+      1.7,
+      0.9,
+      0.9,
+      "TDK exact product page, 1.60\u00b1.10 \u00d7 .80\u00b1.10 \u00d7 .80\u00b1.10",
+      "verified"
+    ],
+    "b_max_envelope": [
+      1.7,
+      0.9,
+      0.9,
+      "TDK exact product page, 1.60\u00b1.10 \u00d7 .80\u00b1.10 \u00d7 .80\u00b1.10",
+      "verified"
+    ],
+    "body_gap_mm": 0.3,
+    "overlap_area_mm2": 0.0,
+    "gap_after_assumed_0_05mm_independent_placement_each_mm": 0.2,
+    "basis": "Static max body bounding rectangles. No solder fillet/nozzle/rework margin included; placement tolerance .05 mm per part is an assumption, not supplier acceptance."
+  },
+  {
+    "a": "C1",
+    "b": "U4",
+    "a_MPN": "C1608X7R1C105K080AC",
+    "b_MPN": "TPD2EUSB30DRTR",
+    "a_pose": {
+      "ref": "C1",
+      "value": "1uF 16V X7R",
+      "footprint": "C1__C_0603_1608Metric",
+      "dnp": false,
+      "exclude_pos": false,
+      "exclude_bom": false,
+      "pos": [
+        29.5,
+        30.025
+      ],
+      "angle": -90.0,
+      "side": "top"
+    },
+    "b_pose": {
+      "ref": "U4",
+      "value": "TPD2EUSB30DRTR",
+      "footprint": "U4__Texas_DRT-3_R0B",
+      "dnp": false,
+      "exclude_pos": false,
+      "exclude_bom": false,
+      "pos": [
+        28.5,
+        30.0
+      ],
+      "angle": -90.0,
+      "side": "top"
+    },
+    "a_max_envelope": [
+      1.7,
+      0.9,
+      0.9,
+      "TDK exact product page, 1.60\u00b1.10 \u00d7 .80\u00b1.10 \u00d7 .80\u00b1.10",
+      "verified"
+    ],
+    "b_max_envelope": [
+      1.25,
+      1.05,
+      0.5,
+      "TI DRT drawing4206292-2/D: bodymax1.05\u00d7.85, leadsmax1.05 span; body flash permitted.10 perend/side, conservativewholebox1.25\u00d71.05",
+      "verified"
+    ],
+    "body_gap_mm": 0.025,
+    "overlap_area_mm2": 0.0,
+    "gap_after_assumed_0_05mm_independent_placement_each_mm": -0.075,
+    "basis": "Static max body bounding rectangles. No solder fillet/nozzle/rework margin included; placement tolerance .05 mm per part is an assumption, not supplier acceptance."
+  },
+  {
+    "a": "C10",
+    "b": "C9",
+    "a_MPN": "GRM188R61E106MA73J",
+    "b_MPN": "GRM188R61E106MA73J",
+    "a_pose": {
+      "ref": "C10",
+      "value": "10uF 25V X5R",
+      "footprint": "C10__C_0603_1608Metric",
+      "dnp": false,
+      "exclude_pos": false,
+      "exclude_bom": false,
+      "pos": [
+        34.6,
+        34.1
+      ],
+      "angle": -90.0,
+      "side": "top"
+    },
+    "b_pose": {
+      "ref": "C9",
+      "value": "10uF 25V X5R",
+      "footprint": "C9__C_0603_1608Metric",
+      "dnp": false,
+      "exclude_pos": false,
+      "exclude_bom": false,
+      "pos": [
+        33.4,
+        34.1
+      ],
+      "angle": -90.0,
+      "side": "top"
+    },
+    "a_max_envelope": [
+      1.8,
+      1.0,
+      1.0,
+      "Murata exact GRM188R61E106MA73-01A reference sheet p2, 1.6\u00b1.2 \u00d7 .8\u00b1.2 \u00d7 .8\u00b1.2",
+      "verified"
+    ],
+    "b_max_envelope": [
+      1.8,
+      1.0,
+      1.0,
+      "Murata exact GRM188R61E106MA73-01A reference sheet p2, 1.6\u00b1.2 \u00d7 .8\u00b1.2 \u00d7 .8\u00b1.2",
+      "verified"
+    ],
+    "body_gap_mm": 0.2,
+    "overlap_area_mm2": 0.0,
+    "gap_after_assumed_0_05mm_independent_placement_each_mm": 0.1,
+    "basis": "Static max body bounding rectangles. No solder fillet/nozzle/rework margin included; placement tolerance .05 mm per part is an assumption, not supplier acceptance."
+  },
+  {
+    "a": "C14",
+    "b": "C2",
+    "a_MPN": "C0402C104M4RAC7867",
+    "b_MPN": "GRM188R61E106MA73J",
+    "a_pose": {
+      "ref": "C14",
+      "value": "100nF 16V X7R",
+      "footprint": "C14__C_0402_1005Metric",
+      "dnp": false,
+      "exclude_pos": false,
+      "exclude_bom": false,
+      "pos": [
+        39.625,
+        31.9
+      ],
+      "angle": 0.0,
+      "side": "top"
+    },
+    "b_pose": {
+      "ref": "C2",
+      "value": "10uF 25V X5R",
+      "footprint": "C2__C_0603_1608Metric",
+      "dnp": false,
+      "exclude_pos": false,
+      "exclude_bom": false,
+      "pos": [
+        40.025,
+        30.15
+      ],
+      "angle": -90.0,
+      "side": "top"
+    },
+    "a_max_envelope": [
+      1.05,
+      0.55,
+      0.55,
+      "KEMET C1002_X7R 2026-08-18 pages3,5,9: 0402 length1.00\u00b1.05 width.50\u00b1.05; 104 16V BB thickness.50\u00b1.05",
+      "verified"
+    ],
+    "b_max_envelope": [
+      1.8,
+      1.0,
+      1.0,
+      "Murata exact GRM188R61E106MA73-01A reference sheet p2, 1.6\u00b1.2 \u00d7 .8\u00b1.2 \u00d7 .8\u00b1.2",
+      "verified"
+    ],
+    "body_gap_mm": 0.575,
+    "overlap_area_mm2": 0.0,
+    "gap_after_assumed_0_05mm_independent_placement_each_mm": 0.475,
+    "basis": "Static max body bounding rectangles. No solder fillet/nozzle/rework margin included; placement tolerance .05 mm per part is an assumption, not supplier acceptance."
+  },
+  {
+    "a": "C14",
+    "b": "C7",
+    "a_MPN": "C0402C104M4RAC7867",
+    "b_MPN": "GRM188R61E106MA73J",
+    "a_pose": {
+      "ref": "C14",
+      "value": "100nF 16V X7R",
+      "footprint": "C14__C_0402_1005Metric",
+      "dnp": false,
+      "exclude_pos": false,
+      "exclude_bom": false,
+      "pos": [
+        39.625,
+        31.9
+      ],
+      "angle": 0.0,
+      "side": "top"
+    },
+    "b_pose": {
+      "ref": "C7",
+      "value": "10uF 25V X5R",
+      "footprint": "C7__C_0603_1608Metric",
+      "dnp": false,
+      "exclude_pos": false,
+      "exclude_bom": false,
+      "pos": [
+        40.7,
+        32.95
+      ],
+      "angle": 180.0,
+      "side": "top"
+    },
+    "a_max_envelope": [
+      1.05,
+      0.55,
+      0.55,
+      "KEMET C1002_X7R 2026-08-18 pages3,5,9: 0402 length1.00\u00b1.05 width.50\u00b1.05; 104 16V BB thickness.50\u00b1.05",
+      "verified"
+    ],
+    "b_max_envelope": [
+      1.8,
+      1.0,
+      1.0,
+      "Murata exact GRM188R61E106MA73-01A reference sheet p2, 1.6\u00b1.2 \u00d7 .8\u00b1.2 \u00d7 .8\u00b1.2",
+      "verified"
+    ],
+    "body_gap_mm": 0.275,
+    "overlap_area_mm2": 0.0,
+    "gap_after_assumed_0_05mm_independent_placement_each_mm": 0.175,
+    "basis": "Static max body bounding rectangles. No solder fillet/nozzle/rework margin included; placement tolerance .05 mm per part is an assumption, not supplier acceptance."
+  },
+  {
+    "a": "C15",
+    "b": "C3",
+    "a_MPN": "C0402C104M4RAC7867",
+    "b_MPN": "GRM188R61E106MA73J",
+    "a_pose": {
+      "ref": "C15",
+      "value": "100nF 16V X7R",
+      "footprint": "C15__C_0402_1005Metric",
+      "dnp": false,
+      "exclude_pos": false,
+      "exclude_bom": false,
+      "pos": [
+        39.625,
+        25.8
+      ],
+      "angle": 0.0,
+      "side": "top"
+    },
+    "b_pose": {
+      "ref": "C3",
+      "value": "10uF 25V X5R",
+      "footprint": "C3__C_0603_1608Metric",
+      "dnp": false,
+      "exclude_pos": false,
+      "exclude_bom": false,
+      "pos": [
+        40.025,
+        27.55
+      ],
+      "angle": 90.0,
+      "side": "top"
+    },
+    "a_max_envelope": [
+      1.05,
+      0.55,
+      0.55,
+      "KEMET C1002_X7R 2026-08-18 pages3,5,9: 0402 length1.00\u00b1.05 width.50\u00b1.05; 104 16V BB thickness.50\u00b1.05",
+      "verified"
+    ],
+    "b_max_envelope": [
+      1.8,
+      1.0,
+      1.0,
+      "Murata exact GRM188R61E106MA73-01A reference sheet p2, 1.6\u00b1.2 \u00d7 .8\u00b1.2 \u00d7 .8\u00b1.2",
+      "verified"
+    ],
+    "body_gap_mm": 0.575,
+    "overlap_area_mm2": 0.0,
+    "gap_after_assumed_0_05mm_independent_placement_each_mm": 0.475,
+    "basis": "Static max body bounding rectangles. No solder fillet/nozzle/rework margin included; placement tolerance .05 mm per part is an assumption, not supplier acceptance."
+  },
+  {
+    "a": "C15",
+    "b": "C8",
+    "a_MPN": "C0402C104M4RAC7867",
+    "b_MPN": "GRM188R61E106MA73J",
+    "a_pose": {
+      "ref": "C15",
+      "value": "100nF 16V X7R",
+      "footprint": "C15__C_0402_1005Metric",
+      "dnp": false,
+      "exclude_pos": false,
+      "exclude_bom": false,
+      "pos": [
+        39.625,
+        25.8
+      ],
+      "angle": 0.0,
+      "side": "top"
+    },
+    "b_pose": {
+      "ref": "C8",
+      "value": "10uF 25V X5R",
+      "footprint": "C8__C_0603_1608Metric",
+      "dnp": false,
+      "exclude_pos": false,
+      "exclude_bom": false,
+      "pos": [
+        41.925,
+        25.75
+      ],
+      "angle": 180.0,
+      "side": "top"
+    },
+    "a_max_envelope": [
+      1.05,
+      0.55,
+      0.55,
+      "KEMET C1002_X7R 2026-08-18 pages3,5,9: 0402 length1.00\u00b1.05 width.50\u00b1.05; 104 16V BB thickness.50\u00b1.05",
+      "verified"
+    ],
+    "b_max_envelope": [
+      1.8,
+      1.0,
+      1.0,
+      "Murata exact GRM188R61E106MA73-01A reference sheet p2, 1.6\u00b1.2 \u00d7 .8\u00b1.2 \u00d7 .8\u00b1.2",
+      "verified"
+    ],
+    "body_gap_mm": 0.875,
+    "overlap_area_mm2": 0.0,
+    "gap_after_assumed_0_05mm_independent_placement_each_mm": 0.775,
+    "basis": "Static max body bounding rectangles. No solder fillet/nozzle/rework margin included; placement tolerance .05 mm per part is an assumption, not supplier acceptance."
+  },
+  {
+    "a": "C2",
+    "b": "C3",
+    "a_MPN": "GRM188R61E106MA73J",
+    "b_MPN": "GRM188R61E106MA73J",
+    "a_pose": {
+      "ref": "C2",
+      "value": "10uF 25V X5R",
+      "footprint": "C2__C_0603_1608Metric",
+      "dnp": false,
+      "exclude_pos": false,
+      "exclude_bom": false,
+      "pos": [
+        40.025,
+        30.15
+      ],
+      "angle": -90.0,
+      "side": "top"
+    },
+    "b_pose": {
+      "ref": "C3",
+      "value": "10uF 25V X5R",
+      "footprint": "C3__C_0603_1608Metric",
+      "dnp": false,
+      "exclude_pos": false,
+      "exclude_bom": false,
+      "pos": [
+        40.025,
+        27.55
+      ],
+      "angle": 90.0,
+      "side": "top"
+    },
+    "a_max_envelope": [
+      1.8,
+      1.0,
+      1.0,
+      "Murata exact GRM188R61E106MA73-01A reference sheet p2, 1.6\u00b1.2 \u00d7 .8\u00b1.2 \u00d7 .8\u00b1.2",
+      "verified"
+    ],
+    "b_max_envelope": [
+      1.8,
+      1.0,
+      1.0,
+      "Murata exact GRM188R61E106MA73-01A reference sheet p2, 1.6\u00b1.2 \u00d7 .8\u00b1.2 \u00d7 .8\u00b1.2",
+      "verified"
+    ],
+    "body_gap_mm": 0.8,
+    "overlap_area_mm2": 0.0,
+    "gap_after_assumed_0_05mm_independent_placement_each_mm": 0.7,
+    "basis": "Static max body bounding rectangles. No solder fillet/nozzle/rework margin included; placement tolerance .05 mm per part is an assumption, not supplier acceptance."
+  },
+  {
+    "a": "C3",
+    "b": "C8",
+    "a_MPN": "GRM188R61E106MA73J",
+    "b_MPN": "GRM188R61E106MA73J",
+    "a_pose": {
+      "ref": "C3",
+      "value": "10uF 25V X5R",
+      "footprint": "C3__C_0603_1608Metric",
+      "dnp": false,
+      "exclude_pos": false,
+      "exclude_bom": false,
+      "pos": [
+        40.025,
+        27.55
+      ],
+      "angle": 90.0,
+      "side": "top"
+    },
+    "b_pose": {
+      "ref": "C8",
+      "value": "10uF 25V X5R",
+      "footprint": "C8__C_0603_1608Metric",
+      "dnp": false,
+      "exclude_pos": false,
+      "exclude_bom": false,
+      "pos": [
+        41.925,
+        25.75
+      ],
+      "angle": 180.0,
+      "side": "top"
+    },
+    "a_max_envelope": [
+      1.8,
+      1.0,
+      1.0,
+      "Murata exact GRM188R61E106MA73-01A reference sheet p2, 1.6\u00b1.2 \u00d7 .8\u00b1.2 \u00d7 .8\u00b1.2",
+      "verified"
+    ],
+    "b_max_envelope": [
+      1.8,
+      1.0,
+      1.0,
+      "Murata exact GRM188R61E106MA73-01A reference sheet p2, 1.6\u00b1.2 \u00d7 .8\u00b1.2 \u00d7 .8\u00b1.2",
+      "verified"
+    ],
+    "body_gap_mm": 0.64031,
+    "overlap_area_mm2": 0.0,
+    "gap_after_assumed_0_05mm_independent_placement_each_mm": 0.54031,
+    "basis": "Static max body bounding rectangles. No solder fillet/nozzle/rework margin included; placement tolerance .05 mm per part is an assumption, not supplier acceptance."
+  },
+  {
+    "a": "C4",
+    "b": "C6",
+    "a_MPN": "GRM188R61E106MA73J",
+    "b_MPN": "EMK107BB7225KA-T",
+    "a_pose": {
+      "ref": "C4",
+      "value": "10uF 25V X5R",
+      "footprint": "C4__C_0603_1608Metric",
+      "dnp": false,
+      "exclude_pos": false,
+      "exclude_bom": false,
+      "pos": [
+        29.5,
+        27.4
+      ],
+      "angle": 90.0,
+      "side": "top"
+    },
+    "b_pose": {
+      "ref": "C6",
+      "value": "2.2uF 16V X7R",
+      "footprint": "C6__C_0603_1608Metric",
+      "dnp": false,
+      "exclude_pos": false,
+      "exclude_bom": false,
+      "pos": [
+        30.175,
+        25.5
+      ],
+      "angle": 180.0,
+      "side": "top"
+    },
+    "a_max_envelope": [
+      1.8,
+      1.0,
+      1.0,
+      "Murata exact GRM188R61E106MA73-01A reference sheet p2, 1.6\u00b1.2 \u00d7 .8\u00b1.2 \u00d7 .8\u00b1.2",
+      "verified"
+    ],
+    "b_max_envelope": [
+      1.8,
+      1.0,
+      1.0,
+      "Taiyo exact manufacturer successor MSASE168BB7225KTNA01, originalpn explicitly linked;1.6+.20/-0 \u00d7.8+.20/-0",
+      "verified successor"
+    ],
+    "body_gap_mm": 0.5,
+    "overlap_area_mm2": 0.0,
+    "gap_after_assumed_0_05mm_independent_placement_each_mm": 0.4,
+    "basis": "Static max body bounding rectangles. No solder fillet/nozzle/rework margin included; placement tolerance .05 mm per part is an assumption, not supplier acceptance."
+  },
+  {
+    "a": "R1",
+    "b": "R2",
+    "a_MPN": "RC0201FR-0710KL",
+    "b_MPN": "RC0201FR-0710KL",
+    "a_pose": {
+      "ref": "R1",
+      "value": "10k 1%",
+      "footprint": "R1__R_0201_0603Metric",
+      "dnp": false,
+      "exclude_pos": false,
+      "exclude_bom": false,
+      "pos": [
+        34.4,
+        24.6
+      ],
+      "angle": 90.0,
+      "side": "top"
+    },
+    "b_pose": {
+      "ref": "R2",
+      "value": "10k 1%",
+      "footprint": "R2__R_0201_0603Metric",
+      "dnp": false,
+      "exclude_pos": false,
+      "exclude_bom": false,
+      "pos": [
+        35.0,
+        24.6
+      ],
+      "angle": 90.0,
+      "side": "top"
+    },
+    "a_max_envelope": [
+      0.63,
+      0.33,
+      0.26,
+      "YageoRCfamilyPDF0201 .60\u00b1.03 \u00d7.30\u00b1.03 \u00d7.23\u00b1.03",
+      "verified"
+    ],
+    "b_max_envelope": [
+      0.63,
+      0.33,
+      0.26,
+      "YageoRCfamilyPDF0201 .60\u00b1.03 \u00d7.30\u00b1.03 \u00d7.23\u00b1.03",
+      "verified"
+    ],
+    "body_gap_mm": 0.27,
+    "overlap_area_mm2": 0.0,
+    "gap_after_assumed_0_05mm_independent_placement_each_mm": 0.17,
+    "basis": "Static max body bounding rectangles. No solder fillet/nozzle/rework margin included; placement tolerance .05 mm per part is an assumption, not supplier acceptance."
+  },
+  {
+    "a": "R3",
+    "b": "R4",
+    "a_MPN": "RC0201FR-07150KL",
+    "b_MPN": "RC0201FR-07150KL",
+    "a_pose": {
+      "ref": "R3",
+      "value": "150k 1%",
+      "footprint": "R3__R_0201_0603Metric",
+      "dnp": false,
+      "exclude_pos": false,
+      "exclude_bom": false,
+      "pos": [
+        32.5,
+        24.6
+      ],
+      "angle": 90.0,
+      "side": "top"
+    },
+    "b_pose": {
+      "ref": "R4",
+      "value": "150k 1%",
+      "footprint": "R4__R_0201_0603Metric",
+      "dnp": false,
+      "exclude_pos": false,
+      "exclude_bom": false,
+      "pos": [
+        33.1,
+        24.6
+      ],
+      "angle": 90.0,
+      "side": "top"
+    },
+    "a_max_envelope": [
+      0.63,
+      0.33,
+      0.26,
+      "YageoRCfamilyPDF0201 .60\u00b1.03 \u00d7.30\u00b1.03 \u00d7.23\u00b1.03",
+      "verified"
+    ],
+    "b_max_envelope": [
+      0.63,
+      0.33,
+      0.26,
+      "YageoRCfamilyPDF0201 .60\u00b1.03 \u00d7.30\u00b1.03 \u00d7.23\u00b1.03",
+      "verified"
+    ],
+    "body_gap_mm": 0.27,
+    "overlap_area_mm2": 0.0,
+    "gap_after_assumed_0_05mm_independent_placement_each_mm": 0.17,
+    "basis": "Static max body bounding rectangles. No solder fillet/nozzle/rework margin included; placement tolerance .05 mm per part is an assumption, not supplier acceptance."
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "native_bom_groups": 27,
+  "selected_stock_groups": 27,
+  "native_per_board": 47,
+  "smt_for20": 940,
+  "smt_with_two_spare_boards": 1034,
+  "conditional_new_smt_buy_with_existing_accepted": 970,
+  "csv_rows": 48,
+  "release_sha256": "78fe28acde6ceb3ab33aac8af503d4c418540cce31979cc91d3add5e5d0bec36",
+  "gmail_recheck_utc": "2026-09-09T14:32:00Z",
+  "physical_inventory_verified": false,
+  "emails_sent": false,
+  "orders_placed": false
+}

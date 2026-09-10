@@ -1,0 +1,66 @@
+{
+  "source_sha256": "78fe28acde6ceb3ab33aac8af503d4c418540cce31979cc91d3add5e5d0bec36",
+  "screw_clearances_mm": {
+    "Rear_M2x4_screw_1_PLANNING": {
+      "to_battery_installation_guard": 1.6031219541881376,
+      "to_PCB": 5.2121876405210115,
+      "to_nearest_expanded_component": 2.370000000000001
+    },
+    "Rear_M2x4_screw_2_PLANNING": {
+      "to_battery_installation_guard": 1.9026297590440433,
+      "to_PCB": 3.824264635194589,
+      "to_nearest_expanded_component": 4.732071428032337
+    }
+  },
+  "native_coordinates": "CAD X=nativeX, CAD Y=-nativeY, Zup",
+  "battery_candidate": "Jauch LP561836JU+PCM+2 WIRES50MM",
+  "battery_max_mm": [
+    38.5,
+    18.5,
+    6.0
+  ],
+  "nominal_main_body_mm": [
+    56.0,
+    35.0,
+    14.8
+  ],
+  "PCB_bottom_z_mm": 9.1,
+  "PCB_top_z_mm": 9.9,
+  "battery_top_z_mm": 7.5,
+  "PCB_locator_side_clearance_mm": 0.35,
+  "microphone_port_native_XY_mm": [
+    46.3,
+    23.12
+  ],
+  "USB_socket_front_native_XY_mm": [
+    19.7,
+    30.0
+  ],
+  "USB_socket_front_recess_at_center_mm": 3.6999999999999993,
+  "USB_gauge_cross_section_mm": [
+    10.8,
+    6.5
+  ],
+  "USB_opening_cross_section_mm": [
+    11.4,
+    7.1
+  ],
+  "button_stroke_planning_mm": 0.5,
+  "minimum_stock_battery_lead_length_mm": 45,
+  "NTC_MPN": "B57540G1103F000",
+  "NTC_glass_max_diameter_and_length_mm": [
+    0.8,
+    1.4
+  ],
+  "NTC_insulated_attachment_gauge_mm": [
+    2.0,
+    1.4,
+    1.0
+  ],
+  "NTC_first_bend_from_glass_ends_mm": [
+    4.9,
+    4.7
+  ],
+  "NTC_minimum_bend_radius_mm": 0.75,
+  "wire_OD_and_exit_status": "Unapproved installation gauges; actual battery lead exits are not dimensioned by supplier"
+}

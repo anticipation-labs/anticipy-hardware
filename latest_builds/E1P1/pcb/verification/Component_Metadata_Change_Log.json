@@ -1,0 +1,1479 @@
+{
+  "changes": {
+    "U4": {
+      "MPN": "TPD2EUSB30ADRTR",
+      "Value": "TPD2EUSB30ADRTR",
+      "Manufacturer": "Texas Instruments",
+      "Datasheet": "https://www.ti.com/lit/ds/symlink/tpd2eusb30a.pdf",
+      "Description": "USB 2.0 data-line ESD protection; DRT-3 pin 1 D+, pin 2 D-, pin 3 GND; 3.6 V recommended maximum on data lines; not sustained VBUS-to-data fault protection"
+    },
+    "C13": {
+      "MPN": "C0603X5R1E104K030BB",
+      "Value": "100nF 25V X5R",
+      "Manufacturer": "TDK",
+      "Datasheet": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C0603X5R1E104K030BB",
+      "Description": "PMIC VDDIO bypass on 3V_MAIN; 100 nF nominal, 25 V X5R, 0201; effective capacitance decreases with DC bias"
+    },
+    "C23": {
+      "MPN": "GRM21BR60J476ME01L",
+      "Value": "47uF 6.3V X5R",
+      "Manufacturer": "Murata",
+      "Datasheet": "https://www.murata.com/en-us/products/productdetail?partno=GRM21BR60J476ME01%23",
+      "Description": "Haptic bulk decoupling on 3V_MAIN to GND; 47 uF nominal, 6.3 V X5R; maximum body 2.20 x 1.45 x 1.45 mm; effective capacitance decreases with DC bias"
+    },
+    "BT1": {
+      "MPN": "LP561836JU+PCM+2 WIRES 50MM",
+      "Value": "Jauch 350mAh min protected 1S LiPo",
+      "Manufacturer": "Jauch Quartz",
+      "Description": "External protected Jauch pack 246501; 350 mAh minimum, 370 mAh typical; max after-cycling envelope 38.5 x 18.5 x 6.0 mm plus 50 mm leads. Separate TH1 required; keep firmware charging disabled until pack-specific temperature and charge tests pass."
+    },
+    "C17": {
+      "MPN": "C1005X7R1C104K050BC",
+      "Value": "100nF 16V X7R",
+      "Manufacturer": "TDK",
+      "Datasheet": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1005X7R1C104K050BC"
+    },
+    "C19": {
+      "MPN": "C1005X7R1C104K050BC",
+      "Value": "100nF 16V X7R",
+      "Manufacturer": "TDK",
+      "Datasheet": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1005X7R1C104K050BC"
+    },
+    "C20": {
+      "MPN": "C1005X7R1C104K050BC",
+      "Value": "100nF 16V X7R",
+      "Manufacturer": "TDK",
+      "Datasheet": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1005X7R1C104K050BC"
+    },
+    "C22": {
+      "MPN": "C1005X7R1C104K050BC",
+      "Value": "100nF 16V X7R",
+      "Manufacturer": "TDK",
+      "Datasheet": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1005X7R1C104K050BC",
+      "Description": "100 nF 16 V X7R motor snubber across 3V_MAIN and HAPTIC_NEG; not a ground bypass"
+    },
+    "C2": {
+      "MPN": "GRM188R61E106MA73D"
+    },
+    "C3": {
+      "MPN": "GRM188R61E106MA73D"
+    },
+    "C4": {
+      "MPN": "GRM188R61E106MA73D"
+    },
+    "C7": {
+      "MPN": "GRM188R61E106MA73D"
+    },
+    "C8": {
+      "MPN": "GRM188R61E106MA73D"
+    },
+    "C9": {
+      "MPN": "GRM188R61E106MA73D"
+    },
+    "C10": {
+      "MPN": "GRM188R61E106MA73D"
+    },
+    "D1": {
+      "MPN": "1N4148WS-13-F",
+      "Value": "1N4148WS-13-F"
+    },
+    "C14": {
+      "MPN": "C0402C104M4RACTU"
+    },
+    "C15": {
+      "MPN": "C0402C104M4RACTU"
+    },
+    "C16": {
+      "MPN": "C0402C104M4RACTU"
+    }
+  },
+  "files": [
+    {
+      "file": "electrical/Anticipy_R1_E1_PROTOTYPE.kicad_pcb",
+      "changes": [
+        {
+          "reference": "C7",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        },
+        {
+          "reference": "U4",
+          "property": "MPN",
+          "old": "TPD2EUSB30DRTR",
+          "new": "TPD2EUSB30ADRTR"
+        },
+        {
+          "reference": "U4",
+          "property": "Value",
+          "old": "TPD2EUSB30DRTR",
+          "new": "TPD2EUSB30ADRTR"
+        },
+        {
+          "reference": "U4",
+          "property": "Datasheet",
+          "old": "https://www.ti.com/lit/ds/symlink/tpd2eusb30.pdf",
+          "new": "https://www.ti.com/lit/ds/symlink/tpd2eusb30a.pdf"
+        },
+        {
+          "reference": "U4",
+          "property": "Description",
+          "old": "USB 2.0 data-line ESD protection",
+          "new": "USB 2.0 data-line ESD protection; DRT-3 pin 1 D+, pin 2 D-, pin 3 GND; 3.6 V recommended maximum on data lines; not sustained VBUS-to-data fault protection"
+        },
+        {
+          "reference": "C20",
+          "property": "MPN",
+          "old": "C1005X7R1A104K050BC",
+          "new": "C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C20",
+          "property": "Value",
+          "old": "100nF 10V X7R",
+          "new": "100nF 16V X7R"
+        },
+        {
+          "reference": "C20",
+          "property": "Datasheet",
+          "old": "",
+          "new": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C8",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        },
+        {
+          "reference": "C2",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        },
+        {
+          "reference": "C14",
+          "property": "MPN",
+          "old": "C0402C104M4RAC7867",
+          "new": "C0402C104M4RACTU"
+        },
+        {
+          "reference": "C17",
+          "property": "MPN",
+          "old": "C1005X7R1A104K050BC",
+          "new": "C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C17",
+          "property": "Value",
+          "old": "100nF 10V X7R",
+          "new": "100nF 16V X7R"
+        },
+        {
+          "reference": "C17",
+          "property": "Datasheet",
+          "old": "",
+          "new": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "D1",
+          "property": "MPN",
+          "old": "1N4148WS-7-F",
+          "new": "1N4148WS-13-F"
+        },
+        {
+          "reference": "C19",
+          "property": "MPN",
+          "old": "C1005X7R1A104K050BC",
+          "new": "C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C19",
+          "property": "Value",
+          "old": "100nF 10V X7R",
+          "new": "100nF 16V X7R"
+        },
+        {
+          "reference": "C19",
+          "property": "Datasheet",
+          "old": "",
+          "new": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C13",
+          "property": "MPN",
+          "old": "C0603X5R1C104K030BC",
+          "new": "C0603X5R1E104K030BB"
+        },
+        {
+          "reference": "C13",
+          "property": "Value",
+          "old": "100nF 16V X5R",
+          "new": "100nF 25V X5R"
+        },
+        {
+          "reference": "C13",
+          "property": "Datasheet",
+          "old": "",
+          "new": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C0603X5R1E104K030BB"
+        },
+        {
+          "reference": "C13",
+          "property": "Description",
+          "old": "PMIC logic bypass; Nordic QEAA 0201 assembler gate",
+          "new": "PMIC VDDIO bypass on 3V_MAIN; 100 nF nominal, 25 V X5R, 0201; effective capacitance decreases with DC bias"
+        },
+        {
+          "reference": "C4",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        },
+        {
+          "reference": "C3",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        },
+        {
+          "reference": "C22",
+          "property": "MPN",
+          "old": "C1005X7R1A104K050BC",
+          "new": "C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C22",
+          "property": "Value",
+          "old": "100nF 10V X7R",
+          "new": "100nF 16V X7R"
+        },
+        {
+          "reference": "C22",
+          "property": "Datasheet",
+          "old": "",
+          "new": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C22",
+          "property": "Description",
+          "old": "Motor brush-noise capacitor",
+          "new": "100 nF 16 V X7R motor snubber across 3V_MAIN and HAPTIC_NEG; not a ground bypass"
+        },
+        {
+          "reference": "C23",
+          "property": "MPN",
+          "old": "CC0805MKX5R5BB476",
+          "new": "GRM21BR60J476ME01L"
+        },
+        {
+          "reference": "C23",
+          "property": "Manufacturer",
+          "old": "Yageo",
+          "new": "Murata"
+        },
+        {
+          "reference": "C23",
+          "property": "Datasheet",
+          "old": "",
+          "new": "https://www.murata.com/en-us/products/productdetail?partno=GRM21BR60J476ME01%23"
+        },
+        {
+          "reference": "C23",
+          "property": "Description",
+          "old": "Haptic rail bulk",
+          "new": "Haptic bulk decoupling on 3V_MAIN to GND; 47 uF nominal, 6.3 V X5R; maximum body 2.20 x 1.45 x 1.45 mm; effective capacitance decreases with DC bias"
+        },
+        {
+          "reference": "C10",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        },
+        {
+          "reference": "C9",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        },
+        {
+          "reference": "C15",
+          "property": "MPN",
+          "old": "C0402C104M4RAC7867",
+          "new": "C0402C104M4RACTU"
+        },
+        {
+          "reference": "C16",
+          "property": "MPN",
+          "old": "C0402C104M4RAC7867",
+          "new": "C0402C104M4RACTU"
+        },
+        {
+          "reference": "BT1",
+          "property": "MPN",
+          "old": "UNSELECTED",
+          "new": "LP561836JU+PCM+2 WIRES 50MM"
+        },
+        {
+          "reference": "BT1",
+          "property": "Value",
+          "old": "UNSELECTED protected 1S LiPo",
+          "new": "Jauch 350mAh min protected 1S LiPo"
+        },
+        {
+          "reference": "BT1",
+          "property": "Manufacturer",
+          "old": "LiPol Battery",
+          "new": "Jauch Quartz"
+        },
+        {
+          "reference": "BT1",
+          "property": "Description",
+          "old": "UNSELECTED protected 1S pack; max27x12.5x6.0mm envelope only. TH1 and pack charge profile require qualification. CHARGING DISABLED; no cell approved.",
+          "new": "External protected Jauch pack 246501; 350 mAh minimum, 370 mAh typical; max after-cycling envelope 38.5 x 18.5 x 6.0 mm plus 50 mm leads. Separate TH1 required; keep firmware charging disabled until pack-specific temperature and charge tests pass."
+        }
+      ],
+      "sha256": "b8cddc8172e07ed07def110585e147395daedcabc8a43aecad29c66f6a1120e8"
+    },
+    {
+      "file": "electrical/Anticipy_R1_E1_PROTOTYPE.kicad_sch",
+      "changes": [
+        {
+          "reference": "U4",
+          "property": "MPN",
+          "old": "TPD2EUSB30DRTR",
+          "new": "TPD2EUSB30ADRTR"
+        },
+        {
+          "reference": "U4",
+          "property": "Value",
+          "old": "TPD2EUSB30DRTR",
+          "new": "TPD2EUSB30ADRTR"
+        },
+        {
+          "reference": "U4",
+          "property": "Datasheet",
+          "old": "https://www.ti.com/lit/ds/symlink/tpd2eusb30.pdf",
+          "new": "https://www.ti.com/lit/ds/symlink/tpd2eusb30a.pdf"
+        },
+        {
+          "reference": "U4",
+          "property": "Description",
+          "old": "USB 2.0 data-line ESD protection",
+          "new": "USB 2.0 data-line ESD protection; DRT-3 pin 1 D+, pin 2 D-, pin 3 GND; 3.6 V recommended maximum on data lines; not sustained VBUS-to-data fault protection"
+        },
+        {
+          "reference": "BT1",
+          "property": "MPN",
+          "old": "UNSELECTED",
+          "new": "LP561836JU+PCM+2 WIRES 50MM"
+        },
+        {
+          "reference": "BT1",
+          "property": "Value",
+          "old": "UNSELECTED protected 1S LiPo",
+          "new": "Jauch 350mAh min protected 1S LiPo"
+        },
+        {
+          "reference": "BT1",
+          "property": "Manufacturer",
+          "old": "LiPol Battery",
+          "new": "Jauch Quartz"
+        },
+        {
+          "reference": "BT1",
+          "property": "Description",
+          "old": "UNSELECTED protected 1S pack; max27x12.5x6.0mm envelope only. TH1 and pack charge profile require qualification. CHARGING DISABLED; no cell approved.",
+          "new": "External protected Jauch pack 246501; 350 mAh minimum, 370 mAh typical; max after-cycling envelope 38.5 x 18.5 x 6.0 mm plus 50 mm leads. Separate TH1 required; keep firmware charging disabled until pack-specific temperature and charge tests pass."
+        },
+        {
+          "reference": "D1",
+          "property": "MPN",
+          "old": "1N4148WS-7-F",
+          "new": "1N4148WS-13-F"
+        },
+        {
+          "reference": "C2",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        },
+        {
+          "reference": "C3",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        },
+        {
+          "reference": "C4",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        },
+        {
+          "reference": "C7",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        },
+        {
+          "reference": "C8",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        },
+        {
+          "reference": "C9",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        },
+        {
+          "reference": "C10",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        },
+        {
+          "reference": "C13",
+          "property": "MPN",
+          "old": "C0603X5R1C104K030BC",
+          "new": "C0603X5R1E104K030BB"
+        },
+        {
+          "reference": "C13",
+          "property": "Value",
+          "old": "100nF 16V X5R",
+          "new": "100nF 25V X5R"
+        },
+        {
+          "reference": "C13",
+          "property": "Datasheet",
+          "old": "",
+          "new": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C0603X5R1E104K030BB"
+        },
+        {
+          "reference": "C13",
+          "property": "Description",
+          "old": "PMIC logic bypass; Nordic QEAA 0201 assembler gate",
+          "new": "PMIC VDDIO bypass on 3V_MAIN; 100 nF nominal, 25 V X5R, 0201; effective capacitance decreases with DC bias"
+        },
+        {
+          "reference": "C14",
+          "property": "MPN",
+          "old": "C0402C104M4RAC7867",
+          "new": "C0402C104M4RACTU"
+        },
+        {
+          "reference": "C15",
+          "property": "MPN",
+          "old": "C0402C104M4RAC7867",
+          "new": "C0402C104M4RACTU"
+        },
+        {
+          "reference": "C16",
+          "property": "MPN",
+          "old": "C0402C104M4RAC7867",
+          "new": "C0402C104M4RACTU"
+        },
+        {
+          "reference": "C17",
+          "property": "MPN",
+          "old": "C1005X7R1A104K050BC",
+          "new": "C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C17",
+          "property": "Value",
+          "old": "100nF 10V X7R",
+          "new": "100nF 16V X7R"
+        },
+        {
+          "reference": "C17",
+          "property": "Datasheet",
+          "old": "",
+          "new": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C19",
+          "property": "MPN",
+          "old": "C1005X7R1A104K050BC",
+          "new": "C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C19",
+          "property": "Value",
+          "old": "100nF 10V X7R",
+          "new": "100nF 16V X7R"
+        },
+        {
+          "reference": "C19",
+          "property": "Datasheet",
+          "old": "",
+          "new": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C20",
+          "property": "MPN",
+          "old": "C1005X7R1A104K050BC",
+          "new": "C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C20",
+          "property": "Value",
+          "old": "100nF 10V X7R",
+          "new": "100nF 16V X7R"
+        },
+        {
+          "reference": "C20",
+          "property": "Datasheet",
+          "old": "",
+          "new": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C22",
+          "property": "MPN",
+          "old": "C1005X7R1A104K050BC",
+          "new": "C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C22",
+          "property": "Value",
+          "old": "100nF 10V X7R",
+          "new": "100nF 16V X7R"
+        },
+        {
+          "reference": "C22",
+          "property": "Datasheet",
+          "old": "",
+          "new": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C22",
+          "property": "Description",
+          "old": "Motor brush-noise capacitor",
+          "new": "100 nF 16 V X7R motor snubber across 3V_MAIN and HAPTIC_NEG; not a ground bypass"
+        },
+        {
+          "reference": "C23",
+          "property": "MPN",
+          "old": "CC0805MKX5R5BB476",
+          "new": "GRM21BR60J476ME01L"
+        },
+        {
+          "reference": "C23",
+          "property": "Manufacturer",
+          "old": "Yageo",
+          "new": "Murata"
+        },
+        {
+          "reference": "C23",
+          "property": "Datasheet",
+          "old": "",
+          "new": "https://www.murata.com/en-us/products/productdetail?partno=GRM21BR60J476ME01%23"
+        },
+        {
+          "reference": "C23",
+          "property": "Description",
+          "old": "Haptic rail bulk",
+          "new": "Haptic bulk decoupling on 3V_MAIN to GND; 47 uF nominal, 6.3 V X5R; maximum body 2.20 x 1.45 x 1.45 mm; effective capacitance decreases with DC bias"
+        },
+        {
+          "reference": "U4",
+          "property": "MPN",
+          "old": "TPD2EUSB30DRTR",
+          "new": "TPD2EUSB30ADRTR"
+        },
+        {
+          "reference": "U4",
+          "property": "Value",
+          "old": "TPD2EUSB30DRTR",
+          "new": "TPD2EUSB30ADRTR"
+        },
+        {
+          "reference": "U4",
+          "property": "Datasheet",
+          "old": "https://www.ti.com/lit/ds/symlink/tpd2eusb30.pdf",
+          "new": "https://www.ti.com/lit/ds/symlink/tpd2eusb30a.pdf"
+        },
+        {
+          "reference": "U4",
+          "property": "Description",
+          "old": "USB 2.0 data-line ESD protection",
+          "new": "USB 2.0 data-line ESD protection; DRT-3 pin 1 D+, pin 2 D-, pin 3 GND; 3.6 V recommended maximum on data lines; not sustained VBUS-to-data fault protection"
+        },
+        {
+          "reference": "BT1",
+          "property": "MPN",
+          "old": "UNSELECTED",
+          "new": "LP561836JU+PCM+2 WIRES 50MM"
+        },
+        {
+          "reference": "BT1",
+          "property": "Value",
+          "old": "UNSELECTED protected 1S LiPo",
+          "new": "Jauch 350mAh min protected 1S LiPo"
+        },
+        {
+          "reference": "BT1",
+          "property": "Manufacturer",
+          "old": "LiPol Battery",
+          "new": "Jauch Quartz"
+        },
+        {
+          "reference": "BT1",
+          "property": "Description",
+          "old": "UNSELECTED protected 1S pack; max27x12.5x6.0mm envelope only. TH1 and pack charge profile require qualification. CHARGING DISABLED; no cell approved.",
+          "new": "External protected Jauch pack 246501; 350 mAh minimum, 370 mAh typical; max after-cycling envelope 38.5 x 18.5 x 6.0 mm plus 50 mm leads. Separate TH1 required; keep firmware charging disabled until pack-specific temperature and charge tests pass."
+        },
+        {
+          "reference": "D1",
+          "property": "MPN",
+          "old": "1N4148WS-7-F",
+          "new": "1N4148WS-13-F"
+        },
+        {
+          "reference": "C2",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        },
+        {
+          "reference": "C3",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        },
+        {
+          "reference": "C4",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        },
+        {
+          "reference": "C7",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        },
+        {
+          "reference": "C8",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        },
+        {
+          "reference": "C9",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        },
+        {
+          "reference": "C10",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        },
+        {
+          "reference": "C13",
+          "property": "MPN",
+          "old": "C0603X5R1C104K030BC",
+          "new": "C0603X5R1E104K030BB"
+        },
+        {
+          "reference": "C13",
+          "property": "Value",
+          "old": "100nF 16V X5R",
+          "new": "100nF 25V X5R"
+        },
+        {
+          "reference": "C13",
+          "property": "Datasheet",
+          "old": "",
+          "new": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C0603X5R1E104K030BB"
+        },
+        {
+          "reference": "C13",
+          "property": "Description",
+          "old": "PMIC logic bypass; Nordic QEAA 0201 assembler gate",
+          "new": "PMIC VDDIO bypass on 3V_MAIN; 100 nF nominal, 25 V X5R, 0201; effective capacitance decreases with DC bias"
+        },
+        {
+          "reference": "C14",
+          "property": "MPN",
+          "old": "C0402C104M4RAC7867",
+          "new": "C0402C104M4RACTU"
+        },
+        {
+          "reference": "C15",
+          "property": "MPN",
+          "old": "C0402C104M4RAC7867",
+          "new": "C0402C104M4RACTU"
+        },
+        {
+          "reference": "C16",
+          "property": "MPN",
+          "old": "C0402C104M4RAC7867",
+          "new": "C0402C104M4RACTU"
+        },
+        {
+          "reference": "C17",
+          "property": "MPN",
+          "old": "C1005X7R1A104K050BC",
+          "new": "C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C17",
+          "property": "Value",
+          "old": "100nF 10V X7R",
+          "new": "100nF 16V X7R"
+        },
+        {
+          "reference": "C17",
+          "property": "Datasheet",
+          "old": "",
+          "new": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C19",
+          "property": "MPN",
+          "old": "C1005X7R1A104K050BC",
+          "new": "C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C19",
+          "property": "Value",
+          "old": "100nF 10V X7R",
+          "new": "100nF 16V X7R"
+        },
+        {
+          "reference": "C19",
+          "property": "Datasheet",
+          "old": "",
+          "new": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C20",
+          "property": "MPN",
+          "old": "C1005X7R1A104K050BC",
+          "new": "C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C20",
+          "property": "Value",
+          "old": "100nF 10V X7R",
+          "new": "100nF 16V X7R"
+        },
+        {
+          "reference": "C20",
+          "property": "Datasheet",
+          "old": "",
+          "new": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C22",
+          "property": "MPN",
+          "old": "C1005X7R1A104K050BC",
+          "new": "C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C22",
+          "property": "Value",
+          "old": "100nF 10V X7R",
+          "new": "100nF 16V X7R"
+        },
+        {
+          "reference": "C22",
+          "property": "Datasheet",
+          "old": "",
+          "new": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C22",
+          "property": "Description",
+          "old": "Motor brush-noise capacitor",
+          "new": "100 nF 16 V X7R motor snubber across 3V_MAIN and HAPTIC_NEG; not a ground bypass"
+        },
+        {
+          "reference": "C23",
+          "property": "MPN",
+          "old": "CC0805MKX5R5BB476",
+          "new": "GRM21BR60J476ME01L"
+        },
+        {
+          "reference": "C23",
+          "property": "Manufacturer",
+          "old": "Yageo",
+          "new": "Murata"
+        },
+        {
+          "reference": "C23",
+          "property": "Datasheet",
+          "old": "",
+          "new": "https://www.murata.com/en-us/products/productdetail?partno=GRM21BR60J476ME01%23"
+        },
+        {
+          "reference": "C23",
+          "property": "Description",
+          "old": "Haptic rail bulk",
+          "new": "Haptic bulk decoupling on 3V_MAIN to GND; 47 uF nominal, 6.3 V X5R; maximum body 2.20 x 1.45 x 1.45 mm; effective capacitance decreases with DC bias"
+        }
+      ],
+      "sha256": "d0df8d70a8c7cb474536c13adef270b576daf3540815ed754bb5f334b742acc8"
+    },
+    {
+      "file": "electrical/Anticipy.kicad_sym",
+      "changes": [
+        {
+          "reference": "U4",
+          "property": "MPN",
+          "old": "TPD2EUSB30DRTR",
+          "new": "TPD2EUSB30ADRTR"
+        },
+        {
+          "reference": "U4",
+          "property": "Value",
+          "old": "TPD2EUSB30DRTR",
+          "new": "TPD2EUSB30ADRTR"
+        },
+        {
+          "reference": "U4",
+          "property": "Datasheet",
+          "old": "https://www.ti.com/lit/ds/symlink/tpd2eusb30.pdf",
+          "new": "https://www.ti.com/lit/ds/symlink/tpd2eusb30a.pdf"
+        },
+        {
+          "reference": "U4",
+          "property": "Description",
+          "old": "USB 2.0 data-line ESD protection",
+          "new": "USB 2.0 data-line ESD protection; DRT-3 pin 1 D+, pin 2 D-, pin 3 GND; 3.6 V recommended maximum on data lines; not sustained VBUS-to-data fault protection"
+        },
+        {
+          "reference": "BT1",
+          "property": "MPN",
+          "old": "UNSELECTED",
+          "new": "LP561836JU+PCM+2 WIRES 50MM"
+        },
+        {
+          "reference": "BT1",
+          "property": "Value",
+          "old": "UNSELECTED protected 1S LiPo",
+          "new": "Jauch 350mAh min protected 1S LiPo"
+        },
+        {
+          "reference": "BT1",
+          "property": "Manufacturer",
+          "old": "LiPol Battery",
+          "new": "Jauch Quartz"
+        },
+        {
+          "reference": "BT1",
+          "property": "Description",
+          "old": "UNSELECTED protected 1S pack; max27x12.5x6.0mm envelope only. TH1 and pack charge profile require qualification. CHARGING DISABLED; no cell approved.",
+          "new": "External protected Jauch pack 246501; 350 mAh minimum, 370 mAh typical; max after-cycling envelope 38.5 x 18.5 x 6.0 mm plus 50 mm leads. Separate TH1 required; keep firmware charging disabled until pack-specific temperature and charge tests pass."
+        },
+        {
+          "reference": "D1",
+          "property": "MPN",
+          "old": "1N4148WS-7-F",
+          "new": "1N4148WS-13-F"
+        },
+        {
+          "reference": "C2",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        },
+        {
+          "reference": "C3",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        },
+        {
+          "reference": "C4",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        },
+        {
+          "reference": "C7",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        },
+        {
+          "reference": "C8",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        },
+        {
+          "reference": "C9",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        },
+        {
+          "reference": "C10",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        },
+        {
+          "reference": "C13",
+          "property": "MPN",
+          "old": "C0603X5R1C104K030BC",
+          "new": "C0603X5R1E104K030BB"
+        },
+        {
+          "reference": "C13",
+          "property": "Value",
+          "old": "100nF 16V X5R",
+          "new": "100nF 25V X5R"
+        },
+        {
+          "reference": "C13",
+          "property": "Datasheet",
+          "old": "",
+          "new": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C0603X5R1E104K030BB"
+        },
+        {
+          "reference": "C13",
+          "property": "Description",
+          "old": "PMIC logic bypass; Nordic QEAA 0201 assembler gate",
+          "new": "PMIC VDDIO bypass on 3V_MAIN; 100 nF nominal, 25 V X5R, 0201; effective capacitance decreases with DC bias"
+        },
+        {
+          "reference": "C14",
+          "property": "MPN",
+          "old": "C0402C104M4RAC7867",
+          "new": "C0402C104M4RACTU"
+        },
+        {
+          "reference": "C15",
+          "property": "MPN",
+          "old": "C0402C104M4RAC7867",
+          "new": "C0402C104M4RACTU"
+        },
+        {
+          "reference": "C16",
+          "property": "MPN",
+          "old": "C0402C104M4RAC7867",
+          "new": "C0402C104M4RACTU"
+        },
+        {
+          "reference": "C17",
+          "property": "MPN",
+          "old": "C1005X7R1A104K050BC",
+          "new": "C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C17",
+          "property": "Value",
+          "old": "100nF 10V X7R",
+          "new": "100nF 16V X7R"
+        },
+        {
+          "reference": "C17",
+          "property": "Datasheet",
+          "old": "",
+          "new": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C19",
+          "property": "MPN",
+          "old": "C1005X7R1A104K050BC",
+          "new": "C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C19",
+          "property": "Value",
+          "old": "100nF 10V X7R",
+          "new": "100nF 16V X7R"
+        },
+        {
+          "reference": "C19",
+          "property": "Datasheet",
+          "old": "",
+          "new": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C20",
+          "property": "MPN",
+          "old": "C1005X7R1A104K050BC",
+          "new": "C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C20",
+          "property": "Value",
+          "old": "100nF 10V X7R",
+          "new": "100nF 16V X7R"
+        },
+        {
+          "reference": "C20",
+          "property": "Datasheet",
+          "old": "",
+          "new": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C22",
+          "property": "MPN",
+          "old": "C1005X7R1A104K050BC",
+          "new": "C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C22",
+          "property": "Value",
+          "old": "100nF 10V X7R",
+          "new": "100nF 16V X7R"
+        },
+        {
+          "reference": "C22",
+          "property": "Datasheet",
+          "old": "",
+          "new": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C22",
+          "property": "Description",
+          "old": "Motor brush-noise capacitor",
+          "new": "100 nF 16 V X7R motor snubber across 3V_MAIN and HAPTIC_NEG; not a ground bypass"
+        },
+        {
+          "reference": "C23",
+          "property": "MPN",
+          "old": "CC0805MKX5R5BB476",
+          "new": "GRM21BR60J476ME01L"
+        },
+        {
+          "reference": "C23",
+          "property": "Manufacturer",
+          "old": "Yageo",
+          "new": "Murata"
+        },
+        {
+          "reference": "C23",
+          "property": "Datasheet",
+          "old": "",
+          "new": "https://www.murata.com/en-us/products/productdetail?partno=GRM21BR60J476ME01%23"
+        },
+        {
+          "reference": "C23",
+          "property": "Description",
+          "old": "Haptic rail bulk",
+          "new": "Haptic bulk decoupling on 3V_MAIN to GND; 47 uF nominal, 6.3 V X5R; maximum body 2.20 x 1.45 x 1.45 mm; effective capacitance decreases with DC bias"
+        }
+      ],
+      "sha256": "231e91f50620946ceaf96451fd5a8631ddc5d535481e1047f4d7d48a013dfb89"
+    },
+    {
+      "file": "electrical/Anticipy_E1_Release.pretty/BT1__WirePads_2_P1.27mm.kicad_mod",
+      "changes": [
+        {
+          "reference": "BT1",
+          "property": "MPN",
+          "old": "UNSELECTED",
+          "new": "LP561836JU+PCM+2 WIRES 50MM"
+        },
+        {
+          "reference": "BT1",
+          "property": "Value",
+          "old": "UNSELECTED protected 1S LiPo",
+          "new": "Jauch 350mAh min protected 1S LiPo"
+        },
+        {
+          "reference": "BT1",
+          "property": "Manufacturer",
+          "old": "LiPol Battery",
+          "new": "Jauch Quartz"
+        },
+        {
+          "reference": "BT1",
+          "property": "Description",
+          "old": "UNSELECTED protected 1S pack; max27x12.5x6.0mm envelope only. TH1 and pack charge profile require qualification. CHARGING DISABLED; no cell approved.",
+          "new": "External protected Jauch pack 246501; 350 mAh minimum, 370 mAh typical; max after-cycling envelope 38.5 x 18.5 x 6.0 mm plus 50 mm leads. Separate TH1 required; keep firmware charging disabled until pack-specific temperature and charge tests pass."
+        }
+      ],
+      "sha256": "8ce31e232c56bf425f8624ae88d8bded4d82883d84e2ad8c15741f9fd81cd9ff"
+    },
+    {
+      "file": "electrical/Anticipy_E1_Release.pretty/C10__C_0603_1608Metric.kicad_mod",
+      "changes": [
+        {
+          "reference": "C10",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        }
+      ],
+      "sha256": "fb5a0576475feb73dd56466d3ff190bf1f1394bec4b4ef231a47584a74b151ee"
+    },
+    {
+      "file": "electrical/Anticipy_E1_Release.pretty/C13__C_0201_0603Metric.kicad_mod",
+      "changes": [
+        {
+          "reference": "C13",
+          "property": "MPN",
+          "old": "C0603X5R1C104K030BC",
+          "new": "C0603X5R1E104K030BB"
+        },
+        {
+          "reference": "C13",
+          "property": "Value",
+          "old": "100nF 16V X5R",
+          "new": "100nF 25V X5R"
+        },
+        {
+          "reference": "C13",
+          "property": "Datasheet",
+          "old": "",
+          "new": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C0603X5R1E104K030BB"
+        },
+        {
+          "reference": "C13",
+          "property": "Description",
+          "old": "PMIC logic bypass; Nordic QEAA 0201 assembler gate",
+          "new": "PMIC VDDIO bypass on 3V_MAIN; 100 nF nominal, 25 V X5R, 0201; effective capacitance decreases with DC bias"
+        }
+      ],
+      "sha256": "604855e2b5ce7c4e902dac0edd9115ccfe8be0b1ae3ce51bfdeb1785800f8a72"
+    },
+    {
+      "file": "electrical/Anticipy_E1_Release.pretty/C14__C_0402_1005Metric.kicad_mod",
+      "changes": [
+        {
+          "reference": "C14",
+          "property": "MPN",
+          "old": "C0402C104M4RAC7867",
+          "new": "C0402C104M4RACTU"
+        }
+      ],
+      "sha256": "fb80acabac5c33ccfbc796e757f010d26ea86c1eef9d096dec5461d8b74e400a"
+    },
+    {
+      "file": "electrical/Anticipy_E1_Release.pretty/C15__C_0402_1005Metric.kicad_mod",
+      "changes": [
+        {
+          "reference": "C15",
+          "property": "MPN",
+          "old": "C0402C104M4RAC7867",
+          "new": "C0402C104M4RACTU"
+        }
+      ],
+      "sha256": "ed07353df1e08cd1b7d603914b8439565bfffc464cf9b009c6bb6b44373b21c9"
+    },
+    {
+      "file": "electrical/Anticipy_E1_Release.pretty/C16__C_0402_1005Metric.kicad_mod",
+      "changes": [
+        {
+          "reference": "C16",
+          "property": "MPN",
+          "old": "C0402C104M4RAC7867",
+          "new": "C0402C104M4RACTU"
+        }
+      ],
+      "sha256": "13f0ab8a959755697021934041d61fb0100397744b9720037514e9762acd3e82"
+    },
+    {
+      "file": "electrical/Anticipy_E1_Release.pretty/C17__C_0402_1005Metric.kicad_mod",
+      "changes": [
+        {
+          "reference": "C17",
+          "property": "MPN",
+          "old": "C1005X7R1A104K050BC",
+          "new": "C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C17",
+          "property": "Value",
+          "old": "100nF 10V X7R",
+          "new": "100nF 16V X7R"
+        },
+        {
+          "reference": "C17",
+          "property": "Datasheet",
+          "old": "",
+          "new": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1005X7R1C104K050BC"
+        }
+      ],
+      "sha256": "ec1d00125b32a6f471c8359e967390fae1375b70d1b53ee04d08f94aeec629e5"
+    },
+    {
+      "file": "electrical/Anticipy_E1_Release.pretty/C19__C_0402_1005Metric.kicad_mod",
+      "changes": [
+        {
+          "reference": "C19",
+          "property": "MPN",
+          "old": "C1005X7R1A104K050BC",
+          "new": "C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C19",
+          "property": "Value",
+          "old": "100nF 10V X7R",
+          "new": "100nF 16V X7R"
+        },
+        {
+          "reference": "C19",
+          "property": "Datasheet",
+          "old": "",
+          "new": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1005X7R1C104K050BC"
+        }
+      ],
+      "sha256": "36d566a03e116c613be875cce3bf5e91687ba49f3b5244f79a4b4144b59388e8"
+    },
+    {
+      "file": "electrical/Anticipy_E1_Release.pretty/C20__C_0402_1005Metric.kicad_mod",
+      "changes": [
+        {
+          "reference": "C20",
+          "property": "MPN",
+          "old": "C1005X7R1A104K050BC",
+          "new": "C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C20",
+          "property": "Value",
+          "old": "100nF 10V X7R",
+          "new": "100nF 16V X7R"
+        },
+        {
+          "reference": "C20",
+          "property": "Datasheet",
+          "old": "",
+          "new": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1005X7R1C104K050BC"
+        }
+      ],
+      "sha256": "d05b3333cec57be7cb00d9c28c6fbf924549bf94bc900e1fe97375f58549fae7"
+    },
+    {
+      "file": "electrical/Anticipy_E1_Release.pretty/C22__C_0402_1005Metric.kicad_mod",
+      "changes": [
+        {
+          "reference": "C22",
+          "property": "MPN",
+          "old": "C1005X7R1A104K050BC",
+          "new": "C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C22",
+          "property": "Value",
+          "old": "100nF 10V X7R",
+          "new": "100nF 16V X7R"
+        },
+        {
+          "reference": "C22",
+          "property": "Datasheet",
+          "old": "",
+          "new": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1005X7R1C104K050BC"
+        },
+        {
+          "reference": "C22",
+          "property": "Description",
+          "old": "Motor brush-noise capacitor",
+          "new": "100 nF 16 V X7R motor snubber across 3V_MAIN and HAPTIC_NEG; not a ground bypass"
+        }
+      ],
+      "sha256": "22d895066068fac80c936a064455272eee4659285485235d8f653802a63fa279"
+    },
+    {
+      "file": "electrical/Anticipy_E1_Release.pretty/C23__C_0805_2012Metric.kicad_mod",
+      "changes": [
+        {
+          "reference": "C23",
+          "property": "MPN",
+          "old": "CC0805MKX5R5BB476",
+          "new": "GRM21BR60J476ME01L"
+        },
+        {
+          "reference": "C23",
+          "property": "Manufacturer",
+          "old": "Yageo",
+          "new": "Murata"
+        },
+        {
+          "reference": "C23",
+          "property": "Datasheet",
+          "old": "",
+          "new": "https://www.murata.com/en-us/products/productdetail?partno=GRM21BR60J476ME01%23"
+        },
+        {
+          "reference": "C23",
+          "property": "Description",
+          "old": "Haptic rail bulk",
+          "new": "Haptic bulk decoupling on 3V_MAIN to GND; 47 uF nominal, 6.3 V X5R; maximum body 2.20 x 1.45 x 1.45 mm; effective capacitance decreases with DC bias"
+        }
+      ],
+      "sha256": "65f03d7bbecb9b4ca9b5a74b1d228aa9ca7967fe99128896336e93b5d46fa4b7"
+    },
+    {
+      "file": "electrical/Anticipy_E1_Release.pretty/C2__C_0603_1608Metric.kicad_mod",
+      "changes": [
+        {
+          "reference": "C2",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        }
+      ],
+      "sha256": "699bbecb069f49f88a36debc08b342c25d5118f63364dc61bdf4cc98541d7abe"
+    },
+    {
+      "file": "electrical/Anticipy_E1_Release.pretty/C3__C_0603_1608Metric.kicad_mod",
+      "changes": [
+        {
+          "reference": "C3",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        }
+      ],
+      "sha256": "a8cafd201cf3c79696d8ee6cb4165a9abec2b4f62268456bdc3dc7abc9c52cbd"
+    },
+    {
+      "file": "electrical/Anticipy_E1_Release.pretty/C4__C_0603_1608Metric.kicad_mod",
+      "changes": [
+        {
+          "reference": "C4",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        }
+      ],
+      "sha256": "334defba0e3cc0f8fa4a626e45ede0a96e78a3c77a0ab05adfd589d179938ea2"
+    },
+    {
+      "file": "electrical/Anticipy_E1_Release.pretty/C7__C_0603_1608Metric.kicad_mod",
+      "changes": [
+        {
+          "reference": "C7",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        }
+      ],
+      "sha256": "59dd3edaae4c916d9e6ba95934a2d784f4e56c67eea3dbc64ea6b5c80d017a18"
+    },
+    {
+      "file": "electrical/Anticipy_E1_Release.pretty/C8__C_0603_1608Metric.kicad_mod",
+      "changes": [
+        {
+          "reference": "C8",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        }
+      ],
+      "sha256": "a7fd84b72cc412e4157552664703fb24a60700458ce10d6db52ffbf24d2b893a"
+    },
+    {
+      "file": "electrical/Anticipy_E1_Release.pretty/C9__C_0603_1608Metric.kicad_mod",
+      "changes": [
+        {
+          "reference": "C9",
+          "property": "MPN",
+          "old": "GRM188R61E106MA73J",
+          "new": "GRM188R61E106MA73D"
+        }
+      ],
+      "sha256": "04892b2ce4a9d99c813d5d04f9121c7a4cee24accc16cce6b40416b0e08b0912"
+    },
+    {
+      "file": "electrical/Anticipy_E1_Release.pretty/D1__D_SOD-323.kicad_mod",
+      "changes": [
+        {
+          "reference": "D1",
+          "property": "MPN",
+          "old": "1N4148WS-7-F",
+          "new": "1N4148WS-13-F"
+        }
+      ],
+      "sha256": "b760c202eea7f68a22b4c38cf329c9fc85b4bf68ffdc73955ab35ff6a039eeb5"
+    },
+    {
+      "file": "electrical/Anticipy_E1_Release.pretty/U4__Texas_DRT-3_R0B.kicad_mod",
+      "changes": [
+        {
+          "reference": "U4",
+          "property": "MPN",
+          "old": "TPD2EUSB30DRTR",
+          "new": "TPD2EUSB30ADRTR"
+        },
+        {
+          "reference": "U4",
+          "property": "Value",
+          "old": "TPD2EUSB30DRTR",
+          "new": "TPD2EUSB30ADRTR"
+        },
+        {
+          "reference": "U4",
+          "property": "Datasheet",
+          "old": "https://www.ti.com/lit/ds/symlink/tpd2eusb30.pdf",
+          "new": "https://www.ti.com/lit/ds/symlink/tpd2eusb30a.pdf"
+        },
+        {
+          "reference": "U4",
+          "property": "Description",
+          "old": "USB 2.0 data-line ESD protection",
+          "new": "USB 2.0 data-line ESD protection; DRT-3 pin 1 D+, pin 2 D-, pin 3 GND; 3.6 V recommended maximum on data lines; not sustained VBUS-to-data fault protection"
+        }
+      ],
+      "sha256": "923523da7cea0c3512b3e7e1b77bc75fd5422381197985f0554971c179d6a17f"
+    },
+    {
+      "file": "electrical/Anticipy_R1_E1_PROTOTYPE.kicad_pcb",
+      "changes": [
+        {
+          "reference": "D1",
+          "property": "Value",
+          "old": "1N4148WS-7-F",
+          "new": "1N4148WS-13-F"
+        }
+      ],
+      "sha256": "7347225388a25fb0314788415e9cfa7f2750ec707df0d2ef9769bb0d28f29295"
+    },
+    {
+      "file": "electrical/Anticipy_R1_E1_PROTOTYPE.kicad_sch",
+      "changes": [
+        {
+          "reference": "D1",
+          "property": "Value",
+          "old": "1N4148WS-7-F",
+          "new": "1N4148WS-13-F"
+        },
+        {
+          "reference": "D1",
+          "property": "Value",
+          "old": "1N4148WS-7-F",
+          "new": "1N4148WS-13-F"
+        }
+      ],
+      "sha256": "763bbfa78953252aa27d7553bfb6abf9cb398650fb0bdceafd0432aee5e44021"
+    },
+    {
+      "file": "electrical/Anticipy.kicad_sym",
+      "changes": [
+        {
+          "reference": "D1",
+          "property": "Value",
+          "old": "1N4148WS-7-F",
+          "new": "1N4148WS-13-F"
+        }
+      ],
+      "sha256": "8fd349480f5b8d0d75e9ad08471c7cce22329378a79cc15cb7a3364d500a3d9d"
+    },
+    {
+      "file": "electrical/Anticipy_E1_Release.pretty/D1__D_SOD-323.kicad_mod",
+      "changes": [
+        {
+          "reference": "D1",
+          "property": "Value",
+          "old": "1N4148WS-7-F",
+          "new": "1N4148WS-13-F"
+        }
+      ],
+      "sha256": "d38a66f52a26cfaf3d9745fa991d0a583e8e53d6d466a76be0bd6af11e1f984f"
+    }
+  ],
+  "fitted_count": 47
+}

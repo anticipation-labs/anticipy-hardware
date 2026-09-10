@@ -1,0 +1,13 @@
+{
+  "native_job_size_includes_graphic_stroke_mm": {
+    "X": 45.85,
+    "Y": 17.98
+  },
+  "released_job_profile_centerline_size_mm": {
+    "X": 45.75,
+    "Y": 17.88
+  },
+  "scope": "Gerber-job size metadata only; copper, masks, profile and drill files untouched",
+  "job_sha256": "6594714ee88e39560bb0cab9dfe06834a0da07ed85913f67f3a04d7183871ab1",
+  "via_fill_cap_specification": "All137 TypeVII as fabrication specification/coordinate CSV; do not rely on Gerber-job flags to communicate this process"
+}

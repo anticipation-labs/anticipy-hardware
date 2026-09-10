@@ -1,0 +1,4847 @@
+{
+  "definition": "Area ratio = aperture area/(aperture perimeter \u00d7 stencil thickness). Native nominal fitted apertures with zero paste margin, polygonized to 0.0001 mm. This screens aperture release; no paste/process yield qualification.",
+  "minimum_at_80um": {
+    "ref": "U4",
+    "pin": "2",
+    "xy": [
+      27.725,
+      29.8
+    ],
+    "pad_size_mm": [
+      0.3,
+      0.3
+    ],
+    "effective_paste_margin_mm": [
+      0.0,
+      0.0
+    ],
+    "area_mm2": 0.08514182267200018,
+    "perimeter_mm": 1.0710414863673003,
+    "area_ratio_80um": 0.9936802607056279,
+    "area_ratio_100um": 0.7949442085645023
+  },
+  "minimum_at_100um": {
+    "ref": "U4",
+    "pin": "2",
+    "xy": [
+      27.725,
+      29.8
+    ],
+    "pad_size_mm": [
+      0.3,
+      0.3
+    ],
+    "effective_paste_margin_mm": [
+      0.0,
+      0.0
+    ],
+    "area_mm2": 0.08514182267200018,
+    "perimeter_mm": 1.0710414863673003,
+    "area_ratio_80um": 0.9936802607056279,
+    "area_ratio_100um": 0.7949442085645023
+  },
+  "selected": [
+    {
+      "ref": "U4",
+      "pin": "1",
+      "xy": [
+        27.725,
+        29.1
+      ],
+      "pad_size_mm": [
+        0.3,
+        0.3
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.08514182267200004,
+      "perimeter_mm": 1.0710414863672983,
+      "area_ratio_80um": 0.9936802607056282,
+      "area_ratio_100um": 0.7949442085645024
+    },
+    {
+      "ref": "U4",
+      "pin": "2",
+      "xy": [
+        27.725,
+        29.8
+      ],
+      "pad_size_mm": [
+        0.3,
+        0.3
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.08514182267200018,
+      "perimeter_mm": 1.0710414863673003,
+      "area_ratio_80um": 0.9936802607056279,
+      "area_ratio_100um": 0.7949442085645023
+    },
+    {
+      "ref": "U4",
+      "pin": "3",
+      "xy": [
+        28.575,
+        29.45
+      ],
+      "pad_size_mm": [
+        0.3,
+        0.3
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.08514182267200036,
+      "perimeter_mm": 1.0710414863673026,
+      "area_ratio_80um": 0.9936802607056281,
+      "area_ratio_100um": 0.7949442085645023
+    },
+    {
+      "ref": "U2",
+      "pin": "",
+      "xy": [
+        36.3,
+        29.7
+      ],
+      "pad_size_mm": [
+        0.925,
+        0.925
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8556250000000046,
+      "perimeter_mm": 3.70000000000001,
+      "area_ratio_80um": 2.8906250000000075,
+      "area_ratio_100um": 2.312500000000006
+    },
+    {
+      "ref": "U2",
+      "pin": "",
+      "xy": [
+        36.3,
+        28.6
+      ],
+      "pad_size_mm": [
+        0.925,
+        0.925
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8556250000000046,
+      "perimeter_mm": 3.70000000000001,
+      "area_ratio_80um": 2.8906250000000075,
+      "area_ratio_100um": 2.312500000000006
+    },
+    {
+      "ref": "U2",
+      "pin": "",
+      "xy": [
+        36.3,
+        27.5
+      ],
+      "pad_size_mm": [
+        0.925,
+        0.925
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8556250000000013,
+      "perimeter_mm": 3.700000000000003,
+      "area_ratio_80um": 2.890625000000002,
+      "area_ratio_100um": 2.3125000000000013
+    },
+    {
+      "ref": "U2",
+      "pin": "",
+      "xy": [
+        35.2,
+        29.7
+      ],
+      "pad_size_mm": [
+        0.925,
+        0.925
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8556250000000046,
+      "perimeter_mm": 3.70000000000001,
+      "area_ratio_80um": 2.8906250000000075,
+      "area_ratio_100um": 2.312500000000006
+    },
+    {
+      "ref": "U2",
+      "pin": "",
+      "xy": [
+        35.2,
+        28.6
+      ],
+      "pad_size_mm": [
+        0.925,
+        0.925
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8556250000000046,
+      "perimeter_mm": 3.70000000000001,
+      "area_ratio_80um": 2.8906250000000075,
+      "area_ratio_100um": 2.312500000000006
+    },
+    {
+      "ref": "U2",
+      "pin": "",
+      "xy": [
+        35.2,
+        27.5
+      ],
+      "pad_size_mm": [
+        0.925,
+        0.925
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8556250000000013,
+      "perimeter_mm": 3.700000000000003,
+      "area_ratio_80um": 2.890625000000002,
+      "area_ratio_100um": 2.3125000000000013
+    },
+    {
+      "ref": "U2",
+      "pin": "",
+      "xy": [
+        34.1,
+        29.7
+      ],
+      "pad_size_mm": [
+        0.925,
+        0.925
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8556249999999981,
+      "perimeter_mm": 3.6999999999999957,
+      "area_ratio_80um": 2.890624999999997,
+      "area_ratio_100um": 2.3124999999999973
+    },
+    {
+      "ref": "U2",
+      "pin": "",
+      "xy": [
+        34.1,
+        28.6
+      ],
+      "pad_size_mm": [
+        0.925,
+        0.925
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8556249999999981,
+      "perimeter_mm": 3.6999999999999957,
+      "area_ratio_80um": 2.890624999999997,
+      "area_ratio_100um": 2.3124999999999973
+    },
+    {
+      "ref": "U2",
+      "pin": "",
+      "xy": [
+        34.1,
+        27.5
+      ],
+      "pad_size_mm": [
+        0.925,
+        0.925
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8556249999999948,
+      "perimeter_mm": 3.6999999999999886,
+      "area_ratio_80um": 2.890624999999991,
+      "area_ratio_100um": 2.312499999999993
+    },
+    {
+      "ref": "U2",
+      "pin": "1",
+      "xy": [
+        37.65,
+        30.35
+      ],
+      "pad_size_mm": [
+        0.85,
+        0.3
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2356269021620003,
+      "perimeter_mm": 2.042281608759945,
+      "area_ratio_80um": 1.4421793078836886,
+      "area_ratio_100um": 1.153743446306951
+    },
+    {
+      "ref": "C13",
+      "pin": "",
+      "xy": [
+        35.8,
+        24.945
+      ],
+      "pad_size_mm": [
+        0.318,
+        0.36
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.1090225724639994,
+      "perimeter_mm": 1.2193111864662431,
+      "area_ratio_80um": 1.1176655893312608,
+      "area_ratio_100um": 0.8941324714650087
+    },
+    {
+      "ref": "C13",
+      "pin": "",
+      "xy": [
+        35.8,
+        24.255
+      ],
+      "pad_size_mm": [
+        0.318,
+        0.36
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.10902257246400013,
+      "perimeter_mm": 1.2193111864662427,
+      "area_ratio_80um": 1.1176655893312686,
+      "area_ratio_100um": 0.894132471465015
+    },
+    {
+      "ref": "D2",
+      "pin": "1",
+      "xy": [
+        28.05,
+        32.75
+      ],
+      "pad_size_mm": [
+        0.3,
+        0.5
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.14800362436600006,
+      "perimeter_mm": 1.5173987887235258,
+      "area_ratio_80um": 1.219221550935404,
+      "area_ratio_100um": 0.9753772407483232
+    },
+    {
+      "ref": "D2",
+      "pin": "2",
+      "xy": [
+        28.75,
+        32.75
+      ],
+      "pad_size_mm": [
+        0.3,
+        0.5
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.1480036243659988,
+      "perimeter_mm": 1.5173987887235267,
+      "area_ratio_80um": 1.219221550935393,
+      "area_ratio_100um": 0.9753772407483142
+    }
+  ],
+  "all": [
+    {
+      "ref": "R13",
+      "pin": "1",
+      "xy": [
+        52.69,
+        36.4
+      ],
+      "pad_size_mm": [
+        0.54,
+        0.64
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.3299013803019995,
+      "perimeter_mm": 2.1280297009759774,
+      "area_ratio_80um": 1.9378335048066817,
+      "area_ratio_100um": 1.5502668038453455
+    },
+    {
+      "ref": "R13",
+      "pin": "2",
+      "xy": [
+        53.71,
+        36.4
+      ],
+      "pad_size_mm": [
+        0.54,
+        0.64
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.32990138030200006,
+      "perimeter_mm": 2.128029700975981,
+      "area_ratio_80um": 1.937833504806682,
+      "area_ratio_100um": 1.5502668038453455
+    },
+    {
+      "ref": "R6",
+      "pin": "1",
+      "xy": [
+        48.39,
+        36.3
+      ],
+      "pad_size_mm": [
+        0.54,
+        0.64
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.32990138030199984,
+      "perimeter_mm": 2.128029700975979,
+      "area_ratio_80um": 1.9378335048066821,
+      "area_ratio_100um": 1.5502668038453458
+    },
+    {
+      "ref": "R6",
+      "pin": "2",
+      "xy": [
+        49.41,
+        36.3
+      ],
+      "pad_size_mm": [
+        0.54,
+        0.64
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.3299013803019995,
+      "perimeter_mm": 2.1280297009759774,
+      "area_ratio_80um": 1.9378335048066817,
+      "area_ratio_100um": 1.5502668038453455
+    },
+    {
+      "ref": "C7",
+      "pin": "1",
+      "xy": [
+        41.475,
+        32.95
+      ],
+      "pad_size_mm": [
+        0.9,
+        0.95
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8114510401659975,
+      "perimeter_mm": 3.3135121582227045,
+      "area_ratio_80um": 3.0611440422525944,
+      "area_ratio_100um": 2.4489152338020754
+    },
+    {
+      "ref": "C7",
+      "pin": "2",
+      "xy": [
+        39.925,
+        32.95
+      ],
+      "pad_size_mm": [
+        0.9,
+        0.95
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.811451040165997,
+      "perimeter_mm": 3.3135121582227045,
+      "area_ratio_80um": 3.0611440422525926,
+      "area_ratio_100um": 2.448915233802074
+    },
+    {
+      "ref": "C6",
+      "pin": "1",
+      "xy": [
+        30.95,
+        25.5
+      ],
+      "pad_size_mm": [
+        0.9,
+        0.95
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8114510401660006,
+      "perimeter_mm": 3.313512158222704,
+      "area_ratio_80um": 3.0611440422526064,
+      "area_ratio_100um": 2.4489152338020848
+    },
+    {
+      "ref": "C6",
+      "pin": "2",
+      "xy": [
+        29.4,
+        25.5
+      ],
+      "pad_size_mm": [
+        0.9,
+        0.95
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8114510401660026,
+      "perimeter_mm": 3.313512158222705,
+      "area_ratio_80um": 3.0611440422526135,
+      "area_ratio_100um": 2.4489152338020905
+    },
+    {
+      "ref": "U4",
+      "pin": "1",
+      "xy": [
+        27.725,
+        29.1
+      ],
+      "pad_size_mm": [
+        0.3,
+        0.3
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.08514182267200004,
+      "perimeter_mm": 1.0710414863672983,
+      "area_ratio_80um": 0.9936802607056282,
+      "area_ratio_100um": 0.7949442085645024
+    },
+    {
+      "ref": "U4",
+      "pin": "2",
+      "xy": [
+        27.725,
+        29.8
+      ],
+      "pad_size_mm": [
+        0.3,
+        0.3
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.08514182267200018,
+      "perimeter_mm": 1.0710414863673003,
+      "area_ratio_80um": 0.9936802607056279,
+      "area_ratio_100um": 0.7949442085645023
+    },
+    {
+      "ref": "U4",
+      "pin": "3",
+      "xy": [
+        28.575,
+        29.45
+      ],
+      "pad_size_mm": [
+        0.3,
+        0.3
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.08514182267200036,
+      "perimeter_mm": 1.0710414863673026,
+      "area_ratio_80um": 0.9936802607056281,
+      "area_ratio_100um": 0.7949442085645023
+    },
+    {
+      "ref": "L1",
+      "pin": "1",
+      "xy": [
+        41.9,
+        31.35
+      ],
+      "pad_size_mm": [
+        0.55,
+        1.6
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8800000000000019,
+      "perimeter_mm": 4.300000000000004,
+      "area_ratio_80um": 2.5581395348837237,
+      "area_ratio_100um": 2.046511627906979
+    },
+    {
+      "ref": "L1",
+      "pin": "2",
+      "xy": [
+        41.9,
+        29.9
+      ],
+      "pad_size_mm": [
+        0.55,
+        1.6
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8800000000000019,
+      "perimeter_mm": 4.300000000000004,
+      "area_ratio_80um": 2.5581395348837237,
+      "area_ratio_100um": 2.046511627906979
+    },
+    {
+      "ref": "U1",
+      "pin": "1",
+      "xy": [
+        55.1,
+        25.75
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2399999999999997,
+      "perimeter_mm": 2.0,
+      "area_ratio_80um": 1.4999999999999982,
+      "area_ratio_100um": 1.1999999999999984
+    },
+    {
+      "ref": "U1",
+      "pin": "2",
+      "xy": [
+        55.1,
+        26.85
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.24000000000000185,
+      "perimeter_mm": 2.000000000000007,
+      "area_ratio_80um": 1.5000000000000064,
+      "area_ratio_100um": 1.2000000000000048
+    },
+    {
+      "ref": "U1",
+      "pin": "3",
+      "xy": [
+        55.1,
+        27.65
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.24000000000000185,
+      "perimeter_mm": 2.000000000000007,
+      "area_ratio_80um": 1.5000000000000064,
+      "area_ratio_100um": 1.2000000000000048
+    },
+    {
+      "ref": "U1",
+      "pin": "4",
+      "xy": [
+        55.1,
+        29.25
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2399999999999997,
+      "perimeter_mm": 2.0,
+      "area_ratio_80um": 1.4999999999999982,
+      "area_ratio_100um": 1.1999999999999984
+    },
+    {
+      "ref": "U1",
+      "pin": "5",
+      "xy": [
+        56.0,
+        29.65
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.239999999999999,
+      "perimeter_mm": 1.999999999999993,
+      "area_ratio_80um": 1.499999999999999,
+      "area_ratio_100um": 1.1999999999999993
+    },
+    {
+      "ref": "U1",
+      "pin": "6",
+      "xy": [
+        55.1,
+        30.05
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2399999999999997,
+      "perimeter_mm": 2.0,
+      "area_ratio_80um": 1.4999999999999982,
+      "area_ratio_100um": 1.1999999999999984
+    },
+    {
+      "ref": "U1",
+      "pin": "7",
+      "xy": [
+        56.0,
+        30.45
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.23999999999999688,
+      "perimeter_mm": 1.9999999999999858,
+      "area_ratio_80um": 1.4999999999999911,
+      "area_ratio_100um": 1.1999999999999929
+    },
+    {
+      "ref": "U1",
+      "pin": "8",
+      "xy": [
+        55.1,
+        30.85
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.24000000000000185,
+      "perimeter_mm": 2.000000000000007,
+      "area_ratio_80um": 1.5000000000000064,
+      "area_ratio_100um": 1.2000000000000048
+    },
+    {
+      "ref": "U1",
+      "pin": "9",
+      "xy": [
+        56.0,
+        31.25
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.23999999999999688,
+      "perimeter_mm": 1.9999999999999858,
+      "area_ratio_80um": 1.4999999999999911,
+      "area_ratio_100um": 1.1999999999999929
+    },
+    {
+      "ref": "U1",
+      "pin": "10",
+      "xy": [
+        55.1,
+        31.65
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.24000000000000185,
+      "perimeter_mm": 2.000000000000007,
+      "area_ratio_80um": 1.5000000000000064,
+      "area_ratio_100um": 1.2000000000000048
+    },
+    {
+      "ref": "U1",
+      "pin": "11",
+      "xy": [
+        56.0,
+        32.05
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.23999999999999688,
+      "perimeter_mm": 1.9999999999999858,
+      "area_ratio_80um": 1.4999999999999911,
+      "area_ratio_100um": 1.1999999999999929
+    },
+    {
+      "ref": "U1",
+      "pin": "12",
+      "xy": [
+        55.1,
+        32.45
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2399999999999997,
+      "perimeter_mm": 2.0,
+      "area_ratio_80um": 1.4999999999999982,
+      "area_ratio_100um": 1.1999999999999984
+    },
+    {
+      "ref": "U1",
+      "pin": "13",
+      "xy": [
+        56.0,
+        32.85
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.23999999999999688,
+      "perimeter_mm": 1.9999999999999858,
+      "area_ratio_80um": 1.4999999999999911,
+      "area_ratio_100um": 1.1999999999999929
+    },
+    {
+      "ref": "U1",
+      "pin": "14",
+      "xy": [
+        55.1,
+        33.25
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.240000000000004,
+      "perimeter_mm": 2.000000000000014,
+      "area_ratio_80um": 1.5000000000000142,
+      "area_ratio_100um": 1.2000000000000113
+    },
+    {
+      "ref": "U1",
+      "pin": "15",
+      "xy": [
+        54.95,
+        36.65
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2399999999999997,
+      "perimeter_mm": 2.0,
+      "area_ratio_80um": 1.4999999999999982,
+      "area_ratio_100um": 1.1999999999999984
+    },
+    {
+      "ref": "U1",
+      "pin": "16",
+      "xy": [
+        55.75,
+        36.65
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.240000000000004,
+      "perimeter_mm": 2.000000000000014,
+      "area_ratio_80um": 1.5000000000000142,
+      "area_ratio_100um": 1.2000000000000113
+    },
+    {
+      "ref": "U1",
+      "pin": "17",
+      "xy": [
+        56.55,
+        36.65
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2399999999999997,
+      "perimeter_mm": 2.0,
+      "area_ratio_80um": 1.4999999999999982,
+      "area_ratio_100um": 1.1999999999999984
+    },
+    {
+      "ref": "U1",
+      "pin": "18",
+      "xy": [
+        57.35,
+        36.65
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2399999999999997,
+      "perimeter_mm": 2.0,
+      "area_ratio_80um": 1.4999999999999982,
+      "area_ratio_100um": 1.1999999999999984
+    },
+    {
+      "ref": "U1",
+      "pin": "19",
+      "xy": [
+        57.75,
+        35.75
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.24000000000000113,
+      "perimeter_mm": 2.0,
+      "area_ratio_80um": 1.500000000000007,
+      "area_ratio_100um": 1.2000000000000055
+    },
+    {
+      "ref": "U1",
+      "pin": "20",
+      "xy": [
+        58.15,
+        36.65
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2399999999999997,
+      "perimeter_mm": 2.0,
+      "area_ratio_80um": 1.4999999999999982,
+      "area_ratio_100um": 1.1999999999999984
+    },
+    {
+      "ref": "U1",
+      "pin": "21",
+      "xy": [
+        58.55,
+        35.75
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.23999999999999688,
+      "perimeter_mm": 1.9999999999999858,
+      "area_ratio_80um": 1.4999999999999911,
+      "area_ratio_100um": 1.1999999999999929
+    },
+    {
+      "ref": "U1",
+      "pin": "22",
+      "xy": [
+        58.95,
+        36.65
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2399999999999997,
+      "perimeter_mm": 2.0,
+      "area_ratio_80um": 1.4999999999999982,
+      "area_ratio_100um": 1.1999999999999984
+    },
+    {
+      "ref": "U1",
+      "pin": "23",
+      "xy": [
+        59.35,
+        35.75
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.23999999999999688,
+      "perimeter_mm": 1.9999999999999858,
+      "area_ratio_80um": 1.4999999999999911,
+      "area_ratio_100um": 1.1999999999999929
+    },
+    {
+      "ref": "U1",
+      "pin": "24",
+      "xy": [
+        59.75,
+        36.65
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.240000000000004,
+      "perimeter_mm": 2.000000000000014,
+      "area_ratio_80um": 1.5000000000000142,
+      "area_ratio_100um": 1.2000000000000113
+    },
+    {
+      "ref": "U1",
+      "pin": "25",
+      "xy": [
+        60.15,
+        35.75
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.23999999999999688,
+      "perimeter_mm": 1.9999999999999858,
+      "area_ratio_80um": 1.4999999999999911,
+      "area_ratio_100um": 1.1999999999999929
+    },
+    {
+      "ref": "U1",
+      "pin": "26",
+      "xy": [
+        60.55,
+        36.65
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2399999999999997,
+      "perimeter_mm": 2.0,
+      "area_ratio_80um": 1.4999999999999982,
+      "area_ratio_100um": 1.1999999999999984
+    },
+    {
+      "ref": "U1",
+      "pin": "27",
+      "xy": [
+        60.95,
+        35.75
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.23999999999999688,
+      "perimeter_mm": 1.9999999999999858,
+      "area_ratio_80um": 1.4999999999999911,
+      "area_ratio_100um": 1.1999999999999929
+    },
+    {
+      "ref": "U1",
+      "pin": "28",
+      "xy": [
+        61.35,
+        36.65
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2399999999999997,
+      "perimeter_mm": 2.0,
+      "area_ratio_80um": 1.4999999999999982,
+      "area_ratio_100um": 1.1999999999999984
+    },
+    {
+      "ref": "U1",
+      "pin": "29",
+      "xy": [
+        61.75,
+        35.75
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.24000000000000113,
+      "perimeter_mm": 2.0,
+      "area_ratio_80um": 1.500000000000007,
+      "area_ratio_100um": 1.2000000000000055
+    },
+    {
+      "ref": "U1",
+      "pin": "30",
+      "xy": [
+        62.15,
+        36.65
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2399999999999997,
+      "perimeter_mm": 2.0,
+      "area_ratio_80um": 1.4999999999999982,
+      "area_ratio_100um": 1.1999999999999984
+    },
+    {
+      "ref": "U1",
+      "pin": "31",
+      "xy": [
+        62.95,
+        36.65
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2399999999999997,
+      "perimeter_mm": 2.0,
+      "area_ratio_80um": 1.4999999999999982,
+      "area_ratio_100um": 1.1999999999999984
+    },
+    {
+      "ref": "U1",
+      "pin": "32",
+      "xy": [
+        63.75,
+        36.65
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.240000000000004,
+      "perimeter_mm": 2.000000000000014,
+      "area_ratio_80um": 1.5000000000000142,
+      "area_ratio_100um": 1.2000000000000113
+    },
+    {
+      "ref": "U1",
+      "pin": "33",
+      "xy": [
+        64.55,
+        36.65
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.240000000000004,
+      "perimeter_mm": 2.000000000000014,
+      "area_ratio_80um": 1.5000000000000142,
+      "area_ratio_100um": 1.2000000000000113
+    },
+    {
+      "ref": "U1",
+      "pin": "34",
+      "xy": [
+        64.4,
+        35.65
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.24000000000000254,
+      "perimeter_mm": 2.000000000000014,
+      "area_ratio_80um": 1.500000000000005,
+      "area_ratio_100um": 1.2000000000000042
+    },
+    {
+      "ref": "U1",
+      "pin": "35",
+      "xy": [
+        64.4,
+        34.85
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.24000000000000254,
+      "perimeter_mm": 2.000000000000014,
+      "area_ratio_80um": 1.500000000000005,
+      "area_ratio_100um": 1.2000000000000042
+    },
+    {
+      "ref": "U1",
+      "pin": "36",
+      "xy": [
+        63.5,
+        34.45
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.23999999999999688,
+      "perimeter_mm": 1.9999999999999858,
+      "area_ratio_80um": 1.4999999999999911,
+      "area_ratio_100um": 1.1999999999999929
+    },
+    {
+      "ref": "U1",
+      "pin": "37",
+      "xy": [
+        64.4,
+        34.05
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.24000000000000254,
+      "perimeter_mm": 2.000000000000014,
+      "area_ratio_80um": 1.500000000000005,
+      "area_ratio_100um": 1.2000000000000042
+    },
+    {
+      "ref": "U1",
+      "pin": "38",
+      "xy": [
+        63.5,
+        33.65
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.23999999999999688,
+      "perimeter_mm": 1.9999999999999858,
+      "area_ratio_80um": 1.4999999999999911,
+      "area_ratio_100um": 1.1999999999999929
+    },
+    {
+      "ref": "U1",
+      "pin": "39",
+      "xy": [
+        64.4,
+        33.25
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.24000000000000682,
+      "perimeter_mm": 2.0000000000000284,
+      "area_ratio_80um": 1.5000000000000213,
+      "area_ratio_100um": 1.200000000000017
+    },
+    {
+      "ref": "U1",
+      "pin": "40",
+      "xy": [
+        63.5,
+        32.85
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.23999999999999688,
+      "perimeter_mm": 1.9999999999999858,
+      "area_ratio_80um": 1.4999999999999911,
+      "area_ratio_100um": 1.1999999999999929
+    },
+    {
+      "ref": "U1",
+      "pin": "41",
+      "xy": [
+        64.4,
+        32.45
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.24000000000000254,
+      "perimeter_mm": 2.000000000000014,
+      "area_ratio_80um": 1.500000000000005,
+      "area_ratio_100um": 1.2000000000000042
+    },
+    {
+      "ref": "U1",
+      "pin": "42",
+      "xy": [
+        63.5,
+        32.05
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.23999999999999688,
+      "perimeter_mm": 1.9999999999999858,
+      "area_ratio_80um": 1.4999999999999911,
+      "area_ratio_100um": 1.1999999999999929
+    },
+    {
+      "ref": "U1",
+      "pin": "43",
+      "xy": [
+        63.5,
+        31.25
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.23999999999999688,
+      "perimeter_mm": 1.9999999999999858,
+      "area_ratio_80um": 1.4999999999999911,
+      "area_ratio_100um": 1.1999999999999929
+    },
+    {
+      "ref": "U1",
+      "pin": "44",
+      "xy": [
+        64.4,
+        30.85
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.24000000000000468,
+      "perimeter_mm": 2.0000000000000213,
+      "area_ratio_80um": 1.5000000000000133,
+      "area_ratio_100um": 1.2000000000000106
+    },
+    {
+      "ref": "U1",
+      "pin": "45",
+      "xy": [
+        63.5,
+        30.45
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.23999999999999688,
+      "perimeter_mm": 1.9999999999999858,
+      "area_ratio_80um": 1.4999999999999911,
+      "area_ratio_100um": 1.1999999999999929
+    },
+    {
+      "ref": "U1",
+      "pin": "46",
+      "xy": [
+        64.4,
+        30.05
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.24000000000000254,
+      "perimeter_mm": 2.000000000000014,
+      "area_ratio_80um": 1.500000000000005,
+      "area_ratio_100um": 1.2000000000000042
+    },
+    {
+      "ref": "U1",
+      "pin": "47",
+      "xy": [
+        63.5,
+        29.65
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.239999999999999,
+      "perimeter_mm": 1.999999999999993,
+      "area_ratio_80um": 1.499999999999999,
+      "area_ratio_100um": 1.1999999999999993
+    },
+    {
+      "ref": "U1",
+      "pin": "48",
+      "xy": [
+        64.4,
+        29.25
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.24000000000000254,
+      "perimeter_mm": 2.000000000000014,
+      "area_ratio_80um": 1.500000000000005,
+      "area_ratio_100um": 1.2000000000000042
+    },
+    {
+      "ref": "U1",
+      "pin": "49",
+      "xy": [
+        63.5,
+        28.85
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.239999999999999,
+      "perimeter_mm": 1.999999999999993,
+      "area_ratio_80um": 1.499999999999999,
+      "area_ratio_100um": 1.1999999999999993
+    },
+    {
+      "ref": "U1",
+      "pin": "50",
+      "xy": [
+        63.5,
+        28.05
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.23999999999999688,
+      "perimeter_mm": 1.9999999999999858,
+      "area_ratio_80um": 1.4999999999999911,
+      "area_ratio_100um": 1.1999999999999929
+    },
+    {
+      "ref": "U1",
+      "pin": "51",
+      "xy": [
+        64.4,
+        27.65
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.24000000000000468,
+      "perimeter_mm": 2.0000000000000213,
+      "area_ratio_80um": 1.5000000000000133,
+      "area_ratio_100um": 1.2000000000000106
+    },
+    {
+      "ref": "U1",
+      "pin": "52",
+      "xy": [
+        63.5,
+        27.25
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.23999999999999688,
+      "perimeter_mm": 1.9999999999999858,
+      "area_ratio_80um": 1.4999999999999911,
+      "area_ratio_100um": 1.1999999999999929
+    },
+    {
+      "ref": "U1",
+      "pin": "53",
+      "xy": [
+        64.4,
+        26.85
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.24000000000000468,
+      "perimeter_mm": 2.0000000000000213,
+      "area_ratio_80um": 1.5000000000000133,
+      "area_ratio_100um": 1.2000000000000106
+    },
+    {
+      "ref": "U1",
+      "pin": "54",
+      "xy": [
+        63.5,
+        26.45
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.23999999999999688,
+      "perimeter_mm": 1.9999999999999858,
+      "area_ratio_80um": 1.4999999999999911,
+      "area_ratio_100um": 1.1999999999999929
+    },
+    {
+      "ref": "U1",
+      "pin": "55",
+      "xy": [
+        64.4,
+        25.75
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.24000000000000254,
+      "perimeter_mm": 2.000000000000014,
+      "area_ratio_80um": 1.500000000000005,
+      "area_ratio_100um": 1.2000000000000042
+    },
+    {
+      "ref": "U1",
+      "pin": "56",
+      "xy": [
+        57.75,
+        30.05
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.240000000000004,
+      "perimeter_mm": 2.000000000000014,
+      "area_ratio_80um": 1.5000000000000142,
+      "area_ratio_100um": 1.2000000000000113
+    },
+    {
+      "ref": "U1",
+      "pin": "57",
+      "xy": [
+        58.55,
+        30.05
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2399999999999997,
+      "perimeter_mm": 2.0,
+      "area_ratio_80um": 1.4999999999999982,
+      "area_ratio_100um": 1.1999999999999984
+    },
+    {
+      "ref": "U1",
+      "pin": "58",
+      "xy": [
+        59.35,
+        30.05
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2399999999999997,
+      "perimeter_mm": 2.0,
+      "area_ratio_80um": 1.4999999999999982,
+      "area_ratio_100um": 1.1999999999999984
+    },
+    {
+      "ref": "U1",
+      "pin": "59",
+      "xy": [
+        60.15,
+        30.05
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2399999999999997,
+      "perimeter_mm": 2.0,
+      "area_ratio_80um": 1.4999999999999982,
+      "area_ratio_100um": 1.1999999999999984
+    },
+    {
+      "ref": "U1",
+      "pin": "60",
+      "xy": [
+        60.95,
+        30.05
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2399999999999997,
+      "perimeter_mm": 2.0,
+      "area_ratio_80um": 1.4999999999999982,
+      "area_ratio_100um": 1.1999999999999984
+    },
+    {
+      "ref": "U1",
+      "pin": "61",
+      "xy": [
+        61.75,
+        30.05
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.240000000000004,
+      "perimeter_mm": 2.000000000000014,
+      "area_ratio_80um": 1.5000000000000142,
+      "area_ratio_100um": 1.2000000000000113
+    },
+    {
+      "ref": "R2",
+      "pin": "",
+      "xy": [
+        35.0,
+        24.945
+      ],
+      "pad_size_mm": [
+        0.318,
+        0.36
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.10902257246399948,
+      "perimeter_mm": 1.2193111864662443,
+      "area_ratio_80um": 1.1176655893312606,
+      "area_ratio_100um": 0.8941324714650085
+    },
+    {
+      "ref": "R2",
+      "pin": "",
+      "xy": [
+        35.0,
+        24.255
+      ],
+      "pad_size_mm": [
+        0.318,
+        0.36
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.10902257246400021,
+      "perimeter_mm": 1.219311186466244,
+      "area_ratio_80um": 1.1176655893312684,
+      "area_ratio_100um": 0.8941324714650146
+    },
+    {
+      "ref": "LED1",
+      "pin": "1",
+      "xy": [
+        34.6,
+        36.35
+      ],
+      "pad_size_mm": [
+        0.5,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.1999999999999993,
+      "perimeter_mm": 1.7999999999999972,
+      "area_ratio_80um": 1.3888888888888862,
+      "area_ratio_100um": 1.111111111111109
+    },
+    {
+      "ref": "LED1",
+      "pin": "2",
+      "xy": [
+        33.4,
+        36.35
+      ],
+      "pad_size_mm": [
+        0.5,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.1999999999999993,
+      "perimeter_mm": 1.7999999999999972,
+      "area_ratio_80um": 1.3888888888888862,
+      "area_ratio_100um": 1.111111111111109
+    },
+    {
+      "ref": "LED1",
+      "pin": "3",
+      "xy": [
+        34.6,
+        37.05
+      ],
+      "pad_size_mm": [
+        0.5,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.1999999999999993,
+      "perimeter_mm": 1.7999999999999972,
+      "area_ratio_80um": 1.3888888888888862,
+      "area_ratio_100um": 1.111111111111109
+    },
+    {
+      "ref": "LED1",
+      "pin": "4",
+      "xy": [
+        33.4,
+        37.05
+      ],
+      "pad_size_mm": [
+        0.5,
+        0.4
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.1999999999999993,
+      "perimeter_mm": 1.7999999999999972,
+      "area_ratio_80um": 1.3888888888888862,
+      "area_ratio_100um": 1.111111111111109
+    },
+    {
+      "ref": "SW1",
+      "pin": "1",
+      "xy": [
+        28.3,
+        36.3
+      ],
+      "pad_size_mm": [
+        0.9,
+        1.7
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 1.5299999999999938,
+      "perimeter_mm": 5.199999999999989,
+      "area_ratio_80um": 3.6778846153846083,
+      "area_ratio_100um": 2.9423076923076867
+    },
+    {
+      "ref": "SW1",
+      "pin": "2",
+      "xy": [
+        31.7,
+        36.3
+      ],
+      "pad_size_mm": [
+        0.9,
+        1.7
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 1.5299999999999938,
+      "perimeter_mm": 5.199999999999989,
+      "area_ratio_80um": 3.6778846153846083,
+      "area_ratio_100um": 2.9423076923076867
+    },
+    {
+      "ref": "Q1",
+      "pin": "1",
+      "xy": [
+        46.8875,
+        37.45
+      ],
+      "pad_size_mm": [
+        1.475,
+        0.6
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8656248078640026,
+      "perimeter_mm": 3.8922740751478075,
+      "area_ratio_80um": 2.779945576645739,
+      "area_ratio_100um": 2.223956461316591
+    },
+    {
+      "ref": "Q1",
+      "pin": "2",
+      "xy": [
+        46.8875,
+        35.55
+      ],
+      "pad_size_mm": [
+        1.475,
+        0.6
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8656248078640029,
+      "perimeter_mm": 3.892274075147809,
+      "area_ratio_80um": 2.779945576645739,
+      "area_ratio_100um": 2.223956461316591
+    },
+    {
+      "ref": "Q1",
+      "pin": "3",
+      "xy": [
+        45.0125,
+        36.5
+      ],
+      "pad_size_mm": [
+        1.475,
+        0.6
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8656248078639933,
+      "perimeter_mm": 3.8922740751477996,
+      "area_ratio_80um": 2.779945576645715,
+      "area_ratio_100um": 2.223956461316572
+    },
+    {
+      "ref": "R1",
+      "pin": "",
+      "xy": [
+        34.4,
+        24.945
+      ],
+      "pad_size_mm": [
+        0.318,
+        0.36
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.10902257246399948,
+      "perimeter_mm": 1.2193111864662443,
+      "area_ratio_80um": 1.1176655893312606,
+      "area_ratio_100um": 0.8941324714650085
+    },
+    {
+      "ref": "R1",
+      "pin": "",
+      "xy": [
+        34.4,
+        24.255
+      ],
+      "pad_size_mm": [
+        0.318,
+        0.36
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.10902257246400021,
+      "perimeter_mm": 1.219311186466244,
+      "area_ratio_80um": 1.1176655893312684,
+      "area_ratio_100um": 0.8941324714650146
+    },
+    {
+      "ref": "C8",
+      "pin": "1",
+      "xy": [
+        42.7,
+        25.75
+      ],
+      "pad_size_mm": [
+        0.9,
+        0.95
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8114510401660003,
+      "perimeter_mm": 3.3135121582227045,
+      "area_ratio_80um": 3.061144042252605,
+      "area_ratio_100um": 2.4489152338020843
+    },
+    {
+      "ref": "C8",
+      "pin": "2",
+      "xy": [
+        41.15,
+        25.75
+      ],
+      "pad_size_mm": [
+        0.9,
+        0.95
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8114510401660004,
+      "perimeter_mm": 3.3135121582227045,
+      "area_ratio_80um": 3.0611440422526055,
+      "area_ratio_100um": 2.4489152338020848
+    },
+    {
+      "ref": "U2",
+      "pin": "",
+      "xy": [
+        36.3,
+        29.7
+      ],
+      "pad_size_mm": [
+        0.925,
+        0.925
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8556250000000046,
+      "perimeter_mm": 3.70000000000001,
+      "area_ratio_80um": 2.8906250000000075,
+      "area_ratio_100um": 2.312500000000006
+    },
+    {
+      "ref": "U2",
+      "pin": "",
+      "xy": [
+        36.3,
+        28.6
+      ],
+      "pad_size_mm": [
+        0.925,
+        0.925
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8556250000000046,
+      "perimeter_mm": 3.70000000000001,
+      "area_ratio_80um": 2.8906250000000075,
+      "area_ratio_100um": 2.312500000000006
+    },
+    {
+      "ref": "U2",
+      "pin": "",
+      "xy": [
+        36.3,
+        27.5
+      ],
+      "pad_size_mm": [
+        0.925,
+        0.925
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8556250000000013,
+      "perimeter_mm": 3.700000000000003,
+      "area_ratio_80um": 2.890625000000002,
+      "area_ratio_100um": 2.3125000000000013
+    },
+    {
+      "ref": "U2",
+      "pin": "",
+      "xy": [
+        35.2,
+        29.7
+      ],
+      "pad_size_mm": [
+        0.925,
+        0.925
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8556250000000046,
+      "perimeter_mm": 3.70000000000001,
+      "area_ratio_80um": 2.8906250000000075,
+      "area_ratio_100um": 2.312500000000006
+    },
+    {
+      "ref": "U2",
+      "pin": "",
+      "xy": [
+        35.2,
+        28.6
+      ],
+      "pad_size_mm": [
+        0.925,
+        0.925
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8556250000000046,
+      "perimeter_mm": 3.70000000000001,
+      "area_ratio_80um": 2.8906250000000075,
+      "area_ratio_100um": 2.312500000000006
+    },
+    {
+      "ref": "U2",
+      "pin": "",
+      "xy": [
+        35.2,
+        27.5
+      ],
+      "pad_size_mm": [
+        0.925,
+        0.925
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8556250000000013,
+      "perimeter_mm": 3.700000000000003,
+      "area_ratio_80um": 2.890625000000002,
+      "area_ratio_100um": 2.3125000000000013
+    },
+    {
+      "ref": "U2",
+      "pin": "",
+      "xy": [
+        34.1,
+        29.7
+      ],
+      "pad_size_mm": [
+        0.925,
+        0.925
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8556249999999981,
+      "perimeter_mm": 3.6999999999999957,
+      "area_ratio_80um": 2.890624999999997,
+      "area_ratio_100um": 2.3124999999999973
+    },
+    {
+      "ref": "U2",
+      "pin": "",
+      "xy": [
+        34.1,
+        28.6
+      ],
+      "pad_size_mm": [
+        0.925,
+        0.925
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8556249999999981,
+      "perimeter_mm": 3.6999999999999957,
+      "area_ratio_80um": 2.890624999999997,
+      "area_ratio_100um": 2.3124999999999973
+    },
+    {
+      "ref": "U2",
+      "pin": "",
+      "xy": [
+        34.1,
+        27.5
+      ],
+      "pad_size_mm": [
+        0.925,
+        0.925
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8556249999999948,
+      "perimeter_mm": 3.6999999999999886,
+      "area_ratio_80um": 2.890624999999991,
+      "area_ratio_100um": 2.312499999999993
+    },
+    {
+      "ref": "U2",
+      "pin": "1",
+      "xy": [
+        37.65,
+        30.35
+      ],
+      "pad_size_mm": [
+        0.85,
+        0.3
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2356269021620003,
+      "perimeter_mm": 2.042281608759945,
+      "area_ratio_80um": 1.4421793078836886,
+      "area_ratio_100um": 1.153743446306951
+    },
+    {
+      "ref": "U2",
+      "pin": "2",
+      "xy": [
+        37.65,
+        29.85
+      ],
+      "pad_size_mm": [
+        0.85,
+        0.3
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2356269021620003,
+      "perimeter_mm": 2.042281608759945,
+      "area_ratio_80um": 1.4421793078836886,
+      "area_ratio_100um": 1.153743446306951
+    },
+    {
+      "ref": "U2",
+      "pin": "3",
+      "xy": [
+        37.65,
+        29.35
+      ],
+      "pad_size_mm": [
+        0.85,
+        0.3
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2356269021620003,
+      "perimeter_mm": 2.042281608759945,
+      "area_ratio_80um": 1.4421793078836886,
+      "area_ratio_100um": 1.153743446306951
+    },
+    {
+      "ref": "U2",
+      "pin": "4",
+      "xy": [
+        37.65,
+        28.85
+      ],
+      "pad_size_mm": [
+        0.85,
+        0.3
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2356269021620003,
+      "perimeter_mm": 2.042281608759945,
+      "area_ratio_80um": 1.4421793078836886,
+      "area_ratio_100um": 1.153743446306951
+    },
+    {
+      "ref": "U2",
+      "pin": "5",
+      "xy": [
+        37.65,
+        28.35
+      ],
+      "pad_size_mm": [
+        0.85,
+        0.3
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2356269021620003,
+      "perimeter_mm": 2.042281608759945,
+      "area_ratio_80um": 1.4421793078836886,
+      "area_ratio_100um": 1.153743446306951
+    },
+    {
+      "ref": "U2",
+      "pin": "6",
+      "xy": [
+        37.65,
+        27.85
+      ],
+      "pad_size_mm": [
+        0.85,
+        0.3
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2356269021620003,
+      "perimeter_mm": 2.042281608759945,
+      "area_ratio_80um": 1.4421793078836886,
+      "area_ratio_100um": 1.153743446306951
+    },
+    {
+      "ref": "U2",
+      "pin": "7",
+      "xy": [
+        37.65,
+        27.35
+      ],
+      "pad_size_mm": [
+        0.85,
+        0.3
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2356269021620003,
+      "perimeter_mm": 2.042281608759945,
+      "area_ratio_80um": 1.4421793078836886,
+      "area_ratio_100um": 1.153743446306951
+    },
+    {
+      "ref": "U2",
+      "pin": "8",
+      "xy": [
+        37.65,
+        26.85
+      ],
+      "pad_size_mm": [
+        0.85,
+        0.3
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2356269021620003,
+      "perimeter_mm": 2.042281608759945,
+      "area_ratio_80um": 1.4421793078836886,
+      "area_ratio_100um": 1.153743446306951
+    },
+    {
+      "ref": "U2",
+      "pin": "9",
+      "xy": [
+        36.95,
+        26.15
+      ],
+      "pad_size_mm": [
+        0.3,
+        0.85
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2356269021620021,
+      "perimeter_mm": 2.0422816087599434,
+      "area_ratio_80um": 1.4421793078837009,
+      "area_ratio_100um": 1.1537434463069607
+    },
+    {
+      "ref": "U2",
+      "pin": "10",
+      "xy": [
+        36.45,
+        26.15
+      ],
+      "pad_size_mm": [
+        0.3,
+        0.85
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2356269021620021,
+      "perimeter_mm": 2.0422816087599434,
+      "area_ratio_80um": 1.4421793078837009,
+      "area_ratio_100um": 1.1537434463069607
+    },
+    {
+      "ref": "U2",
+      "pin": "11",
+      "xy": [
+        35.95,
+        26.15
+      ],
+      "pad_size_mm": [
+        0.3,
+        0.85
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2356269021620021,
+      "perimeter_mm": 2.0422816087599434,
+      "area_ratio_80um": 1.4421793078837009,
+      "area_ratio_100um": 1.1537434463069607
+    },
+    {
+      "ref": "U2",
+      "pin": "12",
+      "xy": [
+        35.45,
+        26.15
+      ],
+      "pad_size_mm": [
+        0.3,
+        0.85
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2356269021620021,
+      "perimeter_mm": 2.0422816087599434,
+      "area_ratio_80um": 1.4421793078837009,
+      "area_ratio_100um": 1.1537434463069607
+    },
+    {
+      "ref": "U2",
+      "pin": "13",
+      "xy": [
+        34.95,
+        26.15
+      ],
+      "pad_size_mm": [
+        0.3,
+        0.85
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2356269021620021,
+      "perimeter_mm": 2.0422816087599434,
+      "area_ratio_80um": 1.4421793078837009,
+      "area_ratio_100um": 1.1537434463069607
+    },
+    {
+      "ref": "U2",
+      "pin": "14",
+      "xy": [
+        34.45,
+        26.15
+      ],
+      "pad_size_mm": [
+        0.3,
+        0.85
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2356269021620021,
+      "perimeter_mm": 2.0422816087599434,
+      "area_ratio_80um": 1.4421793078837009,
+      "area_ratio_100um": 1.1537434463069607
+    },
+    {
+      "ref": "U2",
+      "pin": "15",
+      "xy": [
+        33.95,
+        26.15
+      ],
+      "pad_size_mm": [
+        0.3,
+        0.85
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2356269021620021,
+      "perimeter_mm": 2.0422816087599434,
+      "area_ratio_80um": 1.4421793078837009,
+      "area_ratio_100um": 1.1537434463069607
+    },
+    {
+      "ref": "U2",
+      "pin": "16",
+      "xy": [
+        33.45,
+        26.15
+      ],
+      "pad_size_mm": [
+        0.3,
+        0.85
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2356269021620021,
+      "perimeter_mm": 2.0422816087599434,
+      "area_ratio_80um": 1.4421793078837009,
+      "area_ratio_100um": 1.1537434463069607
+    },
+    {
+      "ref": "U2",
+      "pin": "17",
+      "xy": [
+        32.75,
+        26.85
+      ],
+      "pad_size_mm": [
+        0.85,
+        0.3
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2356269021620005,
+      "perimeter_mm": 2.042281608759946,
+      "area_ratio_80um": 1.442179307883689,
+      "area_ratio_100um": 1.1537434463069514
+    },
+    {
+      "ref": "U2",
+      "pin": "18",
+      "xy": [
+        32.75,
+        27.35
+      ],
+      "pad_size_mm": [
+        0.85,
+        0.3
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2356269021620005,
+      "perimeter_mm": 2.042281608759946,
+      "area_ratio_80um": 1.442179307883689,
+      "area_ratio_100um": 1.1537434463069514
+    },
+    {
+      "ref": "U2",
+      "pin": "19",
+      "xy": [
+        32.75,
+        27.85
+      ],
+      "pad_size_mm": [
+        0.85,
+        0.3
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2356269021620005,
+      "perimeter_mm": 2.042281608759946,
+      "area_ratio_80um": 1.442179307883689,
+      "area_ratio_100um": 1.1537434463069514
+    },
+    {
+      "ref": "U2",
+      "pin": "20",
+      "xy": [
+        32.75,
+        28.35
+      ],
+      "pad_size_mm": [
+        0.85,
+        0.3
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2356269021620005,
+      "perimeter_mm": 2.042281608759946,
+      "area_ratio_80um": 1.442179307883689,
+      "area_ratio_100um": 1.1537434463069514
+    },
+    {
+      "ref": "U2",
+      "pin": "21",
+      "xy": [
+        32.75,
+        28.85
+      ],
+      "pad_size_mm": [
+        0.85,
+        0.3
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2356269021620005,
+      "perimeter_mm": 2.042281608759946,
+      "area_ratio_80um": 1.442179307883689,
+      "area_ratio_100um": 1.1537434463069514
+    },
+    {
+      "ref": "U2",
+      "pin": "22",
+      "xy": [
+        32.75,
+        29.35
+      ],
+      "pad_size_mm": [
+        0.85,
+        0.3
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2356269021620005,
+      "perimeter_mm": 2.042281608759946,
+      "area_ratio_80um": 1.442179307883689,
+      "area_ratio_100um": 1.1537434463069514
+    },
+    {
+      "ref": "U2",
+      "pin": "23",
+      "xy": [
+        32.75,
+        29.85
+      ],
+      "pad_size_mm": [
+        0.85,
+        0.3
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2356269021620005,
+      "perimeter_mm": 2.042281608759946,
+      "area_ratio_80um": 1.442179307883689,
+      "area_ratio_100um": 1.1537434463069514
+    },
+    {
+      "ref": "U2",
+      "pin": "24",
+      "xy": [
+        32.75,
+        30.35
+      ],
+      "pad_size_mm": [
+        0.85,
+        0.3
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2356269021620005,
+      "perimeter_mm": 2.042281608759946,
+      "area_ratio_80um": 1.442179307883689,
+      "area_ratio_100um": 1.1537434463069514
+    },
+    {
+      "ref": "U2",
+      "pin": "25",
+      "xy": [
+        33.45,
+        31.05
+      ],
+      "pad_size_mm": [
+        0.3,
+        0.85
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.23562690216200216,
+      "perimeter_mm": 2.0422816087599442,
+      "area_ratio_80um": 1.4421793078837006,
+      "area_ratio_100um": 1.1537434463069605
+    },
+    {
+      "ref": "U2",
+      "pin": "26",
+      "xy": [
+        33.95,
+        31.05
+      ],
+      "pad_size_mm": [
+        0.3,
+        0.85
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.23562690216200216,
+      "perimeter_mm": 2.0422816087599442,
+      "area_ratio_80um": 1.4421793078837006,
+      "area_ratio_100um": 1.1537434463069605
+    },
+    {
+      "ref": "U2",
+      "pin": "27",
+      "xy": [
+        34.45,
+        31.05
+      ],
+      "pad_size_mm": [
+        0.3,
+        0.85
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.23562690216200216,
+      "perimeter_mm": 2.0422816087599442,
+      "area_ratio_80um": 1.4421793078837006,
+      "area_ratio_100um": 1.1537434463069605
+    },
+    {
+      "ref": "U2",
+      "pin": "28",
+      "xy": [
+        34.95,
+        31.05
+      ],
+      "pad_size_mm": [
+        0.3,
+        0.85
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.23562690216200216,
+      "perimeter_mm": 2.0422816087599442,
+      "area_ratio_80um": 1.4421793078837006,
+      "area_ratio_100um": 1.1537434463069605
+    },
+    {
+      "ref": "U2",
+      "pin": "29",
+      "xy": [
+        35.45,
+        31.05
+      ],
+      "pad_size_mm": [
+        0.3,
+        0.85
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.23562690216200216,
+      "perimeter_mm": 2.0422816087599442,
+      "area_ratio_80um": 1.4421793078837006,
+      "area_ratio_100um": 1.1537434463069605
+    },
+    {
+      "ref": "U2",
+      "pin": "30",
+      "xy": [
+        35.95,
+        31.05
+      ],
+      "pad_size_mm": [
+        0.3,
+        0.85
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.23562690216200216,
+      "perimeter_mm": 2.0422816087599442,
+      "area_ratio_80um": 1.4421793078837006,
+      "area_ratio_100um": 1.1537434463069605
+    },
+    {
+      "ref": "U2",
+      "pin": "31",
+      "xy": [
+        36.45,
+        31.05
+      ],
+      "pad_size_mm": [
+        0.3,
+        0.85
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.23562690216200216,
+      "perimeter_mm": 2.0422816087599442,
+      "area_ratio_80um": 1.4421793078837006,
+      "area_ratio_100um": 1.1537434463069605
+    },
+    {
+      "ref": "U2",
+      "pin": "32",
+      "xy": [
+        36.95,
+        31.05
+      ],
+      "pad_size_mm": [
+        0.3,
+        0.85
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.23562690216200216,
+      "perimeter_mm": 2.0422816087599442,
+      "area_ratio_80um": 1.4421793078837006,
+      "area_ratio_100um": 1.1537434463069605
+    },
+    {
+      "ref": "R5",
+      "pin": "1",
+      "xy": [
+        48.39,
+        35.0
+      ],
+      "pad_size_mm": [
+        0.54,
+        0.64
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.32990138030199984,
+      "perimeter_mm": 2.1280297009759783,
+      "area_ratio_80um": 1.937833504806683,
+      "area_ratio_100um": 1.5502668038453464
+    },
+    {
+      "ref": "R5",
+      "pin": "2",
+      "xy": [
+        49.41,
+        35.0
+      ],
+      "pad_size_mm": [
+        0.54,
+        0.64
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.3299013803019994,
+      "perimeter_mm": 2.128029700975978,
+      "area_ratio_80um": 1.9378335048066808,
+      "area_ratio_100um": 1.5502668038453447
+    },
+    {
+      "ref": "C2",
+      "pin": "1",
+      "xy": [
+        40.025,
+        29.375
+      ],
+      "pad_size_mm": [
+        0.9,
+        0.95
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8114510401660008,
+      "perimeter_mm": 3.313512158222705,
+      "area_ratio_80um": 3.061144042252607,
+      "area_ratio_100um": 2.448915233802085
+    },
+    {
+      "ref": "C2",
+      "pin": "2",
+      "xy": [
+        40.025,
+        30.925
+      ],
+      "pad_size_mm": [
+        0.9,
+        0.95
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8114510401660006,
+      "perimeter_mm": 3.3135121582227045,
+      "area_ratio_80um": 3.061144042252606,
+      "area_ratio_100um": 2.4489152338020848
+    },
+    {
+      "ref": "J1",
+      "pin": "1",
+      "xy": [
+        26.75,
+        33.2
+      ],
+      "pad_size_mm": [
+        0.6,
+        1.1
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.6600000000000024,
+      "perimeter_mm": 3.4000000000000057,
+      "area_ratio_80um": 2.426470588235299,
+      "area_ratio_100um": 1.9411764705882388
+    },
+    {
+      "ref": "J1",
+      "pin": "2",
+      "xy": [
+        26.75,
+        32.4
+      ],
+      "pad_size_mm": [
+        0.6,
+        1.1
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.6600000000000024,
+      "perimeter_mm": 3.4000000000000057,
+      "area_ratio_80um": 2.426470588235299,
+      "area_ratio_100um": 1.9411764705882388
+    },
+    {
+      "ref": "J1",
+      "pin": "3",
+      "xy": [
+        26.75,
+        31.75
+      ],
+      "pad_size_mm": [
+        0.3,
+        1.1
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.3299999999999973,
+      "perimeter_mm": 2.799999999999997,
+      "area_ratio_80um": 1.4732142857142752,
+      "area_ratio_100um": 1.17857142857142
+    },
+    {
+      "ref": "J1",
+      "pin": "4",
+      "xy": [
+        26.75,
+        31.25
+      ],
+      "pad_size_mm": [
+        0.3,
+        1.1
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.3299999999999973,
+      "perimeter_mm": 2.799999999999997,
+      "area_ratio_80um": 1.4732142857142752,
+      "area_ratio_100um": 1.17857142857142
+    },
+    {
+      "ref": "J1",
+      "pin": "5",
+      "xy": [
+        26.75,
+        30.75
+      ],
+      "pad_size_mm": [
+        0.3,
+        1.1
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.3299999999999973,
+      "perimeter_mm": 2.799999999999997,
+      "area_ratio_80um": 1.4732142857142752,
+      "area_ratio_100um": 1.17857142857142
+    },
+    {
+      "ref": "J1",
+      "pin": "6",
+      "xy": [
+        26.75,
+        30.25
+      ],
+      "pad_size_mm": [
+        0.3,
+        1.1
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.3299999999999973,
+      "perimeter_mm": 2.799999999999997,
+      "area_ratio_80um": 1.4732142857142752,
+      "area_ratio_100um": 1.17857142857142
+    },
+    {
+      "ref": "J1",
+      "pin": "7",
+      "xy": [
+        26.75,
+        29.75
+      ],
+      "pad_size_mm": [
+        0.3,
+        1.1
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.3299999999999973,
+      "perimeter_mm": 2.799999999999997,
+      "area_ratio_80um": 1.4732142857142752,
+      "area_ratio_100um": 1.17857142857142
+    },
+    {
+      "ref": "J1",
+      "pin": "8",
+      "xy": [
+        26.75,
+        29.25
+      ],
+      "pad_size_mm": [
+        0.3,
+        1.1
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.3299999999999973,
+      "perimeter_mm": 2.799999999999997,
+      "area_ratio_80um": 1.4732142857142752,
+      "area_ratio_100um": 1.17857142857142
+    },
+    {
+      "ref": "J1",
+      "pin": "9",
+      "xy": [
+        26.75,
+        28.75
+      ],
+      "pad_size_mm": [
+        0.3,
+        1.1
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.3299999999999973,
+      "perimeter_mm": 2.799999999999997,
+      "area_ratio_80um": 1.4732142857142752,
+      "area_ratio_100um": 1.17857142857142
+    },
+    {
+      "ref": "J1",
+      "pin": "10",
+      "xy": [
+        26.75,
+        28.25
+      ],
+      "pad_size_mm": [
+        0.3,
+        1.1
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.3299999999999973,
+      "perimeter_mm": 2.799999999999997,
+      "area_ratio_80um": 1.4732142857142752,
+      "area_ratio_100um": 1.17857142857142
+    },
+    {
+      "ref": "J1",
+      "pin": "11",
+      "xy": [
+        26.75,
+        27.6
+      ],
+      "pad_size_mm": [
+        0.6,
+        1.1
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.6599999999999985,
+      "perimeter_mm": 3.3999999999999986,
+      "area_ratio_80um": 2.4264705882352895,
+      "area_ratio_100um": 1.9411764705882317
+    },
+    {
+      "ref": "J1",
+      "pin": "12",
+      "xy": [
+        26.75,
+        26.8
+      ],
+      "pad_size_mm": [
+        0.6,
+        1.1
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.6600000000000024,
+      "perimeter_mm": 3.4000000000000057,
+      "area_ratio_80um": 2.426470588235299,
+      "area_ratio_100um": 1.9411764705882388
+    },
+    {
+      "ref": "C14",
+      "pin": "1",
+      "xy": [
+        39.145,
+        31.9
+      ],
+      "pad_size_mm": [
+        0.56,
+        0.62
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.33031759187599863,
+      "perimeter_mm": 2.119440127629133,
+      "area_ratio_80um": 1.9481417968002557,
+      "area_ratio_100um": 1.5585134374402048
+    },
+    {
+      "ref": "C14",
+      "pin": "2",
+      "xy": [
+        40.105,
+        31.9
+      ],
+      "pad_size_mm": [
+        0.56,
+        0.62
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.33031759187599863,
+      "perimeter_mm": 2.119440127629133,
+      "area_ratio_80um": 1.9481417968002557,
+      "area_ratio_100um": 1.5585134374402048
+    },
+    {
+      "ref": "C17",
+      "pin": "1",
+      "xy": [
+        53.25,
+        31.73
+      ],
+      "pad_size_mm": [
+        0.56,
+        0.62
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.33031759187600046,
+      "perimeter_mm": 2.119440127629128,
+      "area_ratio_80um": 1.948141796800271,
+      "area_ratio_100um": 1.5585134374402168
+    },
+    {
+      "ref": "C17",
+      "pin": "2",
+      "xy": [
+        53.25,
+        30.77
+      ],
+      "pad_size_mm": [
+        0.56,
+        0.62
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.3303175918760016,
+      "perimeter_mm": 2.1194401276291286,
+      "area_ratio_80um": 1.9481417968002777,
+      "area_ratio_100um": 1.558513437440222
+    },
+    {
+      "ref": "D1",
+      "pin": "1",
+      "xy": [
+        41.3,
+        35.0
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.45
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.2590903228240012,
+      "perimeter_mm": 1.9066563315101763,
+      "area_ratio_80um": 1.6985908691446472,
+      "area_ratio_100um": 1.3588726953157175
+    },
+    {
+      "ref": "D1",
+      "pin": "2",
+      "xy": [
+        43.4,
+        35.0
+      ],
+      "pad_size_mm": [
+        0.6,
+        0.45
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.25909032282400113,
+      "perimeter_mm": 1.9066563315101765,
+      "area_ratio_80um": 1.6985908691446465,
+      "area_ratio_100um": 1.358872695315717
+    },
+    {
+      "ref": "C19",
+      "pin": "1",
+      "xy": [
+        44.82,
+        26.8
+      ],
+      "pad_size_mm": [
+        0.56,
+        0.62
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.3303175918760012,
+      "perimeter_mm": 2.119440127629133,
+      "area_ratio_80um": 1.9481417968002708,
+      "area_ratio_100um": 1.5585134374402168
+    },
+    {
+      "ref": "C19",
+      "pin": "2",
+      "xy": [
+        45.78,
+        26.8
+      ],
+      "pad_size_mm": [
+        0.56,
+        0.62
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.3303175918760009,
+      "perimeter_mm": 2.1194401276291313,
+      "area_ratio_80um": 1.9481417968002708,
+      "area_ratio_100um": 1.5585134374402168
+    },
+    {
+      "ref": "C13",
+      "pin": "",
+      "xy": [
+        35.8,
+        24.945
+      ],
+      "pad_size_mm": [
+        0.318,
+        0.36
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.1090225724639994,
+      "perimeter_mm": 1.2193111864662431,
+      "area_ratio_80um": 1.1176655893312608,
+      "area_ratio_100um": 0.8941324714650087
+    },
+    {
+      "ref": "C13",
+      "pin": "",
+      "xy": [
+        35.8,
+        24.255
+      ],
+      "pad_size_mm": [
+        0.318,
+        0.36
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.10902257246400013,
+      "perimeter_mm": 1.2193111864662427,
+      "area_ratio_80um": 1.1176655893312686,
+      "area_ratio_100um": 0.894132471465015
+    },
+    {
+      "ref": "U6",
+      "pin": "1",
+      "xy": [
+        27.9,
+        22.45
+      ],
+      "pad_size_mm": [
+        0.45,
+        0.7
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.3040903228239995,
+      "perimeter_mm": 2.10665633151018,
+      "area_ratio_80um": 1.8043422548067498,
+      "area_ratio_100um": 1.4434738038453998
+    },
+    {
+      "ref": "U6",
+      "pin": "2",
+      "xy": [
+        27.9,
+        23.75
+      ],
+      "pad_size_mm": [
+        0.45,
+        0.7
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.3040903228240012,
+      "perimeter_mm": 2.10665633151018,
+      "area_ratio_80um": 1.80434225480676,
+      "area_ratio_100um": 1.443473803845408
+    },
+    {
+      "ref": "U6",
+      "pin": "3",
+      "xy": [
+        29.9,
+        23.1
+      ],
+      "pad_size_mm": [
+        0.45,
+        0.7
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.30409032282399967,
+      "perimeter_mm": 2.106656331510181,
+      "area_ratio_80um": 1.8043422548067496,
+      "area_ratio_100um": 1.4434738038453996
+    },
+    {
+      "ref": "R8",
+      "pin": "1",
+      "xy": [
+        46.79,
+        26.8
+      ],
+      "pad_size_mm": [
+        0.54,
+        0.64
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.3299013803019998,
+      "perimeter_mm": 2.1280297009759783,
+      "area_ratio_80um": 1.9378335048066828,
+      "area_ratio_100um": 1.550266803845346
+    },
+    {
+      "ref": "R8",
+      "pin": "2",
+      "xy": [
+        47.81,
+        26.8
+      ],
+      "pad_size_mm": [
+        0.54,
+        0.64
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.32990138030199956,
+      "perimeter_mm": 2.128029700975977,
+      "area_ratio_80um": 1.9378335048066828,
+      "area_ratio_100um": 1.550266803845346
+    },
+    {
+      "ref": "C4",
+      "pin": "1",
+      "xy": [
+        29.5,
+        28.175
+      ],
+      "pad_size_mm": [
+        0.9,
+        0.95
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8114510401660007,
+      "perimeter_mm": 3.313512158222704,
+      "area_ratio_80um": 3.061144042252607,
+      "area_ratio_100um": 2.448915233802085
+    },
+    {
+      "ref": "C4",
+      "pin": "2",
+      "xy": [
+        29.5,
+        26.625
+      ],
+      "pad_size_mm": [
+        0.9,
+        0.95
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8114510401660008,
+      "perimeter_mm": 3.3135121582227045,
+      "area_ratio_80um": 3.061144042252607,
+      "area_ratio_100um": 2.4489152338020856
+    },
+    {
+      "ref": "C3",
+      "pin": "1",
+      "xy": [
+        40.025,
+        28.325
+      ],
+      "pad_size_mm": [
+        0.9,
+        0.95
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8114510401660007,
+      "perimeter_mm": 3.3135121582227045,
+      "area_ratio_80um": 3.0611440422526064,
+      "area_ratio_100um": 2.448915233802085
+    },
+    {
+      "ref": "C3",
+      "pin": "2",
+      "xy": [
+        40.025,
+        26.775
+      ],
+      "pad_size_mm": [
+        0.9,
+        0.95
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8114510401660024,
+      "perimeter_mm": 3.313512158222706,
+      "area_ratio_80um": 3.0611440422526117,
+      "area_ratio_100um": 2.4489152338020896
+    },
+    {
+      "ref": "R7",
+      "pin": "1",
+      "xy": [
+        53.25,
+        33.66
+      ],
+      "pad_size_mm": [
+        0.54,
+        0.64
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.3299013803019997,
+      "perimeter_mm": 2.128029700975978,
+      "area_ratio_80um": 1.9378335048066828,
+      "area_ratio_100um": 1.5502668038453462
+    },
+    {
+      "ref": "R7",
+      "pin": "2",
+      "xy": [
+        53.25,
+        32.64
+      ],
+      "pad_size_mm": [
+        0.54,
+        0.64
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.32990138030199984,
+      "perimeter_mm": 2.1280297009759783,
+      "area_ratio_80um": 1.937833504806683,
+      "area_ratio_100um": 1.5502668038453464
+    },
+    {
+      "ref": "R12",
+      "pin": "1",
+      "xy": [
+        50.64,
+        36.4
+      ],
+      "pad_size_mm": [
+        0.54,
+        0.64
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.32990138030199995,
+      "perimeter_mm": 2.1280297009759797,
+      "area_ratio_80um": 1.9378335048066826,
+      "area_ratio_100um": 1.550266803845346
+    },
+    {
+      "ref": "R12",
+      "pin": "2",
+      "xy": [
+        51.66,
+        36.4
+      ],
+      "pad_size_mm": [
+        0.54,
+        0.64
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.32990138030199967,
+      "perimeter_mm": 2.128029700975978,
+      "area_ratio_80um": 1.9378335048066824,
+      "area_ratio_100um": 1.550266803845346
+    },
+    {
+      "ref": "C22",
+      "pin": "1",
+      "xy": [
+        39.52,
+        36.8
+      ],
+      "pad_size_mm": [
+        0.56,
+        0.62
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.3303175918759974,
+      "perimeter_mm": 2.1194401276291317,
+      "area_ratio_80um": 1.94814179680025,
+      "area_ratio_100um": 1.5585134374401997
+    },
+    {
+      "ref": "C22",
+      "pin": "2",
+      "xy": [
+        40.48,
+        36.8
+      ],
+      "pad_size_mm": [
+        0.56,
+        0.62
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.3303175918759974,
+      "perimeter_mm": 2.1194401276291313,
+      "area_ratio_80um": 1.9481417968002501,
+      "area_ratio_100um": 1.5585134374402
+    },
+    {
+      "ref": "C26",
+      "pin": "1",
+      "xy": [
+        63.02,
+        38.0
+      ],
+      "pad_size_mm": [
+        0.56,
+        0.62
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.33031759187599913,
+      "perimeter_mm": 2.119440127629129,
+      "area_ratio_80um": 1.9481417968002626,
+      "area_ratio_100um": 1.5585134374402099
+    },
+    {
+      "ref": "C26",
+      "pin": "2",
+      "xy": [
+        63.98,
+        38.0
+      ],
+      "pad_size_mm": [
+        0.56,
+        0.62
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.33031759187600107,
+      "perimeter_mm": 2.1194401276291264,
+      "area_ratio_80um": 1.948141796800276,
+      "area_ratio_100um": 1.5585134374402212
+    },
+    {
+      "ref": "L2",
+      "pin": "1",
+      "xy": [
+        43.125,
+        27.575
+      ],
+      "pad_size_mm": [
+        0.55,
+        1.6
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8799999999999962,
+      "perimeter_mm": 4.299999999999997,
+      "area_ratio_80um": 2.5581395348837113,
+      "area_ratio_100um": 2.0465116279069693
+    },
+    {
+      "ref": "L2",
+      "pin": "2",
+      "xy": [
+        41.675,
+        27.575
+      ],
+      "pad_size_mm": [
+        0.55,
+        1.6
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8800000000000076,
+      "perimeter_mm": 4.300000000000011,
+      "area_ratio_80um": 2.558139534883736,
+      "area_ratio_100um": 2.046511627906989
+    },
+    {
+      "ref": "MIC1",
+      "pin": "1",
+      "xy": [
+        46.725,
+        24.575
+      ],
+      "pad_size_mm": [
+        0.45,
+        0.95
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.4275000000000024,
+      "perimeter_mm": 2.8000000000000043,
+      "area_ratio_80um": 1.9084821428571506,
+      "area_ratio_100um": 1.5267857142857204
+    },
+    {
+      "ref": "MIC1",
+      "pin": "2",
+      "xy": [
+        46.725,
+        23.225
+      ],
+      "pad_size_mm": [
+        0.45,
+        0.95
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.4275000000000024,
+      "perimeter_mm": 2.8000000000000043,
+      "area_ratio_80um": 1.9084821428571506,
+      "area_ratio_100um": 1.5267857142857204
+    },
+    {
+      "ref": "MIC1",
+      "pin": "3",
+      "xy": [
+        45.875,
+        23.225
+      ],
+      "pad_size_mm": [
+        0.45,
+        0.95
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.4275000000000024,
+      "perimeter_mm": 2.8000000000000043,
+      "area_ratio_80um": 1.9084821428571506,
+      "area_ratio_100um": 1.5267857142857204
+    },
+    {
+      "ref": "MIC1",
+      "pin": "4",
+      "xy": [
+        45.875,
+        24.575
+      ],
+      "pad_size_mm": [
+        0.45,
+        0.95
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.4275000000000024,
+      "perimeter_mm": 2.8000000000000043,
+      "area_ratio_80um": 1.9084821428571506,
+      "area_ratio_100um": 1.5267857142857204
+    },
+    {
+      "ref": "MIC1",
+      "pin": "5",
+      "xy": [
+        46.3,
+        25.625
+      ],
+      "pad_size_mm": [
+        1.3,
+        0.35
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.45500000000000335,
+      "perimeter_mm": 3.3000000000000114,
+      "area_ratio_80um": 1.7234848484848553,
+      "area_ratio_100um": 1.378787878787884
+    },
+    {
+      "ref": "MIC1",
+      "pin": "6",
+      "xy": [
+        47.525,
+        23.9
+      ],
+      "pad_size_mm": [
+        0.35,
+        2.3
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8050000000000035,
+      "perimeter_mm": 5.300000000000004,
+      "area_ratio_80um": 1.8985849056603838,
+      "area_ratio_100um": 1.5188679245283072
+    },
+    {
+      "ref": "MIC1",
+      "pin": "7",
+      "xy": [
+        46.3,
+        22.175
+      ],
+      "pad_size_mm": [
+        1.3,
+        0.35
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.45500000000000335,
+      "perimeter_mm": 3.3000000000000114,
+      "area_ratio_80um": 1.7234848484848553,
+      "area_ratio_100um": 1.378787878787884
+    },
+    {
+      "ref": "MIC1",
+      "pin": "8",
+      "xy": [
+        45.075,
+        23.9
+      ],
+      "pad_size_mm": [
+        0.35,
+        2.3
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8050000000000035,
+      "perimeter_mm": 5.300000000000004,
+      "area_ratio_80um": 1.8985849056603838,
+      "area_ratio_100um": 1.5188679245283072
+    },
+    {
+      "ref": "C23",
+      "pin": "1",
+      "xy": [
+        36.35,
+        36.8
+      ],
+      "pad_size_mm": [
+        1.0,
+        1.45
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 1.3962463057119983,
+      "perimeter_mm": 4.4705899417398065,
+      "area_ratio_80um": 3.9039766672511713,
+      "area_ratio_100um": 3.1231813338009373
+    },
+    {
+      "ref": "C23",
+      "pin": "2",
+      "xy": [
+        38.25,
+        36.8
+      ],
+      "pad_size_mm": [
+        1.0,
+        1.45
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 1.3962463057119983,
+      "perimeter_mm": 4.470589941739805,
+      "area_ratio_80um": 3.903976667251173,
+      "area_ratio_100um": 3.123181333800938
+    },
+    {
+      "ref": "R3",
+      "pin": "",
+      "xy": [
+        32.5,
+        24.945
+      ],
+      "pad_size_mm": [
+        0.318,
+        0.36
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.10902257246399948,
+      "perimeter_mm": 1.2193111864662443,
+      "area_ratio_80um": 1.1176655893312606,
+      "area_ratio_100um": 0.8941324714650085
+    },
+    {
+      "ref": "R3",
+      "pin": "",
+      "xy": [
+        32.5,
+        24.255
+      ],
+      "pad_size_mm": [
+        0.318,
+        0.36
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.10902257246400021,
+      "perimeter_mm": 1.219311186466244,
+      "area_ratio_80um": 1.1176655893312684,
+      "area_ratio_100um": 0.8941324714650146
+    },
+    {
+      "ref": "C10",
+      "pin": "1",
+      "xy": [
+        34.6,
+        33.325
+      ],
+      "pad_size_mm": [
+        0.9,
+        0.95
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8114510401660007,
+      "perimeter_mm": 3.3135121582227045,
+      "area_ratio_80um": 3.0611440422526064,
+      "area_ratio_100um": 2.448915233802085
+    },
+    {
+      "ref": "C10",
+      "pin": "2",
+      "xy": [
+        34.6,
+        34.875
+      ],
+      "pad_size_mm": [
+        0.9,
+        0.95
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8114510401660049,
+      "perimeter_mm": 3.313512158222707,
+      "area_ratio_80um": 3.0611440422526197,
+      "area_ratio_100um": 2.448915233802096
+    },
+    {
+      "ref": "C9",
+      "pin": "1",
+      "xy": [
+        33.4,
+        33.325
+      ],
+      "pad_size_mm": [
+        0.9,
+        0.95
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8114510401660006,
+      "perimeter_mm": 3.3135121582227045,
+      "area_ratio_80um": 3.061144042252606,
+      "area_ratio_100um": 2.4489152338020848
+    },
+    {
+      "ref": "C9",
+      "pin": "2",
+      "xy": [
+        33.4,
+        34.875
+      ],
+      "pad_size_mm": [
+        0.9,
+        0.95
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8114510401660048,
+      "perimeter_mm": 3.3135121582227076,
+      "area_ratio_80um": 3.0611440422526193,
+      "area_ratio_100um": 2.4489152338020954
+    },
+    {
+      "ref": "D2",
+      "pin": "1",
+      "xy": [
+        28.05,
+        32.75
+      ],
+      "pad_size_mm": [
+        0.3,
+        0.5
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.14800362436600006,
+      "perimeter_mm": 1.5173987887235258,
+      "area_ratio_80um": 1.219221550935404,
+      "area_ratio_100um": 0.9753772407483232
+    },
+    {
+      "ref": "D2",
+      "pin": "2",
+      "xy": [
+        28.75,
+        32.75
+      ],
+      "pad_size_mm": [
+        0.3,
+        0.5
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.1480036243659988,
+      "perimeter_mm": 1.5173987887235267,
+      "area_ratio_80um": 1.219221550935393,
+      "area_ratio_100um": 0.9753772407483142
+    },
+    {
+      "ref": "C1",
+      "pin": "1",
+      "xy": [
+        29.5,
+        29.25
+      ],
+      "pad_size_mm": [
+        0.9,
+        0.95
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8114510401660008,
+      "perimeter_mm": 3.3135121582227045,
+      "area_ratio_80um": 3.061144042252607,
+      "area_ratio_100um": 2.4489152338020856
+    },
+    {
+      "ref": "C1",
+      "pin": "2",
+      "xy": [
+        29.5,
+        30.8
+      ],
+      "pad_size_mm": [
+        0.9,
+        0.95
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8114510401660007,
+      "perimeter_mm": 3.313512158222704,
+      "area_ratio_80um": 3.061144042252607,
+      "area_ratio_100um": 2.448915233802085
+    },
+    {
+      "ref": "C18",
+      "pin": "1",
+      "xy": [
+        53.3,
+        29.575
+      ],
+      "pad_size_mm": [
+        0.9,
+        0.95
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8114510401659975,
+      "perimeter_mm": 3.3135121582227036,
+      "area_ratio_80um": 3.0611440422525957,
+      "area_ratio_100um": 2.448915233802076
+    },
+    {
+      "ref": "C18",
+      "pin": "2",
+      "xy": [
+        53.3,
+        28.025
+      ],
+      "pad_size_mm": [
+        0.9,
+        0.95
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8114510401659993,
+      "perimeter_mm": 3.3135121582227054,
+      "area_ratio_80um": 3.0611440422526006,
+      "area_ratio_100um": 2.4489152338020803
+    },
+    {
+      "ref": "U5",
+      "pin": "",
+      "xy": [
+        47.35,
+        29.625
+      ],
+      "pad_size_mm": [
+        1.37,
+        1.73
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 2.316346305711994,
+      "perimeter_mm": 5.770589941739805,
+      "area_ratio_80um": 5.01756824063474,
+      "area_ratio_100um": 4.014054592507793
+    },
+    {
+      "ref": "U5",
+      "pin": "",
+      "xy": [
+        47.35,
+        31.775
+      ],
+      "pad_size_mm": [
+        1.37,
+        1.73
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 2.3163463057119973,
+      "perimeter_mm": 5.770589941739806,
+      "area_ratio_80um": 5.017568240634747,
+      "area_ratio_100um": 4.014054592507797
+    },
+    {
+      "ref": "U5",
+      "pin": "",
+      "xy": [
+        49.05,
+        29.625
+      ],
+      "pad_size_mm": [
+        1.37,
+        1.73
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 2.316346305711993,
+      "perimeter_mm": 5.770589941739804,
+      "area_ratio_80um": 5.0175682406347395,
+      "area_ratio_100um": 4.014054592507791
+    },
+    {
+      "ref": "U5",
+      "pin": "",
+      "xy": [
+        49.05,
+        31.775
+      ],
+      "pad_size_mm": [
+        1.37,
+        1.73
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 2.316346305711997,
+      "perimeter_mm": 5.7705899417398046,
+      "area_ratio_80um": 5.0175682406347475,
+      "area_ratio_100um": 4.014054592507798
+    },
+    {
+      "ref": "U5",
+      "pin": "1",
+      "xy": [
+        44.45,
+        28.795
+      ],
+      "pad_size_mm": [
+        0.65,
+        0.5
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.31153655701199945,
+      "perimeter_mm": 2.085194134967824,
+      "area_ratio_80um": 1.8675512736899595,
+      "area_ratio_100um": 1.4940410189519675
+    },
+    {
+      "ref": "U5",
+      "pin": "2",
+      "xy": [
+        44.45,
+        30.065
+      ],
+      "pad_size_mm": [
+        0.65,
+        0.5
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.31153655701199956,
+      "perimeter_mm": 2.085194134967825,
+      "area_ratio_80um": 1.8675512736899593,
+      "area_ratio_100um": 1.4940410189519675
+    },
+    {
+      "ref": "U5",
+      "pin": "3",
+      "xy": [
+        44.45,
+        31.335
+      ],
+      "pad_size_mm": [
+        0.65,
+        0.5
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.3115365570119995,
+      "perimeter_mm": 2.085194134967824,
+      "area_ratio_80um": 1.8675512736899598,
+      "area_ratio_100um": 1.494041018951968
+    },
+    {
+      "ref": "U5",
+      "pin": "4",
+      "xy": [
+        44.45,
+        32.605
+      ],
+      "pad_size_mm": [
+        0.65,
+        0.5
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.31153655701199956,
+      "perimeter_mm": 2.085194134967826,
+      "area_ratio_80um": 1.8675512736899587,
+      "area_ratio_100um": 1.4940410189519666
+    },
+    {
+      "ref": "U5",
+      "pin": "5",
+      "xy": [
+        51.95,
+        32.605
+      ],
+      "pad_size_mm": [
+        0.65,
+        0.5
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.31153655701199956,
+      "perimeter_mm": 2.085194134967826,
+      "area_ratio_80um": 1.8675512736899587,
+      "area_ratio_100um": 1.4940410189519666
+    },
+    {
+      "ref": "U5",
+      "pin": "6",
+      "xy": [
+        51.95,
+        31.335
+      ],
+      "pad_size_mm": [
+        0.65,
+        0.5
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.3115365570119995,
+      "perimeter_mm": 2.085194134967824,
+      "area_ratio_80um": 1.8675512736899598,
+      "area_ratio_100um": 1.494041018951968
+    },
+    {
+      "ref": "U5",
+      "pin": "7",
+      "xy": [
+        51.95,
+        30.065
+      ],
+      "pad_size_mm": [
+        0.65,
+        0.5
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.31153655701199956,
+      "perimeter_mm": 2.085194134967825,
+      "area_ratio_80um": 1.8675512736899593,
+      "area_ratio_100um": 1.4940410189519675
+    },
+    {
+      "ref": "U5",
+      "pin": "8",
+      "xy": [
+        51.95,
+        28.795
+      ],
+      "pad_size_mm": [
+        0.65,
+        0.5
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.31153655701199945,
+      "perimeter_mm": 2.085194134967824,
+      "area_ratio_80um": 1.8675512736899595,
+      "area_ratio_100um": 1.4940410189519675
+    },
+    {
+      "ref": "C15",
+      "pin": "1",
+      "xy": [
+        39.145,
+        25.8
+      ],
+      "pad_size_mm": [
+        0.56,
+        0.62
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.33031759187599863,
+      "perimeter_mm": 2.119440127629132,
+      "area_ratio_80um": 1.9481417968002568,
+      "area_ratio_100um": 1.5585134374402052
+    },
+    {
+      "ref": "C15",
+      "pin": "2",
+      "xy": [
+        40.105,
+        25.8
+      ],
+      "pad_size_mm": [
+        0.56,
+        0.62
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.3303175918759987,
+      "perimeter_mm": 2.119440127629132,
+      "area_ratio_80um": 1.948141796800257,
+      "area_ratio_100um": 1.5585134374402057
+    },
+    {
+      "ref": "C16",
+      "pin": "1",
+      "xy": [
+        30.75,
+        28.155
+      ],
+      "pad_size_mm": [
+        0.56,
+        0.62
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.33031759187599913,
+      "perimeter_mm": 2.1194401276291335,
+      "area_ratio_80um": 1.9481417968002583,
+      "area_ratio_100um": 1.5585134374402065
+    },
+    {
+      "ref": "C16",
+      "pin": "2",
+      "xy": [
+        30.75,
+        27.195
+      ],
+      "pad_size_mm": [
+        0.56,
+        0.62
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.3303175918760002,
+      "perimeter_mm": 2.1194401276291326,
+      "area_ratio_80um": 1.9481417968002654,
+      "area_ratio_100um": 1.5585134374402123
+    },
+    {
+      "ref": "C5",
+      "pin": "1",
+      "xy": [
+        30.7,
+        29.875
+      ],
+      "pad_size_mm": [
+        0.9,
+        0.95
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.811451040165999,
+      "perimeter_mm": 3.313512158222704,
+      "area_ratio_80um": 3.0611440422526006,
+      "area_ratio_100um": 2.4489152338020803
+    },
+    {
+      "ref": "C5",
+      "pin": "2",
+      "xy": [
+        30.7,
+        31.425
+      ],
+      "pad_size_mm": [
+        0.9,
+        0.95
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.8114510401659988,
+      "perimeter_mm": 3.3135121582227036,
+      "area_ratio_80um": 3.0611440422526006,
+      "area_ratio_100um": 2.44891523380208
+    },
+    {
+      "ref": "R4",
+      "pin": "",
+      "xy": [
+        33.1,
+        24.945
+      ],
+      "pad_size_mm": [
+        0.318,
+        0.36
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.10902257246399949,
+      "perimeter_mm": 1.2193111864662443,
+      "area_ratio_80um": 1.1176655893312606,
+      "area_ratio_100um": 0.8941324714650086
+    },
+    {
+      "ref": "R4",
+      "pin": "",
+      "xy": [
+        33.1,
+        24.255
+      ],
+      "pad_size_mm": [
+        0.318,
+        0.36
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.1090225724640002,
+      "perimeter_mm": 1.2193111864662438,
+      "area_ratio_80um": 1.1176655893312684,
+      "area_ratio_100um": 0.8941324714650147
+    },
+    {
+      "ref": "R11",
+      "pin": "",
+      "xy": [
+        62.955,
+        35.4
+      ],
+      "pad_size_mm": [
+        0.318,
+        0.36
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.10902257246399955,
+      "perimeter_mm": 1.219311186466245,
+      "area_ratio_80um": 1.1176655893312608,
+      "area_ratio_100um": 0.8941324714650085
+    },
+    {
+      "ref": "R11",
+      "pin": "",
+      "xy": [
+        63.645,
+        35.4
+      ],
+      "pad_size_mm": [
+        0.318,
+        0.36
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.10902257246400095,
+      "perimeter_mm": 1.2193111864662445,
+      "area_ratio_80um": 1.1176655893312755,
+      "area_ratio_100um": 0.8941324714650203
+    },
+    {
+      "ref": "R10",
+      "pin": "",
+      "xy": [
+        62.955,
+        34.6
+      ],
+      "pad_size_mm": [
+        0.318,
+        0.36
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.10902257246399953,
+      "perimeter_mm": 1.219311186466245,
+      "area_ratio_80um": 1.1176655893312606,
+      "area_ratio_100um": 0.8941324714650084
+    },
+    {
+      "ref": "R10",
+      "pin": "",
+      "xy": [
+        63.645,
+        34.6
+      ],
+      "pad_size_mm": [
+        0.318,
+        0.36
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.10902257246400096,
+      "perimeter_mm": 1.2193111864662447,
+      "area_ratio_80um": 1.1176655893312755,
+      "area_ratio_100um": 0.8941324714650203
+    },
+    {
+      "ref": "C25",
+      "pin": "1",
+      "xy": [
+        58.98,
+        38.0
+      ],
+      "pad_size_mm": [
+        0.56,
+        0.62
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.33031759187599913,
+      "perimeter_mm": 2.119440127629129,
+      "area_ratio_80um": 1.9481417968002626,
+      "area_ratio_100um": 1.5585134374402099
+    },
+    {
+      "ref": "C25",
+      "pin": "2",
+      "xy": [
+        58.02,
+        38.0
+      ],
+      "pad_size_mm": [
+        0.56,
+        0.62
+      ],
+      "effective_paste_margin_mm": [
+        0.0,
+        0.0
+      ],
+      "area_mm2": 0.3303175918759991,
+      "perimeter_mm": 2.119440127629129,
+      "area_ratio_80um": 1.9481417968002621,
+      "area_ratio_100um": 1.5585134374402096
+    }
+  ]
+}

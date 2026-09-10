@@ -1,0 +1,289 @@
+{
+  "pcb_sha256": "3a24a58ccb9d19cac9abba010b2b4290a42bbe3eef289906950fdb5131f33bf4",
+  "outline_unchanged": true,
+  "keepouts_unchanged": true,
+  "footprint_deltas": [
+    {
+      "ref": "U4",
+      "before": {
+        "ref": "U4",
+        "value": "TPD2EUSB30DRTR",
+        "footprint": "U4__Texas_DRT-3_R0B",
+        "dnp": false,
+        "exclude_pos": false,
+        "exclude_bom": false,
+        "pos": [
+          28.5,
+          30.0
+        ],
+        "angle": -90.0,
+        "side": "top"
+      },
+      "after": {
+        "ref": "U4",
+        "value": "TPD2EUSB30DRTR",
+        "footprint": "U4__Texas_DRT-3_R0B",
+        "dnp": false,
+        "exclude_pos": false,
+        "exclude_bom": false,
+        "pos": [
+          28.15,
+          29.45
+        ],
+        "angle": -90.0,
+        "side": "top"
+      }
+    }
+  ],
+  "track_deltas": [
+    {
+      "uuid": "1640071f-f745-422b-bebe-3189449ae042",
+      "before": {
+        "start": [
+          27.65,
+          29.04
+        ],
+        "end": [
+          28.075,
+          29.375
+        ],
+        "width": 0.127,
+        "net": "/USB_D+",
+        "layers": [
+          0
+        ],
+        "via": false,
+        "uuid": "1640071f-f745-422b-bebe-3189449ae042",
+        "drill": null
+      },
+      "after": {
+        "start": [
+          27.65,
+          29.04
+        ],
+        "end": [
+          27.725,
+          29.1
+        ],
+        "width": 0.127,
+        "net": "/USB_D+",
+        "layers": [
+          0
+        ],
+        "via": false,
+        "uuid": "1640071f-f745-422b-bebe-3189449ae042",
+        "drill": null
+      }
+    },
+    {
+      "uuid": "19aefb68-fc90-4854-baf7-4afa3d11d11c",
+      "before": {
+        "start": [
+          28.075,
+          30.35
+        ],
+        "end": [
+          28.15,
+          30.95
+        ],
+        "width": 0.127,
+        "net": "/USB_D-",
+        "layers": [
+          0
+        ],
+        "via": false,
+        "uuid": "19aefb68-fc90-4854-baf7-4afa3d11d11c",
+        "drill": null
+      },
+      "after": {
+        "start": [
+          27.725,
+          29.8
+        ],
+        "end": [
+          28.15,
+          30.225
+        ],
+        "width": 0.127,
+        "net": "/USB_D-",
+        "layers": [
+          0
+        ],
+        "via": false,
+        "uuid": "19aefb68-fc90-4854-baf7-4afa3d11d11c",
+        "drill": null
+      }
+    },
+    {
+      "uuid": "3fedc41f-214f-444c-802d-deef05ed625e",
+      "before": {
+        "start": [
+          28.71,
+          29.96
+        ],
+        "end": [
+          28.925,
+          30.0
+        ],
+        "width": 0.2,
+        "net": "/GND",
+        "layers": [
+          0
+        ],
+        "via": false,
+        "uuid": "3fedc41f-214f-444c-802d-deef05ed625e",
+        "drill": null
+      },
+      "after": {
+        "start": [
+          28.71,
+          29.96
+        ],
+        "end": [
+          28.575,
+          29.45
+        ],
+        "width": 0.2,
+        "net": "/GND",
+        "layers": [
+          0
+        ],
+        "via": false,
+        "uuid": "3fedc41f-214f-444c-802d-deef05ed625e",
+        "drill": null
+      }
+    },
+    {
+      "uuid": "7afe110d-2151-4b30-8b64-da5b0c2f4ea0",
+      "before": {
+        "start": [
+          28.075,
+          29.375
+        ],
+        "end": [
+          28.075,
+          29.65
+        ],
+        "width": 0.127,
+        "net": "/USB_D+",
+        "layers": [
+          0
+        ],
+        "via": false,
+        "uuid": "7afe110d-2151-4b30-8b64-da5b0c2f4ea0",
+        "drill": null
+      },
+      "after": null
+    },
+    {
+      "uuid": "f9eafeb0-1c42-47a8-83fe-b8d5b38d3b38",
+      "before": null,
+      "after": {
+        "start": [
+          28.15,
+          30.225
+        ],
+        "end": [
+          28.15,
+          30.95
+        ],
+        "width": 0.127,
+        "net": "/USB_D-",
+        "layers": [
+          0
+        ],
+        "via": false,
+        "uuid": "f9eafeb0-1c42-47a8-83fe-b8d5b38d3b38",
+        "drill": null
+      }
+    }
+  ],
+  "all_vias_unchanged": true,
+  "non_F_Cu_tracks_unchanged": true,
+  "ground_islands_before": [
+    [
+      0,
+      8
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      6
+    ]
+  ],
+  "ground_islands_after": [
+    [
+      0,
+      8
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      6
+    ]
+  ],
+  "independent_connectivity": {
+    "2V5_AUX": "PASS",
+    "3V_MAIN": "PASS",
+    "3V_MIC": "PASS",
+    "FLASH_CS": "PASS",
+    "FLASH_IO0": "PASS",
+    "FLASH_IO1": "PASS",
+    "FLASH_IO2": "PASS",
+    "FLASH_IO3": "PASS",
+    "FLASH_SCK": "PASS",
+    "GND": "PASS",
+    "HAPTIC_GATE": "PASS",
+    "HAPTIC_NEG": "PASS",
+    "HAPTIC_PWM": "PASS",
+    "I2C_SCL": "PASS",
+    "I2C_SDA": "PASS",
+    "LED_BLUE_K": "PASS",
+    "LED_RED_K": "PASS",
+    "NTC": "PASS",
+    "PDM_CLK": "PASS",
+    "PDM_DATA": "PASS",
+    "PDM_DATA_MIC1": "PASS",
+    "PDM_DATA_MIC2": "PASS",
+    "PMIC_INT": "PASS",
+    "PVSS1": "PASS",
+    "PVSS2": "PASS",
+    "RESET": "PASS",
+    "SHPHLD_BTN": "PASS",
+    "SW1": "PASS",
+    "SW2": "PASS",
+    "SWDCLK": "PASS",
+    "SWDIO": "PASS",
+    "UART_RX": "PASS",
+    "UART_TX": "PASS",
+    "USB_CC1": "PASS",
+    "USB_CC2": "PASS",
+    "USB_D+": "PASS",
+    "USB_D-": "PASS",
+    "USB_MCU_D+": "PASS",
+    "USB_MCU_D-": "PASS",
+    "VBAT": "PASS",
+    "VBUS": "PASS",
+    "VBUSOUT": "PASS",
+    "VSET1": "PASS",
+    "VSET2": "PASS",
+    "VSYS": "PASS"
+  },
+  "native_all_track_DRC_parity": "PASS0violations0unconnected0parityissues",
+  "native_GUI_DRC": "PASS0violations0unconnected0footprint_errors",
+  "scope": "Only U4 placement and local F.Cu ESD branches modified; native GND zones refilled; no MPN or schematic metadata changes."
+}

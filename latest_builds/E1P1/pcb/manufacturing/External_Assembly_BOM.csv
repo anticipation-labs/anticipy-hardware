@@ -1,0 +1,4 @@
+Reference,Manufacturer,MPN,Value,Per pendant,For 20 pendants,Installation
+BT1,Jauch Quartz,LP561836JU+PCM+2 WIRES 50MM,Jauch 350mAh min protected 1S LiPo,1,20,After SMT reflow only; follow polarity and external wiring drawing
+M1,Vybronics,VCLP1020B002L,VCLP1020B002L,1,20,After SMT reflow only; follow polarity and external wiring drawing
+TH1,TDK,B57540G1103F000,10k 1% external NTC,1,20,After SMT reflow only; follow polarity and external wiring drawing

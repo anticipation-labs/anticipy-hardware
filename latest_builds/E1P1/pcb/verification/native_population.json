@@ -1,0 +1,968 @@
+[
+  {
+    "ref": "R13",
+    "value": "10k 1%",
+    "footprint": "R13__R_0402_1005Metric",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      53.2,
+      36.4
+    ],
+    "angle": 0.0,
+    "side": "top"
+  },
+  {
+    "ref": "R6",
+    "value": "100k 1%",
+    "footprint": "R6__R_0402_1005Metric",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      48.9,
+      36.3
+    ],
+    "angle": 0.0,
+    "side": "top"
+  },
+  {
+    "ref": "C7",
+    "value": "10uF 25V X5R",
+    "footprint": "C7__C_0603_1608Metric",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      40.7,
+      32.95
+    ],
+    "angle": 180.0,
+    "side": "top"
+  },
+  {
+    "ref": "C6",
+    "value": "2.2uF 16V X7R",
+    "footprint": "C6__C_0603_1608Metric",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      30.175,
+      25.5
+    ],
+    "angle": 180.0,
+    "side": "top"
+  },
+  {
+    "ref": "U4",
+    "value": "TPD2EUSB30ADRTR",
+    "footprint": "U4__Texas_DRT-3_R0B",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      28.15,
+      29.45
+    ],
+    "angle": -90.0,
+    "side": "top"
+  },
+  {
+    "ref": "L1",
+    "value": "2.2uH",
+    "footprint": "L1__L_Murata_DFE201610P",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      41.9,
+      30.625
+    ],
+    "angle": 90.0,
+    "side": "top"
+  },
+  {
+    "ref": "U1",
+    "value": "MDBT50Q-1MV2",
+    "footprint": "U1__Raytac_MDBT50Q_R0B",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      59.75,
+      29.5
+    ],
+    "angle": 0.0,
+    "side": "top"
+  },
+  {
+    "ref": "R2",
+    "value": "10k 1%",
+    "footprint": "R2__R_0201_0603Metric",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      35.0,
+      24.6
+    ],
+    "angle": 90.0,
+    "side": "top"
+  },
+  {
+    "ref": "NT1",
+    "value": "PVSS1-GND",
+    "footprint": "NT1__NetTie_Nordic_Config4",
+    "dnp": false,
+    "exclude_pos": true,
+    "exclude_bom": true,
+    "pos": [
+      40.85,
+      30.82
+    ],
+    "angle": 0.0,
+    "side": "top"
+  },
+  {
+    "ref": "LED1",
+    "value": "APHB1608LVBDSEKJ3C",
+    "footprint": "LED1__LED_Kingbright_APHB1608LVBDSEKJ3C",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      34.0,
+      36.7
+    ],
+    "angle": 0.0,
+    "side": "top"
+  },
+  {
+    "ref": "SW1",
+    "value": "B3U-1000P",
+    "footprint": "SW1__SW_SPST_B3U-1000P",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      30.0,
+      36.3
+    ],
+    "angle": 0.0,
+    "side": "top"
+  },
+  {
+    "ref": "C20",
+    "value": "100nF 16V X7R",
+    "footprint": "C20__C_0402_1005Metric",
+    "dnp": true,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      50.1,
+      26.8
+    ],
+    "angle": 0.0,
+    "side": "top"
+  },
+  {
+    "ref": "Q1",
+    "value": "AO3400A",
+    "footprint": "Q1__SOT-23",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      45.95,
+      36.5
+    ],
+    "angle": 180.0,
+    "side": "top"
+  },
+  {
+    "ref": "R1",
+    "value": "10k 1%",
+    "footprint": "R1__R_0201_0603Metric",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      34.4,
+      24.6
+    ],
+    "angle": 90.0,
+    "side": "top"
+  },
+  {
+    "ref": "C8",
+    "value": "10uF 25V X5R",
+    "footprint": "C8__C_0603_1608Metric",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      41.925,
+      25.75
+    ],
+    "angle": 180.0,
+    "side": "top"
+  },
+  {
+    "ref": "U2",
+    "value": "nPM1300",
+    "footprint": "U2__nPM1300_QFN32_Reference",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      35.2,
+      28.6
+    ],
+    "angle": 180.0,
+    "side": "top"
+  },
+  {
+    "ref": "R5",
+    "value": "100R 1%",
+    "footprint": "R5__R_0402_1005Metric",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      48.9,
+      35.0
+    ],
+    "angle": 0.0,
+    "side": "top"
+  },
+  {
+    "ref": "C2",
+    "value": "10uF 25V X5R",
+    "footprint": "C2__C_0603_1608Metric",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      40.025,
+      30.15
+    ],
+    "angle": -90.0,
+    "side": "top"
+  },
+  {
+    "ref": "J1",
+    "value": "USB4500-03-1-A",
+    "footprint": "J1__USB_C_Receptacle_GCT_USB4500-03-1-A_MidMount",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      20.0,
+      30.0
+    ],
+    "angle": 90.0,
+    "side": "top"
+  },
+  {
+    "ref": "C14",
+    "value": "100nF 16V X7R",
+    "footprint": "C14__C_0402_1005Metric",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      39.625,
+      31.9
+    ],
+    "angle": 0.0,
+    "side": "top"
+  },
+  {
+    "ref": "C17",
+    "value": "100nF 16V X7R",
+    "footprint": "C17__C_0402_1005Metric",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      53.25,
+      31.25
+    ],
+    "angle": 90.0,
+    "side": "top"
+  },
+  {
+    "ref": "D1",
+    "value": "1N4148WS-13-F",
+    "footprint": "D1__D_SOD-323",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      42.35,
+      35.0
+    ],
+    "angle": 0.0,
+    "side": "top"
+  },
+  {
+    "ref": "MIC2",
+    "value": "CMM-3424DT-26165-TR",
+    "footprint": "MIC2__SameSky_CMM-3424DT-26165-TR_TopPort_PDM",
+    "dnp": true,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      51.2,
+      23.9
+    ],
+    "angle": 0.0,
+    "side": "top"
+  },
+  {
+    "ref": "C19",
+    "value": "100nF 16V X7R",
+    "footprint": "C19__C_0402_1005Metric",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      45.3,
+      26.8
+    ],
+    "angle": 0.0,
+    "side": "top"
+  },
+  {
+    "ref": "C13",
+    "value": "100nF 25V X5R",
+    "footprint": "C13__C_0201_0603Metric",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      35.8,
+      24.6
+    ],
+    "angle": 90.0,
+    "side": "top"
+  },
+  {
+    "ref": "U6",
+    "value": "TPD2E2U06DCKR",
+    "footprint": "U6__TI_DCK_SC70_3_R0B",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      28.9,
+      23.1
+    ],
+    "angle": 0.0,
+    "side": "top"
+  },
+  {
+    "ref": "R8",
+    "value": "100R 1%",
+    "footprint": "R8__R_0402_1005Metric",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      47.3,
+      26.8
+    ],
+    "angle": 0.0,
+    "side": "top"
+  },
+  {
+    "ref": "C4",
+    "value": "10uF 25V X5R",
+    "footprint": "C4__C_0603_1608Metric",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      29.5,
+      27.4
+    ],
+    "angle": 90.0,
+    "side": "top"
+  },
+  {
+    "ref": "C3",
+    "value": "10uF 25V X5R",
+    "footprint": "C3__C_0603_1608Metric",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      40.025,
+      27.55
+    ],
+    "angle": 90.0,
+    "side": "top"
+  },
+  {
+    "ref": "R7",
+    "value": "10k 1%",
+    "footprint": "R7__R_0402_1005Metric",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      53.25,
+      33.15
+    ],
+    "angle": 90.0,
+    "side": "top"
+  },
+  {
+    "ref": "R12",
+    "value": "10k 1%",
+    "footprint": "R12__R_0402_1005Metric",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      51.15,
+      36.4
+    ],
+    "angle": 0.0,
+    "side": "top"
+  },
+  {
+    "ref": "C22",
+    "value": "100nF 16V X7R",
+    "footprint": "C22__C_0402_1005Metric",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      40.0,
+      36.8
+    ],
+    "angle": 0.0,
+    "side": "top"
+  },
+  {
+    "ref": "C26",
+    "value": "10uF 6.3V X5R",
+    "footprint": "C26__C_0402_1005Metric",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      63.5,
+      38.0
+    ],
+    "angle": 0.0,
+    "side": "top"
+  },
+  {
+    "ref": "L2",
+    "value": "2.2uH",
+    "footprint": "L2__L_Murata_DFE201610P",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      42.4,
+      27.575
+    ],
+    "angle": 180.0,
+    "side": "top"
+  },
+  {
+    "ref": "MIC1",
+    "value": "CMM-3424DT-26165-TR",
+    "footprint": "MIC1__SameSky_CMM-3424DT-26165-TR_TopPort_PDM",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      46.3,
+      23.9
+    ],
+    "angle": 0.0,
+    "side": "top"
+  },
+  {
+    "ref": "C23",
+    "value": "47uF 6.3V X5R",
+    "footprint": "C23__C_0805_2012Metric",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      37.3,
+      36.8
+    ],
+    "angle": 0.0,
+    "side": "top"
+  },
+  {
+    "ref": "R3",
+    "value": "150k 1%",
+    "footprint": "R3__R_0201_0603Metric",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      32.5,
+      24.6
+    ],
+    "angle": 90.0,
+    "side": "top"
+  },
+  {
+    "ref": "C10",
+    "value": "10uF 25V X5R",
+    "footprint": "C10__C_0603_1608Metric",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      34.6,
+      34.1
+    ],
+    "angle": -90.0,
+    "side": "top"
+  },
+  {
+    "ref": "C9",
+    "value": "10uF 25V X5R",
+    "footprint": "C9__C_0603_1608Metric",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      33.4,
+      34.1
+    ],
+    "angle": -90.0,
+    "side": "top"
+  },
+  {
+    "ref": "D2",
+    "value": "ESD441DPYR",
+    "footprint": "D2__TI_DPY0002A_X1SON",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      28.4,
+      32.75
+    ],
+    "angle": 0.0,
+    "side": "top"
+  },
+  {
+    "ref": "C1",
+    "value": "1uF 16V X7R",
+    "footprint": "C1__C_0603_1608Metric",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      29.5,
+      30.025
+    ],
+    "angle": -90.0,
+    "side": "top"
+  },
+  {
+    "ref": "C18",
+    "value": "1uF 16V X7R",
+    "footprint": "C18__C_0603_1608Metric",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      53.3,
+      28.8
+    ],
+    "angle": 90.0,
+    "side": "top"
+  },
+  {
+    "ref": "U5",
+    "value": "MX35LF4GE4AD-Z4I",
+    "footprint": "U5__WSON-8-1EP_8x6mm_P1.27mm_EP3.4x4.3mm",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      48.2,
+      30.7
+    ],
+    "angle": 0.0,
+    "side": "top"
+  },
+  {
+    "ref": "R9",
+    "value": "100R 1%",
+    "footprint": "R9__R_0402_1005Metric",
+    "dnp": true,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      52.1,
+      26.8
+    ],
+    "angle": 0.0,
+    "side": "top"
+  },
+  {
+    "ref": "NT2",
+    "value": "PVSS2-GND",
+    "footprint": "NT2__NetTie_Nordic_Config4",
+    "dnp": false,
+    "exclude_pos": true,
+    "exclude_bom": true,
+    "pos": [
+      40.75,
+      26.8
+    ],
+    "angle": 0.0,
+    "side": "top"
+  },
+  {
+    "ref": "C15",
+    "value": "100nF 16V X7R",
+    "footprint": "C15__C_0402_1005Metric",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      39.625,
+      25.8
+    ],
+    "angle": 0.0,
+    "side": "top"
+  },
+  {
+    "ref": "C16",
+    "value": "100nF 16V X7R",
+    "footprint": "C16__C_0402_1005Metric",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      30.75,
+      27.675
+    ],
+    "angle": 90.0,
+    "side": "top"
+  },
+  {
+    "ref": "C5",
+    "value": "1uF 16V X7R",
+    "footprint": "C5__C_0603_1608Metric",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      30.7,
+      30.65
+    ],
+    "angle": -90.0,
+    "side": "top"
+  },
+  {
+    "ref": "R4",
+    "value": "150k 1%",
+    "footprint": "R4__R_0201_0603Metric",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      33.1,
+      24.6
+    ],
+    "angle": 90.0,
+    "side": "top"
+  },
+  {
+    "ref": "TP14",
+    "value": "PMIC_INT",
+    "footprint": "TP14__PogoPad_D1.0mm",
+    "dnp": false,
+    "exclude_pos": true,
+    "exclude_bom": true,
+    "pos": [
+      45.0,
+      37.2
+    ],
+    "angle": 0.0,
+    "side": "bottom"
+  },
+  {
+    "ref": "TP13",
+    "value": "3V_MIC",
+    "footprint": "TP13__PogoPad_D1.0mm",
+    "dnp": false,
+    "exclude_pos": true,
+    "exclude_bom": true,
+    "pos": [
+      39.5,
+      31.5
+    ],
+    "angle": 0.0,
+    "side": "bottom"
+  },
+  {
+    "ref": "TP7",
+    "value": "UART_RX",
+    "footprint": "TP7__PogoPad_D1.0mm",
+    "dnp": false,
+    "exclude_pos": true,
+    "exclude_bom": true,
+    "pos": [
+      29.5,
+      37.3
+    ],
+    "angle": 0.0,
+    "side": "bottom"
+  },
+  {
+    "ref": "M1",
+    "value": "VCLP1020B002L",
+    "footprint": "M1__WirePads_2_P1.27mm",
+    "dnp": false,
+    "exclude_pos": true,
+    "exclude_bom": false,
+    "pos": [
+      54.9,
+      36.1
+    ],
+    "angle": 90.0,
+    "side": "bottom"
+  },
+  {
+    "ref": "TP11",
+    "value": "VBUSOUT",
+    "footprint": "TP11__PogoPad_D1.0mm",
+    "dnp": false,
+    "exclude_pos": true,
+    "exclude_bom": true,
+    "pos": [
+      38.7,
+      37.3
+    ],
+    "angle": 0.0,
+    "side": "bottom"
+  },
+  {
+    "ref": "TP10",
+    "value": "VSYS",
+    "footprint": "TP10__PogoPad_D1.0mm",
+    "dnp": false,
+    "exclude_pos": true,
+    "exclude_bom": true,
+    "pos": [
+      36.4,
+      37.3
+    ],
+    "angle": 0.0,
+    "side": "bottom"
+  },
+  {
+    "ref": "TP5",
+    "value": "GND",
+    "footprint": "TP5__PogoPad_D1.0mm",
+    "dnp": false,
+    "exclude_pos": true,
+    "exclude_bom": true,
+    "pos": [
+      38.7,
+      35.0
+    ],
+    "angle": 0.0,
+    "side": "bottom"
+  },
+  {
+    "ref": "TP12",
+    "value": "2V5_AUX",
+    "footprint": "TP12__PogoPad_D1.0mm",
+    "dnp": false,
+    "exclude_pos": true,
+    "exclude_bom": true,
+    "pos": [
+      41.0,
+      37.3
+    ],
+    "angle": 0.0,
+    "side": "bottom"
+  },
+  {
+    "ref": "TP2",
+    "value": "SWDCLK",
+    "footprint": "TP2__PogoPad_D1.0mm",
+    "dnp": false,
+    "exclude_pos": true,
+    "exclude_bom": true,
+    "pos": [
+      31.8,
+      35.0
+    ],
+    "angle": 0.0,
+    "side": "bottom"
+  },
+  {
+    "ref": "TH1",
+    "value": "10k 1% external NTC",
+    "footprint": "TH1__WirePads_2_P1.27mm",
+    "dnp": false,
+    "exclude_pos": true,
+    "exclude_bom": false,
+    "pos": [
+      54.9,
+      32.1
+    ],
+    "angle": 90.0,
+    "side": "bottom"
+  },
+  {
+    "ref": "TP3",
+    "value": "RESET",
+    "footprint": "TP3__PogoPad_D1.0mm",
+    "dnp": false,
+    "exclude_pos": true,
+    "exclude_bom": true,
+    "pos": [
+      34.1,
+      35.0
+    ],
+    "angle": 0.0,
+    "side": "bottom"
+  },
+  {
+    "ref": "TP6",
+    "value": "UART_TX",
+    "footprint": "TP6__PogoPad_D1.0mm",
+    "dnp": false,
+    "exclude_pos": true,
+    "exclude_bom": true,
+    "pos": [
+      41.0,
+      35.0
+    ],
+    "angle": 0.0,
+    "side": "bottom"
+  },
+  {
+    "ref": "R11",
+    "value": "0R",
+    "footprint": "R11__R_0201_0603Metric",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      63.3,
+      35.4
+    ],
+    "angle": 0.0,
+    "side": "bottom"
+  },
+  {
+    "ref": "TP9",
+    "value": "VBUS",
+    "footprint": "TP9__PogoPad_D1.0mm",
+    "dnp": false,
+    "exclude_pos": true,
+    "exclude_bom": true,
+    "pos": [
+      34.1,
+      37.3
+    ],
+    "angle": 0.0,
+    "side": "bottom"
+  },
+  {
+    "ref": "R10",
+    "value": "0R",
+    "footprint": "R10__R_0201_0603Metric",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      63.3,
+      34.6
+    ],
+    "angle": 0.0,
+    "side": "bottom"
+  },
+  {
+    "ref": "BT1",
+    "value": "Jauch 350mAh min protected 1S LiPo",
+    "footprint": "BT1__WirePads_2_P1.27mm",
+    "dnp": false,
+    "exclude_pos": true,
+    "exclude_bom": false,
+    "pos": [
+      54.9,
+      28.3
+    ],
+    "angle": 90.0,
+    "side": "bottom"
+  },
+  {
+    "ref": "TP1",
+    "value": "SWDIO",
+    "footprint": "TP1__PogoPad_D1.0mm",
+    "dnp": false,
+    "exclude_pos": true,
+    "exclude_bom": true,
+    "pos": [
+      29.5,
+      35.0
+    ],
+    "angle": 0.0,
+    "side": "bottom"
+  },
+  {
+    "ref": "C25",
+    "value": "10uF 6.3V X5R",
+    "footprint": "C25__C_0402_1005Metric",
+    "dnp": false,
+    "exclude_pos": false,
+    "exclude_bom": false,
+    "pos": [
+      58.5,
+      38.0
+    ],
+    "angle": 180.0,
+    "side": "bottom"
+  },
+  {
+    "ref": "TP4",
+    "value": "3V_MAIN",
+    "footprint": "TP4__PogoPad_D1.0mm",
+    "dnp": false,
+    "exclude_pos": true,
+    "exclude_bom": true,
+    "pos": [
+      36.4,
+      35.0
+    ],
+    "angle": 0.0,
+    "side": "bottom"
+  },
+  {
+    "ref": "TP8",
+    "value": "VBAT",
+    "footprint": "TP8__PogoPad_D1.0mm",
+    "dnp": false,
+    "exclude_pos": true,
+    "exclude_bom": true,
+    "pos": [
+      31.8,
+      37.3
+    ],
+    "angle": 0.0,
+    "side": "bottom"
+  }
+]

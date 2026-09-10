@@ -1,0 +1,266 @@
+(footprint "U6__TI_DCK_SC70_3_R0B"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "SOT-323, SC-70")
+	(tags "SOT-323 SC-70")
+	(property "Reference" "REF**"
+		(at -0.05 -2.25 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "de3b151d-8f72-42ad-88ba-acb651b5c824")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "TPD2E2U06DCKR"
+		(at -0.05 2.05 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "dad82473-8b2d-4f4f-8520-71b69a50ed01")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.ti.com/lit/gpn/TPD2E2U06"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a3db9559-d98e-410d-870b-10f403d8f5a7")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" "Connector-side 5.5-V CC1/CC2 shunt ESD protection; no series impedance"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0ed12421-156c-41d0-b549-068f1055f834")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Manufacturer" "Texas Instruments"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "b070299b-8814-4a08-b6a5-c7c37aaf9ddb")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MPN" "TPD2E2U06DCKR"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "cc67b2c6-e279-4c75-babe-cdc7ef225ee6")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -0.68 -1.16)
+		(end 0.73 -1.16)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "846f6eea-9886-485c-b256-a0a08c16c93b")
+	)
+	(fp_line
+		(start -0.68 1.16)
+		(end 0.73 1.16)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "232429bd-dd9f-4e60-8e6c-4eed8d4994dc")
+	)
+	(fp_line
+		(start 0.73 -1.16)
+		(end 0.73 -0.5)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6edca9bf-684f-479f-a073-4ff7f510a0e0")
+	)
+	(fp_line
+		(start 0.73 0.5)
+		(end 0.73 1.16)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6ff214e0-08a3-4492-aebc-188a65a4b2e6")
+	)
+	(fp_poly
+		(pts
+			(xy -1.05 -1.14) (xy -1.29 -1.47) (xy -0.81 -1.47) (xy -1.05 -1.14)
+		)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "cbf01077-a460-4dd5-a803-7d6a16299cf9")
+	)
+	(fp_line
+		(start -1.25 -0.9)
+		(end 1.25 -0.9)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "9016b66d-c4f8-42a8-bcfa-0c998d610c74")
+	)
+	(fp_line
+		(start -1.25 0.9)
+		(end -1.25 -0.9)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "356b48a9-9c30-4963-a798-f704c07c6012")
+	)
+	(fp_line
+		(start 1.25 -0.9)
+		(end 1.25 0.9)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "4bac14c1-0780-4174-a494-91e3979a119c")
+	)
+	(fp_line
+		(start 1.25 0.9)
+		(end -1.25 0.9)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "03d402a2-e0c7-4432-85c4-702c0f6a249a")
+	)
+	(fp_line
+		(start -0.68 -0.6)
+		(end -0.68 1.1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "822bcda8-3a93-4790-a567-24967ce45141")
+	)
+	(fp_line
+		(start -0.18 -1.1)
+		(end -0.68 -0.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "45f5c939-111c-4a56-a970-5d1f0cea050f")
+	)
+	(fp_line
+		(start 0.67 -1.1)
+		(end -0.18 -1.1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "ed89bdd3-3779-4948-aea2-976d8c322743")
+	)
+	(fp_line
+		(start 0.67 -1.1)
+		(end 0.67 1.1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "7cd5c822-5f09-47e4-af8a-d3d9bf219f1e")
+	)
+	(fp_line
+		(start 0.67 1.1)
+		(end -0.68 1.1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "8edb6360-e875-423b-b934-89fbcb1243c8")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 90)
+		(layer "F.Fab")
+		(uuid "a52be3f6-f792-457e-ab0c-21289b5f7a62")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.075)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -1 -0.65 270)
+		(size 0.45 0.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "0cbd1e08-6a34-4b8b-881b-10d6cd4a61c3")
+	)
+	(pad "2" smd roundrect
+		(at -1 0.65 270)
+		(size 0.45 0.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "4856dae2-a3e5-4e37-8192-93de7ea3e3ff")
+	)
+	(pad "3" smd roundrect
+		(at 1 0 270)
+		(size 0.45 0.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "f279fec4-3ff6-47e3-a7b6-46d5823f23c6")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/models/Package_TO_SOT_SMD__SOT-323_SC-70.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

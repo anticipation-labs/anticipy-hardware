@@ -1,0 +1,9 @@
+For 20 E1P1 prototypes plus 2 spare PCBAs:
+
+- Locate/count the delivered BC parts: 25 Raytac modules, 25 AO3400A, 20 switches and 20 motors. Consign accepted parts; do not rebuy blindly.
+- Buy 20 protected Jauch246501 batteries, 20 B57540G1103F000 thermistors and the exact remaining SMT quantities in Missing_Parts.csv. The two spare PCBAs need 2 extra switches.
+- Make 20 current cases. Supply 40 M2×4 screws, 20 mic gaskets, 80 capture pads, 20 lightpipes, thin insulation/retention and 20 cords to the attached CAD specifications.
+- Confirm a commercial SWD programmer/fixture, USB-C data cables and test equipment; check the tools already ordered first.
+- Saturday is unconfirmed; a supplier must accept the complete build and delivery schedule. The exact battery listing cannot ship by air; ground delivery and BC consignment must be resolved before booking assembly.
+
+Charging and 16-hour runtime are not yet qualified.

@@ -1,0 +1,269 @@
+(footprint "U4__Texas_DRT-3_R0B"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Texas Instrument DRT-3 1x0.8mm Pitch 0.7mm http://www.ti.com/lit/ds/symlink/tpd2eusb30.pdf")
+	(tags "DRT-3 1x0.8mm Pitch 0.7mm")
+	(property "Reference" "REF**"
+		(at 0 -1.5 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "acdfb202-9be6-43a2-9cf3-0ea61d04b7bb")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "TPD2EUSB30ADRTR"
+		(at 0 1.5 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cf25eb68-373e-4b7e-8473-d71c54941d2d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tpd2eusb30a.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "123ba2c9-94fe-4e6e-9fda-a43521d80d5f")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" "USB 2.0 data-line ESD protection; DRT-3 pin 1 D+, pin 2 D-, pin 3 GND; 3.6 V recommended maximum on data lines; not sustained VBUS-to-data fault protection"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e2afc802-6054-4607-a129-1f623074718e")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Manufacturer" "Texas Instruments"
+		(at 0 0 90)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "0d450b2d-0a89-4c53-852d-b0292fae7335")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MPN" "TPD2EUSB30ADRTR"
+		(at 0 0 90)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "edf8e766-633a-4ff8-99a1-f8c5d43f8702")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -0.65 -0.55)
+		(end 0.65 -0.55)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "58b601c6-8744-4341-a450-a9d75bc4fab5")
+	)
+	(fp_line
+		(start -0.65 0.55)
+		(end -0.65 -0.55)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "f5196945-a83d-4b6b-9110-f3f32137b961")
+	)
+	(fp_line
+		(start 0.65 -0.55)
+		(end 0.65 0.55)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "162fd3c7-b416-4de5-ba51-b256504bdba5")
+	)
+	(fp_line
+		(start 0.65 0.55)
+		(end -0.65 0.55)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "425cd44e-7589-463d-8679-68eb825016b1")
+	)
+	(fp_line
+		(start -0.65 -0.55)
+		(end -0.45 -0.55)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e60a2170-569f-4ed2-8843-66c654fc1f55")
+	)
+	(fp_line
+		(start -0.65 0)
+		(end -0.65 -0.55)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "c9640bd7-aecd-4ae3-9a7f-e0dfea010ed8")
+	)
+	(fp_line
+		(start -0.5 -0.4)
+		(end 0.5 -0.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "4a2ce79b-aa75-4cd1-90da-7046fcfa553d")
+	)
+	(fp_line
+		(start -0.5 0.1)
+		(end -0.5 -0.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "54ef8ae5-4fb2-4f6e-87fc-0013e2a7ba2d")
+	)
+	(fp_line
+		(start -0.5 0.1)
+		(end -0.2 0.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "88fdbb7c-6f46-4c30-a5d0-fc89ff1446de")
+	)
+	(fp_line
+		(start 0.5 -0.4)
+		(end 0.5 0.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "caa57115-1591-473b-8f8a-df7cd4b4abe6")
+	)
+	(fp_line
+		(start 0.5 0.4)
+		(end -0.2 0.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "5e6c836b-a01f-4e68-b6f2-694ad0fc93b5")
+	)
+	(fp_line
+		(start 0.65 -0.55)
+		(end 0.45 -0.55)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "6ad4bd87-7b46-484c-9d6e-fbc48ff5fba9")
+	)
+	(fp_line
+		(start 0.65 0)
+		(end 0.65 -0.55)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "0916b342-bca5-4264-9e75-3754d8c156e3")
+	)
+	(fp_poly
+		(pts
+			(xy -0.76 0.43) (xy -0.76 0.71) (xy -1.04 0.43) (xy -0.76 0.43)
+		)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.Fab")
+		(uuid "e02e3a83-8aad-49e2-a08a-8070f845f4b0")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 -1.5 0)
+		(layer "F.Fab")
+		(uuid "8f8557b0-bee0-4442-adf2-0e32c87a9e08")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -0.35 0.425)
+		(size 0.3 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.05)
+		(roundrect_rratio 0.25)
+		(uuid "9873ae05-e317-4ebb-a57b-3e98ce869bd2")
+	)
+	(pad "2" smd roundrect
+		(at 0.35 0.425)
+		(size 0.3 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.05)
+		(roundrect_rratio 0.25)
+		(uuid "70751c27-eb7d-4e07-a803-090dc09dfd8f")
+	)
+	(pad "3" smd roundrect
+		(at 0 -0.425)
+		(size 0.3 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.05)
+		(roundrect_rratio 0.25)
+		(uuid "13d92d8f-5aac-48c8-9cc1-86a78675cfe8")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/models/Package_TO_SOT_SMD__Texas_DRT-3.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

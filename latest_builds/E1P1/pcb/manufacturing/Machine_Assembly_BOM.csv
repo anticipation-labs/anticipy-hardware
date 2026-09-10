@@ -1,0 +1,48 @@
+Reference,Manufacturer,MPN,Value,Side,Population,Footprint,Supplier_check
+C1,TDK,C1608X7R1C105K080AC,1uF 16V X7R,top,FIT,Anticipy_E1_Release:C1__C_0603_1608Metric,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+C2,Murata,GRM188R61E106MA73D,10uF 25V X5R,top,FIT,Anticipy_E1_Release:C2__C_0603_1608Metric,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+C3,Murata,GRM188R61E106MA73D,10uF 25V X5R,top,FIT,Anticipy_E1_Release:C3__C_0603_1608Metric,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+C4,Murata,GRM188R61E106MA73D,10uF 25V X5R,top,FIT,Anticipy_E1_Release:C4__C_0603_1608Metric,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+C5,TDK,C1608X7R1C105K080AC,1uF 16V X7R,top,FIT,Anticipy_E1_Release:C5__C_0603_1608Metric,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+C6,Taiyo Yuden,EMK107BB7225KA-T,2.2uF 16V X7R,top,FIT,Anticipy_E1_Release:C6__C_0603_1608Metric,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+C7,Murata,GRM188R61E106MA73D,10uF 25V X5R,top,FIT,Anticipy_E1_Release:C7__C_0603_1608Metric,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+C8,Murata,GRM188R61E106MA73D,10uF 25V X5R,top,FIT,Anticipy_E1_Release:C8__C_0603_1608Metric,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+C9,Murata,GRM188R61E106MA73D,10uF 25V X5R,top,FIT,Anticipy_E1_Release:C9__C_0603_1608Metric,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+C10,Murata,GRM188R61E106MA73D,10uF 25V X5R,top,FIT,Anticipy_E1_Release:C10__C_0603_1608Metric,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+C13,TDK,C0603X5R1E104K030BB,100nF 25V X5R,top,FIT,Anticipy_E1_Release:C13__C_0201_0603Metric,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+C14,KEMET,C0402C104M4RACTU,100nF 16V X7R,top,FIT,Anticipy_E1_Release:C14__C_0402_1005Metric,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+C15,KEMET,C0402C104M4RACTU,100nF 16V X7R,top,FIT,Anticipy_E1_Release:C15__C_0402_1005Metric,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+C16,KEMET,C0402C104M4RACTU,100nF 16V X7R,top,FIT,Anticipy_E1_Release:C16__C_0402_1005Metric,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+C17,TDK,C1005X7R1C104K050BC,100nF 16V X7R,top,FIT,Anticipy_E1_Release:C17__C_0402_1005Metric,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+C18,TDK,C1608X7R1C105K080AC,1uF 16V X7R,top,FIT,Anticipy_E1_Release:C18__C_0603_1608Metric,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+C19,TDK,C1005X7R1C104K050BC,100nF 16V X7R,top,FIT,Anticipy_E1_Release:C19__C_0402_1005Metric,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+C22,TDK,C1005X7R1C104K050BC,100nF 16V X7R,top,FIT,Anticipy_E1_Release:C22__C_0402_1005Metric,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+C23,Murata,GRM21BR60J476ME01L,47uF 6.3V X5R,top,FIT,Anticipy_E1_Release:C23__C_0805_2012Metric,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+C25,Murata,GRM155R60J106ME15D,10uF 6.3V X5R,bottom,FIT,Anticipy_E1_Release:C25__C_0402_1005Metric,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+C26,Murata,GRM155R60J106ME15D,10uF 6.3V X5R,top,FIT,Anticipy_E1_Release:C26__C_0402_1005Metric,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+D1,Diodes Incorporated,1N4148WS-13-F,1N4148WS-13-F,top,FIT,Anticipy_E1_Release:D1__D_SOD-323,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+D2,Texas Instruments,ESD441DPYR,ESD441DPYR,top,FIT,Anticipy_E1_Release:D2__TI_DPY0002A_X1SON,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+J1,GCT,USB4500-03-1-A,USB4500-03-1-A,top,FIT,Anticipy_E1_Release:J1__USB_C_Receptacle_GCT_USB4500-03-1-A_MidMount,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+L1,Samsung Electro-Mechanics,CIGT201610EH2R2MNE,2.2uH,top,FIT,Anticipy_E1_Release:L1__L_Murata_DFE201610P,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+L2,Samsung Electro-Mechanics,CIGT201610EH2R2MNE,2.2uH,top,FIT,Anticipy_E1_Release:L2__L_Murata_DFE201610P,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+LED1,Kingbright,APHB1608LVBDSEKJ3C,APHB1608LVBDSEKJ3C,top,FIT,Anticipy_E1_Release:LED1__LED_Kingbright_APHB1608LVBDSEKJ3C,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+MIC1,Same Sky,CMM-3424DT-26165-TR,CMM-3424DT-26165-TR,top,FIT,Anticipy_E1_Release:MIC1__SameSky_CMM-3424DT-26165-TR_TopPort_PDM,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+Q1,Alpha & Omega Semiconductor,AO3400A,AO3400A,top,FIT,Anticipy_E1_Release:Q1__SOT-23,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+R1,Yageo,RC0201FR-0710KL,10k 1%,top,FIT,Anticipy_E1_Release:R1__R_0201_0603Metric,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+R2,Yageo,RC0201FR-0710KL,10k 1%,top,FIT,Anticipy_E1_Release:R2__R_0201_0603Metric,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+R3,Yageo,RC0201FR-07150KL,150k 1%,top,FIT,Anticipy_E1_Release:R3__R_0201_0603Metric,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+R4,Yageo,RC0201FR-07150KL,150k 1%,top,FIT,Anticipy_E1_Release:R4__R_0201_0603Metric,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+R5,Yageo,RC0402FR-07100RL,100R 1%,top,FIT,Anticipy_E1_Release:R5__R_0402_1005Metric,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+R6,Yageo,RC0402FR-07100KL,100k 1%,top,FIT,Anticipy_E1_Release:R6__R_0402_1005Metric,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+R7,Yageo,RC0402FR-0710KL,10k 1%,top,FIT,Anticipy_E1_Release:R7__R_0402_1005Metric,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+R8,Yageo,RC0402FR-07100RL,100R 1%,top,FIT,Anticipy_E1_Release:R8__R_0402_1005Metric,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+R10,Vishay Dale,CRCW02010000Z0ED,0R,bottom,FIT,Anticipy_E1_Release:R10__R_0201_0603Metric,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+R11,Vishay Dale,CRCW02010000Z0ED,0R,bottom,FIT,Anticipy_E1_Release:R11__R_0201_0603Metric,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+R12,Yageo,RC0402FR-0710KL,10k 1%,top,FIT,Anticipy_E1_Release:R12__R_0402_1005Metric,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+R13,Yageo,RC0402FR-0710KL,10k 1%,top,FIT,Anticipy_E1_Release:R13__R_0402_1005Metric,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+SW1,Omron,B3U-1000P,B3U-1000P,top,FIT,Anticipy_E1_Release:SW1__SW_SPST_B3U-1000P,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+U1,Raytac,MDBT50Q-1MV2,MDBT50Q-1MV2,top,FIT,Anticipy_E1_Release:U1__Raytac_MDBT50Q_R0B,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+U2,Nordic Semiconductor,NPM1300-QEAA-R,nPM1300,top,FIT,Anticipy_E1_Release:U2__nPM1300_QFN32_Reference,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+U4,Texas Instruments,TPD2EUSB30ADRTR,TPD2EUSB30ADRTR,top,FIT,Anticipy_E1_Release:U4__Texas_DRT-3_R0B,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+U5,Macronix,MX35LF4GE4AD-Z4I,MX35LF4GE4AD-Z4I,top,FIT,Anticipy_E1_Release:U5__WSON-8-1EP_8x6mm_P1.27mm_EP3.4x4.3mm,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification
+U6,Texas Instruments,TPD2E2U06DCKR,TPD2E2U06DCKR,top,FIT,Anticipy_E1_Release:U6__TI_DCK_SC70_3_R0B,Exact released MPN; quantities exclude assembler setup loss; see fabrication and assembly specification

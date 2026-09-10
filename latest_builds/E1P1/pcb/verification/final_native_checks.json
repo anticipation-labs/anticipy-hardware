@@ -1,0 +1,67 @@
+{
+  "kicad_version": "10.0.6",
+  "source_sha256": {
+    "Anticipy_R1_E1_PROTOTYPE.kicad_prl": "1246068886f0f28f905e1e77316af3e2def9160c0e73c5b54e0bb75aed824d14",
+    "Anticipy_R1_E1_PROTOTYPE.kicad_pcb": "78fe28acde6ceb3ab33aac8af503d4c418540cce31979cc91d3add5e5d0bec36",
+    "Anticipy_R1_E1_PROTOTYPE.kicad_dru": "1d77d0ccfb86603e316149cf8dc873cbb134e1cc5ac28e2834af1e39f7dec228",
+    "Anticipy_R1_E1_PROTOTYPE.kicad_pro": "5aa1cf00ef686fe1953dae10c5770f88d3fc8213e220075f64641fdc4a51f113",
+    "Anticipy.kicad_sym": "8fd349480f5b8d0d75e9ad08471c7cce22329378a79cc15cb7a3364d500a3d9d",
+    "Anticipy_R1_E1_PROTOTYPE.kicad_sch": "763bbfa78953252aa27d7553bfb6abf9cb398650fb0bdceafd0432aee5e44021"
+  },
+  "commands": [
+    {
+      "task": "drc_parity",
+      "command": [
+        "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+        "pcb",
+        "drc",
+        "--all-track-errors",
+        "--schematic-parity",
+        "--format",
+        "json",
+        "--severity-all",
+        "--exit-code-violations",
+        "-o",
+        "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/outputs/Anticipy_E1P1_PCB_Manufacturing_Release_2026-09-09/pcb/verification/drc_parity.json",
+        "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/outputs/Anticipy_E1P1_PCB_Manufacturing_Release_2026-09-09/pcb/electrical/Anticipy_R1_E1_PROTOTYPE.kicad_pcb"
+      ],
+      "return_code": 0,
+      "elapsed_seconds": 0.715
+    },
+    {
+      "task": "erc",
+      "command": [
+        "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+        "sch",
+        "erc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--exit-code-violations",
+        "-o",
+        "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/outputs/Anticipy_E1P1_PCB_Manufacturing_Release_2026-09-09/pcb/verification/erc.json",
+        "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/outputs/Anticipy_E1P1_PCB_Manufacturing_Release_2026-09-09/pcb/electrical/Anticipy_R1_E1_PROTOTYPE.kicad_sch"
+      ],
+      "return_code": 0,
+      "elapsed_seconds": 0.279
+    },
+    {
+      "task": "netlist",
+      "command": [
+        "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+        "sch",
+        "export",
+        "netlist",
+        "--format",
+        "kicadxml",
+        "-o",
+        "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/outputs/Anticipy_E1P1_PCB_Manufacturing_Release_2026-09-09/pcb/verification/native_netlist.xml",
+        "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/outputs/Anticipy_E1P1_PCB_Manufacturing_Release_2026-09-09/pcb/electrical/Anticipy_R1_E1_PROTOTYPE.kicad_sch"
+      ],
+      "return_code": 0,
+      "elapsed_seconds": 0.241
+    }
+  ],
+  "source_unchanged": true,
+  "fresh_fill": "U4 routing repair filled through native KiCad PCB Editor on isolated board before component metadata update; no copper changes during metadata update."
+}

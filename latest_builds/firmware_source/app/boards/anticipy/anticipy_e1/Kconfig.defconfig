@@ -1,0 +1,4 @@
+if BOARD_ANTICIPY_E1
+config BT_CTLR
+	default BT
+endif

@@ -1,0 +1,62 @@
+{
+  "generated_UTC": "2026-09-09T14:38:26.411653+00:00",
+  "status": "Matched final-PCB fit candidate. Not physically qualified or 30 x 14 x 8 mm.",
+  "PCB_relative_to_cad": "../pcb/electrical/Anticipy_R1_E1_PROTOTYPE.kicad_pcb",
+  "PCB_sha256": "78fe28acde6ceb3ab33aac8af503d4c418540cce31979cc91d3add5e5d0bec36",
+  "bundled_mechanical_contract_sha256": "36b4f370ce584a81f6603b453867acf4dcb8f2ca2bd35bf09e306cc1f25bf359",
+  "native_source_used_during_geometry_run": "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/outputs/Anticipy_E1P1_PCB_Manufacturing_Release_2026-09-09/pcb/electrical/Anticipy_R1_E1_PROTOTYPE.kicad_pcb",
+  "sibling_PCB_independently_matches_source_used": true,
+  "check_count": 2826,
+  "failures": [],
+  "nominal_external_LWT_mm": [
+    56,
+    35,
+    14.8
+  ],
+  "computed_external_LWT_mm": [
+    56.00052062059555,
+    35.00001820787925,
+    14.800000200000007
+  ],
+  "U4_native_XY_mm": [
+    28.15,
+    29.45
+  ],
+  "selected_C23_max_LWT_mm": [
+    2.2,
+    1.45,
+    1.45
+  ],
+  "assembly_STEP_reimport": [
+    {
+      "file": "Oval_E1_Assembly_FIT_CANDIDATE.step",
+      "sha256": "215ee91ce96ad8d1ea093dc2385effa8858a8242127eef9d34a2eebfa29d2428",
+      "valid": true,
+      "solid_count": 76
+    },
+    {
+      "file": "Oval_E1_Exploded_VIEW_ONLY.step",
+      "sha256": "062a9c58f502160e2ed93cbfa97b9954e25dbfd6dae5c91900a28a2ded67af01",
+      "valid": true,
+      "solid_count": 76
+    }
+  ],
+  "dependencies": {
+    "python": "3.12.14",
+    "cadquery": "2.8.0",
+    "numpy": "2.5.3",
+    "matplotlib": "3.11.1",
+    "shapely": "2.1.2",
+    "trimesh": "5.1.0"
+  },
+  "sources_sha256": {
+    "build_oval_e1.py": "af87f7a3a22252f794d7c4dbb62a8c25dcc143d6c031e9016cbc9971669f6717",
+    "harness_fragment.py": "ab172416168d6b5a4398e93550e4c43848768753f478cbb1a4e1487ff306f823",
+    "render_details.py": "e7532f97944340b71ffa80ed245bdfeb3ebfa1d646d5d52c5a40b8ec711db0ce",
+    "package_print_parts.py": "98775d7dfcae5348e0dbe720c89b25b65841263a125e8307fd31304325ea6c56",
+    "validate_cad_handoff.py": "12c8f9073962acc856a11ded9714afb8893dfc6e5d3f67b86c7b906fbc959749",
+    "source_inputs/render_helpers.py": "81d2553e715f4c7bc5fe7baa97303d61f0a541c0cf771d1539358153e9707909"
+  },
+  "physical_qualification_performed": false,
+  "unchanged_native_PCB_verified": true
+}

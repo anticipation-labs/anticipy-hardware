@@ -1,0 +1,5 @@
+board:
+  name: anticipy_e1
+  vendor: anticipation_labs
+  socs:
+    - name: nrf52840

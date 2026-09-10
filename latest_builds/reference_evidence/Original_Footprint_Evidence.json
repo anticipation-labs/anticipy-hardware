@@ -1,0 +1,1414 @@
+[
+  {
+    "ref": "C17",
+    "value": "100nF 10V X7R",
+    "footprint": "Anticipy_E1_Release:C17__C_0402_1005Metric",
+    "position_native_mm": [
+      53.25,
+      31.25
+    ],
+    "rotation_deg": 90.0,
+    "layer": "F.Cu",
+    "attributes_native": [
+      "smd"
+    ],
+    "pads": [
+      {
+        "number": "1",
+        "net": "/3V_MAIN",
+        "position_native_mm": [
+          53.25,
+          31.73
+        ],
+        "position_local_mm": [
+          -0.48,
+          0.0
+        ],
+        "size_mm": [
+          0.56,
+          0.62
+        ],
+        "rotation_deg": 90.0,
+        "drill_mm": [
+          0.0,
+          0.0
+        ],
+        "attribute": 1,
+        "shape": 4,
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ]
+      },
+      {
+        "number": "2",
+        "net": "/GND",
+        "position_native_mm": [
+          53.25,
+          30.77
+        ],
+        "position_local_mm": [
+          0.48,
+          0.0
+        ],
+        "size_mm": [
+          0.56,
+          0.62
+        ],
+        "rotation_deg": 90.0,
+        "drill_mm": [
+          0.0,
+          0.0
+        ],
+        "attribute": 1,
+        "shape": 4,
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ]
+      }
+    ],
+    "models": [
+      {
+        "path": "${KIPRJMOD}/models/Capacitor_SMD__C_0402_1005Metric.step",
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "rotation_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "offset_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "show": true,
+        "resolved_path": "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/outputs/Anticipy_Oval_E1_2026-09-09/pcb/electrical/models/Capacitor_SMD__C_0402_1005Metric.step",
+        "exists": true,
+        "sha256": "03e44c4b2b727b8d4b6b1fd598cbd12dd5e614f1dfeefa96a92a07e3a3b312a2",
+        "geometry": {
+          "bounds_model_mm": [
+            [
+              -0.5,
+              -0.25,
+              0.0
+            ],
+            [
+              0.5,
+              0.25,
+              0.5
+            ]
+          ],
+          "dimensions_model_mm": [
+            1.0,
+            0.5,
+            0.5
+          ],
+          "valid": true,
+          "solids": 1
+        },
+        "dimension_evidence": "KiCad library nominal 3D model; not physical maximum specification",
+        "bbox_native_xy_top_datum_z_mm": [
+          [
+            53.0,
+            30.75,
+            0.0
+          ],
+          [
+            53.5,
+            31.75,
+            0.5
+          ]
+        ],
+        "bbox_transform_note": "XY model frame +Y maps to native footprint -Y; Z front top datum0 and B.Cu mounted beneath -thickness. For asymmetric bottom model bounds verify native export before detailed fit."
+      }
+    ],
+    "local_graphics": [
+      {
+        "kind": "fp_line",
+        "layer": "F.CrtYd",
+        "start": [
+          0.91,
+          -0.46
+        ],
+        "end": [
+          0.91,
+          0.46
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.CrtYd",
+        "start": [
+          -0.91,
+          -0.46
+        ],
+        "end": [
+          0.91,
+          -0.46
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.CrtYd",
+        "start": [
+          0.91,
+          0.46
+        ],
+        "end": [
+          -0.91,
+          0.46
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.CrtYd",
+        "start": [
+          -0.91,
+          0.46
+        ],
+        "end": [
+          -0.91,
+          -0.46
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.Fab",
+        "start": [
+          -0.107836,
+          -0.36
+        ],
+        "end": [
+          0.107836,
+          -0.36
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.Fab",
+        "start": [
+          0.5,
+          -0.25
+        ],
+        "end": [
+          0.5,
+          0.25
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.Fab",
+        "start": [
+          -0.5,
+          -0.25
+        ],
+        "end": [
+          0.5,
+          -0.25
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.Fab",
+        "start": [
+          0.5,
+          0.25
+        ],
+        "end": [
+          -0.5,
+          0.25
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.Fab",
+        "start": [
+          -0.5,
+          0.25
+        ],
+        "end": [
+          -0.5,
+          -0.25
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.Fab",
+        "start": [
+          -0.107836,
+          0.36
+        ],
+        "end": [
+          0.107836,
+          0.36
+        ]
+      }
+    ],
+    "rule_areas": [],
+    "transform_max_pad_position_error_mm": 0.0,
+    "fab_graphics_xy_bounds_native_mm": [
+      [
+        52.89,
+        30.75
+      ],
+      [
+        53.61,
+        31.75
+      ]
+    ]
+  },
+  {
+    "ref": "C19",
+    "value": "100nF 10V X7R",
+    "footprint": "Anticipy_E1_Release:C19__C_0402_1005Metric",
+    "position_native_mm": [
+      45.3,
+      26.8
+    ],
+    "rotation_deg": 0.0,
+    "layer": "F.Cu",
+    "attributes_native": [
+      "smd"
+    ],
+    "pads": [
+      {
+        "number": "1",
+        "net": "/3V_MIC",
+        "position_native_mm": [
+          44.82,
+          26.8
+        ],
+        "position_local_mm": [
+          -0.48,
+          0.0
+        ],
+        "size_mm": [
+          0.56,
+          0.62
+        ],
+        "rotation_deg": 0.0,
+        "drill_mm": [
+          0.0,
+          0.0
+        ],
+        "attribute": 1,
+        "shape": 4,
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ]
+      },
+      {
+        "number": "2",
+        "net": "/GND",
+        "position_native_mm": [
+          45.78,
+          26.8
+        ],
+        "position_local_mm": [
+          0.48,
+          0.0
+        ],
+        "size_mm": [
+          0.56,
+          0.62
+        ],
+        "rotation_deg": 0.0,
+        "drill_mm": [
+          0.0,
+          0.0
+        ],
+        "attribute": 1,
+        "shape": 4,
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ]
+      }
+    ],
+    "models": [
+      {
+        "path": "${KIPRJMOD}/models/Capacitor_SMD__C_0402_1005Metric.step",
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "rotation_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "offset_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "show": true,
+        "resolved_path": "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/outputs/Anticipy_Oval_E1_2026-09-09/pcb/electrical/models/Capacitor_SMD__C_0402_1005Metric.step",
+        "exists": true,
+        "sha256": "03e44c4b2b727b8d4b6b1fd598cbd12dd5e614f1dfeefa96a92a07e3a3b312a2",
+        "geometry": {
+          "bounds_model_mm": [
+            [
+              -0.5,
+              -0.25,
+              0.0
+            ],
+            [
+              0.5,
+              0.25,
+              0.5
+            ]
+          ],
+          "dimensions_model_mm": [
+            1.0,
+            0.5,
+            0.5
+          ],
+          "valid": true,
+          "solids": 1
+        },
+        "dimension_evidence": "KiCad library nominal 3D model; not physical maximum specification",
+        "bbox_native_xy_top_datum_z_mm": [
+          [
+            44.8,
+            26.55,
+            0.0
+          ],
+          [
+            45.8,
+            27.05,
+            0.5
+          ]
+        ],
+        "bbox_transform_note": "XY model frame +Y maps to native footprint -Y; Z front top datum0 and B.Cu mounted beneath -thickness. For asymmetric bottom model bounds verify native export before detailed fit."
+      }
+    ],
+    "local_graphics": [
+      {
+        "kind": "fp_line",
+        "layer": "F.CrtYd",
+        "start": [
+          -0.91,
+          -0.46
+        ],
+        "end": [
+          0.91,
+          -0.46
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.CrtYd",
+        "start": [
+          -0.91,
+          0.46
+        ],
+        "end": [
+          -0.91,
+          -0.46
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.CrtYd",
+        "start": [
+          0.91,
+          -0.46
+        ],
+        "end": [
+          0.91,
+          0.46
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.CrtYd",
+        "start": [
+          0.91,
+          0.46
+        ],
+        "end": [
+          -0.91,
+          0.46
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.Fab",
+        "start": [
+          -0.5,
+          -0.25
+        ],
+        "end": [
+          0.5,
+          -0.25
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.Fab",
+        "start": [
+          -0.5,
+          0.25
+        ],
+        "end": [
+          -0.5,
+          -0.25
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.Fab",
+        "start": [
+          -0.107836,
+          -0.36
+        ],
+        "end": [
+          0.107836,
+          -0.36
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.Fab",
+        "start": [
+          -0.107836,
+          0.36
+        ],
+        "end": [
+          0.107836,
+          0.36
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.Fab",
+        "start": [
+          0.5,
+          -0.25
+        ],
+        "end": [
+          0.5,
+          0.25
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.Fab",
+        "start": [
+          0.5,
+          0.25
+        ],
+        "end": [
+          -0.5,
+          0.25
+        ]
+      }
+    ],
+    "rule_areas": [],
+    "transform_max_pad_position_error_mm": 0.0,
+    "fab_graphics_xy_bounds_native_mm": [
+      [
+        44.8,
+        26.44
+      ],
+      [
+        45.8,
+        27.16
+      ]
+    ]
+  },
+  {
+    "ref": "C20",
+    "value": "100nF 10V X7R",
+    "footprint": "Anticipy_E1_Release:C20__C_0402_1005Metric",
+    "position_native_mm": [
+      50.1,
+      26.8
+    ],
+    "rotation_deg": 0.0,
+    "layer": "F.Cu",
+    "attributes_native": [
+      "smd",
+      "dnp"
+    ],
+    "pads": [
+      {
+        "number": "1",
+        "net": "/3V_MIC",
+        "position_native_mm": [
+          49.62,
+          26.8
+        ],
+        "position_local_mm": [
+          -0.48,
+          0.0
+        ],
+        "size_mm": [
+          0.56,
+          0.62
+        ],
+        "rotation_deg": 0.0,
+        "drill_mm": [
+          0.0,
+          0.0
+        ],
+        "attribute": 1,
+        "shape": 4,
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ]
+      },
+      {
+        "number": "2",
+        "net": "/GND",
+        "position_native_mm": [
+          50.58,
+          26.8
+        ],
+        "position_local_mm": [
+          0.48,
+          0.0
+        ],
+        "size_mm": [
+          0.56,
+          0.62
+        ],
+        "rotation_deg": 0.0,
+        "drill_mm": [
+          0.0,
+          0.0
+        ],
+        "attribute": 1,
+        "shape": 4,
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ]
+      }
+    ],
+    "models": [
+      {
+        "path": "${KIPRJMOD}/models/Capacitor_SMD__C_0402_1005Metric.step",
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "rotation_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "offset_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "show": true,
+        "resolved_path": "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/outputs/Anticipy_Oval_E1_2026-09-09/pcb/electrical/models/Capacitor_SMD__C_0402_1005Metric.step",
+        "exists": true,
+        "sha256": "03e44c4b2b727b8d4b6b1fd598cbd12dd5e614f1dfeefa96a92a07e3a3b312a2",
+        "geometry": {
+          "bounds_model_mm": [
+            [
+              -0.5,
+              -0.25,
+              0.0
+            ],
+            [
+              0.5,
+              0.25,
+              0.5
+            ]
+          ],
+          "dimensions_model_mm": [
+            1.0,
+            0.5,
+            0.5
+          ],
+          "valid": true,
+          "solids": 1
+        },
+        "dimension_evidence": "KiCad library nominal 3D model; not physical maximum specification",
+        "bbox_native_xy_top_datum_z_mm": [
+          [
+            49.6,
+            26.55,
+            0.0
+          ],
+          [
+            50.6,
+            27.05,
+            0.5
+          ]
+        ],
+        "bbox_transform_note": "XY model frame +Y maps to native footprint -Y; Z front top datum0 and B.Cu mounted beneath -thickness. For asymmetric bottom model bounds verify native export before detailed fit."
+      }
+    ],
+    "local_graphics": [
+      {
+        "kind": "fp_line",
+        "layer": "F.CrtYd",
+        "start": [
+          -0.91,
+          -0.46
+        ],
+        "end": [
+          0.91,
+          -0.46
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.CrtYd",
+        "start": [
+          -0.91,
+          0.46
+        ],
+        "end": [
+          -0.91,
+          -0.46
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.CrtYd",
+        "start": [
+          0.91,
+          -0.46
+        ],
+        "end": [
+          0.91,
+          0.46
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.CrtYd",
+        "start": [
+          0.91,
+          0.46
+        ],
+        "end": [
+          -0.91,
+          0.46
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.Fab",
+        "start": [
+          -0.5,
+          -0.25
+        ],
+        "end": [
+          0.5,
+          -0.25
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.Fab",
+        "start": [
+          -0.5,
+          0.25
+        ],
+        "end": [
+          -0.5,
+          -0.25
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.Fab",
+        "start": [
+          -0.107836,
+          -0.36
+        ],
+        "end": [
+          0.107836,
+          -0.36
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.Fab",
+        "start": [
+          -0.107836,
+          0.36
+        ],
+        "end": [
+          0.107836,
+          0.36
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.Fab",
+        "start": [
+          0.5,
+          -0.25
+        ],
+        "end": [
+          0.5,
+          0.25
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.Fab",
+        "start": [
+          0.5,
+          0.25
+        ],
+        "end": [
+          -0.5,
+          0.25
+        ]
+      }
+    ],
+    "rule_areas": [],
+    "transform_max_pad_position_error_mm": 0.0,
+    "fab_graphics_xy_bounds_native_mm": [
+      [
+        49.6,
+        26.44
+      ],
+      [
+        50.6,
+        27.16
+      ]
+    ]
+  },
+  {
+    "ref": "C22",
+    "value": "100nF 10V X7R",
+    "footprint": "Anticipy_E1_Release:C22__C_0402_1005Metric",
+    "position_native_mm": [
+      40.0,
+      36.8
+    ],
+    "rotation_deg": 0.0,
+    "layer": "F.Cu",
+    "attributes_native": [
+      "smd"
+    ],
+    "pads": [
+      {
+        "number": "1",
+        "net": "/3V_MAIN",
+        "position_native_mm": [
+          39.52,
+          36.8
+        ],
+        "position_local_mm": [
+          -0.48,
+          0.0
+        ],
+        "size_mm": [
+          0.56,
+          0.62
+        ],
+        "rotation_deg": 0.0,
+        "drill_mm": [
+          0.0,
+          0.0
+        ],
+        "attribute": 1,
+        "shape": 4,
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ]
+      },
+      {
+        "number": "2",
+        "net": "/HAPTIC_NEG",
+        "position_native_mm": [
+          40.48,
+          36.8
+        ],
+        "position_local_mm": [
+          0.48,
+          0.0
+        ],
+        "size_mm": [
+          0.56,
+          0.62
+        ],
+        "rotation_deg": 0.0,
+        "drill_mm": [
+          0.0,
+          0.0
+        ],
+        "attribute": 1,
+        "shape": 4,
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ]
+      }
+    ],
+    "models": [
+      {
+        "path": "${KIPRJMOD}/models/Capacitor_SMD__C_0402_1005Metric.step",
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "rotation_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "offset_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "show": true,
+        "resolved_path": "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/outputs/Anticipy_Oval_E1_2026-09-09/pcb/electrical/models/Capacitor_SMD__C_0402_1005Metric.step",
+        "exists": true,
+        "sha256": "03e44c4b2b727b8d4b6b1fd598cbd12dd5e614f1dfeefa96a92a07e3a3b312a2",
+        "geometry": {
+          "bounds_model_mm": [
+            [
+              -0.5,
+              -0.25,
+              0.0
+            ],
+            [
+              0.5,
+              0.25,
+              0.5
+            ]
+          ],
+          "dimensions_model_mm": [
+            1.0,
+            0.5,
+            0.5
+          ],
+          "valid": true,
+          "solids": 1
+        },
+        "dimension_evidence": "KiCad library nominal 3D model; not physical maximum specification",
+        "bbox_native_xy_top_datum_z_mm": [
+          [
+            39.5,
+            36.55,
+            0.0
+          ],
+          [
+            40.5,
+            37.05,
+            0.5
+          ]
+        ],
+        "bbox_transform_note": "XY model frame +Y maps to native footprint -Y; Z front top datum0 and B.Cu mounted beneath -thickness. For asymmetric bottom model bounds verify native export before detailed fit."
+      }
+    ],
+    "local_graphics": [
+      {
+        "kind": "fp_line",
+        "layer": "F.CrtYd",
+        "start": [
+          -0.91,
+          -0.46
+        ],
+        "end": [
+          0.91,
+          -0.46
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.CrtYd",
+        "start": [
+          -0.91,
+          0.46
+        ],
+        "end": [
+          -0.91,
+          -0.46
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.CrtYd",
+        "start": [
+          0.91,
+          -0.46
+        ],
+        "end": [
+          0.91,
+          0.46
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.CrtYd",
+        "start": [
+          0.91,
+          0.46
+        ],
+        "end": [
+          -0.91,
+          0.46
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.Fab",
+        "start": [
+          -0.5,
+          -0.25
+        ],
+        "end": [
+          0.5,
+          -0.25
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.Fab",
+        "start": [
+          -0.5,
+          0.25
+        ],
+        "end": [
+          -0.5,
+          -0.25
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.Fab",
+        "start": [
+          -0.107836,
+          -0.36
+        ],
+        "end": [
+          0.107836,
+          -0.36
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.Fab",
+        "start": [
+          -0.107836,
+          0.36
+        ],
+        "end": [
+          0.107836,
+          0.36
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.Fab",
+        "start": [
+          0.5,
+          -0.25
+        ],
+        "end": [
+          0.5,
+          0.25
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.Fab",
+        "start": [
+          0.5,
+          0.25
+        ],
+        "end": [
+          -0.5,
+          0.25
+        ]
+      }
+    ],
+    "rule_areas": [],
+    "transform_max_pad_position_error_mm": 0.0,
+    "fab_graphics_xy_bounds_native_mm": [
+      [
+        39.5,
+        36.44
+      ],
+      [
+        40.5,
+        37.16
+      ]
+    ]
+  },
+  {
+    "ref": "U4",
+    "value": "TPD2EUSB30DRTR",
+    "footprint": "Anticipy_E1_Release:U4__Texas_DRT-3_R0B",
+    "position_native_mm": [
+      28.5,
+      30.0
+    ],
+    "rotation_deg": -90.0,
+    "layer": "F.Cu",
+    "attributes_native": [
+      "smd"
+    ],
+    "pads": [
+      {
+        "number": "1",
+        "net": "/USB_D+",
+        "position_native_mm": [
+          28.075,
+          29.65
+        ],
+        "position_local_mm": [
+          -0.35,
+          0.425
+        ],
+        "size_mm": [
+          0.3,
+          0.3
+        ],
+        "rotation_deg": 270.0,
+        "drill_mm": [
+          0.0,
+          0.0
+        ],
+        "attribute": 1,
+        "shape": 4,
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ]
+      },
+      {
+        "number": "2",
+        "net": "/USB_D-",
+        "position_native_mm": [
+          28.075,
+          30.35
+        ],
+        "position_local_mm": [
+          0.35,
+          0.425
+        ],
+        "size_mm": [
+          0.3,
+          0.3
+        ],
+        "rotation_deg": 270.0,
+        "drill_mm": [
+          0.0,
+          0.0
+        ],
+        "attribute": 1,
+        "shape": 4,
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ]
+      },
+      {
+        "number": "3",
+        "net": "/GND",
+        "position_native_mm": [
+          28.925,
+          30.0
+        ],
+        "position_local_mm": [
+          0.0,
+          -0.425
+        ],
+        "size_mm": [
+          0.3,
+          0.3
+        ],
+        "rotation_deg": 270.0,
+        "drill_mm": [
+          0.0,
+          0.0
+        ],
+        "attribute": 1,
+        "shape": 4,
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ]
+      }
+    ],
+    "models": [
+      {
+        "path": "${KIPRJMOD}/models/Package_TO_SOT_SMD__Texas_DRT-3.step",
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "rotation_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "offset_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "show": true,
+        "resolved_path": "/Users/cjxsez/Documents/Codex/2026-09-06/sites-plugin-sites-openai-bundled-x20/outputs/Anticipy_Oval_E1_2026-09-09/pcb/electrical/models/Package_TO_SOT_SMD__Texas_DRT-3.step",
+        "exists": true,
+        "sha256": "826a53de4a90e738d560e4a906235ba95541b3da40b62f22d8f9e30fd9f39744",
+        "geometry": {
+          "bounds_model_mm": [
+            [
+              -0.5000001,
+              -0.5000001,
+              -1e-07
+            ],
+            [
+              0.5000001,
+              0.5000001,
+              0.5000001
+            ]
+          ],
+          "dimensions_model_mm": [
+            1.0000002,
+            1.0000002,
+            0.5000001999999999
+          ],
+          "valid": true,
+          "solids": 1
+        },
+        "dimension_evidence": "KiCad library nominal 3D model; not physical maximum specification",
+        "bbox_native_xy_top_datum_z_mm": [
+          [
+            28.0,
+            29.5,
+            -1e-07
+          ],
+          [
+            29.0,
+            30.5,
+            0.5000001
+          ]
+        ],
+        "bbox_transform_note": "XY model frame +Y maps to native footprint -Y; Z front top datum0 and B.Cu mounted beneath -thickness. For asymmetric bottom model bounds verify native export before detailed fit."
+      }
+    ],
+    "local_graphics": [
+      {
+        "kind": "fp_line",
+        "layer": "F.CrtYd",
+        "start": [
+          -0.65,
+          0.55
+        ],
+        "end": [
+          -0.65,
+          -0.55
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.CrtYd",
+        "start": [
+          0.65,
+          0.55
+        ],
+        "end": [
+          -0.65,
+          0.55
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.CrtYd",
+        "start": [
+          -0.65,
+          -0.55
+        ],
+        "end": [
+          0.65,
+          -0.55
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.CrtYd",
+        "start": [
+          0.65,
+          -0.55
+        ],
+        "end": [
+          0.65,
+          0.55
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.Fab",
+        "start": [
+          0.5,
+          0.4
+        ],
+        "end": [
+          -0.2,
+          0.4
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.Fab",
+        "start": [
+          -0.5,
+          0.1
+        ],
+        "end": [
+          -0.2,
+          0.4
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.Fab",
+        "start": [
+          -0.5,
+          0.1
+        ],
+        "end": [
+          -0.5,
+          -0.4
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.Fab",
+        "start": [
+          -0.65,
+          0.0
+        ],
+        "end": [
+          -0.65,
+          -0.55
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.Fab",
+        "start": [
+          0.65,
+          0.0
+        ],
+        "end": [
+          0.65,
+          -0.55
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.Fab",
+        "start": [
+          -0.5,
+          -0.4
+        ],
+        "end": [
+          0.5,
+          -0.4
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.Fab",
+        "start": [
+          0.5,
+          -0.4
+        ],
+        "end": [
+          0.5,
+          0.4
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.Fab",
+        "start": [
+          -0.65,
+          -0.55
+        ],
+        "end": [
+          -0.45,
+          -0.55
+        ]
+      },
+      {
+        "kind": "fp_line",
+        "layer": "F.Fab",
+        "start": [
+          0.65,
+          -0.55
+        ],
+        "end": [
+          0.45,
+          -0.55
+        ]
+      },
+      {
+        "kind": "fp_poly",
+        "layer": "F.Fab",
+        "points": [
+          [
+            -0.76,
+            0.43
+          ],
+          [
+            -0.76,
+            0.71
+          ],
+          [
+            -1.04,
+            0.43
+          ],
+          [
+            -0.76,
+            0.43
+          ]
+        ]
+      }
+    ],
+    "rule_areas": [],
+    "transform_max_pad_position_error_mm": 0.0,
+    "fab_graphics_xy_bounds_native_mm": [
+      [
+        27.79,
+        28.96
+      ],
+      [
+        29.05,
+        30.65
+      ]
+    ]
+  }
+]

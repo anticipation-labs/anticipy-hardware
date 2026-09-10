@@ -1,0 +1,59 @@
+{
+  "status": "Geometry-only 3MF\u2014no printer/material/support profile",
+  "mesh_process": "Absolute 0.015mm deflection; remove zero-area pole triangles only. No holes filled or geometry enlarged.",
+  "volume_note": "Default CAD mass integration is unstable on the trimmed spheroidal crown; it is not a mesh acceptance metric. A separate0.003mmdeflection mesh checks convergence for the same STEP;100deterministic triangle-centroid surface distances are checked per part.",
+  "checks": [
+    {
+      "STEP_sha256": "2c3230bb6f61acfaf40a1853a6fa57f5fb7c3f406e21e592795b1a4975a87d21",
+      "part": "Front_Oval_Shell",
+      "mesh_watertight": true,
+      "mesh_winding_consistent": true,
+      "mesh_components": 1,
+      "STEP_reimport_valid": true,
+      "STEP_solids": 1,
+      "STEP_volume_mm3": 4193.274958382003,
+      "STL_volume_mm3": 4340.247535762489,
+      "removed_zero_area_pole_triangles": 4,
+      "default_CAD_mass_vs_mesh_difference_percent": 3.5049592225451454,
+      "sampled_triangle_centroid_surface_deviation_max_mm": 0.012375616585144926,
+      "surface_sample_count": 100,
+      "finer_mesh_convergence": {
+        "absolute_deflection_mm": 0.003,
+        "volume_mm3": 4343.598305865048,
+        "delivered_volume_change_percent": 0.07714272514645071
+      }
+    },
+    {
+      "STEP_sha256": "8652b136f081c7a052495b93756b7e07b88fe79bb0e06e29a533eb1063ff8a9a",
+      "part": "Rear_Service_Cover",
+      "mesh_watertight": true,
+      "mesh_winding_consistent": true,
+      "mesh_components": 1,
+      "STEP_reimport_valid": true,
+      "STEP_solids": 1,
+      "STEP_volume_mm3": 2356.186937629303,
+      "STL_volume_mm3": 2357.2093142340905,
+      "removed_zero_area_pole_triangles": 0,
+      "default_CAD_mass_vs_mesh_difference_percent": 0.04339114984721615,
+      "sampled_triangle_centroid_surface_deviation_max_mm": 0.0006801087296212989,
+      "surface_sample_count": 100,
+      "finer_mesh_convergence": null
+    },
+    {
+      "STEP_sha256": "f8676b77740b169252aa88e6d80abdf7d25302a19ab9a934ce46f564936552f6",
+      "part": "Button_Plunger",
+      "mesh_watertight": true,
+      "mesh_winding_consistent": true,
+      "mesh_components": 1,
+      "STEP_reimport_valid": true,
+      "STEP_solids": 1,
+      "STEP_volume_mm3": 14.701112797121914,
+      "STL_volume_mm3": 14.698156187328843,
+      "removed_zero_area_pole_triangles": 0,
+      "default_CAD_mass_vs_mesh_difference_percent": 0.020111469341621557,
+      "sampled_triangle_centroid_surface_deviation_max_mm": 0.0004699063708494502,
+      "surface_sample_count": 100,
+      "finer_mesh_convergence": null
+    }
+  ]
+}

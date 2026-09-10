@@ -1,0 +1,2642 @@
+{
+  "created_UTC": "2026-09-10T03:33:41.775614+00:00",
+  "release_date": "2026-09-09",
+  "repository": "anticipation-labs/anticipy-hardware",
+  "path": "latest_builds",
+  "source_base_commit": "333beabaf9ed2ca9d01f81bdcd3c637d007c6c28",
+  "scope": "Current E1P1 PCB, matched oval CAD, exact parts and build handoff plus matching bench firmware source",
+  "E1P1_handoff_unchanged": true,
+  "original_archive_sha256": "4698b9c9e017caaaf4426d47813afc3f3b23f76035c57b41cd91886f18ee0e7a",
+  "firmware_app_tree_sha256": "68ca22925e41b8f59f4046707d09bd79a32a624099f8b8f831979c0b61bf3773",
+  "firmware_wrapper_documentation_change": "HEX/programming links adapted to sibling E1P1 folder; application source unchanged",
+  "manifest_excludes": [
+    "LATEST_BUILD_MANIFEST.json"
+  ],
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 69,
+      "sha256": "be56f572766bd24b9223019ad98798e2420f2c51f9026adade1232741ac9d57c"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 102,
+      "sha256": "860d263e0b31ce75ea34506ae5f5dadf18a6633c37de62c870d8356bd206be8f"
+    },
+    {
+      "path": "Anticipy_E1P1_Boston_Handoff_2026-09-09.zip",
+      "bytes": 16929320,
+      "sha256": "4698b9c9e017caaaf4426d47813afc3f3b23f76035c57b41cd91886f18ee0e7a"
+    },
+    {
+      "path": "E1P1/E1P1_Fabrication_and_Assembly.pdf",
+      "bytes": 1246731,
+      "sha256": "9c508ffd390073a0637b67c8da5cb5faeedc7835637a53a293825b8c75ee1893"
+    },
+    {
+      "path": "E1P1/HANDOFF_MANIFEST.json",
+      "bytes": 46185,
+      "sha256": "f37fd2e4aa8d51b0d20da6b963f91daf17a26100b0c0a4c09f55680a8be47f6d"
+    },
+    {
+      "path": "E1P1/PCB_Release_Readme.md",
+      "bytes": 5415,
+      "sha256": "6e7677a6f1711fbd9025c62ad2ceb4b2dc06250f1e5febf2fd732b6deeb7f69d"
+    },
+    {
+      "path": "E1P1/README.md",
+      "bytes": 4872,
+      "sha256": "d8bc0a95ba54b002950ca0064d0131ca9e9373e3aad137d1d27df105fc63fd4c"
+    },
+    {
+      "path": "E1P1/RELEASE_STATUS.json",
+      "bytes": 1699,
+      "sha256": "3c5e742d02c311de608142c6ba056568072530b12051288ccd8acddf1cd84e5c"
+    },
+    {
+      "path": "E1P1/SHA256SUMS",
+      "bytes": 29173,
+      "sha256": "f65c327998ae672d5e90c6b7cdf87540a1f2f84ee2d088b6d30cd6470a74fde9"
+    },
+    {
+      "path": "E1P1/cad/Button_Plunger.step",
+      "bytes": 36335,
+      "sha256": "f8676b77740b169252aa88e6d80abdf7d25302a19ab9a934ce46f564936552f6"
+    },
+    {
+      "path": "E1P1/cad/Button_Plunger.stl",
+      "bytes": 212984,
+      "sha256": "28a379edd8ca098f740f5d411c20a4812201f25b20545795db43463f796c3d69"
+    },
+    {
+      "path": "E1P1/cad/CAD_File_Manifest.json",
+      "bytes": 4843,
+      "sha256": "5905eaf0957691563d1d25cf21e2cd589b37705ef758170468d02575f6b7a32e"
+    },
+    {
+      "path": "E1P1/cad/CAD_Rebuild_Receipt.json",
+      "bytes": 2324,
+      "sha256": "c3d5641e02dc933a4fc31a825a30b05c246a607dcb6b5c8f71f0b9ec07a9fb08"
+    },
+    {
+      "path": "E1P1/cad/Clear_Lightpipe.step",
+      "bytes": 28812,
+      "sha256": "8e1df1e291a805952205000b2419661e3dd6c7fc5a74025e7c5241bfcbe0ce89"
+    },
+    {
+      "path": "E1P1/cad/Clear_Lightpipe.stl",
+      "bytes": 151484,
+      "sha256": "dc2eac153e7195fb18648eb61f3c29ecd25c5f74b1b54f7494aeef4087ab9430"
+    },
+    {
+      "path": "E1P1/cad/Front_Oval_Shell.step",
+      "bytes": 2179653,
+      "sha256": "2c3230bb6f61acfaf40a1853a6fa57f5fb7c3f406e21e592795b1a4975a87d21"
+    },
+    {
+      "path": "E1P1/cad/Front_Oval_Shell.stl",
+      "bytes": 8130184,
+      "sha256": "9e1ec1a3e726233bb75cfbbd2ebd2081a0b5c714f8b9513aca5a057dae8ce99d"
+    },
+    {
+      "path": "E1P1/cad/Harness_Dimensional_Contract.json",
+      "bytes": 1088,
+      "sha256": "690406c0eeadafd2db83749af21bfdeda04aebe119a121863b33685989310f0f"
+    },
+    {
+      "path": "E1P1/cad/Lightpipe_Export_Checks.json",
+      "bytes": 599,
+      "sha256": "2363699877718ae0cee9e827d52f6dfbe2a7ebee2c45cabddc4287d3925bc9e0"
+    },
+    {
+      "path": "E1P1/cad/Mechanical_Handoff.md",
+      "bytes": 10262,
+      "sha256": "81551c6b979c694befeb6b4930945a61a1e7cb54c56404cf5b9ed77cfa8c2a87"
+    },
+    {
+      "path": "E1P1/cad/Oval_E1_Assembly_FIT_CANDIDATE.step",
+      "bytes": 4158287,
+      "sha256": "215ee91ce96ad8d1ea093dc2385effa8858a8242127eef9d34a2eebfa29d2428"
+    },
+    {
+      "path": "E1P1/cad/Oval_E1_Checks.json",
+      "bytes": 322325,
+      "sha256": "3ab822afca7e8442c7d9bb5c5b6b6c349be9160504e6d6f4bac443aff0de9d83"
+    },
+    {
+      "path": "E1P1/cad/Oval_E1_Exploded_Labeled.png",
+      "bytes": 307760,
+      "sha256": "80608cda603eb84ed8ae131a0e021b558f26b37439093db22c30b409b68853ce"
+    },
+    {
+      "path": "E1P1/cad/Oval_E1_Exploded_VIEW_ONLY.step",
+      "bytes": 4124711,
+      "sha256": "062a9c58f502160e2ed93cbfa97b9954e25dbfd6dae5c91900a28a2ded67af01"
+    },
+    {
+      "path": "E1P1/cad/Oval_E1_Gold_Exterior.png",
+      "bytes": 186451,
+      "sha256": "8b2ffb638fbf51ce6cb544ef4569bbcb927c6e3eeb315d857757e5d4dc72a78a"
+    },
+    {
+      "path": "E1P1/cad/Oval_E1_Inside.png",
+      "bytes": 203394,
+      "sha256": "0db1af916a2e00c102c825c6bd4f1b543229a9d7c337e99f46a80459c28c7d06"
+    },
+    {
+      "path": "E1P1/cad/Oval_E1_Port_and_Controls.png",
+      "bytes": 179820,
+      "sha256": "96e2ae48b2fe7cc7e795bf2694d99042f24fdeaaa3433c69d7842fdcd8bfe98b"
+    },
+    {
+      "path": "E1P1/cad/Oval_E1_Three_Print_Parts_GEOMETRY_ONLY.3mf",
+      "bytes": 3854428,
+      "sha256": "28c5ca0462438bef20a3b9a9ad5987f515665995452b081ce206108e2fb29e58"
+    },
+    {
+      "path": "E1P1/cad/Oval_Mechanical_Details.json",
+      "bytes": 1640,
+      "sha256": "a8e24eda76d300d5d038c1f574603f0dc77fd40be6dcf74a4b9bd3e845b99884"
+    },
+    {
+      "path": "E1P1/cad/Print_Export_Checks.json",
+      "bytes": 2609,
+      "sha256": "519abcdb1e5929c5cafd9d40c6dc9cffa4ec62f408422e7276120061b93cb310"
+    },
+    {
+      "path": "E1P1/cad/Rear_Service_Cover.step",
+      "bytes": 613301,
+      "sha256": "8652b136f081c7a052495b93756b7e07b88fe79bb0e06e29a533eb1063ff8a9a"
+    },
+    {
+      "path": "E1P1/cad/Rear_Service_Cover.stl",
+      "bytes": 7340784,
+      "sha256": "4e16acc055873e737043fe139244cd73549f6f4ec02064c66ef87496c49ebf67"
+    },
+    {
+      "path": "E1P1/cad/build_oval_e1.py",
+      "bytes": 21668,
+      "sha256": "af87f7a3a22252f794d7c4dbb62a8c25dcc143d6c031e9016cbc9971669f6717"
+    },
+    {
+      "path": "E1P1/cad/harness_fragment.py",
+      "bytes": 3893,
+      "sha256": "ab172416168d6b5a4398e93550e4c43848768753f478cbb1a4e1487ff306f823"
+    },
+    {
+      "path": "E1P1/cad/package_print_parts.py",
+      "bytes": 4495,
+      "sha256": "98775d7dfcae5348e0dbe720c89b25b65841263a125e8307fd31304325ea6c56"
+    },
+    {
+      "path": "E1P1/cad/render_details.py",
+      "bytes": 4219,
+      "sha256": "e7532f97944340b71ffa80ed245bdfeb3ebfa1d646d5d52c5a40b8ec711db0ce"
+    },
+    {
+      "path": "E1P1/cad/source_inputs/Final_PCB_Mechanical_Contract.json",
+      "bytes": 631920,
+      "sha256": "36b4f370ce584a81f6603b453867acf4dcb8f2ca2bd35bf09e306cc1f25bf359"
+    },
+    {
+      "path": "E1P1/cad/source_inputs/render_helpers.py",
+      "bytes": 3696,
+      "sha256": "81d2553e715f4c7bc5fe7baa97303d61f0a541c0cf771d1539358153e9707909"
+    },
+    {
+      "path": "E1P1/cad/validate_cad_handoff.py",
+      "bytes": 4876,
+      "sha256": "12c8f9073962acc856a11ded9714afb8893dfc6e5d3f67b86c7b906fbc959749"
+    },
+    {
+      "path": "E1P1/handoff_verification/Combined_Data_Check.json",
+      "bytes": 647,
+      "sha256": "542e54e7886ef3be3985b6e18523294f6ce8f9da7ced451fe555c0954b159d11"
+    },
+    {
+      "path": "E1P1/logistics/Manufacturing_Saturday_Plan.md",
+      "bytes": 17434,
+      "sha256": "c4237e51442400b60062bde6e45508100380c0b176c167ac0783b22b42cebd54"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy.kicad_sym",
+      "bytes": 129166,
+      "sha256": "8fd349480f5b8d0d75e9ad08471c7cce22329378a79cc15cb7a3364d500a3d9d"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/BT1__WirePads_2_P1.27mm.kicad_mod",
+      "bytes": 2661,
+      "sha256": "8ce31e232c56bf425f8624ae88d8bded4d82883d84e2ad8c15741f9fd81cd9ff"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/C10__C_0603_1608Metric.kicad_mod",
+      "bytes": 4325,
+      "sha256": "fb5a0576475feb73dd56466d3ff190bf1f1394bec4b4ef231a47584a74b151ee"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/C13__C_0201_0603Metric.kicad_mod",
+      "bytes": 4056,
+      "sha256": "604855e2b5ce7c4e902dac0edd9115ccfe8be0b1ae3ce51bfdeb1785800f8a72"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/C14__C_0402_1005Metric.kicad_mod",
+      "bytes": 4027,
+      "sha256": "fb80acabac5c33ccfbc796e757f010d26ea86c1eef9d096dec5461d8b74e400a"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/C15__C_0402_1005Metric.kicad_mod",
+      "bytes": 4027,
+      "sha256": "ed07353df1e08cd1b7d603914b8439565bfffc464cf9b009c6bb6b44373b21c9"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/C16__C_0402_1005Metric.kicad_mod",
+      "bytes": 4025,
+      "sha256": "13f0ab8a959755697021934041d61fb0100397744b9720037514e9762acd3e82"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/C17__C_0402_1005Metric.kicad_mod",
+      "bytes": 4084,
+      "sha256": "ec1d00125b32a6f471c8359e967390fae1375b70d1b53ee04d08f94aeec629e5"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/C18__C_0603_1608Metric.kicad_mod",
+      "bytes": 4319,
+      "sha256": "b71b699edc736b2d9eec5375d4937f5e16bc3bb2c88d403a8b0fd2a5b53e14fa"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/C19__C_0402_1005Metric.kicad_mod",
+      "bytes": 4079,
+      "sha256": "36d566a03e116c613be875cce3bf5e91687ba49f3b5244f79a4b4144b59388e8"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/C1__C_0603_1608Metric.kicad_mod",
+      "bytes": 3803,
+      "sha256": "922bae62fc9d00025027912476ed29191b4ed6787234032ae2f8dfed036e241e"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/C20__C_0402_1005Metric.kicad_mod",
+      "bytes": 4129,
+      "sha256": "d05b3333cec57be7cb00d9c28c6fbf924549bf94bc900e1fe97375f58549fae7"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/C22__C_0402_1005Metric.kicad_mod",
+      "bytes": 4142,
+      "sha256": "22d895066068fac80c936a064455272eee4659285485235d8f653802a63fa279"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/C23__C_0805_2012Metric.kicad_mod",
+      "bytes": 4626,
+      "sha256": "65f03d7bbecb9b4ca9b5a74b1d228aa9ca7967fe99128896336e93b5d46fa4b7"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/C25__C_0402_1005Metric.kicad_mod",
+      "bytes": 4088,
+      "sha256": "ab6a88a74f0ff498c306fbfbed627474a9fa7395a941cd7a68a240a685b386d0"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/C26__C_0402_1005Metric.kicad_mod",
+      "bytes": 4044,
+      "sha256": "8acc70288650e6ed3634a5c9be52475b38df7f5c72e9e24cb8ea3e33ed84297a"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/C2__C_0603_1608Metric.kicad_mod",
+      "bytes": 4327,
+      "sha256": "699bbecb069f49f88a36debc08b342c25d5118f63364dc61bdf4cc98541d7abe"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/C3__C_0603_1608Metric.kicad_mod",
+      "bytes": 4329,
+      "sha256": "a8cafd201cf3c79696d8ee6cb4165a9abec2b4f62268456bdc3dc7abc9c52cbd"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/C4__C_0603_1608Metric.kicad_mod",
+      "bytes": 4321,
+      "sha256": "334defba0e3cc0f8fa4a626e45ede0a96e78a3c77a0ab05adfd589d179938ea2"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/C5__C_0603_1608Metric.kicad_mod",
+      "bytes": 4157,
+      "sha256": "61403ba27033a3e6c315fd5fef0832bcba49d414a0cb9c969b2e0166288357c5"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/C6__C_0603_1608Metric.kicad_mod",
+      "bytes": 4157,
+      "sha256": "26c362227d9ed1a1487e16c7598c4034c2cebdc89298be6f06164a0c8575a750"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/C7__C_0603_1608Metric.kicad_mod",
+      "bytes": 4347,
+      "sha256": "59dd3edaae4c916d9e6ba95934a2d784f4e56c67eea3dbc64ea6b5c80d017a18"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/C8__C_0603_1608Metric.kicad_mod",
+      "bytes": 4338,
+      "sha256": "a7fd84b72cc412e4157552664703fb24a60700458ce10d6db52ffbf24d2b893a"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/C9__C_0603_1608Metric.kicad_mod",
+      "bytes": 4324,
+      "sha256": "04892b2ce4a9d99c813d5d04f9121c7a4cee24accc16cce6b40416b0e08b0912"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/D1__D_SOD-323.kicad_mod",
+      "bytes": 4917,
+      "sha256": "d38a66f52a26cfaf3d9745fa991d0a583e8e53d6d466a76be0bd6af11e1f984f"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/D2__TI_DPY0002A_X1SON.kicad_mod",
+      "bytes": 5436,
+      "sha256": "8faf9a96e0d1a9780df3bb1f0d8e0235137ed5f0a6174d4213305824896bbc04"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/J1__USB_C_Receptacle_GCT_USB4500-03-1-A_MidMount.kicad_mod",
+      "bytes": 9875,
+      "sha256": "cec1c80ff22310160481e8b550cd9df02e0c450580ad4e6788b63c94688b2fdd"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/L1__L_Murata_DFE201610P.kicad_mod",
+      "bytes": 4234,
+      "sha256": "07d03fda41ac37b7d46b3ca243bef8ec73e02f8e0d8a4a35e58be9cbbcdf62e2"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/L2__L_Murata_DFE201610P.kicad_mod",
+      "bytes": 4394,
+      "sha256": "1247cf19ff7aab778b7f58e6682e085fe0a88747915a8ab645c615c1059a7eef"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/LED1__LED_Kingbright_APHB1608LVBDSEKJ3C.kicad_mod",
+      "bytes": 8360,
+      "sha256": "ba6daca16b33769f7b39c7c1fcf9517d033ec663d810677c28fdc5b899e9ddda"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/M1__WirePads_2_P1.27mm.kicad_mod",
+      "bytes": 2407,
+      "sha256": "23cde70b06ca7c86b6820f53e25e90a75b9d033f7d0be489a1ae1cd5b0667a6e"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/MIC1__SameSky_CMM-3424DT-26165-TR_TopPort_PDM.kicad_mod",
+      "bytes": 17002,
+      "sha256": "8ccc708a82add9f907a969e0d4cfc194eb93c8617014b70e198f95599916e910"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/MIC2__SameSky_CMM-3424DT-26165-TR_TopPort_PDM.kicad_mod",
+      "bytes": 17042,
+      "sha256": "a2c3392ce1708e78019db778ef1dc614e3a67c8b49289cb50d3e3afa196d74ca"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/NT1__NetTie_Nordic_Config4.kicad_mod",
+      "bytes": 1908,
+      "sha256": "286aad784b662fe5462130a5b33bc57385ecf691ac03ebf2e4b2beca2ca04225"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/NT2__NetTie_Nordic_Config4.kicad_mod",
+      "bytes": 1902,
+      "sha256": "af7878b911de1accaf689a6bb60c41cbde9fcd160fc227d8877359e791e7661b"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/Q1__SOT-23.kicad_mod",
+      "bytes": 4772,
+      "sha256": "82f2a0809ad3105ab758a8f5ccb179b5c2240d45dd0e54f028788bc0c8d04da4"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/R10__R_0201_0603Metric.kicad_mod",
+      "bytes": 4042,
+      "sha256": "9e020ea29ebae91a01f26639ccf7906f49826d54b2d5dde2047e0a7c0df64211"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/R11__R_0201_0603Metric.kicad_mod",
+      "bytes": 4042,
+      "sha256": "11ef9b0c48aa1999732544c4f1568b0196b8f89e4a92625fdf3c009b67041420"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/R12__R_0402_1005Metric.kicad_mod",
+      "bytes": 3242,
+      "sha256": "5b431eeb67c63ce44a1f32ce79e3fcce610917a51dbf2e75140303aaa307d747"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/R13__R_0402_1005Metric.kicad_mod",
+      "bytes": 3242,
+      "sha256": "2b64d94249e593c053f7c6d1e583a3885dd518a5d9779214da4a0c404c3fa0d4"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/R1__R_0201_0603Metric.kicad_mod",
+      "bytes": 3859,
+      "sha256": "145c3d9468cecbb0c33d07e8e529d6db3845a3832915b809f87e365e988e7b4c"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/R2__R_0201_0603Metric.kicad_mod",
+      "bytes": 3859,
+      "sha256": "8f15f6f66b56c34b6bc6d6cea021063e6ab56375d7b7df47150dadf28a9aee58"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/R3__R_0201_0603Metric.kicad_mod",
+      "bytes": 3919,
+      "sha256": "e02e36db43fc7750f9bb857edbd4fb540dc03ad9414bbabd107146768d26f663"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/R4__R_0201_0603Metric.kicad_mod",
+      "bytes": 3899,
+      "sha256": "7ae9495d203775c031629f9ab7dca4a3f258430c451a1f03eac3accf4189921c"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/R5__R_0402_1005Metric.kicad_mod",
+      "bytes": 3998,
+      "sha256": "369c7b01dd43df1f9139944a9edf2ddf6e31db3aa9e6a6b1e29906d25967a1e3"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/R6__R_0402_1005Metric.kicad_mod",
+      "bytes": 3998,
+      "sha256": "6928ecd6cfd3fcaa24fd11aea67eb49845f733e06a4b37c26b2f8cce892ecb9e"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/R7__R_0402_1005Metric.kicad_mod",
+      "bytes": 4045,
+      "sha256": "168a97926d72b0b147345db90bf40921076e7f5a70cf5d986dafe401010ece94"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/R8__R_0402_1005Metric.kicad_mod",
+      "bytes": 3998,
+      "sha256": "fbcb29960706480c3666ef6e8bd921ae62037b016a694f869d0abdeddc3674e9"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/R9__R_0402_1005Metric.kicad_mod",
+      "bytes": 4048,
+      "sha256": "27a3fd43099e0be46892327100d471db82f8ef7eb0858e1973cfa339dfef9d59"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/SW1__SW_SPST_B3U-1000P.kicad_mod",
+      "bytes": 4628,
+      "sha256": "2eab1fddfa6e0b95af46dfa6d295496fee4aac5ffa8adad33a0ae456cbbf0e5e"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/TH1__WirePads_2_P1.27mm.kicad_mod",
+      "bytes": 2565,
+      "sha256": "a057bdf232e582f2a7cd17e47412fa8dd01cce25b3f354e4fbe0a1379fc1a3b7"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/TP10__PogoPad_D1.0mm.kicad_mod",
+      "bytes": 5941,
+      "sha256": "e434f4a066518f5cd16bb9665e8499e4a2a249b8e95455eaa0db96cccb498988"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/TP11__PogoPad_D1.0mm.kicad_mod",
+      "bytes": 5947,
+      "sha256": "caa31e982e494b240d33c0ff66ab334b6c4267f2f8df53f2dbd39049709df92e"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/TP12__PogoPad_D1.0mm.kicad_mod",
+      "bytes": 5991,
+      "sha256": "74325de60cb504a7480b3ad237610c817dcf4cd966f93afb190bfa7e4fa11e3e"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/TP13__PogoPad_D1.0mm.kicad_mod",
+      "bytes": 5945,
+      "sha256": "529f40c39559f40cf4942e8c464f58e9ba5e3eb91eed54c656ebff6477440d09"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/TP14__PogoPad_D1.0mm.kicad_mod",
+      "bytes": 5949,
+      "sha256": "7a70180bbe742ecc248ec6d0aff015d58d6de206dd23ea7a889113c3addf3ece"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/TP1__PogoPad_D1.0mm.kicad_mod",
+      "bytes": 5942,
+      "sha256": "8ad88d1f45b02fe37f63de104cc7d35de786168aa59ebf750bee437216317f51"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/TP2__PogoPad_D1.0mm.kicad_mod",
+      "bytes": 5944,
+      "sha256": "afb08cb0dafeaf9a73fae924bd355a7fccde8bb49ed3039f4368f3032ba981d5"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/TP3__PogoPad_D1.0mm.kicad_mod",
+      "bytes": 5942,
+      "sha256": "49e8d65ce8130792d4600089ba4d0c0dd44c6f38ac818d4d798ee5b77059466b"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/TP4__PogoPad_D1.0mm.kicad_mod",
+      "bytes": 5946,
+      "sha256": "6459c067b175cadefe73e07794c1b49978e8c6b089ce5802cd774de909b80336"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/TP5__PogoPad_D1.0mm.kicad_mod",
+      "bytes": 5938,
+      "sha256": "e4aff72f728d54c92819583f5efefac645ebea853d588ff8a5fa6cb92844aea8"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/TP6__PogoPad_D1.0mm.kicad_mod",
+      "bytes": 5946,
+      "sha256": "cd61be30192dda567448e2a449d14c1ee4197363b375faa2cd076b67a27280b9"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/TP7__PogoPad_D1.0mm.kicad_mod",
+      "bytes": 5946,
+      "sha256": "e8c39e417a9641cab4a26b1e49ef56bca4872328f141040c4b8ebff9916758e1"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/TP8__PogoPad_D1.0mm.kicad_mod",
+      "bytes": 5940,
+      "sha256": "c15dbabd387dfebca15575bb1a7ebe5f8222f65b43fe519ebb57594293a9f41c"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/TP9__PogoPad_D1.0mm.kicad_mod",
+      "bytes": 5940,
+      "sha256": "25eb419acbc98c57c3fb22e72b1deea816ac35ceb8f5ca60eb2ae87f0825adf2"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/U1__Raytac_MDBT50Q_R0B.kicad_mod",
+      "bytes": 15670,
+      "sha256": "51aef52b74a60cdcd0882f3ec3ebd19c23013b1c24f918e989104fa21f2766b1"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/U2__nPM1300_QFN32_Reference.kicad_mod",
+      "bytes": 9162,
+      "sha256": "9df447b9b96bc2b4c2046a682188c29debf5164c909bb665d36b4801831e9af5"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/U4__Texas_DRT-3_R0B.kicad_mod",
+      "bytes": 4971,
+      "sha256": "1e0d42eb30f0c7d27d8b559518eea54de4931a0e6be830a401e8e5138a4d4576"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/U5__WSON-8-1EP_8x6mm_P1.27mm_EP3.4x4.3mm.kicad_mod",
+      "bytes": 6374,
+      "sha256": "723fc2e2d42601952207e8ab828f6f3ba0f228acefaf84d2dbe37d5cfb78a173"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_E1_Release.pretty/U6__TI_DCK_SC70_3_R0B.kicad_mod",
+      "bytes": 4734,
+      "sha256": "8a08dfbd352166bd18cf2197208741060a082e6166a9638d5b888b79cf563539"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_R1_E1_PROTOTYPE.kicad_dru",
+      "bytes": 1793,
+      "sha256": "1d77d0ccfb86603e316149cf8dc873cbb134e1cc5ac28e2834af1e39f7dec228"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_R1_E1_PROTOTYPE.kicad_pcb",
+      "bytes": 1160420,
+      "sha256": "78fe28acde6ceb3ab33aac8af503d4c418540cce31979cc91d3add5e5d0bec36"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_R1_E1_PROTOTYPE.kicad_pro",
+      "bytes": 18292,
+      "sha256": "5aa1cf00ef686fe1953dae10c5770f88d3fc8213e220075f64641fdc4a51f113"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Anticipy_R1_E1_PROTOTYPE.kicad_sch",
+      "bytes": 261151,
+      "sha256": "763bbfa78953252aa27d7553bfb6abf9cb398650fb0bdceafd0432aee5e44021"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Assembly_BOM.csv",
+      "bytes": 7417,
+      "sha256": "e09cd506c8c8e7b67d0ba5988dd4bee4316438f4c171eb3a845be3c2d39f2923"
+    },
+    {
+      "path": "E1P1/pcb/electrical/E1_BOM.csv",
+      "bytes": 16766,
+      "sha256": "c9f7d92d488e856c3c71aafdfad122324d3cb44df070cd0dae24aa95889b6de6"
+    },
+    {
+      "path": "E1P1/pcb/electrical/E1_expected_connectivity.json",
+      "bytes": 8380,
+      "sha256": "5b346736460be2a1a6e5dd1e208c9b5112c9f2e067bab3d43fab4f10d6bbfe9d"
+    },
+    {
+      "path": "E1P1/pcb/electrical/E1_footprint_map.json",
+      "bytes": 3818,
+      "sha256": "c53f33fd43da7095247f50619750dc356fa4716f622de4d9c495cad4bdc088ae"
+    },
+    {
+      "path": "E1P1/pcb/electrical/KICAD-LIBRARY-LICENSE.md",
+      "bytes": 2101,
+      "sha256": "45d2bce75e5a4208f5afb01b8fb2c406e700371c4fe2b5f5cd5c443d46db4d8f"
+    },
+    {
+      "path": "E1P1/pcb/electrical/LIBRARY_PROVENANCE.md",
+      "bytes": 1092,
+      "sha256": "1878e70c9771ab7590c426780501381115bb8d9eff6b129fbc61f1a805e69f49"
+    },
+    {
+      "path": "E1P1/pcb/electrical/Procurement_BOM.csv",
+      "bytes": 2933,
+      "sha256": "76c8703f702637e3e0b9e169b7fb9ecdd1ac970f0a8f5fc0c3b1735c798b48a7"
+    },
+    {
+      "path": "E1P1/pcb/electrical/fp-lib-table",
+      "bytes": 213,
+      "sha256": "f67dbd15c523b9bbb2d1d773c383221bae74eaf946ad22314f10b90115180083"
+    },
+    {
+      "path": "E1P1/pcb/electrical/models/Button_Switch_SMD__SW_SPST_B3U-1000P.step",
+      "bytes": 69351,
+      "sha256": "4b5ee4da023d76030db22a90f5835f3691d5e4e9fc41b3f37b2c5922c65d307b"
+    },
+    {
+      "path": "E1P1/pcb/electrical/models/Capacitor_SMD__C_0201_0603Metric.step",
+      "bytes": 43984,
+      "sha256": "453afba1c6e8ad718c79c3b370606cdf345221d24ac8202778236e8b3bfb19c7"
+    },
+    {
+      "path": "E1P1/pcb/electrical/models/Capacitor_SMD__C_0402_1005Metric.step",
+      "bytes": 43502,
+      "sha256": "03e44c4b2b727b8d4b6b1fd598cbd12dd5e614f1dfeefa96a92a07e3a3b312a2"
+    },
+    {
+      "path": "E1P1/pcb/electrical/models/Capacitor_SMD__C_0603_1608Metric.step",
+      "bytes": 43450,
+      "sha256": "4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1"
+    },
+    {
+      "path": "E1P1/pcb/electrical/models/Capacitor_SMD__C_0805_2012Metric.step",
+      "bytes": 43618,
+      "sha256": "9a669c1a2f1ea25b88b401acef6efeaa80a067bd7da9db6993de719a7fbe155c"
+    },
+    {
+      "path": "E1P1/pcb/electrical/models/D2_planning_envelope.step",
+      "bytes": 15595,
+      "sha256": "7ed16ffbb11f8302c4f1b5218cb5ef30fab9f0581823a4eecc0315cfb5e85ebe"
+    },
+    {
+      "path": "E1P1/pcb/electrical/models/Diode_SMD__D_SOD-323.step",
+      "bytes": 52730,
+      "sha256": "cd8619b2119cd95683a2c5e660ab4f2d4db674f696cd6f9e9756f221171a214d"
+    },
+    {
+      "path": "E1P1/pcb/electrical/models/Inductor_SMD__L_Murata_DFE201610P.step",
+      "bytes": 22952,
+      "sha256": "0829341686f236e20609ac5135af9e13e03950a3b8eacf3588f502bb45483e97"
+    },
+    {
+      "path": "E1P1/pcb/electrical/models/J1_planning_envelope.step",
+      "bytes": 15525,
+      "sha256": "e5176a33761dfc8fcf3fe7c2ffa10b6d61e0ed46601fcaf9e0c7196acae54c04"
+    },
+    {
+      "path": "E1P1/pcb/electrical/models/LED1_planning_envelope.step",
+      "bytes": 15522,
+      "sha256": "3c7fd636bf974f44486c89d3d96d323fb27f2b7c1b702c61dbe170fc5a3e1e5b"
+    },
+    {
+      "path": "E1P1/pcb/electrical/models/MIC1_planning_envelope.step",
+      "bytes": 15535,
+      "sha256": "5978592f414fc7656be7d1357500c80b463d6491e09fa728e7560966ff8be80b"
+    },
+    {
+      "path": "E1P1/pcb/electrical/models/MIC2_planning_envelope.step",
+      "bytes": 15535,
+      "sha256": "6545e341440cf385fcf3cfe6571080ed3b1a9520f2dd05e71a0afd0b30738f9d"
+    },
+    {
+      "path": "E1P1/pcb/electrical/models/PLANNING_MODELS.json",
+      "bytes": 760,
+      "sha256": "5844c8f8d593f5d7aedad98613c815da647a76cafd80f34a959ec929909836dc"
+    },
+    {
+      "path": "E1P1/pcb/electrical/models/Package_TO_SOT_SMD__SOT-23.step",
+      "bytes": 60296,
+      "sha256": "dd5d1711204e1d8d26cd11490923bd84340820baa69538c385a4300ec2539bc0"
+    },
+    {
+      "path": "E1P1/pcb/electrical/models/Package_TO_SOT_SMD__SOT-323_SC-70.step",
+      "bytes": 64345,
+      "sha256": "acbf75a28fe41aa90efb38cd2b78220968d6eb6ebae1625dfd532dbeb268fece"
+    },
+    {
+      "path": "E1P1/pcb/electrical/models/Package_TO_SOT_SMD__Texas_DRT-3.step",
+      "bytes": 49485,
+      "sha256": "826a53de4a90e738d560e4a906235ba95541b3da40b62f22d8f9e30fd9f39744"
+    },
+    {
+      "path": "E1P1/pcb/electrical/models/RF_Module__Raytac_MDBT50Q.step",
+      "bytes": 39186,
+      "sha256": "24aec576333a0c2c487689ecdb5d9b3be3861ef684995ffd3a47f484e1828157"
+    },
+    {
+      "path": "E1P1/pcb/electrical/models/Resistor_SMD__R_0201_0603Metric.step",
+      "bytes": 40756,
+      "sha256": "33893da67f0e1d523ba6096fc78c9fb67e7770efb072fcf51f480f9365706a1d"
+    },
+    {
+      "path": "E1P1/pcb/electrical/models/Resistor_SMD__R_0402_1005Metric.step",
+      "bytes": 40756,
+      "sha256": "91507e5af4251cb4ef38e04889c9b98da29904432bd83786bba13ae9b605eacb"
+    },
+    {
+      "path": "E1P1/pcb/electrical/models/U2_planning_envelope.step",
+      "bytes": 15522,
+      "sha256": "8283733c8496be43d87308f3f3089e1535ead85c087b3229b0c8fa4aecd89a39"
+    },
+    {
+      "path": "E1P1/pcb/electrical/models/U5_planning_envelope.step",
+      "bytes": 15522,
+      "sha256": "50422cfc7535afef3fa7cb9031193c239ecef40ce503f5db543557fbe1efdf57"
+    },
+    {
+      "path": "E1P1/pcb/electrical/sym-lib-table",
+      "bytes": 161,
+      "sha256": "17f1b339b019201629735a5a1201ba2b9a1ce76c267f2bb557825423a23b5e85"
+    },
+    {
+      "path": "E1P1/pcb/manufacturing/All_137_Vias_Mandatory_Type_VII.csv",
+      "bytes": 21100,
+      "sha256": "4518799b9db3eb4288c57984d7c0f265590bb5d05bd069bad4fddf3be8a5faaa"
+    },
+    {
+      "path": "E1P1/pcb/manufacturing/Connectivity.ipc",
+      "bytes": 28833,
+      "sha256": "122683ade37f546c0fd1bf4b2ca38b09e43fa1fae579ba02805f5f6b41f3ce58"
+    },
+    {
+      "path": "E1P1/pcb/manufacturing/Do_Not_Place.csv",
+      "bytes": 134,
+      "sha256": "1ff9ce08d160b979fdb9c31d51a676d00980b3211c0a5a63feb80566bc3e6a54"
+    },
+    {
+      "path": "E1P1/pcb/manufacturing/E1P1_Board_and_Nominal_Components.step",
+      "bytes": 1080719,
+      "sha256": "b2be024297011a00b522dfd8c0a4c6a20d44a370828bb3a5116b205427b890b8"
+    },
+    {
+      "path": "E1P1/pcb/manufacturing/External_Assembly_BOM.csv",
+      "bytes": 459,
+      "sha256": "90e27fd1fcb2d66df8eb25defe5a9d8c52d957d006849243442654ea59d325ca"
+    },
+    {
+      "path": "E1P1/pcb/manufacturing/Fabrication_and_Assembly_Specification.md",
+      "bytes": 8505,
+      "sha256": "51a3069314da2e03f267ea7c3ca7eb1f85e69dfcca36943aec4681e6c7cc2570"
+    },
+    {
+      "path": "E1P1/pcb/manufacturing/Machine_Assembly_BOM.csv",
+      "bytes": 9405,
+      "sha256": "40bbc7823f2dc9cc62a073a5d234c1607ad109053a3b17ef0a545397216fbb48"
+    },
+    {
+      "path": "E1P1/pcb/manufacturing/Placement.csv",
+      "bytes": 3793,
+      "sha256": "b2a9657a1ce56e00b65d042f3e90406b0b9a344e82fa129e094825f7cb829abb"
+    },
+    {
+      "path": "E1P1/pcb/manufacturing/Procurement_BOM_20_Boards.csv",
+      "bytes": 2933,
+      "sha256": "76c8703f702637e3e0b9e169b7fb9ecdd1ac970f0a8f5fc0c3b1735c798b48a7"
+    },
+    {
+      "path": "E1P1/pcb/manufacturing/assembly_stencil_nominal/Anticipy_R1_E1_PROTOTYPE-B_Paste.gbp",
+      "bytes": 1432,
+      "sha256": "807fd17360162af12d122a9b92051581a1f33bbec409f862479d2a6f69c106d1"
+    },
+    {
+      "path": "E1P1/pcb/manufacturing/assembly_stencil_nominal/Anticipy_R1_E1_PROTOTYPE-F_Paste.gtp",
+      "bytes": 9325,
+      "sha256": "4e77ce7ba4a4a932bc72f7385e8153a041d9210f7bf195c7becd58c180c25072"
+    },
+    {
+      "path": "E1P1/pcb/manufacturing/assembly_stencil_nominal/Anticipy_R1_E1_PROTOTYPE-job.gbrjob",
+      "bytes": 2810,
+      "sha256": "ca369b0043fff05353467e2ec1420232e067494ff851ce27e50cd301c5ca17b3"
+    },
+    {
+      "path": "E1P1/pcb/manufacturing/drill/Anticipy_R1_E1_PROTOTYPE-NPTH.drl",
+      "bytes": 264,
+      "sha256": "657a9c73daa0bf1f0e71c64ce7295ad13fef2bfeb755452ce9c8acd12a9e246c"
+    },
+    {
+      "path": "E1P1/pcb/manufacturing/drill/Anticipy_R1_E1_PROTOTYPE-PTH.drl",
+      "bytes": 2531,
+      "sha256": "dce8539b2802719d3b9fd46fb950155d01c6d4d7eff20bd31bd1307e2db94f87"
+    },
+    {
+      "path": "E1P1/pcb/manufacturing/drill_report.txt",
+      "bytes": 832,
+      "sha256": "a0f52a112972ae35204ddb6cb895457e0ecafa9fba4d9521170c060beb3b2383"
+    },
+    {
+      "path": "E1P1/pcb/manufacturing/gerbers/Anticipy_R1_E1_PROTOTYPE-B_Cu.gbl",
+      "bytes": 164436,
+      "sha256": "e60f6e8175c0e7f9fa282528ca6e86f2cf7461021444a1c0960912dbac286d1a"
+    },
+    {
+      "path": "E1P1/pcb/manufacturing/gerbers/Anticipy_R1_E1_PROTOTYPE-B_Mask.gbs",
+      "bytes": 2580,
+      "sha256": "4d622646380a87ccfe476ef4f5280c256a6e8237abe8f6303827927a084c6b9a"
+    },
+    {
+      "path": "E1P1/pcb/manufacturing/gerbers/Anticipy_R1_E1_PROTOTYPE-B_Paste.gbp",
+      "bytes": 1432,
+      "sha256": "807fd17360162af12d122a9b92051581a1f33bbec409f862479d2a6f69c106d1"
+    },
+    {
+      "path": "E1P1/pcb/manufacturing/gerbers/Anticipy_R1_E1_PROTOTYPE-B_Silkscreen.gbo",
+      "bytes": 2590,
+      "sha256": "45e04a09e892aef4244bdd0180c1460253ff2dd38b356f701a86e66bb7d62ec1"
+    },
+    {
+      "path": "E1P1/pcb/manufacturing/gerbers/Anticipy_R1_E1_PROTOTYPE-Edge_Cuts.gm1",
+      "bytes": 1459,
+      "sha256": "542e1c75aa22ccc2d7522a22131af287eb1c4df419a5a82b2a9d5925c028fc9a"
+    },
+    {
+      "path": "E1P1/pcb/manufacturing/gerbers/Anticipy_R1_E1_PROTOTYPE-F_Cu.gtl",
+      "bytes": 212377,
+      "sha256": "7ce93fa664532531f534ada32a101f644339fe888377de5350b5653de39acc02"
+    },
+    {
+      "path": "E1P1/pcb/manufacturing/gerbers/Anticipy_R1_E1_PROTOTYPE-F_Mask.gts",
+      "bytes": 9605,
+      "sha256": "af97cd9aee226fd3e60102f0099e4532122488423500bdac6d13e9555a312371"
+    },
+    {
+      "path": "E1P1/pcb/manufacturing/gerbers/Anticipy_R1_E1_PROTOTYPE-F_Paste.gtp",
+      "bytes": 9325,
+      "sha256": "4e77ce7ba4a4a932bc72f7385e8153a041d9210f7bf195c7becd58c180c25072"
+    },
+    {
+      "path": "E1P1/pcb/manufacturing/gerbers/Anticipy_R1_E1_PROTOTYPE-F_Silkscreen.gto",
+      "bytes": 16795,
+      "sha256": "a4f6a41dc994ae7c08beef4cee268f865e667f1b1ee5781f66a9f3c220551b69"
+    },
+    {
+      "path": "E1P1/pcb/manufacturing/gerbers/Anticipy_R1_E1_PROTOTYPE-In1_Cu.g1",
+      "bytes": 113396,
+      "sha256": "b1dddd88e3c98f19fd8e195e14960defb3907ca476608e31df18b0ce93d212ff"
+    },
+    {
+      "path": "E1P1/pcb/manufacturing/gerbers/Anticipy_R1_E1_PROTOTYPE-In2_Cu.g2",
+      "bytes": 130308,
+      "sha256": "ae12fe3e5c456d47220a2a0efbdaf6906d4a6250446f74efe61c69c49110c661"
+    },
+    {
+      "path": "E1P1/pcb/manufacturing/gerbers/Anticipy_R1_E1_PROTOTYPE-job.gbrjob",
+      "bytes": 4051,
+      "sha256": "6594714ee88e39560bb0cab9dfe06834a0da07ed85913f67f3a04d7183871ab1"
+    },
+    {
+      "path": "E1P1/pcb/reproducibility/README.md",
+      "bytes": 2074,
+      "sha256": "a66c9441f4b0bf39be16d107d2cf6ea84033d6ba9497d8fce0199108d684bdb5"
+    },
+    {
+      "path": "E1P1/pcb/reproducibility/analyze_routes.py",
+      "bytes": 7941,
+      "sha256": "3170d615ecffbb7d3f0a634d1610188ea5f949567065135f57eef55cc0706adc"
+    },
+    {
+      "path": "E1P1/pcb/reproducibility/audit_native.py",
+      "bytes": 6105,
+      "sha256": "d4e96735135d96f130fdf271c6863d4b650ac5e5295741cf4b5ae06b70f56e05"
+    },
+    {
+      "path": "E1P1/pcb/reproducibility/export_current.py",
+      "bytes": 2850,
+      "sha256": "d5cfff5cdf8aadafec70da80ba8da89fd6aa58f7ac03b3630962310d65d42889"
+    },
+    {
+      "path": "E1P1/pcb/reproducibility/export_fitted_stencil.py",
+      "bytes": 2933,
+      "sha256": "05115d5bd19f0331efa2319e9a8529c78ce8cd17b6dbeefadf4f395912f3e39f"
+    },
+    {
+      "path": "E1P1/pcb/reproducibility/finalize_cam_metadata.py",
+      "bytes": 1696,
+      "sha256": "55742afcbe019e02aaff8094a803c5786629c9e9ea13143082401924d8f0fe14"
+    },
+    {
+      "path": "E1P1/pcb/reproducibility/verify_native.py",
+      "bytes": 2023,
+      "sha256": "f30fb3eba3aaa69d4253787e4b229298a889a8cd0c7dcdd08e57de7a30a5aaa9"
+    },
+    {
+      "path": "E1P1/pcb/verification/CAM_Job_Metadata_Receipt.json",
+      "bytes": 504,
+      "sha256": "bed4b610349b04d27705e58f8bd6d5e32334a3420367e58eedfa7d98a9aad9b6"
+    },
+    {
+      "path": "E1P1/pcb/verification/Component_Metadata_Change_Log.json",
+      "bytes": 46760,
+      "sha256": "522b5769cba8750dabe9cb3228417f2e805cd21ba636860ada20e388ee52c5b1"
+    },
+    {
+      "path": "E1P1/pcb/verification/Component_Release_Decisions.json",
+      "bytes": 6498,
+      "sha256": "db7099e87eeb90a5557d105633b5807e2e61567df3a167163ee2b5bd852fb310"
+    },
+    {
+      "path": "E1P1/pcb/verification/Component_Release_Decisions.md",
+      "bytes": 9144,
+      "sha256": "692a3b32f626f1a89fd9c1a3279242f17d0320627e34b38324e3e1adfb7b0bf7"
+    },
+    {
+      "path": "E1P1/pcb/verification/E1P1_Front_Copper_and_Placement.png",
+      "bytes": 262982,
+      "sha256": "1528ff306d1dfc013321cbdbe4e394e821cdba2892fea2de86f5c03927da8e24"
+    },
+    {
+      "path": "E1P1/pcb/verification/E1P1_Front_Copper_and_Placement.svg",
+      "bytes": 313432,
+      "sha256": "60fc22d8f62eb9ce95917a97b021fb3bfb779f8748f0f0bac547dc26006ae660"
+    },
+    {
+      "path": "E1P1/pcb/verification/Independent_Metadata_Audit.json",
+      "bytes": 425045,
+      "sha256": "b087ab55b28da358cc3dab7ab1106bb825a93f2b5bf150636bc4b917712caa65"
+    },
+    {
+      "path": "E1P1/pcb/verification/Independent_Release_And_Case_Audit.md",
+      "bytes": 4049,
+      "sha256": "894f8883e36a05130641e08b358aee3e9d52048ac1a4d4da0134e8e52e08633d"
+    },
+    {
+      "path": "E1P1/pcb/verification/Manufacturing_PDF_Receipt.json",
+      "bytes": 364,
+      "sha256": "233ef3e59a56d7e9ae4e5828fc6591a0af87a8ec5645d9a9f3231f5f78cc286f"
+    },
+    {
+      "path": "E1P1/pcb/verification/STEP_Export_Receipt.json",
+      "bytes": 1603,
+      "sha256": "692087096863214a8937a3e34551516082c9d85f6177d77e5c30258577f6752a"
+    },
+    {
+      "path": "E1P1/pcb/verification/STEP_Geometry_Check.json",
+      "bytes": 166,
+      "sha256": "c759a1c41f8a16194df7bf2fe42a6d83efee265480969f03aa090d2b4083f780"
+    },
+    {
+      "path": "E1P1/pcb/verification/STEP_Population_Check.json",
+      "bytes": 1043,
+      "sha256": "9f66f2ee58310c495f3cdd8d67efb60b527806fd59ea4045296698921057c210"
+    },
+    {
+      "path": "E1P1/pcb/verification/Selected_Parts_Oval_Case_Clearance.json",
+      "bytes": 22002,
+      "sha256": "55372977a92bce17db244f258923b4b455b72bf12445e442fbef892cbbd1f864"
+    },
+    {
+      "path": "E1P1/pcb/verification/all_45_nets.csv",
+      "bytes": 3291,
+      "sha256": "8d827b84554d60603074be8b78a28898d10640ca406747814e41b425b0a3ae81"
+    },
+    {
+      "path": "E1P1/pcb/verification/assembly_bottom.log",
+      "bytes": 196,
+      "sha256": "a0481f69f530e1695040b2257139f239311102a242ed43a82f768d0785125ebf"
+    },
+    {
+      "path": "E1P1/pcb/verification/assembly_top.log",
+      "bytes": 193,
+      "sha256": "67d3ae8811e93118ed9d7ca22bc115d58a8f0084e0b1deec629da08a35e3454a"
+    },
+    {
+      "path": "E1P1/pcb/verification/copper_pdf.log",
+      "bytes": 194,
+      "sha256": "52fad5a850b739631a01697514df2d3e179b52d4c2f49c4cfcb96a53344ee08a"
+    },
+    {
+      "path": "E1P1/pcb/verification/critical_paths.json",
+      "bytes": 5339,
+      "sha256": "39359413511f09b0a9c881ba1d066e1195e9122825e43512e029bdbd776f2f21"
+    },
+    {
+      "path": "E1P1/pcb/verification/drc_parity.json",
+      "bytes": 404,
+      "sha256": "38924fdb07287aa4525645b59659203aba0bf51a792e65cbebaf0a2594090bd9"
+    },
+    {
+      "path": "E1P1/pcb/verification/drc_parity.log",
+      "bytes": 334,
+      "sha256": "7db802b81a8d5456962d9c9c965f37c506609d7d633dd6daebb2121806a6f299"
+    },
+    {
+      "path": "E1P1/pcb/verification/drills.log",
+      "bytes": 866,
+      "sha256": "84c3573cb6f1f4a1f5e5c8b40c481d53a95e69538aa33ee0a43ba7bab94e3fa2"
+    },
+    {
+      "path": "E1P1/pcb/verification/engineering_decisions/C13_C23_Selection.md",
+      "bytes": 10695,
+      "sha256": "24c7bef2c043e45f9e45af1171c21458ff113b9443345659b6ee777de9081d45"
+    },
+    {
+      "path": "E1P1/pcb/verification/engineering_decisions/Component_Release_Decisions.json",
+      "bytes": 5952,
+      "sha256": "9904649dfe55727150614ca01b989811b4842926b4af2bd4e19ae29983a0a8e3"
+    },
+    {
+      "path": "E1P1/pcb/verification/engineering_decisions/Component_Release_Decisions.md",
+      "bytes": 9144,
+      "sha256": "692a3b32f626f1a89fd9c1a3279242f17d0320627e34b38324e3e1adfb7b0bf7"
+    },
+    {
+      "path": "E1P1/pcb/verification/engineering_decisions/Electrical_Manufacturing_Audit.md",
+      "bytes": 15067,
+      "sha256": "6741a2dd534a9e8ee71146346d05fcc8a64d23c0c484d2e888c3cb1c003c2254"
+    },
+    {
+      "path": "E1P1/pcb/verification/engineering_decisions/Final_Mask_and_Via_Finish_Receipt.json",
+      "bytes": 937,
+      "sha256": "3cffef39e74bf9aecf9e5ffbf03f6f15cdc45bc2c1bedab6648e407aa467103a"
+    },
+    {
+      "path": "E1P1/pcb/verification/engineering_decisions/Independent_Metadata_Audit.json",
+      "bytes": 425045,
+      "sha256": "b087ab55b28da358cc3dab7ab1106bb825a93f2b5bf150636bc4b917712caa65"
+    },
+    {
+      "path": "E1P1/pcb/verification/engineering_decisions/Independent_Release_And_Case_Audit.md",
+      "bytes": 4049,
+      "sha256": "894f8883e36a05130641e08b358aee3e9d52048ac1a4d4da0134e8e52e08633d"
+    },
+    {
+      "path": "E1P1/pcb/verification/engineering_decisions/Selected_Parts_Oval_Case_Clearance.json",
+      "bytes": 22002,
+      "sha256": "55372977a92bce17db244f258923b4b455b72bf12445e442fbef892cbbd1f864"
+    },
+    {
+      "path": "E1P1/pcb/verification/engineering_decisions/U2_Mask_Freeze_Receipt.json",
+      "bytes": 891,
+      "sha256": "d8e96897fda91863e8d4ccfd921441bc6e49d40f4d82965c0f70140c703aed33"
+    },
+    {
+      "path": "E1P1/pcb/verification/engineering_decisions/U4_Geometry_Freeze_Receipt.json",
+      "bytes": 5709,
+      "sha256": "416af2ac1cfc63aa32137cc376823796f580edfb97a87ea2edd631e326eca4b3"
+    },
+    {
+      "path": "E1P1/pcb/verification/engineering_decisions/USB_Supplier_Calculator_Source_Receipt.json",
+      "bytes": 9235,
+      "sha256": "029cb77c8c2365a9ef2c2d38ed489d0f3e5c2cb48bf848221be8c34c8b21e455"
+    },
+    {
+      "path": "E1P1/pcb/verification/engineering_decisions/USB_actual_reference_confirmation.json",
+      "bytes": 887,
+      "sha256": "920cdb4f04ffd77ee51ee59c09ccf441a9b9f2b2c71b44515752c80988b542e2"
+    },
+    {
+      "path": "E1P1/pcb/verification/engineering_decisions/Updated_PCB_Mechanical_Contract.json",
+      "bytes": 631923,
+      "sha256": "99b6b503237c67eaafb6493ed9d3010c23ae1f13b2ff733651eff7781a01f729"
+    },
+    {
+      "path": "E1P1/pcb/verification/engineering_decisions/all_vias_fitted_smt_intersection.json",
+      "bytes": 11118,
+      "sha256": "766b02cef2fb372e9e19558332d7c87258173fe961f5a77fd209e2a2a68b693e"
+    },
+    {
+      "path": "E1P1/pcb/verification/engineering_decisions/corrected_U4_body_clearance.json",
+      "bytes": 326,
+      "sha256": "bac16c5e540ec9aadcb433ed0a141d0e5287a1efd71c8f71bfddde70de1d2afd"
+    },
+    {
+      "path": "E1P1/pcb/verification/engineering_decisions/negative_courtyard_body_screen.json",
+      "bytes": 17713,
+      "sha256": "ff5bbea6c7b7f684e9898ea95ca3788a75c06c39e3e00329c9b7e5bcc3e9177c"
+    },
+    {
+      "path": "E1P1/pcb/verification/engineering_decisions/stencil_area_ratios.json",
+      "bytes": 96868,
+      "sha256": "b7757aa53a4ce4f2af748dee00369c5b2f28439f5c66ced370e9025094a8d7bd"
+    },
+    {
+      "path": "E1P1/pcb/verification/erc.json",
+      "bytes": 488,
+      "sha256": "0be24d15571951cec0168a2dd11a9d57a31a44291bee7ff82d190c45a1a68598"
+    },
+    {
+      "path": "E1P1/pcb/verification/erc.log",
+      "bytes": 269,
+      "sha256": "0025cb02aa812390999bd5b5db9a7208ed925425749e77bb02d702da276f3740"
+    },
+    {
+      "path": "E1P1/pcb/verification/export_receipt.json",
+      "bytes": 6939,
+      "sha256": "d478ca076e61510dc374f1e78b22ce8f3bddc79fe7cd2e9fea7407e1100ee7e7"
+    },
+    {
+      "path": "E1P1/pcb/verification/final_native_checks.json",
+      "bytes": 3060,
+      "sha256": "7a40b43a8848d4a7fd1af1c18587f4a33bd552d1a64d0134ec7574e881b78cd1"
+    },
+    {
+      "path": "E1P1/pcb/verification/fitted_stencil.log",
+      "bytes": 464,
+      "sha256": "04c27f3d5a36479827fe59625f87cde71ae113831a80210bf5a7c3798acdf3c8"
+    },
+    {
+      "path": "E1P1/pcb/verification/fitted_stencil_receipt.json",
+      "bytes": 1862,
+      "sha256": "9d61d23706e0ecf4b2fef85f6f5cf32c9770c1e7e26a19422b51dc2c6041c857"
+    },
+    {
+      "path": "E1P1/pcb/verification/gerbers_saved_fills.log",
+      "bytes": 2365,
+      "sha256": "8769fc83ad28ab2139fe4d07c664eab1489acca8e12b9a79bb8f10cbfe1027ac"
+    },
+    {
+      "path": "E1P1/pcb/verification/independent_copper_connectivity.json",
+      "bytes": 12519,
+      "sha256": "67fc23d5712d1ccea41cfb07633f99dfa39d81f2bbd0ea8dd15f0949b8a2c7fd"
+    },
+    {
+      "path": "E1P1/pcb/verification/ipc356.log",
+      "bytes": 36,
+      "sha256": "953c01d0a9053560e7b3e678093204c3e8498b6baae5698766180843079e6cc1"
+    },
+    {
+      "path": "E1P1/pcb/verification/manufacturing_consistency.json",
+      "bytes": 537,
+      "sha256": "c1600009938b4adff3c82fb17b62d23e89edef8eeb2c5b94663f355f13afe2eb"
+    },
+    {
+      "path": "E1P1/pcb/verification/native_board_audit.json",
+      "bytes": 9891,
+      "sha256": "9d4b6671eccbb081194b86181ffe4830427bec303ce0675378bfdbe52e8d819c"
+    },
+    {
+      "path": "E1P1/pcb/verification/native_job_before_profile_size_correction.json",
+      "bytes": 4051,
+      "sha256": "fa031cec02c10f951568ee40bb6f82334ff9befd338866ab31cd9418c2df33b2"
+    },
+    {
+      "path": "E1P1/pcb/verification/native_netlist.xml",
+      "bytes": 176245,
+      "sha256": "e84bb5ce15d023e4084ed05bbf519515ec81f70e87bdd4d86126426a0edf52db"
+    },
+    {
+      "path": "E1P1/pcb/verification/native_population.json",
+      "bytes": 17107,
+      "sha256": "a486a881420b378fd5ee1b03fad50149acd19cfb15ba16e87facb57ee9c29021"
+    },
+    {
+      "path": "E1P1/pcb/verification/netlist.log",
+      "bytes": 66,
+      "sha256": "48d1742e4eb8d891c783fb9298eeb3b7b38196001af8c8f9457e38ebf0e40b99"
+    },
+    {
+      "path": "E1P1/pcb/verification/pcb_mechanical_contract.json",
+      "bytes": 631920,
+      "sha256": "36b4f370ce584a81f6603b453867acf4dcb8f2ca2bd35bf09e306cc1f25bf359"
+    },
+    {
+      "path": "E1P1/pcb/verification/positions.log",
+      "bytes": 196,
+      "sha256": "d1b06ad9fdf7f4b748a2992eae584f02ac900c39af44c5fc6139148bb2ec364e"
+    },
+    {
+      "path": "E1P1/pcb/verification/projected_return_gaps.json",
+      "bytes": 163763,
+      "sha256": "125dc35b250c26474406f76890e70707e2b11051a0d3a2c9f9654d344bcc366e"
+    },
+    {
+      "path": "E1P1/pcb/verification/routing_geometry.json",
+      "bytes": 939420,
+      "sha256": "9c3f74a22710c4664920c83faeae0b51f59c6590740658bbc7c2be478b5cd764"
+    },
+    {
+      "path": "E1P1/pcb/verification/schematic.log",
+      "bytes": 190,
+      "sha256": "3e1beca69d92595aa1b14b889015fcd942e6371cf5c454cd3a282449e78e4506"
+    },
+    {
+      "path": "E1P1/procurement/Email_Parts_Summary.txt",
+      "bytes": 928,
+      "sha256": "7ead4513d6836d725d3ce8f375b370665e2f42bf1907e422699de6932d86d12e"
+    },
+    {
+      "path": "E1P1/procurement/Missing_Parts.csv",
+      "bytes": 22473,
+      "sha256": "b0118ea06dc209656f270e5144079710f3cb8d1510006cad1364db42c026dd2e"
+    },
+    {
+      "path": "E1P1/procurement/Missing_Parts.md",
+      "bytes": 5649,
+      "sha256": "9b3848c6be90101a42ab825dc23986a3cfb38410e2f1dc60b4e626cd7293e71d"
+    },
+    {
+      "path": "E1P1/procurement/Procurement_Reconciliation.json",
+      "bytes": 444,
+      "sha256": "54dda76237373fffe1acc7815bce569fa9b358d8094f76e329b64869ccb7d8c1"
+    },
+    {
+      "path": "E1P1/programming/Anticipy_E1P1_BUCK2_MAIN_FIRST_POWER.hex",
+      "bytes": 784063,
+      "sha256": "32f07cc6a49089f5488ea34ace23362a1aee2d62906eb0dfbf6f122faeda38d7"
+    },
+    {
+      "path": "E1P1/programming/Programming_Readme.md",
+      "bytes": 3465,
+      "sha256": "fb0082763051a496c6d8e87c806cb51fb91e7f8a4679d3a7a55c639775b241dd"
+    },
+    {
+      "path": "E1P1/programming/Programming_Receipt.json",
+      "bytes": 8115,
+      "sha256": "c793b95186e50ab3c3e6490889b2cac0dbf3c961adef05668ed7e86e965208d1"
+    },
+    {
+      "path": "E1P1/sourcing/Component_Decisions.json",
+      "bytes": 4942,
+      "sha256": "fb5ecaa67ad9dc29b4d54f6ddf6824b28c286f13c3a1c8ccb377c97e945272e7"
+    },
+    {
+      "path": "E1P1/sourcing/SMT_27_Group_Live_Stock_Refresh.json",
+      "bytes": 36295,
+      "sha256": "2c1c3ced64049b654c7705a034f41a6c1ab70af275ad6c016184adb27e9aab08"
+    },
+    {
+      "path": "E1P1/sourcing/SMT_27_Group_Live_Stock_Refresh.md",
+      "bytes": 8951,
+      "sha256": "a45a17982f05054576f33cd72e44fff76347c2088db8cf1b9bdaf323640b5617"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4316,
+      "sha256": "84d7c1d900e2e11dd8b54cd1dbbe4ce6743393874cca921b6f07b89cf7776d2a"
+    },
+    {
+      "path": "firmware_source/.gitignore",
+      "bytes": 48,
+      "sha256": "48c471a88955da9f9247da4c9d024cec7f397153a9067b5986b0b3baa6a1eeb7"
+    },
+    {
+      "path": "firmware_source/Dependencies.json",
+      "bytes": 1339,
+      "sha256": "2ff0e6755cda5247f931b2c1d0a047e88e1196c7766b50620fffa2e9db4fa672"
+    },
+    {
+      "path": "firmware_source/README.md",
+      "bytes": 5964,
+      "sha256": "f49f1b0e8b489f3cbdc13f4bce526c9079a59e93d3112f911bdb16631505c227"
+    },
+    {
+      "path": "firmware_source/SHA256SUMS",
+      "bytes": 27449,
+      "sha256": "f0c1610392d5c836641f8376329f94ce580ead0cffc8755ddce6b5e45b5d6adb"
+    },
+    {
+      "path": "firmware_source/Source_Image_Relationship.json",
+      "bytes": 2252,
+      "sha256": "eed01d0a39d2b181d8e2a4635d2de8c2caae2352b46a15577a77239c3162ff5b"
+    },
+    {
+      "path": "firmware_source/app/CMakeLists.txt",
+      "bytes": 3116,
+      "sha256": "c2bd9a799183e76ad826baec821e84bda4d61c850dc233d50616b2d1daf54474"
+    },
+    {
+      "path": "firmware_source/app/Kconfig",
+      "bytes": 320,
+      "sha256": "df58d0dbef58a8c11521e821124a9fdb6d9c1563bc676254c083029cebf74cfe"
+    },
+    {
+      "path": "firmware_source/app/OPUS-1.2.1-LICENSE.txt",
+      "bytes": 1928,
+      "sha256": "8338ce8d922bb4416ce3dd1e5680173332435e3f0755007ac7801ccd674fe682"
+    },
+    {
+      "path": "firmware_source/app/README.rst",
+      "bytes": 2774,
+      "sha256": "e72a57b4445241221a4b8f60b8edde007805fd689e1f5df1096f432dfd7195df"
+    },
+    {
+      "path": "firmware_source/app/boards/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "firmware_source/app/boards/anticipy/anticipy_e1/Kconfig",
+      "bytes": 122,
+      "sha256": "df1f157a250f21e0a1b8fbd4fe8e5a62a2fb8197c1419b9f61ae05632bcd4dba"
+    },
+    {
+      "path": "firmware_source/app/boards/anticipy/anticipy_e1/Kconfig.anticipy_e1",
+      "bytes": 51,
+      "sha256": "e55299024ac1cce29e77623b36f988f53544c0cbc63e1b515ba88bb8a01e72e3"
+    },
+    {
+      "path": "firmware_source/app/boards/anticipy/anticipy_e1/Kconfig.defconfig",
+      "bytes": 54,
+      "sha256": "c225d8519148bc11ef73f72121e47acc8b63f2e9f5439a54b20976c50498972f"
+    },
+    {
+      "path": "firmware_source/app/boards/anticipy/anticipy_e1/anticipy_e1_nrf52840.dts",
+      "bytes": 2908,
+      "sha256": "ac6a930539e7414336008be413111882add779b6e9b127a6db4ba37e49ac19a0"
+    },
+    {
+      "path": "firmware_source/app/boards/anticipy/anticipy_e1/anticipy_e1_nrf52840_defconfig",
+      "bytes": 84,
+      "sha256": "10690f44324b415f866feafff09f5dc2abf7e15f8c9de898136a9eb9fddef107"
+    },
+    {
+      "path": "firmware_source/app/boards/anticipy/anticipy_e1/board.cmake",
+      "bytes": 180,
+      "sha256": "9f16ef8cefecfc5884fc5625a47c966ccb09bf71bb34bfef448d419a07f9e7b3"
+    },
+    {
+      "path": "firmware_source/app/boards/anticipy/anticipy_e1/board.yml",
+      "bytes": 84,
+      "sha256": "d9f9958bfa3eb0e43b8890c928e54a8633f1c265d496816b25f343db0647c27f"
+    },
+    {
+      "path": "firmware_source/app/prj.conf",
+      "bytes": 3594,
+      "sha256": "30d75674e91a72559b62d34e3b60b2f6a13bf4bc90789119642210a9b42641f4"
+    },
+    {
+      "path": "firmware_source/app/src/battery_math.c",
+      "bytes": 901,
+      "sha256": "94cde0ff8096804d6b559f6eb1e6f7b8d687e266895dac41202184cc90828ee9"
+    },
+    {
+      "path": "firmware_source/app/src/battery_math.h",
+      "bytes": 290,
+      "sha256": "d708462f61458f20002423da6b340230c77743ddc019f7c76458ccfd85fc18ce"
+    },
+    {
+      "path": "firmware_source/app/src/battery_smoother.c",
+      "bytes": 1462,
+      "sha256": "2da61a90c2df5e9c1223268f844374ecf7ad6d5f2a5af2701f76afa2cd7fd2fc"
+    },
+    {
+      "path": "firmware_source/app/src/battery_smoother.h",
+      "bytes": 427,
+      "sha256": "2bbdb095355f0f86ce757b167a43c68008eb85b733183e09d158341d359f4174"
+    },
+    {
+      "path": "firmware_source/app/src/codec.c",
+      "bytes": 8564,
+      "sha256": "b3bb3a3629138905b02c262430d3aecf8253c94cab16f3a987e79fc6c1c0bef7"
+    },
+    {
+      "path": "firmware_source/app/src/codec.h",
+      "bytes": 400,
+      "sha256": "9e7fa798c3065a05b6ffee565dda555ee35e3f7243c09a883371f8cf5c2e0c65"
+    },
+    {
+      "path": "firmware_source/app/src/config.h",
+      "bytes": 2470,
+      "sha256": "a28989da55479a1cd3a3828be6d792b62e51ca2e90ea5bbbd0911ba3c5af353e"
+    },
+    {
+      "path": "firmware_source/app/src/e1_board.c",
+      "bytes": 5308,
+      "sha256": "211b9b83ec54c03dd6632a8a00ec571642b66ecf5e0a2205c8272c39cf398112"
+    },
+    {
+      "path": "firmware_source/app/src/e1_board.h",
+      "bytes": 278,
+      "sha256": "ca33f2c11a00120446a30e66d0268f56339e4eb279f2b923078687dae6031b48"
+    },
+    {
+      "path": "firmware_source/app/src/led.c",
+      "bytes": 2072,
+      "sha256": "fb1424b32cb67abd2aa374834f788e1ad0079e760fb09052f2d5c9935052825a"
+    },
+    {
+      "path": "firmware_source/app/src/led.h",
+      "bytes": 181,
+      "sha256": "457b047647407f42c174cc6764bebb4af8e1b3c05d5e14d2c17b8006ec05ebc5"
+    },
+    {
+      "path": "firmware_source/app/src/lib/battery/battery.c",
+      "bytes": 2405,
+      "sha256": "31332d4f10fe174a3f5fa6bdfcf996c60b4aed4a30d5842a3e3a7747f0e778ff"
+    },
+    {
+      "path": "firmware_source/app/src/lib/battery/battery.h",
+      "bytes": 2208,
+      "sha256": "73339fbd44a8ba2419722aaf856ead422868165d80184cd6b77aa36beb44f7c2"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/A2NLSF.c",
+      "bytes": 10759,
+      "sha256": "8552687904b2db168cf9787aa2700369ae9bc76ee0f36dd77fe9b1bf32cce465"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/API.h",
+      "bytes": 7175,
+      "sha256": "cc4d2169dddb2610e6134bdb2834ded57c7e77a31c451b1b49d8649526848747"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/CNG.c",
+      "bytes": 9599,
+      "sha256": "eb8c9901f2a358a0c0ac89693dccf838ecec5fc6275db84fc1abec4e8453c8f9"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/HP_variable_cutoff.c",
+      "bytes": 3989,
+      "sha256": "e528fcf0eebc186dcb31e751e27892ea144c94af1f4fe5749890e7297f986184"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/Inlines.h",
+      "bytes": 7314,
+      "sha256": "d8d637375bd1e1525ba20dfb9103781becabd9aef9decd64cc3a5402cbc2e838"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/LPC_analysis_filter.c",
+      "bytes": 5015,
+      "sha256": "f15ac8e1d21d809377163f0c4db4a5cd7ee5f83b6359960ecbe92b60203a4693"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/LPC_fit.c",
+      "bytes": 3957,
+      "sha256": "c24418dfdcd9382b9f1b3aba65527a5ee0996fac08803e230e34ef88c94539c0"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/LPC_inv_pred_gain.c",
+      "bytes": 6161,
+      "sha256": "c2cc22922cd31554eaa8920ac31238a901139b9cb7964621f6f5f49bedd2b720"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/LP_variable_cutoff.c",
+      "bytes": 6552,
+      "sha256": "e17cec3098ec1df1529cef41dbd9a83ec7d54477fea7b593b3331171927af481"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/LTP_analysis_filter_FIX.c",
+      "bytes": 4730,
+      "sha256": "e57c94e63891df7cc004bef2435af5031b643596e5eb3ff7f2ca137758b1b976"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/LTP_scale_ctrl_FIX.c",
+      "bytes": 2877,
+      "sha256": "d2b8a417bcadb74b5b9cb655086f45ec4ec108278aca2702096e4682280e5d9d"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/MacroCount.h",
+      "bytes": 20764,
+      "sha256": "58441b221c2ff903508f2e6d15010aac2ddb612e69a28b5553c6625933e2c935"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/MacroDebug.h",
+      "bytes": 33528,
+      "sha256": "7af465e3a6408b2f387cdc525019ce1bf92bb5e36011cba1945315a9ac68c7ce"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/NLSF2A.c",
+      "bytes": 6362,
+      "sha256": "89cf63c269068c1b85f03dd4968ae4b592bed5a024e96577a7f8c5100270c30a"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/NLSF_VQ.c",
+      "bytes": 3975,
+      "sha256": "d2742ac1f6cb50a6b24e8c74863fc1d6cc9716b2ee37e8ddd0298b729fdbbe8b"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/NLSF_VQ_weights_laroia.c",
+      "bytes": 3937,
+      "sha256": "975b062a6bbd4afc54171839ff3b4d9d31911dc2d5189ce2ea4b3089c320f9d6"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/NLSF_decode.c",
+      "bytes": 4766,
+      "sha256": "3d723c92896df39bf399e7758b119d641261048f5e199935e61cab287cf8b8e1"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/NLSF_del_dec_quant.c",
+      "bytes": 11896,
+      "sha256": "3d045d2d59317aa7bd7ea277936ddf34770588931065ac34f3400c14234a5509"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/NLSF_encode.c",
+      "bytes": 6129,
+      "sha256": "5fba9bb8dc77f71690f60b9f530fcf048b38d5078bf84e7fe646de45c73b126e"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/NLSF_stabilize.c",
+      "bytes": 6347,
+      "sha256": "14c69720cd90614d8fdf1a0bb05a051598b00783370633323bafec8ff310e2ac"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/NLSF_unpack.c",
+      "bytes": 2949,
+      "sha256": "e94e9519bb38aa5ed30e4dc75fe4a24942a315c9ec16ae21bba39437cdd85671"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/NSQ.c",
+      "bytes": 22787,
+      "sha256": "473b46b62b048efbeb692c2dbc8f4ad8cf5e5ef6b8b63e744762513e382f219e"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/NSQ.h",
+      "bytes": 4288,
+      "sha256": "7ef6eec66064082bde0bb32873c826b695b88ed2f70b72a07e481d08517819b3"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/NSQ_del_dec.c",
+      "bytes": 39434,
+      "sha256": "1e66080620da141e2188b9fc7171d1856a6dd8366d14e15643bf016a39efa879"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/PLC.c",
+      "bytes": 20451,
+      "sha256": "fefb38726ec01fd13b80523daa2488e1723e49ee49de4b84bad8362973a6a13c"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/PLC.h",
+      "bytes": 3261,
+      "sha256": "f67f0d84ddaea37bed02aed78466a1cb33204be2b840cb4c87a5ecc44124a398"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/SigProc_FIX.h",
+      "bytes": 39242,
+      "sha256": "1484eb81059889e31cd0cc875559e1120633591e81df1febdcad1a195bee5cbf"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/VAD.c",
+      "bytes": 15042,
+      "sha256": "3ab5d7cc2839f8c6ed76a9ad9b30a62f6f256c5a476104d3c0728b1938531c46"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/VQ_WMat_EC.c",
+      "bytes": 7138,
+      "sha256": "4d6e893e1b7bac14212952cd6120d5888849e850671a80b0d2869906edc64b4e"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/_kiss_fft_guts.h",
+      "bytes": 5935,
+      "sha256": "b36149a0a4bba79b5a73705a8443c0ed8994fcbb5f79c6322687a16621605ba0"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/ana_filt_bank_1.c",
+      "bytes": 3770,
+      "sha256": "d277973dbadaccbfa26bb887618f4a0456abdf1e859719194c40ecf6656c11cd"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/analysis.c",
+      "bytes": 36054,
+      "sha256": "063d73e0755d6cf0c089b35b21b67ed118e12e3036d9e262fa8f5776ab54dcd2"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/analysis.h",
+      "bytes": 4080,
+      "sha256": "c862ac10d4ea9c03e848ac64b3074824b0da6dfd39e8e534dbd9ba8a29760b75"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/apply_sine_window_FIX.c",
+      "bytes": 4921,
+      "sha256": "58c5b569dc7cc243c90d0ebcf59a0986a8ffa6a4dadfe944ca8171dfcb0bf44d"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/arch.h",
+      "bytes": 7778,
+      "sha256": "7d2609cf4ce878111fce2f84befb873507174050c02a8de1106055d6578ef694"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/arm/LPC_inv_pred_gain_arm.h",
+      "bytes": 3234,
+      "sha256": "53b3e0024db761f2ff357560f5e4814b7009805c94a93724ac71f34480f09921"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/arm/NSQ_del_dec_arm.h",
+      "bytes": 5477,
+      "sha256": "61d2709dca89420deda2c6e21726187dee15b5cdc072ab9071729d1589033159"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/arm/SigProc_FIX_armv4.h",
+      "bytes": 2254,
+      "sha256": "7582f536ee38804f7b873950f0219ae39c48a3bb1c3126694c494354a46d286d"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/arm/SigProc_FIX_armv5e.h",
+      "bytes": 2765,
+      "sha256": "75645e689c042c700d1224132db0d14ba036a1b18e0df0d66996790fbe046cf0"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/arm/armcpu.h",
+      "bytes": 2481,
+      "sha256": "c6b803609ea3e5c03d661b28d742cb45e11cda3405cce6509c45ee8245cd0217"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/arm/biquad_alt_arm.h",
+      "bytes": 4421,
+      "sha256": "aeb87daec2480a1ec3a947e135adb9bb6dad24de039f815d9db1dc72a290f936"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/arm/celt_pitch_xcorr_arm_gcc.s",
+      "bytes": 14065,
+      "sha256": "049a413aa6333394d6c715521143f6cc4f14d7fb566ea6ad7bf8b10de17fa438"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/arm/celt_pitch_xcorr_arm_iar.s",
+      "bytes": 13699,
+      "sha256": "420dc0ff08d7bf139277962da03abd61191ceab33cbbb0dff2a08148614ac6a3"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/arm/celt_pitch_xcorr_arm_keil.s",
+      "bytes": 13247,
+      "sha256": "af2127640e4a433cfaf5a3f4a6fdc36df62a328afc0fd6b14a79afd80ad7773f"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/arm/fixed_armv4.h",
+      "bytes": 3445,
+      "sha256": "84c83aaed010a7822bd38617dc8d85411e982644d79d9cf46724a2a8a919b607"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/arm/fixed_armv5e.h",
+      "bytes": 5628,
+      "sha256": "2ea12bc025f7a0f5ee505e30f14cdb1b7cebd7e4a4e73f8ad3d72f7d915acb33"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/arm/kiss_fft_armv4.h",
+      "bytes": 4660,
+      "sha256": "6e41b8f62c4de6317da037d7a7816deb46a45816074d32948add24914f83452c"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/arm/kiss_fft_armv5e.h",
+      "bytes": 6494,
+      "sha256": "104a476f9ab3887c276235ca823dc6fec65180234230433af4c84bddaa05f1b4"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/arm/macros_armv4.h",
+      "bytes": 4734,
+      "sha256": "a6418f0d3424678e489de7e75c265b7cf231d77668470d64ca4baa6109c2efe9"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/arm/macros_armv5e.h",
+      "bytes": 8482,
+      "sha256": "93c8673dcf54577b4e25470d321a26af8d26fb7aaf1a12aacda5068c74f39359"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/arm/pitch_arm.h",
+      "bytes": 6436,
+      "sha256": "beaecb3333500fd445089549986a3e4e77f73ac08c739069dccf320872c10ea8"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/arm/warped_autocorrelation_FIX_arm.h",
+      "bytes": 4264,
+      "sha256": "fc57330ccb4f55308ad006788351441529991d5d96c2d90f2a552c6a21622b79"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/autocorr_FIX.c",
+      "bytes": 2725,
+      "sha256": "16aceb2d3d8a896a350e43ebd142cfcc1b4413212c637634b9611998c15dc271"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/bands.c",
+      "bytes": 51184,
+      "sha256": "b3bb71c4598d1ad686697677831ccc68e2c425aa6381109ed279e64b4336ceeb"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/bands.h",
+      "bytes": 5417,
+      "sha256": "571d86a58491fd2d79731a47596c2529474928f8b1492d95c709d6b646446c9a"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/biquad_alt.c",
+      "bytes": 6886,
+      "sha256": "cab5911f028eb96570859f2608bec00bdef8bc2ba338019b414abf583b12fdf3"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/burg_modified_FIX.c",
+      "bytes": 16792,
+      "sha256": "65e4117e6a2c8af92c4babfb1e796777ee12003eb4384aadff00c80eb914a64b"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/bwexpander.c",
+      "bytes": 2760,
+      "sha256": "f01c2e6752d806974054c5b0ac5b9fbe1fef88b59873dcaae87974521f2d0256"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/bwexpander_32.c",
+      "bytes": 2490,
+      "sha256": "81ae3a2a4fa92bf8e6f08bdb1032ae655eb72955569f0f8ab4b67b22d70b2a3c"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/celt.c",
+      "bytes": 9107,
+      "sha256": "5a6ccbc8e3d8c00ac016374c5bf8f8ef8201105f6a63b322d6ec1f9335dc68f9"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/celt.h",
+      "bytes": 7812,
+      "sha256": "92868264a9e20d029e8916893f8a2e4d8246daf016da60e2a7d17646452cd269"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/celt_decoder.c",
+      "bytes": 41237,
+      "sha256": "07d1e12d0baa4903ad6048b9a158cbea1ffc9618eca30d5829243b30043ae0d5"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/celt_encoder.c",
+      "bytes": 82045,
+      "sha256": "7893e9e910885b9acbe2b51cdc5ed4341ae042bf2078ac095c18b54930193529"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/celt_lpc.c",
+      "bytes": 7996,
+      "sha256": "75364dace6919a3f8c66e8fee7d8310f5466417744c6e156d338d4e35f22c5dc"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/celt_lpc.h",
+      "bytes": 2221,
+      "sha256": "84f34c88313304d6837d78d2a9115dbfe9387e1afb6ab2f50ae3f67aaceb477d"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/check_control_input.c",
+      "bytes": 4939,
+      "sha256": "f01ebcb1b221b1185ca6f7974b401a5e5aa4620c466bc5ae1ecf12bfbacc6580"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/code_signs.c",
+      "bytes": 5554,
+      "sha256": "becd3134a77e972d70e2845cf10ac4a597233040c37d58338ffe9085859660a2"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/config.h",
+      "bytes": 2723,
+      "sha256": "21847e9acd78ed956025834259c69122ceb514af7dde86b99c7d2bf8d0a6ea24"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/control.h",
+      "bytes": 6165,
+      "sha256": "9c63ee1b8a461845faf8a588bbcdf49ab97a5495940f150c40083843600533b2"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/control_SNR.c",
+      "bytes": 3407,
+      "sha256": "d82dbf53b207f0141be20b80b2221ac330edf39f8e668c94b31369b6f7d17166"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/control_audio_bandwidth.c",
+      "bytes": 5712,
+      "sha256": "3567b33e96dabc53f519f114fc18cf6e1d4b6b91a940ec6fa77e8f4882635ef1"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/control_codec.c",
+      "bytes": 20591,
+      "sha256": "81bb138d84718ec19689dd45cac9464438edbd6afe0963bd7fee314c4576c98e"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/corrMatrix_FIX.c",
+      "bytes": 8335,
+      "sha256": "dc73a44c5a98a562ca699dc7317afb1f66d40663d00e63ccb81d596d39104e76"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/cpu_support.h",
+      "bytes": 2372,
+      "sha256": "36a4b37807a85cc2c1fffd74796350df621226c637d5eb4dbe41167e91f26989"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/cwrs.c",
+      "bytes": 28257,
+      "sha256": "aefb978dc71572f8ef61e182c64cb58e302544b3ddbe12681fe07c88e4ae9e3e"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/cwrs.h",
+      "bytes": 1885,
+      "sha256": "7705be67d58e7fbdea384dde5f3c404ef814fbb8ecbfca61f731d11e8201bdc7"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/debug.c",
+      "bytes": 6849,
+      "sha256": "face052ec8cbcfaa45b75c382b14444885350c283b795c9e57d42451b746b3b5"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/debug.h",
+      "bytes": 12960,
+      "sha256": "071907a9dc3e20bab43c0e6c73f0ad6be5cb0a417c24067525d95a1ea0e70906"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/dec_API.c",
+      "bytes": 19853,
+      "sha256": "a15a863439a4df774dc4e816557d55d675c94b5d0001d23ae5dc3dd6135d33f5"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/decode_core.c",
+      "bytes": 11900,
+      "sha256": "a93b22fc64971b8a0e74a6a19683e036199bd9c5021dcf0b09b12670dbc43af4"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/decode_frame.c",
+      "bytes": 6152,
+      "sha256": "9813390d7d67b1c6a48c458a940fb1152e17657129d1956486bd49f5d4880ad5"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/decode_indices.c",
+      "bytes": 7246,
+      "sha256": "9371600217e3fcbdade51f234a6cab7196c47d3382ee18821d6875563c365e2a"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/decode_parameters.c",
+      "bytes": 5527,
+      "sha256": "d86e43fd07b72472baa5036bacb277600312afc0153d243324b89d8699c8df1b"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/decode_pitch.c",
+      "bytes": 3717,
+      "sha256": "6b1de5dd4d14889ca9be90cbb1dee90072d9c10438e5d736c639e6d323559d9e"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/decode_pulses.c",
+      "bytes": 5598,
+      "sha256": "efaba90323d289324d3792147be7fd096b1da6cc29e1159fded149ede6cb2483"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/decoder_set_fs.c",
+      "bytes": 4968,
+      "sha256": "5befab6798ef5055276f1d6b971689082120755e8e5873279d7515841b0f696e"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/define.h",
+      "bytes": 9707,
+      "sha256": "7c8386374b316c099b97111628b627ec9e33adf808a58501ea9d7aa7208243e5"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/ecintrin.h",
+      "bytes": 3749,
+      "sha256": "a334f1ead35b4a046c4a15d579c82079cde10dbf34e416dcc0581e33255de765"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/enc_API.c",
+      "bytes": 31946,
+      "sha256": "8f161e5f1953fbf11f173c871163332666b5caa860b9ce13e822e5c0f24f4b5b"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/encode_frame_FIX.c",
+      "bytes": 23458,
+      "sha256": "f340e1a4f4cd997ba98f4443bee4bb5e525fa9dfd96d10c3bdaeb6b6f9ec1769"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/encode_indices.c",
+      "bytes": 9360,
+      "sha256": "f5320210d7e9893706ba2e49cfe5c7544f93fecb9e2cbc642dad33d926df1ac0"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/encode_pulses.c",
+      "bytes": 8839,
+      "sha256": "dc0acb54b36c49a10d6eaa3d9c2269047c7e9e8b4c3cde5e35f482f453bd56e2"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/entcode.c",
+      "bytes": 5700,
+      "sha256": "fb52778fb752126b6da6366d29d532ee98d66eb366a28e913562eb9520ba9208"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/entcode.h",
+      "bytes": 5414,
+      "sha256": "af64d2ac226e81c2837b828e08a2fd800b443fa1655d7ca1fe710c1e7070b4fa"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/entdec.c",
+      "bytes": 8016,
+      "sha256": "0b0542909f1b21934f73b9464137e7ec1192ef0b30f0caaad7787f86b2ffd147"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/entdec.h",
+      "bytes": 4835,
+      "sha256": "c1be6eaefef06643974198d9468d76bd219c89ffecd9dad4dc9eb00fb4b9e24e"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/entenc.c",
+      "bytes": 9561,
+      "sha256": "c6d8287d6d0992c6607aa4aeb83e4dca02799ac193f250ce7554d1125830db63"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/entenc.h",
+      "bytes": 5427,
+      "sha256": "6c56e480311944ab8e017890eb912085927271da9304350ff63f85a1aec8309a"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/errors.h",
+      "bytes": 3640,
+      "sha256": "3bbf21416af6475200e55cbfeacf8dccef88455e31352735e4d4fecdda84ddd6"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/find_LPC_FIX.c",
+      "bytes": 7361,
+      "sha256": "4b92d7ab9833c6a827feadefbb2d1af7903e05ab1e6fea0100fd43f9f499f406"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/find_LTP_FIX.c",
+      "bytes": 5422,
+      "sha256": "3d3e6eb738707e0522caff41e866f3fbbd0f9827841ace1a20c4e7733e655c1c"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/find_pitch_lags_FIX.c",
+      "bytes": 7330,
+      "sha256": "328294c9916fd2fef18f8f620551420b17b3438b8e75680a2ebff69b5a1614f4"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/find_pred_coefs_FIX.c",
+      "bytes": 7543,
+      "sha256": "3b9343a2d841a588c742af9f34fb8edef34d84f4b9a40aebce411eb28a57b586"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/fixed_debug.h",
+      "bytes": 21206,
+      "sha256": "f21919139e0e513629708de808b657c21515ad985cf4a2db6c4001e05e474cb8"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/fixed_generic.h",
+      "bytes": 7953,
+      "sha256": "7c820d7e19f47d958e45ed5cd74d981339abd0ff44c843d8847fdbc4e3c471c1"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/float_cast.h",
+      "bytes": 5001,
+      "sha256": "019f8ec97b5f8f9ae55183243b700a3924c79448d85675363410eddeb7a5aea2"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/gain_quant.c",
+      "bytes": 6928,
+      "sha256": "070223b7a20976d91c8f557c5552537db2c452e459483d886f78daf71c5d17b7"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/init_decoder.c",
+      "bytes": 2366,
+      "sha256": "b89c51b04b8ddb342b5c64e6cd02b57c18bcf6935c899dd59e1ed5f681e47e64"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/init_encoder.c",
+      "bytes": 2877,
+      "sha256": "713097da708210423be552448c82e188bef7e2238666b7086be30e0c69b89af5"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/inner_prod_aligned.c",
+      "bytes": 2451,
+      "sha256": "11356406441d6257ce6941e408937eaeb22135849e38b551ea78d7bd624130d3"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/interpolate.c",
+      "bytes": 2601,
+      "sha256": "7ca78007663a58b1f68082a0bb33fbec55055a2f4d74d3831b92e1ddab7344b5"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/k2a_FIX.c",
+      "bytes": 2675,
+      "sha256": "0dbe9b0849bef47e8f97daf0984482526538569e25d1e4d9edc51da37962578e"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/k2a_Q16_FIX.c",
+      "bytes": 2622,
+      "sha256": "22f0dcde79d700f4acee6f44eb8f5b6ab6fe7f519240411b6486dc97e8e17b4d"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/kiss_fft.c",
+      "bytes": 17003,
+      "sha256": "badf5056eb5eb8ee79d78cd88ffe3b3a39d84ba27e28c90ccda48b503acdb465"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/kiss_fft.h",
+      "bytes": 6295,
+      "sha256": "6ad018d5223c6e88015ac166fbd4593cd348eff80b4b0565398cc2688d4da458"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/laplace.c",
+      "bytes": 4022,
+      "sha256": "a46d602528d70f0b635a3e679ac5e8eac69fcdd6c368bfe5c705299176a9c2f9"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/laplace.h",
+      "bytes": 2142,
+      "sha256": "cb3ddf5ee52fb16dffdf10f2c10a4935782622db99de3e97b75e64081bbbb677"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/lin2log.c",
+      "bytes": 2220,
+      "sha256": "707db41655415f0849d0c200740ef8b8c2c1e804772424200702d2a5e4370dfc"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/log2lin.c",
+      "bytes": 2636,
+      "sha256": "4ce500b6b3ae8f96a6cce5b93391e85459ec88e640cd8430a32ce7337fed8923"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/macros.h",
+      "bytes": 6420,
+      "sha256": "ea2a68f2cf066934c08454840906b7c10cb5156c0f81e574ed054d7b7b17a346"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/main.h",
+      "bytes": 32680,
+      "sha256": "3d00d22a00e775145b5f662c3e36eb7cb0598b1e903418ebb46c712ac37a55e4"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/main_FIX.h",
+      "bytes": 19046,
+      "sha256": "36eefa8698a79d67ac7142fb00af1a2e48dc2bf1a0861d6ddd73b63b23348783"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/mathops.c",
+      "bytes": 6826,
+      "sha256": "7c662626aeb448e9ccf0da4e39135e1fe586bda223d38c0c2abe8350caafa388"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/mathops.h",
+      "bytes": 7978,
+      "sha256": "8ecfc69ab27b0a748b12e8bebfebaaba223cf7765cdc1b9731aec081d1c12d7c"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/mdct.c",
+      "bytes": 10898,
+      "sha256": "03f60fbde8d658d552e26cb2b5b89110eca4f7d1864fe8f3f687c940409b172b"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/mdct.h",
+      "bytes": 4776,
+      "sha256": "c70bd44adeaccc26aa70c8678acb4f0ecb6371c2290741ffe87c44ab3f03ab3a"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/mfrngcod.h",
+      "bytes": 2232,
+      "sha256": "5974c2341889a1c2e9775c2a21b3a55d4cbc1ebef90fe4412789aca4f4a19504"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/mlp.c",
+      "bytes": 4131,
+      "sha256": "fa4fc250c5ee6a38e2ddb9ea9518a389617ea4feb7a5ea72467dccf4ff6cba72"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/mlp.h",
+      "bytes": 1614,
+      "sha256": "ced3054f955c42a9af58e74b7fab89e30ba439b131b7e3d01fc6a2ed4995dfa7"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/mlp_data.c",
+      "bytes": 5693,
+      "sha256": "e1faf577786691e2f958c038e84894ab494ee48a581a917000795013449957c8"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/modes.c",
+      "bytes": 13951,
+      "sha256": "f95956d28e755c67a48808ff97175ceac011c23059c521ca4fb4905465426364"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/modes.h",
+      "bytes": 2437,
+      "sha256": "c38ac61f218a9ff27a0222bb2ebffe9bd8203041fa0a38fe733ece7f1bed0b1a"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/noise_shape_analysis_FIX.c",
+      "bytes": 20671,
+      "sha256": "c11fae78f54233d49334b710628551ba21f389cd8a064dfb27bfbd0313ec7dda"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/opus.c",
+      "bytes": 9882,
+      "sha256": "ff2bb0b492fecfeea4c8de957c0f130ded61ae501fd76faa2be78b64b8161e87"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/opus.h",
+      "bytes": 48554,
+      "sha256": "24e57572c52ebf054cc58291070aca1569b40c7a14d8594f8158016877b19508"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/opus_custom.h",
+      "bytes": 14768,
+      "sha256": "630939691582fc22f61f8dc24b3b4e753b665a4785ce854bfbac45e4264b5267"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/opus_decoder.c",
+      "bytes": 31152,
+      "sha256": "6ad9a786d2f85212cd311d0467703f2c72104ca5f7b9f144c027266e9ffb393e"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/opus_defines.h",
+      "bytes": 34695,
+      "sha256": "457f86f024546f57985f898bb5734ecb5082cd1e9595967851651995f98527a5"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/opus_encoder.c",
+      "bytes": 97200,
+      "sha256": "52f4c9142d3c91971d0cd177becccae34f1c5cfeeaae7c1c7b587fd070892121"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/opus_multistream.c",
+      "bytes": 2684,
+      "sha256": "48c71105cc4f04301adc11fe6f7930ecb13f4f5cb836a62e388a9c39c0548fab"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/opus_multistream.h",
+      "bytes": 33575,
+      "sha256": "0db4cb1379ad61a204837408ede613c5ed6f0b2b3cbae6d72288387e4815b181"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/opus_multistream_decoder.c",
+      "bytes": 14475,
+      "sha256": "86123545d945f38e9454c4b381b33c38f83e9490fdbd0d10bb8acbacc573cc96"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/opus_multistream_encoder.c",
+      "bytes": 40821,
+      "sha256": "407fe5115e3829f1ca954318c30f8b8065e233a9655a1b5329797ef6222469b0"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/opus_private.h",
+      "bytes": 5052,
+      "sha256": "cf7dad1dafb3cc9b1f8695e5e0c564dba51d3f9a6e7eed43e7719440389af9d4"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/opus_types.h",
+      "bytes": 4954,
+      "sha256": "e2c1075e26567b8d57706d2f0042e36d5d440721fc3fd27a6fce9f0fc8a31557"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/os_support.h",
+      "bytes": 3163,
+      "sha256": "4dc4eb0f3e97c885903f9f01d3ed61815181adf480d97577e95182c15d88e313"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/pitch.c",
+      "bytes": 14459,
+      "sha256": "244d8f61620e96424663fcbd9d3d34226509e2ba937a976ef592d55f2ef65e68"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/pitch.h",
+      "bytes": 5891,
+      "sha256": "76f858f0b7aaf1b2687a5c000d46d0b54fbca7b56767bcd66f8a5c10f2e2c83a"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/pitch_analysis_core_FIX.c",
+      "bytes": 34345,
+      "sha256": "582f796799578c8bc4668c40577d62cc8139098623eaf9a15a5ceffc620d2c43"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/pitch_est_defines.h",
+      "bytes": 4061,
+      "sha256": "ed1230792944c3cdbf1762f5e8a612baaf7349d66d57ade4764f5f7a0961dc98"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/pitch_est_tables.c",
+      "bytes": 3589,
+      "sha256": "c0cf34e7d5ced41d7117c345edddc4ecefaf80ef2a55950a3a95582da7e3e334"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/process_NLSFs.c",
+      "bytes": 5447,
+      "sha256": "396ac86ece045dbeb24dbc780d5061cde8071b04c1f2082295835c354be717c5"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/process_gains_FIX.c",
+      "bytes": 6595,
+      "sha256": "92a25af5a23536cac6ec4216711ae82a680be46d5b0c3b0515a2a2fec9e6d495"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/quant_LTP_gains.c",
+      "bytes": 7351,
+      "sha256": "1f9aa2768ee68824353419f719fa1f225070ed009fe6a4e4db361e512c5c1d0a"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/quant_bands.c",
+      "bytes": 18714,
+      "sha256": "d80db2e55c240258e2331618eeaa2ea8916469864db74cb2e4fa5e36d684e496"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/quant_bands.h",
+      "bytes": 2974,
+      "sha256": "fbe7d733d3dcfd7d2fd3436fb50a62c62a327997b479c9c72770900b7e6abfe0"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/rate.c",
+      "bytes": 21428,
+      "sha256": "5237183bbce2e88a85f80d4b77eb89e0e6b7768fa48e8643b9eef1a4775885d6"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/rate.h",
+      "bytes": 3279,
+      "sha256": "c8611c953f2265a386ce4b0c56eebe764c1dab966c1752066f83d7174ccd88f0"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/regularize_correlations_FIX.c",
+      "bytes": 2626,
+      "sha256": "7028df79d2ff6ddb0d271afb53509c8f7186b8de9296cfea0ee78353b8cdcf64"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/repacketizer.c",
+      "bytes": 9842,
+      "sha256": "84c84990fca1c08a4e3f4c985c3439c87c184a179da8209e16ea5504b79d09d6"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/resampler.c",
+      "bytes": 9931,
+      "sha256": "7e28b897c5b0dbdf4952552c658c2784a785e51190ebda79da44853896a1a906"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/resampler_down2.c",
+      "bytes": 3475,
+      "sha256": "7aa4cba793ab4b8f8946c898c7304007cb7b7f0d58544137a20bd23beb81c639"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/resampler_down2_3.c",
+      "bytes": 4765,
+      "sha256": "2ab8318bf4bc64de8491ac0272cdf19c79bf036725b17f21fc870e280b1ebc72"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/resampler_private.h",
+      "bytes": 4553,
+      "sha256": "b14e6d03394a911d15eb9860922b7ecdd346d07f728f262d22e42f7bfc17ea3c"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/resampler_private_AR2.c",
+      "bytes": 2665,
+      "sha256": "c16d50bde74b32c184b37c273c80a072963f8357cccbdd974c16ae24fbc11e80"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/resampler_private_IIR_FIR.c",
+      "bytes": 5231,
+      "sha256": "584c7b2afbcb56ba03016401408d8eecb1393640eee947d0bae78fc141f425be"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/resampler_private_down_FIR.c",
+      "bytes": 10897,
+      "sha256": "5ed14a4557a3d921a43d81a6c692e0b0183ead50a4e6e3d5ef4f7a6be14b7080"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/resampler_private_up2_HQ.c",
+      "bytes": 5367,
+      "sha256": "f06a982b8856e1575371d147ddb9a03033f0569e8d7f969536133e606ef32a36"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/resampler_rom.c",
+      "bytes": 4747,
+      "sha256": "ec3ba5c620ee504d0a902290ae54bc8b434754e57e294a501a82757b9c9d6ddd"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/resampler_rom.h",
+      "bytes": 3294,
+      "sha256": "68088e0750482fa05be18d571a02b791576376e3cdc48fd2cc127cf333599efc"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/resampler_structs.h",
+      "bytes": 2615,
+      "sha256": "b038e84c7d79bcd31bbf524dba64103d17ab66c5006cd2b6ad7ba3289226cd18"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/residual_energy16_FIX.c",
+      "bytes": 4837,
+      "sha256": "384cdf5f4142507ba462a74cda46ce5c3bb84dda69d89a7386407613fa7942c3"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/residual_energy_FIX.c",
+      "bytes": 5389,
+      "sha256": "633ed6d7d8da621f0ce2ce23ea5a5c9abf53063af4300e53d6f24f3d99ff1127"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/schur64_FIX.c",
+      "bytes": 3994,
+      "sha256": "0dce2180da54817575590d34eb5bdb30c10d497a243b56691eb49893182b30e4"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/schur_FIX.c",
+      "bytes": 4447,
+      "sha256": "ce05edf0c7099d59e771d8a416ba629e0f33555661bd1c979b77f587681cd1a9"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/shell_coder.c",
+      "bytes": 7718,
+      "sha256": "60b5a2786238f669eb48dc9a81c072707a11691be3a73029ceb643a6dee5d7dd"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/sigm_Q15.c",
+      "bytes": 3164,
+      "sha256": "339568f30645402d15be3a0655b064d0dc6bab3dc5920ecd8998296a9c8d1002"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/sort.c",
+      "bytes": 6265,
+      "sha256": "8436c8b92db91ae5084fbbeff1f2b03815cc1e34a05cb6f6bef66d3fee86fe41"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/stack_alloc.h",
+      "bytes": 5989,
+      "sha256": "603a5beb27f6c9b9186de86c27221179b8343285b254524a584c5f78efb18fda"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/static_modes_fixed.h",
+      "bytes": 32819,
+      "sha256": "fd5405b0b95073d6fa8810395a79a50e9457de20a4eb65e67421c01da01ce7c6"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/static_modes_fixed_arm_ne10.h",
+      "bytes": 25209,
+      "sha256": "9c49d71262dc31eecef4612291b98f9284bc702b8f1257dd549a2bc7ff6d1503"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/static_modes_float.h",
+      "bytes": 50919,
+      "sha256": "65fdb130c42cce36caa4bf29dd65ebebb65a6ba5c1325bcf3d67a548e876ed72"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/static_modes_float_arm_ne10.h",
+      "bytes": 28613,
+      "sha256": "f17e57248f303d0fa87f099ebb8bb3d6361497c90b3fd614c17522be5c20135a"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/stereo_LR_to_MS.c",
+      "bytes": 12473,
+      "sha256": "b47a3a1257df049e51b885a1dc69710147dc7c886c49edb937b2549e1c53ffe3"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/stereo_MS_to_LR.c",
+      "bytes": 4871,
+      "sha256": "af24277c7191ba5743be8213b4c72430316844b25dddf033e9f21ea06cbc5eb0"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/stereo_decode_pred.c",
+      "bytes": 3417,
+      "sha256": "b852fbd96ea37d0387b523e5aec0526e0afe5d64457c5da44e6d6903cca27e8b"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/stereo_encode_pred.c",
+      "bytes": 2885,
+      "sha256": "4634861dac77f82b51fd9d016cc97a4f8c369437ff32fa3526f76f84aebff507"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/stereo_find_predictor.c",
+      "bytes": 4374,
+      "sha256": "b77b33b43ab9f72947d6b853a282b639a633345b30e71e1817f122d487941fa1"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/stereo_quant_pred.c",
+      "bytes": 3404,
+      "sha256": "8d1895de054a67a8501af9bf977d20be91f3a9efc50d67bd683dd0a09da69732"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/structs.h",
+      "bytes": 21018,
+      "sha256": "4f7173bc040021f120c260bfa46f980204f679adc08ac43b315edcda7814197b"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/structs_FIX.h",
+      "bytes": 5152,
+      "sha256": "a01a3611c279d8f8d56d75f609fae8d4d3788bbf09891fabb709f904630523c6"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/sum_sqr_shift.c",
+      "bytes": 3790,
+      "sha256": "710b83c924582cebeb38af168383a4aa57a943bd1faf52267f8b883e59cd9d90"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/table_LSF_cos.c",
+      "bytes": 4191,
+      "sha256": "9cae32dfdc4ab45e5f288a4fd74cf8bb5dace19c651ec54b6c064024434d52c2"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/tables.h",
+      "bytes": 7700,
+      "sha256": "0e976672b3c937f786428377ef8d7e1372bc0a65c2395e41039ac211e071151e"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/tables_LTP.c",
+      "bytes": 7432,
+      "sha256": "95b4912701d4dfd46f0364603092885818c00604808c9b7f606e40eec34fb3f0"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/tables_NLSF_CB_NB_MB.c",
+      "bytes": 10785,
+      "sha256": "94e49118901f9f9e4f09c9c088f6eeb8936f200686517d791440c26c523463f5"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/tables_NLSF_CB_WB.c",
+      "bytes": 14499,
+      "sha256": "24a56112a6f606fa30d717e9530bc08e611f27d78a39311c3cd02a00c99fe06b"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/tables_gain.c",
+      "bytes": 2519,
+      "sha256": "c91e247a6580cef800e544238b63e19e65a5c4242f77692bab1c722575d67866"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/tables_other.c",
+      "bytes": 5445,
+      "sha256": "1d8e66c527515f6f73e61c6d1b5d6596d8ea0c79e6f868799cea9b43a902374e"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/tables_pitch_lag.c",
+      "bytes": 3068,
+      "sha256": "f504bbaf35a2f49df9e18eb6e34c82d18f275c37deba9c2a5c4b5e3891b631d1"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/tables_pulses_per_block.c",
+      "bytes": 11423,
+      "sha256": "2fb238cd37048303f2dfa033b1e4c4d6decc427ba81c8eccacae5e19dc7b77fd"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/tansig_table.h",
+      "bytes": 2304,
+      "sha256": "835fcdf08d5b92e249fbe9ba6cdd9758688a5fdf134efb9da0e42989e8c18b8a"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/tuning_parameters.h",
+      "bytes": 6191,
+      "sha256": "752c03100137fb26204db35af2d435912a80fefe848a6aac1f709757d53f204c"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/typedef.h",
+      "bytes": 3345,
+      "sha256": "24e9365165de74ef91944ce360bc4032cc03809ead79bc74156b3462d97037d3"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/vector_ops_FIX.c",
+      "bytes": 4778,
+      "sha256": "8aaf9937665de6d4d5157e617142748645ab02a844834a06457d497899687cd4"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/vq.c",
+      "bytes": 12850,
+      "sha256": "af23c4beaa6cebb089ddfeefa62ebe7c5fa68083010f9757a48e063e7b672c97"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/vq.h",
+      "bytes": 3175,
+      "sha256": "3664f207ab39e8b75ef217227110034efba289ed44377ee302d325329477c4cd"
+    },
+    {
+      "path": "firmware_source/app/src/lib/opus-1.2.1/warped_autocorrelation_FIX.c",
+      "bytes": 4656,
+      "sha256": "cd70ffc998d92eed184c27a4645117ce0beae81299f2480ef88b2357aeb15354"
+    },
+    {
+      "path": "firmware_source/app/src/main.c",
+      "bytes": 5118,
+      "sha256": "8d08e98084fb67fa28df6242d7b4852655ab9ba75946d9d88a656170c67f6efb"
+    },
+    {
+      "path": "firmware_source/app/src/mic.c",
+      "bytes": 8425,
+      "sha256": "658f9c766e589a30e32ddb48a0a78aabeea19b231d490eeee9fd36333f0a42f5"
+    },
+    {
+      "path": "firmware_source/app/src/mic.h",
+      "bytes": 546,
+      "sha256": "05e099214f04c634e5681f8b74de28527e52a886758cd015b1723ea931735ead"
+    },
+    {
+      "path": "firmware_source/app/src/opus_packet_helpers.c",
+      "bytes": 674,
+      "sha256": "deb6b01c9a85d054c8aedd2a7389cdfa8e4e8305d130fa1592b50478749da514"
+    },
+    {
+      "path": "firmware_source/app/src/recovery_touch.c",
+      "bytes": 1365,
+      "sha256": "d615b4b4cd2b0e73bc111f05cad80f02da5c85a4d57cacf98700feb23727270f"
+    },
+    {
+      "path": "firmware_source/app/src/recovery_touch.h",
+      "bytes": 585,
+      "sha256": "779beb34f98ee583fc35fac8e702211af6019a40af792ba661fc4a0631068e9d"
+    },
+    {
+      "path": "firmware_source/app/src/recovery_usb.c",
+      "bytes": 3596,
+      "sha256": "6aa4b149e646bd0c922336bc656f89541dc707bb0617c510d0e3cf3bdba522a4"
+    },
+    {
+      "path": "firmware_source/app/src/recovery_usb.h",
+      "bytes": 136,
+      "sha256": "ad6399fac25ad610fb99d2819391bc510ebbf31c2af80edef999037bd4ff96af"
+    },
+    {
+      "path": "firmware_source/app/src/transport.c",
+      "bytes": 34082,
+      "sha256": "37fc34660f1fed492db1c78185dc97fa4bda5de637de69024f40053b3ccc67ce"
+    },
+    {
+      "path": "firmware_source/app/src/transport.h",
+      "bytes": 637,
+      "sha256": "0aa9e9f8e2677503823fe3f9bb7517f5c604a021342b3c14cfc11d7707dbf90d"
+    },
+    {
+      "path": "firmware_source/app/src/transport_safety.c",
+      "bytes": 2457,
+      "sha256": "977dd42aec0637bd05df69bf54089abb8932eaf55c48053a10751b4e8a42a1c1"
+    },
+    {
+      "path": "firmware_source/app/src/transport_safety.h",
+      "bytes": 1222,
+      "sha256": "2b6ced4be9276938c85e5739d36bcb484cfd48ff55e42730c30e49b645578a0e"
+    },
+    {
+      "path": "firmware_source/app/src/utils.h",
+      "bytes": 1312,
+      "sha256": "87c01e3e4e12e13460dee3351cb4d266427f6b6ace86af62a92136fb67f98b77"
+    },
+    {
+      "path": "firmware_source/app/src/watchdog.c",
+      "bytes": 2383,
+      "sha256": "d20975fe9a1560896c6982df68f57dfdbab74c4a957e0503bd32683b5e13e0a1"
+    },
+    {
+      "path": "firmware_source/app/src/watchdog.h",
+      "bytes": 632,
+      "sha256": "30cc4c2ab74e2337d1d18c034cc178f7e53296bb99fd520ef3741fda4f289f3f"
+    },
+    {
+      "path": "firmware_source/app/tests/hoststub/haly/nrfy_gpio.h",
+      "bytes": 576,
+      "sha256": "c58114e42e55c04934a4217bcbf80d918d3488bceae812c7352735f80a9aa8e8"
+    },
+    {
+      "path": "firmware_source/app/tests/recovery_touch_test.c",
+      "bytes": 1463,
+      "sha256": "582bc7c608ffe93d055883614b3db72de7cbc15a88c49ac08b3540e7c79dccc9"
+    },
+    {
+      "path": "firmware_source/app/tests/run_firmware_tests.sh",
+      "bytes": 1130,
+      "sha256": "8d0ba0859968b7460fe1e0524ca92178648d60be3f6c7b2cd2e04c16a49f854c"
+    },
+    {
+      "path": "firmware_source/app/tests/transport_safety_test.c",
+      "bytes": 3570,
+      "sha256": "fbd64cbb6f24d500bd09fca538d09fe11dac77067a829b6e2f8ae231755b5119"
+    },
+    {
+      "path": "firmware_source/build.sh",
+      "bytes": 897,
+      "sha256": "298b091875d77bf6d0656cf308ae23593c6ac66110630ea75064238ab943a2e5"
+    },
+    {
+      "path": "firmware_source/provenance/Application_Source_Manifest.json",
+      "bytes": 34716,
+      "sha256": "5c8732a3aea9f21eced15037f81a1d5ce5fccc8557cc7b3e383c0b60f42b1737"
+    },
+    {
+      "path": "firmware_source/provenance/Export_Checks.json",
+      "bytes": 641,
+      "sha256": "9216cb7d5beed1e4b1f8331a5a94558de1a3ceea3fbabac3a613a71ad0d7e418"
+    },
+    {
+      "path": "firmware_source/provenance/Original_Build_Receipt.json",
+      "bytes": 1280,
+      "sha256": "c09896f55cc99d0f94bc67a691fc96036f173d8b8f623989061a8fca53c9cfd2"
+    },
+    {
+      "path": "firmware_source/provenance/Programming_Receipt.json",
+      "bytes": 8115,
+      "sha256": "c793b95186e50ab3c3e6490889b2cac0dbf3c961adef05668ed7e86e965208d1"
+    },
+    {
+      "path": "firmware_source/provenance/current_native_netlist.xml",
+      "bytes": 176245,
+      "sha256": "e84bb5ce15d023e4084ed05bbf519515ec81f70e87bdd4d86126426a0edf52db"
+    },
+    {
+      "path": "firmware_source/provenance/host_logic_checks.log",
+      "bytes": 313,
+      "sha256": "6165ffd5045876ddcac905c29a09837dacb7894885ba7bfd74120983d4e8367a"
+    },
+    {
+      "path": "firmware_source/provenance/power_contract_checks.log",
+      "bytes": 2133,
+      "sha256": "cf413cc44a1f2631f00ea14ee124f637546f7e705c2986ce9b535f88bb217b53"
+    },
+    {
+      "path": "firmware_source/provenance/source_hash_check.log",
+      "bytes": 273,
+      "sha256": "535a3b76a92549b92bd8d9ef93d935881dd76347e0df4628dd61793789eb930f"
+    },
+    {
+      "path": "firmware_source/provenance/target.config",
+      "bytes": 105346,
+      "sha256": "495ad9f436e52ac063ee914a831aaf2cdd219a026d36885cbcd64db9db831fd8"
+    },
+    {
+      "path": "firmware_source/provenance/target.dts",
+      "bytes": 14818,
+      "sha256": "4063683087137357bbb2672aba0137a70623028ec3ac8c8887a66514b04e6811"
+    },
+    {
+      "path": "firmware_source/tests/check_power_contract.py",
+      "bytes": 2713,
+      "sha256": "6df8b63a55022bd25c5256e34499b9183e7e31970b0705f2647ba74b2b6ece3f"
+    },
+    {
+      "path": "firmware_source/tests/verify_source.py",
+      "bytes": 2035,
+      "sha256": "416e1820921e445ae5ee37a2014f24ce24eac0fa994d8e8a042dd1bc25f8f8d4"
+    },
+    {
+      "path": "reference_evidence/Original_Circuit_Evidence.json",
+      "bytes": 4189,
+      "sha256": "9b87bea7417e133bb4c54925dbbe1a55c20ae3cb7c69d83cb71845a294fd0db4"
+    },
+    {
+      "path": "reference_evidence/Original_Footprint_Evidence.json",
+      "bytes": 26741,
+      "sha256": "97c7f2e221f00e60a7bc14fe2f604d452ee13815e45281920e47afbf809cabe7"
+    },
+    {
+      "path": "reference_evidence/README.md",
+      "bytes": 905,
+      "sha256": "e3f5ff80a620e6af96da697365ee6daa4b2f5113b076d20f49db583fa32b1ec1"
+    },
+    {
+      "path": "reference_evidence/TI_DRT_land_pattern.png",
+      "bytes": 97337,
+      "sha256": "661321f172368442596a507a47a6466d141aebb1f022e2de75cbeaa24060d34c"
+    },
+    {
+      "path": "reference_evidence/TI_TPD2EUSB30A.pdf",
+      "bytes": 2257950,
+      "sha256": "a2c0dd845043a5bbfe610f673879c29e38649544385dea51dbe0a4c49df39136"
+    },
+    {
+      "path": "reference_evidence/TI_electrical_page5.png",
+      "bytes": 125909,
+      "sha256": "7e2a152c5ebb72eb97776f20bd0d0597faa13d4128fbbcfbf08f68606a09ecf2"
+    }
+  ]
+}
